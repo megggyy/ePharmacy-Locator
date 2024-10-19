@@ -18,29 +18,34 @@ const PharmacyOwnerSignupScreen = () => {
 
       {/* Title */}
       <Text style={styles.title}>Sign Up as Pharmacy Owner</Text>
-    
 
       {/* Input Fields */}
       <View style={styles.inputSection}>
-      <TextInput style={styles.input} placeholder="Pharmacy name" placeholderTextColor="#AAB4C1" />
-      <TextInput style={styles.input} placeholder="Email address" placeholderTextColor="#AAB4C1" keyboardType="email-address" />
-      <TextInput style={styles.input} placeholder="Address" placeholderTextColor="#AAB4C1" />
-      <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
-      <TextInput style={styles.input} placeholder="Confirm password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
+        <TextInput style={styles.input} placeholder="Pharmacy name" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="Email address" placeholderTextColor="#AAB4C1" keyboardType="email-address" />
+        
+        {/* Address Fields */}
+        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="Barangay" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" />
 
-      {/* Upload Permits */}
-      <View style={styles.uploadContainer}>
-        <TextInput style={styles.uploadInput} placeholder="Upload Permits" placeholderTextColor="#AAB4C1" editable={false} />
-        <TouchableOpacity style={styles.uploadButton}>
-          <Ionicons name="add-circle-outline" size={24} color="white" />
+        <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
+        <TextInput style={styles.input} placeholder="Confirm password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
+
+        {/* Upload Permits */}
+        <View style={styles.uploadContainer}>
+          <TextInput style={styles.uploadInput} placeholder="Upload Permits" placeholderTextColor="#AAB4C1" editable={false} />
+          <TouchableOpacity style={styles.uploadButton}>
+            <Ionicons name="add-circle-outline" size={24} color="white" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Sign up Button */}
+        <TouchableOpacity style={styles.signUpButton} onPress={() => router.push('/screens/Auth/LoginScreen')}>
+          <Text style={styles.signUpButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Sign up Button */}
-      <TouchableOpacity style={styles.signUpButton} onPress={() => router.push('/screens/Auth/LoginScreen')}>
-        <Text style={styles.signUpButtonText}>Sign up</Text>
-      </TouchableOpacity>
-      </View>
       {/* Login Text */}
       <Text style={styles.loginText}>
         Already have an account?{' '}

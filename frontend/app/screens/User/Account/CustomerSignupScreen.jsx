@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons'; // Importing the icons
+import { Ionicons } from '@expo/vector-icons'; // Importing Ionicons
+import RNPickerSelect from 'react-native-picker-select'; // Importing the Picker
 
 const CustomerSignup = () => {
   const router = useRouter();
@@ -26,7 +27,31 @@ const CustomerSignup = () => {
         <TextInput style={styles.input} placeholder="Contact number" placeholderTextColor="#AAB4C1" keyboardType="phone-pad" />
         <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
         <TextInput style={styles.input} placeholder="Confirm password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
-        <TextInput style={styles.input} placeholder="Add address" placeholderTextColor="#AAB4C1" />
+
+        {/* New Address Fields */}
+        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="Barangay" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" />
+
+        {/* Dropdown for choosing disease */}
+        <RNPickerSelect
+          onValueChange={(value) => console.log(value)}
+          items={[
+            { label: 'Fever', value: 'fever' },
+            { label: 'Cold', value: 'cold' },
+            { label: 'Headache', value: 'headache' },
+            { label: 'Allergy', value: 'allergy' },
+          ]}
+          style={pickerSelectStyles}
+          placeholder={{
+            label: 'Choose your disease',
+            value: null,
+            color: '#AAB4C1',
+          }}
+          Icon={() => {
+            return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
+          }}
+        />
 
         {/* Sign Up Button */}
         <TouchableOpacity style={styles.signUpButton} onPress={() => router.push('/screens/Auth/LoginScreen')}>
@@ -46,6 +71,32 @@ const CustomerSignup = () => {
 };
 
 export default CustomerSignup;
+
+// Styles for RNPickerSelect
+const pickerSelectStyles = StyleSheet.create({
+  inputIOS: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    fontSize: 16,
+    color: '#333',
+    paddingRight: 30, // To make room for the icon
+  },
+  inputAndroid: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    fontSize: 16,
+    color: '#333',
+    paddingRight: 30, // To make room for the icon
+  },
+  iconContainer: {
+    top: 15,
+    right: 10,
+  },
+});
 
 const styles = StyleSheet.create({
   container: {
