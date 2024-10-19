@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -32,11 +32,12 @@ const PharmacyOwnerSignupScreen = () => {
         <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
         <TextInput style={styles.input} placeholder="Confirm password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
 
-        {/* Upload Permits */}
+        {/* Upload Permits UI */}
+        <Text style={styles.uploadLabel}>Upload Permits</Text>
         <View style={styles.uploadContainer}>
-          <TextInput style={styles.uploadInput} placeholder="Upload Permits" placeholderTextColor="#AAB4C1" editable={false} />
           <TouchableOpacity style={styles.uploadButton}>
-            <Ionicons name="add-circle-outline" size={24} color="white" />
+            <Ionicons name="image-outline" size={24} color="white" />
+            <Text style={styles.uploadButtonText}>Select Images</Text>
           </TouchableOpacity>
         </View>
 
@@ -105,24 +106,30 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
   },
+  uploadLabel: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333',
+    marginVertical: 10,
+  },
   uploadContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 10,
-  },
-  uploadInput: {
-    flex: 1,
-    backgroundColor: '#F2F2F2',
-    borderRadius: 10,
-    padding: 10,
-    fontSize: 16,
-    color: '#333',
+    justifyContent: 'center',
   },
   uploadButton: {
-    backgroundColor: '#0F6580',
+    flexDirection: 'row',
+    backgroundColor: '#027DB1',
     borderRadius: 10,
-    padding: 10,
+    padding: 15,
+    alignItems: 'center',
+  },
+  uploadButtonText: {
+    color: '#fff',
     marginLeft: 10,
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   signUpButton: {
     backgroundColor: '#027DB1',
