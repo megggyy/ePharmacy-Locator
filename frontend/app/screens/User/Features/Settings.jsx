@@ -1,28 +1,28 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Importing Ionicons for back button icon
-import { useNavigation } from '@react-navigation/native'; // Using for back navigation
+import { useRouter } from 'expo-router';
 
 export default function SettingsScreen() {
-  const navigation = useNavigation();
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.headerText}>Settings</Text>
       </View>
 
       {/* Settings Options */}
-      <TouchableOpacity style={styles.option}>
+      <TouchableOpacity style={styles.option} onPress={() => router.push('/screens/User/Features/FAQs')}>
         <Text style={styles.optionText}>FAQs</Text>
         <Ionicons name="chevron-forward" size={20} color="black" />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.option}>
+      <TouchableOpacity style={styles.option} onPress={() => router.push('/screens/User/Features/PrivacyPolicy')}>
         <Text style={styles.optionText}>Privacy Policy</Text>
         <Ionicons name="chevron-forward" size={20} color="black" />
       </TouchableOpacity>
