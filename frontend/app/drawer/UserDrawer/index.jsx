@@ -49,6 +49,11 @@ export default function Sidebar() {
           <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/dashboard')}>
+          <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
+          <Text style={styles.menuText}>Test sa admin</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

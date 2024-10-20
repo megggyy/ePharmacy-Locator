@@ -51,11 +51,15 @@ export default function RootLayout() {
         <Stack.Screen name="screens/User/Features/PrescriptionScan" options={{ headerShown: false }} />
         <Stack.Screen name="screens/User/Features/PrescriptionResults" options={{ headerShown: false }} />
         <Stack.Screen name="screens/User/Features/PrescriptionAvailability" options={{ headerShown: false }} />
+        <Stack.Screen name="screens/User/Features/PrivacyPolicy" options={{ headerShown: false }} />
+        <Stack.Screen name="screens/User/Features/FAQs" options={{ headerShown: false }} />
 
         {/* PHARMACY OWNER */}
         <Stack.Screen name="screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen" options={{ headerShown: false }} />
-      
 
+        {/* ADMIN */}
+        <Stack.Screen name="screens/Admin/dashboard" options={{ headerShown: false }} />
+      
         {/* DRAWER */}
         <Stack.Screen name="drawer/UserDrawer/index" options={{ headerShown: false }} />
        

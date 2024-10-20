@@ -2,27 +2,15 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // For icons
 import { useRouter } from 'expo-router';
+import TopBar from '../drawer/TopBar';
 
 const HomeScreen = () => {
   const router = useRouter();
 
   return (
     <SafeAreaView style={styles.safeArea}>
-        <View style={styles.topSection}>
-        {/* Header with Location and Icons */}
-        <View style={styles.header}>
-          <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('../drawer/UserDrawer')}/>        
-          <View style={styles.locationWrapper}>
-            <Text style={styles.location}>7A Alley</Text>
-            <Text style={styles.location}>Taguig</Text>
-          </View>  
-          <View style={styles.iconsWrapper}>
-            <Ionicons name="cloud-upload" style={styles.icon} onPress={() => router.push('/screens/User/Features/PrescriptionUpload')} />
-          </View>
-        </View>
-          {/* Search Bar */}
-          <TextInput style={styles.searchBar} placeholder="Search..."  placeholderTextColor="#AAB4C1"/>
-        </View>
+      {/* Include TopBar component */}
+      <TopBar />
 
       <ScrollView style={styles.container}>
         {/* Categories Section */}

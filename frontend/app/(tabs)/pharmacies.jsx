@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Icons for the UI
 import { useRouter } from 'expo-router';
+import TopBar from '../drawer/TopBar';
 
 export default function PharmacyScreen() {
   const router = useRouter();
@@ -10,20 +11,8 @@ export default function PharmacyScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Top Section with Header and Search Bar */}
-      <View style={styles.topSection}>
-        <View style={styles.header}>
-          <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('../drawer/UserDrawer')} />
-          <View style={styles.locationWrapper}>
-            <Text style={styles.location}>7A Alley</Text>
-            <Text style={styles.location}>Taguig</Text>
-          </View>
-          <View style={styles.iconsWrapper}>
-            <Ionicons name="cloud-upload" style={styles.icon} />
-          </View>
-        </View>
-        <TextInput style={styles.searchBar} placeholder="Search..." placeholderTextColor="#AAB4C1" />
-      </View>
+      {/* Include TopBar component */}
+      <TopBar />
 
       <ScrollView style={styles.container}>
         {/* Filter Buttons */}

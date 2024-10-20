@@ -30,7 +30,7 @@ const PrescriptionScreen = () => {
 
       {/* Scan Now Button */}
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.scanButton}onPress={() => router.push('/screens/User/Features/PrescriptionResults')}>
+        <TouchableOpacity style={styles.scanButton} onPress={() => router.push('/screens/User/Features/PrescriptionResults')}>
           <Text style={styles.scanButtonText}>Scan Now</Text>
         </TouchableOpacity>
       </View>
