@@ -1,26 +1,11 @@
 const mongoose = require('mongoose');
 
 const pharmacySchema = new mongoose.Schema({
-    pharmacyName: {
-        type: String,
-        required: true
+    userInfo: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
     },
-    contactNumber: {
-        type: String,
-        required: true
-    },
-    street: {
-        type: String,
-    },
-    barangay: {
-        type: String,
-        required: true
-    },
-    city: {
-        type: String,
-        required: true
-    },
-    image: [{
+    permits: [{
         type: String
     }],
 });

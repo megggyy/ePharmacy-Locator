@@ -13,6 +13,25 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    name: {
+        type: String,
+        required: true
+    },
+    contactNumber: {
+        type: String,
+        required: true
+    },
+    street: {
+        type: String,
+    },
+    barangay: {
+        type: String,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
+    },
     role: {
         type: String,
         enum: ["PharmacyOwner", "Customer", "Admin"],

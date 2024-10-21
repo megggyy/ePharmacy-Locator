@@ -1,28 +1,13 @@
 const mongoose = require('mongoose');
 
 const customerSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    contactNumber: {
-        type: String,
-        required: true
-    },
-    street: {
-        type: String,
-    },
-    barangay: {
-        type: String,
-        required: true
-    },
-    city: {
-        type: String,
-        required: true
-    },
     disease: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Diseases',
+    },
+    userInfo: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
     }
 });
 

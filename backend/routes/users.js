@@ -44,35 +44,25 @@ router.post('/', async (req, res) => {
         let user = new User({
             email: req.body.email,
             passwordHash: password,
-            phone: req.body.phone,
             isAdmin: req.body.isAdmin,
+            name: req.body.name,
+            contactNumber: req.body.contactNumber,
+            street: req.body.street,
+            barangay: req.body.barangay,
+            city: req.body.city,
             role: req.body.role,
         });
         
-        // Save the user in the database
         user = await user.save();
 
         if (!user) {
             return res.status(400).send('The user cannot be created!');
         }
 
-        // Role-based object creation logic
-        if (user.role === 'PharmacyOwner') {
-            let pharmacy = new Pharmacy({
-                pharmacyName: req.body.pharmacyName,
-                name: req.body.name,  // Assuming pharmacy name comes in the request
-                address: req.body.pharmacyAddress,  // Same for address
-                // Add other relevant fields
-            });
-            pharmacy = await pharmacy.save();
-
-            if (!pharmacy) {
-                return res.status(400).send('The pharmacy cannot be created!');
-            }
-        } else if (user.role === 'Customer') {
+        if (user.role === 'Customer') {
             let customer = new Customer({
-                user: user._id,
-                // Add other relevant customer fields if necessary
+                userInfo: user.id,
+                disease: req.body.disease
             });
             customer = await customer.save();
 
