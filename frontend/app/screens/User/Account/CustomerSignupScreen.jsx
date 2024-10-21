@@ -22,7 +22,7 @@ const CustomerSignup = () => {
 
       {/* Input Fields */}
       <View style={styles.inputSection}>
-        <TextInput style={styles.input} placeholder="User name" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="Name" placeholderTextColor="#AAB4C1" />
         <TextInput style={styles.input} placeholder="Email address" placeholderTextColor="#AAB4C1" keyboardType="email-address" />
         <TextInput style={styles.input} placeholder="Contact number" placeholderTextColor="#AAB4C1" keyboardType="phone-pad" />
         <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
