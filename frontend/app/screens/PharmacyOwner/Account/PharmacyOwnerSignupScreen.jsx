@@ -1,11 +1,166 @@
-import React from 'react'; 
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { 
+  View, 
+  Text, 
+  TextInput, 
+  TouchableOpacity, 
+  StyleSheet, 
+  Image, 
+  Platform 
+} from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
+import RNPickerSelect from 'react-native-picker-select';
+import Toast from "react-native-toast-message";
+import axios from "axios";
+import * as ImagePicker from "expo-image-picker";
+import mime from "mime";
+
+import baseURL from "../../../../assets/common/baseurl";
 
 const PharmacyOwnerSignupScreen = () => {
   const router = useRouter();
+  const navigation = useNavigation();
 
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [street, setStreet] = useState("");
+  const [barangay, setBarangay] = useState(null);
+  const [city, setCity] = useState("");
+  const [permits, setPermits] = useState([]);
+  const [error, setError] = useState('');
+  
+  useEffect(() => {
+    (async () => {
+      if (Platform.OS !== "web") {
+        const { status } = await ImagePicker.requestCameraPermissionsAsync();
+        if (status !== "granted") {
+          alert("Apologies, but in order to proceed, we require permission to access your camera roll!");
+        }
+      }
+    })();
+    
+    setCity("Taguig City");
+  
+  }, []);
+  
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [5.5, 8.5],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      const selectedImages = result.assets.map((asset) => ({ id: permits.length, uri: asset.uri }));
+      const filteredImages = permits.filter(image => image.uri !== undefined);
+      setPermits([...filteredImages, ...selectedImages]);
+    }
+
+  };
+
+  const removeImage = (id) => {
+    setPermits(permits.filter((image) => image.id !== id));
+  };
+
+  // const register = async () => {
+
+  //   try {
+  //     let formData = new FormData();
+  //     formData.append("name", name);
+  //     formData.append("email", email);
+  //     formData.append("contactNumber", contactNumber);
+  //     formData.append("password", password);
+  //     formData.append("street", street);
+  //     formData.append("barangay", barangay);
+  //     formData.append("city", city);
+  //     formData.append("isAdmin", false);
+  //     formData.append("role", "PharmacyOwner");
+  //     permits.forEach((image, index) => {
+  //       const mimeType = mime.getType(image.uri);
+  //       formData.append(`permits`, {
+  //         uri: image.uri,
+  //         type: mimeType,
+  //         name: `image${index}.${mime.getExtension(mimeType)}`,
+  //       });
+  //     });
+  
+  //     const res = await axios.post(`${baseURL}users/register`, formData, {
+  //       headers: { "Content-Type": "multipart/form-data" },
+  //     });
+  
+  //     if (res.status === 200) {
+  //       Toast.show({
+  //         topOffset: 60,
+  //         type: "SUCCESS",
+  //         text1: "REGISTRATION SUCCEEDED",
+  //         text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+  //     });
+  //     setTimeout(() => {
+  //         navigation.navigate("LoginScreen");
+  //     }, 500);
+  //     }
+  //   } catch (error) {
+  //     console.log(error?.response?.data || error.message);
+  //     console.log(error.response.data);
+  //     Toast.show({
+  //         position: 'bottom',
+  //         bottomOffset: 20,
+  //         type: "error",
+  //         text1: "Something went wrong",
+  //         text2: "Please try again",
+  //     });
+  //     console.log(error.message);
+  //   }
+  // };
+
+  const register = async () => {
+    try {
+      const userData = {
+        name,
+        email,
+        contactNumber,
+        password,
+        street,
+        barangay,
+        city,
+        isAdmin: false,
+        role: "PharmacyOwner"
+      };
+  
+      const res = await axios.post(`${baseURL}users/register`, userData, {
+        headers: { "Content-Type": "application/json" }
+      });
+  
+      // Check response and display success message
+      if (res.status === 200) {
+        Toast.show({
+          topOffset: 60,
+          type: "SUCCESS",
+          text1: "REGISTRATION SUCCEEDED",
+          text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+        });
+        setTimeout(() => {
+          navigation.navigate("LoginScreen");
+        }, 500);
+      }
+    } catch (error) {
+      console.log(error?.response?.data || error.message);
+      Toast.show({
+        position: "bottom",
+        bottomOffset: 20,
+        type: "error",
+        text1: "Something went wrong",
+        text2: "Please try again",
+      });
+    }
+  };
+  
   return (
     <View style={styles.container}>
       {/* Header Back Icon */}
@@ -21,28 +176,55 @@ const PharmacyOwnerSignupScreen = () => {
 
       {/* Input Fields */}
       <View style={styles.inputSection}>
-        <TextInput style={styles.input} placeholder="Pharmacy name" placeholderTextColor="#AAB4C1" />
-        <TextInput style={styles.input} placeholder="Email address" placeholderTextColor="#AAB4C1" keyboardType="email-address" />
-        
+        <TextInput style={styles.input} placeholder="Pharmacy name" placeholderTextColor="#AAB4C1" value={name} onChangeText={setName} />
+        <TextInput style={styles.input} placeholder="Email address" placeholderTextColor="#AAB4C1" keyboardType="email-address" value={email} onChangeText={setEmail} />
+        <TextInput style={styles.input} placeholder="Contact number" placeholderTextColor="#AAB4C1" value={contactNumber} onChangeText={setContactNumber} keyboardType="phone-pad" />
+        <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" value={password} onChangeText={setPassword} secureTextEntry={true} />
         {/* Address Fields */}
-        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" />
-        <TextInput style={styles.input} placeholder="Barangay" placeholderTextColor="#AAB4C1" />
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" />
-
-        <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
-        <TextInput style={styles.input} placeholder="Confirm password" placeholderTextColor="#AAB4C1" secureTextEntry={true} />
-
+        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
+        <RNPickerSelect
+          onValueChange={(value) => setBarangay(value)}
+          items={[
+            { label: 'Central Signal', value: 'Central Signal' },
+            { label: 'New Lower Bicutan', value: 'New Lower Bicutan' },
+            { label: 'Hagonoy', value: 'Hagonoy' },
+            { label: 'North Signal', value: 'North Signal' },
+            { label: 'South Signal', value: 'South Signal' },
+            { label: 'Tuktukan', value: 'Tuktukan' },
+          ]}
+          style={pickerSelectStyles}
+          placeholder={{
+            label: 'Select your barangay',
+            value: null,
+            color: '#AAB4C1',
+          }}
+          Icon={() => {
+            return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
+          }}
+          value={barangay} // <-- ensure you pass the state value here
+        />
+        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} onChangeText={setCity} editable={false} />
         {/* Upload Permits UI */}
         <Text style={styles.uploadLabel}>Upload Permits</Text>
         <View style={styles.uploadContainer}>
-          <TouchableOpacity style={styles.uploadButton}>
+          {permits.map((imageURL, index) => {
+            return (
+              <View key={index}>
+                <Image style={styles.image} source={{ uri: imageURL.uri || imageURL }} />
+                <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
+                  <Text style={styles.removeButtonText}>Remove</Text>
+                </TouchableOpacity>
+              </View>
+            )
+          })}
+          <TouchableOpacity style={styles.uploadButton} onPress={pickImage}>
             <Ionicons name="image-outline" size={24} color="white" />
             <Text style={styles.uploadButtonText}>Select Images</Text>
           </TouchableOpacity>
         </View>
 
         {/* Sign up Button */}
-        <TouchableOpacity style={styles.signUpButton} onPress={() => router.push('/screens/Auth/LoginScreen')}>
+        <TouchableOpacity style={styles.signUpButton} onPress={() => register()}>
           <Text style={styles.signUpButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
@@ -131,6 +313,31 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  image: {
+    width: 100,
+    height: 100,
+    margin: 5,
+  },
+  imagePicker: {
+    width: 100,
+    height: 100,
+    margin: 5,
+    backgroundColor: "grey",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  removeButton: {
+    position: "absolute",
+    top: 5,
+    right: 5,
+    backgroundColor: "red",
+    padding: 5,
+    borderRadius: 10,
+    zIndex: 1,
+  },
+  removeButtonText: {
+    color: "white",
+  },
   signUpButton: {
     backgroundColor: '#027DB1',
     paddingVertical: 15,
@@ -152,5 +359,30 @@ const styles = StyleSheet.create({
   loginLink: {
     color: '#00A896',
     fontWeight: 'bold',
+  },
+});
+
+const pickerSelectStyles = StyleSheet.create({
+  inputIOS: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    fontSize: 16,
+    color: '#333',
+    paddingRight: 30,
+  },
+  inputAndroid: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    fontSize: 16,
+    color: '#333',
+    paddingRight: 30,
+  },
+  iconContainer: {
+    top: 15,
+    right: 10,
   },
 });

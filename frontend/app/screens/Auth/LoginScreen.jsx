@@ -1,10 +1,35 @@
 // LoginScreen.tsx
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import AuthGlobal from '../../../context/Store/AuthGlobal'
+import { loginUser } from '../../../context/Actions/Auth.actions'
 
 const LoginScreen = () => {
-  const router = useRouter();
+  const context = useContext(AuthGlobal);
+  const navigation = useNavigation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState("");
+
+  // useEffect(() => {
+  //   if (context.stateUser.isAuthenticated) {
+  //     navigation.navigate("HomeScreen");
+  //   }
+  // }, [context.stateUser.isAuthenticated]);
+
+  const handleSubmit = () => {
+    const user = { email, password };
+
+    if (email === "" || password === "") {
+      setError("INCORRECT PASSWORD OR EMAIL");
+    } else {
+      loginUser(user, context.dispatch);
+      console.log("error");
+    }
+  };
   return (
     <View style={styles.container}>
       <View style={styles.upperSection}>
@@ -14,9 +39,9 @@ const LoginScreen = () => {
       <View style={styles.lowerSection}>
         <Text style={styles.welcomeBackText}>Welcome back!</Text>
         <Text style={styles.subText}>Log in to your account</Text>
-        <TextInput style={styles.input} placeholder="User name or email address" placeholderTextColor="#AAB4C1"/>
-        <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry />
-        <TouchableOpacity style={styles.loginButton} onPress={() => router.push('/(tabs)/')}>
+        <TextInput style={styles.input} placeholder="Email Address" placeholderTextColor="#AAB4C1" value={email} onChangeText={setEmail} />
+        <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" secureTextEntry value={password} onChangeText={setPassword} />
+        <TouchableOpacity style={styles.loginButton} onPress={() => handleSubmit()}>
           <Text style={styles.buttonText} >Log in</Text>
         </TouchableOpacity>
         <TouchableOpacity>

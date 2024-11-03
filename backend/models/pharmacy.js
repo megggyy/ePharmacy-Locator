@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const pharmacySchema = new mongoose.Schema({
+    permits: [{
+        type: String
+    }],
     userInfo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-    permits: [{
-        type: String
-    }],
 });
 
 pharmacySchema.virtual('id').get(function () {

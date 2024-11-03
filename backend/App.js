@@ -13,10 +13,12 @@ app.options("*", cors());
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
 app.use(authJwt());
 app.use(errorHandler);
 app.use("/public", express.static(__dirname + "/public"));
+
 
 
 //Routes

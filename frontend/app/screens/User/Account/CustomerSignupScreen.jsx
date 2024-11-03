@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
+import { 
+  View, 
+  Text, 
+  TextInput, 
+  TouchableOpacity, 
+  StyleSheet, 
+  Image, 
+  ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
@@ -13,7 +20,6 @@ const CustomerSignup = () => {
   const router = useRouter();
   const navigation = useNavigation();
   
-  const [selectedStreet, setSelectedStreet] = useState(null);
   const [selectedDisease, setSelectedDisease] = useState(null);
   const [customDisease, setCustomDisease] = useState('');
   const [loading, setLoading] = useState(true);
@@ -22,7 +28,7 @@ const CustomerSignup = () => {
   const [contactNumber, setContactNumber] = useState("");
   const [password, setPassword] = useState("");
   const [street, setStreet] = useState("");
-  const [barangay, setBarangay] = useState("");
+  const [barangay, setBarangay] = useState(null);
   const [city, setCity] = useState("");
   const [diseases, setDiseases] = useState([]);
 
@@ -39,7 +45,6 @@ const CustomerSignup = () => {
         }));
 
         formattedData.push({ label: 'Others', value: 'others' });
-
         setDiseases(formattedData);
       } catch (error) {
         console.error('Error fetching diseases:', error);
@@ -47,61 +52,56 @@ const CustomerSignup = () => {
         setLoading(false);
       }
     };
-
+  
+    setCity("Taguig City");
     fetchDiseases(); // Call the fetch function
   }, []);
 
   // Register function (submit form data)
   const register = async () => {
-    let formData = new FormData();
-    
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("contactNumber", contactNumber);
-    formData.append("password", password);
-    formData.append("street", street);
-    formData.append("barangay", barangay);
-    formData.append("city", city);
-    formData.append("diseases", selectedDisease === 'others' ? customDisease : selectedDisease);
-    formData.append("isAdmin", false);
-    formData.append("role", "Customer");
-
-    const config = {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      }
+    const formData = {
+        name,
+        email,
+        contactNumber,
+        password,
+        street,
+        barangay,
+        city,
+        diseases: selectedDisease === 'others' ? customDisease : selectedDisease,
+        isAdmin: false,
+        role: "Customer",
     };
 
     try {
-      const res = await axios.post(`${baseURL}users/register`, formData, config);
-      if (res.status === 200) {
-        Toast.show({
-          topOffset: 60,
-          type: "SUCCESS",
-          text1: "REGISTRATION SUCCEEDED",
-          text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+        const res = await axios.post(`${baseURL}users/register`, formData, {
+            headers: {
+                "Content-Type": "application/json",
+            },
         });
-        
-        // If "Others" is selected, add the custom disease to the database
-        if (selectedDisease === 'others' && customDisease.trim() !== '') {
-          await addCustomDisease(customDisease);
-        }
 
-        setTimeout(() => {
-          navigation.navigate("LoginScreen");
-        }, 500);
-      }
+        // Handle the response
+        if (res.status === 200) {
+            Toast.show({
+                topOffset: 60,
+                type: "SUCCESS",
+                text1: "REGISTRATION SUCCEEDED",
+                text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+            });
+            setTimeout(() => {
+                navigation.navigate("LoginScreen");
+            }, 500);
+        }
     } catch (error) {
-      Toast.show({
-        position: 'bottom',
-        bottomOffset: 20,
-        type: "error",
-        text1: "Something went wrong",
-        text2: "Please try again",
-      });
-      console.log(error.message);
+        Toast.show({
+            position: 'bottom',
+            bottomOffset: 20,
+            type: "error",
+            text1: "Something went wrong",
+            text2: "Please try again",
+        });
+        console.log(error.message);
     }
-  };
+};
 
   const addCustomDisease = async (diseaseName) => {
     try {
@@ -146,27 +146,28 @@ const CustomerSignup = () => {
         <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
         
         <RNPickerSelect
-          onValueChange={(value) => setSelectedStreet(value)}
+          onValueChange={(value) => setBarangay(value)}
           items={[
-            { label: 'Central Signal', value: 'Central Signal' },
-            { label: 'New Lower Bicutan', value: 'New Lower Bicutan' },
-            { label: 'Hagonoy', value: 'Hagonoy' },
-            { label: 'North Signal', value: 'North Signal' },
-            { label: 'South Signal', value: 'South Signal' },
-            { label: 'Tuktukan', value: 'Tuktukan' },
+              { label: 'Central Signal', value: 'Central Signal' },
+              { label: 'New Lower Bicutan', value: 'New Lower Bicutan' },
+              { label: 'Hagonoy', value: 'Hagonoy' },
+              { label: 'North Signal', value: 'North Signal' },
+              { label: 'South Signal', value: 'South Signal' },
+              { label: 'Tuktukan', value: 'Tuktukan' },
           ]}
           style={pickerSelectStyles}
           placeholder={{
-            label: 'Select your barangay',
-            value: null,
-            color: '#AAB4C1',
+              label: 'Select your barangay',
+              value: null,
+              color: '#AAB4C1',
           }}
           Icon={() => {
-            return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
+              return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
           }}
-        />
+          value={barangay} // <-- ensure you pass the state value here
+      />
 
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" />
+        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} onChangeText={setCity} editable={false} />
 
         {/* Dropdown for diseases */}
         <RNPickerSelect
