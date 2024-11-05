@@ -68,98 +68,98 @@ const PharmacyOwnerSignupScreen = () => {
     setPermits(permits.filter((image) => image.id !== id));
   };
 
-  // const register = async () => {
-
-  //   try {
-  //     let formData = new FormData();
-  //     formData.append("name", name);
-  //     formData.append("email", email);
-  //     formData.append("contactNumber", contactNumber);
-  //     formData.append("password", password);
-  //     formData.append("street", street);
-  //     formData.append("barangay", barangay);
-  //     formData.append("city", city);
-  //     formData.append("isAdmin", false);
-  //     formData.append("role", "PharmacyOwner");
-  //     permits.forEach((image, index) => {
-  //       const mimeType = mime.getType(image.uri);
-  //       formData.append(`permits`, {
-  //         uri: image.uri,
-  //         type: mimeType,
-  //         name: `image${index}.${mime.getExtension(mimeType)}`,
-  //       });
-  //     });
-  
-  //     const res = await axios.post(`${baseURL}users/register`, formData, {
-  //       headers: { "Content-Type": "multipart/form-data" },
-  //     });
-  
-  //     if (res.status === 200) {
-  //       Toast.show({
-  //         topOffset: 60,
-  //         type: "SUCCESS",
-  //         text1: "REGISTRATION SUCCEEDED",
-  //         text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-  //     });
-  //     setTimeout(() => {
-  //         navigation.navigate("LoginScreen");
-  //     }, 500);
-  //     }
-  //   } catch (error) {
-  //     console.log(error?.response?.data || error.message);
-  //     console.log(error.response.data);
-  //     Toast.show({
-  //         position: 'bottom',
-  //         bottomOffset: 20,
-  //         type: "error",
-  //         text1: "Something went wrong",
-  //         text2: "Please try again",
-  //     });
-  //     console.log(error.message);
-  //   }
-  // };
-
   const register = async () => {
+
     try {
-      const userData = {
-        name,
-        email,
-        contactNumber,
-        password,
-        street,
-        barangay,
-        city,
-        isAdmin: false,
-        role: "PharmacyOwner"
-      };
-  
-      const res = await axios.post(`${baseURL}users/register`, userData, {
-        headers: { "Content-Type": "application/json" }
+      let formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("contactNumber", contactNumber);
+      formData.append("password", password);
+      formData.append("street", street);
+      formData.append("barangay", barangay);
+      formData.append("city", city);
+      formData.append("isAdmin", false);
+      formData.append("role", "PharmacyOwner");
+      permits.forEach((image, index) => {
+        const mimeType = mime.getType(image.uri);
+        formData.append(`permits`, {
+          uri: image.uri,
+          type: mimeType,
+          name: `image${index}.${mime.getExtension(mimeType)}`,
+        });
       });
   
-      // Check response and display success message
+      const res = await axios.post(`${baseURL}users/register`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+  
       if (res.status === 200) {
         Toast.show({
           topOffset: 60,
           type: "SUCCESS",
           text1: "REGISTRATION SUCCEEDED",
           text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-        });
-        setTimeout(() => {
+      });
+      setTimeout(() => {
           navigation.navigate("LoginScreen");
-        }, 500);
+      }, 500);
       }
     } catch (error) {
       console.log(error?.response?.data || error.message);
+      console.log(error.response.data);
       Toast.show({
-        position: "bottom",
-        bottomOffset: 20,
-        type: "error",
-        text1: "Something went wrong",
-        text2: "Please try again",
+          position: 'bottom',
+          bottomOffset: 20,
+          type: "error",
+          text1: "Something went wrong",
+          text2: "Please try again",
       });
+      console.log(error.message);
     }
   };
+
+  // const register = async () => {
+  //   try {
+  //     const userData = {
+  //       name,
+  //       email,
+  //       contactNumber,
+  //       password,
+  //       street,
+  //       barangay,
+  //       city,
+  //       isAdmin: false,
+  //       role: "PharmacyOwner"
+  //     };
+  
+  //     const res = await axios.post(`${baseURL}users/register`, userData, {
+  //       headers: { "Content-Type": "application/json" }
+  //     });
+  
+  //     // Check response and display success message
+  //     if (res.status === 200) {
+  //       Toast.show({
+  //         topOffset: 60,
+  //         type: "SUCCESS",
+  //         text1: "REGISTRATION SUCCEEDED",
+  //         text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+  //       });
+  //       setTimeout(() => {
+  //         navigation.navigate("LoginScreen");
+  //       }, 500);
+  //     }
+  //   } catch (error) {
+  //     console.log(error?.response?.data || error.message);
+  //     Toast.show({
+  //       position: "bottom",
+  //       bottomOffset: 20,
+  //       type: "error",
+  //       text1: "Something went wrong",
+  //       text2: "Please try again",
+  //     });
+  //   }
+  // };
   
   return (
     <View style={styles.container}>

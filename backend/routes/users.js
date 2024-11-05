@@ -33,38 +33,32 @@ const storage = multer.diskStorage({
 const uploadOptions = multer({ storage: storage }).array('image', 10); // Update to handle multiple files
 
 
-router.post('/register', async (req, res) => {
-    console.log(req.body)
-    try {
-        
-        if (!req.body.password) {
-            return res.status(400).send('Password is required!');
-        }
+router.post('/register', (req, res) => {
+    console.log(req.body);
 
-        const saltRounds = 10;
-        const salt = bcrypt.genSaltSync(saltRounds);
+    uploadOptions(req, res, async (err) => {
+        if (err) {
+            return res.status(500).json({success: false, error: err})    
+        } 
+        else {
+            // Create user object based on request data
+            let user = new User({
+                email: req.body.email,
+                passwordHash: bcrypt.hashSync(req.body.password, 10),
+                isAdmin: req.body.isAdmin,
+                name: req.body.name,
+                contactNumber: req.body.contactNumber,
+                street: req.body.street,
+                barangay: req.body.barangay,
+                city: req.body.city,
+                role: req.body.role,
+            });
 
-        // Hashing the password
-        let password = bcrypt.hashSync(req.body.password, salt);
+            user = await user.save();
 
-        // Create user object based on request data
-        let user = new User({
-            email: req.body.email,
-            passwordHash: password,
-            isAdmin: req.body.isAdmin,
-            name: req.body.name,
-            contactNumber: req.body.contactNumber,
-            street: req.body.street,
-            barangay: req.body.barangay,
-            city: req.body.city,
-            role: req.body.role,
-        });
-
-        user = await user.save();
-
-        if (!user) {
-            return res.status(400).send('The user cannot be created!');
-        }
+            if (!user) {
+                return res.status(400).send('The user cannot be created!');
+            }
 
         if (user.role === 'Customer') {
             let customer = new Customer({
@@ -77,46 +71,36 @@ router.post('/register', async (req, res) => {
             if (!customer) {
                 return res.status(400).send('The customer cannot be created!');
             }
-        }
+            return res.send(user);
+
+        } 
         else if (user.role === 'PharmacyOwner') {
-            uploadOptions(req, res, async (err) => {
-                if (err) {
-                    return res.status(500).json({success: false, error: err})
-                } else {
-                    const files = req.files;
-                    if (!files || files.length === 0) {
-                        return res.status(400).send('NO PERMITS IN THE REQUEST');
-                    }
-        
-                    const basePath = `${req.protocol}://${req.get('host')}/public/uploads/photos/`;
-                    let permitPaths = [];
-                    files.forEach(file => {
-                        const fileName = file.filename;
-                        permitPaths.push(`${basePath}${fileName}`);
-                    });
-        
-                    const newPharmacy = new Pharmacy({
-                        userInfo: user.id,
-                        permits: permitPaths
-                    });
-        
-                    try {
-                        const savedPharmacy = await newPharmacy.save();
-                        res.status(201).send(savedPharmacy);
-                    } catch (error) {
-                        return res.status(500).json({success: false, error: err})
-                    }
-                }
+            const files = req.files;
+            if (!files || files.length === 0) {
+                return res.status(400).send('No permits in the request');
+            }
+
+            const basePath = `${req.protocol}://${req.get('host')}/public/uploads/photos/`;
+            const permitPaths = files.map(file => `${basePath}${file.filename}`);
+
+            const newPharmacy = new Pharmacy({
+                userInfo: user.id,
+                permits: permitPaths,
             });
+
+            try {
+                const savedPharmacy = await newPharmacy.save();
+                return res.status(201).send(savedPharmacy);
+            } catch (error) {
+                return res.status(500).json({ success: false, error: error.message });
+            }
         }
-
-
-        res.send(user);
-    } catch (error) {
-        console.error('Error during registration:', error); // Log error details
-        res.status(500).send('An error occurred during the process: ' + error.message);
-    }
+        } 
+    })
+    
 });
+
+
 
 
 router.post('/login', async (req, res) => {
