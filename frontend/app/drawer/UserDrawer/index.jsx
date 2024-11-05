@@ -50,9 +50,14 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/dashboard')}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Dashboard')}>
           <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Test sa admin</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/Dashboard')}>
+          <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
+          <Text style={styles.menuText}>Test sa Pharmacy Owner</Text>
         </TouchableOpacity>
       </View>
     </View>
