@@ -18,4 +18,4 @@ pharmacySchema.set('toJSON', {
     virtuals: true,
 });
 
-exports.PharmacyOwner = mongoose.model('Pharmacy', pharmacySchema);
+exports.Pharmacy = mongoose.model('Pharmacy', pharmacySchema);

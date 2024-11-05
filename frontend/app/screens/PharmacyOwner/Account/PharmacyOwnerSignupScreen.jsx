@@ -29,7 +29,7 @@ const PharmacyOwnerSignupScreen = () => {
   const [password, setPassword] = useState("");
   const [street, setStreet] = useState("");
   const [barangay, setBarangay] = useState(null);
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Taguig City");
   const [permits, setPermits] = useState([]);
   const [error, setError] = useState('');
   
@@ -42,12 +42,9 @@ const PharmacyOwnerSignupScreen = () => {
         }
       }
     })();
-    
-    setCity("Taguig City");
   
   }, []);
   
-
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -61,106 +58,64 @@ const PharmacyOwnerSignupScreen = () => {
       const filteredImages = permits.filter(image => image.uri !== undefined);
       setPermits([...filteredImages, ...selectedImages]);
     }
-
   };
 
   const removeImage = (id) => {
     setPermits(permits.filter((image) => image.id !== id));
   };
 
-  const register = async () => {
+  const register = () => {
+    let formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("contactNumber", contactNumber);
+    formData.append("password", password);
+    formData.append("street", street);
+    formData.append("barangay", barangay);
+    formData.append("city", city);
+    formData.append("isAdmin", false);
+    formData.append("role", "PharmacyOwner");
 
-    try {
-      let formData = new FormData();
-      formData.append("name", name);
-      formData.append("email", email);
-      formData.append("contactNumber", contactNumber);
-      formData.append("password", password);
-      formData.append("street", street);
-      formData.append("barangay", barangay);
-      formData.append("city", city);
-      formData.append("isAdmin", false);
-      formData.append("role", "PharmacyOwner");
-      permits.forEach((image, index) => {
-        const mimeType = mime.getType(image.uri);
-        formData.append(`permits`, {
-          uri: image.uri,
-          type: mimeType,
-          name: `image${index}.${mime.getExtension(mimeType)}`,
-        });
+    permits.forEach((image, index) => {
+      formData.append(`permits`, {
+        uri: image.uri,
+        type: mime.getType(image.uri),
+        name: `image${index}.${mime.getExtension(mime.getType(image.uri))}`,
       });
-  
-      const res = await axios.post(`${baseURL}users/register`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-  
-      if (res.status === 200) {
+    });
+
+    console.log(formData)
+    const config = {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    };
+
+    axios.post(`${baseURL}users/register`, formData, config)
+      .then((res) => {
+        console.log('Response:', res);
+        if (res.status === 200 || res.status === 201) {
+          Toast.show({
+            topOffset: 60,
+            type: "SUCCESS",
+            text1: "REGISTRATION SUCCEEDED",
+            text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+          });
+          setTimeout(() => {
+            navigation.navigate("LoginScreen");
+          }, 500);
+        }
+      })
+      .catch((error) => {
+        console.log('Response data:', error.response.data);
         Toast.show({
           topOffset: 60,
-          type: "SUCCESS",
-          text1: "REGISTRATION SUCCEEDED",
-          text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-      });
-      setTimeout(() => {
-          navigation.navigate("LoginScreen");
-      }, 500);
-      }
-    } catch (error) {
-      console.log(error?.response?.data || error.message);
-      console.log(error.response.data);
-      Toast.show({
-          position: 'bottom',
-          bottomOffset: 20,
           type: "error",
           text1: "Something went wrong",
-          text2: "Please try again",
+          text2: "Please try again"
+        });
       });
-      console.log(error.message);
-    }
-  };
-
-  // const register = async () => {
-  //   try {
-  //     const userData = {
-  //       name,
-  //       email,
-  //       contactNumber,
-  //       password,
-  //       street,
-  //       barangay,
-  //       city,
-  //       isAdmin: false,
-  //       role: "PharmacyOwner"
-  //     };
-  
-  //     const res = await axios.post(`${baseURL}users/register`, userData, {
-  //       headers: { "Content-Type": "application/json" }
-  //     });
-  
-  //     // Check response and display success message
-  //     if (res.status === 200) {
-  //       Toast.show({
-  //         topOffset: 60,
-  //         type: "SUCCESS",
-  //         text1: "REGISTRATION SUCCEEDED",
-  //         text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-  //       });
-  //       setTimeout(() => {
-  //         navigation.navigate("LoginScreen");
-  //       }, 500);
-  //     }
-  //   } catch (error) {
-  //     console.log(error?.response?.data || error.message);
-  //     Toast.show({
-  //       position: "bottom",
-  //       bottomOffset: 20,
-  //       type: "error",
-  //       text1: "Something went wrong",
-  //       text2: "Please try again",
-  //     });
-  //   }
-  // };
-  
+};
   return (
     <View style={styles.container}>
       {/* Header Back Icon */}
@@ -201,27 +156,28 @@ const PharmacyOwnerSignupScreen = () => {
           Icon={() => {
             return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
           }}
-          value={barangay} // <-- ensure you pass the state value here
+          value={barangay}
         />
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} onChangeText={setCity} editable={false} />
+        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
         {/* Upload Permits UI */}
         <Text style={styles.uploadLabel}>Upload Permits</Text>
         <View style={styles.uploadContainer}>
           {permits.map((imageURL, index) => {
             return (
-              <View key={index}>
-                <Image style={styles.image} source={{ uri: imageURL.uri || imageURL }} />
-                <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
+              <View key={index} style={styles.imageContainer}>
+                <Image style={styles.image} source={{ uri: imageURL.uri }}/>
+                <TouchableOpacity onPress={() =>  removeImage(imageURL.id)}style={styles.removeButton}>
                   <Text style={styles.removeButtonText}>Remove</Text>
                 </TouchableOpacity>
               </View>
-            )
+            );
           })}
           <TouchableOpacity style={styles.uploadButton} onPress={pickImage}>
             <Ionicons name="image-outline" size={24} color="white" />
             <Text style={styles.uploadButtonText}>Select Images</Text>
           </TouchableOpacity>
         </View>
+
 
         {/* Sign up Button */}
         <TouchableOpacity style={styles.signUpButton} onPress={() => register()}>

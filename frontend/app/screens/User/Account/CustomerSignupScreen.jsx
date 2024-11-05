@@ -29,7 +29,7 @@ const CustomerSignup = () => {
   const [password, setPassword] = useState("");
   const [street, setStreet] = useState("");
   const [barangay, setBarangay] = useState(null);
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Taguig City");
   const [diseases, setDiseases] = useState([]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const CustomerSignup = () => {
           label: item.name,
           value: item.name,
         }));
-
+        formattedData.push({ label: 'None', value: '' });
         formattedData.push({ label: 'Others', value: 'others' });
         setDiseases(formattedData);
       } catch (error) {
@@ -52,8 +52,7 @@ const CustomerSignup = () => {
         setLoading(false);
       }
     };
-  
-    setCity("Taguig City");
+
     fetchDiseases(); // Call the fetch function
   }, []);
 
@@ -103,27 +102,6 @@ const CustomerSignup = () => {
     }
 };
 
-  const addCustomDisease = async (diseaseName) => {
-    try {
-      await axios.post(`${baseURL}diseases/add`, { name: diseaseName });
-      Toast.show({
-        topOffset: 60,
-        type: "SUCCESS",
-        text1: "Custom Disease Added",
-        text2: `${diseaseName} has been added to the database.`,
-      });
-    } catch (error) {
-      console.error('Error adding custom disease:', error);
-      Toast.show({
-        position: 'bottom',
-        bottomOffset: 20,
-        type: "error",
-        text1: "Failed to add custom disease",
-        text2: "Please try again.",
-      });
-    }
-  };
-
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
@@ -167,7 +145,7 @@ const CustomerSignup = () => {
           value={barangay} // <-- ensure you pass the state value here
       />
 
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} onChangeText={setCity} editable={false} />
+        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
 
         {/* Dropdown for diseases */}
         <RNPickerSelect
