@@ -3,25 +3,23 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-nati
 import { Ionicons } from '@expo/vector-icons'; // Icon library
 import { LineChart, BarChart } from 'react-native-chart-kit'; // Chart library
 import { Dimensions } from 'react-native';
+import { useRouter } from 'expo-router';
 
 const screenWidth = Dimensions.get('window').width;
 
 const AdminDashboard = () => {
-
+  const router = useRouter();
   return (
     <ScrollView style={styles.safeArea}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.menuIcon}>
+        <TouchableOpacity style={styles.menuIcon} onPress={() => router.push('/drawer/AdminDrawer')}>
           <Ionicons name="menu" size={30} color="white" />
         </TouchableOpacity>
         <View style={styles.userInfo}>
           <Text style={styles.userName}>Shanai Meg Honrado</Text>
           <Text style={styles.userRole}>Admin</Text>
         </View>
-        <TouchableOpacity style={styles.notificationIcon}>
-          <Ionicons name="notifications-outline" size={30} color="white" />
-        </TouchableOpacity>
       </View>
 
       {/* Dashboard Cards */}
@@ -44,7 +42,7 @@ const AdminDashboard = () => {
         </View>
       </View>
 
-
+      {/* Bar Chart for Monthly New Users */}
       <Text style={styles.chartTitle}>Monthly New Users</Text>
       <BarChart
         data={{
@@ -68,7 +66,7 @@ const AdminDashboard = () => {
         style={styles.chart}
       />
 
-      {/* Monthly Scanned Prescriptions Line Chart */}
+      {/* Line Chart for Monthly Scanned Prescriptions */}
       <Text style={styles.chartTitle}>Monthly Scanned Prescription</Text>
       <LineChart
         data={{
@@ -112,8 +110,8 @@ const styles = StyleSheet.create({
     marginTop: 35,
   },
   userInfo: {
-    flex: 1,
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    marginLeft: 10,
   },
   userName: {
     color: 'white',
@@ -124,10 +122,6 @@ const styles = StyleSheet.create({
   userRole: {
     color: 'white',
     fontSize: 12,
-  },
-  notificationIcon: {
-    marginLeft: 10,
-    marginTop: 35,
   },
   dashboardCards: {
     flexDirection: 'row',
