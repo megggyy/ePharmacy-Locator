@@ -102,7 +102,7 @@ const PharmacyOwnerSignupScreen = () => {
             text2: "PLEASE LOG IN TO YOUR ACCOUNT",
           });
           setTimeout(() => {
-            navigation.navigate("LoginScreen");
+            router.push('../../Auth/LoginScreen');
           }, 500);
         }
       })

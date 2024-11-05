@@ -1,35 +1,31 @@
 // LoginScreen.tsx
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useRouter } from 'expo-router';
 import { useNavigation } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import AuthGlobal from '../../../context/Store/AuthGlobal'
-import { loginUser } from '../../../context/Actions/Auth.actions'
+import AuthGlobal from '../../../context/Store/AuthGlobal';
+import { loginUser } from '../../../context/Actions/Auth.actions';
+import { useRouter } from 'expo-router';
 
 const LoginScreen = () => {
-  const context = useContext(AuthGlobal);
   const navigation = useNavigation();
+  const { state, dispatch } = useContext(AuthGlobal); 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState("");
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   if (context.stateUser.isAuthenticated) {
-  //     navigation.navigate("HomeScreen");
-  //   }
-  // }, [context.stateUser.isAuthenticated]);
+  console.log()
+  const handleSubmit = async () => {
+        const user = { email: email.trim(), password: password.trim() }; // Trim whitespace
+        await loginUser(user, dispatch);
+        // Check the authentication state after login attempt
+        console.log(state)
+        if (state.isAuthenticated === false) { 
+          router.push('../../(tabs)');
+        } else {
+            console.log("Authentication failed"); 
+        }
+    }; 
 
-  const handleSubmit = () => {
-    const user = { email, password };
-
-    if (email === "" || password === "") {
-      setError("INCORRECT PASSWORD OR EMAIL");
-    } else {
-      loginUser(user, context.dispatch);
-      console.log("error");
-    }
-  };
   return (
     <View style={styles.container}>
       <View style={styles.upperSection}>

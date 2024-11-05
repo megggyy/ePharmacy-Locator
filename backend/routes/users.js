@@ -36,7 +36,7 @@ const uploadOptions = multer({ storage: storage }).array('permits', 10);
 
 router.post('/register', (req, res) => {
     console.log(req.files);
-
+    console.log( req.body.diseases);
     uploadOptions(req, res, async (err) => {
         if (err) {
             return res.status(500).json({ success: false, error: err });
@@ -61,61 +61,61 @@ router.post('/register', (req, res) => {
             return res.status(400).send('The user cannot be created!');
         }
 
-        if (req.body.disease === 'Others') {
-            let disease = new Diseases({
+
+        // If the user role is Customer, create a Customer entry
+        if (user.role === 'Customer') {
+
+            let disease = await Diseases.findOne({ name: req.body.diseases });
+            if (!disease) {
+                disease = new Diseases({
+                    name: req.body.diseases, 
+                });
+
+                disease = await disease.save();
+                if (!disease) {
+                    return res.status(400).send('The disease cannot be created!');
+                }
+            }
+
+            let customer = new Customer({
                 userInfo: user.id,
-                name: req.body.otherDisease, // Adjust to use the new disease field
+                disease: disease.id,
             });
 
-            disease = await disease.save();
+            customer = await customer.save();
 
-            if (!disease) {
-                return res.status(400).send('The disease cannot be created!');
+            if (!customer) {
+                return res.status(400).send('The customer cannot be created!');
             }
-        } else {
-            // If a specific disease is provided
-            let disease = await Diseases.findOne({ name: req.body.disease });
-            if (!disease) {
-                return res.status(400).send('The specified disease does not exist!');
+            return res.send(customer);
+
+        } else if (user.role === 'PharmacyOwner') {
+            // For PharmacyOwner role, handle file uploads and permits
+            const files = req.files;
+            if (!files || files.length === 0) {
+                return res.status(400).send('No permits in the request');
             }
 
-            if (user.role === 'Customer') {
-                let customer = new Customer({
-                    userInfo: user.id,
-                    disease: disease.id,
-                });
+            const basePath = `${req.protocol}://${req.get('host')}/public/uploads/photos/`;
+            const permitPaths = files.map(file => `${basePath}${file.filename}`);
 
-                customer = await customer.save();
+            const newPharmacy = new Pharmacy({
+                userInfo: user.id,
+                permits: permitPaths,
+            });
 
-                if (!customer) {
-                    return res.status(400).send('The customer cannot be created!');
-                }
-            } else if (user.role === 'PharmacyOwner') {
-                const files = req.files;
-                if (!files || files.length === 0) {
-                    return res.status(400).send('No permits in the request');
-                }
-
-                const basePath = `${req.protocol}://${req.get('host')}/public/uploads/photos/`;
-                const permitPaths = files.map(file => `${basePath}${file.filename}`);
-
-                const newPharmacy = new Pharmacy({
-                    userInfo: user.id,
-                    permits: permitPaths,
-                });
-
-                try {
-                    const savedPharmacy = await newPharmacy.save();
-                    return res.status(201).send(savedPharmacy);
-                } catch (error) {
-                    return res.status(500).json({ success: false, error: error.message });
-                }
+            try {
+                const savedPharmacy = await newPharmacy.save();
+                return res.status(201).send(savedPharmacy);
+            } catch (error) {
+                return res.status(500).json({ success: false, error: error.message });
             }
         }
 
         return res.send(user);
     });
 });
+
 
 router.post('/login', async (req, res) => {
     console.log(req.body.email)
@@ -137,7 +137,7 @@ router.post('/login', async (req, res) => {
         )
         res.status(200).send({ user: user.email, token: token })
     } else {
-        res.status(400).send('password is wrong!');
+        res.status(400).send('PASSWORD IS WRONG!');
     }
 })
 

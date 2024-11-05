@@ -71,6 +71,7 @@ const CustomerSignup = () => {
         role: "Customer",
     };
 
+    console.log(formData)
     try {
         const res = await axios.post(`${baseURL}users/register`, formData, {
             headers: {
@@ -87,7 +88,7 @@ const CustomerSignup = () => {
                 text2: "PLEASE LOG IN TO YOUR ACCOUNT",
             });
             setTimeout(() => {
-                navigation.navigate("LoginScreen");
+              router.push('../../Auth/LoginScreen');
             }, 500);
         }
     } catch (error) {
