@@ -8,6 +8,7 @@ import {
   Image, 
   Platform 
 } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
@@ -117,7 +118,7 @@ const PharmacyOwnerSignupScreen = () => {
       });
 };
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
@@ -192,7 +193,7 @@ const PharmacyOwnerSignupScreen = () => {
           Login
         </Text>
       </Text>
-    </View>
+    </KeyboardAwareScrollView>
   );
 };
 

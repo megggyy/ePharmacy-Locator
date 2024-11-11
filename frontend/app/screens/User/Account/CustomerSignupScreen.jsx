@@ -7,6 +7,7 @@ import {
   StyleSheet, 
   Image, 
   ScrollView } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
@@ -104,7 +105,7 @@ const CustomerSignup = () => {
 };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
@@ -186,7 +187,7 @@ const CustomerSignup = () => {
           <Text style={styles.signUpButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    </KeyboardAwareScrollView>
   );
 };
 

@@ -1,5 +1,6 @@
 // LoginScreen.tsx
 import React, { useState, useContext } from 'react';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AuthGlobal from '../../../context/Store/AuthGlobal';
@@ -27,7 +28,7 @@ const LoginScreen = () => {
     }; 
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <View style={styles.upperSection}>
         <Image source={require('@/assets/images/epharmacy-logo.png')} style={styles.icon} />
         <Text style={styles.appName}>ePharmacy</Text>
@@ -47,7 +48,7 @@ const LoginScreen = () => {
           Don’t have an account? <Text style={styles.signupLink} onPress={() => router.push('/screens/Auth/SignupRoleScreen')}>Signup</Text>
         </Text>
       </View>
-    </View>
+    </KeyboardAwareScrollView>
   );
 };
 
