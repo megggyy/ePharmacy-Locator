@@ -1,35 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert, FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter, useLocalSearchParams } from 'expo-router';
+import { useRouter } from 'expo-router';
 import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
 
-export default function EditCategory() {
+export default function CreateCategory() {
   const router = useRouter();
-  const { id } = useLocalSearchParams();
+
+  // State for new category details
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [images, setImages] = useState([]);
+  const [imageUris, setImageUris] = useState([]); // Array to store image URIs
 
-  useEffect(() => {
-    const fetchCategory = async () => {
-      try {
-        const response = await axios.get(`${baseURL}medication-category/${id}`);
-        const category = response.data;
-        setName(category.name);
-        setDescription(category.description);
-        setImages(category.images || []);
-      } catch (error) {
-        console.error('Error fetching category:', error);
-        Alert.alert('Error', 'Failed to load category details');
-      }
-    };
-    if (id) fetchCategory();
-  }, [id]);
-
-  const handleSelectImage = async () => {
+  // Function to pick images
+  const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
@@ -38,18 +24,15 @@ export default function EditCategory() {
     });
 
     if (!result.canceled) {
-      setImages([...images, result.assets[0].uri]);
+      setImageUris([...imageUris, result.assets[0].uri]); // Add new image URI
     }
   };
 
-  const handleDeleteImage = (uri) => {
-    setImages(images.filter(image => image !== uri));
-  };
-
-  const handleConfirm = async () => {
+  const handleCreate = async () => {
     const formData = new FormData();
-
-    images.forEach((uri) => {
+    
+    // Append image files to FormData
+    imageUris.forEach((uri, index) => {
       const filename = uri.split('/').pop();
       const type = `image/${filename.split('.').pop()}`;
       formData.append('images', {
@@ -59,55 +42,53 @@ export default function EditCategory() {
       });
     });
 
+    // Append other category data to FormData
     formData.append('name', name);
     formData.append('description', description);
 
     try {
+      // Make POST request to create category
       const config = {
         headers: {
           "Content-Type": "multipart/form-data"
         }
       };
-      await axios.put(`${baseURL}medication-category/update/${id}`, formData, config);
-      Alert.alert('Success', 'Category updated successfully');
-      router.back();
+      const response = await axios.post(`${baseURL}medication-category/create`, formData, config);     
+      if (response.data) {
+        Alert.alert('Success', 'Category created successfully');
+        router.back(); 
+      }
     } catch (error) {
-      console.error('Error updating category:', error);
-      Alert.alert('Error', 'Failed to update category');
+      console.error('Error creating category:', error);
+      Alert.alert('Error', 'Failed to create category');
     }
   };
 
   return (
     <View style={styles.container}>
+      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Edit Category</Text>
+        <Text style={styles.headerText}>Create Category</Text>
       </View>
 
+      {/* Image Section */}
       <View style={styles.imageSection}>
-        <FlatList
-          data={images}
-          horizontal
-          renderItem={({ item }) => (
-            <View style={styles.imageContainer}>
-              <Image source={{ uri: item }} style={styles.categoryImage} />
-              <TouchableOpacity
-                style={styles.deleteButton}
-                onPress={() => handleDeleteImage(item)}
-              >
-                <Ionicons name="close-circle" size={24} color="red" />
-              </TouchableOpacity>
-            </View>
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
-        <TouchableOpacity onPress={handleSelectImage} style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Image</Text>
+        {imageUris.length > 0 ? (
+          imageUris.map((uri, index) => (
+            <Image key={index} source={{ uri }} style={styles.categoryImage} />
+          ))
+        ) : (
+          <Image source={require('@/assets/images/sample.jpg')} style={styles.categoryImage} />
+        )}
+        <TouchableOpacity onPress={pickImage} style={styles.selectImageButton}>
+          <Text style={styles.selectImageText}>Select Images</Text>
         </TouchableOpacity>
       </View>
 
+      {/* Input Fields */}
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Category Name</Text>
         <TextInput
@@ -116,18 +97,19 @@ export default function EditCategory() {
           onChangeText={setName}
           placeholder="Enter category name"
         />
+
         <Text style={styles.label}>Description</Text>
         <TextInput
           style={styles.input}
           value={description}
           onChangeText={setDescription}
-          placeholder="Enter category description"
-          multiline
+          placeholder="Enter description"
         />
       </View>
 
-      <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
-        <Text style={styles.confirmButtonText}>CONFIRM</Text>
+      {/* Create Button */}
+      <TouchableOpacity style={styles.confirmButton} onPress={handleCreate}>
+        <Text style={styles.confirmButtonText}>CREATE</Text>
       </TouchableOpacity>
     </View>
   );
@@ -159,26 +141,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 20,
   },
-  imageContainer: {
-    position: 'relative',
-    marginHorizontal: 5,
-  },
   categoryImage: {
     width: 100,
     height: 100,
     borderRadius: 10,
-  },
-  deleteButton: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
+    marginBottom: 10,
   },
   selectImageButton: {
     backgroundColor: '#E0E0E0',
     paddingVertical: 5,
     paddingHorizontal: 20,
     borderRadius: 5,
-    marginTop: 10,
   },
   selectImageText: {
     color: '#555',

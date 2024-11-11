@@ -1,17 +1,35 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity, Alert, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function ReadCategoryScreen() {
   const router = useRouter();
+  const { id } = useLocalSearchParams();
+  const [categoryData, setCategoryData] = useState(null);
 
-  // Sample category data
-  const categoryData = {
-    name: 'Pain Relievers',
-    description: 'Medications that help relieve pain, including over-the-counter and prescription options.',
-    image: require('@/assets/images/sample.jpg'), // Replace with actual image path or a placeholder
-  };
+  useEffect(() => {
+    const fetchCategory = async () => {
+      try {
+        const response = await axios.get(`${baseURL}medication-category/${id}`);
+        setCategoryData(response.data);
+      } catch (error) {
+        console.error('Error fetching category:', error);
+        Alert.alert('Error', 'Failed to load category details');
+      }
+    };
+    if (id) fetchCategory();
+  }, [id]);
+
+  if (!categoryData) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -25,7 +43,14 @@ export default function ReadCategoryScreen() {
 
       {/* Category Details */}
       <View style={styles.detailsContainer}>
-        <Image source={categoryData.image} style={styles.image} />
+        <FlatList
+          data={categoryData.images}
+          horizontal
+          renderItem={({ item: image }) => (
+            <Image source={{ uri: image }} style={styles.image} />
+          )}
+          keyExtractor={(image, index) => index.toString()}
+        />
         <Text style={styles.label}>Name:</Text>
         <Text style={styles.value}>{categoryData.name}</Text>
         <Text style={styles.label}>Description:</Text>
@@ -65,6 +90,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 10,
+    marginHorizontal: 5,
     marginBottom: 20,
   },
   label: {
@@ -77,5 +103,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
     paddingHorizontal: 10,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

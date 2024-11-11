@@ -1,45 +1,84 @@
-import React from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function MedicationCategoriesScreen() {
   const router = useRouter();
+  const [categories, setCategories] = useState([]);
 
-  // Sample data
-  const categories = [
-    { id: 1, name: 'Pain Relievers', image: require('@/assets/images/sample.jpg') },
-    { id: 2, name: 'Antibiotics', image: require('@/assets/images/sample.jpg') },
-    { id: 3, name: 'Vitamins', image: require('@/assets/images/sample.jpg') },
-    { id: 4, name: 'Cough and Cold', image: require('@/assets/images/sample.jpg') },
-    { id: 5, name: 'Antacids', image: require('@/assets/images/sample.jpg') },
-  ];
-
-//   const handleEdit = (categoryId) => {
-//     console.log('Edit category', categoryId);
-//     router.push(`/screens/Admin/Categories/EditCategory/${categoryId}`);
-//   };
-
-//   const handleDelete = (categoryId) => {
-//     console.log('Delete category', categoryId);
-//     // Implement deletion logic here
-//   };
+  // Fetch categories when the screen is focused
+  useFocusEffect(
+    React.useCallback(() => {
+      const fetchCategories = async () => {
+        try {
+          const response = await axios.get(`${baseURL}medication-category`);
+          setCategories(response.data);
+        } catch (error) {
+          console.error('Error fetching categories:', error);
+          Alert.alert('Error', 'Failed to load categories');
+        }
+      };
+      fetchCategories();
+    }, [])
+  );
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/PharmacyOwner/MedicationCategory/ReadCategory')}>
-      <Text style={styles.cell}>{item.id}</Text>
-      <Image source={item.image} style={styles.image} />
+    <TouchableOpacity 
+      style={styles.row} 
+      onPress={() => router.push(`/screens/PharmacyOwner/MedicationCategory/ReadCategory?id=${item._id}`)}
+    >    
+      {/* Render Images */}
+      <View style={styles.imageContainer}>
+        <FlatList
+          data={item.images}
+          horizontal
+          renderItem={({ item: image }) => (
+            <Image source={{ uri: image }} style={styles.image} />
+          )}
+          keyExtractor={(image, index) => index.toString()}
+        />
+      </View>
+
+      {/* Display Category Name and Description */}
       <Text style={styles.cell}>{item.name}</Text>
-      <View style={styles.actionCell}>
-        <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/MedicationCategory/EditCategory')} style={styles.actionButton}>
+      <Text style={styles.cell}>{item.description}</Text>
+
+      {/* Actions */}
+      {/* <View style={styles.actionCell}>
+        <TouchableOpacity onPress={() => router.push(`/screens/PharmacyOwner/MedicationCategory/EditCategory/${item._id}`)} style={styles.actionButton}>
           <Ionicons name="create-outline" size={24} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.actionButton}>
+        <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.actionButton}>
+          <Ionicons name="trash-outline" size={24} color="red" />
+        </TouchableOpacity>
+      </View> */}
+       <View style={styles.actionCell}>
+        <TouchableOpacity 
+          onPress={() => router.push(`/screens/PharmacyOwner/MedicationCategory/EditCategory?id=${item._id}`)} 
+          style={styles.actionButton}
+        >
+          <Ionicons name="create-outline" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.actionButton}>
           <Ionicons name="trash-outline" size={24} color="red" />
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
   );
+
+  const handleDelete = async (categoryId) => {
+    try {
+      await axios.delete(`${baseURL}medication-category/delete/${categoryId}`);
+      setCategories(categories.filter(category => category._id !== categoryId));
+      Alert.alert('Success', 'Category deleted successfully');
+    } catch (error) {
+      console.error('Error deleting category:', error);
+      Alert.alert('Error', 'Failed to delete category');
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -51,18 +90,26 @@ export default function MedicationCategoriesScreen() {
         <Text style={styles.title}>Medication Categories</Text>
       </View>
 
+      {/* Create Button */}
+      <TouchableOpacity 
+        onPress={() => router.push('/screens/PharmacyOwner/MedicationCategory/CreateCategory')} 
+        style={styles.createButton}
+      >
+        <Text style={styles.createButtonText}>Create Category</Text>
+      </TouchableOpacity>
+
       {/* Categories Table */}
       <Text style={styles.tableTitle}>Categories</Text>
       <View style={styles.tableHeader}>
-        <Text style={styles.headerCell}>ID</Text>
         <Text style={styles.headerCell}>Image</Text>
         <Text style={styles.headerCell}>Category</Text>
+        <Text style={styles.headerCell}>Description</Text>
         <Text style={styles.headerCell}>Actions</Text>
       </View>
       <FlatList
         data={categories}
         renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item._id.toString()}
         style={styles.table}
       />
     </View>
@@ -90,6 +137,20 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 10,
+  },
+  createButton: {
+    backgroundColor: '#0B607E',
+    paddingVertical: 10,
+    marginHorizontal: 100,
+    marginBottom: 20,
+    marginTop: 20,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  createButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   tableTitle: {
     textAlign: 'center',
@@ -124,11 +185,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
   },
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   image: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     resizeMode: 'cover',
     borderRadius: 5,
+    marginHorizontal: 5,
   },
   actionCell: {
     flexDirection: 'row',
