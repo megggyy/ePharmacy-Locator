@@ -15,21 +15,26 @@ app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
+
+//eto muna para publicly accessed photos
+app.use("/public", express.static(__dirname + "/public"));
 app.use(authJwt());
 app.use(errorHandler);
-app.use("/public", express.static(__dirname + "/public"));
+
 
 
 
 //Routes
 const usersRoutes = require("./routes/users");
 const diseasesRoutes = require("./routes/diseases");
+const medicationcategoryRoutes = require("./routes/medication-category");
 
 const api = process.env.API_URL;
 
 
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/diseases`, diseasesRoutes);
+app.use(`${api}/medication-category`, medicationcategoryRoutes);
 
 //Database
 mongoose
