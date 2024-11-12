@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'; 
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import axios from 'axios';
@@ -26,9 +26,17 @@ export default function EditMedicationScreen() {
   );
   
 
-  const handleDelete = (medicationId) => {
-    console.log('Delete medication', medicationId);
+  const handleDelete = async (medicationId) => {
+      try {
+      await axios.delete(`${baseURL}medicine/delete/${medicationId}`);
+      setMedications(medications.filter(medication => medication._id !== medicationId));
+      Alert.alert('Success', 'Medicine deleted successfully');
+    } catch (error) {
+      console.error('Error deleting medicine:', error);
+      Alert.alert('Error', 'Failed to delete medicine');
+    }
   };
+  
 
   const renderItem = ({ item }) => (
     <TouchableOpacity 

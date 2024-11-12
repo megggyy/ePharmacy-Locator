@@ -17,7 +17,7 @@ const CategoryFilterMedications = () => {
       <ScrollView style={styles.container}>
         <View style={styles.medicationsGrid}>
           {[1, 2, 3, 4, 5, 6].map((tablet, index) => (
-            <TouchableOpacity key={index} style={styles.medicationCard} onPress={() => router.push('/screens/User/Features/TabletDetails')}>
+            <TouchableOpacity key={index} style={styles.medicationCard} onPress={() => router.push('/screens/User/Features/MedicationDetails')}>
               <Image
                 style={styles.medicationImage}
                 source={require('@/assets/images/sample.jpg')} // Replace with your tablet image path
