@@ -1,32 +1,49 @@
-import React from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function EditMedicationScreen() {
   const router = useRouter();
+  const [medications, setMedications] = useState([]);
 
-  const medications = [
-    { id: 1, image: require('@/assets/images/sample.jpg'), description: 'description', category: 'Analgesic', stock: 100 },
-    { id: 2, image: require('@/assets/images/sample.jpg'), description: 'description', category: 'Antibacterial', stock: 50 },
-    { id: 3, image: require('@/assets/images/sample.jpg'), description: 'description', category: 'Supplement', stock: 200 },
-  ];
+  // Fetch medications from API
+  useFocusEffect(
+    React.useCallback(() => {
+      const fetchMedications = async () => {
+        try {
+          const response = await axios.get(`${baseURL}medicine`); // Replace with your actual URL
+          setMedications(response.data);
+        } catch (error) {
+          console.error('Error fetching medications:', error);
+        }
+      };
+  
+      fetchMedications();
+    }, []) // Empty dependency array to run only once when the component mounts
+  );
+  
 
   const handleDelete = (medicationId) => {
     console.log('Delete medication', medicationId);
   };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/PharmacyOwner/Medications/ReadMedication')}>
-      <Text style={styles.cell}>{item.id}</Text>
-      <Image source={item.image} style={styles.image} />
+    <TouchableOpacity 
+    style={styles.row} 
+    onPress={() => router.push(`/screens/PharmacyOwner/Medications/ReadMedication?id=${item._id}`)}>
+      {/* <Text style={styles.cell}>{item.id}</Text> */}
+      <Image source={{ uri: item.images[0] }} style={styles.image} /> 
       <Text style={styles.cell}>{item.description}</Text>
-      <Text style={styles.cell}>{item.category}</Text>
+      <Text style={styles.cell}>{item.category.name}</Text>
       <Text style={styles.cell}>{item.stock}</Text>
+      <Text style={styles.cell}>{item.pharmacy.userInfo.name}</Text>
 
       {/* Action Column */}
       <View style={styles.actionCell}>
-        <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/Medications/EditMedication')} style={styles.actionButton}>
+        <TouchableOpacity onPress={() => router.push(`/screens/PharmacyOwner/Medications/EditMedication?id=${item._id}`)} style={styles.actionButton}>
           <Ionicons name="create-outline" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.actionButton}>
@@ -45,15 +62,22 @@ export default function EditMedicationScreen() {
         </TouchableOpacity>
         <Text style={styles.title}>Medication List</Text>
       </View>
-
+      {/* Create Button */}
+      <TouchableOpacity 
+            onPress={() => router.push('/screens/PharmacyOwner/Medications/CreateMedication')} 
+            style={styles.createButton}
+          >
+            <Text style={styles.createButtonText}>Create Medicine</Text>
+          </TouchableOpacity>
       {/* Medication Table */}
       <Text style={styles.tableTitle}>Medications</Text>
       <View style={styles.tableHeader}>
-        <Text style={styles.headerCell}>ID</Text>
+        {/* <Text style={styles.headerCell}>ID</Text> */}
         <Text style={styles.headerCell}>Image</Text>
         <Text style={styles.headerCell}>Description</Text>
         <Text style={styles.headerCell}>Category</Text>
         <Text style={styles.headerCell}>Stock</Text>
+        <Text style={styles.headerCell}>Pharmacy</Text>
         <Text style={styles.headerCell}>Actions</Text>
       </View>
       <FlatList
@@ -120,6 +144,20 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     color: '#333333',
+  },
+  createButton: {
+    backgroundColor: '#0B607E',
+    paddingVertical: 10,
+    marginHorizontal: 100,
+    marginBottom: 20,
+    marginTop: 20,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  createButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   image: {
     width: 50,

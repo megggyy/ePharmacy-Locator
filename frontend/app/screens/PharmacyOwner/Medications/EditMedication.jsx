@@ -1,24 +1,118 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
+import * as ImagePicker from 'expo-image-picker';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
+import RNPickerSelect from 'react-native-picker-select';
 
 export default function EditMedicationScreen() {
   const router = useRouter();
+  const { id } = useLocalSearchParams();
   
-  const [description, setDescription] = useState('Sample description');
-  const [category, setCategory] = useState('Analgesic');
-  const [stock, setStock] = useState('100');
-  const [image, setImage] = useState(require('@/assets/images/sample.jpg'));
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [categoryId, setCategoryId] = useState('');  // Store category ID
+  const [stock, setStock] = useState('');
+  const [images, setImages] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [pharmacy, setPharmacy] = useState('');
+  const [pharmacyId, setPharmacyId] = useState('');  // Store pharmacy ID
 
-  const handleConfirm = () => {
-    console.log('Medication Updated:', { description, category, stock });
-    router.back();
+  useEffect(() => {
+    const fetchMedication = async () => {
+      try {
+        const response = await axios.get(`${baseURL}medicine/${id}`);
+        const medication = response.data;
+        setName(medication.name);
+        setDescription(medication.description);
+        setCategory(medication.category.name);  // Display category name
+        setCategoryId(medication.category._id);  // Store category ID
+        setStock(medication.stock.toString());
+        setImages(medication.images || []);
+        setPharmacy(medication.pharmacy.userInfo.name);  // Display pharmacy name
+        setPharmacyId(medication.pharmacy._id);  // Store pharmacy ID
+      } catch (error) {
+        console.error('Error fetching medication:', error);
+        Alert.alert('Error', 'Failed to load medication details');
+      }
+    };
+    
+    if (id) fetchMedication();
+  }, [id]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(`${baseURL}medication-category`);
+        setCategories(response.data.map(category => ({
+          label: category.name,
+          value: category._id,  // Use category ID for the value
+        })));
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+        Alert.alert('Error', 'Failed to load categories');
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  const handleSelectImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setImages([...images, result.assets[0].uri]);
+    }
+  };
+
+  const handleDeleteImage = (uri) => {
+    setImages(images.filter(image => image !== uri));
+  };
+
+  const handleConfirm = async () => {
+    const formData = new FormData();
+    
+    images.forEach((uri) => {
+      const filename = uri.split('/').pop();
+      const type = `image/${filename.split('.').pop()}`;
+      formData.append('images', {
+        uri,
+        name: filename,
+        type,
+      });
+    });
+
+    formData.append('name', name);
+    formData.append('description', description);
+    formData.append('category', categoryId);  // Send category ID
+    formData.append('stock', stock);
+    formData.append('pharmacy', pharmacyId);  // Send pharmacy ID
+
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      };
+      await axios.put(`${baseURL}medicine/update/${id}`, formData, config);
+      Alert.alert('Success', 'Medication updated successfully');
+      router.back();
+    } catch (error) {
+      console.error('Error updating medication:', error);
+      Alert.alert('Error', 'Failed to update medication');
+    }
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -27,13 +121,29 @@ export default function EditMedicationScreen() {
       </View>
 
       <View style={styles.imageSection}>
-        <Image source={image} style={styles.medicationImage} />
-        <TouchableOpacity style={styles.selectImageButton}>
+        {images.map((uri, index) => (
+          <View key={index} style={styles.imageContainer}>
+            <Image source={{ uri }} style={styles.medicationImage} />
+            <TouchableOpacity
+              style={styles.deleteButton}
+              onPress={() => handleDeleteImage(uri)}
+            >
+              <Ionicons name="close-circle" size={24} color="red" />
+            </TouchableOpacity>
+          </View>
+        ))}
+        <TouchableOpacity onPress={handleSelectImage} style={styles.selectImageButton}>
           <Text style={styles.selectImageText}>Select Image</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.inputContainer}>
+        <Text style={styles.label}>Name</Text>
+        <TextInput
+          style={styles.input}
+          value={name}
+          onChangeText={setName}
+        />
         <Text style={styles.label}>Description</Text>
         <TextInput
           style={styles.input}
@@ -42,18 +152,13 @@ export default function EditMedicationScreen() {
         />
 
         <Text style={styles.label}>Category</Text>
-        <Picker
-          selectedValue={category}
-          style={styles.picker}
-          onValueChange={(itemValue) => setCategory(itemValue)}
-        >
-          <Picker.Item label="Analgesic" value="Analgesic" />
-          <Picker.Item label="Vitamins" value="Vitamins" />
-          <Picker.Item label="Ointment" value="Ointment" />
-          <Picker.Item label="Prescription medicine" value="Prescription medicine" />
-          <Picker.Item label="Antibacterial" value="Antibacterial" />
-          <Picker.Item label="Supplement" value="Supplement" />
-        </Picker>
+        <RNPickerSelect
+          onValueChange={(value) => setCategoryId(value)}
+          items={categories}
+          style={pickerSelectStyles}
+          value={categoryId}
+          placeholder={{ label: category, value: category }}
+        />
 
         <Text style={styles.label}>Stock</Text>
         <TextInput
@@ -62,12 +167,19 @@ export default function EditMedicationScreen() {
           onChangeText={setStock}
           keyboardType="numeric"
         />
+        
+       <Text style={styles.label}>Pharmacy</Text>
+        <TextInput
+          style={styles.input}
+          value={pharmacy}
+          editable={false}  // Disable editing
+        />
       </View>
 
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
-        <Text style={styles.confirmButtonText}>CONFIRM</Text>
+        <Text style={styles.confirmButtonText}>UPDATE</Text>
       </TouchableOpacity>
-    </View>
+    </KeyboardAwareScrollView>
   );
 }
 
@@ -80,6 +192,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0B607E',
     paddingTop: 80,
     paddingBottom: 20,
+    justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
@@ -129,11 +242,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     marginBottom: 15,
   },
-  picker: {
-    backgroundColor: '#F4F4F4',
-    borderRadius: 5,
-    marginBottom: 15,
-  },
   confirmButton: {
     backgroundColor: '#0B607E',
     paddingVertical: 15,
@@ -145,5 +253,28 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+});
+
+const pickerSelectStyles = StyleSheet.create({
+  inputIOS: {
+    fontSize: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: '#F4F4F4',
+    borderRadius: 5,
+    color: '#333',
+    paddingRight: 30,
+  },
+  inputAndroid: {
+    fontSize: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: '#F4F4F4',
+    borderRadius: 5,
+    color: '#333',
+    paddingRight: 30,
   },
 });

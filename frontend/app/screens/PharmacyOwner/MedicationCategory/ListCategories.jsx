@@ -14,7 +14,7 @@ export default function MedicationCategoriesScreen() {
     React.useCallback(() => {
       const fetchCategories = async () => {
         try {
-          const response = await axios.get(`${baseURL}medication-category`);
+          const response = await axios.get(`${baseURL}medication-category`); 
           setCategories(response.data);
         } catch (error) {
           console.error('Error fetching categories:', error);

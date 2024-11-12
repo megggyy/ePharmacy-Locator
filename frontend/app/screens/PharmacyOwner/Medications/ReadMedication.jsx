@@ -1,19 +1,36 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity, Alert, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function ReadMedicationScreen() {
   const router = useRouter();
+  const { id } = useLocalSearchParams(); // Get the medication ID from route params
+  const [medicationData, setMedicationData] = useState(null);
 
-  // Sample medication data
-  const medicationData = {
-    id: 1,
-    image: require('@/assets/images/sample.jpg'), // Replace with the actual image path
-    description: 'A pain reliever that helps reduce fever and inflammation.',
-    category: 'Analgesic',
-    stock: 100,
-  };
+  useEffect(() => {
+    const fetchMedication = async () => {
+      try {
+        const response = await axios.get(`${baseURL}medicine/${id}`);
+        setMedicationData(response.data);
+      } catch (error) {
+        console.error('Error fetching medication:', error);
+        Alert.alert('Error', 'Failed to load medication details');
+      }
+    };
+
+    if (id) fetchMedication();
+  }, [id]);
+
+  if (!medicationData) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -27,13 +44,24 @@ export default function ReadMedicationScreen() {
 
       {/* Medication Details */}
       <View style={styles.detailsContainer}>
-        <Image source={medicationData.image} style={styles.image} />
+        <FlatList
+          data={medicationData.images}
+          horizontal
+          renderItem={({ item: image }) => (
+            <Image source={{ uri: image }} style={styles.image} />
+          )}
+          keyExtractor={(image, index) => index.toString()}
+        />
+        <Text style={styles.label}>Name:</Text>
+        <Text style={styles.value}>{medicationData.name}</Text>
         <Text style={styles.label}>Description:</Text>
         <Text style={styles.value}>{medicationData.description}</Text>
         <Text style={styles.label}>Category:</Text>
-        <Text style={styles.value}>{medicationData.category}</Text>
+        <Text style={styles.value}>{medicationData.category?.name}</Text>
         <Text style={styles.label}>Stock:</Text>
         <Text style={styles.value}>{medicationData.stock}</Text>
+        <Text style={styles.label}>Pharmacy:</Text>
+        <Text style={styles.value}>{medicationData.pharmacy.userInfo.name}</Text>
       </View>
     </View>
   );
@@ -68,6 +96,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 10,
+    marginHorizontal: 5,
     marginBottom: 20,
   },
   label: {
@@ -78,5 +107,12 @@ const styles = StyleSheet.create({
   value: {
     fontSize: 16,
     marginBottom: 20,
+    textAlign: 'center',
+    paddingHorizontal: 10,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
