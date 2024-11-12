@@ -33,6 +33,16 @@ const storage = multer.diskStorage({
 
 const uploadOptions = multer({ storage: storage }).array('permits', 10);
 
+router.get('/', async (req, res) => {
+    const { role } = req.query; // Get the role from query parameters
+    
+    try {
+      const users = await User.find({ role });
+      res.json(users);
+    } catch (err) {
+      res.status(500).send('Error fetching users');
+    }
+  });
 
 router.post('/register', (req, res) => {
     console.log(req.files);

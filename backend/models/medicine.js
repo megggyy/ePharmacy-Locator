@@ -1,23 +1,32 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); 
 
 const medicineSchema = mongoose.Schema({
     name: {
         type: String,
-        required: true,
+        // required: true,
     },
     description: {
         type: String,
-        required: true,
+        // required: true,
     },
     stock: {
-        type: String,
-        required: true,
+        type: Number, 
+        // required: true,
     },
-    availability: {
+    pharmacy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',
-    }
-})
+        // required: true,
+    },
+    category: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'MedicationCategory',
+        // required: true,
+    },
+    images: [{
+        type: String,
+    }],
+});
 
 medicineSchema.virtual('id').get(function () {
     return this._id.toHexString();
@@ -26,6 +35,5 @@ medicineSchema.virtual('id').get(function () {
 medicineSchema.set('toJSON', {
     virtuals: true,
 });
-
 
 exports.Medicine = mongoose.model('Medicine', medicineSchema);

@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
         if (isValid) {
             uploadError = null;
         }
-        cb(uploadError, 'public/medications/');
+        cb(uploadError, 'public/medication-category/');
     },
     filename: function (req, file, cb) {
         const fileName = file.originalname.split(' ').join('-');
@@ -35,7 +35,7 @@ router.post('/create', uploadOptions.array('images', 10), async (req, res) => {
     let imagePaths = [];
 
     if (files) {
-        const basePath = `${req.protocol}://${req.get('host')}/public/medications/`;
+        const basePath = `${req.protocol}://${req.get('host')}/public/medication-category/`;
         imagePaths = files.map(file => `${basePath}${file.filename}`);
     }
 
@@ -81,7 +81,7 @@ router.put('/update/:id', uploadOptions.array('images', 10), async (req, res) =>
     let imagePaths = [];
 
     if (files) {
-        const basePath = `${req.protocol}://${req.get('host')}/public/medications/`;
+        const basePath = `${req.protocol}://${req.get('host')}/public/medication-category/`;
         imagePaths = files.map(file => `${basePath}${file.filename}`);
     }
 
