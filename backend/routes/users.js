@@ -112,6 +112,10 @@ router.post('/register', (req, res) => {
             const newPharmacy = new Pharmacy({
                 userInfo: user.id,
                 permits: permitPaths,
+                location: {
+                    latitude: parseFloat(req.body.latitude),
+                    longitude: parseFloat(req.body.longitude),
+                },
             });
 
             try {

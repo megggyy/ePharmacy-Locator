@@ -8,6 +8,16 @@ const pharmacySchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
+    location: {
+        latitude: {
+            type: Number,
+           // required: true, // Set to `true` if location is mandatory
+        },
+        longitude: {
+            type: Number,
+            //required: true, // Set to `true` if location is mandatory
+        },
+    },
 });
 
 pharmacySchema.virtual('id').get(function () {
