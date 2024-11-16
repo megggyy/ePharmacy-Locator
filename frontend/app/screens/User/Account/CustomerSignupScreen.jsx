@@ -10,7 +10,7 @@ import {
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from "@react-navigation/native";
+
 import RNPickerSelect from 'react-native-picker-select';
 import Toast from "react-native-toast-message";
 import axios from "axios";
@@ -19,7 +19,6 @@ import baseURL from "../../../../assets/common/baseurl";
 
 const CustomerSignup = () => {
   const router = useRouter();
-  const navigation = useNavigation();
   
   const [selectedDisease, setSelectedDisease] = useState(null);
   const [customDisease, setCustomDisease] = useState('');

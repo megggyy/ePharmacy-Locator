@@ -2,13 +2,11 @@
 import React, { useState, useContext } from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import AuthGlobal from '../../../context/Store/AuthGlobal';
 import { loginUser } from '../../../context/Actions/Auth.actions';
 import { useRouter } from 'expo-router';
 
 const LoginScreen = () => {
-  const navigation = useNavigation();
   const { state, dispatch } = useContext(AuthGlobal); 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

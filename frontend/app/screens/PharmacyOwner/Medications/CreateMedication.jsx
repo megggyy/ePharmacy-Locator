@@ -176,20 +176,37 @@ export default function CreateMedication() {
         />
 
         <Text style={styles.label}>Pharmacy</Text>
-        <RNPickerSelect
+        {/* <RNPickerSelect
           onValueChange={(value) => setPharmacyId(value)}  // Changed to pharmacyId
           items={pharmacies}
           style={pickerSelectStyles}
           placeholder={{ label: "Select a pharmacy", value: null }}
-        />
+        /> */}
+         <RNPickerSelect
+        onValueChange={(value) => setPharmacyId(value)}
+        items={pharmacies}
+        placeholder={{ label: 'Select Pharmacy', value: null }}
+        style={pickerSelectStyles}
+        Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
+      />
+      
+  
 
         <Text style={styles.label}>Category</Text>
-        <RNPickerSelect
+        {/* <RNPickerSelect
           onValueChange={(value) => setCategoryId(value)}
           items={categories}
           style={pickerSelectStyles}
           placeholder={{ label: "Select a category", value: null }}
-        />
+        /> */}
+
+    <RNPickerSelect
+        onValueChange={(value) => setCategoryId(value)}
+        items={categories}
+        placeholder={{ label: 'Select Category', value: null }}
+        style={pickerSelectStyles}
+        Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
+      />
       </View>
 
       <TouchableOpacity style={styles.confirmButton} onPress={handleCreate}>
@@ -271,30 +288,27 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
     fontSize: 16,
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: '#F4F4F4',
-    borderRadius: 5,
     color: '#333',
     paddingRight: 30,
-    backgroundColor: '#F4F4F4',
-    marginBottom: 15,
   },
   inputAndroid: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
     fontSize: 16,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: '#F4F4F4',
-    borderRadius: 5,
     color: '#333',
     paddingRight: 30,
-    backgroundColor: '#F4F4F4',
-    marginBottom: 15,
+  },
+  iconContainer: {
+    top: 15,
+    right: 10,
   },
 });

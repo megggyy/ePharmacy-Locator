@@ -11,7 +11,6 @@ import {
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from "@react-navigation/native";
 import RNPickerSelect from 'react-native-picker-select';
 import Toast from "react-native-toast-message";
 import axios from "axios";
@@ -22,12 +21,13 @@ import baseURL from "../../../../assets/common/baseurl";
 
 const PharmacyOwnerSignupScreen = () => {
   const router = useRouter();
-  const navigation = useNavigation();
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [password, setPassword] = useState("");
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
   const [street, setStreet] = useState("");
   const [barangay, setBarangay] = useState(null);
   const [city, setCity] = useState("Taguig City");
@@ -74,6 +74,8 @@ const PharmacyOwnerSignupScreen = () => {
     formData.append("street", street);
     formData.append("barangay", barangay);
     formData.append("city", city);
+    formData.append("latitude", latitude);
+    formData.append("longitude", longitude);
     formData.append("isAdmin", false);
     formData.append("role", "PharmacyOwner");
 
@@ -137,7 +139,14 @@ const PharmacyOwnerSignupScreen = () => {
         <TextInput style={styles.input} placeholder="Contact number" placeholderTextColor="#AAB4C1" value={contactNumber} onChangeText={setContactNumber} keyboardType="phone-pad" />
         <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" value={password} onChangeText={setPassword} secureTextEntry={true} />
         {/* Address Fields */}
-        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
+        <View style={styles.row}>
+        <TextInput
+          style={[styles.input, styles.halfInput]}
+          placeholder="Street"
+          placeholderTextColor="#AAB4C1"
+          value={street}
+          onChangeText={setStreet}
+        />
         <RNPickerSelect
           onValueChange={(value) => setBarangay(value)}
           items={[
@@ -159,7 +168,26 @@ const PharmacyOwnerSignupScreen = () => {
           }}
           value={barangay}
         />
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
+      </View>
+      <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
+      <View style={styles.row}>
+        <TextInput 
+        style={[styles.input, styles.halfInput]}
+        placeholder="Latitude" 
+        placeholderTextColor="#AAB4C1" 
+        keyboardType="numeric" 
+        value={latitude} 
+        onChangeText={setLatitude} 
+      />
+      <TextInput 
+         style={[styles.input, styles.halfInput]}
+        placeholder="Longitude" 
+        placeholderTextColor="#AAB4C1" 
+        keyboardType="numeric" 
+        value={longitude} 
+        onChangeText={setLongitude} 
+      />
+      </View>
         {/* Upload Permits UI */}
         <Text style={styles.uploadLabel}>Upload Permits</Text>
         <View style={styles.uploadContainer}>
@@ -167,9 +195,9 @@ const PharmacyOwnerSignupScreen = () => {
             return (
               <View key={index} style={styles.imageContainer}>
                 <Image style={styles.image} source={{ uri: imageURL.uri }}/>
-                <TouchableOpacity onPress={() =>  removeImage(imageURL.id)}style={styles.removeButton}>
-                  <Text style={styles.removeButtonText}>Remove</Text>
-                </TouchableOpacity>
+                <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
+                <Ionicons name="close" size={12} color="white" />
+              </TouchableOpacity>
               </View>
             );
           })}
@@ -254,14 +282,14 @@ const styles = StyleSheet.create({
   uploadContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 10,
+    marginVertical: 0,
     justifyContent: 'center',
   },
   uploadButton: {
     flexDirection: 'row',
     backgroundColor: '#027DB1',
     borderRadius: 10,
-    padding: 15,
+    padding: 8,
     alignItems: 'center',
   },
   uploadButtonText: {
@@ -271,8 +299,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 60,
+    height: 60,
     margin: 5,
   },
   imagePicker: {
@@ -316,6 +344,15 @@ const styles = StyleSheet.create({
   loginLink: {
     color: '#00A896',
     fontWeight: 'bold',
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 0,
+  },
+  halfInput: {
+    width: '48%',
   },
 });
 
