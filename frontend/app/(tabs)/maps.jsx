@@ -1,22 +1,52 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, TextInput, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, TextInput, SafeAreaView, ActivityIndicator, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function MapsScreen() {
   const router = useRouter();
-  
+
   const [region, setRegion] = useState({
-    latitude: 14.5534, // You can change these coordinates
-    longitude: 121.0507,
-    latitudeDelta: 0.01,
-    longitudeDelta: 0.01,
+    latitude: 14.5350, // Coordinates for Taguig City
+    longitude: 121.0509,
+    latitudeDelta: 0.04,
+    longitudeDelta: 0.04,
   });
+  
+  const [pharmacies, setPharmacies] = useState([]); // State to store pharmacies data
+  const [isLoading, setIsLoading] = useState(true); // State for loading status
+
+  // Fetch pharmacies data
+  useEffect(() => {
+    const fetchPharmacies = async () => {
+      try {
+        const pharmaciesResponse = await axios.get(`${baseURL}pharmacies`);
+        setPharmacies(pharmaciesResponse.data); // Directly access the data from the response
+        setIsLoading(false); // Stop loading once data is fetched
+      } catch (error) {
+        console.error('Error fetching pharmacies:', error);
+        setIsLoading(false); // Stop loading even in case of error
+      }
+    };
+
+    fetchPharmacies();
+  }, []);
 
   const onRegionChange = (region) => {
     setRegion(region);
   };
+
+  if (isLoading) {
+    // Show loading indicator while fetching pharmacies data
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <ActivityIndicator size="large" color="#005b7f" />
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -46,14 +76,35 @@ export default function MapsScreen() {
       {/* Map View */}
       <MapView
         style={styles.map}
-        region={region}
-        onRegionChangeComplete={onRegionChange}
+        region={region} // The region is updated when pharmacies are fetched
+        onRegionChangeComplete={onRegionChange} // User moves the map
       >
-        <Marker
-          coordinate={{ latitude: 14.5534, longitude: 121.0507 }} // Marker coordinates
-          title="You are here"
-          description="This is your current location"
-        />
+        {/* Marker for each pharmacy */}
+        {pharmacies.map((pharmacy) => (
+          <Marker
+            key={pharmacy.id} // Unique key for each marker
+            coordinate={{
+              latitude: pharmacy.location.latitude,
+              longitude: pharmacy.location.longitude,
+            }}
+            title={pharmacy.userInfo.name} // Display the pharmacy name as the title
+            description="Pharmacy Location" // Description (can be changed)
+          >
+            <Callout>
+              <View style={styles.calloutContainer}>
+                <Image
+                source={require('@/assets/images/sample.jpg')}
+                  // source={{ uri: 'https://via.placeholder.com/100' }} // Sample placeholder image
+                  style={styles.calloutImage}
+                />
+                <Text style={styles.calloutTitle}>{pharmacy.userInfo.name}</Text>
+                <Text style={styles.calloutText}>Location: {`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}</Text>
+                <Text style={styles.calloutText}>Contact: {pharmacy.userInfo.contactNumber}</Text>
+                <Text style={styles.calloutText}>Open Hours: {pharmacy.userInfo.openHours}</Text>
+              </View>
+            </Callout>
+          </Marker>
+        ))}
       </MapView>
     </SafeAreaView>
   );
@@ -111,5 +162,29 @@ const styles = StyleSheet.create({
   },
   map: {
     flex: 1,
+  },
+  calloutContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: 250, // Adjust max width of the callout
+    padding: 10,
+  },
+  calloutImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 10,
+  },
+  calloutTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#005b7f',
+    textAlign: 'center',
+  },
+  calloutText: {
+    fontSize: 14,
+    color: '#333',
+    textAlign: 'center',
+    marginVertical: 2,
   },
 });
