@@ -30,21 +30,37 @@ const PharmacyOwnerSignupScreen = () => {
   const [longitude, setLongitude] = useState("");
   const [street, setStreet] = useState("");
   const [barangay, setBarangay] = useState(null);
+  const [barangays, setBarangays] = useState([]);
   const [city, setCity] = useState("Taguig City");
   const [permits, setPermits] = useState([]);
   const [error, setError] = useState('');
   
   useEffect(() => {
+    // Fetch barangay list from API
+    axios.get(`${baseURL}barangays`)
+      .then(response => {
+        const barangayData = response.data.map(barangay => ({
+          label: barangay.name,
+          value: barangay.name,
+        }));
+        setBarangays(barangayData);
+      })
+      .catch(error => {
+        console.error("Error fetching barangays:", error);
+        setError("Failed to load barangay list");
+      });
+
+    // Request image picker permissions
     (async () => {
       if (Platform.OS !== "web") {
         const { status } = await ImagePicker.requestCameraPermissionsAsync();
         if (status !== "granted") {
-          alert("Apologies, but in order to proceed, we require permission to access your camera roll!");
+          alert("We need access to your camera roll to upload images!");
         }
       }
     })();
-  
   }, []);
+
   
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -147,7 +163,7 @@ const PharmacyOwnerSignupScreen = () => {
           value={street}
           onChangeText={setStreet}
         />
-        <RNPickerSelect
+        {/* <RNPickerSelect
           onValueChange={(value) => setBarangay(value)}
           items={[
             { label: 'Central Signal', value: 'Central Signal' },
@@ -167,7 +183,21 @@ const PharmacyOwnerSignupScreen = () => {
             return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
           }}
           value={barangay}
-        />
+        /> */}
+         <RNPickerSelect
+            onValueChange={(value) => setBarangay(value)}
+            items={barangays}
+            style={pickerSelectStyles}
+            placeholder={{
+              label: 'Select your barangay',
+              value: null,
+              color: '#AAB4C1',
+            }}
+            Icon={() => {
+              return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
+            }}
+            value={barangay}
+          />
       </View>
       <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
       <View style={styles.row}>

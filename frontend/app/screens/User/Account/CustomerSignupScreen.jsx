@@ -31,6 +31,7 @@ const CustomerSignup = () => {
   const [barangay, setBarangay] = useState(null);
   const [city, setCity] = useState("Taguig City");
   const [diseases, setDiseases] = useState([]);
+  const [barangays, setBarangays] = useState([]); // State to store barangays
 
   useEffect(() => {
     const fetchDiseases = async () => {
@@ -48,12 +49,27 @@ const CustomerSignup = () => {
         setDiseases(formattedData);
       } catch (error) {
         console.error('Error fetching diseases:', error);
-      } finally {
-        setLoading(false);
       }
     };
 
-    fetchDiseases(); // Call the fetch function
+    const fetchBarangays = async () => {
+      try {
+        const response = await fetch(`${baseURL}barangays`); // Endpoint for fetching barangays
+        const result = await response.json();
+
+        // Format barangays data for RNPickerSelect
+        const formattedBarangays = result.map((item) => ({
+          label: item.name,
+          value: item.name,
+        }));
+        setBarangays(formattedBarangays);
+      } catch (error) {
+        console.error('Error fetching barangays:', error);
+      }
+    };
+
+    fetchDiseases();
+    fetchBarangays(); // Call the fetch function for barangays
   }, []);
 
   // Register function (submit form data)
@@ -102,7 +118,6 @@ const CustomerSignup = () => {
         console.log(error.message);
     }
 };
-
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
@@ -124,7 +139,7 @@ const CustomerSignup = () => {
         <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" value={password} onChangeText={setPassword} secureTextEntry={true} />
         <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
         
-        <RNPickerSelect
+        {/* <RNPickerSelect
           onValueChange={(value) => setBarangay(value)}
           items={[
               { label: 'Central Signal', value: 'Central Signal' },
@@ -134,6 +149,20 @@ const CustomerSignup = () => {
               { label: 'South Signal', value: 'South Signal' },
               { label: 'Tuktukan', value: 'Tuktukan' },
           ]}
+          style={pickerSelectStyles}
+          placeholder={{
+              label: 'Select your barangay',
+              value: null,
+              color: '#AAB4C1',
+          }}
+          Icon={() => {
+              return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
+          }}
+          value={barangay} // <-- ensure you pass the state value here
+      /> */}
+        <RNPickerSelect
+          onValueChange={(value) => setBarangay(value)}
+          items={barangays} // Use fetched barangays here
           style={pickerSelectStyles}
           placeholder={{
               label: 'Select your barangay',
