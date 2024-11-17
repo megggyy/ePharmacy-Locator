@@ -1,42 +1,18 @@
-const express = require('express');
-const { MedicationCategory } = require('../models/medication-category');
+const express = require("express");
+const { MedicationCategory } = require("../models/medication-category");
+const { uploadOptions } = require("../utils/cloudinary");
 const router = express.Router();
-const multer = require('multer');
 
-// Configure image upload
-const FILE_TYPE_MAP = {
-    'image/png': 'png',
-    'image/jpeg': 'jpeg',
-    'image/jpg': 'jpg'
-};
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        const isValid = FILE_TYPE_MAP[file.mimetype];
-        let uploadError = new Error('Invalid image type');
-
-        if (isValid) {
-            uploadError = null;
-        }
-        cb(uploadError, 'public/medication-category/');
-    },
-    filename: function (req, file, cb) {
-        const fileName = file.originalname.split(' ').join('-');
-        const extension = FILE_TYPE_MAP[file.mimetype];
-        cb(null, `${fileName}-${Date.now()}.${extension}`);
-    }
-});
-
-const uploadOptions = multer({ storage: storage });
-
-
-router.post('/create', uploadOptions.array('images', 10), async (req, res) => {
+// Create a medication category with image upload
+router.post("/create", (req, res, next) => {
+    req.folder = "medicationcategory"; // Set the folder name
+    next();
+}, uploadOptions.array("images", 10), async (req, res) => {
     const files = req.files;
     let imagePaths = [];
 
     if (files) {
-        const basePath = `${req.protocol}://${req.get('host')}/public/medication-category/`;
-        imagePaths = files.map(file => `${basePath}${file.filename}`);
+        imagePaths = files.map((file) => file.path); // Cloudinary URLs
     }
 
     let medicationCategory = new MedicationCategory({
@@ -45,14 +21,14 @@ router.post('/create', uploadOptions.array('images', 10), async (req, res) => {
         images: imagePaths,
     });
 
-    medicationCategory = await medicationCategory.save();
-
-    if (!medicationCategory) {
-        return res.status(400).send('The medication category cannot be created!');
+    try {
+        medicationCategory = await medicationCategory.save();
+        res.send(medicationCategory);
+    } catch (err) {
+        res.status(400).send("The medication category cannot be created!");
     }
-
-    res.send(medicationCategory);
 });
+
 
 
 router.get('/', async (req, res) => {
@@ -76,13 +52,15 @@ router.get('/:id', async (req, res) => {
 });
 
 
-router.put('/update/:id', uploadOptions.array('images', 10), async (req, res) => {
+router.put("/update/:id", (req, res, next) => {
+    req.folder = "medicationcategory"; // Set the folder name
+    next();
+}, uploadOptions.array("images", 10), async (req, res) => {
     const files = req.files;
     let imagePaths = [];
 
     if (files) {
-        const basePath = `${req.protocol}://${req.get('host')}/public/medication-category/`;
-        imagePaths = files.map(file => `${basePath}${file.filename}`);
+        imagePaths = files.map((file) => file.path); // Cloudinary URLs
     }
 
     const updatedCategory = await MedicationCategory.findByIdAndUpdate(
@@ -96,11 +74,12 @@ router.put('/update/:id', uploadOptions.array('images', 10), async (req, res) =>
     );
 
     if (!updatedCategory) {
-        return res.status(500).json({ message: 'The medication category cannot be updated.' });
+        return res.status(500).json({ message: "The medication category cannot be updated." });
     }
 
     res.send(updatedCategory);
 });
+
 
 
 router.delete('/delete/:id', async (req, res) => {

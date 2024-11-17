@@ -156,6 +156,7 @@ export default function EditMedicationScreen() {
           onValueChange={(value) => setCategoryId(value)}
           items={categories}
           style={pickerSelectStyles}
+          Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
           value={categoryId}
           placeholder={{ label: category, value: category }}
         />
@@ -177,7 +178,7 @@ export default function EditMedicationScreen() {
       </View>
 
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
-        <Text style={styles.confirmButtonText}>UPDATE</Text>
+        <Text style={styles.confirmButtonText}>UPDATE</Text> 
       </TouchableOpacity>
     </KeyboardAwareScrollView>
   );
@@ -258,23 +259,25 @@ const styles = StyleSheet.create({
 
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
     fontSize: 16,
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: '#F4F4F4',
-    borderRadius: 5,
     color: '#333',
     paddingRight: 30,
   },
   inputAndroid: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
     fontSize: 16,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: '#F4F4F4',
-    borderRadius: 5,
     color: '#333',
     paddingRight: 30,
+  },
+  iconContainer: {
+    top: 15,
+    right: 10,
   },
 });

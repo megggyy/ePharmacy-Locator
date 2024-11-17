@@ -7,6 +7,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
+const { uploadOptions } = require('../utils/cloudinary'); // Import Cloudinary upload options
 
 const FILE_TYPE_MAP = {
     'image/png': 'png',
@@ -14,51 +15,35 @@ const FILE_TYPE_MAP = {
     'image/jpg': 'jpg'
 };
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        const isValid = FILE_TYPE_MAP[file.mimetype];
-        let uploadError = new Error('invalid image type');
+// Route to get users
+router.get('/', async (req, res) => {
+    try {
+        // Find users with the 'Customer' role
+        const users = await User.find({ role: 'Customer' });
 
-        if (isValid) {
-            uploadError = null;
-        }
-        cb(uploadError, 'public/permits/');
-    },
-    filename: function (req, file, cb) {
-        const fileName = file.originalname.split(' ').join('-');
-        const extension = FILE_TYPE_MAP[file.mimetype];
-        cb(null, `${fileName}-${Date.now()}.${extension}`);
+        // Optionally populate disease information if needed
+        const usersWithDiseaseInfo = await Promise.all(users.map(async (user) => {
+            const customer = await Customer.findOne({ userInfo: user.id }).populate('disease', 'name');
+            return { ...user._doc, customerDetails: customer };
+        }));
+
+        res.json(usersWithDiseaseInfo); // Send the users with disease information
+    } catch (err) {
+        res.status(500).send('Error fetching users');
     }
 });
 
-const uploadOptions = multer({ storage: storage }).array('permits', 10);
-
-router.get('/', async (req, res) => {
-    try {
-      // Find users with the 'Customer' role
-      const users = await User.find({ role: 'Customer' });
-  
-      // Optionally populate disease information if needed
-      const usersWithDiseaseInfo = await Promise.all(users.map(async (user) => {
-        const customer = await Customer.findOne({ userInfo: user.id }).populate('disease', 'name');
-        return { ...user._doc, customerDetails: customer };
-      }));
-  
-      res.json(usersWithDiseaseInfo); // Send the users with disease information
-    } catch (err) {
-      res.status(500).send('Error fetching users');
-    }
-  });
-  
-
-router.post('/register', (req, res) => {
+// Register route for users, using Cloudinary for file uploads
+router.post(
+    '/register',
+    (req, res, next) => {
+        req.folder = 'users'; // Set the folder name for Cloudinary uploads
+        next();
+    }, uploadOptions.array('permits', 10), async (req, res) => {
     console.log(req.files);
-    console.log( req.body.diseases);
-    uploadOptions(req, res, async (err) => {
-        if (err) {
-            return res.status(500).json({ success: false, error: err });
-        } 
+    console.log(req.body.diseases);
 
+    try {
         // Create user object based on request data
         let user = new User({
             email: req.body.email,
@@ -77,7 +62,6 @@ router.post('/register', (req, res) => {
         if (!user) {
             return res.status(400).send('The user cannot be created!');
         }
-
 
         // If the user role is Customer, create a Customer entry
         if (user.role === 'Customer') {
@@ -113,8 +97,7 @@ router.post('/register', (req, res) => {
                 return res.status(400).send('No permits in the request');
             }
 
-            const basePath = `${req.protocol}://${req.get('host')}/public/uploads/photos/`;
-            const permitPaths = files.map(file => `${basePath}${file.filename}`);
+            const permitPaths = files.map(file => file.path); // Cloudinary URLs
 
             const newPharmacy = new Pharmacy({
                 userInfo: user.id,
@@ -134,13 +117,16 @@ router.post('/register', (req, res) => {
         }
 
         return res.send(user);
-    });
+
+    } catch (err) {
+        res.status(500).json({ success: false, error: err.message });
+    }
 });
 
-
+// Login route
 router.post('/login', async (req, res) => {
-    console.log(req.body.email)
-    const user = await User.findOne({ email: req.body.email })
+    console.log(req.body.email);
+    const user = await User.findOne({ email: req.body.email });
 
     const secret = process.env.secret;
     if (!user) {
@@ -155,15 +141,15 @@ router.post('/login', async (req, res) => {
             },
             secret,
             { expiresIn: '1d' }
-        )
+        );
         console.log('Login Successful:', token);
-        res.status(200).send({ user: user.email, token: token })
+        res.status(200).send({ user: user.email, token: token });
     } else {
         res.status(400).send('PASSWORD IS WRONG!');
     }
-})
+});
 
-
+// Get user details by ID
 router.get('/:id', async (req, res) => {
     const userId = req.params.id;
 
