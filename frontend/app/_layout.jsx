@@ -88,10 +88,16 @@ export default function RootLayout() {
               <Stack.Screen name="screens/Admin/Users/ReadUser" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Users/EditUser" options={{ headerShown: false }} />
 
-              {/* PHARMACIES CRUS */}
+              {/* PHARMACIES CRUD */}
               <Stack.Screen name="screens/Admin/Pharmacies/ListPharmacies" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Pharmacies/ReadPharmacy" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Pharmacies/EditPharmacy" options={{ headerShown: false }} />
+
+          {/* BARANGAY CRUD */}
+          <Stack.Screen name="screens/Admin/Barangay/ListBarangay" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/Barangay/CreateBarangay" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/Barangay/ReadBarangay" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/Barangay/EditBarangay" options={{ headerShown: false }} />
 
               {/* PROFILE */}
               <Stack.Screen name="screens/Admin/Profile/EditProfileScreen" options={{ headerShown: false }} />
