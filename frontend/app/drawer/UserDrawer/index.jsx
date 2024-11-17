@@ -1,11 +1,25 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useContext } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import AuthGlobal from '@/context/Store/AuthGlobal';
 
 export default function Sidebar() {
   const router = useRouter();
+  const { state, dispatch } = useContext(AuthGlobal); // Access the auth context
+
+  // Logout function
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem('jwt'); // Remove JWT from storage
+      dispatch({ type: 'LOGOUT_USER' }); // Dispatch logout action
+      router.replace('/(tabs)'); // Redirect to the desired screen
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -25,6 +39,10 @@ export default function Sidebar() {
 
       {/* Menu Section */}
       <View style={styles.menuSection}>
+      <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/ViewProfileScreen')}>
+        <Ionicons name="eye" size={25} color="#5A5A5A" /> {/* Replaced with eye icon */}
+        <Text style={styles.menuText}>View Profile</Text>
+      </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/EditProfileScreen')}>
           <FontAwesome5 name="user-edit" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Edit Profile</Text>
@@ -45,7 +63,8 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Settings</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/(tabs)/account')}>
+        {/* Log out button */}
+        <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>
           <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>

@@ -1,39 +1,41 @@
 import React, { createContext, useReducer, useEffect } from 'react';
-import jwtDecode from 'jwt-decode';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import jwtDecode from 'jwt-decode';
 
-const AuthGlobal = createContext({
-  state: {
-    isAuthenticated: false,
-    user: {},
-  },
-  dispatch: () => null,
-  logout: () => {},
-});
-
+// Actions
 const SET_CURRENT_USER = 'SET_CURRENT_USER';
 const LOGOUT_USER = 'LOGOUT_USER';
 
+// Initial State
 const initialState = {
   isAuthenticated: false,
   user: {},
 };
 
+// Reducer
 const authReducer = (state, action) => {
   switch (action.type) {
     case SET_CURRENT_USER:
       return {
         ...state,
-        isAuthenticated: !!action.payload, // Convert payload to boolean
-        user: action.payload || {}, // Set user to decoded payload or empty object
+        isAuthenticated: !!action.payload,
+        user: action.payload || {},
       };
     case LOGOUT_USER:
-      return initialState; // Reset state to initial
+      return initialState;
     default:
-      return state; // Return current state by default
+      return state;
   }
 };
 
+// Context
+const AuthGlobal = createContext({
+  state: initialState,
+  dispatch: () => null,
+  logout: () => {},
+});
+
+// Provider
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
@@ -43,10 +45,10 @@ export const AuthProvider = ({ children }) => {
       if (token) {
         try {
           const decoded = jwtDecode(token);
-          dispatch({ type: SET_CURRENT_USER, payload: decoded }); // Set user state based on decoded token
+          dispatch({ type: SET_CURRENT_USER, payload: decoded });
         } catch (error) {
-          console.error('Token decoding error:', error);
-          logout(); // Logout if token decoding fails
+          console.error('Token decoding failed:', error);
+          logout(); // Logout if decoding fails
         }
       }
     };
@@ -55,7 +57,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     await AsyncStorage.removeItem('jwt');
-    dispatch({ type: LOGOUT_USER }); // Reset state on logout
+    dispatch({ type: LOGOUT_USER });
   };
 
   return (

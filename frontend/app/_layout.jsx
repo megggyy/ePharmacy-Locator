@@ -4,7 +4,6 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
-
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -37,6 +36,7 @@ export default function RootLayout() {
         {/* USER */}
         <Stack.Screen name="screens/User/Account/CustomerSignupScreen" options={{ headerShown: false }} />
         <Stack.Screen name="screens/User/Profile/EditProfileScreen" options={{ headerShown: false }} />
+        <Stack.Screen name="screens/User/Profile/ViewProfileScreen" options={{ headerShown: false }} />
         <Stack.Screen name="screens/User/Profile/ChangePassword" options={{ headerShown: false }} />
         <Stack.Screen name="screens/User/Features/SuggestedMedicine" options={{ headerShown: false }} />
         <Stack.Screen name="screens/User/Features/Maps" options={{ headerShown: false }} />
