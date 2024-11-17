@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import jwtDecode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 
 // Actions
 const SET_CURRENT_USER = 'SET_CURRENT_USER';
@@ -48,7 +48,7 @@ export const AuthProvider = ({ children }) => {
           dispatch({ type: SET_CURRENT_USER, payload: decoded });
         } catch (error) {
           console.error('Token decoding failed:', error);
-          logout(); // Logout if decoding fails
+          logout(); 
         }
       }
     };

@@ -4,18 +4,17 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import AuthGlobal from '@/context/Store/AuthGlobal';
+import AuthGlobal from '@/context/AuthGlobal';
 
 export default function Sidebar() {
   const router = useRouter();
-  const { state, dispatch } = useContext(AuthGlobal); // Access the auth context
-
-  // Logout function
+  const { state, dispatch } = useContext(AuthGlobal); 
+  
   const handleLogout = async () => {
     try {
-      await AsyncStorage.removeItem('jwt'); // Remove JWT from storage
-      dispatch({ type: 'LOGOUT_USER' }); // Dispatch logout action
-      router.replace('/(tabs)'); // Redirect to the desired screen
+      await AsyncStorage.removeItem('jwt');
+      dispatch({ type: 'LOGOUT_USER' });
+      router.replace('/(tabs)'); 
     } catch (error) {
       console.error('Error during logout:', error);
     }

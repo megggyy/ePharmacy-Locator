@@ -2,8 +2,9 @@
 import React, { useState, useContext } from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import AuthGlobal from '../../../context/Store/AuthGlobal';
-import { loginUser } from '../../../context/Actions/Auth.actions';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import AuthGlobal from '../../../context/AuthGlobal';
+import { loginUser } from '../../../context/AuthActions';
 import { useRouter } from 'expo-router';
 
 const LoginScreen = () => {
@@ -16,15 +17,23 @@ const LoginScreen = () => {
   const handleSubmit = async () => {
         const user = { email: email.trim(), password: password.trim() }; // Trim whitespace
         await loginUser(user, dispatch);
-        // Check the authentication state after login attempt
-        console.log(state)
-        if (state.isAuthenticated === false) { 
+        console.log("Logging in with user:", user);
+        if (state.isAuthenticated) { 
           router.push('../../(tabs)');
         } else {
-            console.log("Authentication failed"); 
+            console.log("Authentication Failed"); 
         }
     }; 
 
+    
+    AsyncStorage.getAllKeys((err, keys) => {
+      AsyncStorage.multiGet(keys, (error, stores) => {
+          stores.map((result, i, store) => {
+              console.log({ [store[i][0]]: store[i][1] });
+              return true;
+          });
+      });
+  });
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <View style={styles.upperSection}>
