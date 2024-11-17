@@ -30,6 +30,7 @@ const diseasesRoutes = require("./routes/diseases");
 const medicationcategoryRoutes = require("./routes/medication-category");
 const medicineRoutes = require("./routes/medicine");
 const pharmacyRoutes = require("./routes/pharmacy");
+const barangayRoutes = require("./routes/barangay");
 
 const api = process.env.API_URL;
 
@@ -39,6 +40,7 @@ app.use(`${api}/diseases`, diseasesRoutes);
 app.use(`${api}/medication-category`, medicationcategoryRoutes);
 app.use(`${api}/medicine`, medicineRoutes);
 app.use(`${api}/pharmacies`, pharmacyRoutes);
+app.use(`${api}/barangays`, barangayRoutes);
 
 
 //Database
