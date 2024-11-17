@@ -26,8 +26,7 @@ const LoginScreen = () => {
           Toast.show({
             topOffset: 60,
             type: "error",
-            text1: "Something went wrong",
-            text2: "Please try again"
+            text1: "PLEASE PROVIDE CORRECT CREDENTIALS!"
           });
         }
     }; 

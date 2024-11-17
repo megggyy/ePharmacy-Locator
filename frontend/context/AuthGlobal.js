@@ -1,15 +1,17 @@
-import React, { createContext, useReducer, useEffect } from 'react';
+import React, { createContext, useReducer, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {jwtDecode} from 'jwt-decode';
+import isEmpty from "../assets/common/is-empty"
+import { SET_CURRENT_USER } from "./AuthActions";
 
-// Actions
-const SET_CURRENT_USER = 'SET_CURRENT_USER';
+// Actions;
 const LOGOUT_USER = 'LOGOUT_USER';
 
 // Initial State
 const initialState = {
   isAuthenticated: false,
   user: {},
+  userProfile: {}
 };
 
 // Reducer
@@ -18,8 +20,9 @@ const authReducer = (state, action) => {
     case SET_CURRENT_USER:
       return {
         ...state,
-        isAuthenticated: !!action.payload,
-        user: action.payload || {},
+        isAuthenticated: !isEmpty(action.payload),
+        user: action.payload || {}, // Ensure user is an object, even if null or undefined
+        userProfile: action.userProfile || {} // Ensure userProfile is an object, even if null or undefined
       };
     case LOGOUT_USER:
       return initialState;
@@ -38,22 +41,19 @@ const AuthGlobal = createContext({
 // Provider
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
+  const [showChild, setShowChild] = useState(false);
 
   useEffect(() => {
-    const loadUserFromStorage = async () => {
-      const token = await AsyncStorage.getItem('jwt');
-      if (token) {
-        try {
-          const decoded = jwtDecode(token);
-          dispatch({ type: SET_CURRENT_USER, payload: decoded });
-        } catch (error) {
-          console.error('Token decoding failed:', error);
-          logout(); 
+    setShowChild(true);
+    if (AsyncStorage.jwt) {
+        const decoded = AsyncStorage.jwt ? AsyncStorage.jwt : "";
+        if (setShowChild) {
+            dispatch(SET_CURRENT_USER(jwtDecode(decoded)))
         }
-      }
-    };
-    loadUserFromStorage();
-  }, []);
+    }
+    return () => setShowChild(false);
+}, [])
+
 
   const logout = async () => {
     await AsyncStorage.removeItem('jwt');

@@ -15,34 +15,35 @@ export const loginUser = (user, dispatch) => {
             "Content-Type": "application/json",
         },
     })
-    .then((res) => {
-        return res.json(); // Parse the JSON response
-    })
+    .then((res) => res.json())
     .then((data) => {
         if (data.token) {
             const token = data.token;
-            AsyncStorage.setItem("jwt", token); 
-            const decoded = jwtDecode(token);
-            dispatch(setCurrentUser(decoded)); 
+            AsyncStorage.setItem("jwt", token); // Store JWT in AsyncStorage
+            const decoded = jwtDecode(token); // Decode the JWT token
+            dispatch(setCurrentUser(decoded, user)); // Dispatch the decoded user data to store
         } else {
             console.log("No token returned, logging out.");
             logoutUser(dispatch);
         }
     })
     .catch((err) => {
+        console.log(state)
         Toast.show({
             topOffset: 60,
             type: "error",
             text1: "PLEASE PROVIDE CORRECT CREDENTIALS",
         });
-        logoutUser(dispatch);
+        logoutUser(dispatch); // Ensure logout in case of failure
     });
 };
 
-export const setCurrentUser = (decoded) => {
+
+export const setCurrentUser = (decoded, user) => {
     return {
         type: SET_CURRENT_USER,
         payload: decoded,
+        userProfile: user
     };
 };
 
