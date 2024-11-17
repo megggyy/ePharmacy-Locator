@@ -1,37 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import baseURL from '@/assets/common/baseurl';
 
 export default function UserTableScreen() {
   const router = useRouter();
+  const [users, setUsers] = useState([]);
 
-  const users = [
-    { id: 1, name: 'Abodisi Killa', birthdate: '1990-01-30', address: 'Taguig City', image: require('@/assets/images/sample.jpg') },
-    { id: 2, name: 'Abodisi Killa', birthdate: '1990-01-30', address: 'Taguig City', image: require('@/assets/images/sample.jpg') },
-    { id: 3, name: 'Abodisi Killa', birthdate: '1990-01-30', address: 'Makati City', image: require('@/assets/images/sample.jpg') },
-    { id: 4, name: 'Abodisi Killa', birthdate: '1990-01-30', address: 'Taguig City', image: require('@/assets/images/sample.jpg') },
-    { id: 5, name: 'Abodisi Killa', birthdate: '1990-01-30', address: 'Makati City', image: require('@/assets/images/sample.jpg') },
-    { id: 6, name: 'Abodisi Killa', birthdate: '1990-01-30', address: 'Taguig City', image: require('@/assets/images/sample.jpg') },
-  ];
+  useEffect(() => {
+    // Fetch the customers from the backend
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch(`${baseURL}users`);
+        const data = await response.json();
+        setUsers(data); // Set the users in state
+      } catch (err) {
+        console.error('Error fetching users:', err);
+      }
+    };
 
-  // const handleEdit = (userId) => {
-  //   // Navigate to the edit screen or trigger the edit function
-  //   console.log('Edit user', userId);
-  // };
-
-  // const handleDelete = (userId) => {
-  //   // Trigger the delete action
-  //   console.log('Delete user', userId);
-  // };
+    fetchUsers(); // Call the function to fetch users
+  }, []);
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/Admin/Users/ReadUser')}>
-      <Text style={styles.cell}>{item.id}</Text>
+      <Text style={styles.cell}>{item._id}</Text>
       <Image source={item.image} style={styles.image} />
       <Text style={styles.cell}>{item.name}</Text>
-      <Text style={styles.cell}>{item.birthdate}</Text>
-      <Text style={styles.cell}>{item.address}</Text>
+      <Text style={styles.cell}>{item.email}</Text>
+      <Text style={styles.cell}>  {`${item.street}, ${item.barangay}, ${item.city}`} </Text>
+
+      <Text style={styles.cell}>{item.customerDetails.disease ? item.customerDetails.disease.name : 'No Disease Info'}</Text>
 
       {/* Action Column */}
       <View style={styles.actionCell}>
@@ -47,7 +47,6 @@ export default function UserTableScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -64,17 +63,20 @@ export default function UserTableScreen() {
         <Text style={styles.headerCell}>Name</Text>
         <Text style={styles.headerCell}>Birthdate</Text>
         <Text style={styles.headerCell}>Address</Text>
+        <Text style={styles.headerCell}>Disease</Text> 
         <Text style={styles.headerCell}>Actions</Text>
       </View>
       <FlatList
         data={users}
         renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={item => item.id ? item.id.toString() : String(Math.random())}
+
         style={styles.table}
       />
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -142,7 +144,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   actionCell: {
-    flexDirection: 'row',
+    flexDirection: 'row', 
     justifyContent: 'flex-end',
     flex: 1,
   },

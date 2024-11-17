@@ -34,15 +34,22 @@ const storage = multer.diskStorage({
 const uploadOptions = multer({ storage: storage }).array('permits', 10);
 
 router.get('/', async (req, res) => {
-    const { role } = req.query; // Get the role from query parameters
-    
     try {
-      const users = await User.find({ role });
-      res.json(users);
+      // Find users with the 'Customer' role
+      const users = await User.find({ role: 'Customer' });
+  
+      // Optionally populate disease information if needed
+      const usersWithDiseaseInfo = await Promise.all(users.map(async (user) => {
+        const customer = await Customer.findOne({ userInfo: user.id }).populate('disease', 'name');
+        return { ...user._doc, customerDetails: customer };
+      }));
+  
+      res.json(usersWithDiseaseInfo); // Send the users with disease information
     } catch (err) {
       res.status(500).send('Error fetching users');
     }
   });
+  
 
 router.post('/register', (req, res) => {
     console.log(req.files);
@@ -149,10 +156,44 @@ router.post('/login', async (req, res) => {
             secret,
             { expiresIn: '1d' }
         )
+        console.log('Login Successful:', token);
         res.status(200).send({ user: user.email, token: token })
     } else {
         res.status(400).send('PASSWORD IS WRONG!');
     }
 })
+
+
+router.get('/:id', async (req, res) => {
+    const userId = req.params.id;
+
+    try {
+        // Fetch the user by ID
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).send('User not found');
+        }
+
+        let userDetails = { ...user._doc }; // Clone the user document
+
+        // Fetch additional details based on the user's role
+        if (user.role === 'Customer') {
+            const customer = await Customer.findOne({ userInfo: userId }).populate('disease', 'name');
+            if (customer) {
+                userDetails.customerDetails = customer;
+            }
+        } else if (user.role === 'PharmacyOwner') {
+            const pharmacy = await Pharmacy.findOne({ userInfo: userId });
+            if (pharmacy) {
+                userDetails.pharmacyDetails = pharmacy;
+            }
+        }
+
+        res.status(200).json(userDetails);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching user');
+    }
+});
 
 module.exports = router;
