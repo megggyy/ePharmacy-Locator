@@ -2,10 +2,11 @@
 import React, { useState, useContext } from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import AuthGlobal from '../../../context/AuthGlobal';
 import { loginUser } from '../../../context/AuthActions';
 import { useRouter } from 'expo-router';
+import Toast from "react-native-toast-message";
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const LoginScreen = () => {
   const { state, dispatch } = useContext(AuthGlobal); 
@@ -17,23 +18,29 @@ const LoginScreen = () => {
   const handleSubmit = async () => {
         const user = { email: email.trim(), password: password.trim() }; // Trim whitespace
         await loginUser(user, dispatch);
-        console.log("Logging in with user:", user);
+        // Check the authentication state after login attempt
+        console.log(state)
         if (state.isAuthenticated) { 
           router.push('../../(tabs)');
         } else {
-            console.log("Authentication Failed"); 
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "Something went wrong",
+            text2: "Please try again"
+          });
         }
     }; 
 
-    
     AsyncStorage.getAllKeys((err, keys) => {
-      AsyncStorage.multiGet(keys, (error, stores) => {
-          stores.map((result, i, store) => {
-              console.log({ [store[i][0]]: store[i][1] });
-              return true;
-          });
-      });
-  });
+        AsyncStorage.multiGet(keys, (error, stores) => {
+            stores.map((result, i, store) => {
+                console.log({ [store[i][0]]: store[i][1] });
+                return true;
+            });
+        });
+    });
+
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <View style={styles.upperSection}>

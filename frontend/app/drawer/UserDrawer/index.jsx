@@ -9,7 +9,9 @@ import AuthGlobal from '@/context/AuthGlobal';
 export default function Sidebar() {
   const router = useRouter();
   const { state, dispatch } = useContext(AuthGlobal); 
-  
+
+  const userName = state?.user?.name || 'Guest'
+
   const handleLogout = async () => {
     try {
       await AsyncStorage.removeItem('jwt');
@@ -33,7 +35,7 @@ export default function Sidebar() {
           source={require('@/assets/images/sample.jpg')} // Replace with actual image
           style={styles.profileImage}
         />
-        <Text style={styles.profileName}>Shanai Meg G. Honrado</Text>
+        <Text style={styles.profileName}>{userName}</Text>
       </View>
 
       {/* Menu Section */}

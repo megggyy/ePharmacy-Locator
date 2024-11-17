@@ -30,12 +30,10 @@ export const loginUser = (user, dispatch) => {
         }
     })
     .catch((err) => {
-        console.error("Fetch Error:", err);
         Toast.show({
             topOffset: 60,
             type: "error",
             text1: "PLEASE PROVIDE CORRECT CREDENTIALS",
-            text2: ""
         });
         logoutUser(dispatch);
     });

@@ -116,7 +116,7 @@ const PharmacyOwnerSignupScreen = () => {
         if (res.status === 200 || res.status === 201) {
           Toast.show({
             topOffset: 60,
-            type: "SUCCESS",
+            type: "success",
             text1: "REGISTRATION SUCCEEDED",
             text2: "PLEASE LOG IN TO YOUR ACCOUNT",
           });
@@ -128,10 +128,11 @@ const PharmacyOwnerSignupScreen = () => {
       .catch((error) => {
         console.log('Response data:', error.response.data);
         Toast.show({
-          topOffset: 60,
-          type: "error",
-          text1: "Something went wrong",
-          text2: "Please try again"
+          position: 'bottom',
+            bottomOffset: 20,
+            type: "error",
+            text1: "SOMETHING WENT WRONG!",
+            text2: "PLEASE TRY AGAIN",
         });
       });
 };
