@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Ensure Ionicons is installed in your project
-import { useRouter } from 'expo-router';
+import { useRouter, useSearchParams } from 'expo-router';
 
 const PrescriptionScreen = () => {
+  const { imageUri } = useSearchParams();
   const router = useRouter();
 
   return (
@@ -22,7 +23,7 @@ const PrescriptionScreen = () => {
       {/* Prescription Image */}
       <View style={styles.imageContainer}>
         <Image
-            source={require('@/assets/images/sample.jpg')}// Path to the prescription image
+            source={{ uri: imageUri }}
           style={styles.prescriptionImage}
           resizeMode="contain"
         />
