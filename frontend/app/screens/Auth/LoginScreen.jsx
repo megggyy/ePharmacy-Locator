@@ -21,6 +21,11 @@ const LoginScreen = () => {
 
     if (response.success) {
         router.push('../../(tabs)');
+        Toast.show({
+          topOffset: 60,
+          type: "success",
+          text1: "LOGIN SUCCESSFUL",
+        })
     } else {
         switch (response.message) {
             case "EMAIL_NOT_FOUND":

@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import AuthGlobal from '@/context/AuthGlobal';
 
 const TopBar = () => {
   const router = useRouter();
+  const { state } = useContext(AuthGlobal);
 
   return (
     <View style={styles.topSection}>
     {/* Header with Location and Icons */}
+    {state.isAuthenticated && (
     <View style={styles.header}>
-      <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('/drawer/UserDrawer')}/>        
-      <View style={styles.locationWrapper}>
-        <Text style={styles.location}>7A Alley</Text>
-        <Text style={styles.location}>Taguig</Text>
-      </View>  
+      <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('/drawer/UserDrawer')}/>          
+     
       <View style={styles.iconsWrapper}>
         <Ionicons name="cloud-upload" style={styles.icon} onPress={() => router.push('/screens/User/Features/PrescriptionUpload')} />
       </View>
     </View>
+    )}
       {/* Search Bar */}
       <TextInput style={styles.searchBar} placeholder="Search..."  placeholderTextColor="#AAB4C1"/>
     </View>
