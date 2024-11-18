@@ -124,30 +124,65 @@ router.post(
 });
 
 // Login route
+// router.post('/login', async (req, res) => {
+//     console.log(req.body.email);
+//     const user = await User.findOne({ email: req.body.email });
+
+//     const secret = process.env.secret;
+//     if (!user) {
+//         return res.status(400).send('The user not found');
+//     }
+
+//     if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
+//         const token = jwt.sign(
+//             {
+//                 userId: user.id,
+//                 isAdmin: user.isAdmin
+//             },
+//             secret,
+//             { expiresIn: '1d' }
+//         );
+//         console.log('Login Successful:', token);
+//         res.status(200).send({ user: user.email, token: token });
+//     } else {
+//         res.status(400).send('PASSWORD IS WRONG!');
+//     }
+// });
+
 router.post('/login', async (req, res) => {
     console.log(req.body.email);
-    const user = await User.findOne({ email: req.body.email });
 
-    const secret = process.env.secret;
-    if (!user) {
-        return res.status(400).send('The user not found');
-    }
+    try {
+        const user = await User.findOne({ email: req.body.email });
+        const secret = process.env.secret;
 
-    if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
-        const token = jwt.sign(
-            {
-                userId: user.id,
-                isAdmin: user.isAdmin
-            },
-            secret,
-            { expiresIn: '1d' }
-        );
-        console.log('Login Successful:', token);
-        res.status(200).send({ user: user.email, token: token });
-    } else {
-        res.status(400).send('PASSWORD IS WRONG!');
+        if (!user) {
+            // Email not found
+            return res.status(400).json({ success: false, message: 'EMAIL_NOT_FOUND' });
+        }
+
+        if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
+            // Password is correct, generate token
+            const token = jwt.sign(
+                {
+                    userId: user.id,
+                    isAdmin: user.isAdmin
+                },
+                secret,
+                { expiresIn: '1d' }
+            );
+            console.log('Login Successful:', token);
+            return res.status(200).json({ success: true, user: user.email, token: token });
+        } else {
+            // Incorrect password
+            return res.status(400).json({ success: false, message: 'INCORRECT_PASSWORD' });
+        }
+    } catch (error) {
+        console.error('Login Error:', error);
+        return res.status(500).json({ success: false, message: 'SERVER_ERROR' });
     }
 });
+
 
 // Get user details by ID
 router.get('/:id', async (req, res) => {

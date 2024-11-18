@@ -9,7 +9,7 @@ let baseURL = '';
 // }
 
 {Platform.OS == 'ios'
-    ? baseURL = 'http://192.168.68.107:4000/api/v1/'
+    ? baseURL = 'http://192.168.68.105:4000/api/v1/'
     : baseURL = 'http://192.168.68.207:4000/api/v1/'
     }
 export default baseURL;
