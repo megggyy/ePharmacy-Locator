@@ -15,20 +15,6 @@ const LoginScreen = () => {
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
   const router = useRouter();
 
-  // const handleSubmit = async () => {
-  //   const user = { email: email.trim(), password: password.trim() };
-  //   await loginUser(user, dispatch);
-  //   if (state.isAuthenticated) {
-  //     router.push('../../(tabs)');
-  //   } else {
-  //     Toast.show({
-  //       topOffset: 60,
-  //       type: "error",
-  //       text1: "PLEASE PROVIDE CORRECT CREDENTIALS!"
-  //     });
-  //   }
-  // };
-
   const handleSubmit = async () => {
     const user = { email: email.trim(), password: password.trim() };
     const response = await loginUser(user, dispatch);
