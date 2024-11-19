@@ -66,7 +66,7 @@ export default function CreateBarangay() {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
+
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -74,7 +74,7 @@ export default function CreateBarangay() {
         <Text style={styles.headerText}>Create Barangay</Text>
       </View>
 
-      {/* Image Section */}
+     
       <View style={styles.imageSection}>
         {imageUris.length > 0 ? (
           imageUris.map((uri, index) => (
@@ -88,7 +88,7 @@ export default function CreateBarangay() {
         </TouchableOpacity>
       </View>
 
-      {/* Input Fields */}
+   
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Barangay Name</Text>
         <TextInput
@@ -107,7 +107,7 @@ export default function CreateBarangay() {
         />
       </View>
 
-      {/* Create Button */}
+  
       <TouchableOpacity style={styles.confirmButton} onPress={handleCreate}>
         <Text style={styles.confirmButtonText}>CREATE</Text>
       </TouchableOpacity>

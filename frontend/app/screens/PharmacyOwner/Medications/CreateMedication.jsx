@@ -188,7 +188,7 @@ export default function CreateMedication() {
         placeholder={{ label: 'Select Pharmacy', value: null }}
         style={pickerSelectStyles}
         Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
-      />
+      /> 
       
   
 
