@@ -36,6 +36,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ["PharmacyOwner", "Customer", "Admin"],
         required: true
+    },
+    verified: {
+        type: Boolean,
     }
 });
 
