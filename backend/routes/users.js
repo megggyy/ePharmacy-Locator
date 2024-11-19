@@ -496,9 +496,6 @@ router.post('/login', async (req, res) => {
     }
 });
 
-
-
-
 // Get user details by ID
 router.get('/:id', async (req, res) => {
     const userId = req.params.id;
@@ -531,5 +528,212 @@ router.get('/:id', async (req, res) => {
         res.status(500).send('Error fetching user');
     }
 });
+
+// Change Password
+router.put('/change-password', async (req, res) => {
+    const { userId, oldPassword, newPassword, confirmPassword } = req.body;
+
+    // Validate input
+    if (!userId) {
+        return res.status(400).json({ message: 'User ID is required' });
+    }
+
+    if (!oldPassword) {
+        return res.status(400).json({ message: 'Old password is required' });
+    }
+
+    if (!newPassword || !confirmPassword) {
+        return res.status(400).json({ message: 'Password fields are required' });
+    }
+
+    if (newPassword !== confirmPassword) {
+        return res.status(400).json({ message: 'Passwords do not match' });
+    }
+
+    try {
+        // Check if the user exists
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Verify the old password
+        const isMatch = await bcrypt.compare(oldPassword, user.passwordHash);
+        if (!isMatch) {
+            return res.status(400).json({ message: 'Old password is incorrect' });
+        }
+
+        // Hash the new password
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        // Update the password hash
+        user.passwordHash = hashedPassword;
+
+        // Save the updated user
+        await user.save();
+
+        return res.status(200).json({ message: 'Password successfully updated' });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Server error', error: error.message });
+    }
+});
+
+
+// Reset Password
+
+let otpStore = {}; 
+
+router.post('/checkEmail', async (req, res) => {
+    const { email } = req.body; // Fetch the email from the request body
+    console.log("Received Email:", email); // Log the received email for debugging
+
+    try {
+        // Check if user exists with the provided email (using email, not ObjectId)
+        const user = await User.findOne({ email });
+
+        if (user) {
+            // Call sendOTPResetEmail with user details
+            const result = await sendOTPResetEmail({ _id: user._id, email: user.email });
+
+            // Return result after sending OTP
+            res.json({
+                exists: true,
+                userId: user._id,
+                email: user.email,
+                otpStatus: result.status, // Status of OTP sending
+            });
+        } else {
+            res.json({ exists: false });
+        }
+    } catch (err) {
+        console.error("Error fetching user:", err);
+        res.status(500).send('Error fetching user');
+    }
+});
+
+const sendOTPResetEmail = async ({ _id, email }) => {
+    try {
+        const otp = `${Math.floor(1000 + Math.random() * 9000)}`; // Generate OTP
+
+        const mailOptions = {
+            from: process.env.AUTH_EMAIL, // Sender address
+            to: email, // Receiver's email
+            subject: "Reset Password", // Subject
+            html: `<p>Enter <b>${otp}</b> in the app to verify your intention to reset your password.</p>
+                   <p>This code <b>expires in 1 hour</b>.</p>`,
+        };
+
+        const hashedOTP = await bcrypt.hash(otp, 10); 
+
+        otpStore[_id] = {
+            otp: hashedOTP,
+            createdAt: Date.now(),
+            expiresAt: Date.now() + 3600000,
+        };
+
+        console.log("OTP Store:", otpStore);
+        // Send the email
+        await transporter.sendMail(mailOptions);
+
+        console.log("OTP email sent successfully.");
+        return {
+            status: "PENDING",
+            message: "Verification OTP email sent.",
+            data: { userId: _id, email },
+        };
+    } catch (error) {
+        console.error("Error sending OTP email:", error);
+        throw new Error(error.message);
+    }
+};
+
+router.post('/resetOTP', async (req, res) => {
+    const { userId, otp } = req.body; 
+    console.log("Received OTP:", otp);
+
+    try {
+        // Fetch the OTP record from the store using userId
+        const otpRecord = otpStore[userId];
+
+        console.log("OTP record found:", otpRecord);
+
+        // Check if the OTP record exists
+        if (!otpRecord) {
+            return res.status(400).json({ message: 'OTP not found or expired' });
+        }
+
+        // Check if the OTP has expired
+        if (Date.now() > otpRecord.expiresAt) {
+            // OTP expired, so we remove it from the store
+            delete otpStore[userId]; 
+            return res.status(400).json({ message: 'OTP has expired' });
+        }
+
+        // Compare the plain OTP with the hashed OTP
+        const isValidOTP = await bcrypt.compare(otp, otpRecord.otp);
+        console.log("Is OTP valid:", isValidOTP);
+
+        // If the OTP is valid, clear the OTP record and send success response
+        if (isValidOTP) {
+            delete otpStore[userId];  // Remove OTP after successful verification
+            return res.json({
+                status: 'success',
+                message: 'OTP verified successfully.',
+            });
+        } else {
+            // If the OTP is invalid, send an error response
+            return res.status(400).json({ message: 'Invalid OTP' });
+        }
+
+    } catch (err) {
+        console.error("Error verifying OTP:", err);
+        // Send a generic error response in case of any issues
+        return res.status(500).json({ message: 'Error verifying OTP' });
+    }
+});
+
+
+router.put('/reset-password', async (req, res) => {
+    const { userId, newPassword, confirmPassword } = req.body;
+
+    // Validate input
+    if (!userId) {
+        return res.status(400).json({ message: 'User ID is required' });
+    }
+
+    if (!newPassword || !confirmPassword) {
+        return res.status(400).json({ message: 'Password fields are required' });
+    }
+
+    if (newPassword !== confirmPassword) {
+        return res.status(400).json({ message: 'Passwords do not match' });
+    }
+
+    try {
+        // Check if the user exists
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Hash the new password
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        // Update the password hash
+        user.passwordHash = hashedPassword;
+
+        // Save the updated user
+        await user.save();
+
+        return res.status(200).json({ message: 'Password successfully updated' });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Server error', error: error.message });
+    }
+});
+
+
+  
 
 module.exports = router;

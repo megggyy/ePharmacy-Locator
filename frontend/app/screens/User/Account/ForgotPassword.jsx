@@ -2,15 +2,79 @@ import React, { useState } from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useRouter } from 'expo-router';
+import axios from 'axios';
+import Toast from 'react-native-toast-message'; 
+import baseURL from "../../../../assets/common/baseurl";
 
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState('');
   const router = useRouter();
 
-  const handleSubmit = () => {
-    // sa submit ng email
-    console.log('Reset password request sent for:', email.trim());
+  const handleSubmit = async () => {
+    try {
+      if (!email) {
+        Toast.show({
+          position: 'bottom',
+          bottomOffset: 20,
+          type: 'error',
+          text1: 'EMAIL REQUIRED!',
+          text2: 'PLEASE INPUT YOUR EMAIL',
+        });
+        return;
+      }
+  
+      // Fetch user data by email
+      const res = await axios.post(`${baseURL}users/checkEmail`, { email });
+  
+      console.log("Fetched Response:", res.data); // Log the response for debugging
+  
+      if (res.data.exists) {
+        if (res.data.otpStatus === 'PENDING') {
+          Toast.show({
+            topOffset: 60,
+            type: "success",
+            text1: "EMAIL EXISTS",
+            text2: "Redirecting to OTP verification.",
+          });
+  
+          // Redirect to VerifyOTP screen with the userId
+          setTimeout(() => {
+            router.push({
+              pathname: '/screens/User/Account/ResetOTP',
+              params: { userId: res.data.userId }, // Correctly pass userId here
+            });
+          }, 500);
+        } else {
+          // Handle OTP not sent or other issues
+          Toast.show({
+            position: 'bottom',
+            bottomOffset: 20,
+            type: "error",
+            text1: "OTP ERROR",
+            text2: "Something went wrong while sending OTP.",
+          });
+        }
+      } else {
+        Toast.show({
+          position: 'bottom',
+          bottomOffset: 20,
+          type: "error",
+          text1: "EMAIL NOT FOUND!",
+          text2: "PLEASE REGISTER FIRST.",
+        });
+      }
+    } catch (error) {
+      console.error("Error Occurred:", error.response?.data || error.message);
+      Toast.show({
+        position: 'bottom',
+        bottomOffset: 20,
+        type: "error",
+        text1: "SOMETHING WENT WRONG!",
+        text2: "PLEASE TRY AGAIN",
+      });
+    }
   };
+  
 
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>

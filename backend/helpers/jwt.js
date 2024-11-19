@@ -11,7 +11,7 @@ function authJwt() {
                 
                 {
                     url: /\/api\/v1\/users(.*)/,
-                    methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'DELETE']
+                    methods: ['GET', 'POST', 'PUT', 'PATCH', 'OPTIONS', 'DELETE']
                 },
                 {
                     url: /\/api\/v1\/pharmacies(.*)/,

@@ -51,6 +51,13 @@ const LoginScreen = () => {
                     text2: "UNABLE TO CONNECT TO THE SERVER. PLEASE TRY AGAIN LATER",
                 });
                 break;
+              case "INCORRECT_PASSWORD":
+                  Toast.show({
+                      topOffset: 60,
+                      type: "error",
+                      text1: "INCORRECT PASSWORD",
+                  });
+                  break;
             default:
                 Toast.show({
                     topOffset: 60,
