@@ -1,28 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  View, 
-  Text, 
-  TextInput, 
-  TouchableOpacity, 
-  StyleSheet, 
-  Image, 
-  ScrollView } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+  Platform
+} from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-
+import MapView, { Marker } from 'react-native-maps';
+import Toast from 'react-native-toast-message';
 import RNPickerSelect from 'react-native-picker-select';
-import Toast from "react-native-toast-message";
-import axios from "axios";
-
+import axios from 'axios';
+import * as Location from 'expo-location';
 import baseURL from "../../../../assets/common/baseurl";
 
 const CustomerSignup = () => {
   const router = useRouter();
-  
-  const [selectedDisease, setSelectedDisease] = useState(null);
-  const [customDisease, setCustomDisease] = useState('');
-  const [loading, setLoading] = useState(true);
+
+  const [location, setLocation] = useState({
+    latitude: 14.517618,
+    longitude: 121.050863,
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  });
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [contactNumber, setContactNumber] = useState("");
@@ -31,12 +35,29 @@ const CustomerSignup = () => {
   const [barangay, setBarangay] = useState(null);
   const [city, setCity] = useState("Taguig City");
   const [diseases, setDiseases] = useState([]);
-  const [barangays, setBarangays] = useState([]); // State to store barangays
+  const [selectedDisease, setSelectedDisease] = useState(null);
+  const [customDisease, setCustomDisease] = useState('');
+  const [barangays, setBarangays] = useState([]); // State for storing barangays
+  const [loading, setLoading] = useState(true);
 
+  // Fetch diseases, barangays, and location on mount
   useEffect(() => {
+    // Request location permissions
+    const requestLocationPermission = async () => {
+      try {
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          alert('We need access to your location to show your position on the map.');
+        }
+      } catch (error) {
+        console.error('Error requesting location permissions:', error);
+      }
+    };
+
+    // Fetch diseases
     const fetchDiseases = async () => {
       try {
-        const response = await fetch(`${baseURL}diseases`); 
+        const response = await fetch(`${baseURL}diseases`);
         const result = await response.json();
 
         // Format data for the picker
@@ -52,6 +73,7 @@ const CustomerSignup = () => {
       }
     };
 
+    // Fetch barangays
     const fetchBarangays = async () => {
       try {
         const response = await fetch(`${baseURL}barangays`); // Endpoint for fetching barangays
@@ -68,56 +90,90 @@ const CustomerSignup = () => {
       }
     };
 
+    // Execute the functions
+    requestLocationPermission();
     fetchDiseases();
-    fetchBarangays(); // Call the fetch function for barangays
-  }, []);
+    fetchBarangays();
+  }, []); // Empty dependency array to only run once
+
+  // Get current location - Now outside of useEffect
+  const getCurrentLocation = async () => {
+    try {
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        alert("We need access to your location to show your position on the map.");
+        return;
+      }
+
+      const location = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.High,
+      });
+
+      const { latitude, longitude } = location.coords;
+      setLocation({
+        latitude,
+        longitude,
+        latitudeDelta: 0.01,
+        longitudeDelta: 0.01,
+      });
+    } catch (error) {
+      Toast.show({
+        position: 'bottom',
+        bottomOffset: 20,
+        type: "error",
+        text1: "Location Error",
+        text2: "Unable to fetch current location",
+      });
+      console.error(error);
+    }
+  };
 
   // Register function (submit form data)
   const register = async () => {
     const formData = {
-        name,
-        email,
-        contactNumber,
-        password,
-        street,
-        barangay,
-        city,
-        diseases: selectedDisease === 'others' ? customDisease : selectedDisease,
-        isAdmin: false,
-        role: "Customer",
+      name,
+      email,
+      contactNumber,
+      password,
+      street,
+      barangay,
+      city,
+      location: { latitude: location.latitude, longitude: location.longitude },
+      diseases: selectedDisease === 'others' ? customDisease : selectedDisease,
     };
 
-    console.log(formData)
     try {
-        const res = await axios.post(`${baseURL}users/register`, formData, {
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+      const res = await axios.post(`${baseURL}users/register`, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
 
-        // Handle the response
-        if (res.status === 200) {
-            Toast.show({
-                topOffset: 60,
-                type: "success",
-                text1: "REGISTRATION SUCCEEDED",
-                text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-            });
-            setTimeout(() => {
-              router.push('../../Auth/LoginScreen');
-            }, 500);
-        }
-    } catch (error) {
+      if (res.status === 200) {
         Toast.show({
-            position: 'bottom',
-            bottomOffset: 20,
-            type: "error",
-            text1: "SOMETHING WENT WRONG!",
-            text2: "PLEASE TRY AGAIN",
+          topOffset: 60,
+          type: "success",
+          text1: "Registration Succeeded",
+          text2: "Please log in to your account",
         });
-        console.log(error.message);
+        setTimeout(() => router.push('../../Auth/LoginScreen'), 500);
+      }
+    } catch (error) {
+      Toast.show({
+        position: 'bottom',
+        bottomOffset: 20,
+        type: "error",
+        text1: "Something went wrong!",
+        text2: "Please try again",
+      });
+      console.error(error.message);
     }
-};
+  };
+
+  // Handle manual marker drag
+  const handleMarkerDragEnd = (event) => {
+    const { latitude, longitude } = event.nativeEvent.coordinate;
+    setLocation({ ...location, latitude, longitude });
+  };
+
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
@@ -137,53 +193,57 @@ const CustomerSignup = () => {
         <TextInput style={styles.input} placeholder="Email address" placeholderTextColor="#AAB4C1" value={email} onChangeText={setEmail} keyboardType="email-address" />
         <TextInput style={styles.input} placeholder="Contact number" placeholderTextColor="#AAB4C1" value={contactNumber} onChangeText={setContactNumber} keyboardType="phone-pad" />
         <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#AAB4C1" value={password} onChangeText={setPassword} secureTextEntry={true} />
-        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
-        
-        {/* <RNPickerSelect
-          onValueChange={(value) => setBarangay(value)}
-          items={[
-              { label: 'Central Signal', value: 'Central Signal' },
-              { label: 'New Lower Bicutan', value: 'New Lower Bicutan' },
-              { label: 'Hagonoy', value: 'Hagonoy' },
-              { label: 'North Signal', value: 'North Signal' },
-              { label: 'South Signal', value: 'South Signal' },
-              { label: 'Tuktukan', value: 'Tuktukan' },
-          ]}
-          style={pickerSelectStyles}
-          placeholder={{
-              label: 'Select your barangay',
-              value: null,
-              color: '#AAB4C1',
-          }}
-          Icon={() => {
-              return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-          }}
-          value={barangay} // <-- ensure you pass the state value here
-      /> */}
+
         <RNPickerSelect
           onValueChange={(value) => setBarangay(value)}
           items={barangays} // Use fetched barangays here
           style={pickerSelectStyles}
           placeholder={{
-              label: 'Select your barangay',
-              value: null,
-              color: '#AAB4C1',
+            label: 'Select your barangay',
+            value: null,
+            color: '#AAB4C1',
           }}
-          Icon={() => {
-              return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-          }}
-          value={barangay} // <-- ensure you pass the state value here
-      />
+          Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
+        />
 
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
+        <TextInput
+          style={styles.input}
+          placeholder="Street (Optional)"
+          value={street}
+          onChangeText={setStreet}
+        />
 
-        {/* Dropdown for diseases */}
+        <TextInput
+          style={styles.input}
+          placeholder="City"
+          value={city}
+          editable={false}
+        />
+
+        {/* Map Section */}
+        <Text style={styles.title}>Select Location</Text>
+        <MapView
+          style={styles.map}
+          region={location}
+          onPress={(e) => setLocation({ ...location, ...e.nativeEvent.coordinate })}
+        >
+          <Marker
+            coordinate={location}
+            draggable
+            onDragEnd={handleMarkerDragEnd}
+          />
+        </MapView>
+
+        {/* Button to use current location */}
+        <TouchableOpacity style={styles.currentLocationButton} onPress={getCurrentLocation}>
+          <Text style={styles.currentLocationButtonText}>Use My Current Location</Text>
+        </TouchableOpacity>
+
+        {/* Disease Dropdown */}
         <RNPickerSelect
           onValueChange={(value) => {
             setSelectedDisease(value);
-            if (value !== 'others') {
-              setCustomDisease('');
-            }
+            if (value !== 'others') setCustomDisease('');
           }}
           items={diseases}
           style={pickerSelectStyles}
@@ -192,26 +252,20 @@ const CustomerSignup = () => {
             value: null,
             color: '#AAB4C1',
           }}
-          Icon={() => {
-            return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-          }}
-          useNativeAndroidPickerStyle={false}
-          value={selectedDisease}
+          Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
         />
 
-        {/* Conditionally render TextInput for "Others" */}
         {selectedDisease === 'others' && (
           <TextInput
             style={styles.input}
             placeholder="Please Specify"
-            placeholderTextColor="#AAB4C1"
             value={customDisease}
             onChangeText={setCustomDisease}
           />
         )}
 
         {/* Sign Up Button */}
-        <TouchableOpacity style={styles.signUpButton} onPress={() => register()}>
+        <TouchableOpacity style={styles.signUpButton} onPress={register}>
           <Text style={styles.signUpButtonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
