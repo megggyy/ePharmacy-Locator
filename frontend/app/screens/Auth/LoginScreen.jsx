@@ -36,14 +36,13 @@ const LoginScreen = () => {
                     text2: "PLEASE CHECK YOUR EMAIL AND TRY AGAIN.",
                 });
                 break;
-            case "INCORRECT_PASSWORD":
-                Toast.show({
-                    topOffset: 60,
-                    type: "error",
-                    text1: "INCORRECT PASSWORD",
-                    text2: "PLEASE CHECK YOUR PASSWORD AND TRY AGAIN.",
-                });
-                break;
+                case "USER_NOT_VERIFIED":
+                  Toast.show({
+                      topOffset: 60,
+                      type: "error",
+                      text1: "YOU'RE NOT VERIFIED",
+                  });
+                  break;              
             case "NETWORK_ERROR":
                 Toast.show({
                     topOffset: 60,
