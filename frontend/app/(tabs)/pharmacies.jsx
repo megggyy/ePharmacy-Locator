@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Icons for the UI
+import { Ionicons } from '@expo/vector-icons'; 
 import { useRouter } from 'expo-router';
+import axios from 'axios';
 import TopBar from '../drawer/TopBar';
+import baseURL from '@/assets/common/baseurl'; 
+import pharmacyImage from '@/assets/images/pharmacy.png';
 
 export default function PharmacyScreen() {
   const router = useRouter();
+  const [pharmacies, setPharmacies] = useState([]); // State to store pharmacy data
   const [isDropdownOpen1, setDropdownOpen1] = useState(false); // State for District 1 dropdown
   const [isDropdownOpen2, setDropdownOpen2] = useState(false); // State for District 2 dropdown
 
+  useEffect(() => {
+    // Fetch pharmacies and limit to 5
+    axios.get(`${baseURL}pharmacies`)
+      .then(response => {
+        console.log('Pharmacies fetched:', response.data); // Check what is being returned
+        // Check if response data is an array and limit it to 5 items
+        setPharmacies(response.data.slice(0, 5)); // Ensure only 5 items are stored in state
+      })
+      .catch(error => {
+        console.error('Error fetching pharmacies:', error);
+      });
+  }, []);
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Include TopBar component */}
@@ -75,29 +91,24 @@ export default function PharmacyScreen() {
         </View>
 
         {/* Pharmacies Section */}
-        <View style={styles.sectionHeader}>
+          <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Pharmacies</Text>
           <TouchableOpacity>
             <Text style={styles.viewAll} onPress={() => router.push('../screens/User/Features/ViewAllPharmacies')}>View all</Text>
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.pharmaciesContainer}>
-          <PharmacyCard
-            name="Pharmacy 1"
-            imageUrl="https://via.placeholder.com/150" // Placeholder image
-            address="123 Main St, Taguig"
-            barangay="New Lower Bicutan"
-            storeHours="8 AM - 10 PM"
-            onPress={() => router.push('/screens/User/Features/PharmacyDetails')}
-          />
-          <PharmacyCard
-            name="Pharmacy 2"
-            imageUrl="https://via.placeholder.com/150" // Placeholder image
-            address="456 Signal Rd, Taguig"
-            barangay="Central Signal Village"
-            storeHours="9 AM - 8 PM"
-            onPress={() => router.push('/screens/User/Features/PharmacyDetails')}
-          />
+          {pharmacies.map((pharmacy) => (
+            <PharmacyCard
+              key={pharmacy._id}
+              name={pharmacy.userInfo.name}
+              imageUrl={pharmacy.image || 'https://res.cloudinary.com/di9gjajky/image/upload/v1732033031/pplwsy2ie8odxp8zss9f.jpg'} 
+              address={`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}
+              barangay={pharmacy.userInfo.barangay}
+              // storeHours={pharmacy.storeHours || 'Not available'}
+              onPress={() => router.push('/screens/User/Features/PharmacyDetails')}
+            />
+          ))}
         </ScrollView>
 
         {/* Pharmacies Near Me Section */}
@@ -141,7 +152,7 @@ function PharmacyCard({ name, imageUrl, address, barangay, storeHours, onPress }
           <Text style={styles.addressText}>{address}</Text>
         </View>
         <Text style={styles.barangayText}>{barangay}</Text>
-        <Text style={styles.storeHoursText}>Store Hours: {storeHours}</Text>
+        {/* <Text style={styles.storeHoursText}>Store Hours: {storeHours}</Text> */}
       </View>
     </TouchableOpacity>
   );

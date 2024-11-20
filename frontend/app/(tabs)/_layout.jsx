@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
@@ -8,13 +8,17 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import AuthGlobal from '@/context/AuthGlobal';
 
 export default function TabLayout() {
-  const { state } = useContext(AuthGlobal);
+  const { state } = useContext(AuthGlobal); // Get authentication state from context
   const colorScheme = useColorScheme();
+
+  // Log the authentication state for debugging
+  useEffect(() => {
+    console.log('Authentication State:', state.isAuthenticated);
+  }, [state.isAuthenticated]);
 
   return (
     <Tabs
-      // Adding a key ensures the Tabs component re-renders when isAuthenticated changes
-      key={state.isAuthenticated}
+      key={state.isAuthenticated ? 'authenticated' : 'unauthenticated'} // Re-render when auth state changes
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
@@ -59,8 +63,7 @@ export default function TabLayout() {
           ),
         }}
       />
-
-      {state.isAuthenticated == false && (
+   
         <Tabs.Screen
           name="account"
           options={{
@@ -70,7 +73,6 @@ export default function TabLayout() {
             ),
           }}
         />
-      )}
     </Tabs>
   );
 }

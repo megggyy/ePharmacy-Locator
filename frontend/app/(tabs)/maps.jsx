@@ -100,7 +100,7 @@ export default function MapsScreen() {
                 <Text style={styles.calloutTitle}>{pharmacy.userInfo.name}</Text>
                 <Text style={styles.calloutText}>Location: {`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}</Text>
                 <Text style={styles.calloutText}>Contact: {pharmacy.userInfo.contactNumber}</Text>
-                <Text style={styles.calloutText}>Open Hours: {pharmacy.userInfo.openHours}</Text>
+                {/* <Text style={styles.calloutText}>Open Hours: {pharmacy.userInfo.openHours}</Text> */}
               </View>
             </Callout>
           </Marker>

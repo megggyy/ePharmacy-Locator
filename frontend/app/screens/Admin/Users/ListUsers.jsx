@@ -31,7 +31,12 @@ export default function UserTableScreen() {
       <Text style={styles.cell}>{item.email}</Text>
       <Text style={styles.cell}>  {`${item.street}, ${item.barangay}, ${item.city}`} </Text>
 
-      <Text style={styles.cell}>{item.customerDetails.disease ? item.customerDetails.disease.name : 'No Disease Info'}</Text>
+      <Text style={styles.cell}>
+        {item.customerDetails && item.customerDetails.disease
+          ? item.customerDetails.disease.name
+          : 'No Disease Info'}
+      </Text>
+
 
       {/* Action Column */}
       <View style={styles.actionCell}>

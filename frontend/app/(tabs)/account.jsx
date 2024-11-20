@@ -1,17 +1,59 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import React, { useContext, useEffect, useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
+import AuthGlobal from '@/context/AuthGlobal';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { jwtDecode } from 'jwt-decode';
+import baseURL from '@/assets/common/baseurl';
+import ViewProfile from '../screens/User/Profile/ViewProfileScreen';
 
 const HomeScreen = () => {
+  const { state } = useContext(AuthGlobal); // Get authentication state from context
+  const [userData, setUserData] = useState(null); // User data for profile
   const router = useRouter();
+
+  useEffect(() => {
+    // Check if the user is logged in and fetch profile data
+    const fetchUserData = async () => {
+      try {
+        const token = await AsyncStorage.getItem('jwt');
+        if (token) {
+          const decoded = jwtDecode(token);
+          const userId = decoded?.userId;
+
+          if (userId) {
+            const response = await fetch(`${baseURL}users/${userId}`, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+              },
+            });
+
+            if (!response.ok) throw new Error('Failed to fetch user data');
+            const data = await response.json();
+            setUserData(data); // Set user data for profile
+          }
+        }
+      } catch (error) {
+        Alert.alert('Error', error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [state.isAuthenticated]); // Only fetch when the auth state changes
+
+  if (state.isAuthenticated) {
+    // If user is authenticated, show ViewProfile
+    return <ViewProfile userData={userData} />;
+  }
+
+  // If user is not authenticated, show Welcome screen
   return (
     <View style={styles.container}>
       {/* Upper section with background color */}
       <View style={styles.upperSection}>
-        {/* Placeholder for the icon */}
         <Image source={require('@/assets/images/epharmacy-logo.png')} style={styles.icon} />
-
-        {/* Welcome text */}
         <Text style={styles.welcomeText}>Welcome to</Text>
         <Text style={styles.appName}>ePharmacy</Text>
       </View>
@@ -19,11 +61,14 @@ const HomeScreen = () => {
       {/* Lower section with white background */}
       <View style={styles.lowerSection}>
         {/* Buttons */}
-        <TouchableOpacity style={styles.button} onPress={() => router.push('../screens/Auth/LoginScreen')} >
+        <TouchableOpacity style={styles.button} onPress={() => router.push('../screens/Auth/LoginScreen')}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
-        
-        <TouchableOpacity style={[styles.button, styles.signupButton]} onPress={() => router.push('../screens/Auth/SignupRoleScreen')}>
+
+        <TouchableOpacity
+          style={[styles.button, styles.signupButton]}
+          onPress={() => router.push('../screens/Auth/SignupRoleScreen')}
+        >
           <Text style={styles.buttonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
@@ -37,7 +82,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   upperSection: {
-    flex: 2, 
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#0A6A83', // Blue background for the upper section
@@ -59,7 +104,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   lowerSection: {
-    flex: 1, 
+    flex: 1,
     backgroundColor: '#fff', // White background for the bottom section
     alignItems: 'center',
     justifyContent: 'center',

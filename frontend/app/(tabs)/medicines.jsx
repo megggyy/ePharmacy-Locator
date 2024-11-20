@@ -1,13 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Icons for the UI
 import { useRouter } from 'expo-router';
+import axios from 'axios'; // Import axios to fetch data
+import baseURL from '@/assets/common/baseurl'; // Replace with your base URL
 import TopBar from '../drawer/TopBar';
 
 export default function MedicationScreen() {
   const router = useRouter();
+  const [medications, setMedications] = useState([]); // State to store medications data
   const [isDropdownOpen1, setDropdownOpen1] = useState(false); // State for Category 1 dropdown
   const [isDropdownOpen2, setDropdownOpen2] = useState(false); // State for Category 2 dropdown
+
+  useEffect(() => {
+    // Fetch medications and limit the results to 5
+    axios.get(`${baseURL}medicine`) // Adjust the endpoint based on your API
+      .then(response => {
+        console.log('Medications fetched:', response.data);
+        // Limit to 5 medications
+        setMedications(response.data.slice(0, 5));
+      })
+      .catch(error => {
+        console.error('Error fetching medications:', error);
+      });
+  }, []);
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -33,13 +49,13 @@ export default function MedicationScreen() {
             {isDropdownOpen1 && (
               <View style={styles.dropdownMenu}>
                 <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')} >Pain Relievers</Text>
+                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Pain Relievers</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')} >Cold & Flu</Text>
+                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Cold & Flu</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')} >Allergy</Text>
+                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Allergy</Text>
                 </TouchableOpacity>
               </View>
             )}
@@ -61,20 +77,20 @@ export default function MedicationScreen() {
             {isDropdownOpen2 && (
               <View style={styles.dropdownMenu}>
                 <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')} >Vitamins</Text>
+                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Vitamins</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')} >Supplements</Text>
+                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Supplements</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')} >First Aid</Text>
+                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>First Aid</Text>
                 </TouchableOpacity>
               </View>
             )}
           </View>
         </View>
 
-        {/* Suggested Medications Section */}
+        {/* Medications Section */}
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Medications</Text>
           <TouchableOpacity>
@@ -82,27 +98,21 @@ export default function MedicationScreen() {
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.medicationsContainer}>
-          <MedicationCard
-            name="Medication 1"
-            imageUrl="https://via.placeholder.com/150" // Placeholder image
-            description="Pain Reliever"
-            stock="20 in stock"
-            pharmacy="Pharmacy 1"
-            barangay="New Lower Bicutan"
-            onPress={() => router.push('/screens/User/Features/MedicationDetails')}
-          />
-          <MedicationCard
-            name="Medication 2"
-            imageUrl="https://via.placeholder.com/150" // Placeholder image
-            description="Cold & Flu Relief"
-            stock="15 in stock"
-            pharmacy="Pharmacy 2"
-            barangay="Central Signal Village"
-            onPress={() => router.push('/screens/User/Features/MedicationDetails')}
-          />
+          {/* Render fetched medications */}
+          {medications.map((medication) => (
+            <MedicationCard
+              key={medication._id}
+              name={medication.name}
+              imageUrl={medication.images && medication.images.length > 0 ? medication.images[0] : 'https://via.placeholder.com/150'} // Fallback image if no image available
+              description={medication.description}
+              stock={`${medication.stock} in stock`}
+              barangay={medication.barangay}
+              onPress={() => router.push('/screens/User/Features/MedicationDetails')}
+            />
+          ))}
         </ScrollView>
 
-        {/* Medications Near Me Section */}
+        {/* Suggested Medications Section */}
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Suggested Medications</Text>
           <TouchableOpacity>
@@ -110,12 +120,12 @@ export default function MedicationScreen() {
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.medicationsContainer}>
+          {/* Static medications for "Suggested" section */}
           <MedicationCard
             name="Medication 3"
             imageUrl="https://via.placeholder.com/150" // Placeholder image
             description="Vitamin C"
             stock="30 in stock"
-            pharmacy="Pharmacy 3"
             barangay="Hagonoy"
             onPress={() => router.push('/screens/User/Features/MedicationDetails')}
           />
@@ -124,7 +134,6 @@ export default function MedicationScreen() {
             imageUrl="https://via.placeholder.com/150" // Placeholder image
             description="Allergy Relief"
             stock="10 in stock"
-            pharmacy="Pharmacy 4"
             barangay="South Signal Village"
             onPress={() => router.push('/screens/User/Features/MedicationDetails')}
           />
@@ -134,15 +143,17 @@ export default function MedicationScreen() {
   );
 }
 
-function MedicationCard({ name, imageUrl, description, stock, pharmacy, barangay, onPress }) {
+function MedicationCard({ name, imageUrl, description, stock, barangay, onPress }) {
   return (
     <TouchableOpacity style={styles.medicationCard} onPress={onPress}>
-      <Image source={{ uri: imageUrl }} style={styles.medicationImage} />
+      <Image
+        style={styles.medicationImage}
+        source={{ uri: imageUrl && imageUrl.length > 0 ? imageUrl : 'https://via.placeholder.com/150' }} // Fallback image if no image available
+      />
       <View style={styles.medicationInfo}>
         <Text style={styles.medicationName}>{name}</Text>
         <Text style={styles.descriptionText}>{description}</Text>
         <Text style={styles.stockText}>{stock}</Text>
-        <Text style={styles.pharmacyText}>{pharmacy}</Text>
         <Text style={styles.barangayText}>{barangay}</Text>
       </View>
     </TouchableOpacity>
@@ -152,26 +163,6 @@ function MedicationCard({ name, imageUrl, description, stock, pharmacy, barangay
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#005b7f' },
   container: { flex: 1, backgroundColor: '#f5f5f5' },
-  menuIcon: { fontSize: 28, color: '#fff' },
-  topSection: { 
-    paddingHorizontal: 16,
-    paddingBottom: 10, 
-    borderBottomLeftRadius: 25, 
-    borderBottomRightRadius: 25, 
-  },
-  header: { 
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    alignItems: 'center', 
-    marginTop: 10,
-  },
-  locationWrapper: { flex: 1, marginLeft: 10 },
-  location: { fontSize: 16, color: '#fff' },
-  iconsWrapper: { flexDirection: 'row' },
-  icon: { fontSize: 20, marginHorizontal: 10, color: '#fff'  },
-  searchBar: { marginVertical: 15, padding: 10, backgroundColor: '#f0f0f0', borderRadius: 8 },
-
-  /* Filter Section */
   filterContainer: { flexDirection: 'row', paddingHorizontal: 15, marginVertical: 10 },
   dropdownWrapper: { flex: 1, marginRight: 10 },
   filterButton: {
@@ -185,75 +176,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   filterText: { color: '#333' },
-
-  dropdownMenu: {
-    backgroundColor: '#fff',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 10,
-    marginTop: 5,
-    elevation: 3,
-  },
-  dropdownItem: {
-    paddingVertical: 5,
-    color: '#333',
-  },
-
-  /* Section Header */
-  sectionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 15,
-    marginVertical: 10,
-  },
+  dropdownMenu: { backgroundColor: '#fff', paddingVertical: 5, paddingHorizontal: 20, borderRadius: 10, marginTop: 5, elevation: 3 },
+  dropdownItem: { paddingVertical: 5, color: '#333' },
+  sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 15, marginVertical: 10 },
   sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
   viewAll: { fontSize: 14, color: '#005b7f' },
-
-  /* Medications Section */
   medicationsContainer: { paddingHorizontal: 15, marginBottom: 20 },
-  medicationCard: {
-    flexDirection: 'row', // To place image on the left and info on the right
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    marginRight: 15,
-    elevation: 3,
-    width: 300, // Adjusted width for more content
-    padding: 10,
-  },
-  medicationImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    marginRight: 15, // Space between image and info
-  },
-  medicationInfo: {
-    flex: 1, // Take up remaining space for info
-    justifyContent: 'center',
-  },
-  medicationName: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  descriptionText: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 5,
-  },
-  stockText: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 5,
-  },
-  pharmacyText: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 5,
-  },
-  barangayText: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 5,
-  },
+  medicationCard: { flexDirection: 'row', backgroundColor: '#fff', borderRadius: 10, marginRight: 15, elevation: 3, width: 300, padding: 10 },
+  medicationImage: { width: 100, height: 100, borderRadius: 10, marginRight: 15 },
+  medicationInfo: { flex: 1, justifyContent: 'center' },
+  medicationName: { fontSize: 16, fontWeight: 'bold', color: '#333' },
+  descriptionText: { fontSize: 12, color: '#666', marginTop: 5 },
+  stockText: { fontSize: 12, color: '#666', marginTop: 5 },
+  barangayText: { fontSize: 12, color: '#666', marginTop: 5 },
 });
