@@ -6,6 +6,36 @@ const { MedicationCategory } = require('../models/medication-category');
 const { uploadOptions } = require('../utils/cloudinary');
 const router = express.Router();
 
+
+// medicine per category chart
+router.get('/medicinesPerCategory', async (req, res) => {
+    try {
+        const categories = await MedicationCategory.aggregate([
+            {
+                $lookup: {
+                    from: 'medicines',
+                    localField: '_id',
+                    foreignField: 'category',
+                    as: 'medicines'
+                }
+            },
+            {
+                $project: {
+                    name: 1,
+                    count: { $size: '$medicines' }
+                }
+            }
+        ]);
+
+        res.status(200).json({
+            success: true,
+            data: categories
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Error fetching medicines per category' });
+    }
+});
 // Create Medicine
 router.post('/create', (req, res, next) => {
     req.folder = "medicines"; // Specify folder name for Cloudinary
@@ -141,51 +171,7 @@ router.delete('/delete/:id', async (req, res) => {
     }
 });
 
+
 module.exports = router;
 
 
-
-
-// Update Medicine
-// router.put('/update/:id', uploadOptions.array('images', 10), async (req, res) => {
-//     const files = req.files;
-//     let imagePaths = [];
-
-//     if (files) {
-//         const basePath = `${req.protocol}://${req.get('host')}/public/medicine/`;
-//         imagePaths = files.map(file => `${basePath}${file.filename}`);
-//     }
-
-//     const { name, description, stock, pharmacy, category } = req.body;
-
-//     const pharmacyExists = await Pharmacy.findById(pharmacy);
-//     if (!pharmacyExists) return res.status(400).send("Invalid Pharmacy ID");
-
-//     const categoryExists = await MedicationCategory.findById(category);
-//     if (!categoryExists) return res.status(400).send("Invalid Category ID");
-
-//     // Update the medicine document
-//     const updatedMedicine = await Medicine.findByIdAndUpdate(
-//         req.params.id,
-//         {
-//             name,
-//             description,
-//             stock,
-//             pharmacy,
-//             category,
-//             images: imagePaths.length ? imagePaths : undefined,
-//         },
-//         { new: true }
-//     );
-
-//     if (!updatedMedicine) return res.status(500).json({ message: 'The medicine cannot be updated' });
-
-//     // Fetch the category name after updating the medicine
-//     const populatedCategory = await MedicationCategory.findById(updatedMedicine.category);
-
-//     // Return the updated medicine along with the category name
-//     res.send({
-//         ...updatedMedicine.toObject(),
-//         categoryName: populatedCategory.name, // Add the category name to the response
-//     });
-// });
