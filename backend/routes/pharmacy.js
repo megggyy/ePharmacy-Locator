@@ -21,4 +21,50 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/pharmaciesPerBarangay', async (req, res) => {
+    try {
+      const pharmaciesByBarangay = await Pharmacy.aggregate([
+        {
+          $lookup: {
+            from: 'users', // Collection name for the referenced User schema
+            localField: 'userInfo',
+            foreignField: '_id',
+            as: 'userInfo',
+          },
+        },
+        {
+          $unwind: '$userInfo',
+        },
+        {
+          $group: {
+            _id: '$userInfo.barangay',
+            count: { $sum: 1 },
+          },
+        },
+        {
+          $project: {
+            _id: 0,
+            barangay: '$_id',
+            count: 1,
+          },
+        },
+        {
+          $sort: { barangay: 1 },
+        },
+      ]);
+  
+      res.status(200).json({
+        success: true,
+        data: pharmaciesByBarangay,
+      });
+    } catch (error) {
+      console.error('Error fetching pharmacies per barangay:', error);
+      res.status(500).json({
+        success: false,
+        message: 'An error occurred while fetching data.',
+      });
+    }
+  });
+  
+
 module.exports = router;

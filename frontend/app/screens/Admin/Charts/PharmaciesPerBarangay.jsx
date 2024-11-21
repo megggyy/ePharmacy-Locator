@@ -1,22 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
 import { PieChart } from 'react-native-chart-kit';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function PharmacyPieChartScreen() {
   const router = useRouter();
   const screenWidth = Dimensions.get('window').width;
 
-  // Updated data representing the number of pharmacies per barangay
-  const data = [
-    { name: 'New Lower ', population: 27, color: '#0B607E', legendFontColor: '#333', legendFontSize: 15 },
-    { name: 'Lower Bicutan', population: 18, color: '#A0C4FF', legendFontColor: '#333', legendFontSize: 15 },
-    { name: 'South Signal', population: 11, color: '#4D7EA8', legendFontColor: '#333', legendFontSize: 15 },
-    { name: 'Central Signal', population: 22, color: '#357ABD', legendFontColor: '#333', legendFontSize: 15 },
-    { name: 'Hagonoy', population: 7, color: '#78C6A3', legendFontColor: '#333', legendFontSize: 15 },
-    { name: 'Others', population: 15, color: '#F5F595', legendFontColor: '#333', legendFontSize: 15 },
-  ];
+  const [chartData, setChartData] = useState([]);
+
+  useEffect(() => {
+    const fetchPharmaciesData = async () => {
+      try {
+        const response = await axios.get(`${baseURL}pharmacies/pharmaciesPerBarangay`);
+        const result = response.data;
+
+        if (result.success) {
+          const formattedData = result.data.map((item, index) => ({
+            name: item.barangay || 'Unknown',
+            population: item.count,
+            color: getRandomColor(index),
+            legendFontColor: '#333',
+            legendFontSize: 10,
+          }));
+
+          setChartData(formattedData);
+        }
+      } catch (error) {
+        console.error('Error fetching pharmacies per barangay data:', error);
+      }
+    };
+
+    fetchPharmaciesData();
+  }, []);
+
+  const getRandomColor = (index) => {
+    const colors = [
+      '#0B607E', '#A0C4FF', '#4D7EA8', '#357ABD', '#78C6A3', '#F5F595', '#F28B82', '#FFD700',
+    ];
+    return colors[index % colors.length];
+  };
 
   return (
     <View style={styles.container}>
@@ -34,9 +60,9 @@ export default function PharmacyPieChartScreen() {
 
       {/* Pie Chart */}
       <PieChart
-        data={data}
+        data={chartData}
         width={screenWidth}
-        height={300} // Increased height for a larger chart
+        height={300}
         chartConfig={chartConfig}
         accessor="population"
         backgroundColor="transparent"
@@ -44,15 +70,16 @@ export default function PharmacyPieChartScreen() {
         center={[10, 0]}
         absolute
         style={styles.chartStyle}
-        withLegend={false} // Disable the default legend on the right side
       />
-      
-      {/* Custom Legend - Add a custom legend below the chart */}
-      {/* <View style={styles.legendContainer}>
-        {data.map((item, index) => (
+
+      {/* Custom Legend
+      <View style={styles.legendContainer}>
+        {chartData.map((item, index) => (
           <View key={index} style={styles.legendItem}>
             <View style={[styles.legendColorBox, { backgroundColor: item.color }]} />
-            <Text style={styles.legendText}>{item.name}: {item.population}</Text>
+            <Text style={styles.legendText}>
+              {item.name}: {item.population}
+            </Text>
           </View>
         ))}
       </View> */}
