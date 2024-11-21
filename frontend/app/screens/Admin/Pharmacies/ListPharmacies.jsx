@@ -1,49 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import baseURL from '@/assets/common/baseurl';
 
 export default function PharmacyTableScreen() {
   const router = useRouter();
-  const pharmacies = [
-    { id: 1, name: 'Pharmacy', storeHours: '8:00am - 5:00pm', location: 'New Lower Bicutan', image: require('@/assets/images/sample.jpg') },
-    { id: 2, name: 'Pharmacy', storeHours: '8:00am - 5:00pm', location: 'Lower Bicutan', image: require('@/assets/images/sample.jpg') },
-    { id: 3, name: 'Pharmacy', storeHours: '9:00am - 10:00pm', location: 'New Lower Bicutan', image: require('@/assets/images/sample.jpg') },
-    { id: 4, name: 'Pharmacy', storeHours: '8:00am - 5:00pm', location: 'South Signal Village', image: require('@/assets/images/sample.jpg') },
-    { id: 5, name: 'Pharmacy', storeHours: '8:00am - 5:00pm', location: 'Central Signal Village', image: require('@/assets/images/sample.jpg') },
-    { id: 6, name: 'Pharmacy', storeHours: '10:00am - 7:00am', location: 'Hagonoy', image: require('@/assets/images/sample.jpg') },
-  ];
+  const [pharmacies, setPharmacies] = useState([]);
 
-  // const handleEdit = (id) => {
-  //   // Navigate to edit screen or handle edit action
-  //   console.log(`Edit Pharmacy ID: ${id}`);
-  //   router.push(`/screens/Admin/Pharmacies/EditPharmacy/${id}`);
-  // };
+  useEffect(() => {
+    const fetchPharmacies = async () => {
+      try {
+        const response = await fetch(`${baseURL}pharmacies`);
+        const data = await response.json();
+        setPharmacies(data); // Update state with fetched pharmacies
+      } catch (error) {
+        console.error('Error fetching pharmacies:', error);
+      }
+    };
 
-  // const handleDelete = (id) => {
-  //   // Handle delete action
-  //   console.log(`Delete Pharmacy ID: ${id}`);
-  //   // Implement delete functionality here
-  // };
+    fetchPharmacies(); // Fetch pharmacies when component mounts
+  }, []);
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/Admin/Pharmacies/ReadPharmacy')}>
-      <Text style={styles.cell}>{item.id}</Text>
-      <Image source={item.image} style={styles.image} />
-      <Text style={styles.cell}>{item.name}</Text>
-      <Text style={styles.cell}>{item.storeHours}</Text>
-      <Text style={styles.cell}>{item.location}</Text>
+    // <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/Admin/Pharmacies/ReadPharmacy')}>
+    //   <Text style={styles.cell}>{item._id}</Text>
+    //   <Image source={{ uri: item.image || 'https://via.placeholder.com/50' }} style={styles.image} />
+    //   <Text style={styles.cell}>{item.userInfo.name}</Text>
+    //   <Text style={styles.cell}>{`${item.storeHours?.start || 'N/A'} - ${item.storeHours?.end || 'N/A'}`}</Text>
+    //   <Text style={styles.cell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
       
-      {/* Action Buttons (Edit and Delete) */}
-      <View style={styles.actionCell}>
-        <TouchableOpacity  onPress={() => router.push('/screens/Admin/Pharmacies/EditPharmacy')} style={styles.iconButton}>
+    //   {/* Action Buttons */}
+    //   <View style={styles.actionCell}>
+    //     <TouchableOpacity onPress={() => router.push(`/screens/Admin/Pharmacies/EditPharmacy/${item._id}`)} style={styles.iconButton}>
+    //       <Ionicons name="create-outline" size={24} color="black" />
+    //     </TouchableOpacity>
+    //     <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.iconButton}>
+    //       <Ionicons name="trash-outline" size={24} color="red" />
+    //     </TouchableOpacity>
+    //   </View>
+    // </TouchableOpacity>
+    <TouchableOpacity style={styles.row}>
+    <Image source={{ uri: item.image || 'https://via.placeholder.com/50' }} style={styles.image} />
+    <Text style={styles.nameCell}>{item.userInfo.name}</Text>
+    <Text style={styles.locationCell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
+    <View style={styles.actionCell}>
+      <TouchableOpacity onPress={() => router.push(`/screens/Admin/Pharmacies/EditPharmacy/${item._id}`)} style={styles.iconButton}>
         <Ionicons name="create-outline" size={24} color="black" />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.iconButton}>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.iconButton}>
         <Ionicons name="trash-outline" size={24} color="red" />
-        </TouchableOpacity>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </View>
+  </TouchableOpacity>
   );
 
   return (
@@ -59,18 +68,25 @@ export default function PharmacyTableScreen() {
 
       {/* Pharmacy Table */}
       <Text style={styles.tableTitle}>Pharmacies</Text>
-      <View style={styles.tableHeader}>
+      {/* <View style={styles.tableHeader}>
         <Text style={styles.headerCell}>ID</Text>
         <Text style={styles.headerCell}>Image</Text>
         <Text style={styles.headerCell}>Name</Text>
         <Text style={styles.headerCell}>Store Hours</Text>
         <Text style={styles.headerCell}>Location</Text>
         <Text style={styles.headerCell}>Actions</Text>
+      </View> */}
+      <View style={styles.tableHeader}>
+        <Text style={styles.imageHeaderCell}>Image</Text>
+        <Text style={styles.nameHeaderCell}>Name</Text>
+        <Text style={styles.locationHeaderCell}>Location</Text>
+        <Text style={styles.actionsHeaderCell}>Actions</Text>
       </View>
+
       <FlatList
         data={pharmacies}
         renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={(item) => item._id}
         style={styles.table}
       />
     </View>
@@ -117,9 +133,8 @@ const styles = StyleSheet.create({
     borderBottomColor: '#CCCCCC',
   },
   headerCell: {
-    flex: 1,
-    fontWeight: 'bold',
     textAlign: 'center',
+    fontWeight: 'bold',
   },
   table: {
     paddingHorizontal: 10,
@@ -132,22 +147,49 @@ const styles = StyleSheet.create({
     borderBottomColor: '#E0E0E0',
   },
   cell: {
-    flex: 1,
     textAlign: 'center',
     color: '#333333',
   },
+  imageHeaderCell: {
+    flex: 0.8, // Matches the image content
+    textAlign: 'center',
+  },
+  nameHeaderCell: {
+    flex: 2, // Matches the name content
+    textAlign: 'center',
+  },
+  locationHeaderCell: {
+    flex: 3, // Matches the location content
+    textAlign: 'center',
+  },
+  actionsHeaderCell: {
+    flex: 1.5, // Matches the action buttons content
+    textAlign: 'center',
+  },
   image: {
+    flex: 0.8,
     width: 50,
     height: 50,
     resizeMode: 'cover',
     borderRadius: 5,
   },
+  nameCell: {
+    flex: 2,
+    textAlign: 'center',
+    color: '#333333',
+  },
+  locationCell: {
+    flex: 3,
+    textAlign: 'center',
+    color: '#333333',
+  },
   actionCell: {
+    flex: 1.5,
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    flex: 1,
+    justifyContent: 'center',
   },
   iconButton: {
-    marginHorizontal: 0,
+    marginHorizontal: 5,
   },
 });
+
