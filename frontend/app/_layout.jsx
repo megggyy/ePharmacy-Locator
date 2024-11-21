@@ -41,6 +41,7 @@ export default function RootLayout() {
             {/* USER */}
             <Stack.Screen name="screens/User/Account/CustomerSignupScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Account/VerifyOTP" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/User/Account/ResetOTP" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Account/ForgotPassword" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Account/ResetPassword" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/EditProfileScreen" options={{ headerShown: false }} />
