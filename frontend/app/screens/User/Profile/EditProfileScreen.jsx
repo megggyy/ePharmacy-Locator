@@ -178,6 +178,12 @@ export default function EditProfile() {
         />
       </View>
 
+      {/* Change Password Option */}
+      <TouchableOpacity style={styles.changePasswordContainer}  onPress={() => router.push('/screens/User/Profile/ChangePassword')}>
+        <Text style={styles.changePasswordText}>Change Password</Text>
+        <Ionicons name="chevron-forward" size={24} color="black" />
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirmButtonText}>CONFIRM</Text>
       </TouchableOpacity>
@@ -281,5 +287,19 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  changePasswordContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginHorizontal: 20, // Padding added to the "Change Password" button
+    marginBottom: 30,
+  },
+  changePasswordText: {
+    fontSize: 16,
+    color: '#333',
   },
 });
