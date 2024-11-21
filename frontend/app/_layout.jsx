@@ -110,6 +110,7 @@ export default function RootLayout() {
               <Stack.Screen name="screens/Admin/Charts/PharmaciesPerBarangay" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Charts/MostScannedMedication" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Charts/MonthlyPharmacyRegistration" options={{ headerShown: false }} />
+              <Stack.Screen name="screens/Admin/Charts/MedicinesPerCategory" options={{ headerShown: false }} />
 
 
             {/* DRAWER */}

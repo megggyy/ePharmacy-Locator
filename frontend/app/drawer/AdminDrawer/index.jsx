@@ -65,11 +65,14 @@ export default function Sidebar() {
             <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/PharmaciesPerBarangay')}>
               <Text style={styles.dropdownText}>Pharmacies Per Barangay</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/MostScannedMedication')}>
-              <Text style={styles.dropdownText}>Most Scanned Medication</Text>
+            <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/MedicinesPerCategory')}>
+              <Text style={styles.dropdownText}>Medicines Per Category</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/MonthlyPharmacyRegistration')}>
               <Text style={styles.dropdownText}>Monthly Pharmacy Registration</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/MostScannedMedication')}>
+              <Text style={styles.dropdownText}>Most Scanned Medication</Text>
             </TouchableOpacity>
           </View>
         )}
