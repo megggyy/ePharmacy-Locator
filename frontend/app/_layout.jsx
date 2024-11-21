@@ -67,6 +67,7 @@ export default function RootLayout() {
             <Stack.Screen name="screens/PharmacyOwner/Dashboard" options={{ headerShown: false }} />
 
               {/* PROFILE */}
+              <Stack.Screen name="screens/PharmacyOwner/Profile/ViewProfile" options={{ headerShown: false }} />
               <Stack.Screen name="screens/PharmacyOwner/Profile/EditPharmacyProfileScreen" options={{ headerShown: false }} />
               <Stack.Screen name="screens/PharmacyOwner/Profile/ChangePassword" options={{ headerShown: false }} />
 
@@ -103,6 +104,7 @@ export default function RootLayout() {
           <Stack.Screen name="screens/Admin/Barangay/EditBarangay" options={{ headerShown: false }} />
 
               {/* PROFILE */}
+              <Stack.Screen name="screens/Admin/Profile/ViewProfile" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Profile/EditProfileScreen" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Profile/ChangePassword" options={{ headerShown: false }} />
 

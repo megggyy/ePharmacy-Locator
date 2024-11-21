@@ -30,6 +30,10 @@ export default function Sidebar() {
 
       {/* Admin Menu Section */}
       <View style={styles.menuSection}>
+      <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Profile/ViewProfile')}>
+        <Ionicons name="eye" size={25} color="#5A5A5A" /> 
+        <Text style={styles.menuText}>View Profile</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Profile/EditProfileScreen')}>
           <FontAwesome5 name="user-edit" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Edit Profile</Text>

@@ -30,6 +30,10 @@ export default function Sidebar() {
 
       {/* Admin Menu Section */}
       <View style={styles.menuSection}>
+      <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/Profile/ViewProfile')}>
+        <Ionicons name="eye" size={25} color="#5A5A5A" /> 
+        <Text style={styles.menuText}>View Profile</Text>
+      </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/Profile/EditPharmacyProfileScreen')}>
           <FontAwesome5 name="clinic-medical" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Edit Pharmacy</Text>
