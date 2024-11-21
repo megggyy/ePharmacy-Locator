@@ -1,19 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Icon library
-import { LineChart, BarChart } from 'react-native-chart-kit'; // Chart library
+import { Ionicons } from '@expo/vector-icons';
+import { BarChart, LineChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 const screenWidth = Dimensions.get('window').width;
 
 const AdminDashboard = () => {
   const router = useRouter();
+  const [customersData, setCustomersData] = useState({ labels: [], data: [] });
+
+
+  useEffect(() => {
+    const fetchCustomersData = async () => {
+      try {
+        const response = await axios.get(`${baseURL}users/customersPerMonth`);
+        const result = response.data;
+
+        if (result.success) {
+          const labels = result.getUsersPerMonth.map((item) => item.month);
+          const data = result.getUsersPerMonth.map((item) => item.total);
+
+          setCustomersData({ labels, data });
+        }
+      } catch (error) {
+        console.error('Error fetching customers per month data:', error);
+      }
+    };
+
+    fetchCustomersData();
+  }, []);
+
   return (
     <ScrollView style={styles.safeArea}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.menuIcon} onPress={() => router.push('/drawer/AdminDrawer')}>
+        <TouchableOpacity
+          style={styles.menuIcon}
+          onPress={() => router.push('/drawer/AdminDrawer')}
+        >
           <Ionicons name="menu" size={30} color="white" />
         </TouchableOpacity>
         <View style={styles.userInfo}>
@@ -43,13 +71,13 @@ const AdminDashboard = () => {
       </View>
 
       {/* Bar Chart for Monthly New Users */}
-      <Text style={styles.chartTitle}>Monthly New Users</Text>
+      <Text style={styles.chartTitle}>Monthly New Customers</Text>
       <BarChart
         data={{
-          labels: ['Jan', 'Feb', 'Mar'],
+          labels: customersData.labels,
           datasets: [
             {
-              data: [25, 13, 21],
+              data: customersData.data,
             },
           ],
         }}

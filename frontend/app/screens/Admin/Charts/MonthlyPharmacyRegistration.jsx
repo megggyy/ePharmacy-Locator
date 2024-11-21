@@ -1,25 +1,64 @@
-import React from 'react';
-import { View, Text, Image, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Image, Dimensions, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
-export default function MonthlyRegistrationChartScreen() {
+export default function MonthlyPharmacyRegistrationScreen() {
   const router = useRouter();
   const screenWidth = Dimensions.get('window').width;
-  const chartWidth = screenWidth * 0.9; // Set the chart width to 90% of screen width
+  const chartWidth = screenWidth * 0.9;
+  const [chartData, setChartData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Example data representing monthly registrations of pharmacies
-  const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], // Months
-    datasets: [
-      {
-        data: [5, 10, 15, 20, 25, 30, 35, 40, 30, 25, 20, 15], // Number of registrations for each month
-        color: (opacity = 1) => `rgba(0, 139, 139, ${opacity})`, // Line color
-        strokeWidth: 3, // Line thickness
-      },
-    ],
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${baseURL}users/pharmaciesPerMonth`); // Replace with your backend URL
+        const { getUsersPerMonth } = response.data;
+
+        // Map the response to chart data format
+        const labels = getUsersPerMonth.map((item) => item.month);
+        const data = getUsersPerMonth.map((item) => item.total);
+
+        setChartData({
+          labels,
+          datasets: [
+            {
+              data,
+              color: (opacity = 1) => `rgba(0, 139, 139, ${opacity})`,
+              strokeWidth: 3,
+            },
+          ],
+        });
+
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching users per month:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0B607E" />
+      </View>
+    );
+  }
+
+  if (!chartData) {
+    return (
+      <View style={styles.errorContainer}>
+        <Text style={styles.errorText}>Failed to load chart data.</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -38,11 +77,11 @@ export default function MonthlyRegistrationChartScreen() {
       {/* Line Chart */}
       <View style={styles.chartContainer}>
         <LineChart
-          data={data}
-          width={chartWidth} // Set the width of the chart
-          height={300} // Height of the chart
+          data={chartData}
+          width={chartWidth}
+          height={300}
           chartConfig={chartConfig}
-          bezier // Smooth the line
+          bezier
           style={styles.chartStyle}
         />
       </View>
@@ -54,11 +93,13 @@ const chartConfig = {
   backgroundColor: '#FFFFFF',
   backgroundGradientFrom: '#FFFFFF',
   backgroundGradientTo: '#FFFFFF',
-  color: (opacity = 1) => `rgba(0, 139, 139, ${opacity})`, // Line color
-  labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`, // Label color
+  color: (opacity = 1) => `rgba(0, 139, 139, ${opacity})`,
+  labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
   strokeWidth: 2,
   barPercentage: 0.5,
+  decimalPlaces: 0,
 };
+
 
 const styles = StyleSheet.create({
   container: {
@@ -93,18 +134,34 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   chartContainer: {
-    backgroundColor: '#FFFFFF', // Background color for the chart container
-    borderRadius: 10, // Rounded corners for the chart container
-    padding: 15, // Padding around the chart
-    shadowColor: '#000', // Shadow color for elevation effect
-    shadowOffset: { width: 0, height: 2 }, // Shadow offset
-    shadowOpacity: 0.3, // Shadow opacity
-    shadowRadius: 4, // Shadow blur radius
-    elevation: 5, // Android elevation
-    alignItems: 'center', // Center align chart
-    marginHorizontal: 20, // Margin on left and right
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    padding: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
+    alignItems: 'center',
+    marginHorizontal: 20,
   },
   chartStyle: {
     marginVertical: 10,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5F5F5',
+  },
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5F5F5',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 16,
   },
 });
