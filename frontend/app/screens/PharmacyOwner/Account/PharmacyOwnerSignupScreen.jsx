@@ -81,61 +81,124 @@ const PharmacyOwnerSignupScreen = () => {
     setPermits(permits.filter((image) => image.id !== id));
   };
 
-  const register = () => {
-    let formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("contactNumber", contactNumber);
-    formData.append("password", password);
-    formData.append("street", street);
-    formData.append("barangay", barangay);
-    formData.append("city", city);
-    formData.append("latitude", latitude);
-    formData.append("longitude", longitude);
-    formData.append("isAdmin", false);
-    formData.append("role", "PharmacyOwner");
+//   const register = () => {
+//     let formData = new FormData();
+//     formData.append("name", name);
+//     formData.append("email", email);
+//     formData.append("contactNumber", contactNumber);
+//     formData.append("password", password);
+//     formData.append("street", street);
+//     formData.append("barangay", barangay);
+//     formData.append("city", city);
+//     formData.append("latitude", latitude);
+//     formData.append("longitude", longitude);
+//     formData.append("isAdmin", false);
+//     formData.append("role", "PharmacyOwner");
 
-    permits.forEach((image, index) => {
+//     permits.forEach((image, index) => {
+//       formData.append(`permits`, {
+//         uri: image.uri,
+//         type: mime.getType(image.uri),
+//         name: `image${index}.${mime.getExtension(mime.getType(image.uri))}`,
+//       });
+//     });
+
+//     console.log(formData)
+//     const config = {
+//       headers: {
+//         "Content-Type": "multipart/form-data"
+//       }
+//     };
+
+//     axios.post(`${baseURL}users/register`, formData, config)
+//       .then((res) => {
+//         console.log('Response:', res);
+//         if (res.status === 200 || res.status === 201) {
+//           Toast.show({
+//             topOffset: 60,
+//             type: "success",
+//             text1: "REGISTRATION SUCCEEDED",
+//             text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+//           });
+//           setTimeout(() => {
+//             router.push('/screens/User/Account/VerifyOTP');
+//           }, 500);
+//         }
+//       })
+//       .catch((error) => {
+//         console.log('Response data:', error.response.data);
+//         Toast.show({
+//           position: 'bottom',
+//             bottomOffset: 20,
+//             type: "error",
+//             text1: "SOMETHING WENT WRONG!",
+//             text2: "PLEASE TRY AGAIN",
+//         });
+//       });
+// };
+
+const register = () => {
+  let formData = new FormData();
+  formData.append("name", name);
+  formData.append("email", email);
+  formData.append("contactNumber", contactNumber);
+  formData.append("password", password);
+  formData.append("street", street);
+  formData.append("barangay", barangay);
+  formData.append("city", city);
+  formData.append("latitude", latitude);
+  formData.append("longitude", longitude);
+  formData.append("isAdmin", false);
+  formData.append("role", "PharmacyOwner");
+
+  permits.forEach((image, index) => {
       formData.append(`permits`, {
-        uri: image.uri,
-        type: mime.getType(image.uri),
-        name: `image${index}.${mime.getExtension(mime.getType(image.uri))}`,
+          uri: image.uri,
+          type: mime.getType(image.uri),
+          name: `image${index}.${mime.getExtension(mime.getType(image.uri))}`,
       });
-    });
+  });
 
-    console.log(formData)
-    const config = {
+  const config = {
       headers: {
-        "Content-Type": "multipart/form-data"
+          "Content-Type": "multipart/form-data"
       }
-    };
+  };
 
-    axios.post(`${baseURL}users/register`, formData, config)
+  axios.post(`${baseURL}users/register`, formData, config)
       .then((res) => {
-        console.log('Response:', res);
-        if (res.status === 200 || res.status === 201) {
-          Toast.show({
-            topOffset: 60,
-            type: "success",
-            text1: "REGISTRATION SUCCEEDED",
-            text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-          });
-          setTimeout(() => {
-            router.push('../../Auth/LoginScreen');
-          }, 500);
-        }
+          if (res.status === 200 || res.status === 201) {
+              // Assuming the response has userId
+              const { userId } = res.data; 
+
+              // Show success message
+              Toast.show({
+                  topOffset: 60,
+                  type: "success",
+                  text1: "REGISTRATION SUCCEEDED",
+                  text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+              });
+
+              // Redirect to OTP verification screen and pass userId as a parameter
+              setTimeout(() => {
+                  router.push({ 
+                      pathname: '/screens/User/Account/VerifyOTP',
+                      params: { userId }, // Pass userId to OTP screen
+                  });
+              }, 500);
+          }
       })
       .catch((error) => {
-        console.log('Response data:', error.response.data);
-        Toast.show({
-          position: 'bottom',
-            bottomOffset: 20,
-            type: "error",
-            text1: "SOMETHING WENT WRONG!",
-            text2: "PLEASE TRY AGAIN",
-        });
+          Toast.show({
+              position: 'bottom',
+              bottomOffset: 20,
+              type: "error",
+              text1: "SOMETHING WENT WRONG!",
+              text2: "PLEASE TRY AGAIN",
+          });
       });
 };
+
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
