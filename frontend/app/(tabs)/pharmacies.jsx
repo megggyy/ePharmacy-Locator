@@ -1,35 +1,113 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import TopBar from '../drawer/TopBar';
 import baseURL from '@/assets/common/baseurl'; 
-import pharmacyImage from '@/assets/images/pharmacy.png';
+import AuthGlobal from '@/context/AuthGlobal';
 
 export default function PharmacyScreen() {
+  const { state } = useContext(AuthGlobal);
   const router = useRouter();
-  const [pharmacies, setPharmacies] = useState([]); // State to store pharmacy data
+  const [pharmacies, setPharmacies] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredPharmacies, setFilteredPharmacies] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
+  const [searchBarPosition, setSearchBarPosition] = useState({ width: 0, left: 0 });
   const [isDropdownOpen1, setDropdownOpen1] = useState(false); // State for District 1 dropdown
   const [isDropdownOpen2, setDropdownOpen2] = useState(false); // State for District 2 dropdown
 
   useEffect(() => {
-    // Fetch pharmacies and limit to 5
     axios.get(`${baseURL}pharmacies`)
       .then(response => {
-        console.log('Pharmacies fetched:', response.data); // Check what is being returned
-        // Check if response data is an array and limit it to 5 items
-        setPharmacies(response.data.slice(0, 5)); // Ensure only 5 items are stored in state
+        setPharmacies(response.data);
+        setFilteredPharmacies(response.data); // Initially show all pharmacies
       })
       .catch(error => {
         console.error('Error fetching pharmacies:', error);
       });
   }, []);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    if (query === '') {
+      setFilteredPharmacies(pharmacies);
+      setSuggestions([]);
+    } else {
+      const filtered = pharmacies.filter(
+        (pharmacy) =>
+          pharmacy.userInfo.name.toLowerCase().includes(query.toLowerCase()) ||
+          pharmacy.userInfo.barangay.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredPharmacies(filtered);
+      setSuggestions(filtered.slice(0, 5));
+    }
+  };
+
+  const handleSuggestionSelect = (pharmacy) => {
+    setSearchQuery(pharmacy.userInfo.name);
+    setFilteredPharmacies([pharmacy]);
+    setSuggestions([]);
+  };
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Include TopBar component */}
-      <TopBar />
+      <View style={styles.topSection}>
+      {/* Header with Location and Icons */}
+      {state.isAuthenticated && (
+      <View style={styles.header}>
+        <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('/drawer/UserDrawer')}/>          
+      
+        <View style={styles.iconsWrapper}>
+          <Ionicons name="cloud-upload" style={styles.icon} onPress={() => router.push('/screens/User/Features/PrescriptionUpload')} />
+        </View>
+      </View>
+      )}
+      <TextInput
+        style={styles.searchBar}
+        placeholder="Search..."
+        placeholderTextColor="#AAB4C1"
+        value={searchQuery}
+        onChangeText={handleSearch}
+        onLayout={(event) => {
+          const { width, x } = event.nativeEvent.layout;
+          setSearchBarPosition({ width, left: x });
+        }}
+      />
 
+      {suggestions.length > 0 && (
+        <View
+          style={[
+            styles.suggestionsContainer,
+            {
+              width: searchBarPosition.width,
+              left: searchBarPosition.left,
+              top: state.isAuthenticated ? 90 : 55, // Adjust the top offset dynamically
+            },
+          ]}
+        >
+          {suggestions.map((suggestion, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleSuggestionSelect(suggestion)}
+              style={styles.suggestionItem}
+            >
+              <Image
+                source={{
+                  uri:
+                    suggestion.images && suggestion.images[0]
+                      ? suggestion.images[0]
+                      : 'https://res.cloudinary.com/di9gjajky/image/upload/v1732033031/pplwsy2ie8odxp8zss9f.jpg',
+                }}
+                style={styles.suggestionImage}
+              />
+              <Text style={styles.suggestionText}>{suggestion.userInfo.name}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      )}
+      </View>
       <ScrollView style={styles.container}>
         {/* Filter Buttons */}
         <View style={styles.filterContainer}>
@@ -98,15 +176,14 @@ export default function PharmacyScreen() {
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.pharmaciesContainer}>
-          {pharmacies.map((pharmacy) => (
+        {filteredPharmacies.map((pharmacy) => (
             <PharmacyCard
               key={pharmacy._id}
               name={pharmacy.userInfo.name}
-              imageUrl={pharmacy.image || 'https://res.cloudinary.com/di9gjajky/image/upload/v1732033031/pplwsy2ie8odxp8zss9f.jpg'} 
+              imageUrl={pharmacy.image || 'https://res.cloudinary.com/di9gjajky/image/upload/v1732033031/pplwsy2ie8odxp8zss9f.jpg'}
               address={`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}
               barangay={pharmacy.userInfo.barangay}
-              // storeHours={pharmacy.storeHours || 'Not available'}
-              onPress={() => router.push('/screens/User/Features/PharmacyDetails')}
+              onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)}
             />
           ))}
         </ScrollView>
@@ -265,4 +342,24 @@ const styles = StyleSheet.create({
     color: '#666',
     marginTop: 5,
   },
+  searchBar: { marginVertical: 15, padding: 10, backgroundColor: '#f0f0f0', borderRadius: 8 },
+  suggestionsContainer: {
+    position: 'absolute',
+    left: 0, // Align to the left of the parent
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    elevation: 5,
+    zIndex: 1,
+    overflow: 'hidden', // Prevent content overflow
+  },  
+  suggestionItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+  suggestionImage: { width: 40, height: 40, borderRadius: 5, marginRight: 10 },
+  suggestionText: { fontSize: 14, color: '#333' },
 });

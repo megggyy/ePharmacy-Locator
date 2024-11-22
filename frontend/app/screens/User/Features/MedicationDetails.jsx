@@ -59,12 +59,10 @@ const MedicationDetails = () => {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>{pharmacy.name}</Text>
+        <Text style={styles.headerText}>{medication.name}</Text>
       </View>
 
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollViewContent}>
-        {/* Medication Name */}
-        <Text style={styles.medicationName}>{medication.name}</Text>
 
         {/* Gallery Section */}
         <View style={styles.galleryContainer}>
@@ -126,7 +124,7 @@ const MedicationDetails = () => {
             >
               <Marker
                 coordinate={pharmacy.location}
-                title={pharmacy.name}
+                title={pharmacy.userInfo.name}
                 description={pharmacy.address}
               />
             </MapView>

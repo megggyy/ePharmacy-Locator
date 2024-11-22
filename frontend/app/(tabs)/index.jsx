@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, SafeAreaView } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import axios from 'axios';
 import TopBar from '../drawer/TopBar';
 import baseURL from '@/assets/common/baseurl';
@@ -12,7 +12,8 @@ const HomeScreen = () => {
   const [medications, setMedications] = useState([]);
 
   // Fetch data on component mount
-  useEffect(() => {
+  useFocusEffect(
+    React.useCallback(() => {
     // Fetch categories
     axios.get(`${baseURL}medication-category`)
       .then(response => setCategories(response.data))
@@ -27,7 +28,8 @@ const HomeScreen = () => {
     axios.get(`${baseURL}medicine`)
       .then(response => setMedications(response.data))
       .catch(error => console.error('Error fetching medications:', error));
-  }, []);
+    }, []) // Empty dependency array to run only once when the component mounts
+  );
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -35,19 +37,19 @@ const HomeScreen = () => {
       <TopBar />
 
       <ScrollView style={styles.container}>
-        {/* Categories Section */}
-        <Text style={styles.sectionTitle}>Categories</Text>
-        <View style={styles.categories}>
+           {/* Categories Section */}
+           <Text style={styles.sectionTitle}>Categories</Text>
+        <View style={[styles.categories, { justifyContent: categories.length === 2 ? 'center' : 'space-between' }]}>
           {categories.map((category) => (
             <TouchableOpacity
               key={category._id}
               style={styles.categoryCard}
               onPress={() => router.push('../screens/User/Features/CategoryFilterMedications')}
             >
-             <Image
-              style={styles.categoryImage}
-              source={{ uri: category.images && category.images.length > 0 ? category.images[0] : 'https://via.placeholder.com/100' }} // Fallback image if no images available
-            />
+              <Image
+                style={styles.categoryImage}
+                source={{ uri: category.images && category.images.length > 0 ? category.images[0] : 'https://via.placeholder.com/100' }} // Fallback image if no images available
+              />
               <Text style={styles.categoryText}>{category.name}</Text>
             </TouchableOpacity>
           ))}
@@ -60,7 +62,7 @@ const HomeScreen = () => {
             <TouchableOpacity
               key={pharmacy._id}
               style={styles.pharmacyCard}
-              onPress={() => router.push('/screens/User/Features/PharmacyDetails')}
+              onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)}
             >
 
               {/* wala pa tayong image so eto muna */}
@@ -116,10 +118,28 @@ const styles = StyleSheet.create({
   container: { flex: 1, paddingHorizontal: 16, backgroundColor: '#fff' },
   sectionTitle: { fontSize: 18, fontWeight: 'bold', marginTop: 15, marginBottom: 5 },
 
-  categories: { flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' },
-  categoryCard: { width: '48%', marginVertical: 10 },
-  categoryImage: { width: '100%', height: 100, borderRadius: 10 },
-  categoryText: { textAlign: 'center', marginTop: 5 },
+  categories: { 
+    flexDirection: 'row', 
+    flexWrap: 'wrap', 
+    justifyContent: 'space-between', 
+    marginTop: 10
+  },
+  categoryCard: { 
+    width: '22%', // 4 items per row
+    marginVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  categoryImage: { 
+    width: 80, 
+    height: 80, 
+    borderRadius: 8 
+  },
+  categoryText: { 
+    marginTop: 5, 
+    fontSize: 12, 
+    textAlign: 'center' 
+  },
 
   pharmacyCard: {
     flexDirection: 'row',

@@ -1,56 +1,75 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ScrollView, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps'; 
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';  // Assuming baseURL is defined elsewhere
 
 const PharmacyDetails = () => {
   const router = useRouter();
-  const pharmacy = {
-    name: "J's Pharmacy & Mini Mart",
-    address: '308 M. L. Quezon Ave, Manila, Metro Manila',
-    phone: '+63 917 123 4567',
-    stock: '100 Stocks',
-    image: require('@/assets/images/sample.jpg'), // Replace with actual pharmacy image
-    coordinates: {
-      latitude: 14.5534, // Example latitude for the map
-      longitude: 121.0507, // Example longitude for the map
-    },
-  };
+  const { id } = useLocalSearchParams();
+  const [pharmacy, setPharmacy] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPharmacyDetails = async () => {
+      try {
+        const response = await axios.get(`${baseURL}pharmacies/${id}`);
+        setPharmacy(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching pharmacy details:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchPharmacyDetails();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0B607E" />
+      </View>
+    );
+  }
+
+  if (!pharmacy) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Text style={styles.errorText}>Failed to load pharmacy details.</Text>
+      </View>
+    );
+  }
 
   return (
-    <View style={styles.container}>
-          <View style={styles.header}>
-        <TouchableOpacity  onPress={() => router.back()} style={styles.backButton}>
+    <View style={styles.safeArea}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-
-        {/* Header */}
-        <Text style={styles.headerText}>{pharmacy.name}</Text>
+        <Text style={styles.headerText}>{pharmacy.userInfo.name}</Text>
       </View>
       <ScrollView>
         {/* Pharmacy Image */}
         <View style={styles.imageContainer}>
-          <Image source={pharmacy.image} style={styles.pharmacyImage} />
+          <Image source={{ uri: pharmacy.image || 'https://via.placeholder.com/200' }} style={styles.pharmacyImage} />
         </View>
 
         {/* Pharmacy Information */}
         <View style={styles.infoContainer}>
-          <Text style={styles.pharmacyName}>{pharmacy.name}</Text>
-
+          <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
           <View style={styles.infoRow}>
             <Ionicons name="location-outline" size={18} color="#555" />
-            <Text style={styles.infoText}>{pharmacy.address}</Text>
+            <Text style={styles.infoText}>
+              {`${pharmacy.userInfo.street || ''}, ${pharmacy.userInfo.barangay || ''}, ${pharmacy.userInfo.city || ''}`.replace(/(, )+/g, ', ').trim()}
+            </Text>
           </View>
 
           <View style={styles.infoRow}>
             <Ionicons name="call-outline" size={18} color="#555" />
-            <Text style={styles.infoText}>{pharmacy.phone}</Text>
-          </View>
-
-          <View style={styles.infoRow}>
-            <Ionicons name="cube-outline" size={18} color="#555" />
-            <Text style={styles.stockText}>{pharmacy.stock}</Text>
+            <Text style={styles.infoText}>{pharmacy.userInfo.contactNumber}</Text>
           </View>
 
           {/* Map View */}
@@ -58,16 +77,15 @@ const PharmacyDetails = () => {
             <MapView
               style={styles.map}
               initialRegion={{
-                latitude: pharmacy.coordinates.latitude,
-                longitude: pharmacy.coordinates.longitude,
+                latitude: pharmacy.location.latitude,
+                longitude: pharmacy.location.longitude,
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01,
               }}
             >
               <Marker
-                coordinate={pharmacy.coordinates}
-                title={pharmacy.name}
-                description={pharmacy.address}
+                coordinate={pharmacy.location}
+                title={pharmacy.userInfo.name}
               />
             </MapView>
           </View>
@@ -78,39 +96,36 @@ const PharmacyDetails = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F4F4F4',
-      },
-    header: {
-        backgroundColor: '#0B607E', // Blue header background, full width
-        paddingTop: 80,
-        paddingBottom: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      backButton: {
-        position: 'absolute',
-        top: 50,
-        left: 20,
-      },
-      headerText: {
-        color: 'white',
-        fontSize: 20,
-        fontWeight: 'bold',
-      },
-  safeArea: { flex: 1, backgroundColor: '#fff' },
-  scrollView: { flex: 1, backgroundColor: '#fff' },
-
-  /* Image */
-  imageContainer: { alignItems: 'center', marginTop: 20 },
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#F4F4F4',
+  },
+  header: {
+    backgroundColor: '#0B607E',
+    paddingTop: 80,
+    paddingBottom: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 50,
+    left: 20,
+  },
+  headerText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  imageContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
   pharmacyImage: {
     width: 200,
     height: 200,
-    borderRadius: 100, // Circular image
+    borderRadius: 100,
   },
-
-  /* Information */
   infoContainer: {
     paddingHorizontal: 16,
     marginTop: 20,
@@ -134,18 +149,26 @@ const styles = StyleSheet.create({
   stockText: {
     marginLeft: 8,
     fontSize: 16,
-    color: 'green', // Green color for stock
+    color: 'green',
   },
-
-  /* Map */
   mapContainer: {
     marginTop: 20,
     height: 200,
     borderRadius: 10,
-    overflow: 'hidden', // Ensures the map is rounded
+    overflow: 'hidden',
   },
   map: {
     flex: 1,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F4F4F4',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 16,
   },
 });
 

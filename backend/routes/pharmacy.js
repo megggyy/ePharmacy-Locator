@@ -21,6 +21,24 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const pharmacyId = req.params.id;
+    const pharmacy = await Pharmacy.findById(pharmacyId).populate({
+      path: 'userInfo',
+      select: 'name contactNumber street barangay city', // Populate specific fields
+    });
+
+    if (!pharmacy) {
+      return res.status(404).json({ success: false, message: 'Pharmacy not found' });
+    }
+
+    res.status(200).json(pharmacy);
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 router.get('/pharmaciesPerBarangay', async (req, res) => {
     try {
       const pharmaciesByBarangay = await Pharmacy.aggregate([
