@@ -10,7 +10,7 @@ const barangaySchema = mongoose.Schema({
         //required: true, // Ensures a description is always provided
     },
     images: [{
-        //type: String, // Stores URLs or paths to barangay images
+        type: String, // Stores URLs or paths to barangay images
     }],
 });
 

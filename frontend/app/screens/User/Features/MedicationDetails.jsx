@@ -1,38 +1,54 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ScrollView, FlatList } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, FlatList, Linking, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import MapView, { Marker } from 'react-native-maps'; 
-import { useRouter } from 'expo-router';
+import MapView, { Marker } from 'react-native-maps';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 const MedicationDetails = () => {
   const router = useRouter();
-
+  const { id } = useLocalSearchParams();
+  const [medication, setMedication] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [loading, setLoading] = useState(true); // Add loading state
 
-  const pharmacy = {
-    name: "Pullentes Pharmacy",
-    address: 'G365+VM5, Castañas St, Taguig, Metro Manila',
-    phone: '+63 917 123 4567',
-    stock: '100 Stocks',
-    coordinates: {
-      latitude: 14.5534, 
-      longitude: 121.0507, 
-    },
-  };
+  useEffect(() => {
+    if (id) {
+      axios
+        .get(`${baseURL}medicine/${id}`)
+        .then((response) => {
+          setMedication(response.data);
+          setLoading(false); // Set loading to false once the data is fetched
+        })
+        .catch((error) => {
+          console.error('Error fetching medication details:', error);
+          setLoading(false); // Set loading to false in case of an error
+        });
+    }
+  }, [id]);
 
-  const medication = {
-    name: "Paracetamol 500g",
-    description: "Paracetamol is a common pain reliever and fever reducer. It is used to treat mild to moderate pain, such as headaches, menstrual periods, toothaches, backaches, osteoarthritis, or cold/flu pains, and to reduce fever.",
-    images: [
-      require('@/assets/images/sample.jpg'), // Replace with actual images
-      require('@/assets/images/icon.png'), 
-      require('@/assets/images/react-logo.png'), 
-    ],
-  };
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0B607E" />
+      </View>
+    );
+  }
+
+  if (!medication) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Text style={styles.errorText}>Failed to load medication details.</Text>
+      </View>
+    );
+  }
+
+  const pharmacy = medication.pharmacy;
 
   const renderImageItem = ({ item, index }) => (
     <TouchableOpacity onPress={() => setActiveImageIndex(index)}>
-      <Image source={item} style={styles.thumbnailImage} />
+      <Image source={{ uri: item }} style={styles.thumbnailImage} />
     </TouchableOpacity>
   );
 
@@ -53,13 +69,13 @@ const MedicationDetails = () => {
         {/* Gallery Section */}
         <View style={styles.galleryContainer}>
           {/* Active Large Image */}
-          <Image 
-            source={medication.images[activeImageIndex]} 
-            style={styles.activeImage} 
+          <Image
+            source={{ uri: medication.images[activeImageIndex] || 'https://via.placeholder.com/300' }}
+            style={styles.activeImage}
           />
 
-          {/* Image Thumbnails for Gallery */}
-          <FlatList 
+          {/* Image Thumbnails */}
+          <FlatList
             data={medication.images}
             renderItem={renderImageItem}
             horizontal
@@ -70,25 +86,25 @@ const MedicationDetails = () => {
 
         {/* Pharmacy Information */}
         <View style={styles.infoContainer}>
-          <Text style={styles.pharmacyName}>{pharmacy.name}</Text>
+          <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
 
           <View style={styles.infoRow}>
             <Ionicons name="location-outline" size={18} color="#555" />
-            <Text style={styles.infoText}>{pharmacy.address}</Text>
+            <Text style={styles.infoText}>
+              {`${pharmacy.userInfo.street || ''}, ${pharmacy.userInfo.barangay || ''}, ${pharmacy.userInfo.city || ''}`.replace(/(, )+/g, ', ').trim()}
+            </Text>
           </View>
 
           <View style={styles.infoRow}>
             <Ionicons name="call-outline" size={18} color="#555" />
-            <Text
-              style={styles.infoText}
-              onPress={() => Linking.openURL(`tel:${pharmacy.phone}`)}>
-              {pharmacy.phone}
+            <Text style={styles.infoText} onPress={() => Linking.openURL(`tel:${pharmacy.phone}`)}>
+              {pharmacy.userInfo.contactNumber}
             </Text>
           </View>
 
           <View style={styles.infoRow}>
             <Ionicons name="cube-outline" size={18} color="#555" />
-            <Text style={styles.stockText}>{pharmacy.stock}</Text>
+            <Text style={styles.stockText}>{medication.stock} in stock</Text>
           </View>
 
           {/* Medication Description */}
@@ -102,14 +118,14 @@ const MedicationDetails = () => {
             <MapView
               style={styles.map}
               initialRegion={{
-                latitude: pharmacy.coordinates.latitude,
-                longitude: pharmacy.coordinates.longitude,
+                latitude: pharmacy.location.latitude || 0,
+                longitude: pharmacy.location.longitude || 0,
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01,
               }}
             >
               <Marker
-                coordinate={pharmacy.coordinates}
+                coordinate={pharmacy.location}
                 title={pharmacy.name}
                 description={pharmacy.address}
               />
@@ -125,9 +141,9 @@ const MedicationDetails = () => {
 };
 
 const styles = StyleSheet.create({
-  safeArea: { 
-    flex: 1, 
-    backgroundColor: '#F4F4F4' 
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#F4F4F4',
   },
   header: {
     backgroundColor: '#0B607E',
@@ -150,7 +166,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   scrollViewContent: {
-    paddingBottom: 100, // Added padding to ensure the map and content are not cut off
+    paddingBottom: 100,
   },
   medicationName: {
     fontSize: 20,
@@ -223,13 +239,23 @@ const styles = StyleSheet.create({
     marginTop: 20,
     height: 200,
     borderRadius: 10,
-    overflow: 'hidden', 
+    overflow: 'hidden',
   },
   map: {
     flex: 1,
   },
   bottomSpace: {
-    height: 50, // Extra space to avoid cutting off content at the bottom
+    height: 50,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F4F4F4',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 16,
   },
 });
 

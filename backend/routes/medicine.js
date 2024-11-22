@@ -78,20 +78,22 @@ router.get('/', async (req, res) => {
     try {
         const medicines = await Medicine.find()
             .populate({
-                path: 'pharmacy',
+                path: 'pharmacy',  // Populating the pharmacy reference
+                select: 'location',  // Selecting the fields to return from the Pharmacy collection
                 populate: {
                     path: 'userInfo',
-                    select: 'name'
-                }
+                    select: 'name street barangay city',  // Populate address fields
+                },
             })
-            .populate('category');
+            .populate('category');  // Populate medication category
 
-        if (!medicines) {
+        if (!medicines || medicines.length === 0) {
             return res.status(500).json({ success: false, message: 'No medicines found' });
         }
 
-        res.status(200).json(medicines);
+        res.status(200).json(medicines);  // Return all medicines with populated pharmacy and category
     } catch (error) {
+        console.error('Error fetching medicines:', error);
         res.status(500).json({ success: false, message: error.message });
     }
 });
@@ -100,14 +102,15 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const medicine = await Medicine.findById(req.params.id)
-            .populate({
-                path: 'pharmacy',
-                populate: {
-                    path: 'userInfo',
-                    select: 'name'
-                }
-            })
-            .populate('category');
+        .populate({
+            path: 'pharmacy',  // Populating the pharmacy reference
+            select: 'location',  // Selecting the fields to return from the Pharmacy collection
+            populate: {
+                path: 'userInfo',
+                select: 'name street barangay city contactNumber',  // Populate address fields
+            },
+        })
+        .populate('category'); 
 
         if (!medicine) return res.status(500).json({ message: 'The medicine with the given ID was not found' });
 
