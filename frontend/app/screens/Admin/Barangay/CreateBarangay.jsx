@@ -11,46 +11,18 @@ export default function CreateBarangay() {
 
   // State for barangay details
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [imageUris, setImageUris] = useState([]); // To store selected images
-
-  // Function to pick images
-  const pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
-
-    if (!result.canceled) {
-      setImageUris([...imageUris, result.assets[0].uri]); // Add selected image URI
-    }
-  };
 
   const handleCreate = async () => {
     const formData = new FormData();
-    
-    // Append image files
-    imageUris.forEach((uri, index) => {
-      const filename = uri.split('/').pop();
-      const type = `image/${filename.split('.').pop()}`;
-      formData.append('images', {
-        uri,
-        name: filename,
-        type,
-      });
-    });
 
     // Append other barangay data
     formData.append('name', name);
-    formData.append('description', description);
 
     try {
       // Make POST request to create barangay
       const config = {
         headers: {
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "application/json"
         }
       };
       const response = await axios.post(`${baseURL}barangays/create`, formData, config);     
@@ -74,21 +46,6 @@ export default function CreateBarangay() {
         <Text style={styles.headerText}>Create Barangay</Text>
       </View>
 
-     
-      <View style={styles.imageSection}>
-        {imageUris.length > 0 ? (
-          imageUris.map((uri, index) => (
-            <Image key={index} source={{ uri }} style={styles.image} />
-          ))
-        ) : (
-          <Image source={require('@/assets/images/sample.jpg')} style={styles.image} />
-        )}
-        <TouchableOpacity onPress={pickImage} style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Images</Text>
-        </TouchableOpacity>
-      </View>
-
-   
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Barangay Name</Text>
         <TextInput
@@ -96,14 +53,6 @@ export default function CreateBarangay() {
           value={name}
           onChangeText={setName}
           placeholder="Enter barangay name"
-        />
-
-        <Text style={styles.label}>Description</Text>
-        <TextInput
-          style={styles.input}
-          value={description}
-          onChangeText={setDescription}
-          placeholder="Enter description"
         />
       </View>
 
@@ -137,31 +86,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  imageSection: {
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  image: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    marginBottom: 10,
-  },
-  selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  selectImageText: {
-    color: '#555',
-  },
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
     marginHorizontal: 20,
     marginBottom: 20,
+    marginTop: 20
   },
   label: {
     color: '#666',

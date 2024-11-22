@@ -43,18 +43,8 @@ export default function ReadBarangayScreen() {
 
       {/* Barangay Details */}
       <View style={styles.detailsContainer}>
-        <FlatList
-          data={barangayData.images}
-          horizontal
-          renderItem={({ item: image }) => (
-            <Image source={{ uri: image }} style={styles.image} />
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
         <Text style={styles.label}>Name:</Text>
         <Text style={styles.value}>{barangayData.name}</Text>
-        <Text style={styles.label}>Description:</Text>
-        <Text style={styles.value}>{barangayData.description}</Text>
       </View>
     </View>
   );

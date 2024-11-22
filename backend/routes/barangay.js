@@ -6,20 +6,12 @@ const router = express.Router();
 // CREATE a new Barangay with dynamic folder assignment
 router.post(
     "/create",
-    (req, res, next) => {
-        req.folder = "barangay"; // Set the folder name for Cloudinary uploads
-        next();
-    },
-    uploadOptions.array("images", 10),
+    
     async (req, res) => {
         try {
-            const files = req.files;
-            const imagePaths = files.map((file) => file.path); // Use Cloudinary URLs
-
+        
             const barangay = new Barangay({
                 name: req.body.name,
-                description: req.body.description,
-                images: imagePaths,
             });
 
             const savedBarangay = await barangay.save();
@@ -55,22 +47,12 @@ router.get("/:id", async (req, res) => {
 // UPDATE a Barangay with dynamic folder assignment
 router.put(
     "/update/:id",
-    (req, res, next) => {
-        req.folder = "barangay"; // Set the folder name for Cloudinary uploads
-        next();
-    },
-    uploadOptions.array("images", 10),
     async (req, res) => {
         try {
-            const files = req.files;
-            const imagePaths = files.map((file) => file.path); // Use Cloudinary URLs
-
             const updatedBarangay = await Barangay.findByIdAndUpdate(
                 req.params.id,
                 {
                     name: req.body.name,
-                    description: req.body.description,
-                    images: imagePaths.length ? imagePaths : undefined,
                 },
                 { new: true }
             );

@@ -41,21 +41,8 @@ export default function ListBarangayScreen() {
       style={styles.row}
       onPress={() => router.push(`/screens/Admin/Barangay/ReadBarangay?id=${item._id}`)}
     >
-      {/* Barangay Images */}
-      <View style={styles.imageContainer}>
-        <FlatList
-          data={item.images}
-          horizontal
-          renderItem={({ item: image }) => (
-            <Image source={{ uri: image }} style={styles.image} />
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
-      </View>
-
       {/* Name and Description */}
       <Text style={styles.cell}>{item.name}</Text>
-      <Text style={styles.cell}>{item.description}</Text>
 
       {/* Actions */}
       <View style={styles.actionCell}>
@@ -97,9 +84,7 @@ export default function ListBarangayScreen() {
       {/* Table Header */}
       <Text style={styles.tableTitle}>Barangays</Text>
       <View style={styles.tableHeader}>
-        <Text style={styles.headerCell}>Image</Text>
         <Text style={styles.headerCell}>Name</Text>
-        <Text style={styles.headerCell}>Description</Text>
         <Text style={styles.headerCell}>Actions</Text>
       </View>
 

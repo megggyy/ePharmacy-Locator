@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert, FlatList } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useLocalSearchParams } from 'expo-router';
-import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
 
@@ -10,8 +9,6 @@ export default function EditBarangay() {
   const router = useRouter();
   const { id } = useLocalSearchParams();
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [images, setImages] = useState([]);
 
   useEffect(() => {
     const fetchBarangay = async () => {
@@ -19,8 +16,6 @@ export default function EditBarangay() {
         const response = await axios.get(`${baseURL}barangays/${id}`);
         const barangay = response.data;
         setName(barangay.name);
-        setDescription(barangay.description);
-        setImages(barangay.images || []);
       } catch (error) {
         console.error('Error fetching barangay:', error);
         Alert.alert('Error', 'Failed to load barangay details');
@@ -29,43 +24,14 @@ export default function EditBarangay() {
     if (id) fetchBarangay();
   }, [id]);
 
-  const handleSelectImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
-
-    if (!result.canceled) {
-      setImages([...images, result.assets[0].uri]);
-    }
-  };
-
-  const handleDeleteImage = (uri) => {
-    setImages(images.filter(image => image !== uri));
-  };
-
   const handleConfirm = async () => {
     const formData = new FormData();
-
-    images.forEach((uri) => {
-      const filename = uri.split('/').pop();
-      const type = `image/${filename.split('.').pop()}`;
-      formData.append('images', {
-        uri,
-        name: filename,
-        type,
-      });
-    });
-
     formData.append('name', name);
-    formData.append('description', description);
 
     try {
       const config = {
         headers: {
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "application/json"
         }
       };
       await axios.put(`${baseURL}barangays/update/${id}`, formData, config);
@@ -86,28 +52,6 @@ export default function EditBarangay() {
         <Text style={styles.headerText}>Edit Barangay</Text>
       </View>
 
-      <View style={styles.imageSection}>
-        <FlatList
-          data={images}
-          horizontal
-          renderItem={({ item }) => (
-            <View style={styles.imageContainer}>
-              <Image source={{ uri: item }} style={styles.barangayImage} />
-              <TouchableOpacity
-                style={styles.deleteButton}
-                onPress={() => handleDeleteImage(item)}
-              >
-                <Ionicons name="close-circle" size={24} color="red" />
-              </TouchableOpacity>
-            </View>
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
-        <TouchableOpacity onPress={handleSelectImage} style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Image</Text>
-        </TouchableOpacity>
-      </View>
-
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Barangay Name</Text>
         <TextInput
@@ -115,14 +59,6 @@ export default function EditBarangay() {
           value={name}
           onChangeText={setName}
           placeholder="Enter barangay name"
-        />
-        <Text style={styles.label}>Description</Text>
-        <TextInput
-          style={styles.input}
-          value={description}
-          onChangeText={setDescription}
-          placeholder="Enter barangay description"
-          multiline
         />
       </View>
 
@@ -155,40 +91,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  imageSection: {
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  imageContainer: {
-    position: 'relative',
-    marginHorizontal: 5,
-  },
-  barangayImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-  },
-  deleteButton: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-  },
-  selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    marginTop: 10,
-  },
-  selectImageText: {
-    color: '#555',
-  },
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
     marginHorizontal: 20,
     marginBottom: 20,
+    marginTop: 20
   },
   label: {
     color: '#666',
