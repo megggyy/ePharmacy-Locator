@@ -104,6 +104,17 @@ export default function RootLayout() {
           <Stack.Screen name="screens/Admin/Barangay/ReadBarangay" options={{ headerShown: false }} />
           <Stack.Screen name="screens/Admin/Barangay/EditBarangay" options={{ headerShown: false }} />
 
+          {/* CATEGORY CRUD */}
+          <Stack.Screen name="screens/Admin/MedicationCategory/ListCategories" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/MedicationCategory/CreateCategory" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/MedicationCategory/ReadCategory" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/MedicationCategory/EditCategory" options={{ headerShown: false }} />
+          
+          {/* MEDICINE CRUD */}
+          <Stack.Screen name="screens/Admin/Medications/ListMedications" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/Medications/CreateMedication" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/Medications/ReadMedication" options={{ headerShown: false }} />
+          <Stack.Screen name="screens/Admin/Medications/EditMedication" options={{ headerShown: false }} />
               {/* PROFILE */}
               <Stack.Screen name="screens/Admin/Profile/ViewProfile" options={{ headerShown: false }} />
               <Stack.Screen name="screens/Admin/Profile/EditProfileScreen" options={{ headerShown: false }} />
