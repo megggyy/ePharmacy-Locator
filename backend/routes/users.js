@@ -12,9 +12,6 @@ const nodemailer = require('nodemailer');
 const { uploadOptions } = require('../utils/cloudinary');
  // Import Cloudinary upload options
 
-const uploadPermits = uploadOptions.array('permits', 10);
-const uploadImages = uploadOptions.array('images', 10);
-
 const FILE_TYPE_MAP = {
     'image/png': 'png',
     'image/jpeg': 'jpeg',
@@ -526,34 +523,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// Edit Profile Route
-router.put('/:id', async (req, res) => {
-    const userId = req.params.id;
-    const { name, contactNumber, street, barangay, city } = req.body;
 
-    try {
-        // Find the user by ID
-        const user = await User.findById(userId);
-
-        if (!user) {
-            return res.status(404).send('User not found');
-        }
-
-        // Update the user details
-        user.name = name || user.name;
-        user.contactNumber = contactNumber || user.contactNumber;
-        user.street = street || user.street;
-        user.barangay = barangay || user.barangay;
-        user.city = city || user.city;
-
-        await user.save();
-
-        res.status(200).json({ message: 'Profile updated successfully', user });
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Error updating profile');
-    }
-});
 
 // Change Password
 router.put('/change-password', async (req, res) => {
@@ -747,5 +717,32 @@ router.put('/resetPassword', async (req, res) => {
     }
 });
 
+// Edit Profile Route
+router.put('/:id', async (req, res) => {
+    const userId = req.params.id;
+    const { name, contactNumber, street, barangay, city } = req.body;
 
+    try {
+        // Find the user by ID
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).send('User not found');
+        }
+
+        // Update the user details
+        user.name = name || user.name;
+        user.contactNumber = contactNumber || user.contactNumber;
+        user.street = street || user.street;
+        user.barangay = barangay || user.barangay;
+        user.city = city || user.city;
+
+        await user.save();
+
+        res.status(200).json({ message: 'Profile updated successfully', user });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error updating profile');
+    }
+});
 module.exports = router;

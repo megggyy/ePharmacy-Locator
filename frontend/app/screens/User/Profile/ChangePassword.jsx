@@ -56,7 +56,7 @@ const ChangePasswordScreen = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${baseURL}users/reset-password`, {
+      const response = await fetch(`${baseURL}users/changePassword`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -69,17 +69,41 @@ const ChangePasswordScreen = () => {
       if (response.status === 200) {
         alert('Password successfully updated. Please login.');
         try {
+          router.push('/screens/Auth/LoginScreen');
           await AsyncStorage.removeItem('jwt');
           dispatch({ type: 'LOGOUT_USER' });
-          router.push('/screens/Auth/LoginScreen');
+          
         } catch (error) {
           console.error('Error during logout:', error);
         }
       } else {
         setError(data.message);
       }
-    } catch (err) {
-      console.error('Error updating password:', err);
+    } catch (error) {
+      if (error.response) {
+        // Handle specific error messages
+        const { message } = error.response.data;
+  
+        if (message === 'NOT_MATCH') {
+          Toast.show({
+            type: "error",
+            text1: "OLD PASSWORD IS INCORRECT!",
+          });
+        } else {
+          // Handle generic errors
+          Toast.show({
+            type: "error",
+            text1: "UPDATING PASSWORD FAILED!",
+            text2: "PLEASE TRY AGAIN LATER",
+          });
+        }
+      } else {
+        Toast.show({
+          type: "error",
+          text1: "NETWORK ERROR!",
+          text2: "PLEASE CHECK YOU INTERNAT CONNECTION AND TRY AGAIN",
+        });
+      }
     } finally {
       setLoading(false);
     }

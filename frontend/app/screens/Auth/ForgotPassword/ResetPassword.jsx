@@ -31,7 +31,9 @@ const ResetPassword = () => {
     let errorMessages = {};
     if (!newPassword) errorMessages.newPassword = "PASSWORD IS REQUIRED";
     if (!confirmPassword) errorMessages.confirmPassword = "PASSWORD IS REQUIRED";
-  
+    if (!confirmPassword < 8 & !confirmPassword > 0) errorMessages.confirmPassword = "PASSWORD MUST BE ATLEAST 8 CHARACTERS";
+    if (!newPassword < 8 & !newPassword > 0) errorMessages.confirmPassword = "PASSWORD MUUST BE ATLEAST 8 CHARACTERS";
+
     return errorMessages;
   };
 
@@ -53,7 +55,7 @@ const ResetPassword = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${baseURL}users/reset-password`, {
+      const response = await fetch(`${baseURL}users/resetPassword`, {
         method: 'PUT', 
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +65,7 @@ const ResetPassword = () => {
 
       const data = await response.json();
 
-      if (response.status === 200) {
+      if (response.status === 200 || response.status === 201) {
         Toast.show({
           topOffset: 60,
           type: 'SUCCESS',
