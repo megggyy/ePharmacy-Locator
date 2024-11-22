@@ -1,10 +1,25 @@
-import React from 'react'; 
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // For icons
-import { useRouter } from 'expo-router';
+import React, { useState, useEffect } from 'react'; 
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'; 
+import { Ionicons } from '@expo/vector-icons'; // For icons 
+import { useRouter } from 'expo-router'; 
+import axios from 'axios'; 
+import baseURL from '@/assets/common/baseurl'; // Ensure this points to the right URL
 
-const ViewAllMedications = () => {
-  const router = useRouter();
+const ViewAllMedications = () => { 
+  const [medications, setMedications] = useState([]); // To store fetched medications 
+  const router = useRouter(); 
+
+  useEffect(() => {
+    // Fetch the medications from your API
+    axios
+      .get(`${baseURL}medicine`) // Ensure this endpoint fetches the medications correctly
+      .then((response) => {
+        setMedications(response.data); // Set the fetched data to state
+      })
+      .catch((error) => {
+        console.error('Error fetching medications:', error);
+      });
+  }, []);
 
   return (
     <View style={styles.topContainer}>
@@ -16,18 +31,22 @@ const ViewAllMedications = () => {
       </View>
       <ScrollView style={styles.container}>
         <View style={styles.medicationsGrid}>
-          {[1, 2, 3, 4, 5, 6].map((medication, index) => (
-            <TouchableOpacity key={index} style={styles.medicationCard} onPress={() => router.push('/screens/User/Features/MedicationDetails')}>
+          {medications.map((medication, index) => (
+            <TouchableOpacity 
+              key={index} 
+              style={styles.medicationCard} 
+              onPress={() => router.push(`/screens/User/Features/MedicationDetails?id=${medication._id}`)}
+            >
               <Image
                 style={styles.medicationImage}
-                source={require('@/assets/images/sample.jpg')} // Replace with your medication image path
+                source={{ uri: medication.images && medication.images.length > 0 ? medication.images[0] : 'https://via.placeholder.com/150' }} // Use the first image from the array or a placeholder
               />
               <View style={styles.medicationInfo}>
-                <Text style={styles.medicationName}>Medication Name {index + 1}</Text>
-                <Text style={styles.medicationDescription}>Description for Medication {index + 1}</Text>
-                <Text style={styles.medicationPrice}>Stock: 90</Text>
-                <Text style={styles.pharmacyName}>Sample Pharmacy {index + 1}</Text>
-                <Text style={styles.pharmacyBarangay}>Sample Barangay {index + 1}</Text>
+                <Text style={styles.medicationName}>{medication.name}</Text>
+                <Text style={styles.medicationDescription}>{medication.description}</Text>
+                <Text style={styles.medicationPrice}>Stock: {medication.stock}</Text>
+                <Text style={styles.pharmacyName}>{medication.pharmacy.userInfo.name}</Text>
+                <Text style={styles.pharmacyBarangay}>{medication.pharmacy.userInfo.barangay}</Text>
               </View>
             </TouchableOpacity>
           ))}

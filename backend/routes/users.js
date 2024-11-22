@@ -202,83 +202,6 @@ router.get('/customersPerMonth', async (req, res) => {
     }
   });
 
-// router.post(
-//     '/register',
-//     (req, res, next) => {
-//         req.folder = 'users'; // Set the folder name for Cloudinary uploads
-//         next();
-//     },
-//     uploadOptions.array('permits', 10),
-//     async (req, res) => {
-//         try {
-//             // Create user object
-//             let user = new User({
-//                 email: req.body.email,
-//                 passwordHash: bcrypt.hashSync(req.body.password, 10),
-//                 isAdmin: req.body.isAdmin,
-//                 name: req.body.name,
-//                 contactNumber: req.body.contactNumber,
-//                 street: req.body.street,
-//                 barangay: req.body.barangay,
-//                 city: req.body.city,
-//                 role: req.body.role,
-//                 verified: false,
-//             });
-
-//             user = await user.save();
-
-//             if (!user) {
-//                 return res.status(400).send('The user cannot be created!');
-//             }
-
-//             // Send OTP Verification Email
-//             await sendOTPVerificationEmail({ _id: user.id, email: user.email });
-
-//             // Handle role-specific logic
-//             if (user.role === 'Customer') {
-//                 let disease = await Diseases.findOne({ name: req.body.diseases });
-//                 if (!disease) {
-//                     disease = new Diseases({ name: req.body.diseases });
-//                     disease = await disease.save();
-//                 }
-
-//                 const customer = new Customer({
-//                     userInfo: user.id,
-//                     disease: disease.id,
-//                 });
-
-//                 await customer.save();
-//             } else if (user.role === 'PharmacyOwner') {
-//                 const files = req.files;
-//                 if (!files || files.length === 0) {
-//                     return res.status(400).send('No permits in the request');
-//                 }
-
-//                 const permitPaths = files.map(file => file.path);
-
-//                 const newPharmacy = new Pharmacy({
-//                     userInfo: user.id,
-//                     permits: permitPaths,
-//                     location: {
-//                         latitude: parseFloat(req.body.latitude),
-//                         longitude: parseFloat(req.body.longitude),
-//                     },
-//                 });
-
-//                 await newPharmacy.save();
-//             }
-
-//             // Respond with the user ID
-//             return res.status(201).json({
-//                 message: 'Registration successful',
-//                 userId: user.id,
-//             });
-//         } catch (err) {
-//             console.error(err);
-//             res.status(500).json({ success: false, error: err.message });
-//         }
-//     }
-// );
 
 router.post(
     '/register',
@@ -534,31 +457,34 @@ router.post('/login', async (req, res) => {
         const user = await User.findOne({ email: req.body.email });
         const secret = process.env.secret;
 
-        
         if (!user) {
-            // Email not found
             return res.status(400).json({ success: false, message: 'EMAIL_NOT_FOUND' });
         }
 
         if (!user.verified) {
-            // If user is not verified
             return res.status(400).json({ success: false, message: 'USER_NOT_VERIFIED' });
         }
 
         if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
-            // Password is correct, generate token
+            // Generate a token
             const token = jwt.sign(
                 {
                     userId: user.id,
-                    isAdmin: user.isAdmin
+                    isAdmin: user.isAdmin,
+                    role: user.role // Include role in the token payload
                 },
                 secret,
                 { expiresIn: '1d' }
             );
+
             console.log('Login Successful:', token);
-            return res.status(200).json({ success: true, user: user.email, token: token });
+
+            return res.status(200).json({
+                success: true,
+                user: { email: user.email, role: user.role }, // Include role in response
+                token: token
+            });
         } else {
-            // Incorrect password
             return res.status(400).json({ success: false, message: 'INCORRECT_PASSWORD' });
         }
     } catch (error) {
@@ -566,6 +492,7 @@ router.post('/login', async (req, res) => {
         return res.status(500).json({ success: false, message: 'SERVER_ERROR' });
     }
 });
+
 
 // Get user details by ID
 router.get('/:id', async (req, res) => {

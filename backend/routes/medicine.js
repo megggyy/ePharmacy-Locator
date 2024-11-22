@@ -75,28 +75,35 @@ router.post('/create', (req, res, next) => {
 
 // Read Medicines (Get All)
 router.get('/', async (req, res) => {
+    const { category } = req.query; // Extract category query parameter
+
     try {
-        const medicines = await Medicine.find()
+        // Build the query object dynamically
+        const query = category ? { category } : {};
+
+        // Fetch medicines with optional filtering by category
+        const medicines = await Medicine.find(query)
             .populate({
-                path: 'pharmacy',  // Populating the pharmacy reference
-                select: 'location',  // Selecting the fields to return from the Pharmacy collection
+                path: 'pharmacy', // Populating the pharmacy reference
+                select: 'location', // Selecting the fields to return from the Pharmacy collection
                 populate: {
                     path: 'userInfo',
-                    select: 'name street barangay city',  // Populate address fields
+                    select: 'name street barangay city', // Populate address fields
                 },
             })
-            .populate('category');  // Populate medication category
+            .populate('category'); // Populate medication category
 
         if (!medicines || medicines.length === 0) {
-            return res.status(500).json({ success: false, message: 'No medicines found' });
+            return res.status(404).json({ success: false, message: 'No medicines found' });
         }
 
-        res.status(200).json(medicines);  // Return all medicines with populated pharmacy and category
+        res.status(200).json(medicines); // Return filtered medicines with populated pharmacy and category
     } catch (error) {
         console.error('Error fetching medicines:', error);
         res.status(500).json({ success: false, message: error.message });
     }
 });
+
 
 // Read Medicine by ID
 router.get('/:id', async (req, res) => {

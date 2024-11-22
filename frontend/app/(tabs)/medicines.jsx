@@ -1,7 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
 import AuthGlobal from '@/context/AuthGlobal';
@@ -13,23 +22,35 @@ export default function MedicationScreen() {
   const [filteredMedications, setFilteredMedications] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const [searchBarWidth, setSearchBarWidth] = useState(0);
-  const [isDropdownOpen1, setDropdownOpen1] = useState(false); 
-  const [isDropdownOpen2, setDropdownOpen2] = useState(false); 
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchBarPosition, setSearchBarPosition] = useState({ width: 0, left: 0 });
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      // Fetch medications
+      axios
+        .get(`${baseURL}medicine`)
+        .then((response) => {
+          setMedications(response.data);
+          setFilteredMedications(response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching medications:', error);
+        });
 
-  useEffect(() => {
-    axios
-      .get(`${baseURL}medicine`)
-      .then((response) => {
-        setMedications(response.data);
-        setFilteredMedications(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching medications:', error);
-      });
-  }, []);
+      // Fetch categories
+      axios
+        .get(`${baseURL}medication-category`)
+        .then((response) => {
+          setCategories(response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching categories:', error);
+        });
+    }, [])
+  );
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -44,159 +65,147 @@ export default function MedicationScreen() {
       );
 
       setFilteredMedications(filtered);
-      setSuggestions(filtered.slice(0, 5)); // Limit to 5 suggestions
+      setSuggestions(filtered.slice(0, 5));
     }
   };
 
-    const handleSuggestionSelect = (medication) => {
-      setSearchQuery(medication.name);
-      setFilteredMedications([medication]);
-      setSuggestions([]);
-    };
+  const handleCategorySelect = (categoryName) => {
+    setSelectedCategory(categoryName);
+    setDropdownOpen(false);
+
+    const filtered = medications.filter(
+      (medication) =>
+        medication.category &&
+        (medication.category.name === categoryName || medication.category === categoryName)
+    );
+
+    setFilteredMedications(filtered);
+  };
+
+  const handleSuggestionSelect = (medication) => {
+    setSearchQuery(medication.name);
+    setFilteredMedications([medication]);
+    setSuggestions([]);
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Include TopBar component */}
       <View style={styles.topSection}>
-      {/* Header with Location and Icons */}
-      {state.isAuthenticated && (
-      <View style={styles.header}>
-        <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('/drawer/UserDrawer')}/>          
-      
-        <View style={styles.iconsWrapper}>
-          <Ionicons name="cloud-upload" style={styles.icon} onPress={() => router.push('/screens/User/Features/PrescriptionUpload')} />
-        </View>
-      </View>
-      )}
-      <TextInput
-        style={styles.searchBar}
-        placeholder="Search..."
-        placeholderTextColor="#AAB4C1"
-        value={searchQuery}
-        onChangeText={handleSearch}
-        onLayout={(event) => {
-          const { width, x } = event.nativeEvent.layout;
-          setSearchBarPosition({ width, left: x });
-        }}
-      />
-
-      {suggestions.length > 0 && (
-        <View
-          style={[
-            styles.suggestionsContainer,
-            {
-              width: searchBarPosition.width,
-              left: searchBarPosition.left,
-              top: state.isAuthenticated ? 90 : 55, // Adjust the top offset dynamically
-            },
-          ]}
-        >
-          {suggestions.map((suggestion, index) => (
-            <TouchableOpacity
-              key={index}
-              onPress={() => handleSuggestionSelect(suggestion)}
-              style={styles.suggestionItem}
-            >
-              <Image
-                source={{
-                  uri:
-                    suggestion.images && suggestion.images[0]
-                      ? suggestion.images[0]
-                      : 'https://via.placeholder.com/40',
-                }}
-                style={styles.suggestionImage}
+        {state.isAuthenticated && (
+          <View style={styles.header}>
+            <Ionicons
+              name="menu"
+              style={styles.menuIcon}
+              onPress={() => router.push('/drawer/UserDrawer')}
+            />
+            <View style={styles.iconsWrapper}>
+              <Ionicons
+                name="cloud-upload"
+                style={styles.icon}
+                onPress={() => router.push('/screens/User/Features/PrescriptionUpload')}
               />
-              <Text style={styles.suggestionText}>{suggestion.name}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      )}
+            </View>
+          </View>
+        )}
+
+        <TextInput
+          style={styles.searchBar}
+          placeholder="Search..."
+          placeholderTextColor="#AAB4C1"
+          value={searchQuery}
+          onChangeText={handleSearch}
+          onLayout={(event) => {
+            const { width, x } = event.nativeEvent.layout;
+            setSearchBarPosition({ width, left: x });
+          }}
+        />
+
+        {suggestions.length > 0 && (
+          <View
+            style={[
+              styles.suggestionsContainer,
+              {
+                width: searchBarPosition.width,
+                left: searchBarPosition.left,
+                top: state.isAuthenticated ? 90 : 55,
+              },
+            ]}
+          >
+            {suggestions.map((suggestion, index) => (
+              <TouchableOpacity
+                key={index}
+                onPress={() => handleSuggestionSelect(suggestion)}
+                style={styles.suggestionItem}
+              >
+                <Image
+                  source={{
+                    uri:
+                      suggestion.images && suggestion.images[0]
+                        ? suggestion.images[0]
+                        : 'https://via.placeholder.com/40',
+                  }}
+                  style={styles.suggestionImage}
+                />
+                <Text style={styles.suggestionText}>{suggestion.name}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        )}
       </View>
+
       <ScrollView style={styles.container}>
-        {/* Filter Buttons */}
         <View style={styles.filterContainer}>
-          {/* Category 1 Dropdown */}
           <View style={styles.dropdownWrapper}>
             <TouchableOpacity
-              onPress={() => setDropdownOpen1(!isDropdownOpen1)}
+              onPress={() => setDropdownOpen(!isDropdownOpen)}
               style={styles.filterButton}
             >
-              <Text style={styles.filterText}>Category 1</Text>
+              <Text style={styles.filterText}>
+                {selectedCategory || 'Select Category'}
+              </Text>
               <Ionicons
-                name={isDropdownOpen1 ? "chevron-up" : "chevron-down"}
+                name={isDropdownOpen ? 'chevron-up' : 'chevron-down'}
                 size={16}
                 color="#333"
               />
             </TouchableOpacity>
-            {isDropdownOpen1 && (
+            {isDropdownOpen && (
               <View style={styles.dropdownMenu}>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Pain Relievers</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Cold & Flu</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Allergy</Text>
-                </TouchableOpacity>
-              </View>
-            )}
-          </View>
-
-          {/* Category 2 Dropdown */}
-          <View style={styles.dropdownWrapper}>
-            <TouchableOpacity
-              onPress={() => setDropdownOpen2(!isDropdownOpen2)}
-              style={styles.filterButton}
-            >
-              <Text style={styles.filterText}>Category 2</Text>
-              <Ionicons
-                name={isDropdownOpen2 ? "chevron-up" : "chevron-down"}
-                size={16}
-                color="#333"
-              />
-            </TouchableOpacity>
-            {isDropdownOpen2 && (
-              <View style={styles.dropdownMenu}>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Vitamins</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>Supplements</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem} onPress={() => router.push('/screens/User/Features/CategoryFilterMedications')}>First Aid</Text>
-                </TouchableOpacity>
+                {categories.map((category, index) => (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => handleCategorySelect(category.name)}
+                  >
+                    <Text style={styles.dropdownItem}>{category.name}</Text>
+                  </TouchableOpacity>
+                ))}
               </View>
             )}
           </View>
         </View>
 
-        {/* Medications Section */}
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Medications</Text>
           <TouchableOpacity>
-            <Text style={styles.viewAll} onPress={() => router.push('../screens/User/Features/ViewAllMedications')}>View all</Text>
+            <Text style={styles.viewAll} onPress={() => router.push('/screens/User/Features/ViewAllMedications')}>View all</Text>
           </TouchableOpacity>
         </View>
+
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.medicationsContainer}>
-          {/* Render filtered medications */}
           {filteredMedications.map((medication) => (
-          <MedicationCard
-          key={medication._id}
-          name={medication.name}
-          imageUrl={medication.images && medication.images.length > 0 ? medication.images[0] : 'https://via.placeholder.com/150'}
-          description={medication.description}
-          stock={`${medication.stock} in stock`}
-          barangay={medication.barangay}
-          onPress={() => router.push(`/screens/User/Features/MedicationDetails?id=${medication._id}`)} // Pass the ID
-        />
-        
+            <MedicationCard
+              key={medication._id}
+              name={medication.name}
+              imageUrl={medication.images?.[0] || 'https://via.placeholder.com/150'}
+              description={medication.description}
+              stock={`${medication.stock} in stock`}
+              barangay={medication.barangay}
+              onPress={() => router.push(`/screens/User/Features/MedicationDetails?id=${medication._id}`)}
+            />
           ))}
         </ScrollView>
-
-        {/* Suggested Medications Section */}
-        <View style={styles.sectionHeader}>
+    {/* Suggested Medications Section */}
+    <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Suggested Medications</Text>
           <TouchableOpacity>
             <Text style={styles.viewAll} onPress={() => router.push('../screens/User/Features/SuggestedMedicine')}>View all</Text>
@@ -229,10 +238,7 @@ export default function MedicationScreen() {
 function MedicationCard({ name, imageUrl, description, stock, barangay, onPress }) {
   return (
     <TouchableOpacity style={styles.medicationCard} onPress={onPress}>
-      <Image
-        style={styles.medicationImage}
-        source={{ uri: imageUrl && imageUrl.length > 0 ? imageUrl : 'https://via.placeholder.com/150' }} // Fallback image if no image available
-      />
+      <Image style={styles.medicationImage} source={{ uri: imageUrl }} />
       <View style={styles.medicationInfo}>
         <Text style={styles.medicationName}>{name}</Text>
         <Text style={styles.descriptionText}>{description}</Text>

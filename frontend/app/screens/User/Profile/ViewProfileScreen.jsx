@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -11,68 +11,6 @@ export default function ViewProfile() {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const token = await AsyncStorage.getItem('jwt');
-  //       if (!token) throw new Error('User not logged in');
-  //       const decoded = jwtDecode(token);
-  //       console.log(decoded);
-
-  //       const userId = decoded?.id;
-
-  //       const response = await fetch(`${baseURL}users/${userId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-
-  //       if (!response.ok) throw new Error('Failed to fetch user data');
-  //       const data = await response.json();
-  //       setUserData(data);
-  //     } catch (error) {
-  //       Alert.alert('Error', error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchUserData();
-  // }, []);
-
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const token = await AsyncStorage.getItem('jwt');
-  //       if (!token) throw new Error('User not logged in');
-  //       const decoded = jwtDecode(token);
-  //       console.log(decoded); // Check the decoded token
-  
-  //       const userId = decoded?.userId; // Ensure the correct field name here
-  
-  //       if (!userId) throw new Error('User ID not found in token');
-  
-  //       const response = await fetch(`${baseURL}users/${userId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-  
-  //       if (!response.ok) throw new Error('Failed to fetch user data');
-  //       const data = await response.json();
-  //       setUserData(data);
-  //     } catch (error) {
-  //       Alert.alert('Error', error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchUserData();
-  // }, []);
-  
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -110,7 +48,8 @@ export default function ViewProfile() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
+        <ActivityIndicator size="large" color="#0B607E" />
+        <Text style={styles.loadingText}>Loading...</Text>
       </View>
     );
   }
@@ -248,5 +187,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+
+  // New Loading Styles
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F4F4F4',
+  },
+  loadingText: {
+    marginTop: 10,
+    fontSize: 16,
+    color: '#666',
   },
 });
