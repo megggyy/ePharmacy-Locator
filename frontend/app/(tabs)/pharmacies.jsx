@@ -1,11 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; 
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import axios from 'axios';
-import TopBar from '../drawer/TopBar';
-import baseURL from '@/assets/common/baseurl'; 
 import AuthGlobal from '@/context/AuthGlobal';
+import baseURL from '@/assets/common/baseurl';
 
 export default function PharmacyScreen() {
   const { state } = useContext(AuthGlobal);
@@ -15,16 +23,25 @@ export default function PharmacyScreen() {
   const [filteredPharmacies, setFilteredPharmacies] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [searchBarPosition, setSearchBarPosition] = useState({ width: 0, left: 0 });
-  const [isDropdownOpen1, setDropdownOpen1] = useState(false); // State for District 1 dropdown
-  const [isDropdownOpen2, setDropdownOpen2] = useState(false); // State for District 2 dropdown
+  const [barangays, setBarangays] = useState([]);
+  const [selectedBarangay, setSelectedBarangay] = useState(null);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    axios.get(`${baseURL}pharmacies`)
-      .then(response => {
-        setPharmacies(response.data);
-        setFilteredPharmacies(response.data); // Initially show all pharmacies
+ useEffect(() => {
+    axios
+      .get(`${baseURL}pharmacies`)
+      .then((response) => {
+        const pharmaciesData = response.data;
+        setPharmacies(pharmaciesData);
+        setFilteredPharmacies(pharmaciesData);
+
+        // Extract unique barangays from the fetched data
+        const uniqueBarangays = [
+          ...new Set(pharmaciesData.map((pharmacy) => pharmacy.userInfo.barangay)),
+        ];
+        setBarangays(uniqueBarangays);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching pharmacies:', error);
       });
   }, []);
@@ -43,6 +60,17 @@ export default function PharmacyScreen() {
       setFilteredPharmacies(filtered);
       setSuggestions(filtered.slice(0, 5));
     }
+  };
+
+  const handleBarangaySelect = (barangay) => {
+    setSelectedBarangay(barangay);
+    setDropdownOpen(false);
+
+    // Filter pharmacies by selected barangay
+    const filtered = pharmacies.filter(
+      (pharmacy) => pharmacy.userInfo.barangay === barangay
+    );
+    setFilteredPharmacies(filtered);
   };
 
   const handleSuggestionSelect = (pharmacy) => {
@@ -111,61 +139,35 @@ export default function PharmacyScreen() {
       <ScrollView style={styles.container}>
         {/* Filter Buttons */}
         <View style={styles.filterContainer}>
-          {/* District 1 Dropdown */}
-          <View style={styles.dropdownWrapper}>
-            <TouchableOpacity
-              onPress={() => setDropdownOpen1(!isDropdownOpen1)}
-              style={styles.filterButton}
-            >
-              <Text style={styles.filterText}>District 1</Text>
-              <Ionicons
-                name={isDropdownOpen1 ? "chevron-up" : "chevron-down"}
-                size={16}
-                color="#333"
-              />
-            </TouchableOpacity>
-            {isDropdownOpen1 && (
-              <View style={styles.dropdownMenu}>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem}>Central Signal Village</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem}>North Signal Village</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem}>South Signal Village</Text>
-                </TouchableOpacity>
-              </View>
-            )}
-          </View>
+           {/* Barangay Dropdown */}
+           <View style={styles.dropdownWrapper}>
+  <TouchableOpacity
+    onPress={() => setDropdownOpen(!isDropdownOpen)}
+    style={styles.filterButton}
+  >
+    <Text style={[styles.filterText, !selectedBarangay && { color: '#AAB4C1' }]}>
+      {selectedBarangay || 'Select Barangay'}
+    </Text>
+    <Ionicons
+      name={isDropdownOpen ? 'chevron-up' : 'chevron-down'}
+      size={16}
+      color="#333"
+    />
+  </TouchableOpacity>
+  {isDropdownOpen && (
+    <View style={styles.dropdownMenu}>
+      {barangays.map((barangay, index) => (
+        <TouchableOpacity
+          key={index}
+          onPress={() => handleBarangaySelect(barangay)}
+        >
+          <Text style={styles.dropdownItem}>{barangay}</Text>
+        </TouchableOpacity>
+      ))}
+    </View>
+  )}
+</View>
 
-          {/* District 2 Dropdown */}
-          <View style={styles.dropdownWrapper}>
-            <TouchableOpacity
-              onPress={() => setDropdownOpen2(!isDropdownOpen2)}
-              style={styles.filterButton}
-            >
-              <Text style={styles.filterText}>District 2</Text>
-              <Ionicons
-                name={isDropdownOpen2 ? "chevron-up" : "chevron-down"}
-                size={16}
-                color="#333"
-              />
-            </TouchableOpacity>
-            {isDropdownOpen2 && (
-              <View style={styles.dropdownMenu}>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem}>New Lower Bicutan</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem}>Lower Bicutan</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Text style={styles.dropdownItem}>Hagonoy</Text>
-                </TouchableOpacity>
-              </View>
-            )}
-          </View>
         </View>
 
         {/* Pharmacies Section */}
