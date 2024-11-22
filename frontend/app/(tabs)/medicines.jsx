@@ -1,35 +1,117 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Icons for the UI
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import axios from 'axios'; // Import axios to fetch data
-import baseURL from '@/assets/common/baseurl'; // Replace with your base URL
-import TopBar from '../drawer/TopBar';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
+import AuthGlobal from '@/context/AuthGlobal';
 
 export default function MedicationScreen() {
+  const { state } = useContext(AuthGlobal);
   const router = useRouter();
-  const [medications, setMedications] = useState([]); // State to store medications data
-  const [isDropdownOpen1, setDropdownOpen1] = useState(false); // State for Category 1 dropdown
-  const [isDropdownOpen2, setDropdownOpen2] = useState(false); // State for Category 2 dropdown
+  const [medications, setMedications] = useState([]);
+  const [filteredMedications, setFilteredMedications] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const [searchBarWidth, setSearchBarWidth] = useState(0);
+  const [isDropdownOpen1, setDropdownOpen1] = useState(false); 
+  const [isDropdownOpen2, setDropdownOpen2] = useState(false); 
+  const [searchBarPosition, setSearchBarPosition] = useState({ width: 0, left: 0 });
+
 
   useEffect(() => {
-    // Fetch medications and limit the results to 5
-    axios.get(`${baseURL}medicine`) // Adjust the endpoint based on your API
-      .then(response => {
-        console.log('Medications fetched:', response.data);
-        // Limit to 5 medications
-        setMedications(response.data.slice(0, 5));
+    axios
+      .get(`${baseURL}medicine`)
+      .then((response) => {
+        setMedications(response.data);
+        setFilteredMedications(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching medications:', error);
       });
   }, []);
 
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    if (query === '') {
+      setFilteredMedications(medications);
+      setSuggestions([]);
+    } else {
+      const filtered = medications.filter(
+        (medication) =>
+          medication.name.toLowerCase().includes(query.toLowerCase()) ||
+          medication.description.toLowerCase().includes(query.toLowerCase())
+      );
+
+      setFilteredMedications(filtered);
+      setSuggestions(filtered.slice(0, 5)); // Limit to 5 suggestions
+    }
+  };
+
+    const handleSuggestionSelect = (medication) => {
+      setSearchQuery(medication.name);
+      setFilteredMedications([medication]);
+      setSuggestions([]);
+    };
+
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Include TopBar component */}
-      <TopBar />
+      <View style={styles.topSection}>
+      {/* Header with Location and Icons */}
+      {state.isAuthenticated && (
+      <View style={styles.header}>
+        <Ionicons name="menu" style={styles.menuIcon} onPress={() => router.push('/drawer/UserDrawer')}/>          
+      
+        <View style={styles.iconsWrapper}>
+          <Ionicons name="cloud-upload" style={styles.icon} onPress={() => router.push('/screens/User/Features/PrescriptionUpload')} />
+        </View>
+      </View>
+      )}
+      <TextInput
+        style={styles.searchBar}
+        placeholder="Search..."
+        placeholderTextColor="#AAB4C1"
+        value={searchQuery}
+        onChangeText={handleSearch}
+        onLayout={(event) => {
+          const { width, x } = event.nativeEvent.layout;
+          setSearchBarPosition({ width, left: x });
+        }}
+      />
 
+      {suggestions.length > 0 && (
+        <View
+          style={[
+            styles.suggestionsContainer,
+            {
+              width: searchBarPosition.width,
+              left: searchBarPosition.left,
+              top: state.isAuthenticated ? 90 : 55, // Adjust the top offset dynamically
+            },
+          ]}
+        >
+          {suggestions.map((suggestion, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleSuggestionSelect(suggestion)}
+              style={styles.suggestionItem}
+            >
+              <Image
+                source={{
+                  uri:
+                    suggestion.images && suggestion.images[0]
+                      ? suggestion.images[0]
+                      : 'https://via.placeholder.com/40',
+                }}
+                style={styles.suggestionImage}
+              />
+              <Text style={styles.suggestionText}>{suggestion.name}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      )}
+      </View>
       <ScrollView style={styles.container}>
         {/* Filter Buttons */}
         <View style={styles.filterContainer}>
@@ -98,17 +180,18 @@ export default function MedicationScreen() {
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.medicationsContainer}>
-          {/* Render fetched medications */}
-          {medications.map((medication) => (
-            <MedicationCard
-              key={medication._id}
-              name={medication.name}
-              imageUrl={medication.images && medication.images.length > 0 ? medication.images[0] : 'https://via.placeholder.com/150'} // Fallback image if no image available
-              description={medication.description}
-              stock={`${medication.stock} in stock`}
-              barangay={medication.barangay}
-              onPress={() => router.push('/screens/User/Features/MedicationDetails')}
-            />
+          {/* Render filtered medications */}
+          {filteredMedications.map((medication) => (
+          <MedicationCard
+          key={medication._id}
+          name={medication.name}
+          imageUrl={medication.images && medication.images.length > 0 ? medication.images[0] : 'https://via.placeholder.com/150'}
+          description={medication.description}
+          stock={`${medication.stock} in stock`}
+          barangay={medication.barangay}
+          onPress={() => router.push(`/screens/User/Features/MedicationDetails?id=${medication._id}`)} // Pass the ID
+        />
+        
           ))}
         </ScrollView>
 
@@ -189,4 +272,43 @@ const styles = StyleSheet.create({
   descriptionText: { fontSize: 12, color: '#666', marginTop: 5 },
   stockText: { fontSize: 12, color: '#666', marginTop: 5 },
   barangayText: { fontSize: 12, color: '#666', marginTop: 5 },
+  topSection: { 
+    paddingHorizontal: 16,
+    paddingBottom: 10, 
+    borderBottomLeftRadius: 25, 
+    borderBottomRightRadius: 25, 
+  },
+  header: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center', 
+    marginTop: 10,
+  },
+  locationWrapper: { flex: 1, marginLeft: 10 },
+  location: { fontSize: 16, color: '#fff' },
+  menuIcon: {
+  fontSize: 30,
+  color: '#fff',
+  },
+  icon: { fontSize: 20, marginHorizontal: 10, color: '#fff'  },
+  searchBar: { marginVertical: 15, padding: 10, backgroundColor: '#f0f0f0', borderRadius: 8 },
+  suggestionsContainer: {
+    position: 'absolute',
+    left: 0, // Align to the left of the parent
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    elevation: 5,
+    zIndex: 1,
+    overflow: 'hidden', // Prevent content overflow
+  },  
+  suggestionItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+  suggestionImage: { width: 40, height: 40, borderRadius: 5, marginRight: 10 },
+  suggestionText: { fontSize: 14, color: '#333' },
 });
