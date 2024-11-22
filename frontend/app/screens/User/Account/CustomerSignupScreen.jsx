@@ -89,53 +89,6 @@ const CustomerSignup = () => {
     fetchBarangays(); // Call the fetch function for barangays
   }, []);
 
-  // Register function (submit form data)
-//   const register = async () => {
-//     const formData = {
-//         name,
-//         email,
-//         contactNumber,
-//         password,
-//         street,
-//         barangay,
-//         city,
-//         diseases: selectedDisease === 'others' ? customDisease : selectedDisease,
-//         isAdmin: false,
-//         role: "Customer",
-//     };
-
-//     console.log(formData)
-//     try {
-//         const res = await axios.post(`${baseURL}users/register`, formData, {
-//             headers: {
-//                 "Content-Type": "application/json",
-//             },
-//         });
-
-//         // Handle the response
-//         if (res.status === 200) {
-//             Toast.show({
-//                 topOffset: 60,
-//                 type: "success",
-//                 text1: "REGISTRATION SUCCEEDED",
-//                 text2: "PLEASE LOG IN TO YOUR ACCOUNT",
-//             });
-//             setTimeout(() => {
-//               router.push('../../Auth/LoginScreen');
-//             }, 500);
-//         }
-//     } catch (error) {
-//         Toast.show({
-//             position: 'bottom',
-//             bottomOffset: 20,
-//             type: "error",
-//             text1: "SOMETHING WENT WRONG!",
-//             text2: "PLEASE TRY AGAIN",
-//         });
-//         console.log(error.message);
-//     }
-// };
-
 const pickImage = async () => {
   let result = await ImagePicker.launchImageLibraryAsync({
     mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -211,16 +164,19 @@ const register = () => {
   axios
   .post(`${baseURL}users/register`, formData, config)
   .then((res) => {
+    console.log(res.data)
     if (res.status === 200 || res.status === 201) {
+      const userId = res.data.userId;
       Toast.show({
         type: "success",
         text1: "REGISTRATION SUCCEEDED",
         text2: "PLEASE LOG IN TO YOUR ACCOUNT",
       });
+      console.log("User ID from response:", userId);  // Add this line to check if the userId is correct
       setTimeout(() => {
         router.push({
           pathname: '/screens/Auth/OTPVerification/VerifyOTP',
-          params: { userId: res.data.userId },
+          params: {userId},
         });
       }, 500);
     }

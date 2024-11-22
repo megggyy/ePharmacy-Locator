@@ -2,32 +2,53 @@ import React, { useState, useContext, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // For the back icon
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useRouter, useLocalSearchParams } from 'expo-router';
+import { useRouter } from 'expo-router';
 import AuthGlobal from '@/context/AuthGlobal';
 import baseURL from "../../../../assets/common/baseurl";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import axios from "axios";
 
 const ChangePasswordScreen = () => {
   const [userId, setUserId] = useState(null);
   const router = useRouter();
+  const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState({});
   const [loading, setLoading] = useState(false);
   const { dispatch } = useContext(AuthGlobal);
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
+  const [showPassword1, setShowPassword1] = useState(false); // New state for password visibility
+  const [showPassword2, setShowPassword2] = useState(false); // New state for password visibility
 
   useEffect(() => {
     const fetchUserId = async () => {
-      const storedUserId = await AsyncStorage.getItem('userId');
-      setUserId(storedUserId); // Set userId from AsyncStorage
+      try {
+        const storedUserId = await AsyncStorage.getItem('userId');
+        setUserId(storedUserId); // Set userId from AsyncStorage
+      } catch (error) {
+        console.error('Error fetching user ID:', error);
+      }
     };
     fetchUserId();
   }, []);
 
+  const validate = () => {
+    let errorMessages = {};
+    if (!newPassword) errorMessages.newPassword = "New password is required";
+    if (!confirmPassword) errorMessages.confirmPassword = "Confirm password is required";
+    if (!oldPassword) errorMessages.oldPassword = "Old password is required";
+    if (newPassword && confirmPassword && newPassword !== confirmPassword) {
+      errorMessages.confirmPassword = "Passwords do not match";
+    }
+  
+    return errorMessages;
+  };
+
   const handleUpdatePassword = async () => {
-    if (newPassword !== confirmPassword) {
-      setError('Passwords do not match');
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setError(validationErrors);
       return;
     }
 
@@ -36,21 +57,21 @@ const ChangePasswordScreen = () => {
 
     try {
       const response = await fetch(`${baseURL}users/reset-password`, {
-        method: 'PUT', 
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userId, newPassword, confirmPassword }),
+        body: JSON.stringify({ userId, oldPassword, newPassword, confirmPassword }),
       });
 
       const data = await response.json();
 
       if (response.status === 200) {
-        alert('Password successfully updated.');
+        alert('Password successfully updated. Please login.');
         try {
           await AsyncStorage.removeItem('jwt');
           dispatch({ type: 'LOGOUT_USER' });
-          router.back();
+          router.push('/screens/Auth/LoginScreen');
         } catch (error) {
           console.error('Error during logout:', error);
         }
@@ -58,7 +79,7 @@ const ChangePasswordScreen = () => {
         setError(data.message);
       }
     } catch (err) {
-      setError('An error occurred, please try again later.');
+      console.error('Error updating password:', err);
     } finally {
       setLoading(false);
     }
@@ -71,19 +92,19 @@ const ChangePasswordScreen = () => {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Reset Password</Text>
+        <Text style={styles.headerText}>Change Password</Text>
       </View>
 
       {/* Input Fields Section */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>New Password *</Text>
+        <Text style={styles.label}>Old Password *</Text>
         <View style={styles.passwordContainer}>
           <TextInput
             style={styles.input}
-            placeholder="New Password"
+            placeholder="Old Password"
             secureTextEntry={!showPassword} // Conditionally secure the password
-            value={newPassword}
-            onChangeText={setNewPassword}
+            value={oldPassword}
+            onChangeText={setOldPassword}
           />
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
             <Icon
@@ -93,6 +114,28 @@ const ChangePasswordScreen = () => {
             />
           </TouchableOpacity>
         </View>
+        {error.oldPassword && <Text style={styles.errorText}>{error.oldPassword}</Text>}
+      </View>
+
+      <View style={styles.inputContainer}>
+        <Text style={styles.label}>New Password *</Text>
+        <View style={styles.passwordContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="New Password"
+            secureTextEntry={!showPassword1} // Conditionally secure the password
+            value={newPassword}
+            onChangeText={setNewPassword}
+          />
+          <TouchableOpacity onPress={() => setShowPassword1(!showPassword1)} style={styles.eyeIcon}>
+            <Icon
+              name={showPassword1 ? "eye-off" : "eye"}
+              size={24}
+              color="#AAB4C1"
+            />
+          </TouchableOpacity>
+        </View>
+        {error.newPassword && <Text style={styles.errorText}>{error.newPassword}</Text>}
       </View>
 
       <View style={styles.inputContainer}>
@@ -101,22 +144,23 @@ const ChangePasswordScreen = () => {
           <TextInput
             style={styles.input}
             placeholder="Re-type Password"
-            secureTextEntry={!showPassword} // Conditionally secure the password
+            secureTextEntry={!showPassword2}
             value={confirmPassword}
             onChangeText={setConfirmPassword}
           />
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+          <TouchableOpacity onPress={() => setShowPassword2(!showPassword2)} style={styles.eyeIcon}>
             <Icon
-              name={showPassword ? "eye-off" : "eye"}
+              name={showPassword2 ? "eye-off" : "eye"}
               size={24}
               color="#AAB4C1"
             />
           </TouchableOpacity>
         </View>
+        {error.confirmPassword && <Text style={styles.errorText}>{error.confirmPassword}</Text>}
       </View>
 
       {/* Error Message */}
-      {error ? <Text style={styles.errorText}>{error}</Text> : null}
+      {error && <Text style={styles.errorText}>{error.message}</Text>}
 
       {/* Update Password Button */}
       <TouchableOpacity style={styles.updateButton} onPress={handleUpdatePassword} disabled={loading}>
@@ -183,8 +227,9 @@ const styles = StyleSheet.create({
   },
   errorText: {
     color: 'red',
+    fontSize: 12,
+    marginTop: 3,
     textAlign: 'center',
-    marginVertical: 10,
   },
   updateButton: {
     backgroundColor: '#0B607E',

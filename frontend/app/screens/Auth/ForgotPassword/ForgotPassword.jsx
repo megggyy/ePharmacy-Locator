@@ -14,8 +14,7 @@ const ForgotPasswordScreen = () => {
     try {
       if (!email) {
         Toast.show({
-          position: 'bottom',
-          bottomOffset: 20,
+          topOffset: 60,
           type: 'error',
           text1: 'EMAIL REQUIRED!',
           text2: 'PLEASE INPUT YOUR EMAIL',
@@ -40,15 +39,14 @@ const ForgotPasswordScreen = () => {
           // Redirect to VerifyOTP screen with the userId
           setTimeout(() => {
             router.push({
-              pathname: '/screens/User/Account/ResetOTP',
-              params: { userId: res.data.userId }, // Correctly pass userId here
+              pathname: '/screens/Auth/ForgotPassword/ResetOTP',
+              params: { userId: res.data.userId },
             });
           }, 500);
         } else {
           // Handle OTP not sent or other issues
           Toast.show({
-            position: 'bottom',
-            bottomOffset: 20,
+            topOffset: 60,
             type: "error",
             text1: "OTP ERROR",
             text2: "Something went wrong while sending OTP.",
@@ -56,8 +54,7 @@ const ForgotPasswordScreen = () => {
         }
       } else {
         Toast.show({
-          position: 'bottom',
-          bottomOffset: 20,
+          topOffset: 60,
           type: "error",
           text1: "EMAIL NOT FOUND!",
           text2: "PLEASE REGISTER FIRST.",
@@ -66,8 +63,7 @@ const ForgotPasswordScreen = () => {
     } catch (error) {
       console.error("Error Occurred:", error.response?.data || error.message);
       Toast.show({
-        position: 'bottom',
-        bottomOffset: 20,
+        topOffset: 60,
         type: "error",
         text1: "SOMETHING WENT WRONG!",
         text2: "PLEASE TRY AGAIN",

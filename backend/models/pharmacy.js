@@ -10,18 +10,29 @@ const pharmacySchema = new mongoose.Schema({
     },
     location: {
         latitude: {
-            type: Number,
-           // required: true,
+            type: String,
         },
         longitude: {
-            type: Number,
-            //required: true,
+            type: String,
         },
     },
-    businessHours: {
-        type: String,
-        required: true,
+    approved:
+    {
+        type: Boolean
     }
+
+    // businessDays: {
+    //     type: String,
+    //     required: true,
+    // },
+    // businessOpen: {
+    //     type: String,
+    //     required: true,
+    // },
+    // businessClose: {
+    //     type: String,
+    //     required: true,
+    // }
 });
 
 pharmacySchema.virtual('id').get(function () {

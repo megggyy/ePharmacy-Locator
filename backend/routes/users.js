@@ -2,7 +2,6 @@ const { User } = require('../models/user');
 const { Pharmacy } = require('../models/pharmacy');
 const { Customer } = require('../models/customer');
 const { Diseases } = require('../models/disease');
-const { UserOTPVerification } = require('../models/UserOTPVerification')
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -363,7 +362,7 @@ router.post(
                         await customer.save();
                     }
 
-                    return res.status(201).json({ message: 'Customer created successfully' });
+                    return res.status(201).json({ message: 'Customer created successfully', userId: user.id, });
 
                 } catch (error) {
                     console.error(error);
@@ -379,20 +378,35 @@ router.post(
 
                 const permitPaths = files.map(file => file.path);
 
-                const newPharmacy = new Pharmacy({
+                if (req.body.latitude === '' || req.body.longitude === '')
+                
+                {    
+                    const newPharmacy = new Pharmacy({
                     userInfo: user.id,
                     images: permitPaths,
-                    location: {
-                        latitude: parseFloat(req.body.latitude),
-                        longitude: parseFloat(req.body.longitude),
-                    },
-                });
+                    approved: req.body.approved
+                    });
 
-                await newPharmacy.save();
-                return res.status(201).json({ message: 'Pharmacy created successfully' });
+                    await newPharmacy.save();
+                }
+                else{
+                    const newPharmacy = new Pharmacy({
+                        userInfo: user.id,
+                        images: permitPaths,
+                        location: {
+                            latitude: req.body.latitude,
+                            longitude: req.body.longitude,
+                        },
+                        approved: req.body.approved
+                        });
+
+                        await newPharmacy.save();
+                }
+
+
+                return res.status(201).json({ message: 'Pharmacy created successfully', userId: user.id, });
             }
 
-            // Respond with the user ID if no role-specific logic
             return res.status(201).json({
                 message: 'Registration successful',
                 userId: user.id,
@@ -405,6 +419,7 @@ router.post(
     }
 );
 
+let otpStore = {}; 
 
 const sendOTPVerificationEmail = async ({ _id, email }) => {
     try {
@@ -418,15 +433,13 @@ const sendOTPVerificationEmail = async ({ _id, email }) => {
                    <p>This code <b>expires in 1 hour</b>.</p>`,
         };
 
-        const hashedOTP = await bcrypt.hash(otp, 10);
+        const hashedOTP = await bcrypt.hash(otp, 10); 
 
-        // Save the OTP record to the database
-        await UserOTPVerification.create({
-            userId: _id,
+        otpStore[_id] = {
             otp: hashedOTP,
             createdAt: Date.now(),
-            expiresAt: Date.now() + 3600000, // 1 hour
-        });
+            expiresAt: Date.now() + 3600000,
+        };
 
         // Send the email
         await transporter.sendMail(mailOptions);
@@ -447,7 +460,7 @@ const sendOTPVerificationEmail = async ({ _id, email }) => {
 router.post('/verifyOTP', async (req, res) => {
     const { userId, otp } = req.body; 
     console.log("Received OTP:", otp);
-
+    console.log("userId:", userId);
     try {
         // Fetch the OTP record from the store using userId
         const otpRecord = otpStore[userId];
@@ -621,17 +634,6 @@ router.put('/change-password', async (req, res) => {
     const { userId, oldPassword, newPassword, confirmPassword } = req.body;
 
     // Validate input
-    if (!userId) {
-        return res.status(400).json({ message: 'User ID is required' });
-    }
-
-    if (!oldPassword) {
-        return res.status(400).json({ message: 'Old password is required' });
-    }
-
-    if (!newPassword || !confirmPassword) {
-        return res.status(400).json({ message: 'Password fields are required' });
-    }
 
     if (newPassword !== confirmPassword) {
         return res.status(400).json({ message: 'Passwords do not match' });
@@ -668,8 +670,6 @@ router.put('/change-password', async (req, res) => {
 
 
 // Reset Password
-
-let otpStore = {}; 
 
 router.post('/checkEmail', async (req, res) => {
     const { email } = req.body; // Fetch the email from the request body
@@ -781,9 +781,10 @@ router.post('/resetOTP', async (req, res) => {
 });
 
 
-router.put('/reset-password', async (req, res) => {
+router.put('/resetPassword', async (req, res) => {
     const { userId, newPassword, confirmPassword } = req.body;
 
+    console.log('userid', req.body)
     // Validate input
     if (!userId) {
         return res.status(400).json({ message: 'User ID is required' });

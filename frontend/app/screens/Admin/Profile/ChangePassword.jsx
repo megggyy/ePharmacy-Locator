@@ -6,6 +6,7 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 import AuthGlobal from '@/context/AuthGlobal';
 import baseURL from "../../../../assets/common/baseurl";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import axios from "axios";
 
 const ChangePasswordScreen = () => {
   const [userId, setUserId] = useState(null);
@@ -17,6 +18,8 @@ const ChangePasswordScreen = () => {
   const [loading, setLoading] = useState(false);
   const { dispatch } = useContext(AuthGlobal);
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
+  const [showPassword1, setShowPassword1] = useState(false); // New state for password visibility
+  const [showPassword2, setShowPassword2] = useState(false); // New state for password visibility
 
   useEffect(() => {
     const fetchUserId = async () => {
@@ -26,12 +29,22 @@ const ChangePasswordScreen = () => {
     fetchUserId();
   }, []);
 
+  const validate = () => {
+    let errorMessages = {};
+    if (!newPassword) errorMessages.newPassword = "PASSWORD IS REQUIRED";
+    if (!confirmPassword) errorMessages.confirmPassword = "PASSWORD IS REQUIRED";
+    if (!oldPassword) errorMessages.oldPassword = "PASSWORD IS REQUIRED";
+  
+    return errorMessages;
+  };
   const handleUpdatePassword = async () => {
     if (newPassword !== confirmPassword) {
       setError('Passwords do not match');
       return;
     }
-
+    const validationErrors = validate();
+    setError(validationErrors);
+    
     setError('');
     setLoading(true);
 
@@ -94,6 +107,8 @@ const ChangePasswordScreen = () => {
             />
           </TouchableOpacity>
         </View>
+        {error.oldPassword && <Text style={styles.errorText}>{error.oldPassword}</Text>}
+      
       </View>
 
       <View style={styles.inputContainer}>
@@ -102,18 +117,20 @@ const ChangePasswordScreen = () => {
           <TextInput
             style={styles.input}
             placeholder="New Password"
-            secureTextEntry={!showPassword} // Conditionally secure the password
+            secureTextEntry={!showPassword1} // Conditionally secure the password
             value={newPassword}
-            onChangeText={setNewPassword}
+            onChangeText={setNewPassword1}
           />
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword1)} style={styles.eyeIcon}>
             <Icon
-              name={showPassword ? "eye-off" : "eye"}
+              name={showPassword1 ? "eye-off" : "eye"}
               size={24}
               color="#AAB4C1"
             />
           </TouchableOpacity>
         </View>
+        {error.newPassword && <Text style={styles.errorText}>{error.newPassword}</Text>}
+      
       </View>
 
       <View style={styles.inputContainer}>
@@ -122,18 +139,20 @@ const ChangePasswordScreen = () => {
           <TextInput
             style={styles.input}
             placeholder="Re-type Password"
-            secureTextEntry={!showPassword} // Conditionally secure the password
+            secureTextEntry={!showPassword2} // Conditionally secure the password
             value={confirmPassword}
             onChangeText={setConfirmPassword}
           />
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+          <TouchableOpacity onPress={() => setShowPassword2(!showPassword2)} style={styles.eyeIcon}>
             <Icon
-              name={showPassword ? "eye-off" : "eye"}
+              name={showPassword2 ? "eye-off" : "eye"}
               size={24}
               color="#AAB4C1"
             />
           </TouchableOpacity>
         </View>
+        {error.confirmPassword && <Text style={styles.errorText}>{errors.confirmPassword}</Text>}
+      
       </View>
 
       {/* Error Message */}
