@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const pharmacySchema = new mongoose.Schema({
-    permits: [{
+    images: [{
         type: String
     }],
     userInfo: {
@@ -11,13 +11,17 @@ const pharmacySchema = new mongoose.Schema({
     location: {
         latitude: {
             type: Number,
-           // required: true, // Set to `true` if location is mandatory
+           // required: true,
         },
         longitude: {
             type: Number,
-            //required: true, // Set to `true` if location is mandatory
+            //required: true,
         },
     },
+    businessHours: {
+        type: String,
+        required: true,
+    }
 });
 
 pharmacySchema.virtual('id').get(function () {

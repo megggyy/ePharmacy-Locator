@@ -10,7 +10,11 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const nodemailer = require('nodemailer');
 
-const { uploadOptions } = require('../utils/cloudinary'); // Import Cloudinary upload options
+const { uploadOptions } = require('../utils/cloudinary');
+ // Import Cloudinary upload options
+
+const uploadPermits = uploadOptions.array('permits', 10);
+const uploadImages = uploadOptions.array('images', 10);
 
 const FILE_TYPE_MAP = {
     'image/png': 'png',
@@ -199,16 +203,107 @@ router.get('/customersPerMonth', async (req, res) => {
     }
   });
 
+// router.post(
+//     '/register',
+//     (req, res, next) => {
+//         req.folder = 'users'; // Set the folder name for Cloudinary uploads
+//         next();
+//     },
+//     uploadOptions.array('permits', 10),
+//     async (req, res) => {
+//         try {
+//             // Create user object
+//             let user = new User({
+//                 email: req.body.email,
+//                 passwordHash: bcrypt.hashSync(req.body.password, 10),
+//                 isAdmin: req.body.isAdmin,
+//                 name: req.body.name,
+//                 contactNumber: req.body.contactNumber,
+//                 street: req.body.street,
+//                 barangay: req.body.barangay,
+//                 city: req.body.city,
+//                 role: req.body.role,
+//                 verified: false,
+//             });
+
+//             user = await user.save();
+
+//             if (!user) {
+//                 return res.status(400).send('The user cannot be created!');
+//             }
+
+//             // Send OTP Verification Email
+//             await sendOTPVerificationEmail({ _id: user.id, email: user.email });
+
+//             // Handle role-specific logic
+//             if (user.role === 'Customer') {
+//                 let disease = await Diseases.findOne({ name: req.body.diseases });
+//                 if (!disease) {
+//                     disease = new Diseases({ name: req.body.diseases });
+//                     disease = await disease.save();
+//                 }
+
+//                 const customer = new Customer({
+//                     userInfo: user.id,
+//                     disease: disease.id,
+//                 });
+
+//                 await customer.save();
+//             } else if (user.role === 'PharmacyOwner') {
+//                 const files = req.files;
+//                 if (!files || files.length === 0) {
+//                     return res.status(400).send('No permits in the request');
+//                 }
+
+//                 const permitPaths = files.map(file => file.path);
+
+//                 const newPharmacy = new Pharmacy({
+//                     userInfo: user.id,
+//                     permits: permitPaths,
+//                     location: {
+//                         latitude: parseFloat(req.body.latitude),
+//                         longitude: parseFloat(req.body.longitude),
+//                     },
+//                 });
+
+//                 await newPharmacy.save();
+//             }
+
+//             // Respond with the user ID
+//             return res.status(201).json({
+//                 message: 'Registration successful',
+//                 userId: user.id,
+//             });
+//         } catch (err) {
+//             console.error(err);
+//             res.status(500).json({ success: false, error: err.message });
+//         }
+//     }
+// );
+
 router.post(
     '/register',
     (req, res, next) => {
         req.folder = 'users'; // Set the folder name for Cloudinary uploads
         next();
     },
-    uploadOptions.array('permits', 10),
+    uploadOptions.array('images', 10),
     async (req, res) => {
+        console.log(req.body)
         try {
-            // Create user object
+            // Validate email uniqueness
+            const emailExists = await User.findOne({ email: req.body.email });
+            if (emailExists) {
+                return res.status(400).json({  success: false, message: 'NOT_UNIQUE_EMAIL' });
+            }
+
+            // Validate contactNumber uniqueness and max length
+            const contactExists = await User.findOne({ contactNumber: req.body.contactNumber });
+            if (contactExists) {
+                return res.status(400).json({  success: false, message: 'NOT_UNIQUE_CONTACT_NUMBER' });
+            }
+
+            // Create and save user object
             let user = new User({
                 email: req.body.email,
                 passwordHash: bcrypt.hashSync(req.body.password, 10),
@@ -223,7 +318,6 @@ router.post(
             });
 
             user = await user.save();
-
             if (!user) {
                 return res.status(400).send('The user cannot be created!');
             }
@@ -233,19 +327,51 @@ router.post(
 
             // Handle role-specific logic
             if (user.role === 'Customer') {
-                let disease = await Diseases.findOne({ name: req.body.diseases });
-                if (!disease) {
-                    disease = new Diseases({ name: req.body.diseases });
-                    disease = await disease.save();
+                // Handle Customer-specific logic for files
+                const files = req.files;
+                if (!files || files.length === 0) {
+                    return res.status(400).send('No images in the request');
                 }
 
-                const customer = new Customer({
-                    userInfo: user.id,
-                    disease: disease.id,
-                });
+                const imagesPaths = files.map(file => file.path);
 
-                await customer.save();
+                try {
+                    // Handle diseases if present
+                    console.log(req.body.disease)
+                    if (req.body.disease) {
+                        let disease = await Diseases.findOne({ name: req.body.disease });
+                        if (!disease) {
+                            disease = new Diseases({ name: req.body.disease });
+                            disease = await disease.save();
+                        }
+
+                        const customer = new Customer({
+                            images: imagesPaths,
+                            userInfo: user.id,
+                            disease: disease.id,
+                        });
+
+                        await customer.save();
+                    } else {
+                        // No disease, so save with null
+                        const customer = new Customer({
+                            images: imagesPaths,
+                            userInfo: user.id,
+                            disease: null,
+                        });
+
+                        await customer.save();
+                    }
+
+                    return res.status(201).json({ message: 'Customer created successfully' });
+
+                } catch (error) {
+                    console.error(error);
+                    return res.status(500).json({ message: 'Error creating customer' });
+                }
+
             } else if (user.role === 'PharmacyOwner') {
+                // Handle PharmacyOwner-specific logic for files
                 const files = req.files;
                 if (!files || files.length === 0) {
                     return res.status(400).send('No permits in the request');
@@ -255,7 +381,7 @@ router.post(
 
                 const newPharmacy = new Pharmacy({
                     userInfo: user.id,
-                    permits: permitPaths,
+                    images: permitPaths,
                     location: {
                         latitude: parseFloat(req.body.latitude),
                         longitude: parseFloat(req.body.longitude),
@@ -263,19 +389,22 @@ router.post(
                 });
 
                 await newPharmacy.save();
+                return res.status(201).json({ message: 'Pharmacy created successfully' });
             }
 
-            // Respond with the user ID
+            // Respond with the user ID if no role-specific logic
             return res.status(201).json({
                 message: 'Registration successful',
                 userId: user.id,
             });
+
         } catch (err) {
             console.error(err);
-            res.status(500).json({ success: false, error: err.message });
+            return res.status(500).json({ success: false, error: err.message });
         }
     }
 );
+
 
 const sendOTPVerificationEmail = async ({ _id, email }) => {
     try {
@@ -316,53 +445,52 @@ const sendOTPVerificationEmail = async ({ _id, email }) => {
 
 // verify otp email
 router.post('/verifyOTP', async (req, res) => {
+    const { userId, otp } = req.body; 
+    console.log("Received OTP:", otp);
+
     try {
-        let { userId, otp } = req.body;
-        if (!userId || !otp) {
-            throw Error("Empty otp details are not allowed");
-        } else {
-            const UserOTPVerificationRecords = await UserOTPVerification.find({
-                userId,
-            });
-            if (UserOTPVerificationRecords.length <= 0) {
-                //no record found
-                throw new Error(
-                    "Account record doesn't exist or has been verified already"
-                );
-            } else {
-                // user otp record exists
-                const { expiresAt } = UserOTPVerificationRecords[0];
-                const hashedOTP = UserOTPVerificationRecords[0].otp;
+        // Fetch the OTP record from the store using userId
+        const otpRecord = otpStore[userId];
 
-                if (expiresAt < Date.now()) {
-                    //user otp has expired
-                    await UserOTPVerification.deleteMany({ userId });
-                    throw new Error("Code has expired. Please request again");
-                } else {
-                    const validOTP = await bcrypt.compare(otp, hashedOTP);
+        console.log("OTP record found:", otpRecord);
 
-                    if (!validOTP) {
-                        //supplied otp is wrong
-                        throw new Error("Invalid code passed. Check your inbox");
-                    } else {
-                        //sucess
-                        await User.updateOne({ _id: userId }, { verified: true});
-                        await UserOTPVerification.deleteMany({userId});
-                        res.json({
-                            status: "VERIFIED",
-                            message: `User email verified successfully.`,
-                        })
-                    }
-                }
-            }
+        // Check if the OTP record exists
+        if (!otpRecord) {
+            return res.status(400).json({ message: 'OTP not found or expired' });
         }
-    } catch (error) {
-      res.json({
-        status: "FAILED",
-        message: error.message,
-      })
+
+        // Check if the OTP has expired
+        if (Date.now() > otpRecord.expiresAt) {
+            // OTP expired, so we remove it from the store
+            delete otpStore[userId]; 
+            return res.status(400).json({ message: 'OTP has expired' });
+        }
+
+        // Compare the plain OTP with the hashed OTP
+        const isValidOTP = await bcrypt.compare(otp, otpRecord.otp);
+        console.log("Is OTP valid:", isValidOTP);
+
+        // If the OTP is valid
+        if (isValidOTP) {
+            delete otpStore[userId];  // Remove OTP after successful verification
+            await User.updateOne({ _id: userId }, { verified: true });
+            
+            // Send success response
+            return res.json({
+                status: "VERIFIED",
+                message: `User email verified successfully.`,
+            });
+        }
+
+        // If the OTP is invalid
+        return res.status(400).json({ message: 'Invalid OTP' });
+    } catch (err) {
+        console.error("Error verifying OTP:", err);
+        // Send a generic error response in case of any issues
+        return res.status(500).json({ message: 'Error verifying OTP' });
     }
 });
+
 
 // resend verification
 router.post('/resendOTPVerificationCode', async (req, res) => {
@@ -393,6 +521,7 @@ router.post('/login', async (req, res) => {
         const user = await User.findOne({ email: req.body.email });
         const secret = process.env.secret;
 
+        
         if (!user) {
             // Email not found
             return res.status(400).json({ success: false, message: 'EMAIL_NOT_FOUND' });

@@ -37,9 +37,6 @@ const userSchema = new mongoose.Schema({
         enum: ["PharmacyOwner", "Customer", "Admin"],
         required: true
     },
-    images: [{
-        type: String
-    }],
     verified: {
         type: Boolean,
     },

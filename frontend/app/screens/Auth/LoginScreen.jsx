@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import AuthGlobal from '../../../context/AuthGlobal';
 import { loginUser } from '../../../context/AuthActions';
@@ -7,67 +7,97 @@ import { useRouter } from 'expo-router';
 import Toast from "react-native-toast-message";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Add this import
+import baseURL from "../../../assets/common/baseurl";
+import axios from "axios";
 
 const LoginScreen = () => {
-  const { state, dispatch } = useContext(AuthGlobal); 
+  const { state, dispatch } = useContext(AuthGlobal);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
   const router = useRouter();
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let errorMessages = {};
+    if (!email) errorMessages.email = "EMAIL IS REQUIRED";
+    if (!password) errorMessages.password = "PASSWORD IS REQUIRED"
+
+    return errorMessages;
+  };
 
   const handleSubmit = async () => {
     const user = { email: email.trim(), password: password.trim() };
     const response = await loginUser(user, dispatch);
 
-    if (response.success) {
-        router.push('../../(tabs)');
-        Toast.show({
-          topOffset: 60,
-          type: "success",
-          text1: "LOGIN SUCCESSFUL",
-        })
-    } else {
-        switch (response.message) {
-            case "EMAIL_NOT_FOUND":
-                Toast.show({
-                    topOffset: 60,
-                    type: "error",
-                    text1: "EMAIL IS NOT EXISTING",
-                    text2: "PLEASE CHECK YOUR EMAIL AND TRY AGAIN.",
-                });
-                break;
-                case "USER_NOT_VERIFIED":
-                  Toast.show({
-                      topOffset: 60,
-                      type: "error",
-                      text1: "YOU'RE NOT VERIFIED",
-                  });
-                  break;              
-            case "NETWORK_ERROR":
-                Toast.show({
-                    topOffset: 60,
-                    type: "error",
-                    text1: "NETWORK ERROR",
-                    text2: "UNABLE TO CONNECT TO THE SERVER. PLEASE TRY AGAIN LATER",
-                });
-                break;
-              case "INCORRECT_PASSWORD":
-                  Toast.show({
-                      topOffset: 60,
-                      type: "error",
-                      text1: "INCORRECT PASSWORD",
-                  });
-                  break;
-            default:
-                Toast.show({
-                    topOffset: 60,
-                    type: "error",
-                    text1: "LOGIN FAILED",
-                    text2: "AN UNEXPECTED ERROR OCUURED. PLEASE TRY AGAIN LATER.",
-                });
-        }
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (email === '' || password === '') {
+      return;
     }
-};
+
+    console.log(response.message)
+    if (response.message === "USER_NOT_VERIFIED")
+      {
+        const res = await axios.post(`${baseURL}users/checkEmail`, { email });
+         router.push({
+            pathname: '/screens/Auth/OTPVerification/VerifyOTP',
+            params: { userId: res.data.userId },
+          });
+        }
+
+    if (response.success) {
+      router.push('../../(tabs)');
+      Toast.show({
+        topOffset: 60,
+        type: "success",
+        text1: "LOGIN SUCCESSFUL",
+      })
+    } else {
+      switch (response.message) {
+        case "EMAIL_NOT_FOUND":
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "EMAIL IS NOT EXISTING",
+            text2: "PLEASE CHECK YOUR EMAIL AND TRY AGAIN.",
+          });
+          break;
+        case "USER_NOT_VERIFIED":
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "YOU'RE NOT VERIFIED",
+            text2: "REDIRECTING TO VERIFICATION PAGE",
+
+          });
+          break;
+        case "NETWORK_ERROR":
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "NETWORK ERROR",
+            text2: "UNABLE TO CONNECT TO THE SERVER. PLEASE TRY AGAIN LATER",
+          });
+          break;
+        case "INCORRECT_PASSWORD":
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "INCORRECT PASSWORD",
+          });
+          break;
+        default:
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "LOGIN FAILED",
+            text2: "AN UNEXPECTED ERROR OCUURED. PLEASE TRY AGAIN LATER.",
+          });
+      }
+    }
+  };
 
   AsyncStorage.getAllKeys((err, keys) => {
     AsyncStorage.multiGet(keys, (error, stores) => {
@@ -87,30 +117,34 @@ const LoginScreen = () => {
       <View style={styles.lowerSection}>
         <Text style={styles.welcomeBackText}>Welcome back!</Text>
         <Text style={styles.subText}>Log in to your account</Text>
-        <TextInput 
-          style={styles.input} 
-          placeholder="Email Address" 
-          placeholderTextColor="#AAB4C1" 
-          value={email} 
-          onChangeText={setEmail} 
+        <TextInput
+          style={styles.input}
+          placeholder="Email Address"
+          placeholderTextColor="#AAB4C1"
+          value={email}
+          onChangeText={setEmail}
         />
+        {errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
+
         <View style={styles.passwordContainer}>
-          <TextInput 
-            style={[styles.inputPass, { flex: 1 }]} 
-            placeholder="Password" 
-            placeholderTextColor="#AAB4C1" 
-            secureTextEntry={!showPassword} 
-            value={password} 
-            onChangeText={setPassword} 
+          <TextInput
+            style={[styles.inputPass, { flex: 1 }]}
+            placeholder="Password"
+            placeholderTextColor="#AAB4C1"
+            secureTextEntry={!showPassword}
+            value={password}
+            onChangeText={setPassword}
           />
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
-            <Icon 
-              name={showPassword ? "eye-off" : "eye"} 
-              size={24} 
-              color="#AAB4C1" 
+            <Icon
+              name={showPassword ? "eye-off" : "eye"}
+              size={24}
+              color="#AAB4C1"
             />
           </TouchableOpacity>
         </View>
+        {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
+
         <TouchableOpacity style={styles.loginButton} onPress={handleSubmit}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
@@ -220,6 +254,13 @@ const styles = StyleSheet.create({
   signupLink: {
     color: '#357B8E',
     fontWeight: '600',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 12,
+    marginTop: -4,
+    marginBottom: 5,
+    textAlign: 'center',
   },
 });
 

@@ -20,7 +20,7 @@ const HomeScreen = () => {
         if (token) {
           const decoded = jwtDecode(token);
           const userId = decoded?.userId;
-
+  
           if (userId) {
             const response = await fetch(`${baseURL}users/${userId}`, {
               method: 'GET',
@@ -29,19 +29,20 @@ const HomeScreen = () => {
                 Authorization: `Bearer ${token}`,
               },
             });
-
-            if (!response.ok) throw new Error('Failed to fetch user data');
+  
+            if (!response.ok) throw new Error('FAILED TO FETCH USER PROFILE');
             const data = await response.json();
             setUserData(data); // Set user data for profile
           }
         }
       } catch (error) {
-        Alert.alert('Error', error.message);
+        Alert.alert('PLEASE LOG IN FIRST');
       }
     };
-
+  
     fetchUserData();
   }, [state.isAuthenticated]); // Only fetch when the auth state changes
+  
 
   if (state.isAuthenticated) {
     // If user is authenticated, show ViewProfile
