@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter, useSearchParams } from 'expo-router';
 import axios from 'axios';
@@ -17,6 +17,7 @@ export default function ReadUserScreen() {
         try {
           const response = await axios.get(`${baseURL}users/${id}`);
           setUser(response.data);
+          console.log(response.data)
         } catch (err) {
           console.error('Error fetching user details:', err);
         } finally {
@@ -58,9 +59,13 @@ export default function ReadUserScreen() {
 
       {/* User Details */}
       <View style={styles.detailsContainer}>
-        <Image
-          source={user.image ? { uri: user.image } : require('@/assets/images/sample.jpg')}
-          style={styles.image}
+      <FlatList
+          data={user.customerDetails?.images}
+          horizontal
+          renderItem={({ item: image }) => (
+            <Image source={{ uri: image }} style={styles.image} />
+          )}
+          keyExtractor={(image, index) => index.toString()}
         />
         <Text style={styles.label}>Name:</Text>
         <Text style={styles.value}>{user.name}</Text>
@@ -109,6 +114,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 10,
+    marginHorizontal: 5,
     marginBottom: 20,
   },
   label: {

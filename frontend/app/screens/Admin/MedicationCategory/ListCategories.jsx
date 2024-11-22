@@ -28,7 +28,7 @@ export default function MedicationCategoriesScreen() {
   const renderItem = ({ item }) => (
     <TouchableOpacity 
       style={styles.row} 
-      onPress={() => router.push(`/screens/PharmacyOwner/MedicationCategory/ReadCategory?id=${item._id}`)}
+      onPress={() => router.push(`/screens/Admin/MedicationCategory/ReadCategory?id=${item._id}`)}
     >    
       {/* Render Images */}
       <View style={styles.imageContainer}>
@@ -92,7 +92,7 @@ export default function MedicationCategoriesScreen() {
 
       {/* Create Button */}
       <TouchableOpacity 
-        onPress={() => router.push('/screens/PharmacyOwner/MedicationCategory/CreateCategory')} 
+        onPress={() => router.push('/screens/Admin/MedicationCategory/CreateCategory')} 
         style={styles.createButton}
       >
         <Text style={styles.createButtonText}>Create Category</Text>

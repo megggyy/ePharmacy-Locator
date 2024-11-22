@@ -86,6 +86,28 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+router.put(
+  "/approved/:id",
+  async (req, res) => {
+      try {
+          const approvedPharmacy = await Pharmacy.findByIdAndUpdate(
+              req.params.id,
+              {
+                  approved: true,
+              },
+              { new: true }
+          );
+
+          if (!approvedPharmacy)
+              return res
+                  .status(404)
+                  .json({ message: "Pharmacy not found" });
+          res.status(200).json(approvedPharmacy);
+      } catch (error) {
+          res.status(500).json({ success: false, message: error.message });
+      }
+  }
+);
 
   
 

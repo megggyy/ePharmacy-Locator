@@ -9,12 +9,6 @@ export default function EditPharmacy() {
   const [storeHours, setStoreHours] = useState('8:00am - 5:00pm');
   const [location, setLocation] = useState('New Lower Bicutan');
 
-  const handleConfirm = () => {
-    // Add functionality for confirming pharmacy update
-    console.log('Pharmacy Updated');
-    router.back();
-  };
-
   return (
     <View style={styles.container}>
       {/* Back Button */}

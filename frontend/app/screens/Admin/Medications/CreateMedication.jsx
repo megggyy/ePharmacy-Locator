@@ -13,32 +13,9 @@ export default function CreateMedication() {
 
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [stock, setStock] = useState('');
-  const [pharmacyId, setPharmacyId] = useState('');  // Changed to pharmacyId
   const [categoryId, setCategoryId] = useState('');
   const [imageUris, setImageUris] = useState([]);
-  const [pharmacies, setPharmacies] = useState([]);
   const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    const fetchPharmacies = async () => {
-      try {
-        // Fetch users with the role 'PharmacyOwner'
-        const pharmaciesResponse = await axios.get(`${baseURL}pharmacies`);
-        
-        // Extract pharmacy details from users
-        setPharmacies(pharmaciesResponse.data.map(pharmacies => ({
-            label: pharmacies.userInfo.name,  // Display the pharmacy owner's name
-            value: pharmacies._id  // Store the pharmacy ID
-        })));
-      } catch (error) {
-        console.error('Error fetching pharmacies:', error);
-        Alert.alert('Error', 'Failed to load pharmacies');
-      }
-    };
-    fetchPharmacies();
-  }, []);
-
 
 //   useEffect(() => {
 //     const fetchPharmacies = async () => {
@@ -106,8 +83,6 @@ export default function CreateMedication() {
 
     formData.append('name', name);
     formData.append('description', description);
-    formData.append('stock', stock);
-    formData.append('pharmacy', pharmacyId);  // Changed to pharmacyId
     formData.append('category', categoryId);
 
     try {
@@ -116,7 +91,7 @@ export default function CreateMedication() {
           "Content-Type": "multipart/form-data"
         }
       };
-      const response = await axios.post(`${baseURL}medicine/create`, formData, config);
+      const response = await axios.post(`${baseURL}medicine/admin/create`, formData, config);
       if (response.data) {
         Alert.alert('Success', 'Medication created successfully');
         router.back();
@@ -165,32 +140,6 @@ export default function CreateMedication() {
           onChangeText={setDescription}
           placeholder="Enter description"
         />
-
-        <Text style={styles.label}>Stock</Text>
-        <TextInput
-          style={styles.input}
-          value={stock}
-          onChangeText={setStock}
-          keyboardType="numeric"
-          placeholder="Enter stock quantity"
-        />
-
-        <Text style={styles.label}>Pharmacy</Text>
-        {/* <RNPickerSelect
-          onValueChange={(value) => setPharmacyId(value)}  // Changed to pharmacyId
-          items={pharmacies}
-          style={pickerSelectStyles}
-          placeholder={{ label: "Select a pharmacy", value: null }}
-        /> */}
-         <RNPickerSelect
-        onValueChange={(value) => setPharmacyId(value)}
-        items={pharmacies}
-        placeholder={{ label: 'Select Pharmacy', value: null }}
-        style={pickerSelectStyles}
-        Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
-      /> 
-      
-  
 
         <Text style={styles.label}>Category</Text>
         {/* <RNPickerSelect

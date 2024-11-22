@@ -14,7 +14,7 @@ export default function EditMedicationScreen() {
     React.useCallback(() => {
       const fetchMedications = async () => {
         try {
-          const response = await axios.get(`${baseURL}medicine`); // Replace with your actual URL
+          const response = await axios.get(`${baseURL}medicine/admin`); // Replace with your actual URL
           setMedications(response.data);
         } catch (error) {
           console.error('Error fetching medications:', error);
@@ -28,7 +28,7 @@ export default function EditMedicationScreen() {
 
   const handleDelete = async (medicationId) => {
       try {
-      await axios.delete(`${baseURL}medicine/delete/${medicationId}`);
+      await axios.delete(`${baseURL}medicine/admin/delete/${medicationId}`);
       setMedications(medications.filter(medication => medication._id !== medicationId));
       Alert.alert('Success', 'Medicine deleted successfully');
     } catch (error) {
@@ -41,17 +41,16 @@ export default function EditMedicationScreen() {
   const renderItem = ({ item }) => (
     <TouchableOpacity 
     style={styles.row} 
-    onPress={() => router.push(`/screens/PharmacyOwner/Medications/ReadMedication?id=${item._id}`)}>
+    onPress={() => router.push(`/screens/Admin/Medications/ReadMedication?id=${item._id}`)}>
       {/* <Text style={styles.cell}>{item.id}</Text> */}
       <Image source={{ uri: item.images[0] }} style={styles.image} /> 
+      <Text style={styles.cell}>{item.name}</Text>
       <Text style={styles.cell}>{item.description}</Text>
       <Text style={styles.cell}>{item.category.name}</Text>
-      <Text style={styles.cell}>{item.stock}</Text>
-      <Text style={styles.cell}>{item.pharmacy.userInfo.name}</Text>
-
+      
       {/* Action Column */}
       <View style={styles.actionCell}>
-        <TouchableOpacity onPress={() => router.push(`/screens/PharmacyOwner/Medications/EditMedication?id=${item._id}`)} style={styles.actionButton}>
+        <TouchableOpacity onPress={() => router.push(`/screens/Admin/Medications/EditMedication?id=${item._id}`)} style={styles.actionButton}>
           <Ionicons name="create-outline" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.actionButton}>
@@ -72,7 +71,7 @@ export default function EditMedicationScreen() {
       </View>
       {/* Create Button */}
       <TouchableOpacity 
-            onPress={() => router.push('/screens/PharmacyOwner/Medications/CreateMedication')} 
+            onPress={() => router.push('/screens/Admin/Medications/CreateMedication')} 
             style={styles.createButton}
           >
             <Text style={styles.createButtonText}>Create Medicine</Text>
@@ -82,10 +81,9 @@ export default function EditMedicationScreen() {
       <View style={styles.tableHeader}>
         {/* <Text style={styles.headerCell}>ID</Text> */}
         <Text style={styles.headerCell}>Image</Text>
+        <Text style={styles.headerCell}>Name</Text>
         <Text style={styles.headerCell}>Description</Text>
         <Text style={styles.headerCell}>Category</Text>
-        <Text style={styles.headerCell}>Stock</Text>
-        <Text style={styles.headerCell}>Pharmacy</Text>
         <Text style={styles.headerCell}>Actions</Text>
       </View>
       <FlatList

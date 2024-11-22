@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import baseURL from '@/assets/common/baseurl';
+import axios from 'axios';
 
 export default function PharmacyTableScreen() {
   const router = useRouter();
@@ -24,9 +25,11 @@ export default function PharmacyTableScreen() {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.row} onPress={() => router.push(`/screens/Admin/Pharmacies/ReadPharmacy?id=${item._id}`)}>
-      <Image source={{ uri: item.image || 'https://via.placeholder.com/50' }} style={styles.image} />
+      <Image source={{ uri: item.images[0] }} style={styles.image} />
       <Text style={styles.nameCell}>{item.userInfo.name}</Text>
       <Text style={styles.locationCell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
+      <Text style={styles.statusCell}>{item.approved ? 'APPROVED' : 'PENDING'}</Text>
+
     </TouchableOpacity>
   );
 
@@ -47,7 +50,9 @@ export default function PharmacyTableScreen() {
         <Text style={styles.imageHeaderCell}>Image</Text>
         <Text style={styles.nameHeaderCell}>Name</Text>
         <Text style={styles.locationHeaderCell}>Location</Text>
-      </View>
+        <Text style={styles.statusHeaderCell}>Status</Text>
+        
+        </View>
 
       <FlatList
         data={pharmacies}
@@ -110,6 +115,10 @@ const styles = StyleSheet.create({
     flex: 3,
     textAlign: 'center',
   },
+  statusHeaderCell: {
+    flex: 1,
+    textAlign: 'center',
+  },
   table: {
     paddingHorizontal: 10,
   },
@@ -133,8 +142,25 @@ const styles = StyleSheet.create({
     color: '#333333',
   },
   locationCell: {
+    flex: -2,
+    textAlign: 'center',
+    color: '#333333',
+  },
+  statusCell: {
     flex: 3,
     textAlign: 'center',
     color: '#333333',
+  },
+  approveButton: {
+    backgroundColor: 'black',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 5,
+    marginLeft: 10,
+  },
+  approveButtonText: {
+    color: 'white',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });

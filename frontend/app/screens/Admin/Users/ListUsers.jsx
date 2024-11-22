@@ -15,6 +15,7 @@ export default function UserTableScreen() {
         const response = await fetch(`${baseURL}users`);
         const data = await response.json();
         setUsers(data); // Set the users in state
+        console.log(data)
       } catch (err) {
         console.error('Error fetching users:', err);
       }
@@ -25,7 +26,7 @@ export default function UserTableScreen() {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.row} onPress={() => router.push(`/screens/Admin/Users/ReadUser?id=${item._id}`)}>
-      <Image source={item.image ? { uri: item.image } : require('@/assets/images/sample.jpg')} style={styles.image} />
+      <Image source={{ uri: item.customerDetails.images[0] }} style={styles.image} /> 
       <Text style={styles.cell}>{item.name}</Text>
       <Text style={styles.cell}>{`${item.street}, ${item.barangay}, ${item.city}`}</Text>
       <Text style={styles.cell}>
@@ -124,7 +125,6 @@ const styles = StyleSheet.create({
     color: '#333333',
   },
   image: {
-    flex: 0.8,
     width: 50,
     height: 50,
     resizeMode: 'cover',

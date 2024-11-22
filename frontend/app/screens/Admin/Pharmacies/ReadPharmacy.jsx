@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator, FlatList, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import axios from 'axios';
@@ -26,6 +26,21 @@ export default function ReadPharmacyScreen() {
       fetchPharmacy();
     }
   }, [id]);
+
+  const handleApprove = async (id) => {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      };
+      await axios.put(`${baseURL}pharmacies/approved/${id}`, config);
+      Alert.alert('Success', 'PHARMACY IS APPROVED');
+    } catch (error) {
+      console.error('Error updating medication:', error);
+      Alert.alert('Error', 'Failed to approve pharmacy');
+    }
+  };
 
   if (loading) {
     return (
@@ -58,9 +73,13 @@ export default function ReadPharmacyScreen() {
 
       {/* Pharmacy Details */}
       <View style={styles.detailsContainer}>
-        <Image
-          source={pharmacy.image ? { uri: pharmacy.image } : require('@/assets/images/sample.jpg')}
-          style={styles.image}
+        <FlatList
+          data={pharmacy.images}
+          horizontal
+          renderItem={({ item: image }) => (
+            <Image source={{ uri: image }} style={styles.image} />
+          )}
+          keyExtractor={(image, index) => index.toString()}
         />
         <Text style={styles.label}>Name:</Text>
         <Text style={styles.value}>{pharmacy.userInfo.name}</Text>
@@ -69,6 +88,15 @@ export default function ReadPharmacyScreen() {
         <Text style={styles.label}>Contact Number:</Text>
         <Text style={styles.value}>{pharmacy.userInfo.contactNumber || 'N/A'}</Text>
       </View>
+
+      {/* Approve Button */}
+      <TouchableOpacity
+        style={styles.confirmButton}
+        onPress={() => handleApprove(pharmacy._id)}
+        disabled={pharmacy.approved} // Disable if approved
+      >
+        <Text style={styles.confirmButtonText}>{pharmacy.approved ? 'Approved' : 'Approve'}</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -102,6 +130,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 10,
+    marginHorizontal: 5,
     marginBottom: 20,
   },
   label: {
@@ -124,5 +153,17 @@ const styles = StyleSheet.create({
     color: 'red',
     textAlign: 'center',
     marginTop: 20,
+  },
+  confirmButton: {
+    backgroundColor: '#0B607E',
+    paddingVertical: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginHorizontal: 20,
+  },
+  confirmButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });

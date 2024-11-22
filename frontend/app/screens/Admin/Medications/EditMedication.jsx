@@ -25,16 +25,14 @@ export default function EditMedicationScreen() {
   useEffect(() => {
     const fetchMedication = async () => {
       try {
-        const response = await axios.get(`${baseURL}medicine/${id}`);
+        const response = await axios.get(`${baseURL}medicine/admin/${id}`);
         const medication = response.data;
         setName(medication.name);
         setDescription(medication.description);
         setCategory(medication.category.name);  // Display category name
         setCategoryId(medication.category._id);  // Store category ID
-        setStock(medication.stock.toString());
         setImages(medication.images || []);
-        setPharmacy(medication.pharmacy.userInfo.name);  // Display pharmacy name
-        setPharmacyId(medication.pharmacy._id);  // Store pharmacy ID
+  // Store pharmacy ID
       } catch (error) {
         console.error('Error fetching medication:', error);
         Alert.alert('Error', 'Failed to load medication details');
@@ -102,7 +100,7 @@ export default function EditMedicationScreen() {
           "Content-Type": "multipart/form-data"
         }
       };
-      await axios.put(`${baseURL}medicine/update/${id}`, formData, config);
+      await axios.put(`${baseURL}medicine/admin/update/${id}`, formData, config);
       Alert.alert('Success', 'Medication updated successfully');
       router.back();
     } catch (error) {
@@ -159,21 +157,6 @@ export default function EditMedicationScreen() {
           Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
           value={categoryId}
           placeholder={{ label: category, value: category }}
-        />
-
-        <Text style={styles.label}>Stock</Text>
-        <TextInput
-          style={styles.input}
-          value={stock}
-          onChangeText={setStock}
-          keyboardType="numeric"
-        />
-        
-       <Text style={styles.label}>Pharmacy</Text>
-        <TextInput
-          style={styles.input}
-          value={pharmacy}
-          editable={false}  // Disable editing
         />
       </View>
 
