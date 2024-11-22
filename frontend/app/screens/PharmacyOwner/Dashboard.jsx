@@ -1,18 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react'; 
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { BarChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
+import AuthGlobal from '@/context/AuthGlobal';
 
 const screenWidth = Dimensions.get("window").width;
 
 export default function PharmacyOwnerDashboard() {
   const [totalMedications, setTotalMedications] = useState(0);
   const [medicationData, setMedicationData] = useState([]);
+  const [userProfile, setUserProfile] = useState({});
+  const { state } = useContext(AuthGlobal);
   const router = useRouter();
   
-  // Sample data: Replace this with actual data from an API or database
+  // Fetch user data and medications
+  useEffect(() => {
+    if (state.isAuthenticated) {
+      // Fetch user profile data
+      axios
+        .get(`${baseURL}users/${state.user.userId}`)
+        .then((res) => {
+          setUserProfile(res.data);
+        })
+        .catch((err) => {
+          console.error("Error fetching user profile:", err);
+        });
+
+      // Fetch medications data
+      axios
+        .get(`${baseURL}medicine`) // Adjust this to your actual endpoint
+        .then((res) => {
+          const medications = res.data;
+          setTotalMedications(medications.length);
+          // You can process this data to set medication categories if needed
+        })
+        .catch((err) => {
+          console.error("Error fetching medications:", err);
+        });
+    } else {
+      router.push('/login'); // Redirect if not authenticated
+    }
+  }, [state.isAuthenticated, state.user.userId]);
+
+  // Sample data for medication categories (you can replace this with your API data)
   useEffect(() => {
     const sampleData = [
       { category: "Antibiotics", count: 40 },
@@ -22,12 +56,9 @@ export default function PharmacyOwnerDashboard() {
       { category: "Allergy", count: 15 }
     ];
     setMedicationData(sampleData);
-
-    const totalCount = sampleData.reduce((sum, item) => sum + item.count, 0);
-    setTotalMedications(totalCount);
   }, []);
 
-  // Prepare data for the chart
+  // Prepare chart data
   const chartData = {
     labels: medicationData.map(item => item.category),
     datasets: [
@@ -45,10 +76,11 @@ export default function PharmacyOwnerDashboard() {
           <Ionicons name="menu" size={30} color="white" />
         </TouchableOpacity>
         <View style={styles.userInfo}>
-          <Text style={styles.userName}>Shanai Meg Honrado</Text>
-          <Text style={styles.userRole}>Phawmacy Owner</Text>
+          <Text style={styles.userName}>{userProfile?.name || "Loading..."}</Text>
+          <Text style={styles.userRole}>Pharmacy Owner</Text>
         </View>
       </View>
+
       {/* Total Medications Summary */}
       <View style={styles.summaryCard}>
         <Text style={styles.summaryTitle}>Total Medications</Text>
@@ -86,7 +118,7 @@ export default function PharmacyOwnerDashboard() {
       />
 
       {/* Manage Medications Button */}
-      <TouchableOpacity style={styles.manageButton}>
+      <TouchableOpacity style={styles.manageButton} onPress={() => router.push('/screens/PharmacyOwner/Medications/ListMedications')} >
         <Text style={styles.manageButtonText}>Manage Medications</Text>
         <Ionicons name="chevron-forward" size={24} color="white" />
       </TouchableOpacity>

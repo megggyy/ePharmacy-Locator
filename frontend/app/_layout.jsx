@@ -37,13 +37,14 @@ export default function RootLayout() {
             {/* AUTH */}
             <Stack.Screen name="screens/Auth/LoginScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Auth/SignupRoleScreen" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/ForgotPassword/ForgotPassword" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/ForgotPassword/ResetOTP" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/ForgotPassword/ResetPassword" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/OTPVerification/ReVerifyOTP" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/OTPVerification/VerifyOTP" options={{ headerShown: false }} />
 
             {/* USER */}
             <Stack.Screen name="screens/User/Account/CustomerSignupScreen" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/User/Account/VerifyOTP" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/User/Account/ResetOTP" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/User/Account/ForgotPassword" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/User/Account/ResetPassword" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/EditProfileScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/ViewProfileScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/ChangePassword" options={{ headerShown: false }} />
