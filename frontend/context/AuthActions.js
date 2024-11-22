@@ -23,8 +23,9 @@ export const loginUser = async (user, dispatch) => {
             const token = data.token;
             await AsyncStorage.setItem("jwt", token); // Store JWT in AsyncStorage
             const decoded = jwtDecode(token); // Decode the JWT token
+            const role = decoded.role; // Extract the role from decoded token
             dispatch(setCurrentUser(decoded, user)); // Dispatch the decoded user data to store
-            return { success: true };
+            return { success: true, role }; // Pass role back to caller
         } else {
             // Return error message for handling in LoginScreen
             return { success: false, message: data.message };
@@ -34,6 +35,7 @@ export const loginUser = async (user, dispatch) => {
         return { success: false, message: "NETWORK_ERROR" };
     }
 };
+
 
 
 export const setCurrentUser = (decoded, user) => {

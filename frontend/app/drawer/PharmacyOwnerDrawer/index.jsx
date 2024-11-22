@@ -1,17 +1,66 @@
-import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useContext,  useState, useCallback  } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useFocusEffect} from "@react-navigation/native"
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import axios from "axios"
+import Toast from "react-native-toast-message";
+import AuthGlobal from '@/context/AuthGlobal';
+import baseURL from "../../../assets/common/baseurl"
 
 export default function Sidebar() {
   const router = useRouter();
+  const [userProfile, setUserProfile] = useState({});
+  const { state, dispatch } = useContext(AuthGlobal); 
   const [isDropdownVisible, setDropdownVisible] = useState(false); // State to toggle dropdown
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
 
+    
+  useFocusEffect(
+    useCallback(() => {
+        if (state.isAuthenticated === false || state.isAuthenticated === null) {
+            router.push('../screens/Auth/LoginScreen');
+        }
+
+        AsyncStorage.getItem("jwt")
+            .then((res) => {
+                axios
+                    .get(`${baseURL}users/${state.user.userId}`, {
+                        headers: { Authorization: `Bearer ${res}` },
+                    })
+                    .then((user) => {
+                        setUserProfile(user.data);  // Set user data state here
+                        console.log(user.data);      // Now the data will be logged after the state is updated
+                    })
+                    .catch((error) => console.log(error));
+            })
+            .catch((error) => console.log(error));
+
+        return () => {
+            setUserProfile(); // Reset user profile on cleanup
+        };
+    }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
+);
+
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem('jwt');
+      dispatch({ type: 'LOGOUT_USER' });
+      router.replace('/(tabs)'); 
+      Toast.show({
+        topOffset: 60,
+        type: "success",
+        text1: "LOGOUT SUCCESSFUL",
+      })
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  };
   return (
     <View style={styles.container}>
       {/* Back Button */}
@@ -19,13 +68,13 @@ export default function Sidebar() {
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
 
-      {/* Profile Section */}
-      <View style={styles.profileSection}>
+        {/* Profile Section */}
+        <View style={styles.profileSection}>
         <Image
           source={require('@/assets/images/sample.jpg')} // Replace with actual image
           style={styles.profileImage}
         />
-        <Text style={styles.profileName}>Shanai Meg G. Honrado</Text>
+        <Text style={styles.profileName}>{userProfile?.name}</Text>
       </View>
 
       {/* Admin Menu Section */}
@@ -49,7 +98,7 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Medications</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/(tabs)/account')}>
+        <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>
           <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>

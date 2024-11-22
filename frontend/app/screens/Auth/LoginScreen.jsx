@@ -28,32 +28,48 @@ const LoginScreen = () => {
 
   const handleSubmit = async () => {
     const user = { email: email.trim(), password: password.trim() };
-    const response = await loginUser(user, dispatch);
-
+   
+  
     const validationErrors = validate();
     setErrors(validationErrors);
-
+  
     if (email === '' || password === '') {
       return;
     }
-
-    console.log(response.message)
-    if (response.message === "USER_NOT_VERIFIED")
-      {
-        const res = await axios.post(`${baseURL}users/checkEmail`, { email });
-         router.push({
-            pathname: '/screens/Auth/OTPVerification/VerifyOTP',
-            params: { userId: res.data.userId },
-          });
-        }
-
+    const response = await loginUser(user, dispatch);
+  
+    console.log(response.message);
+    if (response.message === "USER_NOT_VERIFIED") {
+      const res = await axios.post(`${baseURL}users/checkEmail`, { email });
+      router.push({
+        pathname: '/screens/Auth/OTPVerification/VerifyOTP',
+        params: { userId: res.data.userId },
+      });
+    }
+  
     if (response.success) {
-      router.push('../../(tabs)');
+      const role = response.role; // Get role from login response
+
+      // Redirect based on role
+      switch (role) {
+          case 'Customer':
+              router.push('../../(tabs)'); // Redirect to Customer Home
+              break;
+          case 'PharmacyOwner':
+              router.push('/screens/PharmacyOwner/Dashboard'); // Redirect to Pharmacy Owner Dashboard
+              break;
+          case 'Admin':
+              router.push('/screens/Admin/dashboard'); // Redirect to Admin Dashboard
+              break;
+          default:
+              router.push('../../(tabs)'); // Fallback route
+      }
+
       Toast.show({
-        topOffset: 60,
-        type: "success",
-        text1: "LOGIN SUCCESSFUL",
-      })
+          topOffset: 60,
+          type: "success",
+          text1: "LOGIN SUCCESSFUL",
+      });
     } else {
       switch (response.message) {
         case "EMAIL_NOT_FOUND":
@@ -70,7 +86,6 @@ const LoginScreen = () => {
             type: "error",
             text1: "YOU'RE NOT VERIFIED",
             text2: "REDIRECTING TO VERIFICATION PAGE",
-
           });
           break;
         case "NETWORK_ERROR":
@@ -93,11 +108,12 @@ const LoginScreen = () => {
             topOffset: 60,
             type: "error",
             text1: "LOGIN FAILED",
-            text2: "AN UNEXPECTED ERROR OCUURED. PLEASE TRY AGAIN LATER.",
+            text2: "AN UNEXPECTED ERROR OCCURRED. PLEASE TRY AGAIN LATER.",
           });
       }
     }
   };
+  
 
   AsyncStorage.getAllKeys((err, keys) => {
     AsyncStorage.multiGet(keys, (error, stores) => {
