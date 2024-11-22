@@ -23,36 +23,11 @@ export default function PharmacyTableScreen() {
   }, []);
 
   const renderItem = ({ item }) => (
-    // <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/Admin/Pharmacies/ReadPharmacy')}>
-    //   <Text style={styles.cell}>{item._id}</Text>
-    //   <Image source={{ uri: item.image || 'https://via.placeholder.com/50' }} style={styles.image} />
-    //   <Text style={styles.cell}>{item.userInfo.name}</Text>
-    //   <Text style={styles.cell}>{`${item.storeHours?.start || 'N/A'} - ${item.storeHours?.end || 'N/A'}`}</Text>
-    //   <Text style={styles.cell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
-      
-    //   {/* Action Buttons */}
-    //   <View style={styles.actionCell}>
-    //     <TouchableOpacity onPress={() => router.push(`/screens/Admin/Pharmacies/EditPharmacy/${item._id}`)} style={styles.iconButton}>
-    //       <Ionicons name="create-outline" size={24} color="black" />
-    //     </TouchableOpacity>
-    //     <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.iconButton}>
-    //       <Ionicons name="trash-outline" size={24} color="red" />
-    //     </TouchableOpacity>
-    //   </View>
-    // </TouchableOpacity>
-    <TouchableOpacity style={styles.row}>
-    <Image source={{ uri: item.image || 'https://via.placeholder.com/50' }} style={styles.image} />
-    <Text style={styles.nameCell}>{item.userInfo.name}</Text>
-    <Text style={styles.locationCell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
-    <View style={styles.actionCell}>
-      <TouchableOpacity onPress={() => router.push(`/screens/Admin/Pharmacies/EditPharmacy/${item._id}`)} style={styles.iconButton}>
-        <Ionicons name="create-outline" size={24} color="black" />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.iconButton}>
-        <Ionicons name="trash-outline" size={24} color="red" />
-      </TouchableOpacity>
-    </View>
-  </TouchableOpacity>
+    <TouchableOpacity style={styles.row} onPress={() => router.push(`/screens/Admin/Pharmacies/ReadPharmacy?id=${item._id}`)}>
+      <Image source={{ uri: item.image || 'https://via.placeholder.com/50' }} style={styles.image} />
+      <Text style={styles.nameCell}>{item.userInfo.name}</Text>
+      <Text style={styles.locationCell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
+    </TouchableOpacity>
   );
 
   return (
@@ -68,19 +43,10 @@ export default function PharmacyTableScreen() {
 
       {/* Pharmacy Table */}
       <Text style={styles.tableTitle}>Pharmacies</Text>
-      {/* <View style={styles.tableHeader}>
-        <Text style={styles.headerCell}>ID</Text>
-        <Text style={styles.headerCell}>Image</Text>
-        <Text style={styles.headerCell}>Name</Text>
-        <Text style={styles.headerCell}>Store Hours</Text>
-        <Text style={styles.headerCell}>Location</Text>
-        <Text style={styles.headerCell}>Actions</Text>
-      </View> */}
       <View style={styles.tableHeader}>
         <Text style={styles.imageHeaderCell}>Image</Text>
         <Text style={styles.nameHeaderCell}>Name</Text>
         <Text style={styles.locationHeaderCell}>Location</Text>
-        <Text style={styles.actionsHeaderCell}>Actions</Text>
       </View>
 
       <FlatList
@@ -132,9 +98,17 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#CCCCCC',
   },
-  headerCell: {
+  imageHeaderCell: {
+    flex: 0.8,
     textAlign: 'center',
-    fontWeight: 'bold',
+  },
+  nameHeaderCell: {
+    flex: 2,
+    textAlign: 'center',
+  },
+  locationHeaderCell: {
+    flex: 3,
+    textAlign: 'center',
   },
   table: {
     paddingHorizontal: 10,
@@ -145,26 +119,6 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#E0E0E0',
-  },
-  cell: {
-    textAlign: 'center',
-    color: '#333333',
-  },
-  imageHeaderCell: {
-    flex: 0.8, // Matches the image content
-    textAlign: 'center',
-  },
-  nameHeaderCell: {
-    flex: 2, // Matches the name content
-    textAlign: 'center',
-  },
-  locationHeaderCell: {
-    flex: 3, // Matches the location content
-    textAlign: 'center',
-  },
-  actionsHeaderCell: {
-    flex: 1.5, // Matches the action buttons content
-    textAlign: 'center',
   },
   image: {
     flex: 0.8,
@@ -183,13 +137,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
   },
-  actionCell: {
-    flex: 1.5,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  iconButton: {
-    marginHorizontal: 5,
-  },
 });
-

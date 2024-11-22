@@ -24,29 +24,15 @@ export default function UserTableScreen() {
   }, []);
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.row} onPress={() => router.push('/screens/Admin/Users/ReadUser')}>
-      <Text style={styles.cell}>{item._id}</Text>
-      <Image source={item.image} style={styles.image} />
+    <TouchableOpacity style={styles.row} onPress={() => router.push(`/screens/Admin/Users/ReadUser?id=${item._id}`)}>
+      <Image source={item.image ? { uri: item.image } : require('@/assets/images/sample.jpg')} style={styles.image} />
       <Text style={styles.cell}>{item.name}</Text>
-      <Text style={styles.cell}>{item.email}</Text>
-      <Text style={styles.cell}>  {`${item.street}, ${item.barangay}, ${item.city}`} </Text>
-
+      <Text style={styles.cell}>{`${item.street}, ${item.barangay}, ${item.city}`}</Text>
       <Text style={styles.cell}>
         {item.customerDetails && item.customerDetails.disease
           ? item.customerDetails.disease.name
           : 'No Disease Info'}
       </Text>
-
-
-      {/* Action Column */}
-      <View style={styles.actionCell}>
-        <TouchableOpacity onPress={() => router.push('/screens/Admin/Users/EditUser')} style={styles.actionButton}>
-          <Ionicons name="create-outline" size={24} color="black" />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.actionButton}>
-          <Ionicons name="trash-outline" size={24} color="red" />
-        </TouchableOpacity>
-      </View>
     </TouchableOpacity>
   );
 
@@ -63,25 +49,20 @@ export default function UserTableScreen() {
       {/* User Table */}
       <Text style={styles.tableTitle}>Users</Text>
       <View style={styles.tableHeader}>
-        <Text style={styles.headerCell}>ID</Text>
         <Text style={styles.headerCell}>Image</Text>
         <Text style={styles.headerCell}>Name</Text>
-        <Text style={styles.headerCell}>Birthdate</Text>
         <Text style={styles.headerCell}>Address</Text>
-        <Text style={styles.headerCell}>Disease</Text> 
-        <Text style={styles.headerCell}>Actions</Text>
+        <Text style={styles.headerCell}>Disease</Text>
       </View>
       <FlatList
         data={users}
         renderItem={renderItem}
-        keyExtractor={item => item.id ? item.id.toString() : String(Math.random())}
-
+        keyExtractor={(item) => item.id || String(Math.random())}
         style={styles.table}
       />
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -143,17 +124,10 @@ const styles = StyleSheet.create({
     color: '#333333',
   },
   image: {
+    flex: 0.8,
     width: 50,
     height: 50,
     resizeMode: 'cover',
     borderRadius: 5,
-  },
-  actionCell: {
-    flexDirection: 'row', 
-    justifyContent: 'flex-end',
-    flex: 1,
-  },
-  actionButton: {
-    marginHorizontal: 0,
   },
 });

@@ -1,19 +1,50 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 export default function ReadPharmacyScreen() {
   const router = useRouter();
+  const { id } = useLocalSearchParams(); // Get pharmacy ID from query parameters
+  const [pharmacy, setPharmacy] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Sample pharmacy data
-  const pharmacyData = {
-    name: 'Sample Pharmacy',
-    storeHours: '8:00am - 5:00pm',
-    location: 'New Lower Bicutan, Taguig City',
-    contact: '(02) 1234-5678',
-    image: require('@/assets/images/sample.jpg'), // Replace with actual image path or a placeholder image
-  };
+  useEffect(() => {
+    if (id) {
+      const fetchPharmacy = async () => {
+        try {
+          const response = await axios.get(`${baseURL}pharmacies/${id}`);
+          setPharmacy(response.data);
+        } catch (err) {
+          console.error('Error fetching pharmacy details:', err);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchPharmacy();
+    }
+  }, [id]);
+
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0B607E" />
+      </View>
+    );
+  }
+
+  if (!pharmacy) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorMessage}>Pharmacy not found!</Text>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+          <Ionicons name="arrow-back" size={24} color="white" />
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -27,15 +58,16 @@ export default function ReadPharmacyScreen() {
 
       {/* Pharmacy Details */}
       <View style={styles.detailsContainer}>
-        <Image source={pharmacyData.image} style={styles.image} />
+        <Image
+          source={pharmacy.image ? { uri: pharmacy.image } : require('@/assets/images/sample.jpg')}
+          style={styles.image}
+        />
         <Text style={styles.label}>Name:</Text>
-        <Text style={styles.value}>{pharmacyData.name}</Text>
+        <Text style={styles.value}>{pharmacy.userInfo.name}</Text>
         <Text style={styles.label}>Store Hours:</Text>
-        <Text style={styles.value}>{pharmacyData.storeHours}</Text>
-        <Text style={styles.label}>Location:</Text>
-        <Text style={styles.value}>{pharmacyData.location}</Text>
-        <Text style={styles.label}>Contact:</Text>
-        <Text style={styles.value}>{pharmacyData.contact}</Text>
+        <Text style={styles.value}>{`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}</Text>
+        <Text style={styles.label}>Contact Number:</Text>
+        <Text style={styles.value}>{pharmacy.userInfo.contactNumber || 'N/A'}</Text>
       </View>
     </View>
   );
@@ -80,5 +112,17 @@ const styles = StyleSheet.create({
   value: {
     fontSize: 16,
     marginBottom: 20,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5F5F5',
+  },
+  errorMessage: {
+    fontSize: 18,
+    color: 'red',
+    textAlign: 'center',
+    marginTop: 20,
   },
 });

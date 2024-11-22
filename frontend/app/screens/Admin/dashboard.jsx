@@ -1,18 +1,52 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect} from "@react-navigation/native"
 import { BarChart, LineChart } from 'react-native-chart-kit';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import AuthGlobal from '@/context/AuthGlobal';
 
 const screenWidth = Dimensions.get('window').width;
 
 const AdminDashboard = () => {
   const router = useRouter();
+  const [userProfile, setUserProfile] = useState({});
+  const { state, dispatch } = useContext(AuthGlobal);
   const [customersData, setCustomersData] = useState({ labels: [], data: [] });
+  const [counts, setCounts] = useState({
+    users: 0,
+    pharmacies: 0,
+    categories: 0,
+    medicines: 0,
+  });
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [usersRes, pharmaciesRes, categoriesRes, medicinesRes] = await Promise.all([
+          axios.get(`${baseURL}users`),
+          axios.get(`${baseURL}pharmacies`),
+          axios.get(`${baseURL}medication-category`),
+          axios.get(`${baseURL}medicine`),
+        ]);
+
+        setCounts({
+          users: usersRes.data.length,
+          pharmacies: pharmaciesRes.data.length,
+          categories: categoriesRes.data.length,
+          medicines: medicinesRes.data.length,
+        });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const fetchCustomersData = async () => {
@@ -34,6 +68,31 @@ const AdminDashboard = () => {
     fetchCustomersData();
   }, []);
 
+  useFocusEffect(
+    useCallback(() => {
+        if (state.isAuthenticated === false || state.isAuthenticated === null) {
+            router.push('../screens/Auth/LoginScreen');
+        }
+
+        AsyncStorage.getItem("jwt")
+            .then((res) => {
+                axios
+                    .get(`${baseURL}users/${state.user.userId}`, {
+                        headers: { Authorization: `Bearer ${res}` },
+                    })
+                    .then((user) => {
+                        setUserProfile(user.data);  // Set user data state here
+                        console.log(user.data);      // Now the data will be logged after the state is updated
+                    })
+                    .catch((error) => console.log(error));
+            })
+            .catch((error) => console.log(error));
+
+        return () => {
+            setUserProfile(); // Reset user profile on cleanup
+        };
+    }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
+);
   return (
     <ScrollView style={styles.safeArea}>
       {/* Header */}
@@ -45,28 +104,28 @@ const AdminDashboard = () => {
           <Ionicons name="menu" size={30} color="white" />
         </TouchableOpacity>
         <View style={styles.userInfo}>
-          <Text style={styles.userName}>Shanai Meg Honrado</Text>
+          <Text style={styles.userName}>{userProfile?.name}</Text>
           <Text style={styles.userRole}>Admin</Text>
         </View>
       </View>
 
-      {/* Dashboard Cards */}
-      <View style={styles.dashboardCards}>
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>New Pharmacies</Text>
-          <Text style={styles.cardNumber}>1000</Text>
+     {/* Dashboard Cards */}
+     <View style={styles.dashboardCards}>
+        <View style={styles.card} >
+          <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Pharmacies/ListPharmacies')}>Pharmacies</Text>
+          <Text style={styles.cardNumber}>{counts.pharmacies}</Text>
         </View>
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>New Users</Text>
-          <Text style={styles.cardNumber}>500</Text>
+          <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Users/ListUsers')}>Users</Text>
+          <Text style={styles.cardNumber}>{counts.users}</Text>
         </View>
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>Scanned Prescriptions</Text>
-          <Text style={styles.cardNumber}>1000</Text>
+          <Text style={styles.cardTitle} >Categories</Text>
+          <Text style={styles.cardNumber}>{counts.categories}</Text>
         </View>
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>All Pharmacies</Text>
-          <Text style={styles.cardNumber}>500</Text>
+          <Text style={styles.cardTitle}>Medicines</Text>
+          <Text style={styles.cardNumber}>{counts.medicines}</Text>
         </View>
       </View>
 
