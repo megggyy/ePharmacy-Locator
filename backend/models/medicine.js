@@ -9,6 +9,15 @@ const medicineSchema = mongoose.Schema({
         type: String,
         // required: true,
     },
+    stock: {
+        type: Number, 
+        // required: true,
+    },
+    pharmacy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Pharmacy',
+        // required: true,
+    },
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'MedicationCategory',

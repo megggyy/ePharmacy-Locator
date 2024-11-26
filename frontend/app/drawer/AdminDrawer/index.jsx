@@ -1,5 +1,5 @@
 import React, { useContext,  useState, useCallback  } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 import { useFocusEffect} from "@react-navigation/native"
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -66,7 +66,7 @@ export default function Sidebar() {
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
-
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
       {/* Profile Section */}
       <View style={styles.profileSection}>
         <Image
@@ -148,6 +148,7 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>
       </View>
+      </ScrollView>
     </View>
   );
 }
