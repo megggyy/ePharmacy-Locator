@@ -1,68 +1,138 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import React, { useState, useCallback } from "react";
+import {
+  View,
+  Text,
+  ActivityIndicator,
+  StyleSheet,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import { DataTable, Searchbar } from "react-native-paper";
+import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect } from "@react-navigation/native";
+import axios from "axios";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
-import baseURL from '@/assets/common/baseurl';
-import axios from 'axios';
+import baseURL from "../../../../assets/common/baseurl";
+import Spinner from "../../../../assets/common/spinner";
 
-export default function PharmacyTableScreen() {
+var { height, width } = Dimensions.get("window");
+
+const PharmacyTableScreen = () => {
   const router = useRouter();
-  const [pharmacies, setPharmacies] = useState([]);
+  const [pharmaciesList, setPharmaciesList] = useState([]);
+  const [pharmaciesFilter, setPharmaciesFilter] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchPharmacies = async () => {
-      try {
-        const response = await fetch(`${baseURL}pharmacies`);
-        const data = await response.json();
-        setPharmacies(data); // Update state with fetched pharmacies
-      } catch (error) {
-        console.error('Error fetching pharmacies:', error);
-      }
-    };
+  const searchPharmacies = (text) => {
+    if (text === "") {
+      setPharmaciesFilter(pharmaciesList);
+    } else {
+      setPharmaciesFilter(
+        pharmaciesList.filter((i) =>
+          i.name.toLowerCase().includes(text.toLowerCase())
+        )
+      );
+    }
+  };
 
-    fetchPharmacies(); // Fetch pharmacies when component mounts
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      // Fetch pharmaciess
+      axios
+        .get(`${baseURL}pharmacies`)
+        .then((res) => {
+          setPharmaciesList(res.data);
+          setPharmaciesFilter(res.data);
+          setLoading(false);
+        })
+        .catch((err) => console.error(err));
 
-  const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.row} onPress={() => router.push(`/screens/Admin/Pharmacies/ReadPharmacy?id=${item._id}`)}>
-      <Image source={{ uri: item.images[0] }} style={styles.image} />
-      <Text style={styles.nameCell}>{item.userInfo.name}</Text>
-      <Text style={styles.locationCell}>{`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}</Text>
-      <Text style={styles.statusCell}>{item.approved ? 'APPROVED' : 'PENDING'}</Text>
-
-    </TouchableOpacity>
+      return () => {
+        setPharmaciesList([]);
+        setPharmaciesFilter([]);
+        setLoading(true);
+      };
+    }, [])
   );
 
   return (
     <View style={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Image source={require('@/assets/images/epharmacy-logo.png')} style={styles.logo} />
-        <Text style={styles.title}>ePharmacy</Text>
-      </View>
+      {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
+            <Image
+              source={require('@/assets/images/epharmacy-logo.png')}
+              style={styles.logo}
+            />
+            <Text style={styles.title}>ePharmacy</Text>
+          </View>
 
-      {/* Pharmacy Table */}
-      <Text style={styles.tableTitle}>Pharmacies</Text>
-      <View style={styles.tableHeader}>
-        <Text style={styles.imageHeaderCell}>Image</Text>
-        <Text style={styles.nameHeaderCell}>Name</Text>
-        <Text style={styles.locationHeaderCell}>Location</Text>
-        <Text style={styles.statusHeaderCell}>Status</Text>
-        
-        </View>
+          <View style={styles.buttonContainer}>
+            <Searchbar
+              placeholder="SEARCH NAME"
+              onChangeText={(text) => searchPharmacies(text)}
+              style={{ flex: 1 }}
+            />
+          </View>
 
-      <FlatList
-        data={pharmacies}
-        renderItem={renderItem}
-        keyExtractor={(item) => item._id}
-        style={styles.table}
-      />
+          <ScrollView>
+          <Text style={styles.tableTitle}>PHARMACIES</Text>
+            <DataTable>
+              <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>PERMITS</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ADDRESS</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STATUS</Text></DataTable.Title>
+              </DataTable.Header>
+
+              {pharmaciesFilter.map((item, index) => (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => router.push(`/screens/Admin/Pharmacies/ReadPharmacy?id=${item._id}`)}
+                  style={{
+                    backgroundColor: index % 2 === 0 ? 'lightgray' : 'gainsboro',
+                  }}
+                >
+                  <DataTable.Row style={styles.rowCell}>
+                    <DataTable.Cell style={styles.imageCell}>
+                      <Image
+                        source={{ uri: item.images[0] }}
+                        style={styles.image}
+                        resizeMode="cover"
+                      />
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>{item.userInfo.name}</Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>
+                        {`${item.userInfo.street}, ${item.userInfo.barangay}, ${item.userInfo.city}`}
+                      </Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>
+                        {item.approved ? 'APPROVED' : 'PENDING'}
+                      </Text>
+                    </DataTable.Cell>
+                  </DataTable.Row>
+                </TouchableOpacity>
+              ))}
+            </DataTable>
+          </ScrollView>
+        </>
+      )}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -94,73 +164,51 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    marginVertical: 20,
-  },
-  tableHeader: {
-    flexDirection: 'row',
-    backgroundColor: '#EEEEEE',
+    marginVertical: 15,
+    marginTop: 5,
     paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#CCCCCC',
-  },
-  imageHeaderCell: {
-    flex: 0.8,
-    textAlign: 'center',
-  },
-  nameHeaderCell: {
-    flex: 2,
-    textAlign: 'center',
-  },
-  locationHeaderCell: {
-    flex: 3,
-    textAlign: 'center',
-  },
-  statusHeaderCell: {
-    flex: 1,
-    textAlign: 'center',
-  },
-  table: {
-    paddingHorizontal: 10,
-  },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E0E0E0',
-  },
-  image: {
-    flex: 0.8,
-    width: 50,
-    height: 50,
-    resizeMode: 'cover',
-    borderRadius: 5,
-  },
-  nameCell: {
-    flex: 2,
-    textAlign: 'center',
-    color: '#333333',
-  },
-  locationCell: {
-    flex: -2,
-    textAlign: 'center',
-    color: '#333333',
-  },
-  statusCell: {
-    flex: 3,
-    textAlign: 'center',
-    color: '#333333',
-  },
-  approveButton: {
-    backgroundColor: 'black',
-    paddingVertical: 6,
-    paddingHorizontal: 12,
-    borderRadius: 5,
-    marginLeft: 10,
-  },
-  approveButtonText: {
     color: 'white',
-    fontSize: 14,
+    backgroundColor: '#0B607E',
+  },
+  buttonContainer: {
+    margin: 10,
+    alignSelf: 'center',
+    flexDirection: 'row',
+  },
+  headerText: {
+    color: 'white',
     fontWeight: 'bold',
   },
+  rowCell: {
+    paddingTop: 10,
+    paddingBottom: 13
+  },
+  image: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
+  imageCell: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 60,
+  },
+  textCell: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  cellText: {
+    textAlign: 'center',
+    flexWrap: 'wrap',
+  },
+  iconCell: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 40,
+    height: 40,
+    backgroundColor: 'black',
+    borderRadius: 20,
+  },
 });
+
+export default PharmacyTableScreen;

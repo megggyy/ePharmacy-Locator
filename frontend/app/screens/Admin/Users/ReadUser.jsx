@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator, FlatList } from 'react-native';
+import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity, ActivityIndicator, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useLocalSearchParams, useRouter, useSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "@/assets/common/spinner";
 
 export default function ReadUserScreen() {
   const router = useRouter();
-  const { id } = useLocalSearchParams(); // Get user ID from the query parameter
+  const { id } = useLocalSearchParams();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -17,7 +20,6 @@ export default function ReadUserScreen() {
         try {
           const response = await axios.get(`${baseURL}users/${id}`);
           setUser(response.data);
-          console.log(response.data)
         } catch (err) {
           console.error('Error fetching user details:', err);
         } finally {
@@ -28,12 +30,18 @@ export default function ReadUserScreen() {
     }
   }, [id]);
 
+  const handleImagePress = (image) => {
+    setSelectedImage(image);
+    setIsModalVisible(true);
+  };
+
+  const closeImageModal = () => {
+    setIsModalVisible(false);
+    setSelectedImage(null);
+  };
+
   if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0B607E" />
-      </View>
-    );
+    return <Spinner />;
   }
 
   if (!user) {
@@ -54,31 +62,63 @@ export default function ReadUserScreen() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.title}>User Details</Text>
+        <Text style={styles.headerText}>{user.name.toUpperCase()}</Text>
       </View>
 
       {/* User Details */}
       <View style={styles.detailsContainer}>
-      <FlatList
+        {/* Image Carousel */}
+        <FlatList
           data={user.customerDetails?.images}
-          horizontal
-          renderItem={({ item: image }) => (
-            <Image source={{ uri: image }} style={styles.image} />
+          horizontal={true}
+          pagingEnabled={true} // This ensures only one image at a time
+          renderItem={({ item }) => (
+            <TouchableOpacity onPress={() => handleImagePress(item)}>
+              <Image source={{ uri: item }} style={styles.image} />
+            </TouchableOpacity>
           )}
           keyExtractor={(image, index) => index.toString()}
         />
-        <Text style={styles.label}>Name:</Text>
-        <Text style={styles.value}>{user.name}</Text>
-        <Text style={styles.label}>Contact Number:</Text>
-        <Text style={styles.value}>{user.contactNumber || 'N/A'}</Text>
-        <Text style={styles.label}>Address:</Text>
-        <Text style={styles.value}>
-          {`${user.street}, ${user.barangay}, ${user.city}` || 'N/A'}
-        </Text>
-        <Text style={styles.label}>Disease:</Text>
-        <Text style={styles.value}>
-          {user.customerDetails?.disease?.name || 'No Disease Info'}
-        </Text>
+
+        {/* Modal for Expanded Image */}
+        <Modal
+          visible={isModalVisible}
+          transparent={true}
+          onRequestClose={closeImageModal}
+          animationType="fade"
+        >
+          <TouchableWithoutFeedback onPress={closeImageModal}>
+            <View style={styles.modalBackground}>
+              {selectedImage ? (
+                <Image
+                  source={{ uri: selectedImage }}
+                  style={styles.modalImage}
+                />
+              ) : (
+                <ActivityIndicator size="large" color="#fff" />
+              )}
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
+
+        {/* User Details */}
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput style={styles.input} value={user.email} editable={false} />
+
+          <Text style={styles.label}>Mobile Number</Text>
+          <TextInput style={styles.input} value={user.contactNumber} editable={false} />
+
+          <Text style={styles.label}>Address</Text>
+          <TextInput style={styles.input} value={`${user.street}, ${user.barangay}, ${user.city}` || 'N/A'} editable={false} />
+
+          <Text style={styles.label}>Disease</Text>
+          <TextInput
+            style={styles.input}
+            value={user.customerDetails?.disease?.name || 'No Disease Info'}
+            editable={false}
+          />
+        </View>
       </View>
     </View>
   );
@@ -87,51 +127,64 @@ export default function ReadUserScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F4F4F4',
   },
   header: {
     backgroundColor: '#0B607E',
     paddingTop: 60,
-    paddingBottom: 20,
-    alignItems: 'center',
+    paddingBottom: 15,
+  },
+  headerText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 59,
     left: 20,
   },
-  title: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
   detailsContainer: {
-    marginTop: 20,
-    alignItems: 'center',
-    paddingHorizontal: 20,
+    margin: 20,
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 350,
+    height: 350,
+    borderRadius: 10,
+    marginHorizontal: 5,
+  },
+  modalImage: {
+    width: 400,
+    height: 400,
     borderRadius: 10,
     marginHorizontal: 5,
     marginBottom: 20,
+  },
+  modalBackground: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  inputContainer: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: 20,
+    marginBottom: 20,
+    marginTop: 20
   },
   label: {
     fontWeight: 'bold',
     fontSize: 18,
     marginBottom: 5,
   },
-  value: {
-    fontSize: 16,
-    marginBottom: 20,
-    textAlign: 'center',
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5F5F5',
+  input: {
+    backgroundColor: '#F4F4F4',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    marginBottom: 15,
   },
   errorMessage: {
     fontSize: 18,

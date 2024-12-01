@@ -9,9 +9,6 @@ const medicationCategorySchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    images: [{
-        type: String
-    }],
 });
 
 medicationCategorySchema.virtual('id').get(function () {

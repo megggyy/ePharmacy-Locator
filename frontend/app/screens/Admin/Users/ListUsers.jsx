@@ -1,69 +1,140 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useCallback } from "react";
+import {
+  View,
+  Text,
+  ActivityIndicator,
+  StyleSheet,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import { DataTable, Searchbar } from "react-native-paper";
+import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect } from "@react-navigation/native";
+import axios from "axios";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
-import baseURL from '@/assets/common/baseurl';
+import baseURL from "../../../../assets/common/baseurl";
+import Spinner from "../../../../assets/common/spinner";
 
-export default function UserTableScreen() {
+var { height, width } = Dimensions.get("window");
+
+const UserTableScreen = () => {
   const router = useRouter();
-  const [users, setUsers] = useState([]);
+  const [userList, setUserList] = useState([]);
+  const [userFilter, setUserFilter] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Fetch the customers from the backend
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch(`${baseURL}users`);
-        const data = await response.json();
-        setUsers(data); // Set the users in state
-        console.log(data)
-      } catch (err) {
-        console.error('Error fetching users:', err);
-      }
-    };
+  const searchUser = (text) => {
+    if (text === "") {
+      setUserFilter(userList);
+    } else {
+      setUserFilter(
+        userList.filter((i) =>
+          i.name.toLowerCase().includes(text.toLowerCase())
+        )
+      );
+    }
+  };
 
-    fetchUsers(); // Call the function to fetch users
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      // Fetch users
+      axios
+        .get(`${baseURL}users`)
+        .then((res) => {
+          setUserList(res.data);
+          setUserFilter(res.data);
+          setLoading(false);
+        })
+        .catch((err) => console.error(err));
 
-  const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.row} onPress={() => router.push(`/screens/Admin/Users/ReadUser?id=${item._id}`)}>
-      <Image source={{ uri: item.customerDetails.images[0] }} style={styles.image} /> 
-      <Text style={styles.cell}>{item.name}</Text>
-      <Text style={styles.cell}>{`${item.street}, ${item.barangay}, ${item.city}`}</Text>
-      <Text style={styles.cell}>
-        {item.customerDetails && item.customerDetails.disease
-          ? item.customerDetails.disease.name
-          : 'No Disease Info'}
-      </Text>
-    </TouchableOpacity>
+      return () => {
+        setUserList([]);
+        setUserFilter([]);
+        setLoading(true);
+      };
+    }, [])
   );
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Image source={require('@/assets/images/epharmacy-logo.png')} style={styles.logo} />
-        <Text style={styles.title}>ePharmacy</Text>
-      </View>
+      {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
+            <Image
+              source={require('@/assets/images/epharmacy-logo.png')}
+              style={styles.logo}
+            />
+            <Text style={styles.title}>ePharmacy</Text>
+          </View>
 
-      {/* User Table */}
-      <Text style={styles.tableTitle}>Users</Text>
-      <View style={styles.tableHeader}>
-        <Text style={styles.headerCell}>Image</Text>
-        <Text style={styles.headerCell}>Name</Text>
-        <Text style={styles.headerCell}>Address</Text>
-        <Text style={styles.headerCell}>Disease</Text>
-      </View>
-      <FlatList
-        data={users}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id || String(Math.random())}
-        style={styles.table}
-      />
+          <View style={styles.buttonContainer}>
+            <Searchbar
+              placeholder="SEARCH NAME"
+              onChangeText={(text) => searchUser(text)}
+              style={{ flex: 1 }}
+            />
+          </View>
+
+          <ScrollView>
+          <Text style={styles.tableTitle}>USERS</Text>
+            <DataTable>
+              <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>IMAGE</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ADDRESS</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>DISEASE</Text></DataTable.Title>
+              </DataTable.Header>
+
+              {userFilter.map((item, index) => (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => router.push(`/screens/Admin/Users/ReadUser?id=${item._id}`)}
+                  style={{
+                    backgroundColor: index % 2 === 0 ? 'lightgray' : 'gainsboro',
+                  }}
+                >
+                  <DataTable.Row style={styles.rowCell}>
+                    <DataTable.Cell style={styles.imageCell}>
+                      <Image
+                        source={{ uri: item.customerDetails.images[0] }}
+                        style={styles.image}
+                        resizeMode="cover"
+                      />
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>{item.name}</Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>
+                        {`${item.street}, ${item.barangay}, ${item.city}`}
+                      </Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>
+                        {item.customerDetails && item.customerDetails.disease
+                          ? item.customerDetails.disease.name
+                          : 'No Disease Info'}
+                      </Text>
+                    </DataTable.Cell>
+                  </DataTable.Row>
+                </TouchableOpacity>
+              ))}
+            </DataTable>
+          </ScrollView>
+        </>
+      )}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -95,39 +166,51 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    marginVertical: 20,
-  },
-  tableHeader: {
-    flexDirection: 'row',
-    backgroundColor: '#EEEEEE',
+    marginVertical: 15,
+    marginTop: 5,
     paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#CCCCCC',
+    color: 'white',
+    backgroundColor: '#0B607E',
   },
-  headerCell: {
-    flex: 1,
+  buttonContainer: {
+    margin: 10,
+    alignSelf: 'center',
+    flexDirection: 'row',
+  },
+  headerText: {
+    color: 'white',
     fontWeight: 'bold',
-    textAlign: 'center',
   },
-  table: {
-    paddingHorizontal: 10,
-  },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E0E0E0',
-  },
-  cell: {
-    flex: 1,
-    textAlign: 'center',
-    color: '#333333',
+  rowCell: {
+    paddingTop: 10,
+    paddingBottom: 13
   },
   image: {
-    width: 50,
-    height: 50,
-    resizeMode: 'cover',
-    borderRadius: 5,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
+  imageCell: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 60,
+  },
+  textCell: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  cellText: {
+    textAlign: 'center',
+    flexWrap: 'wrap',
+  },
+  iconCell: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 40,
+    height: 40,
+    backgroundColor: 'black',
+    borderRadius: 20,
   },
 });
+
+export default UserTableScreen;

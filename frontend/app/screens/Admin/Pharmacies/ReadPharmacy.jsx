@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator, FlatList, Alert } from 'react-native';
+import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity, ActivityIndicator, Modal, TouchableWithoutFeedback, FlatList, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter, useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "@/assets/common/spinner";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default function ReadPharmacyScreen() {
   const router = useRouter();
-  const { id } = useLocalSearchParams(); // Get pharmacy ID from query parameters
+  const { id } = useLocalSearchParams();
   const [pharmacy, setPharmacy] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -36,18 +40,25 @@ export default function ReadPharmacyScreen() {
       };
       await axios.put(`${baseURL}pharmacies/approved/${id}`, config);
       Alert.alert('Success', 'PHARMACY IS APPROVED');
+      router.push('/screens/Admin/Pharmacies/ListPharmacies');
     } catch (error) {
       console.error('Error updating medication:', error);
       Alert.alert('Error', 'Failed to approve pharmacy');
     }
   };
 
+  const handleImagePress = (image) => {
+    setSelectedImage(image);
+    setIsModalVisible(true);
+  };
+
+  const closeImageModal = () => {
+    setIsModalVisible(false);
+    setSelectedImage(null);
+  };
+
   if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0B607E" />
-      </View>
-    );
+    return <Spinner />;
   }
 
   if (!pharmacy) {
@@ -62,91 +73,137 @@ export default function ReadPharmacyScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      {/* Header */}
+    <KeyboardAwareScrollView style={styles.container} keyboardShouldPersistTaps="handled">
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.title}>Pharmacy Details</Text>
+        <Text style={styles.headerText}>{pharmacy.userInfo.name}</Text>
       </View>
 
-      {/* Pharmacy Details */}
       <View style={styles.detailsContainer}>
+        {/* Image Carousel */}
         <FlatList
           data={pharmacy.images}
-          horizontal
-          renderItem={({ item: image }) => (
-            <Image source={{ uri: image }} style={styles.image} />
+          horizontal={true}
+          pagingEnabled={true} // This ensures only one image at a time
+          renderItem={({ item }) => (
+            <TouchableOpacity onPress={() => handleImagePress(item)}>
+              <Image source={{ uri: item }} style={styles.image} />
+            </TouchableOpacity>
           )}
           keyExtractor={(image, index) => index.toString()}
         />
-        <Text style={styles.label}>Name:</Text>
-        <Text style={styles.value}>{pharmacy.userInfo.name}</Text>
-        <Text style={styles.label}>Store Hours:</Text>
-        <Text style={styles.value}>{`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}</Text>
-        <Text style={styles.label}>Contact Number:</Text>
-        <Text style={styles.value}>{pharmacy.userInfo.contactNumber || 'N/A'}</Text>
-      </View>
 
-      {/* Approve Button */}
-      <TouchableOpacity
-        style={styles.confirmButton}
-        onPress={() => handleApprove(pharmacy._id)}
-        disabled={pharmacy.approved} // Disable if approved
-      >
-        <Text style={styles.confirmButtonText}>{pharmacy.approved ? 'Approved' : 'Approve'}</Text>
-      </TouchableOpacity>
-    </View>
+        {/* Modal for Expanded Image */}
+        <Modal
+          visible={isModalVisible}
+          transparent={true}
+          onRequestClose={closeImageModal}
+          animationType="fade"
+        >
+          <TouchableWithoutFeedback onPress={closeImageModal}>
+            <View style={styles.modalBackground}>
+              {selectedImage ? (
+                <Image
+                  source={{ uri: selectedImage }}
+                  style={styles.modalImage}
+                />
+              ) : (
+                <ActivityIndicator size="large" color="#fff" />
+              )}
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
+
+        {/* Pharmacy Details */}
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput style={styles.input} value={pharmacy.userInfo.email} editable={false} />
+
+          <Text style={styles.label}>Contact Number</Text>
+          <TextInput style={styles.input} value={pharmacy.userInfo.contactNumber || 'N/A'} editable={false} />
+
+          <Text style={styles.label}>Address</Text>
+          <TextInput style={styles.input} value={`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`} editable={false} />
+
+          <TouchableOpacity
+            style={[styles.confirmButton, pharmacy.approved && styles.disabledButton]} // Apply disabled style
+            onPress={() => handleApprove(pharmacy._id)}
+            disabled={pharmacy.approved} // Disable if approved
+          >
+            <Text style={[styles.confirmButtonText, pharmacy.approved && styles.disabledText]}>
+              {pharmacy.approved ? 'Approved' : 'Approve Pharmacy'}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </KeyboardAwareScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F4F4F4',
   },
   header: {
     backgroundColor: '#0B607E',
     paddingTop: 60,
-    paddingBottom: 20,
-    alignItems: 'center',
+    paddingBottom: 15,
+  },
+  headerText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    textTransform: 'uppercase'
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 59,
     left: 20,
   },
-  title: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
   detailsContainer: {
-    marginTop: 20,
-    alignItems: 'center',
+    margin: 20,
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 360,
+    height: 480,
+    borderRadius: 10,
+    marginHorizontal: 5,
+  },
+  modalImage: {
+    width: 375,
+    height: 500,
     borderRadius: 10,
     marginHorizontal: 5,
     marginBottom: 20,
+  },
+  modalBackground: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  inputContainer: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: 20,
+    marginBottom: 20,
+    marginTop: 20
   },
   label: {
     fontWeight: 'bold',
     fontSize: 18,
     marginBottom: 5,
   },
-  value: {
-    fontSize: 16,
-    marginBottom: 20,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5F5F5',
+  input: {
+    backgroundColor: '#F4F4F4',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    marginBottom: 15,
   },
   errorMessage: {
     fontSize: 18,
@@ -165,5 +222,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  disabledButton: {
+    backgroundColor: 'rgba(11, 96, 126, 0.5)',
+  },
+  disabledText: {
+    color: 'white',
   },
 });

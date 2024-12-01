@@ -103,11 +103,6 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Medication Categories</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Medications/ListMedications')}>
-          <FontAwesome5 name="pills" size={25} color="#5A5A5A" />
-          <Text style={styles.menuText}>Medications</Text>
-        </TouchableOpacity>
-
         {/* View Charts Dropdown */}
         <TouchableOpacity style={styles.menuItem} onPress={toggleDropdown}>
           <FontAwesome5 name="chart-bar" size={25} color="#5A5A5A" />

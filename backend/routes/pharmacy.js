@@ -55,7 +55,7 @@ router.get('/', async (req, res) => {
         const pharmacies = await Pharmacy.find()
             .populate({
                 path: 'userInfo',  // Populate userInfo field
-                select: 'name contactNumber street barangay city'     // Select only the 'name' field from the User schema
+                select: 'name contactNumber street barangay city' 
             });
 
         if (!pharmacies) {
@@ -73,7 +73,7 @@ router.get('/:id', async (req, res) => {
     const pharmacyId = req.params.id;
     const pharmacy = await Pharmacy.findById(pharmacyId).populate({
       path: 'userInfo',
-      select: 'name contactNumber street barangay city', // Populate specific fields
+      select: 'email name contactNumber street barangay city', // Populate specific fields
     });
 
     if (!pharmacy) {

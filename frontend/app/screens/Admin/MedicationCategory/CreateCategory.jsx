@@ -12,37 +12,11 @@ export default function CreateCategory() {
   // State for new category details
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [imageUris, setImageUris] = useState([]); // Array to store image URIs
-
-  // Function to pick images
-  const pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
-
-    if (!result.canceled) {
-      setImageUris([...imageUris, result.assets[0].uri]); // Add new image URI
-    }
-  };
+  const [token, setToken] = useState();
 
   const handleCreate = async () => {
     const formData = new FormData();
-    
-    // Append image files to FormData
-    imageUris.forEach((uri, index) => {
-      const filename = uri.split('/').pop();
-      const type = `image/${filename.split('.').pop()}`;
-      formData.append('images', {
-        uri,
-        name: filename,
-        type,
-      });
-    });
 
-    // Append other category data to FormData
     formData.append('name', name);
     formData.append('description', description);
 
@@ -50,13 +24,14 @@ export default function CreateCategory() {
       // Make POST request to create category
       const config = {
         headers: {
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
         }
       };
-      const response = await axios.post(`${baseURL}medication-category/create`, formData, config);     
+      const response = await axios.post(`${baseURL}medication-category/create`, formData, config);
       if (response.data) {
         Alert.alert('Success', 'Category created successfully');
-        router.back(); 
+        router.push('/screens/Admin/MedicationCategory/ListCategories');
       }
     } catch (error) {
       console.error('Error creating category:', error);
@@ -74,20 +49,6 @@ export default function CreateCategory() {
         <Text style={styles.headerText}>Create Category</Text>
       </View>
 
-      {/* Image Section */}
-      <View style={styles.imageSection}>
-        {imageUris.length > 0 ? (
-          imageUris.map((uri, index) => (
-            <Image key={index} source={{ uri }} style={styles.categoryImage} />
-          ))
-        ) : (
-          <Image source={require('@/assets/images/sample.jpg')} style={styles.categoryImage} />
-        )}
-        <TouchableOpacity onPress={pickImage} style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Images</Text>
-        </TouchableOpacity>
-      </View>
-
       {/* Input Fields */}
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Category Name</Text>
@@ -100,10 +61,12 @@ export default function CreateCategory() {
 
         <Text style={styles.label}>Description</Text>
         <TextInput
-          style={styles.input}
+          style={[styles.input, styles.textArea]} 
           value={description}
           onChangeText={setDescription}
           placeholder="Enter description"
+          multiline={true} 
+          textAlignVertical="top"
         />
       </View>
 
@@ -137,31 +100,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  imageSection: {
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  categoryImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    marginBottom: 10,
-  },
-  selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  selectImageText: {
-    color: '#555',
-  },
+
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
     marginHorizontal: 20,
     marginBottom: 20,
+    marginTop: 20,
   },
   label: {
     color: '#666',
@@ -173,7 +119,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 8,
     marginBottom: 15,
+    textAlign: 'justify'
   },
+  textArea: {
+    height: 100,
+    paddingTop: 10,
+  },
+
   confirmButton: {
     backgroundColor: '#0B607E',
     paddingVertical: 15,

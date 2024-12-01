@@ -36,7 +36,7 @@ export default function EditBarangay() {
       };
       await axios.put(`${baseURL}barangays/update/${id}`, formData, config);
       Alert.alert('Success', 'Barangay updated successfully');
-      router.back();
+      router.push('/screens/Admin/Barangay/ListBarangay')
     } catch (error) {
       console.error('Error updating barangay:', error);
       Alert.alert('Error', 'Failed to update barangay');

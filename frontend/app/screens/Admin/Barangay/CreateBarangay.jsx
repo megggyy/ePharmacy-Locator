@@ -28,7 +28,7 @@ export default function CreateBarangay() {
       const response = await axios.post(`${baseURL}barangays/create`, formData, config);     
       if (response.data) {
         Alert.alert('Success', 'Barangay created successfully');
-        router.back();
+        router.push('/screens/Admin/Barangay/ListBarangay')
       }
     } catch (error) {
       console.error('Error creating barangay:', error);

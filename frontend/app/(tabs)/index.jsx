@@ -27,7 +27,7 @@ const HomeScreen = () => {
       axios.get(`${baseURL}pharmacies`)
         .then(response => setPharmacies(response.data))
         .catch(error => console.error('Error fetching pharmacies:', error));
-
+        
       // Fetch medications
       axios.get(`${baseURL}medicine`)
         .then(response => setMedications(response.data))

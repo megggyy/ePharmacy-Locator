@@ -43,14 +43,6 @@ export default function ReadCategoryScreen() {
 
       {/* Category Details */}
       <View style={styles.detailsContainer}>
-        <FlatList
-          data={categoryData.images}
-          horizontal
-          renderItem={({ item: image }) => (
-            <Image source={{ uri: image }} style={styles.image} />
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
         <Text style={styles.label}>Name:</Text>
         <Text style={styles.value}>{categoryData.name}</Text>
         <Text style={styles.label}>Description:</Text>
@@ -63,8 +55,7 @@ export default function ReadCategoryScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
-    paddingHorizontal: 0,
+    backgroundColor: '#F4F4F4',
   },
   header: {
     backgroundColor: '#0B607E',
@@ -83,8 +74,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   detailsContainer: {
-    marginTop: 20,
-    alignItems: 'center',
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: 20,
+    margin: 20
   },
   image: {
     width: 150,
@@ -99,10 +92,12 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   value: {
-    fontSize: 16,
-    marginBottom: 20,
-    textAlign: 'center',
+    backgroundColor: '#F4F4F4',
+    borderRadius: 5,
     paddingHorizontal: 10,
+    paddingVertical: 10,
+    marginBottom: 15,
+    textAlign: 'justify'
   },
   loadingContainer: {
     flex: 1,
