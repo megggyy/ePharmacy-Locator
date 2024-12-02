@@ -15,7 +15,9 @@ import RNPickerSelect from 'react-native-picker-select';
 import Toast from "react-native-toast-message";
 import axios from "axios";
 import * as ImagePicker from "expo-image-picker";
+import * as Location from "expo-location"; // Import Expo Location
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Add this import
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 import mime from "mime";
 
@@ -37,6 +39,12 @@ const PharmacyOwnerSignupScreen = () => {
   const [city, setCity] = useState("Taguig City");
   const [images, setImages] = useState([]);
   const [error, setError] = useState('');
+  // New States for Business Days, Opening, and Closing Hours
+  const [businessDays, setBusinessDays] = useState("");
+  const [openingHour, setOpeningHour] = useState(new Date());
+  const [closingHour, setClosingHour] = useState(new Date());
+  const [showOpeningTime, setShowOpeningTime] = useState(false);
+  const [showClosingTime, setShowClosingTime] = useState(false);
 
   useEffect(() => {
     // Fetch barangay list from API
@@ -53,16 +61,28 @@ const PharmacyOwnerSignupScreen = () => {
         setError("Failed to load barangay list");
       });
 
-    // Request image picker permissions
-    (async () => {
-      if (Platform.OS !== "web") {
-        const { status } = await ImagePicker.requestCameraPermissionsAsync();
-        if (status !== "granted") {
-          alert("We need access to your camera roll to upload images!");
+      (async () => {
+        if (Platform.OS !== "web") {
+          const { status } = await ImagePicker.requestCameraPermissionsAsync();
+          if (status !== "granted") {
+            alert("We need access to your camera roll to upload images!");
+          }
         }
-      }
-    })();
-  }, []);
+      })();
+  
+      // Request location permissions and fetch location
+      (async () => {
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          Alert.alert("Permission denied", "Location access is required to sign up.");
+          return;
+        }
+  
+        const location = await Location.getCurrentPositionAsync({});
+        setLatitude(location.coords.latitude.toString());
+        setLongitude(location.coords.longitude.toString());
+      })();
+    }, []);
 
 
   const pickImage = async () => {
@@ -80,6 +100,7 @@ const PharmacyOwnerSignupScreen = () => {
     }
   };
 
+  
   const removeImage = (id) => {
     setImages(images.filter((image) => image.id !== id));
   };
@@ -95,7 +116,8 @@ const PharmacyOwnerSignupScreen = () => {
     if (contactNumber.length !== 11) errorMessages.contactNumber = "CONTACT NUMBER MUST BE 11 DIGITS";
     if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE PERMIT";
-
+    if (!businessDays) errorMessages.businessDays = "PLEASE SELECT BUSINESS DAYS";
+    if (!openingHour || !closingHour) errorMessages.hours = "PLEASE SELECT OPENING AND CLOSING HOURS";
 
     return errorMessages;
   };
@@ -117,6 +139,12 @@ const PharmacyOwnerSignupScreen = () => {
     formData.append("isAdmin", false);
     formData.append("role", "PharmacyOwner");
     formData.append("approved", false);
+    formData.append("businessDays", businessDays); // Add business days
+    formData.append("openingHour", openingHour.toISOString()); // Convert opening hour to ISO string
+    formData.append("closingHour", closingHour.toISOString()); // Convert closing hour to ISO string
+    console.log(openingHour.toISOString());
+    console.log(closingHour.toISOString());
+
 
     images.forEach((image, index) => {
       formData.append(`images`, {
@@ -125,6 +153,7 @@ const PharmacyOwnerSignupScreen = () => {
         name: `image${index}.${mime.getExtension(mime.getType(image.uri))}`,
       });
     });
+    console.log(formData);
 
     const config = {
       headers: {
@@ -190,6 +219,13 @@ const PharmacyOwnerSignupScreen = () => {
       });
   };
 
+  const handleClose = (type) => {
+    if (type === "opening") {
+      setShowOpeningTime(false);
+    } else {
+      setShowClosingTime(false);
+    }
+  };
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header Back Icon */}
@@ -212,27 +248,41 @@ const PharmacyOwnerSignupScreen = () => {
         {error.email && <Text style={styles.errorText}>{error.email}</Text>}
 
 
-        <TextInput style={styles.input} placeholder="Contact number" placeholderTextColor="#AAB4C1" value={contactNumber} onChangeText={setContactNumber} keyboardType="phone-pad" />
-        {error.contactNumber && <Text style={styles.errorText}>{error.contactNumber}</Text>}
+        <View style={styles.row}>
+  {/* Contact Number */}
+  <TextInput
+    style={[styles.input, styles.halfInput]}
+    placeholder="Contact number"
+    placeholderTextColor="#AAB4C1"
+    value={contactNumber}
+    onChangeText={setContactNumber}
+    keyboardType="phone-pad"
+  />
+  {/* Password */}
+  <View style={[styles.passwordContainer, styles.halfInput]}>
+    <TextInput
+      style={[styles.inputPass, { flex: 1 }]}
+      placeholder="Password"
+      placeholderTextColor="#AAB4C1"
+      secureTextEntry={!showPassword}
+      value={password}
+      onChangeText={setPassword}
+    />
+    <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+      <Icon
+        name={showPassword ? "eye-off" : "eye"}
+        size={24}
+        color="#AAB4C1"
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+{/* Display Validation Errors */}
+<View style={styles.rowValidation}>
+  {error.contactNumber && <Text style={styles.errorAddress}>{error.contactNumber}</Text>}
+  {error.password && <Text style={styles.errorAddress}>{error.password}</Text>}
+</View>
 
-        <View style={styles.passwordContainer}>
-          <TextInput
-            style={[styles.inputPass, { flex: 1 }]}
-            placeholder="Password"
-            placeholderTextColor="#AAB4C1"
-            secureTextEntry={!showPassword}
-            value={password}
-            onChangeText={setPassword}
-          />
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
-            <Icon
-              name={showPassword ? "eye-off" : "eye"}
-              size={24}
-              color="#AAB4C1"
-            />
-          </TouchableOpacity>
-        </View>
-        {error.password && <Text style={styles.errorText}>{error.password}</Text>}
 
         {/* Address Fields */}
         <View style={styles.row}>
@@ -263,29 +313,63 @@ const PharmacyOwnerSignupScreen = () => {
 
           {error.street && <Text style={styles.errorAddress}>{error.street}</Text>}
           {error.barangay && <Text style={styles.errorAddress}>{error.barangay}</Text>}
+      
         </View>
-        
-        
+      
         <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
-        <View style={styles.row}>
-          <TextInput
-            style={[styles.input, styles.halfInput]}
-            placeholder="Latitude"
+            {/* Business Days Input as a simple text */}
+            <TextInput
+            style={styles.input}
+            placeholder="Enter business days                                                            "
             placeholderTextColor="#AAB4C1"
-            keyboardType="numeric"
-            value={latitude}
-            onChangeText={setLatitude}
+            value={businessDays}
+            onChangeText={setBusinessDays}
           />
-          <TextInput
-            style={[styles.input, styles.halfInput]}
-            placeholder="Longitude"
-            placeholderTextColor="#AAB4C1"
-            keyboardType="numeric"
-            value={longitude}
-            onChangeText={setLongitude}
-          />
-        </View>
-        
+          {error.businessDays && <Text style={styles.errorText}>{error.businessDays}</Text>} 
+
+      {/* Opening and Closing Hours Section */}
+      <View style={styles.row}>
+        {/* Opening Hour */}
+        <TouchableOpacity onPress={() => setShowOpeningTime(true)} style={[styles.input, styles.timeInput]}>
+          <Text>{`Opening: ${openingHour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}</Text>
+        </TouchableOpacity>
+        {showOpeningTime && (
+          <View style={styles.pickerContainer}>
+            <DateTimePicker
+              value={openingHour}
+              mode="time"
+              display="default"
+              onChange={(event, selectedDate) => {
+                setOpeningHour(selectedDate || openingHour);
+              }}
+            />
+            <TouchableOpacity onPress={() => handleClose("opening")} style={styles.closeButton}>
+              <Ionicons name="close" size={24} color="black" />
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {/* Closing Hour */}
+        <TouchableOpacity onPress={() => setShowClosingTime(true)} style={[styles.input, styles.timeInput]}>
+          <Text>{`Closing: ${closingHour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}</Text>
+        </TouchableOpacity>
+        {showClosingTime && (
+          <View style={styles.pickerContainer}>
+            <DateTimePicker
+              value={closingHour}
+              mode="time"
+              display="default"
+              onChange={(event, selectedDate) => {
+                setClosingHour(selectedDate || closingHour);
+              }}
+            />
+            <TouchableOpacity onPress={() => handleClose("closing")} style={styles.closeButton}>
+              <Ionicons name="close" size={24} color="black" />
+            </TouchableOpacity>
+          </View>
+        )}
+      </View>
+
         {/* Upload Permits UI */}
         <Text style={styles.uploadLabel}>Upload Permits</Text>
         <View style={styles.uploadContainer}>
@@ -369,7 +453,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F2F2',
     borderRadius: 10,
     padding: 10,
-    marginVertical: 10,
+    marginVertical: 8,
     fontSize: 16,
     color: '#333',
   },
@@ -433,7 +517,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 8,
-    marginVertical: 10,
+    marginVertical: 6,
     paddingRight: 10,
     backgroundColor: '#F2F2F2',
   },
@@ -467,7 +551,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginVertical: 0,
+    marginBottom:0,
   },
   rowValidation: {
     flexDirection: 'row',
@@ -498,6 +582,19 @@ const styles = StyleSheet.create({
     marginTop: -2,
     marginBottom: 10,
     textAlign: 'center', 
+  },
+  timeInput: {
+    flex: 0.48, // Adjust width for both to fit in one row
+  },
+  pickerContainer: {
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  closeButton: {
+    marginTop: 5,
+    backgroundColor: '#E0E0E0',
+    borderRadius: 20,
+    padding: 5,
   },
 });
 

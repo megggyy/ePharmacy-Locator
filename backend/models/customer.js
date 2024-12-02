@@ -12,6 +12,14 @@ const customerSchema = new mongoose.Schema({
     userInfo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
+    },
+    location: {
+        latitude: {
+            type: String,
+        },
+        longitude: {
+            type: String,
+        },
     }
 });
 

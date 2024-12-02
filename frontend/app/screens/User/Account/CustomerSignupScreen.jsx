@@ -14,6 +14,8 @@ import { Ionicons } from '@expo/vector-icons';
 import RNPickerSelect from 'react-native-picker-select';
 import Toast from "react-native-toast-message";
 import * as ImagePicker from "expo-image-picker";
+import * as Location from "expo-location";
+
 import mime from "mime";
 import axios from "axios";
 
@@ -31,6 +33,8 @@ const CustomerSignup = () => {
   const [street, setStreet] = useState("");
   const [barangay, setBarangay] = useState(null);
   const [city, setCity] = useState("Taguig City");
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
   const [images, setImages] = useState([]);
   const [diseases, setDiseases] = useState([]);
   const [barangays, setBarangays] = useState([]);
@@ -62,17 +66,36 @@ const CustomerSignup = () => {
 
     const fetchBarangays = async () => {
       try {
-        const response = await fetch(`${baseURL}barangays`); // Endpoint for fetching barangays
+        const response = await fetch(`${baseURL}barangays`);
         const result = await response.json();
 
-        // Format barangays data for RNPickerSelect
         const formattedBarangays = result.map((item) => ({
           label: item.name,
           value: item.name,
         }));
         setBarangays(formattedBarangays);
       } catch (error) {
-        console.error('Error fetching barangays:', error);
+        console.error("Error fetching barangays:", error);
+      }
+    };
+
+    const getLocation = async () => {
+      try {
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== "granted") {
+          Alert.alert("Permission Denied", "Location permission is required.");
+          return;
+        }
+
+        const location = await Location.getCurrentPositionAsync({});
+        setLatitude(location.coords.latitude.toString());
+        setLongitude(location.coords.longitude.toString());
+      } catch (error) {
+        console.error("Error getting location:", error);
+        Alert.alert(
+          "Location Error",
+          "Could not fetch your location. Please try again."
+        );
       }
     };
 
@@ -86,7 +109,8 @@ const CustomerSignup = () => {
     })();
 
     fetchDiseases();
-    fetchBarangays(); // Call the fetch function for barangays
+    fetchBarangays();
+    getLocation();
   }, []);
 
 const pickImage = async () => {
@@ -143,6 +167,8 @@ const register = () => {
   formData.append('street', street);
   formData.append('barangay', barangay);
   formData.append('city', city);
+  formData.append("latitude", latitude);
+  formData.append("longitude", longitude);
   formData.append('isAdmin', 'false');
   formData.append('role', 'Customer');
   formData.append('disease', selectedDisease === 'none' ? null : selectedDisease === 'others' ? customDisease : selectedDisease);

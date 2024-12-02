@@ -256,7 +256,7 @@ router.post(
 
                 try {
                     // Handle diseases if present
-                    console.log(req.body.disease)
+                    console.log(req.body.disease);
                     if (req.body.disease) {
                         let disease = await Diseases.findOne({ name: req.body.disease });
                         if (!disease) {
@@ -268,6 +268,10 @@ router.post(
                             images: imagesPaths,
                             userInfo: user.id,
                             disease: disease.id,
+                            location: {
+                                latitude: req.body.latitude || null,
+                                longitude: req.body.longitude || null,
+                            },
                         });
 
                         await customer.save();
@@ -277,6 +281,10 @@ router.post(
                             images: imagesPaths,
                             userInfo: user.id,
                             disease: null,
+                            location: {
+                                latitude: req.body.latitude || null,
+                                longitude: req.body.longitude || null,
+                            },
                         });
 
                         await customer.save();
@@ -297,14 +305,34 @@ router.post(
                 }
 
                 const permitPaths = files.map(file => file.path);
+                const businessDays = req.body.businessDays ? req.body.businessDays : ''; // Default to empty if not provided
+           // Convert opening and closing times to 'hh:mm AM/PM' format
+                const formatTime = (time) => {
+                    if (!time) return null;
+                    const date = new Date(time);
+                    let hours = date.getHours();
+                    let minutes = date.getMinutes();
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12; // 12 AM/PM case
+                    minutes = minutes < 10 ? '0' + minutes : minutes;
+                    return `${hours}:${minutes} ${ampm}`;
+                };
+
+                const openingHour = formatTime(req.body.openingHour);
+                const closingHour = formatTime(req.body.closingHour);
 
                 if (req.body.latitude === '' || req.body.longitude === '')
                 
+                    
                 {    
                     const newPharmacy = new Pharmacy({
                     userInfo: user.id,
                     images: permitPaths,
-                    approved: req.body.approved
+                    approved: req.body.approved,
+                    businessDays,       // Add business days
+                    openingHour,        // Add opening hour
+                    closingHour,    
                     });
 
                     await newPharmacy.save();
@@ -317,7 +345,10 @@ router.post(
                             latitude: req.body.latitude,
                             longitude: req.body.longitude,
                         },
-                        approved: req.body.approved
+                        approved: req.body.approved,
+                        businessDays,       // Add business days
+                        openingHour,        // Add opening hour
+                        closingHour,    
                         });
 
                         await newPharmacy.save();

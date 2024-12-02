@@ -19,20 +19,19 @@ const pharmacySchema = new mongoose.Schema({
     approved:
     {
         type: Boolean
-    }
-
-    // businessDays: {
-    //     type: String,
-    //     required: true,
-    // },
-    // businessOpen: {
-    //     type: String,
-    //     required: true,
-    // },
-    // businessClose: {
-    //     type: String,
-    //     required: true,
-    // }
+    },
+    businessDays: {
+        type: String, 
+        //required: true, 
+    },
+    openingHour: {
+        type: String,
+        //required: true,
+    },
+    closingHour: {
+        type: String,
+        //required: true,
+    },
 });
 
 pharmacySchema.virtual('id').get(function () {
