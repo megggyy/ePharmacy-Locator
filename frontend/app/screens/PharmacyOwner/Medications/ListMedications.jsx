@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useContext } from "react";
 import {
   View,
   Text,
@@ -15,10 +15,10 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import baseURL from "../../../../assets/common/baseurl";
 import Spinner from "../../../../assets/common/spinner";
+import AuthGlobal from '@/context/AuthGlobal';
 
 const MedicationScreen = () => {
   const router = useRouter();
@@ -26,6 +26,9 @@ const MedicationScreen = () => {
   const [medicationsFilter, setMedicationsFilter] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const { state, dispatch } = useContext(AuthGlobal);
+
+
 
   const searchMedications = (text) => {
     if (text === "") {
@@ -34,38 +37,26 @@ const MedicationScreen = () => {
       setMedicationsFilter(
         medicationsList.filter((i) =>
           i.name.toLowerCase().includes(text.toLowerCase())
-        )
+        ) 
       );
     }
   };
 
-  const onRefresh = useCallback(() => {
-    setRefreshing(true);
-    setTimeout(() => {
-        axios
-        .get(`${baseURL}medicine`)
-            .then((res) => {
-                // console.log(res.data)
-                setMedicationsList(res.data);
-                setMedicationsFilter(res.data);
-                setLoading(false);
-            })
-        setRefreshing(false);
-    }, 2000);
-}, []);
-
   useFocusEffect(
     useCallback(() => {
-      // Fetch medications
       axios
-        .get(`${baseURL}medicine`)
+        .get(`${baseURL}medicine/${state.user.userId}`)
         .then((res) => {
           setMedicationsList(res.data);
           setMedicationsFilter(res.data);
-          console.log(res.data)
+          console.log(res.data);
           setLoading(false);
         })
-        .catch((err) => console.error(err));
+        .catch((err) => {
+
+          console.error('Error message:', err.message);
+          setLoading(false);
+        });
 
       return () => {
         setMedicationsList([]);
@@ -74,6 +65,27 @@ const MedicationScreen = () => {
       };
     }, [])
   );
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setTimeout(() => {
+      axios
+        .get(`${baseURL}medicine/${state.user.userId}`)
+        .then((res) => {
+          setMedicationsList(res.data);
+          setMedicationsFilter(res.data);
+          setLoading(false);
+        })
+        .catch((err) => {
+
+          console.error('Error message:', err.message);
+
+        })
+        .finally(() => {
+          setRefreshing(false);
+        });
+    }, 2000);
+  }, []);
 
   const handleDelete = async (medicationId) => {
     try {
@@ -112,27 +124,28 @@ const MedicationScreen = () => {
               style={{ flex: 1 }}
             />
             <TouchableOpacity
-              onPress={() => router.push('/screens/Admin/MedicationCategory/CreateCategory')}
+              onPress={() => router.push('/screens/PharmacyOwner/Medications/CreateMedicines')}
               style={styles.createButton}
             >
-               <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
-              <Text style={styles.createButtonText}>Create Category</Text>
+              <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
+              <Text style={styles.createButtonText}>ADD</Text>
             </TouchableOpacity>
           </View>
 
           <ScrollView>
-            <Text style={styles.tableTitle}>MEDICINE CATEGORIES</Text>
+            <Text style={styles.tableTitle}>MEDICINES</Text>
             <DataTable>
               <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>DESCRIPTION</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>CATEGORY</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STOCK</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ACTIONS</Text></DataTable.Title>
               </DataTable.Header>
 
               {medicationsFilter.map((item, index) => (
                 <TouchableOpacity
                   key={index}
-                  onPress={() => router.push(`/screens/Admin/MedicationCategory/ReadCategory?id=${item._id}`)}
+                  onPress={() => router.push(`/screens/PharmacyOwner/Medications/ReadMedication?id=${item._id}`)}
                   style={{
                     backgroundColor: index % 2 === 0 ? 'lightgray' : 'gainsboro',
                   }}
@@ -143,12 +156,15 @@ const MedicationScreen = () => {
                       <Text style={styles.cellText}>{item.name}</Text>
                     </DataTable.Cell>
                     <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>{item.description}</Text>
+                      <Text style={styles.cellText}>{item.category.name}</Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>{item.stock}</Text>
                     </DataTable.Cell>
                     <DataTable.Cell style={styles.textCell}>
                       <View style={styles.actionCell}>
                         <TouchableOpacity
-                          onPress={() => router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)}
+                          onPress={() => router.push(`/screens/PharmacyOwner/Medications/EditMedication?id=${item._id}`)}
                           style={styles.actionButton}
                         >
                           <Ionicons name="create-outline" size={24} color="black" />

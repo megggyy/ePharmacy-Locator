@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import * as ImagePicker from 'expo-image-picker';
@@ -11,7 +11,7 @@ import RNPickerSelect from 'react-native-picker-select';
 export default function EditMedicationScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams();
-  
+
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -25,7 +25,7 @@ export default function EditMedicationScreen() {
   useEffect(() => {
     const fetchMedication = async () => {
       try {
-        const response = await axios.get(`${baseURL}medicine/${id}`);
+        const response = await axios.get(`${baseURL}medicine/read/${id}`);
         const medication = response.data;
         setName(medication.name);
         setDescription(medication.description);
@@ -40,7 +40,7 @@ export default function EditMedicationScreen() {
         Alert.alert('Error', 'Failed to load medication details');
       }
     };
-    
+
     if (id) fetchMedication();
   }, [id]);
 
@@ -79,32 +79,19 @@ export default function EditMedicationScreen() {
 
   const handleConfirm = async () => {
     const formData = new FormData();
-    
-    images.forEach((uri) => {
-      const filename = uri.split('/').pop();
-      const type = `image/${filename.split('.').pop()}`;
-      formData.append('images', {
-        uri,
-        name: filename,
-        type,
-      });
-    });
 
-    formData.append('name', name);
-    formData.append('description', description);
-    formData.append('category', categoryId);  // Send category ID
     formData.append('stock', stock);
-    formData.append('pharmacy', pharmacyId);  // Send pharmacy ID
+
 
     try {
       const config = {
         headers: {
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "application/json"
         }
       };
       await axios.put(`${baseURL}medicine/update/${id}`, formData, config);
       Alert.alert('Success', 'Medication updated successfully');
-      router.back();
+      router.push('/screens/PharmacyOwner/Medications/ListMedications');
     } catch (error) {
       console.error('Error updating medication:', error);
       Alert.alert('Error', 'Failed to update medication');
@@ -120,46 +107,27 @@ export default function EditMedicationScreen() {
         <Text style={styles.headerText}>Edit Medication</Text>
       </View>
 
-      <View style={styles.imageSection}>
-        {images.map((uri, index) => (
-          <View key={index} style={styles.imageContainer}>
-            <Image source={{ uri }} style={styles.medicationImage} />
-            <TouchableOpacity
-              style={styles.deleteButton}
-              onPress={() => handleDeleteImage(uri)}
-            >
-              <Ionicons name="close-circle" size={24} color="red" />
-            </TouchableOpacity>
-          </View>
-        ))}
-        <TouchableOpacity onPress={handleSelectImage} style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Image</Text>
-        </TouchableOpacity>
-      </View>
-
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Name</Text>
         <TextInput
-          style={styles.input}
+          style={styles.inputDisable}
           value={name}
           onChangeText={setName}
+          editable={false}
         />
         <Text style={styles.label}>Description</Text>
         <TextInput
-          style={styles.input}
+          style={styles.inputDisable}
           value={description}
           onChangeText={setDescription}
+          editable={false}
         />
 
         <Text style={styles.label}>Category</Text>
-        <RNPickerSelect
-          onValueChange={(value) => setCategoryId(value)}
-          items={categories}
-          style={pickerSelectStyles}
-          Icon={() => <Ionicons name="chevron-down" size={24} color="#AAB4C1" />}
-          value={categoryId}
-          placeholder={{ label: category, value: category }}
-        />
+
+        <Text style={styles.inputDisable}>
+          {category || 'Loading...'}
+        </Text>
 
         <Text style={styles.label}>Stock</Text>
         <TextInput
@@ -168,17 +136,11 @@ export default function EditMedicationScreen() {
           onChangeText={setStock}
           keyboardType="numeric"
         />
-        
-       <Text style={styles.label}>Pharmacy</Text>
-        <TextInput
-          style={styles.input}
-          value={pharmacy}
-          editable={false}  // Disable editing
-        />
+
       </View>
 
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
-        <Text style={styles.confirmButtonText}>UPDATE</Text> 
+        <Text style={styles.confirmButtonText}>UPDATE</Text>
       </TouchableOpacity>
     </KeyboardAwareScrollView>
   );
@@ -206,31 +168,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  imageSection: {
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  medicationImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    marginBottom: 10,
-  },
-  selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  selectImageText: {
-    color: '#555',
-  },
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
     marginHorizontal: 20,
-    marginBottom: 20,
+    margin: 20,
   },
   label: {
     color: '#666',
@@ -238,6 +181,13 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: '#F4F4F4',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    marginBottom: 15,
+  },
+  inputDisable: {
+    backgroundColor: '#D3D3D3',
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 8,

@@ -35,7 +35,7 @@ export default function Sidebar() {
                     })
                     .then((user) => {
                         setUserProfile(user.data);  // Set user data state here
-                        console.log(user.data);      // Now the data will be logged after the state is updated
+                        console.log(userProfile._id);      // Now the data will be logged after the state is updated
                     })
                     .catch((error) => console.log(error));
             })

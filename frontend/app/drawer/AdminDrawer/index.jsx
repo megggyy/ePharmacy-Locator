@@ -66,11 +66,11 @@ export default function Sidebar() {
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       {/* Profile Section */}
       <View style={styles.profileSection}>
         <Image
-          source={require('@/assets/images/sample.jpg')} // Replace with actual image
+          source={require('@/assets/images/adminepharmacy.png')} // Replace with actual image
           style={styles.profileImage}
         />
         <Text style={styles.profileName}>{userProfile?.name}</Text>

@@ -38,6 +38,7 @@ const PharmacyOwnerSignupScreen = () => {
   const [barangays, setBarangays] = useState([]);
   const [city, setCity] = useState("Taguig City");
   const [images, setImages] = useState([]);
+  const [permits, setPermit] = useState([]); 
   const [error, setError] = useState('');
   // New States for Business Days, Opening, and Closing Hours
   const [businessDays, setBusinessDays] = useState("");
@@ -100,9 +101,28 @@ const PharmacyOwnerSignupScreen = () => {
     }
   };
 
+  const pickPermit = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [5.5, 8.5],
+      quality: 1,
+    });
+  
+    if (!result.canceled) {
+      const selectedPermits = result.assets.map((asset) => ({ id: images.length, uri: asset.uri }));
+      const filteredPermits = images.filter(image => image.uri !== undefined);
+      setPermit([...filteredPermits, ...selectedPermits]);
+    }
+  };
+
   
   const removeImage = (id) => {
     setImages(images.filter((image) => image.id !== id));
+  };
+
+  const removePermit = (id) => {
+    setPermit(permits.filter((permit) => permit.id !== id));
   };
 
   const validate = () => {
@@ -116,6 +136,7 @@ const PharmacyOwnerSignupScreen = () => {
     if (contactNumber.length !== 11) errorMessages.contactNumber = "CONTACT NUMBER MUST BE 11 DIGITS";
     if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE PERMIT";
+    if (permits.length === 0) errorMessages.permits = "PLEASE UPLOAD YOUR BUSINESS PERMIT";
     if (!businessDays) errorMessages.businessDays = "PLEASE SELECT BUSINESS DAYS";
     if (!openingHour || !closingHour) errorMessages.hours = "PLEASE SELECT OPENING AND CLOSING HOURS";
 
@@ -139,9 +160,9 @@ const PharmacyOwnerSignupScreen = () => {
     formData.append("isAdmin", false);
     formData.append("role", "PharmacyOwner");
     formData.append("approved", false);
-    formData.append("businessDays", businessDays); // Add business days
-    formData.append("openingHour", openingHour.toISOString()); // Convert opening hour to ISO string
-    formData.append("closingHour", closingHour.toISOString()); // Convert closing hour to ISO string
+    formData.append("businessDays", businessDays); 
+    formData.append("openingHour", openingHour.toISOString()); 
+    formData.append("closingHour", closingHour.toISOString()); 
     console.log(openingHour.toISOString());
     console.log(closingHour.toISOString());
 
@@ -151,6 +172,15 @@ const PharmacyOwnerSignupScreen = () => {
         uri: image.uri,
         type: mime.getType(image.uri),
         name: `image${index}.${mime.getExtension(mime.getType(image.uri))}`,
+      });
+    });
+
+     // Append business permit
+     permits.forEach((permit, index) => {
+      formData.append("permits", {
+        uri: permit.uri,
+        type: mime.getType(permit.uri),
+        name: `permit.${mime.getExtension(mime.getType(permit.uri))}`,
       });
     });
     console.log(formData);
@@ -370,26 +400,60 @@ const PharmacyOwnerSignupScreen = () => {
         )}
       </View>
 
-        {/* Upload Permits UI */}
-        <Text style={styles.uploadLabel}>Upload Permits</Text>
-        <View style={styles.uploadContainer}>
-          {images.map((imageURL, index) => {
-            return (
-              <View key={index} style={styles.imageContainer}>
-                <Image style={styles.image} source={{ uri: imageURL.uri }} />
-                <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
-                  <Ionicons name="close" size={12} color="white" />
-                </TouchableOpacity>
-              </View>
-            );
-          })}
-          <TouchableOpacity style={styles.uploadButton} onPress={pickImage}>
-            <Ionicons name="image-outline" size={24} color="white" />
-            <Text style={styles.uploadButtonText}>Select Images</Text>
-          </TouchableOpacity>
-        </View>
-        {error.images && <Text style={styles.errorImages}>{error.images}</Text>}
+       {/* Upload Pharmacy Image */}
+<Text style={styles.uploadLabel}>Pharmacy Image</Text>
+<View style={styles.uploadContainer}>
+  <TextInput
+    style={styles.inputTextField}
+    placeholder="Select pharmacy images"
+    editable={false}
+    value={images.length > 0 ? 'Images Selected' : ''}
+  />
+  <TouchableOpacity style={styles.addIcon} onPress={pickImage}>
+    <Ionicons name="add" size={24} color="white" />
+  </TouchableOpacity>
+</View>
 
+{/* Display Images */}
+<View style={styles.imagePreviewContainer}>
+  {images.map((imageURL, index) => (
+    <View key={index} style={styles.imageContainer}>
+      <Image style={styles.image} source={{ uri: imageURL.uri }} />
+      <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
+        <Ionicons name="close" size={12} color="white" />
+      </TouchableOpacity>
+    </View>
+  ))}
+</View>
+
+{error.images && <Text style={styles.errorText}>{error.images}</Text>}
+
+{/* Upload Business Permit */}
+<Text style={styles.uploadLabel}>Business Permit</Text>
+<View style={styles.uploadContainer}>
+  <TextInput
+    style={styles.inputTextField}
+    placeholder="Select business permits"
+    editable={false}
+    value={permits.length > 0 ? 'Permit Selected' : ''}
+  />
+  <TouchableOpacity style={styles.addIcon} onPress={pickPermit}>
+    <Ionicons name="add" size={24} color="white" />
+  </TouchableOpacity>
+</View>
+
+{/* Display Permits */}
+<View style={styles.imagePreviewContainer}>
+  {permits.map((permitURL, index) => (
+    <View key={index} style={styles.imageContainer}>
+      <Image style={styles.image} source={{ uri: permitURL.uri }} />
+      <TouchableOpacity onPress={() => removePermit(permitURL.id)} style={styles.removeButton}>
+        <Ionicons name="close" size={12} color="white" />
+      </TouchableOpacity>
+    </View>
+  ))}
+</View>
+{error.permits && <Text style={styles.errorText}>{error.permits}</Text>}
 
 
         {/* Sign up Button */}
@@ -425,21 +489,22 @@ const styles = StyleSheet.create({
   },
   logo: {
     alignSelf: 'center',
-    width: 80,
-    height: 80,
-    marginBottom: 20,
+    width: 70,
+    height: 70,
+    marginBottom: 5,
+    marginTop: 15,
   },
   title: {
     fontSize: 24,
     color: '#fff',
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   inputSection: {
     backgroundColor: '#fff',
     borderRadius: 20,
-    padding: 20,
+    padding:  15,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -527,9 +592,9 @@ const styles = StyleSheet.create({
   },
   signUpButton: {
     backgroundColor: '#027DB1',
-    paddingVertical: 15,
+    paddingVertical: 9,
     borderRadius: 10,
-    marginVertical: 20,
+    marginVertical: 8,
     alignItems: 'center',
   },
   signUpButtonText: {
@@ -584,7 +649,7 @@ const styles = StyleSheet.create({
     textAlign: 'center', 
   },
   timeInput: {
-    flex: 0.48, // Adjust width for both to fit in one row
+    flex: 0.48, 
   },
   pickerContainer: {
     marginTop: 10,
@@ -596,6 +661,47 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 5,
   },
+  uploadLabel: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333',
+    marginVertical: 2,
+  },
+  uploadContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 0,
+    justifyContent: 'space-between',
+  },
+  inputTextField: {
+    flex: 1,
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 8,
+    fontSize: 16,
+    color: '#333',
+  },
+  addIcon: {
+    backgroundColor: '#027DB1',
+    borderRadius: 30,
+    padding: 5,
+  },
+  imagePreviewContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginVertical: 1,
+    justifyContent: 'flex-start',
+  },
+  imageContainer: {
+    position: 'relative',
+    margin: 5,
+  },
+  image: {
+    width: 60,
+    height: 60,
+    borderRadius: 10,
+  },
+ 
 });
 
 const pickerSelectStyles = StyleSheet.create({

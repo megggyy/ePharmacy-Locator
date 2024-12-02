@@ -206,7 +206,11 @@ router.post(
         req.folder = 'users'; // Set the folder name for Cloudinary uploads
         next();
     },
-    uploadOptions.array('images', 10),
+    uploadOptions.fields([
+        { name: 'images', maxCount: 10 },
+        { name: 'permits', maxCount: 10 },
+      ]),
+    
     async (req, res) => {
         console.log(req.body)
         try {
@@ -297,16 +301,16 @@ router.post(
                     return res.status(500).json({ message: 'Error creating customer' });
                 }
 
-            } else if (user.role === 'PharmacyOwner') {
-                // Handle PharmacyOwner-specific logic for files
+            } else  if (user.role === 'PharmacyOwner') {
                 const files = req.files;
-                if (!files || files.length === 0) {
-                    return res.status(400).send('No permits in the request');
+                if (!files || !files.images || files.images.length === 0 || !files.permits || files.permits.length === 0) {
+                    return res.status(400).send('No images or permits in the request');
                 }
 
-                const permitPaths = files.map(file => file.path);
-                const businessDays = req.body.businessDays ? req.body.businessDays : ''; // Default to empty if not provided
-           // Convert opening and closing times to 'hh:mm AM/PM' format
+                const imagesPaths = files.images.map(file => file.path);
+                const permitPaths = files.permits.map(file => file.path);
+                const businessDays = req.body.businessDays || '';
+
                 const formatTime = (time) => {
                     if (!time) return null;
                     const date = new Date(time);
@@ -314,7 +318,7 @@ router.post(
                     let minutes = date.getMinutes();
                     const ampm = hours >= 12 ? 'PM' : 'AM';
                     hours = hours % 12;
-                    hours = hours ? hours : 12; // 12 AM/PM case
+                    hours = hours ? hours : 12;
                     minutes = minutes < 10 ? '0' + minutes : minutes;
                     return `${hours}:${minutes} ${ampm}`;
                 };
@@ -322,37 +326,21 @@ router.post(
                 const openingHour = formatTime(req.body.openingHour);
                 const closingHour = formatTime(req.body.closingHour);
 
-                if (req.body.latitude === '' || req.body.longitude === '')
-                
-                    
-                {    
-                    const newPharmacy = new Pharmacy({
+                const newPharmacy = new Pharmacy({
                     userInfo: user.id,
-                    images: permitPaths,
+                    images: imagesPaths,
+                    permits: permitPaths,
+                    location: req.body.latitude && req.body.longitude ? {
+                        latitude: req.body.latitude,
+                        longitude: req.body.longitude,
+                    } : undefined,
                     approved: req.body.approved,
-                    businessDays,       // Add business days
-                    openingHour,        // Add opening hour
-                    closingHour,    
-                    });
+                    businessDays,
+                    openingHour,
+                    closingHour,
+                });
 
-                    await newPharmacy.save();
-                }
-                else{
-                    const newPharmacy = new Pharmacy({
-                        userInfo: user.id,
-                        images: permitPaths,
-                        location: {
-                            latitude: req.body.latitude,
-                            longitude: req.body.longitude,
-                        },
-                        approved: req.body.approved,
-                        businessDays,       // Add business days
-                        openingHour,        // Add opening hour
-                        closingHour,    
-                        });
-
-                        await newPharmacy.save();
-                }
+                await newPharmacy.save();
 
 
                 return res.status(201).json({ message: 'Pharmacy created successfully', userId: user.id, });

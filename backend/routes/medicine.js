@@ -37,38 +37,36 @@ router.get('/medicinesPerCategory', async (req, res) => {
     }
 });
 // Create Medicine
-router.post('/create', (req, res, next) => {
-    req.folder = "medicines"; // Specify folder name for Cloudinary
-    next();
-}, uploadOptions.array('images', 10), async (req, res) => {
-    const files = req.files;
-    let imagePaths = [];
-
-    if (files) {
-        imagePaths = files.map(file => file.path); // Cloudinary URLs
-    }
-
+router.post('/create', async (req, res) => {
     const { name, description, stock, pharmacy, category } = req.body;
+    console.log(req.body)
 
-    const pharmacyExists = await Pharmacy.findById(pharmacy);
+    // Validate if pharmacy exists
+    const pharmacyExists = await Pharmacy.findOne({ userInfo: pharmacy});
     if (!pharmacyExists) return res.status(400).send("Invalid Pharmacy ID");
 
-    const categoryExists = await MedicationCategory.findById(category);
-    if (!categoryExists) return res.status(400).send("Invalid Category ID");
+    
+    console.log(pharmacyExists)
+    // Find category by name, case-insensitive
+    const categoryExists = await MedicationCategory.findOne({ name: category});
+    if (!categoryExists) return res.status(400).send("Invalid Category name");
 
+    console.log(categoryExists)
+    // Create new medicine document
     let medicine = new Medicine({
         name,
         description,
         stock,
-        pharmacy,
-        category,
-        images: imagePaths
+        pharmacy: pharmacyExists._id,
+        category: categoryExists._id,
     });
 
     try {
+        // Save the medicine document to the database
         medicine = await medicine.save();
-        res.send(medicine);
+        res.send(medicine); // Return the saved medicine
     } catch (err) {
+        // Handle any errors during the save process
         res.status(500).send('The medicine cannot be created');
     }
 });
@@ -77,100 +75,93 @@ router.post('/create', (req, res, next) => {
 //PHARMACY
 // Read Medicines (Get All)
 router.get('/', async (req, res) => {
-    const { category } = req.query; // Extract category query parameter
-
     try {
-        // Build the query object dynamically
-        const query = category ? { category } : {};
-
-        // Fetch medicines with optional filtering by category
-        const medicines = await Medicine.find(query)
+        // Find all medicines where pharmacy.userInfo matches the id parameter
+        const medicines = await Medicine.find()
             .populate({
-                path: 'pharmacy', // Populating the pharmacy reference
-                select: 'location', // Selecting the fields to return from the Pharmacy collection
+                path: 'pharmacy',
                 populate: {
                     path: 'userInfo',
-                    select: 'name street barangay city', 
+                    select: 'name street barangay city contactNumber',
                 },
             })
-            .populate('category'); // Populate medication category
+            .populate('category');
 
-        if (!medicines || medicines.length === 0) {
-            return res.status(404).json({ success: false, message: 'No medicines found' });
+        // Filter out medicines where pharmacy is null (no match for userInfo)
+        const filteredMedicines = medicines.filter(med => med.pharmacy !== null);
+        res.status(200).send(filteredMedicines);
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+// Get All Pharmacy's Medicine
+router.get('/:id', async (req, res) => {
+    try {
+        // Find the pharmacy by the userInfo field (params.id)
+        const pharmacy = await Pharmacy.findOne({ userInfo: req.params.id });
+
+        // If no pharmacy is found, return an error
+        if (!pharmacy) {
+            return res.status(400).send("Pharmacy not found");
         }
 
-        res.status(200).json(medicines); // Return filtered medicines with populated pharmacy and category
+        // Find all medicines where the pharmacy field matches the pharmacy ID
+        const medicines = await Medicine.find({ pharmacy: pharmacy._id })
+            .populate('category')
+            .populate('pharmacy');
+
+        // Send the fetched medicines
+        res.status(200).send(medicines);
     } catch (error) {
-        console.error('Error fetching medicines:', error);
+        // Handle errors
         res.status(500).json({ success: false, message: error.message });
     }
 });
 
 
-
-// Read Medicine by ID
-router.get('/:id', async (req, res) => {
+//Get Single Medicine
+router.get('/read/:id', async (req, res) => {
     try {
-        const medicine = await Medicine.findById(req.params.id)
-        .populate({
-            path: 'pharmacy',  // Populating the pharmacy reference
-            select: 'location',  // Selecting the fields to return from the Pharmacy collection
-            populate: {
-                path: 'userInfo',
-                select: 'name street barangay city contactNumber',  // Populate address fields
-            },
-        })
-        .populate('category'); 
+        // Find all medicines where the pharmacy field matches the given pharmacy ID
+        const medicines = await Medicine.findById(req.params.id )
+            .populate('category')
+            .populate('pharmacy');
 
-        if (!medicine) return res.status(500).json({ message: 'The medicine with the given ID was not found' });
-
-        res.status(200).send(medicine);
+        // Send the fetched medicines
+        res.status(200).send(medicines);
     } catch (error) {
+        // Handle errors
         res.status(500).json({ success: false, message: error.message });
     }
 });
 
 // Update Medicine
-router.put('/update/:id', (req, res, next) => {
-    req.folder = "medicines"; // Specify folder name for Cloudinary
-    next();
-}, uploadOptions.array('images', 10), async (req, res) => {
-    const files = req.files;
-    let imagePaths = [];
+router.put('/update/:id', async (req, res) => {
+    const { stock } = req.body;  // Only extracting the stock from the body
 
-    if (files) {
-        imagePaths = files.map(file => file.path); // Cloudinary URLs
-    }
-
-    const { name, description, stock, pharmacy, category } = req.body;
-
-    const pharmacyExists = await Pharmacy.findById(pharmacy);
-    if (!pharmacyExists) return res.status(400).send("Invalid Pharmacy ID");
-
-    const categoryExists = await MedicationCategory.findById(category);
-    if (!categoryExists) return res.status(400).send("Invalid Category ID");
+    // Validate the input stock if needed
+    if (stock === undefined) return res.status(400).send("Stock value is required");
 
     try {
+        // Find the medicine and update only the stock field
         const updatedMedicine = await Medicine.findByIdAndUpdate(
             req.params.id,
             {
-                name,
-                description,
-                stock,
-                pharmacy,
-                category,
-                images: imagePaths.length ? imagePaths : undefined,
+                stock,  // Only updating stock
             },
-            { new: true }
+            { new: true }  // Return the updated document
         );
 
+        // Check if the medicine was updated
         if (!updatedMedicine) return res.status(500).json({ message: 'The medicine cannot be updated' });
 
-        res.send(updatedMedicine);
+        res.send(updatedMedicine);  // Send the updated medicine details
     } catch (err) {
         res.status(500).json({ success: false, message: err.message });
     }
 });
+
 
 // Delete Medicine
 router.delete('/delete/:id', async (req, res) => {

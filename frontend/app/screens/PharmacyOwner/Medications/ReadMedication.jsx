@@ -13,7 +13,7 @@ export default function ReadMedicationScreen() {
   useEffect(() => {
     const fetchMedication = async () => {
       try {
-        const response = await axios.get(`${baseURL}medicine/${id}`);
+        const response = await axios.get(`${baseURL}medicine/read/${id}`);
         setMedicationData(response.data);
       } catch (error) {
         console.error('Error fetching medication:', error);
@@ -39,30 +39,18 @@ export default function ReadMedicationScreen() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.title}>Medication Details</Text>
+        <Text style={styles.title}>{medicationData.name}</Text>
       </View>
 
       {/* Medication Details */}
       <View style={styles.detailsContainer}>
-        <FlatList
-          data={medicationData.images}
-          horizontal
-          renderItem={({ item: image }) => (
-            <Image source={{ uri: image }} style={styles.image} />
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
-        <Text style={styles.label}>Name:</Text>
-        <Text style={styles.value}>{medicationData.name}</Text>
         <Text style={styles.label}>Description:</Text>
         <Text style={styles.value}>{medicationData.description}</Text>
         <Text style={styles.label}>Category:</Text>
         <Text style={styles.value}>{medicationData.category?.name}</Text>
         <Text style={styles.label}>Stock:</Text>
         <Text style={styles.value}>{medicationData.stock}</Text>
-        <Text style={styles.label}>Pharmacy:</Text>
-        <Text style={styles.value}>{medicationData.pharmacy.userInfo.name}</Text>
-      </View>
+        </View>
     </View>
   );
 }
@@ -89,15 +77,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   detailsContainer: {
-    marginTop: 20,
-    alignItems: 'center',
-  },
-  image: {
-    width: 150,
-    height: 150,
+    backgroundColor: 'white',
     borderRadius: 10,
-    marginHorizontal: 5,
-    marginBottom: 20,
+    padding: 20,
+    margin: 20
   },
   label: {
     fontWeight: 'bold',
@@ -105,10 +88,12 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   value: {
-    fontSize: 16,
-    marginBottom: 20,
-    textAlign: 'center',
+    backgroundColor: '#F4F4F4',
+    borderRadius: 5,
     paddingHorizontal: 10,
+    paddingVertical: 10,
+    marginBottom: 15,
+    textAlign: 'justify'
   },
   loadingContainer: {
     flex: 1,

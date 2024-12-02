@@ -13,10 +13,6 @@ const medicineSchema = mongoose.Schema({
         type: Number, 
         required: true,
     },
-    type: {
-        type: String,
-        required: true,
-    },
     pharmacy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',

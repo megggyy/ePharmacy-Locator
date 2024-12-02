@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Amoxicillin",
+      "description": "A broad-spectrum antibiotic used to treat bacterial infections such as respiratory tract infections, ear infections, and urinary tract infections."
+    },
+    {
+      "name": "Ciprofloxacin",
+      "description": "Used to treat various bacterial infections including urinary tract infections, respiratory tract infections, and skin infections."
+    },
+    {
+      "name": "Azithromycin",
+      "description": "Commonly used to treat respiratory infections, skin infections, and sexually transmitted infections."
+    },
+    {
+      "name": "Doxycycline",
+      "description": "Used for treating bacterial infections like pneumonia, acne, and certain sexually transmitted infections."
+    },
+    {
+      "name": "Cephalexin",
+      "description": "Effective against bacterial infections such as ear infections, skin infections, and urinary tract infections."
+    },
+    {
+      "name": "Metronidazole",
+      "description": "Treats bacterial and protozoal infections, including those in the gastrointestinal tract and reproductive system."
+    },
+    {
+      "name": "Clindamycin",
+      "description": "Used for serious bacterial infections such as those affecting the lungs, skin, and internal organs."
+    },
+    {
+      "name": "Levofloxacin",
+      "description": "A fluoroquinolone antibiotic for treating infections like pneumonia, urinary tract infections, and sinusitis."
+    },
+    {
+      "name": "Vancomycin",
+      "description": "Reserved for severe bacterial infections, including MRSA and infections resistant to other antibiotics."
+    },
+    {
+      "name": "Rifampin",
+      "description": "Used in combination therapy to treat tuberculosis and other bacterial infections."
+    },
+    {
+      "name": "Erythromycin",
+      "description": "Treats a variety of bacterial infections including respiratory tract infections and skin infections."
+    },
+    {
+      "name": "Tetracycline",
+      "description": "Used to treat bacterial infections such as acne, cholera, and syphilis."
+    },
+    {
+      "name": "Penicillin",
+      "description": "One of the earliest antibiotics used to treat a range of bacterial infections including strep throat and syphilis."
+    },
+    {
+      "name": "Bactrim (Sulfamethoxazole/Trimethoprim)",
+      "description": "A combination antibiotic for treating urinary tract infections, bronchitis, and ear infections."
+    },
+    {
+      "name": "Linezolid",
+      "description": "Effective against multidrug-resistant Gram-positive infections, including MRSA and VRE."
+    }
+  ]
+  

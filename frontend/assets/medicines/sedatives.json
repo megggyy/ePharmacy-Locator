@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Diazepam",
+      "description": "Used to treat anxiety, muscle spasms, and seizures. It also provides sedation before medical procedures."
+    },
+    {
+      "name": "Lorazepam",
+      "description": "Prescribed for managing anxiety disorders and for sedation before surgery."
+    },
+    {
+      "name": "Alprazolam",
+      "description": "Used to treat anxiety and panic disorders by promoting a calming effect."
+    },
+    {
+      "name": "Clonazepam",
+      "description": "Treats anxiety, panic disorders, and seizures; also used as a sedative."
+    },
+    {
+      "name": "Phenobarbital",
+      "description": "A barbiturate used for seizure control and as a sedative for anxiety or insomnia."
+    },
+    {
+      "name": "Midazolam",
+      "description": "Used for pre-surgical sedation and for inducing sleepiness during medical procedures."
+    },
+    {
+      "name": "Zolpidem",
+      "description": "Primarily prescribed for short-term treatment of insomnia by helping patients fall asleep."
+    },
+    {
+      "name": "Temazepam",
+      "description": "Used to treat insomnia by helping patients fall and stay asleep."
+    },
+    {
+      "name": "Eszopiclone",
+      "description": "Prescribed for insomnia; helps with falling asleep and maintaining sleep."
+    },
+    {
+      "name": "Triazolam",
+      "description": "A short-acting benzodiazepine used to treat severe insomnia."
+    },
+    {
+      "name": "Chloral Hydrate",
+      "description": "Used as a sedative and hypnotic for short-term treatment of insomnia and anxiety."
+    },
+    {
+      "name": "Dexmedetomidine",
+      "description": "Used for sedation in intensive care settings and during medical procedures."
+    },
+    {
+      "name": "Ketamine",
+      "description": "Used in controlled environments for sedation and pain relief, particularly in emergency or surgical settings."
+    },
+    {
+      "name": "Etomidate",
+      "description": "A short-acting sedative used for induction of anesthesia and sedation in critically ill patients."
+    },
+    {
+      "name": "Propofol",
+      "description": "Commonly used for induction and maintenance of anesthesia or sedation in medical procedures."
+    }
+  ]
+  

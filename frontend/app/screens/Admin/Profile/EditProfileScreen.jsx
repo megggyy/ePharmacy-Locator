@@ -117,12 +117,9 @@ export default function EditProfile() {
 
       <View style={styles.profileImageSection}>
         <Image
-          source={require('@/assets/images/sample.jpg')}
+           source={require('@/assets/images/adminepharmacy.png')}
           style={styles.profileImage}
         />
-        <TouchableOpacity style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Image</Text>
-        </TouchableOpacity>
       </View>
 
       <View style={styles.inputContainer}>
@@ -242,15 +239,6 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     marginBottom: 10,
-  },
-  selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  selectImageText: {
-    color: '#555',
   },
   inputContainer: {
     backgroundColor: 'white',

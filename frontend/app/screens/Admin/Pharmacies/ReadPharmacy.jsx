@@ -82,17 +82,32 @@ export default function ReadPharmacyScreen() {
       </View>
 
       <View style={styles.detailsContainer}>
-        {/* Image Carousel */}
+        {/* Pharmacy Images Section */}
+        <Text style={styles.sectionTitle}>Pharmacy Images</Text>
         <FlatList
           data={pharmacy.images}
           horizontal={true}
-          pagingEnabled={true} // This ensures only one image at a time
+          pagingEnabled={true}
           renderItem={({ item }) => (
             <TouchableOpacity onPress={() => handleImagePress(item)}>
               <Image source={{ uri: item }} style={styles.image} />
             </TouchableOpacity>
           )}
           keyExtractor={(image, index) => index.toString()}
+        />
+
+        {/* Pharmacy Permits Section */}
+        <Text style={styles.sectionTitle}>Pharmacy Permits</Text>
+        <FlatList
+          data={pharmacy.permits}
+          horizontal={true}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <TouchableOpacity onPress={() => handleImagePress(item)}>
+              <Image source={{ uri: item }} style={styles.image} />
+            </TouchableOpacity>
+          )}
+          keyExtractor={(permit, index) => index.toString()}
         />
 
         {/* Modal for Expanded Image */}
@@ -126,6 +141,17 @@ export default function ReadPharmacyScreen() {
 
           <Text style={styles.label}>Address</Text>
           <TextInput style={styles.input} value={`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`} editable={false} />
+
+          {/* New Fields - Business Days, Opening Hours, Closing Hours */}
+          <Text style={styles.label}>Business Days</Text>
+          <TextInput style={styles.input} value={pharmacy.businessDays || 'N/A'} editable={false} />
+
+          <Text style={styles.label}>Operating Hours</Text>
+          <TextInput
+            style={styles.input}
+            value={`${pharmacy.openingHour || 'N/A'} - ${pharmacy.closingHour || 'N/A'}`}
+            editable={false}
+          />
 
           <TouchableOpacity
             style={[styles.confirmButton, pharmacy.approved && styles.disabledButton]} // Apply disabled style
@@ -167,9 +193,15 @@ const styles = StyleSheet.create({
   detailsContainer: {
     margin: 20,
   },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    marginTop: 10,
+  },
   image: {
-    width: 360,
-    height: 480,
+    width: 200, // Adjusted size for smaller images
+    height: 200,
     borderRadius: 10,
     marginHorizontal: 5,
   },
@@ -199,24 +231,17 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   input: {
-    backgroundColor: '#F4F4F4',
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    paddingVertical: 8,
+    backgroundColor: '#F2F2F2',
+    padding: 10,
     marginBottom: 15,
-  },
-  errorMessage: {
-    fontSize: 18,
-    color: 'red',
-    textAlign: 'center',
-    marginTop: 20,
+    borderRadius: 5,
+    fontSize: 16,
   },
   confirmButton: {
     backgroundColor: '#0B607E',
     paddingVertical: 15,
-    borderRadius: 10,
+    borderRadius: 5,
     alignItems: 'center',
-    marginHorizontal: 20,
   },
   confirmButtonText: {
     color: 'white',
@@ -224,9 +249,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   disabledButton: {
-    backgroundColor: 'rgba(11, 96, 126, 0.5)',
+    backgroundColor: '#BEBEBE',
   },
   disabledText: {
-    color: 'white',
+    color: '#8F8F8F',
+  },
+  errorMessage: {
+    textAlign: 'center',
+    fontSize: 20,
+    marginTop: 50,
   },
 });
