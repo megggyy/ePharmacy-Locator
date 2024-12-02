@@ -196,7 +196,6 @@ export default function MedicationScreen() {
             <MedicationCard
               key={medication._id}
               name={medication.name}
-              imageUrl={medication.images?.[0] || 'https://via.placeholder.com/150'}
               description={medication.description}
               stock={`${medication.stock} in stock`}
               barangay={medication.barangay}
@@ -204,31 +203,31 @@ export default function MedicationScreen() {
             />
           ))}
         </ScrollView>
-    {/* Suggested Medications Section */}
-    <View style={styles.sectionHeader}>
+        {/* Suggested Medications Section */}
+        {/* <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Suggested Medications</Text>
           <TouchableOpacity>
             <Text style={styles.viewAll} onPress={() => router.push('../screens/User/Features/SuggestedMedicine')}>View all</Text>
           </TouchableOpacity>
-        </View>
+        </View> */}
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.medicationsContainer}>
           {/* Static medications for "Suggested" section */}
-          <MedicationCard
+          {/* <MedicationCard
             name="Medication 3"
             imageUrl="https://via.placeholder.com/150" // Placeholder image
             description="Vitamin C"
             stock="30 in stock"
             barangay="Hagonoy"
             onPress={() => router.push('/screens/User/Features/MedicationDetails')}
-          />
-          <MedicationCard
+          /> */}
+          {/* <MedicationCard
             name="Medication 4"
             imageUrl="https://via.placeholder.com/150" // Placeholder image
             description="Allergy Relief"
             stock="10 in stock"
             barangay="South Signal Village"
             onPress={() => router.push('/screens/User/Features/MedicationDetails')}
-          />
+          /> */}
         </ScrollView>
       </ScrollView>
     </SafeAreaView>
@@ -278,25 +277,25 @@ const styles = StyleSheet.create({
   descriptionText: { fontSize: 12, color: '#666', marginTop: 5 },
   stockText: { fontSize: 12, color: '#666', marginTop: 5 },
   barangayText: { fontSize: 12, color: '#666', marginTop: 5 },
-  topSection: { 
+  topSection: {
     paddingHorizontal: 16,
-    paddingBottom: 10, 
-    borderBottomLeftRadius: 25, 
-    borderBottomRightRadius: 25, 
+    paddingBottom: 10,
+    borderBottomLeftRadius: 25,
+    borderBottomRightRadius: 25,
   },
-  header: { 
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    alignItems: 'center', 
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginTop: 10,
   },
   locationWrapper: { flex: 1, marginLeft: 10 },
   location: { fontSize: 16, color: '#fff' },
   menuIcon: {
-  fontSize: 30,
-  color: '#fff',
+    fontSize: 30,
+    color: '#fff',
   },
-  icon: { fontSize: 20, marginHorizontal: 10, color: '#fff'  },
+  icon: { fontSize: 20, marginHorizontal: 10, color: '#fff' },
   searchBar: { marginVertical: 15, padding: 10, backgroundColor: '#f0f0f0', borderRadius: 8 },
   suggestionsContainer: {
     position: 'absolute',
@@ -306,7 +305,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     zIndex: 1,
     overflow: 'hidden', // Prevent content overflow
-  },  
+  },
   suggestionItem: {
     flexDirection: 'row',
     alignItems: 'center',
