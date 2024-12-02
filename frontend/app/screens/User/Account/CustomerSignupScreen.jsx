@@ -326,7 +326,7 @@ const register = () => {
         {errors.customDisease && <Text style={styles.errorText}>{errors.customDisease}</Text>}
 
         {/* Upload Images UI */}
-        <Text style={styles.uploadLabel}>Upload Images</Text>
+        <Text style={styles.uploadLabel}>Upload Your Image</Text>
         <View style={styles.uploadContainer}>
           {images.map((imageURL, index) => {
             return (
@@ -340,7 +340,7 @@ const register = () => {
           })}
           <TouchableOpacity style={styles.uploadButton} onPress={pickImage}>
             <Ionicons name="image-outline" size={24} color="white" />
-            <Text style={styles.uploadButtonText}>Select Images</Text>
+            <Text style={styles.uploadButtonText}>Select Image</Text>
           </TouchableOpacity>
         </View>
         {errors.images && <Text style={styles.errorImages}>{errors.images}</Text>}

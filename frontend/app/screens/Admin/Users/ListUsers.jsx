@@ -103,12 +103,16 @@ const UserTableScreen = () => {
                   }}
                 >
                   <DataTable.Row style={styles.rowCell}>
-                    <DataTable.Cell style={styles.imageCell}>
-                      <Image
-                        source={{ uri: item.customerDetails.images[0] }}
-                        style={styles.image}
-                        resizeMode="cover"
-                      />
+                  <DataTable.Cell style={styles.imageCell}>
+                <Image
+                  source={{
+                    uri: item.customerDetails?.images?.[0]
+                      ? item.customerDetails.images[0]
+                      : 'https://via.placeholder.com/150', // Replace with your placeholder image URL
+                  }}
+                  style={styles.image}
+                  resizeMode="cover"
+                />
                     </DataTable.Cell>
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>{item.name}</Text>

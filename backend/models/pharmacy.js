@@ -4,6 +4,9 @@ const pharmacySchema = new mongoose.Schema({
     images: [{
         type: String
     }],
+    permits: [{
+        type: String
+    }],
     userInfo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

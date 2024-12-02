@@ -66,7 +66,7 @@ export default function Sidebar() {
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       {/* Profile Section */}
       <View style={styles.profileSection}>
         <Image
