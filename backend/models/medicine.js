@@ -3,29 +3,30 @@ const mongoose = require('mongoose');
 const medicineSchema = mongoose.Schema({
     name: {
         type: String,
-        // required: true,
+        required: true,
     },
     description: {
         type: String,
-        // required: true,
+        required: true,
     },
     stock: {
         type: Number, 
-        // required: true,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
     },
     pharmacy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',
-        // required: true,
+        required: true,
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'MedicationCategory',
-        // required: true,
+        required: true,
     },
-    images: [{
-        type: String,
-    }],
 });
 
 medicineSchema.virtual('id').get(function () {

@@ -73,13 +73,6 @@ export default function RootLayout() {
               <Stack.Screen name="screens/PharmacyOwner/Profile/EditPharmacyProfileScreen" options={{ headerShown: false }} />
               <Stack.Screen name="screens/PharmacyOwner/Profile/ChangePassword" options={{ headerShown: false }} />
 
-              {/* CATEGORIES */}
-              <Stack.Screen name="screens/PharmacyOwner/MedicationCategory/ListCategories" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/MedicationCategory/EditCategory" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/MedicationCategory/ReadCategory" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/MedicationCategory/CreateCategory" options={{ headerShown: false }} />
-
-
               {/* MEDICATIONS */}
               <Stack.Screen name="screens/PharmacyOwner/Medications/ListMedications" options={{ headerShown: false }} />
               <Stack.Screen name="screens/PharmacyOwner/Medications/EditMedication" options={{ headerShown: false }} />

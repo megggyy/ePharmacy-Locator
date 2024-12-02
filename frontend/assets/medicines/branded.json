@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Tylenol",
+      "description": "Used to relieve pain and reduce fever."
+    },
+    {
+      "name": "Advil",
+      "description": "Provides relief from pain, inflammation, and fever."
+    },
+    {
+      "name": "Zyrtec",
+      "description": "Used to treat allergy symptoms such as runny nose, sneezing, and itchy eyes."
+    },
+    {
+      "name": "Lipitor",
+      "description": "Helps lower cholesterol levels and reduce the risk of heart disease."
+    },
+    {
+      "name": "Amoxicillin",
+      "description": "An antibiotic used to treat various bacterial infections."
+    },
+    {
+      "name": "Metformin",
+      "description": "Prescribed for managing type 2 diabetes by controlling blood sugar levels."
+    },
+    {
+      "name": "Omeprazole",
+      "description": "Used to treat gastroesophageal reflux disease (GERD) and stomach ulcers."
+    },
+    {
+      "name": "Ventolin",
+      "description": "A bronchodilator used to relieve bronchospasm in conditions such as asthma."
+    },
+    {
+      "name": "Xanax",
+      "description": "Prescribed to manage anxiety disorders and panic attacks."
+    },
+    {
+      "name": "Lisinopril",
+      "description": "Used to treat high blood pressure and heart failure."
+    },
+    {
+        "name": "Tylenol",
+        "description": "Used to relieve pain and reduce fever."
+      },
+      {
+        "name": "Advil",
+        "description": "Provides relief from pain, inflammation, and fever."
+      },
+      {
+        "name": "Zyrtec",
+        "description": "Used to treat allergy symptoms such as runny nose, sneezing, and itchy eyes."
+      },
+      {
+        "name": "Lipitor",
+        "description": "Helps lower cholesterol levels and reduce the risk of heart disease."
+      },
+      {
+        "name": "Amoxicillin",
+        "description": "An antibiotic used to treat various bacterial infections."
+      },
+      {
+        "name": "Metformin",
+        "description": "Prescribed for managing type 2 diabetes by controlling blood sugar levels."
+      },
+      {
+        "name": "Omeprazole",
+        "description": "Used to treat gastroesophageal reflux disease (GERD) and stomach ulcers."
+      },
+      {
+        "name": "Ventolin",
+        "description": "A bronchodilator used to relieve bronchospasm in conditions such as asthma."
+      },
+      {
+        "name": "Xanax",
+        "description": "Prescribed to manage anxiety disorders and panic attacks."
+      },
+      {
+        "name": "Lisinopril",
+        "description": "Used to treat high blood pressure and heart failure."
+      },
+      {
+        "name": "Crestor",
+        "description": "Lowers bad cholesterol and triglycerides while raising good cholesterol."
+      },
+      {
+        "name": "Plavix",
+        "description": "Prevents blood clots in patients with heart conditions or after a stroke."
+      },
+      {
+        "name": "Synthroid",
+        "description": "Treats hypothyroidism by supplementing low thyroid hormone levels."
+      },
+      {
+        "name": "Cymbalta",
+        "description": "Used for treating depression, anxiety, and chronic pain conditions."
+      },
+      {
+        "name": "Humira",
+        "description": "Treats autoimmune conditions like rheumatoid arthritis and Crohn's disease."
+      },
+      {
+        "name": "Prozac",
+        "description": "An antidepressant used to treat depression, OCD, and panic disorder."
+      },
+      {
+        "name": "Glucophage",
+        "description": "Alternative brand for Metformin to control blood sugar in diabetes."
+      },
+      {
+        "name": "Fosamax",
+        "description": "Used to treat and prevent osteoporosis by strengthening bones."
+      },
+      {
+        "name": "Coumadin",
+        "description": "An anticoagulant (blood thinner) used to prevent blood clots."
+      },
+      {
+        "name": "Allegra",
+        "description": "Relieves seasonal allergy symptoms like sneezing and itchy nose."
+      }
+  ]
+  

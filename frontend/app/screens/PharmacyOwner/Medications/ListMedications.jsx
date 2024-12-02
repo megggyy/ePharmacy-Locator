@@ -1,102 +1,173 @@
-import React, { useEffect, useState } from 'react'; 
-import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import React, { useState, useCallback } from "react";
+import {
+  View,
+  Text,
+  ActivityIndicator,
+  StyleSheet,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  Alert
+} from "react-native";
+import { DataTable, Searchbar } from "react-native-paper";
+import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
-import { useFocusEffect, useRouter } from 'expo-router';
-import axios from 'axios';
-import baseURL from '@/assets/common/baseurl';
+import { useFocusEffect } from "@react-navigation/native";
+import axios from "axios";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRouter } from 'expo-router';
+import baseURL from "../../../../assets/common/baseurl";
+import Spinner from "../../../../assets/common/spinner";
 
-export default function EditMedicationScreen() {
+const MedicationScreen = () => {
   const router = useRouter();
-  const [medications, setMedications] = useState([]);
+  const [medicationsList, setMedicationsList] = useState([]);
+  const [medicationsFilter, setMedicationsFilter] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
-  // Fetch medications from API
-  useFocusEffect(
-    React.useCallback(() => {
-      const fetchMedications = async () => {
-        try {
-          const response = await axios.get(`${baseURL}medicine`); // Replace with your actual URL
-          setMedications(response.data);
-        } catch (error) {
-          console.error('Error fetching medications:', error);
-        }
-      };
-  
-      fetchMedications();
-    }, []) // Empty dependency array to run only once when the component mounts
-  );
-  
-
-  const handleDelete = async (medicationId) => {
-      try {
-      await axios.delete(`${baseURL}medicine/delete/${medicationId}`);
-      setMedications(medications.filter(medication => medication._id !== medicationId));
-      Alert.alert('Success', 'Medicine deleted successfully');
-    } catch (error) {
-      console.error('Error deleting medicine:', error);
-      Alert.alert('Error', 'Failed to delete medicine');
+  const searchMedications = (text) => {
+    if (text === "") {
+      setMedicationsFilter(medicationsList);
+    } else {
+      setMedicationsFilter(
+        medicationsList.filter((i) =>
+          i.name.toLowerCase().includes(text.toLowerCase())
+        )
+      );
     }
   };
-  
 
-  const renderItem = ({ item }) => (
-    <TouchableOpacity 
-    style={styles.row} 
-    onPress={() => router.push(`/screens/PharmacyOwner/Medications/ReadMedication?id=${item._id}`)}>
-      {/* <Text style={styles.cell}>{item.id}</Text> */}
-      <Image source={{ uri: item.images[0] }} style={styles.image} /> 
-      <Text style={styles.cell}>{item.description}</Text>
-      <Text style={styles.cell}>{item.category.name}</Text>
-      <Text style={styles.cell}>{item.stock}</Text>
-      <Text style={styles.cell}>{item.pharmacy.userInfo.name}</Text>
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setTimeout(() => {
+        axios
+        .get(`${baseURL}medicine`)
+            .then((res) => {
+                // console.log(res.data)
+                setMedicationsList(res.data);
+                setMedicationsFilter(res.data);
+                setLoading(false);
+            })
+        setRefreshing(false);
+    }, 2000);
+}, []);
 
-      {/* Action Column */}
-      <View style={styles.actionCell}>
-        <TouchableOpacity onPress={() => router.push(`/screens/PharmacyOwner/Medications/EditMedication?id=${item._id}`)} style={styles.actionButton}>
-          <Ionicons name="create-outline" size={24} color="black" />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleDelete(item.id)} style={styles.actionButton}>
-          <Ionicons name="trash-outline" size={24} color="red" />
-        </TouchableOpacity>
-      </View>
-    </TouchableOpacity>
+  useFocusEffect(
+    useCallback(() => {
+      // Fetch medications
+      axios
+        .get(`${baseURL}medicine`)
+        .then((res) => {
+          setMedicationsList(res.data);
+          setMedicationsFilter(res.data);
+          console.log(res.data)
+          setLoading(false);
+        })
+        .catch((err) => console.error(err));
+
+      return () => {
+        setMedicationsList([]);
+        setMedicationsFilter([]);
+        setLoading(true);
+      };
+    }, [])
   );
+
+  const handleDelete = async (medicationId) => {
+    try {
+      await axios.delete(`${baseURL}medicine/delete/${medicationId}`);
+      setMedicationsList(medicationsList.filter(medication => medication._id !== medicationId));
+      Alert.alert('Success', 'Category deleted successfully');
+
+      onRefresh()
+    } catch (error) {
+      console.error('Error deleting medication:', error);
+      Alert.alert('Error', 'Failed to delete medication');
+    }
+  };
 
   return (
     <View style={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Text style={styles.title}>Medication List</Text>
-      </View>
-      {/* Create Button */}
-      <TouchableOpacity 
-            onPress={() => router.push('/screens/PharmacyOwner/Medications/CreateMedication')} 
-            style={styles.createButton}
-          >
-            <Text style={styles.createButtonText}>Create Medicine</Text>
-          </TouchableOpacity>
-      {/* Medication Table */}
-      <Text style={styles.tableTitle}>Medications</Text>
-      <View style={styles.tableHeader}>
-        {/* <Text style={styles.headerCell}>ID</Text> */}
-        <Text style={styles.headerCell}>Image</Text>
-        <Text style={styles.headerCell}>Description</Text>
-        <Text style={styles.headerCell}>Category</Text>
-        <Text style={styles.headerCell}>Stock</Text>
-        <Text style={styles.headerCell}>Pharmacy</Text>
-        <Text style={styles.headerCell}>Actions</Text>
-      </View>
-      <FlatList
-        data={medications}
-        renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
-        style={styles.table}
-      />
+      {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
+            <Image
+              source={require('@/assets/images/epharmacy-logo.png')}
+              style={styles.logo}
+            />
+            <Text style={styles.title}>ePharmacy</Text>
+          </View>
+
+          <View style={styles.buttonContainer}>
+            <Searchbar
+              placeholder="SEARCH NAME"
+              onChangeText={(text) => searchMedications(text)}
+              style={{ flex: 1 }}
+            />
+            <TouchableOpacity
+              onPress={() => router.push('/screens/Admin/MedicationCategory/CreateCategory')}
+              style={styles.createButton}
+            >
+               <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
+              <Text style={styles.createButtonText}>Create Category</Text>
+            </TouchableOpacity>
+          </View>
+
+          <ScrollView>
+            <Text style={styles.tableTitle}>MEDICINE CATEGORIES</Text>
+            <DataTable>
+              <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>DESCRIPTION</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ACTIONS</Text></DataTable.Title>
+              </DataTable.Header>
+
+              {medicationsFilter.map((item, index) => (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => router.push(`/screens/Admin/MedicationCategory/ReadCategory?id=${item._id}`)}
+                  style={{
+                    backgroundColor: index % 2 === 0 ? 'lightgray' : 'gainsboro',
+                  }}
+                >
+                  <DataTable.Row style={styles.rowCell}>
+
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>{item.name}</Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>{item.description}</Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
+                      <View style={styles.actionCell}>
+                        <TouchableOpacity
+                          onPress={() => router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)}
+                          style={styles.actionButton}
+                        >
+                          <Ionicons name="create-outline" size={24} color="black" />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.actionButton}>
+                          <Ionicons name="trash-outline" size={24} color="red" />
+                        </TouchableOpacity>
+                      </View>
+                    </DataTable.Cell>
+                  </DataTable.Row>
+                </TouchableOpacity>
+              ))}
+            </DataTable>
+          </ScrollView>
+        </>
+      )}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -114,71 +185,91 @@ const styles = StyleSheet.create({
     top: 50,
     left: 20,
   },
+  logo: {
+    width: 60,
+    height: 60,
+  },
   title: {
     color: 'white',
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 10,
   },
-  tableTitle: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 20,
-  },
-  tableHeader: {
-    flexDirection: 'row',
-    backgroundColor: '#EEEEEE',
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#CCCCCC',
-  },
-  headerCell: {
-    flex: 1,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  table: {
-    paddingHorizontal: 10,
-  },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E0E0E0',
-  },
-  cell: {
-    flex: 1,
-    textAlign: 'center',
-    color: '#333333',
-  },
   createButton: {
+    flexDirection: 'row', // Align icon and text horizontally
+    alignItems: 'center', // Center items vertically
     backgroundColor: '#0B607E',
     paddingVertical: 10,
-    marginHorizontal: 100,
-    marginBottom: 20,
-    marginTop: 20,
+    paddingHorizontal: 15,
     borderRadius: 5,
-    alignItems: 'center',
+    marginLeft: 10, // Space between Searchbar and button
   },
   createButtonText: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+    marginLeft: 5, // Space between icon and text
+  },
+  icon: {
+    marginRight: 5, // Adjust space if needed
+  },
+  tableTitle: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginVertical: 15,
+    marginTop: 5,
+    paddingVertical: 10,
+    color: 'white',
+    backgroundColor: '#0B607E',
+  },
+  buttonContainer: {
+    margin: 10,
+    alignSelf: 'center',
+    flexDirection: 'row',
+  },
+  headerText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  rowCell: {
+    paddingTop: 10,
+    paddingBottom: 13
   },
   image: {
-    width: 50,
-    height: 50,
-    resizeMode: 'cover',
-    borderRadius: 5,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
+  imageCell: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 60,
+  },
+  textCell: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  cellText: {
+    textAlign: 'center',
+    flexWrap: 'wrap',
+  },
+  iconCell: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 40,
+    height: 40,
+    backgroundColor: 'black',
+    borderRadius: 20,
   },
   actionCell: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     flex: 1,
   },
   actionButton: {
     marginHorizontal: 5,
   },
 });
+
+export default MedicationScreen;
