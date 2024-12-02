@@ -3,7 +3,8 @@ import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } fro
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode"; // Corrected import for jwtDecode
+import axios from 'axios'; // Import axios
 import baseURL from '@/assets/common/baseurl';
 
 export default function ViewProfile() {
@@ -11,102 +12,36 @@ export default function ViewProfile() {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const token = await AsyncStorage.getItem('jwt');
-  //       if (!token) throw new Error('User not logged in');
-  //       const decoded = jwtDecode(token);
-  //       console.log(decoded);
-
-  //       const userId = decoded?.id;
-
-  //       const response = await fetch(`${baseURL}users/${userId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-
-  //       if (!response.ok) throw new Error('Failed to fetch user data');
-  //       const data = await response.json();
-  //       setUserData(data);
-  //     } catch (error) {
-  //       Alert.alert('Error', error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchUserData();
-  // }, []);
-
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const token = await AsyncStorage.getItem('jwt');
-  //       if (!token) throw new Error('User not logged in');
-  //       const decoded = jwtDecode(token);
-  //       console.log(decoded); // Check the decoded token
-  
-  //       const userId = decoded?.userId; // Ensure the correct field name here
-  
-  //       if (!userId) throw new Error('User ID not found in token');
-  
-  //       const response = await fetch(`${baseURL}users/${userId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-  
-  //       if (!response.ok) throw new Error('Failed to fetch user data');
-  //       const data = await response.json();
-  //       setUserData(data);
-  //     } catch (error) {
-  //       Alert.alert('Error', error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchUserData();
-  // }, []);
-  
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const token = await AsyncStorage.getItem('jwt');
         if (!token) throw new Error('User not logged in');
         const decoded = jwtDecode(token);
-  
+
         const userId = decoded?.userId; // Ensure the correct field name
         if (!userId) throw new Error('User ID not found in token');
-  
-        const response = await fetch(`${baseURL}users/${userId}`, {
-          method: 'GET',
+
+        const response = await axios.get(`${baseURL}users/${userId}`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
           },
         });
-  
-        if (!response.ok) throw new Error('Failed to fetch user data');
-        const data = await response.json();
-  
-        // Check if disease information exists
-        const disease = data.customerDetails?.disease?.name || 'N/A';
-        setUserData({ ...data, disease });
+
+        const data = response.data;
+
+        setUserData({ ...data });
       } catch (error) {
-        Alert.alert('Error', error.message);
+        Alert.alert('Error', error.response?.data || error.message);
       } finally {
         setLoading(false);
       }
     };
-  
+
     fetchUserData();
   }, []);
-  
+
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
@@ -128,13 +63,12 @@ export default function ViewProfile() {
 
       <View style={styles.profileImageSection}>
         <Image
-          source={userData.profileImage ? { uri: userData.profileImage } : require('@/assets/images/sample.jpg')}
+           source={require('@/assets/images/adminepharmacy.png')}
           style={styles.profileImage}
         />
       </View>
 
       <View style={styles.inputContainer}>
-
         <Text style={styles.label}>Name</Text>
         <TextInput
           style={styles.input}
@@ -142,22 +76,16 @@ export default function ViewProfile() {
           onChangeText={(value) => setUserData({ ...userData, name: value })}
           editable={false}
         />
- 
+
         <Text style={styles.label}>Email</Text>
         <TextInput style={styles.input} value={userData.email} editable={false} />
 
         <Text style={styles.label}>Mobile Number</Text>
         <TextInput style={styles.input} value={userData.contactNumber} editable={false} />
-       {/* Single Address Field */}
+
+        {/* Single Address Field */}
         <Text style={styles.label}>Address</Text>
         <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
-
-        <Text style={styles.label}>Disease</Text>
-        <TextInput
-          style={styles.input}
-          value={userData.disease || 'N/A'}
-          editable={false}
-        />
 
       </View>
     </View>

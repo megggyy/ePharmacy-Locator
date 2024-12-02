@@ -70,7 +70,7 @@ export default function Sidebar() {
       {/* Profile Section */}
       <View style={styles.profileSection}>
         <Image
-          source={require('@/assets/images/sample.jpg')} // Replace with actual image
+          source={require('@/assets/images/adminepharmacy.png')} // Replace with actual image
           style={styles.profileImage}
         />
         <Text style={styles.profileName}>{userProfile?.name}</Text>
