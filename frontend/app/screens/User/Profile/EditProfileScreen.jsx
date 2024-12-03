@@ -18,37 +18,45 @@ export default function EditProfile() {
   const [city, setCity] = useState('');
   const [barangays, setBarangays] = useState([]); // State for barangays
   const [loading, setLoading] = useState(true);
+  const [profileImage, setProfileImage] = useState(null);
+
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const token = await AsyncStorage.getItem('jwt');
         if (!token) throw new Error('User not logged in');
-
+    
         const decoded = jwtDecode(token);
         const userId = decoded?.userId;
-
+    
         if (!userId) throw new Error('User ID not found in token');
-
+    
         const response = await axios.get(`${baseURL}users/${userId}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
         });
-
-        const { name, email, contactNumber, street, barangay, city } = response.data;
+    
+        const { name, email, contactNumber, street, barangay, city, customerDetails } = response.data;
         setName(name);
         setEmail(email);
         setMobile(contactNumber);
         setStreet(street || '');
         setBarangay(barangay || '');
         setCity(city || '');
+    
+        // Check and set the first image if available
+        if (customerDetails?.images?.length > 0) {
+          setProfileImage(customerDetails.images[0]);
+        }
       } catch (error) {
         Alert.alert('Error', error.message);
       } finally {
         setLoading(false);
       }
     };
+    
 
     const fetchBarangays = async () => {
       try {
@@ -116,14 +124,22 @@ export default function EditProfile() {
       </View>
 
       <View style={styles.profileImageSection}>
-        <Image
-          source={require('@/assets/images/sample.jpg')}
-          style={styles.profileImage}
-        />
-        <TouchableOpacity style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Image</Text>
-        </TouchableOpacity>
-      </View>
+  {profileImage ? (
+    <Image
+      source={{ uri: profileImage }}
+      style={styles.profileImage}
+    />
+  ) : (
+    <Image
+      source={require('@/assets/images/sample.jpg')}
+      style={styles.profileImage}
+    />
+  )}
+  <TouchableOpacity style={styles.selectImageButton}>
+    <Text style={styles.selectImageText}>Select Image</Text>
+  </TouchableOpacity>
+</View>
+
 
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Name</Text>
