@@ -56,7 +56,8 @@
     "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "15.8.0",
     "react-native-toast-message": "^2.2.1",
-    "react-native-web": "~0.19.13"
+    "react-native-web": "~0.19.13",
+    "tesseract.js": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
