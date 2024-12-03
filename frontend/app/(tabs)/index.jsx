@@ -91,14 +91,6 @@ const HomeScreen = () => {
               style={styles.categoryCard}
               onPress={() => router.push(`/screens/User/Features/CategoryFilterMedications?id=${category._id}&name=${category.name}`)}
             >
-              <Image
-                style={styles.categoryImage}
-                source={{
-                  uri: category.images && category.images.length > 0
-                    ? category.images[0]
-                    : 'https://via.placeholder.com/100', // Fallback image
-                }}
-              />
               <Text style={styles.categoryText}>{category.name}</Text>
             </TouchableOpacity>
           ))}

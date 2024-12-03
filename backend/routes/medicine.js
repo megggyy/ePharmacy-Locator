@@ -42,13 +42,13 @@ router.post('/create', async (req, res) => {
     console.log(req.body)
 
     // Validate if pharmacy exists
-    const pharmacyExists = await Pharmacy.findOne({ userInfo: pharmacy});
+    const pharmacyExists = await Pharmacy.findOne({ userInfo: pharmacy });
     if (!pharmacyExists) return res.status(400).send("Invalid Pharmacy ID");
 
-    
+
     console.log(pharmacyExists)
     // Find category by name, case-insensitive
-    const categoryExists = await MedicationCategory.findOne({ name: category});
+    const categoryExists = await MedicationCategory.findOne({ name: category });
     if (!categoryExists) return res.status(400).send("Invalid Category name");
 
     console.log(categoryExists)
@@ -124,7 +124,7 @@ router.get('/:id', async (req, res) => {
 router.get('/read/:id', async (req, res) => {
     try {
         // Find all medicines where the pharmacy field matches the given pharmacy ID
-        const medicines = await Medicine.findById(req.params.id )
+        const medicines = await Medicine.findById(req.params.id)
             .populate('category')
             .populate('pharmacy');
 
@@ -174,6 +174,34 @@ router.delete('/delete/:id', async (req, res) => {
         res.status(500).json({ success: false, error: err });
     }
 });
+
+//Get Available Pharmacy Medicine
+router.get('/available/:name', async (req, res) => {
+    const { name } = req.params;  // Extract name from path
+    console.log('Received name:', name);  // Log to check
+
+    // Query the database or filter the medicines based on name
+    const medicines = await Medicine.find({
+        name: { $regex: new RegExp(`^${name}$`, 'i') }
+    }).populate('category')
+        .populate({
+            path: 'pharmacy',
+            populate: {
+                path: 'userInfo',
+                select: 'name street barangay city contactNumber',
+            },
+        })
+
+    if (medicines.length === 0) {
+        return res.status(404).json({ success: false, message: 'No medicines found' });
+    }
+
+    res.status(200).json(medicines);
+});
+
+
+
+
 
 
 module.exports = router;
