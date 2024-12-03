@@ -59,6 +59,8 @@ export default function Sidebar() {
     }
   };
 
+  const profileImage = userProfile?.customerDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
+
   return (
     <View style={styles.container}>
       {/* Back Button */}
@@ -69,7 +71,7 @@ export default function Sidebar() {
       {/* Profile Section */}
       <View style={styles.profileSection}>
         <Image
-          source={require('@/assets/images/sample.jpg')} // Replace with actual image
+          source={{ uri: profileImage }} // Dynamically fetch the first image
           style={styles.profileImage}
         />
         <Text style={styles.profileName}>{userProfile?.name}</Text>
@@ -78,7 +80,7 @@ export default function Sidebar() {
       {/* Menu Section */}
       <View style={styles.menuSection}>
       <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/ViewProfileScreen')}>
-        <Ionicons name="eye" size={25} color="#5A5A5A" /> {/* Replaced with eye icon */}
+        <Ionicons name="eye" size={25} color="#5A5A5A" /> 
         <Text style={styles.menuText}>View Profile</Text>
       </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/EditProfileScreen')}>

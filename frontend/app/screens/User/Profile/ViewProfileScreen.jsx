@@ -55,6 +55,7 @@ export default function ViewProfile() {
   }
 
   const address = `${userData.street || ''}, ${userData.barangay || ''}, ${userData.city || ''}`.replace(/(, )+/g, ', ').trim();
+  const profileImage = userData?.customerDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
 
   return (
     <View style={styles.container}>
@@ -66,8 +67,8 @@ export default function ViewProfile() {
       </View>
 
       <View style={styles.profileImageSection}>
-        <Image
-          source={userData.profileImage ? { uri: userData.profileImage } : require('@/assets/images/sample.jpg')}
+      <Image
+          source={{ uri: profileImage }}
           style={styles.profileImage}
         />
       </View>
