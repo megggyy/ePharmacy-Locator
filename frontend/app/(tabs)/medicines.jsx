@@ -6,10 +6,9 @@ import {
   TouchableOpacity,
   ScrollView,
   StyleSheet,
-  Image,
   SafeAreaView,
   Modal,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useFocusEffect } from 'expo-router';
@@ -28,9 +27,9 @@ export default function MedicationScreen() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchBarPosition, setSearchBarPosition] = useState({ width: 0, left: 0 });
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [modalVisible, setModalVisible] = useState(false);  // Modal visibility state
-  const [categorySearchQuery, setCategorySearchQuery] = useState('');  // Category search query
-  const [viewAll, setViewAll] = useState(false); // View all toggle state
+  const [modalVisible, setModalVisible] = useState(false);
+  const [categorySearchQuery, setCategorySearchQuery] = useState('');
+  const [viewAll, setViewAll] = useState(false);
 
   useFocusEffect(
     React.useCallback(() => {
@@ -44,21 +43,15 @@ export default function MedicationScreen() {
           setMedications(uniqueMedications);
           setFilteredMedications(uniqueMedications);
         })
-        .catch((error) => {
-          console.error('Error fetching medications:', error);
-        });
+        .catch((error) => console.error('Error fetching medications:', error));
 
       // Fetch categories
       axios
         .get(`${baseURL}medication-category`)
-        .then((response) => {
-          setCategories(response.data);
-        })
-        .catch((error) => {
-          console.error('Error fetching categories:', error);
-        });
+        .then((response) => setCategories(response.data))
+        .catch((error) => console.error('Error fetching categories:', error));
 
-      // Reset selected category when screen is focused
+      // Reset selected category
       setSelectedCategory(null);
     }, [])
   );
@@ -70,47 +63,43 @@ export default function MedicationScreen() {
 
   const handleCategorySelect = (categoryName) => {
     setSelectedCategory(categoryName);
-    setModalVisible(false);  // Close modal after selecting category
+    setModalVisible(false);
     filterMedications(searchQuery, categoryName);
   };
 
   const filterMedications = (query, categoryName) => {
     let filtered = medications;
 
-    // If query is empty, show all medications
     if (query) {
-      filtered = filtered.filter((medication) => {
-        return medication.name.toLowerCase().startsWith(query.toLowerCase()) ||
-          medication.description.toLowerCase().startsWith(query.toLowerCase());
-      });
+      filtered = filtered.filter((med) =>
+        med.name.toLowerCase().includes(query.toLowerCase())
+      );
     }
 
     if (categoryName) {
       filtered = filtered.filter(
-        (medication) =>
-          medication.category &&
-          (medication.category.name === categoryName || medication.category === categoryName)
+        (med) =>
+          med.category?.name === categoryName || med.category === categoryName
       );
     }
 
     setFilteredMedications(filtered);
-    setSuggestions(query ? filtered.slice(0, 5) : medications.slice(0, 5)); // Show suggestions from all medications if no query
+    setSuggestions(query ? filtered.slice(0, 5) : []);
   };
 
-
-  const handleSuggestionSelect = (medication) => {
-    setSearchQuery(medication.name);
-    setFilteredMedications([medication]);
+  const handleSuggestionSelect = (med) => {
+    setSearchQuery(med.name);
+    setFilteredMedications([med]);
     setSuggestions([]);
   };
 
-  const handleCategorySearch = (query) => {
-    setCategorySearchQuery(query);
-  };
+  const handleCategorySearch = (query) => setCategorySearchQuery(query);
 
   const handleViewAll = () => {
-    setViewAll(!viewAll);  // Toggle between showing all and the filtered list
-    setFilteredMedications(viewAll ? medications : filteredMedications);  // Reset to all or filtered list
+    setSearchQuery('');
+    setSelectedCategory(null);
+    setFilteredMedications(medications);
+    setDropdownOpen(false);
   };
 
   return (
@@ -123,20 +112,17 @@ export default function MedicationScreen() {
               style={styles.menuIcon}
               onPress={() => router.push('/drawer/UserDrawer')}
             />
-            <View style={styles.iconsWrapper}>
-              <Ionicons
-                name="cloud-upload"
-                style={styles.icon}
-                onPress={() => router.push('/screens/User/Features/PrescriptionUpload')}
-              />
-            </View>
+            <Ionicons
+              name="cloud-upload"
+              style={styles.icon}
+              onPress={() => router.push('/screens/User/Features/PrescriptionUpload')}
+            />
           </View>
         )}
 
         <TextInput
           style={styles.searchBar}
           placeholder="Search..."
-          placeholderTextColor="#AAB4C1"
           value={searchQuery}
           onChangeText={handleSearch}
           onLayout={(event) => {
@@ -144,74 +130,38 @@ export default function MedicationScreen() {
             setSearchBarPosition({ width, left: x });
           }}
         />
-
-        {suggestions.length > 0 && (
-          <View
-            style={[
-              styles.suggestionsContainer,
-              {
-                width: searchBarPosition.width,
-                left: searchBarPosition.left,
-                top: state.isAuthenticated ? 90 : 55,
-                maxHeight: 150,
-              },
-            ]}
-          >
-            <ScrollView nestedScrollEnabled>
-              {suggestions.map((suggestion, index) => (
-                <TouchableOpacity
-                  key={index}
-                  onPress={() => handleSuggestionSelect(suggestion)}
-                  style={styles.suggestionItem}
-                >
-                  <Text style={styles.suggestionText}>{suggestion.name}</Text>
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
-          </View>
-        )}
       </View>
 
       <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 20 }}>
         <View style={styles.filterContainer}>
           <TouchableOpacity
-            onPress={() => setModalVisible(true)} // Open modal when pressed
+            onPress={() => setModalVisible(true)}
             style={styles.filterButton}
           >
-            <Text style={styles.filterText}>{selectedCategory || 'Select Category'}</Text>
+            <Text style={styles.filterText}>
+              {selectedCategory || 'Select Category'}
+            </Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.medicationsContainer}>
-          {filteredMedications.map((medication) => (
+          {filteredMedications.map((med) => (
             <MedicationCard
-              key={medication._id}
-              name={medication.name}
-              description={medication.description}
-              stock={`${medication.stock} in stock`}
-              barangay={medication.barangay}
-              onPress={() =>
-                router.push(`/screens/User/Features/MedicationDetails?name=${medication.name}`)
-              }              
+              key={med._id}
+              name={med.name}
+              description={med.description}
+              onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${med.name}`)}
             />
           ))}
         </View>
+
         <View style={styles.sectionHeader}>
-          <TouchableOpacity>
-            <Text
-              style={styles.viewAll}
-              onPress={() => {
-                setSearchQuery('');
-                setSelectedCategory(null);
-                setFilteredMedications(medications);
-                setDropdownOpen(false);
-              }}
-            >
-              View all
-            </Text>
+          <TouchableOpacity onPress={handleViewAll}>
+            <Text style={styles.viewAll}>View all</Text>
           </TouchableOpacity>
         </View>
-        {/* Category Modal */}
+
+        {/* Modal for Categories */}
         <Modal visible={modalVisible} animationType="slide" transparent={true}>
           <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
             <View style={styles.modalOverlay}>
@@ -225,26 +175,24 @@ export default function MedicationScreen() {
                   />
                   <ScrollView style={styles.categoryList}>
                     {categories
-                      .filter((category) =>
-                        category.name.toLowerCase().includes(categorySearchQuery.toLowerCase())
+                      .filter((cat) =>
+                        cat.name.toLowerCase().includes(categorySearchQuery.toLowerCase())
                       )
-                      .map((category) => (
+                      .map((cat) => (
                         <TouchableOpacity
-                          key={category._id}
-                          onPress={() => handleCategorySelect(category.name)}
+                          key={cat._id}
+                          onPress={() => handleCategorySelect(cat.name)}
                           style={styles.categoryItem}
                         >
-                          <Text style={styles.categoryText}>{category.name}</Text>
+                          <Text style={styles.categoryText}>{cat.name}</Text>
                         </TouchableOpacity>
                       ))}
                   </ScrollView>
-                  <TouchableOpacity title="Close" onPress={() => setModalVisible(false)} />
                 </View>
               </TouchableWithoutFeedback>
             </View>
           </TouchableWithoutFeedback>
         </Modal>
-
       </ScrollView>
     </SafeAreaView>
   );
