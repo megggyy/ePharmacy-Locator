@@ -523,7 +523,7 @@ router.get('/:id', async (req, res) => {
         let userDetails = { ...user._doc }; // Clone the user document
 
         // Fetch additional details based on the user's role
-        if (user.role === 'Customer') {
+        if (user.role === 'Customer') { 
             const customer = await Customer.findOne({ userInfo: userId }).populate('disease', 'name');
             if (customer) {
                 userDetails.customerDetails = customer;
@@ -737,32 +737,65 @@ router.put('/resetPassword', async (req, res) => {
 });
 
 // Edit Profile Route
-router.put('/:id', async (req, res) => {
-    const userId = req.params.id;
-    const { name, contactNumber, street, barangay, city } = req.body;
+router.put('/:id', uploadOptions.array('images'), async (req, res) => {
+    const { id } = req.params;
+    const { name, contactNumber, street, barangay, city, businessDays, openingHour, closingHour } = req.body;
 
     try {
-        // Find the user by ID
-        const user = await User.findById(userId);
+        // Find the customer by ID
+        const customer = await Customer.findOne({ userInfo: id }).populate('userInfo');
+        const pharmacy = await Pharmacy.findOne({ userInfo: id }).populate('userInfo');
+        if (!customer) {
+            // If customer is not found, check if it's a pharmacy update
+            if (!pharmacy) return res.status(404).send('Entity not found');
 
-        if (!user) {
-            return res.status(404).send('User not found');
+            // Update fields in the related User document (userInfo)
+            if (pharmacy.userInfo) {
+                const user = pharmacy.userInfo;
+
+                user.name = name || user.name;
+                user.contactNumber = contactNumber || user.contactNumber;
+                user.street = street || user.street;
+                user.barangay = barangay || user.barangay;
+                user.city = city || user.city;
+
+                await user.save();
+            }
+
+            // Replace old images with new ones
+            const imageUrls = req.files.map((file) => file.path);
+            pharmacy.images = imageUrls;
+
+            await pharmacy.save();
+            return res.status(200).json({ message: 'Pharmacy updated successfully', pharmacy });
         }
 
-        // Update the user details
-        user.name = name || user.name;
-        user.contactNumber = contactNumber || user.contactNumber;
-        user.street = street || user.street;
-        user.barangay = barangay || user.barangay;
-        user.city = city || user.city;
+        // If customer exists, update fields in the related User document
+        if (customer.userInfo) {
+            const user = customer.userInfo;
 
-        await user.save();
+            user.name = name || user.name;
+            user.contactNumber = contactNumber || user.contactNumber;
+            user.street = street || user.street;
+            user.barangay = barangay || user.barangay;
+            user.city = city || user.city;
 
-        res.status(200).json({ message: 'Profile updated successfully', user });
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Error updating profile');
+            await user.save();
+        }
+
+        // Replace old images with new ones
+        const imageUrls = req.files.map((file) => file.path);
+        customer.images = imageUrls;
+
+        await customer.save();
+
+        res.status(200).json({ message: 'Customer profile updated successfully', customer });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error updating entity');
     }
 });
+
+  
 
 module.exports = router;
