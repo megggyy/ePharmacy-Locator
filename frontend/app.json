@@ -6,11 +6,9 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/spinnerLogo.png",
-    "icon": "./assets/images/spinnerLogo.png",
     "scheme": "ePharmacyLocator",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/spinnerLogo.png",
       "image": "./assets/images/spinnerLogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
@@ -21,7 +19,6 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/spinnerLogo.png",
-        "foregroundImage": "./assets/images/spinnerLogo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "ePharmacyLocator.com"
@@ -30,7 +27,6 @@
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/spinnerLogo.png"
-      "favicon": "./assets/images/spinnerLogo.png"
     },
     "plugins": [
       "expo-router",
@@ -38,15 +34,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "af489531-b174-4857-b183-a6996b621e7c"
-      }
-    },
-    "owner": "pcyxeeeioaea"
+    }
   }
 }
