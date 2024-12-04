@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'; 
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { BarChart } from 'react-native-chart-kit';
@@ -30,13 +30,13 @@ export default function PharmacyOwnerDashboard() {
           console.error("Error fetching user profile:", err);
         });
 
-      // Fetch medications data
+      // Fetch medications data for the logged-in pharmacy
       axios
-        .get(`${baseURL}medicine`) // Adjust this to your actual endpoint
+        .get(`${baseURL}medicine/${state.user.userId}`) // Adjust this to your actual endpoint
         .then((res) => {
           const medications = res.data;
-          setTotalMedications(medications.length);
-          // You can process this data to set medication categories if needed
+          setTotalMedications(medications.length); // Count the medications related to this pharmacy
+          // Process this data to set medication categories if needed
         })
         .catch((err) => {
           console.error("Error fetching medications:", err);

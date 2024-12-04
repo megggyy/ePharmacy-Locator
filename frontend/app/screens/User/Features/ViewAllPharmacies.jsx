@@ -14,12 +14,20 @@ const ViewAllPharmacies = () => {
     axios
       .get(`${baseURL}pharmacies`) // Replace with the correct endpoint for pharmacies
       .then((response) => {
-        setPharmacies(response.data); // Update state with the fetched pharmacies
+        const pharmaciesData = response.data;
+  
+        // Filter pharmacies to include only approved ones
+        const approvedPharmacies = pharmaciesData.filter(pharmacy => pharmacy.approved);
+  
+        // Update state with approved pharmacies
+        setPharmacies(approvedPharmacies);
+
       })
       .catch((error) => {
         console.error('Error fetching pharmacies:', error);
       });
   }, []);
+  
 
   return (
     <View style={styles.topContainer}>
@@ -38,16 +46,21 @@ const ViewAllPharmacies = () => {
               style={styles.pharmacyCard}
               onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)} // Pass the pharmacy ID
             >
-              <Image
+               <Image
                 style={styles.pharmacyImage}
-                source={{
-                  uri: pharmacy.imageUrl ? pharmacy.imageUrl : 'https://via.placeholder.com/150', // Placeholder image if no image
-                }}
+                source={
+                  pharmacy?.images?.[0]
+                    ? { uri: pharmacy.images[0] }
+                    : require('@/assets/images/sample.jpg')
+                }
               />
               <View>
                 <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
                 <Text style={styles.pharmacyAddress}>{`${pharmacy.userInfo.street || ''}, ${pharmacy.userInfo.barangay || ''}, ${pharmacy.userInfo.city || ''}`.replace(/(, )+/g, ', ').trim()}</Text>
                 <Text style={styles.barangayText}>{pharmacy.userInfo.contactNumber}</Text>
+                <Text style={styles.pharmacyHours}>
+                  {`${pharmacy.businessDays} (${pharmacy?.openingHour || 'N/A'} - ${pharmacy?.closingHour || 'N/A'})`}
+                </Text>
                 {/* <Text style={styles.storeHoursText}>{pharmacy.storeHours}</Text> */}
               </View>
             </TouchableOpacity>
@@ -100,6 +113,10 @@ const styles = StyleSheet.create({
   pharmacyAddress: { fontSize: 12, color: '#666', marginTop: 5 },
   barangayText: { fontSize: 12, color: '#666', marginTop: 5 },
   storeHoursText: { fontSize: 12, color: '#666', marginTop: 5 },
+  pharmacyHours: {
+    fontSize: 12,
+    color: '#999',
+  },
 });
 
 export default ViewAllPharmacies;

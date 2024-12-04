@@ -173,6 +173,7 @@ export default function MedicationScreen() {
                     placeholder="Search Categories..."
                     value={categorySearchQuery}
                     onChangeText={handleCategorySearch}
+                    placeholderTextColor="#AAB4C1" 
                   />
                   <ScrollView style={styles.categoryList}>
                     {categories

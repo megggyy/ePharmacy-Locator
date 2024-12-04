@@ -5,6 +5,7 @@ import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { jwtDecode } from "jwt-decode";
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "../../../../assets/common/spinner";
 
 export default function ViewProfile() {
   const router = useRouter();
@@ -45,19 +46,17 @@ export default function ViewProfile() {
     fetchUserData();
   }, []);
   
-  if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
-      </View>
-    );
-  }
+  
 
   const address = `${userData.street || ''}, ${userData.barangay || ''}, ${userData.city || ''}`.replace(/(, )+/g, ', ').trim();
   const profileImage = userData?.pharmacyDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
 
   return (
     <View style={styles.container}>
+        {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -107,6 +106,8 @@ export default function ViewProfile() {
         />
 
       </View>
+      </>
+      )}
     </View>
   );
 }

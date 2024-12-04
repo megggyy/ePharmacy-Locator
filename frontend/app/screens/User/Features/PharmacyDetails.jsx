@@ -54,8 +54,15 @@ const PharmacyDetails = () => {
       <ScrollView>
         {/* Pharmacy Image */}
         <View style={styles.imageContainer}>
-          <Image source={{ uri: pharmacy.image || 'https://via.placeholder.com/200' }} style={styles.pharmacyImage} />
-        </View>
+        <Image
+                style={styles.pharmacyImage}
+                source={
+                  pharmacy?.images?.[0]
+                    ? { uri: pharmacy.images[0] }
+                    : require('@/assets/images/sample.jpg')
+                }
+              />
+         </View>
 
         {/* Pharmacy Information */}
         <View style={styles.infoContainer}>
@@ -70,7 +77,16 @@ const PharmacyDetails = () => {
           <View style={styles.infoRow}>
             <Ionicons name="call-outline" size={18} color="#555" />
             <Text style={styles.infoText}>{pharmacy.userInfo.contactNumber}</Text>
+            
           </View>
+
+          <View style={styles.infoRow}>
+            <Ionicons name="time-outline" size={18} color="#555" />
+            <Text style={styles.infoText}>
+              {`${pharmacy.businessDays} (${pharmacy?.openingHour || 'N/A'} - ${pharmacy?.closingHour || 'N/A'})`}
+            </Text>
+          </View>
+
 
           {/* Map View */}
           <View style={styles.mapContainer}>

@@ -63,23 +63,14 @@ const CategoryFilterMedications = () => {
                 <TouchableOpacity
                   key={medication._id}
                   style={styles.medicationCard}
-                  onPress={() => router.push(`/screens/User/Features/MedicationDetails?id=${medication._id}`)}
+                  onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.name}`)}
                 >
-                  <Image
-                    style={styles.medicationImage}
-                    source={{
-                      uri:
-                        medication.images && medication.images.length > 0
-                          ? medication.images[0]
-                          : 'https://via.placeholder.com/100', // Fallback image
-                    }}
-                  />
                   <View style={styles.medicationInfo}>
                     <Text style={styles.medicationName}>{medication.name}</Text>
                     <Text style={styles.medicationDescription}>
                       {medication.description || 'No description available.'}
                     </Text>
-                    <Text style={styles.medicationPrice}>Stock: {medication.stock}</Text>
+                    <Text style={styles.medicationPrice}>{medication.category.name}</Text>
                   </View>
                 </TouchableOpacity>
               ))
