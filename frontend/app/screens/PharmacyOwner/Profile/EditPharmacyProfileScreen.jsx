@@ -7,7 +7,8 @@ import { jwtDecode } from 'jwt-decode';
 import baseURL from '@/assets/common/baseurl';
 import axios from 'axios';
 import RNPickerSelect from 'react-native-picker-select';
-
+import * as ImagePicker from 'expo-image-picker';
+ 
 export default function EditProfile() {
   const router = useRouter();
   const [name, setName] = useState('');
@@ -18,6 +19,10 @@ export default function EditProfile() {
   const [city, setCity] = useState('');
   const [barangays, setBarangays] = useState([]); // State for barangays
   const [loading, setLoading] = useState(true);
+  const [images, setImages] = useState([]);
+  const [businessDays, setBusinessDays] = useState("");
+  const [openingHours, setOpeningHour] = useState("");
+  const [closingHours, setClosingHour] = useState("");
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -36,13 +41,26 @@ export default function EditProfile() {
           },
         });
 
-        const { name, email, contactNumber, street, barangay, city } = response.data;
+        const { name, email, contactNumber, street, barangay, city, pharmacyDetails } = response.data;
         setName(name);
         setEmail(email);
         setMobile(contactNumber);
         setStreet(street || '');
         setBarangay(barangay || '');
         setCity(city || '');
+
+        // Fetch images
+        const fetchedImages = pharmacyDetails?.images || [];
+        setImages(fetchedImages);
+
+        const businessDays = pharmacyDetails?.businessDays || [];
+        setBusinessDays(businessDays);
+
+        const openingHours = pharmacyDetails?.openingHour || [];
+        setOpeningHour(openingHours);
+
+        const closingHours = pharmacyDetails?.closingHour || [];
+        setClosingHour(openingHours);
       } catch (error) {
         Alert.alert('Error', error.message);
       } finally {
@@ -70,33 +88,64 @@ export default function EditProfile() {
     fetchBarangays(); // Fetch barangays on component mount
   }, []);
 
+  const selectImages = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setImages([...images, result.assets[0].uri]);
+    }
+  };
+
+  const handleDeleteImage = (uri) => {
+    setImages(images.filter(image => image !== uri));
+  };
+
   const handleConfirm = async () => {
     try {
       const token = await AsyncStorage.getItem('jwt');
       if (!token) throw new Error('User not logged in');
 
-      const userId = jwtDecode(token)?.userId;
+      const decoded = jwtDecode(token);
+      const userId = decoded?.userId;
 
-      await axios.put(`${baseURL}users/${userId}`, {
-        name,
-        email,
-        contactNumber: mobile,
-        street,
-        barangay,
-        city,
-      }, {
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('contactNumber', mobile);
+      formData.append('street', street);
+      formData.append('barangay', barangay);
+      formData.append('city', city);
+
+      images.forEach((uri) => {
+        const filename = uri.split('/').pop();
+        const type = `image/${filename.split('.').pop()}`;
+        formData.append('images', {
+          uri,
+          name: filename,
+          type,
+        });
+      });
+
+      await axios.put(`${baseURL}users/${userId}`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data',
         },
       });
 
-      Alert.alert('Success', 'Profile updated successfully');
+      Alert.alert('Success', 'Profile updated successfully.');
       router.push('/drawer/PharmacyOwnerDrawer');
     } catch (error) {
       console.error('Error updating profile:', error);
-      Alert.alert('Error', 'There was an issue updating your profile.');
+      Alert.alert('Error', 'Failed to update profile.');
     }
   };
+
 
   if (loading) {
     return (
@@ -116,12 +165,21 @@ export default function EditProfile() {
       </View>
 
       <View style={styles.profileImageSection}>
-        <Image
-          source={require('@/assets/images/sample.jpg')}
-          style={styles.profileImage}
-        />
-        <TouchableOpacity style={styles.selectImageButton}>
-          <Text style={styles.selectImageText}>Select Image</Text>
+        <View style={styles.imagePreviewContainer}>
+          {images.map((uri, index) => (
+            <View key={index} style={styles.imageContainer}>
+              <Image source={{ uri }} style={styles.profileImage} />
+              <TouchableOpacity
+                style={styles.deleteImageButton}
+                onPress={() => handleDeleteImage(uri)}
+              >
+                <Ionicons name="trash" size={20} color="white" />
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
+        <TouchableOpacity style={styles.selectImageButton} onPress={selectImages}>
+          <Text style={styles.selectImageText}>Select Images</Text>
         </TouchableOpacity>
       </View>
 
@@ -170,12 +228,30 @@ export default function EditProfile() {
           value={barangay}
         />
 
-        <Text style={styles.label}>City</Text>
-        <TextInput
-          style={styles.input}
-          value={city}
-          onChangeText={setCity}
-        />
+      <Text style={styles.label}>City</Text>
+      <TextInput
+        style={styles.input}
+        value={city}
+        editable={false}  
+        selectTextOnFocus={false}  
+      />
+
+      <Text style={styles.label}>Business Days</Text>
+      <TextInput
+        style={styles.input}
+        value={businessDays}
+        editable={false}  
+        selectTextOnFocus={false}  
+      />
+
+      <Text style={styles.label}>Store Hours</Text>
+      <TextInput
+        style={styles.input}
+        value={`${openingHours} - ${closingHours}`}
+        editable={false}  
+        selectTextOnFocus={false}  
+      />
+
       </View>
 
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
@@ -217,16 +293,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E', 
+    backgroundColor: '#0B607E',
     paddingTop: 80,
-    paddingBottom: 20,
+    paddingBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
     left: 20,
+    top: 35,
   },
   headerText: {
     color: 'white',
@@ -235,29 +311,48 @@ const styles = StyleSheet.create({
   },
   profileImageSection: {
     alignItems: 'center',
-    marginVertical: 20,
+    marginTop: 20,
+  },
+  imagePreviewContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 20,
+  },
+  imageContainer: {
+    position: 'relative',
+    marginRight: 10,
+    marginBottom: 0,
   },
   profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+  },
+  deleteImageButton: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    backgroundColor: 'red',
+    borderRadius: 15,
+    padding: 5,
   },
   selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
+    backgroundColor: '#0B607E',
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 5,
+    borderRadius: 10,
+    marginBottom:10,
   },
   selectImageText: {
-    color: '#555',
+    color: 'white',
+    fontSize: 16,
   },
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
     marginHorizontal: 20,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   label: {
     color: '#666',
@@ -270,16 +365,31 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     marginBottom: 15,
   },
+  changePasswordContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginHorizontal: 20, // Padding added to the "Change Password" button
+    marginBottom: 30,
+  },
+  changePasswordText: {
+    fontSize: 16,
+    color: '#333',
+  },
   confirmButton: {
     backgroundColor: '#0B607E',
     paddingVertical: 15,
-    borderRadius: 10,
-    alignItems: 'center',
     marginHorizontal: 20,
+    marginTop: 10,
+    borderRadius: 10,
   },
   confirmButtonText: {
     color: 'white',
+    textAlign: 'center',
     fontSize: 16,
-    fontWeight: 'bold',
   },
 });
+

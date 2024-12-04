@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { jwtDecode } from 'jwt-decode';
 import baseURL from '@/assets/common/baseurl';
 import axios from 'axios';
+import * as ImagePicker from 'expo-image-picker';
 import RNPickerSelect from 'react-native-picker-select';
 
 export default function EditProfile() {
@@ -17,27 +18,26 @@ export default function EditProfile() {
   const [barangay, setBarangay] = useState('');
   const [city, setCity] = useState('');
   const [barangays, setBarangays] = useState([]); // State for barangays
+  const [images, setImages] = useState([]); // State for selected images
   const [loading, setLoading] = useState(true);
-  const [profileImage, setProfileImage] = useState(null);
-
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const token = await AsyncStorage.getItem('jwt');
         if (!token) throw new Error('User not logged in');
-    
+
         const decoded = jwtDecode(token);
         const userId = decoded?.userId;
-    
+
         if (!userId) throw new Error('User ID not found in token');
-    
+
         const response = await axios.get(`${baseURL}users/${userId}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
         });
-    
+
         const { name, email, contactNumber, street, barangay, city, customerDetails } = response.data;
         setName(name);
         setEmail(email);
@@ -45,22 +45,20 @@ export default function EditProfile() {
         setStreet(street || '');
         setBarangay(barangay || '');
         setCity(city || '');
-    
-        // Check and set the first image if available
-        if (customerDetails?.images?.length > 0) {
-          setProfileImage(customerDetails.images[0]);
-        }
+      
+         // Fetch images
+      const fetchedImages = customerDetails?.images || [];
+      setImages(fetchedImages);
       } catch (error) {
         Alert.alert('Error', error.message);
       } finally {
         setLoading(false);
       }
     };
-    
 
     const fetchBarangays = async () => {
       try {
-        const response = await axios.get(`${baseURL}barangays`); // Assuming the endpoint for fetching barangays
+        const response = await axios.get(`${baseURL}barangays`);
         const result = response.data;
 
         // Format barangay data for RNPickerSelect
@@ -75,29 +73,59 @@ export default function EditProfile() {
     };
 
     fetchUserData();
-    fetchBarangays(); // Fetch barangays on component mount
+    fetchBarangays();
   }, []);
+
+  const selectImages = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setImages([...images, result.assets[0].uri]);
+    }
+  };
+
+  const handleDeleteImage = (uri) => {
+    setImages(images.filter(image => image !== uri));
+  };
 
   const handleConfirm = async () => {
     try {
       const token = await AsyncStorage.getItem('jwt');
       if (!token) throw new Error('User not logged in');
-
+  
       const userId = jwtDecode(token)?.userId;
-
-      await axios.put(`${baseURL}users/${userId}`, {
-        name,
-        email,
-        contactNumber: mobile,
-        street,
-        barangay,
-        city,
-      }, {
+  
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('contactNumber', mobile);
+      formData.append('street', street);
+      formData.append('barangay', barangay);
+      formData.append('city', city);
+  
+      // Iterate over images to prepare them for upload
+      images.forEach((uri) => {
+        const filename = uri.split('/').pop();
+        const type = `image/${filename.split('.').pop()}`;
+        formData.append('images', {
+          uri,
+          name: filename,
+          type,
+        });
+      });
+  
+      await axios.put(`${baseURL}users/${userId}`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data',
         },
       });
-
+  
       Alert.alert('Success', 'Profile updated successfully');
       router.push('/drawer/UserDrawer');
     } catch (error) {
@@ -124,22 +152,23 @@ export default function EditProfile() {
       </View>
 
       <View style={styles.profileImageSection}>
-  {profileImage ? (
-    <Image
-      source={{ uri: profileImage }}
-      style={styles.profileImage}
-    />
-  ) : (
-    <Image
-      source={require('@/assets/images/sample.jpg')}
-      style={styles.profileImage}
-    />
-  )}
-  <TouchableOpacity style={styles.selectImageButton}>
-    <Text style={styles.selectImageText}>Select Image</Text>
-  </TouchableOpacity>
-</View>
-
+        <View style={styles.imagePreviewContainer}>
+          {images.map((uri, index) => (
+            <View key={index} style={styles.imageContainer}>
+              <Image source={{ uri }} style={styles.profileImage} />
+              <TouchableOpacity
+                style={styles.deleteImageButton}
+                onPress={() => handleDeleteImage(uri)}
+              >
+                <Ionicons name="trash" size={20} color="white" />
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
+        <TouchableOpacity style={styles.selectImageButton} onPress={selectImages}>
+          <Text style={styles.selectImageText}>Select Images</Text>
+        </TouchableOpacity>
+      </View>
 
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Name</Text>
@@ -207,7 +236,6 @@ export default function EditProfile() {
   );
 }
 
-// Styles for RNPickerSelect
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
     backgroundColor: '#F2F2F2',
@@ -239,7 +267,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E', 
+    backgroundColor: '#0B607E',
     paddingTop: 80,
     paddingBottom: 20,
     justifyContent: 'center',
@@ -247,8 +275,8 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: 'absolute',
-    top: 50,
     left: 20,
+    top: 35,
   },
   headerText: {
     color: 'white',
@@ -257,22 +285,41 @@ const styles = StyleSheet.create({
   },
   profileImageSection: {
     alignItems: 'center',
-    marginVertical: 20,
+    marginTop: 20,
+  },
+  imagePreviewContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 20,
+  },
+  imageContainer: {
+    position: 'relative',
+    marginRight: 10,
+    marginBottom: 0,
   },
   profileImage: {
     width: 100,
     height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
+    borderRadius: 10,
+  },
+  deleteImageButton: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    backgroundColor: 'red',
+    borderRadius: 15,
+    padding: 5,
   },
   selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
+    backgroundColor: '#0B607E',
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 5,
+    borderRadius: 10,
+    marginBottom:10,
   },
   selectImageText: {
-    color: '#555',
+    color: 'white',
+    fontSize: 16,
   },
   inputContainer: {
     backgroundColor: 'white',
@@ -292,18 +339,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     marginBottom: 15,
   },
-  confirmButton: {
-    backgroundColor: '#0B607E',
-    paddingVertical: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-    marginHorizontal: 20,
-  },
-  confirmButtonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
   changePasswordContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -317,5 +352,17 @@ const styles = StyleSheet.create({
   changePasswordText: {
     fontSize: 16,
     color: '#333',
+  },
+  confirmButton: {
+    backgroundColor: '#0B607E',
+    paddingVertical: 15,
+    marginHorizontal: 20,
+    marginTop: 20,
+    borderRadius: 10,
+  },
+  confirmButtonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 16,
   },
 });

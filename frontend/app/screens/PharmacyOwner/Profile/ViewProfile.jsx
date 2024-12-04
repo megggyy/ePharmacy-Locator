@@ -11,68 +11,6 @@ export default function ViewProfile() {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const token = await AsyncStorage.getItem('jwt');
-  //       if (!token) throw new Error('User not logged in');
-  //       const decoded = jwtDecode(token);
-  //       console.log(decoded);
-
-  //       const userId = decoded?.id;
-
-  //       const response = await fetch(`${baseURL}users/${userId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-
-  //       if (!response.ok) throw new Error('Failed to fetch user data');
-  //       const data = await response.json();
-  //       setUserData(data);
-  //     } catch (error) {
-  //       Alert.alert('Error', error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchUserData();
-  // }, []);
-
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const token = await AsyncStorage.getItem('jwt');
-  //       if (!token) throw new Error('User not logged in');
-  //       const decoded = jwtDecode(token);
-  //       console.log(decoded); // Check the decoded token
-  
-  //       const userId = decoded?.userId; // Ensure the correct field name here
-  
-  //       if (!userId) throw new Error('User ID not found in token');
-  
-  //       const response = await fetch(`${baseURL}users/${userId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-  
-  //       if (!response.ok) throw new Error('Failed to fetch user data');
-  //       const data = await response.json();
-  //       setUserData(data);
-  //     } catch (error) {
-  //       Alert.alert('Error', error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchUserData();
-  // }, []);
-  
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -116,6 +54,7 @@ export default function ViewProfile() {
   }
 
   const address = `${userData.street || ''}, ${userData.barangay || ''}, ${userData.city || ''}`.replace(/(, )+/g, ', ').trim();
+  const profileImage = userData?.pharmacyDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
 
   return (
     <View style={styles.container}>
@@ -127,8 +66,8 @@ export default function ViewProfile() {
       </View>
 
       <View style={styles.profileImageSection}>
-        <Image
-          source={userData.profileImage ? { uri: userData.profileImage } : require('@/assets/images/sample.jpg')}
+      <Image
+          source={{ uri: profileImage }}
           style={styles.profileImage}
         />
       </View>
@@ -152,10 +91,18 @@ export default function ViewProfile() {
         <Text style={styles.label}>Address</Text>
         <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
 
-        <Text style={styles.label}>Disease</Text>
+     {/* Add Business Days, Opening Hours, Closing Hours */}
+    <Text style={styles.label}>Business Days</Text>
         <TextInput
           style={styles.input}
-          value={userData.disease || 'N/A'}
+          value={userData.pharmacyDetails?.businessDays || 'N/A'}
+          editable={false}
+        />
+
+        <Text style={styles.label}>Store Hours</Text>
+        <TextInput
+          style={styles.input}
+          value={`${userData.pharmacyDetails?.openingHour || 'N/A'} - ${userData.pharmacyDetails?.closingHour || 'N/A'}`}
           editable={false}
         />
 
