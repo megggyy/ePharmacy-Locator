@@ -6,9 +6,11 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/spinnerLogo.png",
+    "icon": "./assets/images/spinnerLogo.png",
     "scheme": "ePharmacyLocator",
     "userInterfaceStyle": "automatic",
     "splash": {
+      "image": "./assets/images/spinnerLogo.png",
       "image": "./assets/images/spinnerLogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
@@ -19,6 +21,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/spinnerLogo.png",
+        "foregroundImage": "./assets/images/spinnerLogo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "ePharmacyLocator.com"
@@ -26,6 +29,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
+      "favicon": "./assets/images/spinnerLogo.png"
       "favicon": "./assets/images/spinnerLogo.png"
     },
     "plugins": [
