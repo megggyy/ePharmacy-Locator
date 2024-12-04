@@ -8,7 +8,9 @@ import baseURL from '@/assets/common/baseurl';
 import axios from 'axios';
 import RNPickerSelect from 'react-native-picker-select';
 import * as ImagePicker from 'expo-image-picker';
- 
+import Spinner from "../../../../assets/common/spinner";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
 export default function EditProfile() {
   const router = useRouter();
   const [name, setName] = useState('');
@@ -146,17 +148,12 @@ export default function EditProfile() {
     }
   };
 
-
-  if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
-      </View>
-    );
-  }
-
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView style={styles.container}>
+       {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -254,10 +251,16 @@ export default function EditProfile() {
 
       </View>
 
+      <TouchableOpacity style={styles.changePasswordContainer}  onPress={() => router.push('/screens/PharmacyOwner/Profile/ChangePassword')}>
+        <Text style={styles.changePasswordText}>Change Password</Text>
+        <Ionicons name="chevron-forward" size={24} color="black" />
+      </TouchableOpacity>
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirmButtonText}>CONFIRM</Text>
       </TouchableOpacity>
-    </View>
+      </>
+      )}
+    </KeyboardAwareScrollView>
   );
 }
 

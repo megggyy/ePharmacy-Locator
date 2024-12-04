@@ -51,7 +51,7 @@ export default function Sidebar() {
     try {
       await AsyncStorage.removeItem('jwt');
       dispatch({ type: 'LOGOUT_USER' });
-      router.replace('/(tabs)'); 
+      router.push('/(tabs)'); 
       Toast.show({
         topOffset: 60,
         type: "success",
@@ -91,10 +91,10 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Edit Pharmacy</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/MedicationCategory/ListCategories')}>
+        {/* <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/MedicationCategory/ListCategories')}>
           <FontAwesome5 name="tags" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Medication Categories</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/Medications/ListMedications')}>
           <FontAwesome5 name="pills" size={25} color="#5A5A5A" />

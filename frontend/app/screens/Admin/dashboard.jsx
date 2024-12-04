@@ -24,29 +24,33 @@ const AdminDashboard = () => {
     medicines: 0,
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [usersRes, pharmaciesRes, categoriesRes, medicinesRes] = await Promise.all([
-          axios.get(`${baseURL}users`),
-          axios.get(`${baseURL}pharmacies`),
-          axios.get(`${baseURL}medication-category`),
-          axios.get(`${baseURL}medicine`),
-        ]);
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const [usersRes, pharmaciesRes, categoriesRes, medicinesRes] = await Promise.all([
+        axios.get(`${baseURL}users`),
+        axios.get(`${baseURL}pharmacies`),
+        axios.get(`${baseURL}medication-category`),
+        axios.get(`${baseURL}medicine`),
+      ]);
 
-        setCounts({
-          users: usersRes.data.length,
-          pharmacies: pharmaciesRes.data.length,
-          categories: categoriesRes.data.length,
-          medicines: medicinesRes.data.length,
-        });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+      // Count unique medicines by name
+      const uniqueMedicines = [...new Set(medicinesRes.data.map(med => med.name))];
 
-    fetchData();
-  }, []);
+      setCounts({
+        users: usersRes.data.length,
+        pharmacies: pharmaciesRes.data.length,
+        categories: categoriesRes.data.length,
+        medicines: uniqueMedicines.length, // Count unique medicines
+      });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+}, []);
+
 
   useEffect(() => {
     const fetchCustomersData = async () => {

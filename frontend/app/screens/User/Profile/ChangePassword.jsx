@@ -7,6 +7,7 @@ import AuthGlobal from '@/context/AuthGlobal';
 import baseURL from "../../../../assets/common/baseurl";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from "axios";
+import Spinner from "../../../../assets/common/spinner";
 
 const ChangePasswordScreen = () => {
   const [userId, setUserId] = useState(null);
@@ -111,6 +112,10 @@ const ChangePasswordScreen = () => {
 
   return (
     <View style={styles.container}>
+      {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
       {/* Back Button and Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
@@ -192,6 +197,8 @@ const ChangePasswordScreen = () => {
           {loading ? 'Updating...' : 'Update Password'}
         </Text>
       </TouchableOpacity>
+      </>
+      )}
     </View>
   );
 };

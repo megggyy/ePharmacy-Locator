@@ -16,6 +16,7 @@ import baseURL from "../../../../assets/common/baseurl";
 import axios from "axios";
 import antibioticsData from '../../../../assets/medicines/antibiotics.json';
 import sedativesData from '../../../../assets/medicines/sedatives.json';
+import Toast from 'react-native-toast-message';
 
 const CreateMedicines = () => {
     const router = useRouter();
@@ -122,6 +123,15 @@ const CreateMedicines = () => {
                 const newStockInput = { ...prevStockInput };
                 delete newStockInput[index]; // Remove the stock value for the added medicine
                 return newStockInput;
+            });
+             // Show success toast message
+             Toast.show({
+                type: 'success',
+                position: 'top',
+                text1: 'Medication Added',
+                text2: 'The medication has been added successfully.',
+                visibilityTime: 4000,
+                autoHide: true,
             });
     
         } catch (error) {

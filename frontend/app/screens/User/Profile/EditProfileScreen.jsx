@@ -8,6 +8,7 @@ import baseURL from '@/assets/common/baseurl';
 import axios from 'axios';
 import * as ImagePicker from 'expo-image-picker';
 import RNPickerSelect from 'react-native-picker-select';
+import Spinner from "../../../../assets/common/spinner";
 
 export default function EditProfile() {
   const router = useRouter();
@@ -134,16 +135,12 @@ export default function EditProfile() {
     }
   };
 
-  if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
-      </View>
-    );
-  }
-
   return (
     <View style={styles.container}>
+      {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -232,6 +229,8 @@ export default function EditProfile() {
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirmButtonText}>CONFIRM</Text>
       </TouchableOpacity>
+      </>
+      )}
     </View>
   );
 }

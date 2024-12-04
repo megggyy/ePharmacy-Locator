@@ -7,6 +7,7 @@ import { jwtDecode } from 'jwt-decode';
 import baseURL from '@/assets/common/baseurl';
 import axios from 'axios';
 import RNPickerSelect from 'react-native-picker-select';
+import Spinner from "../../../../assets/common/spinner";
 
 export default function EditProfile() {
   const router = useRouter();
@@ -98,16 +99,12 @@ export default function EditProfile() {
     }
   };
 
-  if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
-      </View>
-    );
-  }
-
   return (
     <View style={styles.container}>
+        {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -174,10 +171,15 @@ export default function EditProfile() {
           onChangeText={setCity}
         />
       </View>
-
+      <TouchableOpacity style={styles.changePasswordContainer}  onPress={() => router.push('/screens/Admin/Profile/ChangePassword')}>
+        <Text style={styles.changePasswordText}>Change Password</Text>
+        <Ionicons name="chevron-forward" size={24} color="black" />
+      </TouchableOpacity>
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirmButtonText}>CONFIRM</Text>
       </TouchableOpacity>
+      </>
+      )}
     </View>
   );
 }
@@ -269,5 +271,19 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  changePasswordContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginHorizontal: 20, // Padding added to the "Change Password" button
+    marginBottom: 30,
+  },
+  changePasswordText: {
+    fontSize: 16,
+    color: '#333',
   },
 });

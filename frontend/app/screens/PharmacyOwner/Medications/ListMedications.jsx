@@ -43,12 +43,12 @@ const MedicationScreen = () => {
   };
 
   useFocusEffect(
-    useCallback(() => {
+    React.useCallback(() => {
       axios
         .get(`${baseURL}medicine/${state.user.userId}`)
         .then((res) => {
           setMedicationsList(res.data);
-          setMedicationsFilter(res.data);
+          setMedicationsFilter(res.data); 
           console.log(res.data);
           setLoading(false);
         })
@@ -107,7 +107,7 @@ const MedicationScreen = () => {
       ) : (
         <>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity onPress={() => router.push('/drawer/PharmacyOwnerDrawer')} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
             <Image
