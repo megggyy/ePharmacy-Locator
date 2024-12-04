@@ -100,12 +100,13 @@ export default function MapsScreen() {
       const fetchPharmacies = async (userLat = null, userLong = null) => {
         try {
           const pharmaciesResponse = await axios.get(`${baseURL}pharmacies`);
-          setPharmacies(pharmaciesResponse.data);
+          const approvedPharmacies = pharmaciesResponse.data.filter(pharmacy => pharmacy.approved === true); // Only include approved pharmacies
+          setPharmacies(approvedPharmacies); // Update pharmacies state with only approved pharmacies
           setIsLoading(false);
-    
+      
           // If user is logged in and has a location, filter pharmacies based on distance
           if (userLat && userLong) {
-            const filtered = pharmaciesResponse.data.filter((pharmacy) => {
+            const filtered = approvedPharmacies.filter((pharmacy) => {
               const distance = haversineDistance(
                 userLat,
                 userLong,
@@ -116,14 +117,15 @@ export default function MapsScreen() {
             });
             setFilteredPharmacies(filtered);
           } else {
-            // If no user location, show all pharmacies
-            setFilteredPharmacies(pharmaciesResponse.data);
+            // If no user location, show all approved pharmacies
+            setFilteredPharmacies(approvedPharmacies);
           }
         } catch (error) {
           console.error('Error fetching pharmacies:', error);
           setIsLoading(false);
         }
       };
+      
       // Fetch user location and pharmacies data on button click
       const fetchData = async () => {
         await fetchUserLocation();
@@ -246,25 +248,28 @@ export default function MapsScreen() {
       <View style={styles.topSection}>
         {/* Header with Back Arrow */}
       <View style={styles.header}>
-      <Text style={styles.headerTitle}>Nearby Pharmacies</Text>
+      <Text style={styles.headerTitle}>Pharmacies</Text>
     </View>
 
      {/* Search Box */}
-      <View style={styles.searchBox}>
-        <Ionicons name="search" size={20} color="gray" />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Search for a pharmacy"
-          placeholderTextColor="gray"
-          value={searchQuery}
-          onChangeText={handleSearch}
-        />
-        {searchQuery.length > 0 && (
-          <TouchableOpacity onPress={() => handleSearch('')}>
-            <Ionicons name="close-circle" size={20} color="gray" />
-          </TouchableOpacity>
-        )}
-      </View>
+      {isLoggedIn && (
+        <View style={styles.searchBox}>
+          <Ionicons name="search" size={20} color="gray" />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search for a pharmacy"
+            placeholderTextColor="gray"
+            value={searchQuery}
+            onChangeText={handleSearch}
+          />
+          {searchQuery.length > 0 && (
+            <TouchableOpacity onPress={() => handleSearch('')}>
+              <Ionicons name="close-circle" size={20} color="gray" />
+            </TouchableOpacity>
+          )}
+        </View>
+    )}
+
 
         {/* Suggestions Dropdown */}
         {pharmacySuggestions.length > 0 && (
@@ -379,6 +384,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'white',
     fontWeight: 'bold',
+    marginBottom:5,
   },
   searchBox: {
     marginVertical: 15,

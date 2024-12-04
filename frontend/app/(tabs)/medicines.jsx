@@ -120,16 +120,17 @@ export default function MedicationScreen() {
           </View>
         )}
 
-        <TextInput
-          style={styles.searchBar}
-          placeholder="Search..."
-          value={searchQuery}
-          onChangeText={handleSearch}
-          onLayout={(event) => {
-            const { width, x } = event.nativeEvent.layout;
-            setSearchBarPosition({ width, left: x });
-          }}
-        />
+      <TextInput
+        style={styles.searchBar}
+        placeholder="Search for medicines"
+        placeholderTextColor="#AAB4C1"
+        value={searchQuery}
+        onChangeText={handleSearch}
+        onLayout={(event) => {
+          const { width, x } = event.nativeEvent.layout;
+          setSearchBarPosition({ width, left: x });
+        }}
+      />
       </View>
 
       <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 20 }}>
@@ -156,9 +157,9 @@ export default function MedicationScreen() {
         </View>
 
         <View style={styles.sectionHeader}>
-          <TouchableOpacity onPress={handleViewAll}>
+          {/* <TouchableOpacity onPress={handleViewAll}>
             <Text style={styles.viewAll}>View all</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
 
         {/* Modal for Categories */}
@@ -257,13 +258,7 @@ const styles = StyleSheet.create({
   menuIcon: { fontSize: 30, color: '#fff' },
   iconsWrapper: { flexDirection: 'row', alignItems: 'center' },
   icon: { fontSize: 25, color: '#fff', marginLeft: 10 },
-  searchBar: {
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    paddingHorizontal: 15,
-    height: 40,
-    marginTop: 10,
-  },
+  searchBar: { marginVertical: 15, padding: 10, backgroundColor: '#f0f0f0', borderRadius: 8 },
   suggestionsContainer: {
     position: 'absolute',
     backgroundColor: '#005b7f',

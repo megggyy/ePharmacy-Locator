@@ -27,17 +27,22 @@ export default function PharmacyScreen() {
   const [selectedBarangay, setSelectedBarangay] = useState(null);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
- useEffect(() => {
+  useEffect(() => {
     axios
       .get(`${baseURL}pharmacies`)
       .then((response) => {
         const pharmaciesData = response.data;
-        setPharmacies(pharmaciesData);
-        setFilteredPharmacies(pharmaciesData);
-
-        // Extract unique barangays from the fetched data
+  
+        // Filter pharmacies to include only approved ones
+        const approvedPharmacies = pharmaciesData.filter(pharmacy => pharmacy.approved);
+  
+        // Update the state with approved pharmacies
+        setPharmacies(approvedPharmacies);
+        setFilteredPharmacies(approvedPharmacies);
+  
+        // Extract unique barangays from the filtered pharmacies
         const uniqueBarangays = [
-          ...new Set(pharmaciesData.map((pharmacy) => pharmacy.userInfo.barangay)),
+          ...new Set(approvedPharmacies.map((pharmacy) => pharmacy.userInfo.barangay)),
         ];
         setBarangays(uniqueBarangays);
       })
@@ -45,6 +50,7 @@ export default function PharmacyScreen() {
         console.error('Error fetching pharmacies:', error);
       });
   }, []);
+  
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -94,7 +100,7 @@ export default function PharmacyScreen() {
       )}
       <TextInput
         style={styles.searchBar}
-        placeholder="Search..."
+        placeholder="Search for pharmacies"
         placeholderTextColor="#AAB4C1"
         value={searchQuery}
         onChangeText={handleSearch}

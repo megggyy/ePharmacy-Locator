@@ -47,11 +47,11 @@ const VerifyOTPScreen = () => {
           topOffset: 60,
           type: 'success',
           text1: 'OTP Verified',
-          text2: 'Redirecting to the Login Screen.',
+          text2: 'Please wait for your account approval.',
         });
 
         setTimeout(() => {
-          router.push('/screens/Auth/LoginScreen'); // Adjust the path as needed
+          router.push('/(tabs)/account');
         }, 500);
       } else {
         throw new Error(data.message || 'Verification failed. Please try again.');

@@ -40,7 +40,6 @@ const PharmacyOwnerSignupScreen = () => {
   const [images, setImages] = useState([]);
   const [permits, setPermit] = useState([]); 
   const [error, setError] = useState('');
-  // New States for Business Days, Opening, and Closing Hours
   const [businessDays, setBusinessDays] = useState("");
   const [openingHour, setOpeningHour] = useState(new Date());
   const [closingHour, setClosingHour] = useState(new Date());
@@ -201,8 +200,8 @@ const PharmacyOwnerSignupScreen = () => {
           Toast.show({
             topOffset: 60,
             type: "success",
-            text1: "REGISTRATION SUCCEEDED",
-            text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+            text1: "ACCOUNT CREATED",
+            text2: "PLEASE VERIFY YOUR EMAIL",
           });
 
           // Redirect to OTP verification screen and pass userId as a parameter

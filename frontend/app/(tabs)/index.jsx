@@ -45,11 +45,14 @@ const HomeScreen = () => {
     category.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Filter pharmacies based on search query and approval status
   const filteredPharmacies = pharmacies.filter((pharmacy) =>
-    pharmacy.userInfo.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    pharmacy.userInfo.street.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    pharmacy.userInfo.city.toLowerCase().includes(searchQuery.toLowerCase())
+    (pharmacy.userInfo.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      pharmacy.userInfo.street.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      pharmacy.userInfo.city.toLowerCase().includes(searchQuery.toLowerCase())) &&
+    pharmacy.approved 
   );
+
 
   const filteredMedications = medications.filter((medication) =>
     medication.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
