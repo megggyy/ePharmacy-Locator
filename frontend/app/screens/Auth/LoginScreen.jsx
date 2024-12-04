@@ -9,6 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Add this import
 import baseURL from "../../../assets/common/baseurl";
 import axios from "axios";
+import { jwtDecode } from 'jwt-decode';
 
 const LoginScreen = () => {
   const { state, dispatch } = useContext(AuthGlobal);
@@ -26,93 +27,136 @@ const LoginScreen = () => {
     return errorMessages;
   };
 
-  const handleSubmit = async () => {
-    const user = { email: email.trim(), password: password.trim() };
-   
-  
-    const validationErrors = validate();
-    setErrors(validationErrors);
-  
-    if (email === '' || password === '') {
-      return;
-    }
-    const response = await loginUser(user, dispatch);
-  
-    console.log(response.message);
-    if (response.message === "USER_NOT_VERIFIED") {
-      const res = await axios.post(`${baseURL}users/checkEmail`, { email });
-      router.push({
-        pathname: '/screens/Auth/OTPVerification/VerifyOTP',
-        params: { userId: res.data.userId },
-      });
-    }
-  
-    if (response.success) {
-      const role = response.role; // Get role from login response
+const handleSubmit = async () => {
+  const user = { email: email.trim(), password: password.trim() };
 
-      // Redirect based on role
-      switch (role) {
-          case 'Customer':
-              router.push('../../(tabs)'); // Redirect to Customer Home
-              break;
-          case 'PharmacyOwner':
-              router.push('/screens/PharmacyOwner/Dashboard'); // Redirect to Pharmacy Owner Dashboard
-              break;
-          case 'Admin':
-              router.push('/screens/Admin/dashboard'); // Redirect to Admin Dashboard
-              break;
-          default:
-              router.push('../../(tabs)'); // Fallback route
-      }
+  const validationErrors = validate();
+  setErrors(validationErrors);
 
-      Toast.show({
-          topOffset: 60,
-          type: "success",
-          text1: "LOGIN SUCCESSFUL",
-      });
+  if (email === '' || password === '') {
+    return;
+  }
+  const response = await loginUser(user, dispatch);
+
+  console.log(response.message);
+  if (response.message === "USER_NOT_VERIFIED") {
+    const res = await axios.post(`${baseURL}users/checkEmail`, { email });
+    router.push({
+      pathname: '/screens/Auth/OTPVerification/VerifyOTP',
+      params: { userId: res.data.userId },
+    });
+  }
+
+  if (response.success) {
+    const role = response.role; // Get role from login response
+    switch (role) {
+      case 'Customer':
+        router.push('../../(tabs)'); // Redirect to Customer Home
+        break;
+  case 'PharmacyOwner':
+  try {
+    // Fetch the pharmacy details to check if it's approved
+    const token = await AsyncStorage.getItem('jwt');
+    const decoded = jwtDecode(token);
+    const userId = decoded?.userId;
+
+    const response = await fetch(`${baseURL}users/${userId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const data = await response.json();
+    const isApproved = data.pharmacyDetails?.approved;
+
+    if (isApproved) {
+      // Redirect to the dashboard if approved
+      router.push('/screens/PharmacyOwner/Dashboard');
     } else {
-      switch (response.message) {
-        case "EMAIL_NOT_FOUND":
-          Toast.show({
-            topOffset: 60,
-            type: "error",
-            text1: "EMAIL IS NOT EXISTING",
-            text2: "PLEASE CHECK YOUR EMAIL AND TRY AGAIN.",
-          });
-          break;
-        case "USER_NOT_VERIFIED":
-          Toast.show({
-            topOffset: 60,
-            type: "error",
-            text1: "YOU'RE NOT VERIFIED",
-            text2: "REDIRECTING TO VERIFICATION PAGE",
-          });
-          break;
-        case "NETWORK_ERROR":
-          Toast.show({
-            topOffset: 60,
-            type: "error",
-            text1: "NETWORK ERROR",
-            text2: "UNABLE TO CONNECT TO THE SERVER. PLEASE TRY AGAIN LATER",
-          });
-          break;
-        case "INCORRECT_PASSWORD":
-          Toast.show({
-            topOffset: 60,
-            type: "error",
-            text1: "INCORRECT PASSWORD",
-          });
-          break;
-        default:
-          Toast.show({
-            topOffset: 60,
-            type: "error",
-            text1: "LOGIN FAILED",
-            text2: "AN UNEXPECTED ERROR OCCURRED. PLEASE TRY AGAIN LATER.",
-          });
-      }
+      // Automatically log out if the pharmacy is not approved
+      await AsyncStorage.removeItem('jwt');
+      dispatch({ type: 'LOGOUT_USER' }); // Update global state to reflect logout
+      Toast.show({
+        topOffset: 60,
+        type: 'error',
+        text1: 'PHARMACY NOT APPROVED',
+        text2: 'You have been logged out. Redirecting to approval status screen.',
+      });
+
+      // Redirect to Pharmacy Status Screen
+      setTimeout(() => {
+        router.push('/screens/Auth/PharmacyStatusScreen');
+      }, 1500); // Small delay to ensure Toast message is visible
     }
-  };
+  } catch (error) {
+    console.error('Error fetching pharmacy status:', error);
+    Toast.show({
+      topOffset: 60,
+      type: 'error',
+      text1: 'ERROR',
+      text2: 'Failed to fetch pharmacy status. Please try again.',
+    });
+  }
+  break;
+      case 'Admin':
+        router.push('/screens/Admin/dashboard'); // Redirect to Admin Dashboard
+        break;
+      default:
+        router.push('../../(tabs)'); // Fallback route
+    }
+    Toast.show({
+      topOffset: 60,
+      type: "success",
+      text1: "LOGIN SUCCESSFUL",
+    });
+  } else {
+    switch (response.message) {
+      case "EMAIL_NOT_FOUND":
+        Toast.show({
+          topOffset: 60,
+          type: "error",
+          text1: "EMAIL IS NOT EXISTING",
+          text2: "PLEASE CHECK YOUR EMAIL AND TRY AGAIN.",
+        });
+        break;
+      case "USER_NOT_VERIFIED":
+        Toast.show({
+          topOffset: 60,
+          type: "error",
+          text1: "YOU'RE NOT VERIFIED",
+          text2: "REDIRECTING TO VERIFICATION PAGE",
+        });
+        break;
+      case "NETWORK_ERROR":
+        Toast.show({
+          topOffset: 60,
+          type: "error",
+          text1: "NETWORK ERROR",
+          text2: "UNABLE TO CONNECT TO THE SERVER. PLEASE TRY AGAIN LATER",
+        });
+        break;
+      case "INCORRECT_PASSWORD":
+        Toast.show({
+          topOffset: 60,
+          type: "error",
+          text1: "INCORRECT PASSWORD",
+        });
+        break;
+      default:
+        Toast.show({
+          topOffset: 60,
+          type: "error",
+          text1: "LOGIN FAILED",
+          text2: "AN UNEXPECTED ERROR OCCURRED. PLEASE TRY AGAIN LATER.",
+        });
+    }
+  }
+};
+
+  
+  
   
 
   AsyncStorage.getAllKeys((err, keys) => {

@@ -36,6 +36,7 @@ export default function RootLayout() {
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             {/* AUTH */}
             <Stack.Screen name="screens/Auth/LoginScreen" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/PharmacyStatusScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Auth/SignupRoleScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Auth/ForgotPassword/ForgotPassword" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Auth/ForgotPassword/ResetOTP" options={{ headerShown: false }} />
