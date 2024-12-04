@@ -61,6 +61,9 @@ export default function Sidebar() {
       console.error('Error during logout:', error);
     }
   };
+
+  const profileImage = userProfile?.pharmacyDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
+
   return (
     <View style={styles.container}>
       {/* Back Button */}
@@ -71,7 +74,7 @@ export default function Sidebar() {
         {/* Profile Section */}
         <View style={styles.profileSection}>
         <Image
-          source={require('@/assets/images/sample.jpg')} // Replace with actual image
+          source={{ uri: profileImage }} // Dynamically fetch the first image
           style={styles.profileImage}
         />
         <Text style={styles.profileName}>{userProfile?.name}</Text>

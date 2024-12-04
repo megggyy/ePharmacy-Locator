@@ -124,7 +124,7 @@ const HomeScreen = () => {
           <TouchableOpacity
             key={medication._id}
             style={styles.productCard}
-            onPress={() => router.push(`/screens/User/Features/MedicationDetails?id=${medication._id}`)}
+            onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.name}`)}
           >
             <Image
               style={styles.productImage}

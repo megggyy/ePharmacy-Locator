@@ -13,22 +13,28 @@ const CategoryFilterMedications = () => {
   const [error, setError] = useState(false); // Error state
 
   useEffect(() => {
-    setIsLoading(true);
-    setError(false);
-
-    // Fetch medications in the selected category
-    axios
-      .get(`${baseURL}medicine?category=${id}`)
-      .then((response) => {
-        setMedications(response.data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        setError(true);
+    const fetchMedications = async () => {
+      try {
+        setIsLoading(true);
+        setError(null); // Reset error state
+        const response = await axios.get(`${baseURL}medicine?category=${id}`);
         
-      });
+        // Filter the medications to match the current category
+        const filteredMedications = response.data.filter(
+          (medication) => medication.category._id === id
+        );
+        
+        setMedications(filteredMedications);
+      } catch (err) {
+        setError('Failed to load medications. Please try again.');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+  
+    fetchMedications();
   }, [id]);
+  
 
   return (
     <View style={styles.topContainer}>
