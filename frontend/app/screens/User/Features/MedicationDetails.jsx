@@ -112,16 +112,17 @@ const MedicationDetails = () => {
                 <MapView
                   style={styles.map}
                   initialRegion={{
-                    latitude: location.latitude || 0,
-                    longitude: location.longitude || 0,
+                    latitude: parseFloat(pharmacy.location.latitude),
+                    longitude: parseFloat(pharmacy.location.longitude),
                     latitudeDelta: 0.01,
                     longitudeDelta: 0.01,
                   }}
+                  showsUserLocation
                 >
                   <Marker
                     coordinate={{
-                      latitude: location.latitude || 0,
-                      longitude: location.longitude || 0,
+                      latitude: parseFloat(pharmacy.location.latitude),
+                      longitude: parseFloat(pharmacy.location.longitude),
                     }}
                     title={userInfo.name || 'Pharmacy'}
                     description={pharmacy.address || 'No address available'}
@@ -142,7 +143,7 @@ const MedicationDetails = () => {
 const styles = StyleSheet.create({
   // styles as before
   safeArea: { flex: 1, backgroundColor: '#F4F4F4' },
-  header: { backgroundColor: '#0B607E', paddingTop: 80, paddingBottom: 20, alignItems: 'center' },
+  header: { backgroundColor: '#0B607E', paddingTop: 40, paddingBottom: 20, alignItems: 'center' },
   backButton: { position: 'absolute', top: 50, left: 20 },
   headerText: { color: 'white', fontSize: 20, fontWeight: 'bold' },
   container: { padding: 16 },

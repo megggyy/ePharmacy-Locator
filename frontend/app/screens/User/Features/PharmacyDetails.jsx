@@ -90,20 +90,25 @@ const PharmacyDetails = () => {
 
           {/* Map View */}
           <View style={styles.mapContainer}>
-            <MapView
-              style={styles.map}
-              initialRegion={{
-                latitude: pharmacy.location.latitude,
-                longitude: pharmacy.location.longitude,
-                latitudeDelta: 0.01,
-                longitudeDelta: 0.01,
+          <MapView
+            style={styles.map}
+            initialRegion={{
+              latitude: parseFloat(pharmacy.location.latitude),
+              longitude: parseFloat(pharmacy.location.longitude),
+              latitudeDelta: 0.01,
+              longitudeDelta: 0.01,
+            }}
+            showsUserLocation
+          >
+            <Marker
+              coordinate={{
+                latitude: parseFloat(pharmacy.location.latitude),
+                longitude: parseFloat(pharmacy.location.longitude),
               }}
-            >
-              <Marker
-                coordinate={pharmacy.location}
-                title={pharmacy.userInfo.name}
-              />
-            </MapView>
+              title={pharmacy.userInfo.name}
+            />
+          </MapView>
+
           </View>
         </View>
       </ScrollView>
@@ -118,7 +123,7 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#0B607E',
-    paddingTop: 80,
+    paddingTop: 40,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',

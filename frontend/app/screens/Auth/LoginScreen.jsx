@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0A6A83',
+    backgroundColor: '#005b7f',
   },
   icon: {
     width: 100,

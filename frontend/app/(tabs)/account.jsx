@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0A6A83', // Blue background for the upper section
+    backgroundColor: '#005b7f', // Blue background for the upper section
   },
   icon: {
     width: 100, // Adjust size accordingly

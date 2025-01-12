@@ -1,6 +1,6 @@
-import React, { useContext, useState, useCallback } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useFocusEffect } from "@react-navigation/native"
+import React, { useContext,  useState, useCallback  } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image, StatusBar } from 'react-native';
+import { useFocusEffect} from "@react-navigation/native"
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -66,6 +66,7 @@ export default function Sidebar() {
 
   return (
     <View style={styles.container}>
+       <StatusBar backgroundColor="#0B607E" barStyle="light-content" />
       {/* Back Button */}
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
@@ -126,6 +127,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0B607E', // Keep the header background blue
+    paddingTop: 50,
     paddingTop: 50,
   },
   profileSection: {
