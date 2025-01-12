@@ -1,8 +1,7 @@
 {
-  "expo": {
+  "expo": {   
     "name": "ePharmacyLocator",
     "slug": "ePharmacyLocator",
-    "newArchEnabled": true,
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/spinnerLogo.png",
@@ -21,7 +20,13 @@
         "foregroundImage": "./assets/images/spinnerLogo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "ePharmacyLocator.com"
+      "package": "ePharmacyLocator.com",
+      "newArchEnabled": false,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB21rjoBoJCLlsRUjjKd-8WihrlBO7SLOk"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
