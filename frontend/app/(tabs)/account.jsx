@@ -62,7 +62,8 @@ const HomeScreen = () => {
       {/* Lower section with white background */}
       <View style={styles.lowerSection}>
         {/* Buttons */}
-        <TouchableOpacity style={styles.button} onPress={() => router.push('../screens/Auth/LoginScreen')}>
+        <TouchableOpacity style={styles.button} 
+          onPress={() => router.push('../screens/Auth/LoginScreen')}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
 
@@ -70,7 +71,7 @@ const HomeScreen = () => {
           style={[styles.button, styles.signupButton]}
           onPress={() => router.push('../screens/Auth/SignupRoleScreen')}
         >
-          <Text style={styles.buttonText}>Sign up</Text>
+          <Text style={styles.buttonTextS}>Sign up</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -118,10 +119,18 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   signupButton: {
-    backgroundColor: '#357B8E', // Different color for Sign up button
+    backgroundColor: '#357B8E', 
+    paddingVertical: 12,
+    paddingHorizontal: 95,
+    borderRadius: 8,
+    marginVertical: 10,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 20,
+    color: '#fff',
+  },
+  buttonTextS: {
+    fontSize: 20,
     color: '#fff',
   },
 });

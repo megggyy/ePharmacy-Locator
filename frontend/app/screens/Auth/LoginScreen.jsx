@@ -40,7 +40,7 @@ const handleSubmit = async () => {
 
   console.log(response.message);
   if (response.message === "USER_NOT_VERIFIED") {
-    const res = await axios.post(`${baseURL}users/checkEmail`, { email });
+    const res = await axios.post(`${baseURL}users/reVerifyOTP`, { email });
     router.push({
       pathname: '/screens/Auth/OTPVerification/VerifyOTP',
       params: { userId: res.data.userId },
@@ -155,10 +155,6 @@ const handleSubmit = async () => {
   }
 };
 
-  
-  
-  
-
   AsyncStorage.getAllKeys((err, keys) => {
     AsyncStorage.multiGet(keys, (error, stores) => {
       stores.map((result, i, store) => {
@@ -272,7 +268,6 @@ const styles = StyleSheet.create({
   inputPass: {
     paddingLeft: 12,
     borderRadius: 8,
-    marginVertical: 10,
     fontSize: 16,
   },
   passwordContainer: {

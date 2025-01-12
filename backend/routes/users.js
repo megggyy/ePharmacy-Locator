@@ -200,7 +200,7 @@ router.get('/customersPerMonth', async (req, res) => {
   });
 
 
-router.post(
+  router.post(
     '/register',
     (req, res, next) => {
         req.folder = 'users'; // Set the folder name for Cloudinary uploads
@@ -251,17 +251,32 @@ router.post(
             // Handle role-specific logic
             if (user.role === 'Customer') {
                 // Handle Customer-specific logic for files
-                const files = req.files;
+                const files = req.files?.images || []; // Ensure files is an array
                 if (!files || files.length === 0) {
-                    return res.status(400).send('No images in the request');
+                  return res.status(400).send('No images in the request');
                 }
-
-                const imagesPaths = files.map(file => file.path);
+                
+                const imagesPaths = files.map((file) => file.path);
+                
 
                 try {
                     // Handle diseases if present
-                    console.log(req.body.disease);
-                    if (req.body.disease) {
+                    console.log('disease:', req.body.disease);
+                    if (req.body.disease === 'null') {
+                        
+                        const customer = new Customer({
+                            images: imagesPaths,
+                            userInfo: user.id,
+                            disease: null,
+                            location: {
+                                latitude: req.body.latitude,
+                                longitude: req.body.longitude,
+                            },
+                        });
+
+                        await customer.save();
+                    }
+                    else {
                         let disease = await Diseases.findOne({ name: req.body.disease });
                         if (!disease) {
                             disease = new Diseases({ name: req.body.disease });
@@ -273,21 +288,8 @@ router.post(
                             userInfo: user.id,
                             disease: disease.id,
                             location: {
-                                latitude: req.body.latitude || null,
-                                longitude: req.body.longitude || null,
-                            },
-                        });
-
-                        await customer.save();
-                    } else {
-                        // No disease, so save with null
-                        const customer = new Customer({
-                            images: imagesPaths,
-                            userInfo: user.id,
-                            disease: null,
-                            location: {
-                                latitude: req.body.latitude || null,
-                                longitude: req.body.longitude || null,
+                                latitude: req.body.latitude,
+                                longitude: req.body.longitude,
                             },
                         });
 
@@ -320,7 +322,7 @@ router.post(
                     hours = hours % 12;
                     hours = hours ? hours : 12;
                     minutes = minutes < 10 ? '0' + minutes : minutes;
-                    return `${hours}:${minutes} ${ampm}`;
+                    return `${hours}:${minutes}:${ampm}`;
                 };
 
                 const openingHour = formatTime(req.body.openingHour);
@@ -357,6 +359,7 @@ router.post(
         }
     }
 );
+
 
 let otpStore = {}; 
 
@@ -443,6 +446,33 @@ router.post('/verifyOTP', async (req, res) => {
     }
 });
 
+router.post('/reVerifyOTP', async (req, res) => {
+    const { email } = req.body; // Fetch the email from the request body
+    console.log("Received Email:", email); // Log the received email for debugging
+
+    try {
+        // Check if user exists with the provided email (using email, not ObjectId)
+        const user = await User.findOne({ email });
+
+        if (user) {
+            // Call sendOTPResetEmail with user details
+            const result = await sendOTPVerificationEmail({ _id: user._id, email: user.email });
+
+            // Return result after sending OTP
+            res.json({
+                exists: true,
+                userId: user._id,
+                email: user.email,
+                otpStatus: result.status, // Status of OTP sending
+            });
+        } else {
+            res.json({ exists: false });
+        }
+    } catch (err) {
+        console.error("Error fetching user:", err);
+        res.status(500).send('Error fetching user');
+    }
+});
 
 // resend verification
 router.post('/resendOTPVerificationCode', async (req, res) => {
@@ -585,7 +615,6 @@ router.put('/change-password', async (req, res) => {
 
 
 // Reset Password
-
 router.post('/checkEmail', async (req, res) => {
     const { email } = req.body; // Fetch the email from the request body
     console.log("Received Email:", email); // Log the received email for debugging

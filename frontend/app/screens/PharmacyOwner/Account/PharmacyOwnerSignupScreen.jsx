@@ -19,6 +19,8 @@ import * as Location from "expo-location"; // Import Expo Location
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Add this import
 import DateTimePicker from '@react-native-community/datetimepicker';
 
+import MapView, { Marker } from 'react-native-maps';  // Import MapView and Marker
+
 import mime from "mime";
 
 import baseURL from "../../../../assets/common/baseurl";
@@ -31,14 +33,20 @@ const PharmacyOwnerSignupScreen = () => {
   const [contactNumber, setContactNumber] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [region, setRegion] = useState({
+    latitude: 14.520445,
+    longitude: 121.053886,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421,
+  });
   const [street, setStreet] = useState("");
   const [barangay, setBarangay] = useState(null);
   const [barangays, setBarangays] = useState([]);
   const [city, setCity] = useState("Taguig City");
   const [images, setImages] = useState([]);
-  const [permits, setPermit] = useState([]); 
+  const [permits, setPermit] = useState([]);
   const [error, setError] = useState('');
   const [businessDays, setBusinessDays] = useState("");
   const [openingHour, setOpeningHour] = useState(new Date());
@@ -61,30 +69,57 @@ const PharmacyOwnerSignupScreen = () => {
         setError("Failed to load barangay list");
       });
 
-      (async () => {
-        if (Platform.OS !== "web") {
-          const { status } = await ImagePicker.requestCameraPermissionsAsync();
-          if (status !== "granted") {
-            alert("We need access to your camera roll to upload images!");
-          }
+    (async () => {
+      if (Platform.OS !== "web") {
+        const { status } = await ImagePicker.requestCameraPermissionsAsync();
+        if (status !== "granted") {
+          alert("We need access to your camera roll to upload images!");
         }
-      })();
-  
-      // Request location permissions and fetch location
-      (async () => {
-        const { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
-          Alert.alert("Permission denied", "Location access is required to sign up.");
-          return;
-        }
-  
-        const location = await Location.getCurrentPositionAsync({});
-        setLatitude(location.coords.latitude.toString());
-        setLongitude(location.coords.longitude.toString());
-      })();
-    }, []);
+      }
+    })();
 
+    getCurrentLocation();
+  }, []);
 
+  // Function to get current location
+  const getCurrentLocation = async () => {
+    try {
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert("Permission denied", "You need to grant location permission to use this feature.");
+        return;
+      }
+
+      const location = await Location.getCurrentPositionAsync({});
+      setLatitude(location.coords.latitude);
+      setLongitude(location.coords.longitude);
+
+      // Set the region to the current location
+      setRegion({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      });
+    } catch (error) {
+      console.error("Error fetching current location:", error);
+      Alert.alert("Error", "Unable to fetch current location. Please try again.");
+    }
+  };
+
+  const handleMapPress = (event) => {
+    const { latitude, longitude } = event.nativeEvent.coordinate;
+    setLatitude(latitude);
+    setLongitude(longitude);
+
+    // Update the region when the map is pressed
+    setRegion({
+      latitude,
+      longitude,
+      latitudeDelta: 0.0922,
+      longitudeDelta: 0.0421,
+    });
+  };
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -107,7 +142,7 @@ const PharmacyOwnerSignupScreen = () => {
       aspect: [5.5, 8.5],
       quality: 1,
     });
-  
+
     if (!result.canceled) {
       const selectedPermits = result.assets.map((asset) => ({ id: images.length, uri: asset.uri }));
       const filteredPermits = images.filter(image => image.uri !== undefined);
@@ -115,7 +150,7 @@ const PharmacyOwnerSignupScreen = () => {
     }
   };
 
-  
+
   const removeImage = (id) => {
     setImages(images.filter((image) => image.id !== id));
   };
@@ -159,9 +194,9 @@ const PharmacyOwnerSignupScreen = () => {
     formData.append("isAdmin", false);
     formData.append("role", "PharmacyOwner");
     formData.append("approved", false);
-    formData.append("businessDays", businessDays); 
-    formData.append("openingHour", openingHour.toISOString()); 
-    formData.append("closingHour", closingHour.toISOString()); 
+    formData.append("businessDays", businessDays);
+    formData.append("openingHour", openingHour.toISOString());
+    formData.append("closingHour", closingHour.toISOString());
     console.log(openingHour.toISOString());
     console.log(closingHour.toISOString());
 
@@ -174,8 +209,8 @@ const PharmacyOwnerSignupScreen = () => {
       });
     });
 
-     // Append business permit
-     permits.forEach((permit, index) => {
+    // Append business permit
+    permits.forEach((permit, index) => {
       formData.append("permits", {
         uri: permit.uri,
         type: mime.getType(permit.uri),
@@ -217,7 +252,7 @@ const PharmacyOwnerSignupScreen = () => {
         if (error.response) {
           // Handle specific error messages
           const { message } = error.response.data;
-    
+
           if (message === 'NOT_UNIQUE_EMAIL') {
             Toast.show({
               type: "error",
@@ -278,39 +313,39 @@ const PharmacyOwnerSignupScreen = () => {
 
 
         <View style={styles.row}>
-  {/* Contact Number */}
-  <TextInput
-    style={[styles.input, styles.halfInput]}
-    placeholder="Contact number"
-    placeholderTextColor="#AAB4C1"
-    value={contactNumber}
-    onChangeText={setContactNumber}
-    keyboardType="phone-pad"
-  />
-  {/* Password */}
-  <View style={[styles.passwordContainer, styles.halfInput]}>
-    <TextInput
-      style={[styles.inputPass, { flex: 1 }]}
-      placeholder="Password"
-      placeholderTextColor="#AAB4C1"
-      secureTextEntry={!showPassword}
-      value={password}
-      onChangeText={setPassword}
-    />
-    <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
-      <Icon
-        name={showPassword ? "eye-off" : "eye"}
-        size={24}
-        color="#AAB4C1"
-      />
-    </TouchableOpacity>
-  </View>
-</View>
-{/* Display Validation Errors */}
-<View style={styles.rowValidation}>
-  {error.contactNumber && <Text style={styles.errorAddress}>{error.contactNumber}</Text>}
-  {error.password && <Text style={styles.errorAddress}>{error.password}</Text>}
-</View>
+          {/* Contact Number */}
+          <TextInput
+            style={[styles.input, styles.halfInput]}
+            placeholder="Contact number"
+            placeholderTextColor="#AAB4C1"
+            value={contactNumber}
+            onChangeText={setContactNumber}
+            keyboardType="phone-pad"
+          />
+          {/* Password */}
+          <View style={[styles.passwordContainer, styles.halfInput]}>
+            <TextInput
+              style={[styles.inputPass, { flex: 1 }]}
+              placeholder="Password"
+              placeholderTextColor="#AAB4C1"
+              secureTextEntry={!showPassword}
+              value={password}
+              onChangeText={setPassword}
+            />
+            <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+              <Icon
+                name={showPassword ? "eye-off" : "eye"}
+                size={24}
+                color="#AAB4C1"
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+        {/* Display Validation Errors */}
+        <View style={styles.rowValidation}>
+          {error.contactNumber && <Text style={styles.errorAddress}>{error.contactNumber}</Text>}
+          {error.password && <Text style={styles.errorAddress}>{error.password}</Text>}
+        </View>
 
 
         {/* Address Fields */}
@@ -331,128 +366,173 @@ const PharmacyOwnerSignupScreen = () => {
               value: null,
               color: '#AAB4C1',
             }}
-            Icon={() => {
-              return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-            }}
             value={barangay}
           />
-          </View>
+        </View>
 
         <View style={styles.rowValidation}>
 
           {error.street && <Text style={styles.errorAddress}>{error.street}</Text>}
           {error.barangay && <Text style={styles.errorAddress}>{error.barangay}</Text>}
-      
+
         </View>
-      
+
         <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
-            {/* Business Days Input as a simple text */}
-            <TextInput
-            style={styles.input}
-            placeholder="Enter business days                                                            "
-            placeholderTextColor="#AAB4C1"
-            value={businessDays}
-            onChangeText={setBusinessDays}
+        
+        <Text style={styles.uploadLabel}>Pin Exact Location</Text>
+        <MapView
+          style={styles.map}
+          region={region} // Dynamically update the region
+          onPress={handleMapPress}
+          showsUserLocation={true} // Show user's current location on the map
+        >
+          {latitude && longitude && (
+            <Marker
+              coordinate={{ latitude, longitude }}
+              draggable={true}
+              onDragEnd={(e) => {
+                const { latitude, longitude } = e.nativeEvent.coordinate;
+                setLatitude(latitude);
+                setLongitude(longitude);
+
+                // Update the region when the marker is dragged
+                setRegion({
+                  latitude,
+                  longitude,
+                  latitudeDelta: 0.0922,
+                  longitudeDelta: 0.0421,
+                });
+              }}
+            />
+          )}
+        </MapView>
+
+
+        {/* Buttons for location selection */}
+        <TouchableOpacity onPress={getCurrentLocation} style={styles.locationButton}>
+          <Text style={styles.buttonText}>Get Current Location</Text>
+        </TouchableOpacity>
+
+        {/* Display latitude and longitude */}
+        {latitude && longitude && (
+          <View style={styles.locationInfo}>
+            <Text style={styles.locationPin}>
+              Latitude: {latitude.toFixed(5)}...
+            </Text>
+            <Text style={styles.locationPin}>
+              Longitude: {longitude.toFixed(5)}...
+            </Text>
+          </View>
+
+        )}
+
+        {/* Business Days Input as a simple text */}
+        <TextInput
+          style={styles.input}
+          placeholder="Enter business days                                                            "
+          placeholderTextColor="#AAB4C1"
+          value={businessDays}
+          onChangeText={setBusinessDays}
+        />
+        {error.businessDays && <Text style={styles.errorText}>{error.businessDays}</Text>}
+
+        {/* Opening and Closing Hours Section */}
+        <View style={styles.row}>
+          {/* Opening Hour */}
+          <TouchableOpacity onPress={() => setShowOpeningTime(true)} style={[styles.input, styles.timeInput]}>
+            <Text>{`Opening: ${openingHour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}</Text>
+          </TouchableOpacity>
+          {showOpeningTime && (
+            <View style={styles.pickerContainer}>
+              <DateTimePicker
+                value={openingHour}
+                mode="time"
+                display="default"
+                onChange={(event, selectedDate) => {
+                  setOpeningHour(selectedDate || openingHour);
+                }}
+              />
+              <TouchableOpacity onPress={() => handleClose("opening")} style={styles.closeButton}>
+                <Ionicons name="close" size={24} color="black" />
+              </TouchableOpacity>
+            </View>
+          )}
+
+          {/* Closing Hour */}
+          <TouchableOpacity onPress={() => setShowClosingTime(true)} style={[styles.input, styles.timeInput]}>
+            <Text>{`Closing: ${closingHour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}</Text>
+          </TouchableOpacity>
+          {showClosingTime && (
+            <View style={styles.pickerContainer}>
+              <DateTimePicker
+                value={closingHour}
+                mode="time"
+                display="default"
+                onChange={(event, selectedDate) => {
+                  setClosingHour(selectedDate || closingHour);
+                }}
+              />
+              <TouchableOpacity onPress={() => handleClose("closing")} style={styles.closeButton}>
+                <Ionicons name="close" size={24} color="black" />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+
+        {/* Upload Pharmacy Image */}
+        <Text style={styles.uploadLabel}>Pharmacy Image</Text>
+        <View style={styles.uploadContainer}>
+          <TextInput
+            style={styles.inputTextField}
+            placeholder="Select pharmacy images"
+            editable={false}
+            value={images.length > 0 ? 'Images Selected' : ''}
           />
-          {error.businessDays && <Text style={styles.errorText}>{error.businessDays}</Text>} 
+          <TouchableOpacity style={styles.addIcon} onPress={pickImage}>
+            <Ionicons name="add" size={24} color="white" />
+          </TouchableOpacity>
+        </View>
 
-      {/* Opening and Closing Hours Section */}
-      <View style={styles.row}>
-        {/* Opening Hour */}
-        <TouchableOpacity onPress={() => setShowOpeningTime(true)} style={[styles.input, styles.timeInput]}>
-          <Text>{`Opening: ${openingHour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}</Text>
-        </TouchableOpacity>
-        {showOpeningTime && (
-          <View style={styles.pickerContainer}>
-            <DateTimePicker
-              value={openingHour}
-              mode="time"
-              display="default"
-              onChange={(event, selectedDate) => {
-                setOpeningHour(selectedDate || openingHour);
-              }}
-            />
-            <TouchableOpacity onPress={() => handleClose("opening")} style={styles.closeButton}>
-              <Ionicons name="close" size={24} color="black" />
-            </TouchableOpacity>
-          </View>
-        )}
+        {/* Display Images */}
+        <View style={styles.imagePreviewContainer}>
+          {images.map((imageURL, index) => (
+            <View key={index} style={styles.imageContainer}>
+              <Image style={styles.image} source={{ uri: imageURL.uri }} />
+              <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
+                <Ionicons name="close" size={12} color="white" />
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
 
-        {/* Closing Hour */}
-        <TouchableOpacity onPress={() => setShowClosingTime(true)} style={[styles.input, styles.timeInput]}>
-          <Text>{`Closing: ${closingHour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}</Text>
-        </TouchableOpacity>
-        {showClosingTime && (
-          <View style={styles.pickerContainer}>
-            <DateTimePicker
-              value={closingHour}
-              mode="time"
-              display="default"
-              onChange={(event, selectedDate) => {
-                setClosingHour(selectedDate || closingHour);
-              }}
-            />
-            <TouchableOpacity onPress={() => handleClose("closing")} style={styles.closeButton}>
-              <Ionicons name="close" size={24} color="black" />
-            </TouchableOpacity>
-          </View>
-        )}
-      </View>
+        {error.images && <Text style={styles.errorText}>{error.images}</Text>}
 
-       {/* Upload Pharmacy Image */}
-<Text style={styles.uploadLabel}>Pharmacy Image</Text>
-<View style={styles.uploadContainer}>
-  <TextInput
-    style={styles.inputTextField}
-    placeholder="Select pharmacy images"
-    editable={false}
-    value={images.length > 0 ? 'Images Selected' : ''}
-  />
-  <TouchableOpacity style={styles.addIcon} onPress={pickImage}>
-    <Ionicons name="add" size={24} color="white" />
-  </TouchableOpacity>
-</View>
+        {/* Upload Business Permit */}
+        <Text style={styles.uploadLabel}>Business Permit</Text>
+        <View style={styles.uploadContainer}>
+          <TextInput
+            style={styles.inputTextField}
+            placeholder="Select business permits"
+            editable={false}
+            value={permits.length > 0 ? 'Permit Selected' : ''}
+          />
+          <TouchableOpacity style={styles.addIcon} onPress={pickPermit}>
+            <Ionicons name="add" size={24} color="white" />
+          </TouchableOpacity>
+        </View>
 
-{/* Display Images */}
-<View style={styles.imagePreviewContainer}>
-  {images.map((imageURL, index) => (
-    <View key={index} style={styles.imageContainer}>
-      <Image style={styles.image} source={{ uri: imageURL.uri }} />
-      <TouchableOpacity onPress={() => removeImage(imageURL.id)} style={styles.removeButton}>
-        <Ionicons name="close" size={12} color="white" />
-      </TouchableOpacity>
-    </View>
-  ))}
-</View>
-
-{error.images && <Text style={styles.errorText}>{error.images}</Text>}
-
-{/* Upload Business Permit */}
-<Text style={styles.uploadLabel}>Business Permit</Text>
-<View style={styles.uploadContainer}>
-  <TextInput
-    style={styles.inputTextField}
-    placeholder="Select business permits"
-    editable={false}
-    value={permits.length > 0 ? 'Permit Selected' : ''}
-  />
-  <TouchableOpacity style={styles.addIcon} onPress={pickPermit}>
-    <Ionicons name="add" size={24} color="white" />
-  </TouchableOpacity>
-</View>
-
-{/* Display Permits */}
-<View style={styles.imagePreviewContainer}>
-  {permits.map((permitURL, index) => (
-    <View key={index} style={styles.imageContainer}>
-      <Image style={styles.image} source={{ uri: permitURL.uri }} />
-      <TouchableOpacity onPress={() => removePermit(permitURL.id)} style={styles.removeButton}>
-        <Ionicons name="close" size={12} color="white" />
-      </TouchableOpacity>
-    </View>
-  ))}
-</View>
-{error.permits && <Text style={styles.errorText}>{error.permits}</Text>}
+        {/* Display Permits */}
+        <View style={styles.imagePreviewContainer}>
+          {permits.map((permitURL, index) => (
+            <View key={index} style={styles.imageContainer}>
+              <Image style={styles.image} source={{ uri: permitURL.uri }} />
+              <TouchableOpacity onPress={() => removePermit(permitURL.id)} style={styles.removeButton}>
+                <Ionicons name="close" size={12} color="white" />
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
+        {error.permits && <Text style={styles.errorText}>{error.permits}</Text>}
 
 
         {/* Sign up Button */}
@@ -503,7 +583,7 @@ const styles = StyleSheet.create({
   inputSection: {
     backgroundColor: '#fff',
     borderRadius: 20,
-    padding:  15,
+    padding: 15,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -573,8 +653,6 @@ const styles = StyleSheet.create({
   },
   inputPass: {
     paddingLeft: 12,
-    borderRadius: 8,
-    marginVertical: 10,
     fontSize: 16,
   },
   passwordContainer: {
@@ -586,7 +664,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F2F2',
   },
   eyeIcon: {
-    padding: 9,
     paddingRight: 5,
   },
   signUpButton: {
@@ -615,7 +692,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom:0,
+    marginBottom: 0,
   },
   rowValidation: {
     flexDirection: 'row',
@@ -624,7 +701,7 @@ const styles = StyleSheet.create({
     marginVertical: 0,
   },
   halfInput: {
-    width: '48%',
+    width: '50%'
   },
   errorText: {
     color: 'red',
@@ -645,10 +722,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: -2,
     marginBottom: 10,
-    textAlign: 'center', 
+    textAlign: 'center',
   },
   timeInput: {
-    flex: 0.48, 
+    flex: 0.48,
   },
   pickerContainer: {
     marginTop: 10,
@@ -700,7 +777,38 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 10,
   },
- 
+  map: {
+    height: 300,
+    width: '100%',
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  locationButton: {
+    backgroundColor: '#027DB1',
+    padding: 10,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+  },
+  locationInfo: {
+    marginBottom: 20,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  locationPin: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    marginHorizontal: 5,
+    fontSize: 16,
+    color: '#333',
+  },
 });
 
 const pickerSelectStyles = StyleSheet.create({
@@ -714,16 +822,15 @@ const pickerSelectStyles = StyleSheet.create({
     paddingRight: 30,
   },
   inputAndroid: {
-    backgroundColor: '#F2F2F2',
-    borderRadius: 10,
-    padding: 10,
-    marginVertical: 10,
+    flex: 1, // Ensures equal width with TextInput
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    overflow: 'hidden', // Prevents overflow if picker content is larger
+    backgroundColor: '#f9f9f9',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
     fontSize: 16,
     color: '#333',
-    paddingRight: 30,
-  },
-  iconContainer: {
-    top: 15,
-    right: 10,
   },
 });
