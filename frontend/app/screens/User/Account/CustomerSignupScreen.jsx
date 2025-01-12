@@ -289,42 +289,6 @@ const register = () => {
 
         <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
 
-        {/* Dropdown for diseases */}
-        <RNPickerSelect
-          onValueChange={(value) => {
-            setSelectedDisease(value);
-            if (value !== 'others') {
-              setCustomDisease('');
-            }
-          }}
-          items={diseases}
-          style={pickerSelectStyles}
-          placeholder={{
-            label: 'Choose your disease',
-            value: null,
-            color: '#AAB4C1',
-          }}
-          Icon={() => {
-            return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-          }}
-          useNativeAndroidPickerStyle={false}
-          value={selectedDisease}
-        />
-        {errors.diseases && <Text style={styles.errorText}>{errors.diseases}</Text>}
-
-        {/* Conditionally render TextInput for "Others" */}
-        {selectedDisease === 'others' && (
-          <TextInput
-            style={styles.input}
-            placeholder="Please Specify"
-            placeholderTextColor="#AAB4C1"
-            value={customDisease}
-            onChangeText={setCustomDisease}
-          />
-        )}
-
-        {errors.customDisease && <Text style={styles.errorText}>{errors.customDisease}</Text>}
-
         {/* Upload Images UI */}
         <Text style={styles.uploadLabel}>Upload Your Image</Text>
         <View style={styles.uploadContainer}>

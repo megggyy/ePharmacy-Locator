@@ -1,6 +1,6 @@
-import React, { useContext,  useState, useCallback  } from 'react';
+import React, { useContext, useState, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useFocusEffect} from "@react-navigation/native"
+import { useFocusEffect } from "@react-navigation/native"
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -13,42 +13,42 @@ import baseURL from "../../../assets/common/baseurl"
 export default function Sidebar() {
   const router = useRouter();
   const [userProfile, setUserProfile] = useState({});
-  const { state, dispatch } = useContext(AuthGlobal); 
+  const { state, dispatch } = useContext(AuthGlobal);
 
-  
+
   useFocusEffect(
     useCallback(() => {
-        if (state.isAuthenticated === false || state.isAuthenticated === null) {
-            router.push('../screens/Auth/LoginScreen');
-        }
+      if (state.isAuthenticated === false || state.isAuthenticated === null) {
+        router.push('../screens/Auth/LoginScreen');
+      }
 
-        AsyncStorage.getItem("jwt")
-            .then((res) => {
-                axios
-                    .get(`${baseURL}users/${state.user.userId}`, {
-                        headers: { Authorization: `Bearer ${res}` },
-                    })
-                    .then((user) => {
-                        setUserProfile(user.data);  // Set user data state here
-                        console.log(user.data);      // Now the data will be logged after the state is updated
-                    })
-                    .catch((error) => console.log(error));
+      AsyncStorage.getItem("jwt")
+        .then((res) => {
+          axios
+            .get(`${baseURL}users/${state.user.userId}`, {
+              headers: { Authorization: `Bearer ${res}` },
+            })
+            .then((user) => {
+              setUserProfile(user.data);  // Set user data state here
+              console.log(user.data);      // Now the data will be logged after the state is updated
             })
             .catch((error) => console.log(error));
+        })
+        .catch((error) => console.log(error));
 
-        return () => {
-            setUserProfile(); // Reset user profile on cleanup
-        };
+      return () => {
+        setUserProfile(); // Reset user profile on cleanup
+      };
     }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
-);
+  );
 
 
- 
+
   const handleLogout = async () => {
     try {
       await AsyncStorage.removeItem('jwt');
       dispatch({ type: 'LOGOUT_USER' });
-      router.replace('/(tabs)'); 
+      router.replace('/(tabs)');
       Toast.show({
         topOffset: 60,
         type: "success",
@@ -59,7 +59,10 @@ export default function Sidebar() {
     }
   };
 
-  const profileImage = userProfile?.customerDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
+  const profileImage =
+    userProfile?.customerDetails?.images?.[0] && typeof userProfile.customerDetails.images[0] === 'string'
+      ? { uri: userProfile.customerDetails.images[0] }
+      : require('@/assets/images/sample.jpg');
 
   return (
     <View style={styles.container}>
@@ -70,19 +73,20 @@ export default function Sidebar() {
 
       {/* Profile Section */}
       <View style={styles.profileSection}>
-        <Image
-          source={{ uri: profileImage }} // Dynamically fetch the first image
-          style={styles.profileImage}
-        />
-        <Text style={styles.profileName}>{userProfile?.name}</Text>
-      </View>
+    <Image
+        source={profileImage}
+        style={styles.profileImage}
+    />
+    <Text style={styles.profileName}>{userProfile?.name}</Text>
+</View>
+
 
       {/* Menu Section */}
       <View style={styles.menuSection}>
-      <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/ViewProfileScreen')}>
-        <Ionicons name="eye" size={25} color="#5A5A5A" /> 
-        <Text style={styles.menuText}>View Profile</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/ViewProfileScreen')}>
+          <Ionicons name="eye" size={25} color="#5A5A5A" />
+          <Text style={styles.menuText}>View Profile</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Profile/EditProfileScreen')}>
           <FontAwesome5 name="user-edit" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Edit Profile</Text>
@@ -122,7 +126,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0B607E', // Keep the header background blue
-    paddingTop: 100,
+    paddingTop: 50,
   },
   profileSection: {
     alignItems: 'center',
