@@ -77,7 +77,7 @@ export default function Sidebar() {
         source={profileImage}
         style={styles.profileImage}
     />
-    <Text style={styles.profileName}>{userProfile?.name}</Text>
+    <Text style={styles.profileName}>{userProfile?.name}haha</Text>
 </View>
 
 
