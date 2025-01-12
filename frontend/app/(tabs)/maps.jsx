@@ -324,8 +324,8 @@ export default function MapsScreen() {
             const distance = haversineDistance(
               userLocation.latitude,
               userLocation.longitude,
-              pharmacy.location.latitude,
-              pharmacy.location.longitude
+              parseFloat(pharmacy.location.latitude),
+              parseFloat(pharmacy.location.longitude)
             );
             return distance <= 1; // Nearby pharmacies only
           });
@@ -341,8 +341,8 @@ export default function MapsScreen() {
       setSelectedPharmacyId(pharmacy.id); // Highlight this marker
       setTimeout(() => {
         setRegion({
-          latitude: pharmacy.location.latitude,
-          longitude: pharmacy.location.longitude,
+          latitude: parseFloat(pharmacy.location.latitude),
+          longitude: parseFloat(pharmacy.location.longitude),
           latitudeDelta: 0.004,
           longitudeDelta: 0.004,
         });
