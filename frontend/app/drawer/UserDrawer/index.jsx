@@ -31,13 +31,17 @@ export default function Sidebar() {
             .then((user) => {
               setUserProfile(user.data);  // Set user data state here
               console.log(user.data);      // Now the data will be logged after the state is updated
+              console.log("Profile image URL:", user.data.customerDetails?.images?.[0]);
+
+             
             })
-            .catch((error) => console.log(error));
+            .catch((error) => console.log("Error fetching user data:", error));
         })
         .catch((error) => console.log(error));
 
       return () => {
         setUserProfile(); // Reset user profile on cleanup
+     
       };
     }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
   );

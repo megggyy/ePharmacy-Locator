@@ -51,9 +51,9 @@ export default function EditProfile() {
         setBarangay(barangay || '');
         setCity(city || '');
 
-        // Fetch images
-        const fetchedImages = pharmacyDetails?.images || [];
-        setImages(fetchedImages);
+       // Filter out non-string image URIs to avoid the error
+       const fetchedImages = (pharmacyDetails?.images || []).filter((img) => typeof img === 'string');
+       setImages(fetchedImages); // Set the valid images
 
         const businessDays = pharmacyDetails?.businessDays || [];
         setBusinessDays(businessDays);
@@ -62,7 +62,7 @@ export default function EditProfile() {
         setOpeningHour(openingHours);
 
         const closingHours = pharmacyDetails?.closingHour || [];
-        setClosingHour(openingHours);
+        setClosingHour(closingHours);
       } catch (error) {
         Alert.alert('Error', error.message);
       } finally {
@@ -98,9 +98,15 @@ export default function EditProfile() {
       quality: 1,
     });
 
-    if (!result.canceled) {
-      setImages([...images, result.assets[0].uri]);
+    if (!result.canceled && result.assets && result.assets.length > 0) {
+      const selectedUri = result.assets[0].uri;
+      if (typeof selectedUri === 'string') {
+        setImages([...images, selectedUri]);
+      } else {
+        console.error('Invalid URI format:', selectedUri);
+      }
     }
+    
   };
 
   const handleDeleteImage = (uri) => {
@@ -163,7 +169,8 @@ export default function EditProfile() {
 
       <View style={styles.profileImageSection}>
         <View style={styles.imagePreviewContainer}>
-          {images.map((uri, index) => (
+        {images.map((uri, index) => (
+          typeof uri === 'string' ? (
             <View key={index} style={styles.imageContainer}>
               <Image source={{ uri }} style={styles.profileImage} />
               <TouchableOpacity
@@ -173,7 +180,9 @@ export default function EditProfile() {
                 <Ionicons name="trash" size={20} color="white" />
               </TouchableOpacity>
             </View>
-          ))}
+          ) : null
+        ))}
+
         </View>
         <TouchableOpacity style={styles.selectImageButton} onPress={selectImages}>
           <Text style={styles.selectImageText}>Select Images</Text>

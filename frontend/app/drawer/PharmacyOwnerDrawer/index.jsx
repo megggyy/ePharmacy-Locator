@@ -34,18 +34,24 @@ export default function Sidebar() {
                         headers: { Authorization: `Bearer ${res}` },
                     })
                     .then((user) => {
-                        setUserProfile(user.data);  // Set user data state here
-                        console.log(userProfile._id);      // Now the data will be logged after the state is updated
+                        
+                        setUserProfile(user.data); // Update the user profile state
+                        console.log("User data fetched:", user.data); // Log the fetched user data
+                        console.log("Profile image URL:", user.data.pharmacyDetails?.images?.[0]);
+
+                        
                     })
-                    .catch((error) => console.log(error));
+                    .catch((error) => console.log("Error fetching user data:", error));
             })
-            .catch((error) => console.log(error));
+            .catch((error) => console.log("Error getting JWT:", error));
 
         return () => {
             setUserProfile(); // Reset user profile on cleanup
+          
         };
-    }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
+    }, [state.isAuthenticated, state.user.userId, router]) // Correct dependencies
 );
+
 
   const handleLogout = async () => {
     try {
@@ -62,8 +68,10 @@ export default function Sidebar() {
     }
   };
 
-  const profileImage = userProfile?.pharmacyDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
-
+  const profileImage =
+  userProfile?.pharmacyDetails?.images?.[0] && typeof userProfile.pharmacyDetails.images[0] === 'string'
+    ? { uri: userProfile.pharmacyDetails.images[0] }
+    : require('@/assets/images/sample.jpg');
   return (
     <View style={styles.container}>
       {/* Back Button */}
@@ -73,10 +81,10 @@ export default function Sidebar() {
 
         {/* Profile Section */}
         <View style={styles.profileSection}>
-        <Image
-          source={{ uri: profileImage }} // Dynamically fetch the first image
-          style={styles.profileImage}
-        />
+         <Image
+                source={profileImage}
+                style={styles.profileImage}
+            />
         <Text style={styles.profileName}>{userProfile?.name}</Text>
       </View>
 

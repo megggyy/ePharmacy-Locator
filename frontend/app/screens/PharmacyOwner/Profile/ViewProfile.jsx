@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -18,10 +18,10 @@ export default function ViewProfile() {
         const token = await AsyncStorage.getItem('jwt');
         if (!token) throw new Error('User not logged in');
         const decoded = jwtDecode(token);
-  
+
         const userId = decoded?.userId; // Ensure the correct field name
         if (!userId) throw new Error('User ID not found in token');
-  
+
         const response = await fetch(`${baseURL}users/${userId}`, {
           method: 'GET',
           headers: {
@@ -29,10 +29,10 @@ export default function ViewProfile() {
             Authorization: `Bearer ${token}`,
           },
         });
-  
+
         if (!response.ok) throw new Error('Failed to fetch user data');
         const data = await response.json();
-  
+
         // Check if disease information exists
         const disease = data.customerDetails?.disease?.name || 'N/A';
         setUserData({ ...data, disease });
@@ -42,71 +42,76 @@ export default function ViewProfile() {
         setLoading(false);
       }
     };
-  
+
     fetchUserData();
   }, []);
-  
-  
 
   const address = `${userData.street || ''}, ${userData.barangay || ''}, ${userData.city || ''}`.replace(/(, )+/g, ', ').trim();
-  const profileImage = userData?.pharmacyDetails?.images?.[0] || require('@/assets/images/sample.jpg'); 
+  console.log('Image source:', userData?.pharmacyDetails?.images?.[0]);
+  const profileImage =
+    userData?.pharmacyDetails?.images?.[0] && typeof userData.pharmacyDetails.images[0] === 'string'
+      ? { uri: userData.pharmacyDetails.images[0] }
+      : require('@/assets/images/sample.jpg');
 
   return (
     <View style={styles.container}>
-        {loading ? (
+      {loading ? (
         <Spinner /> // Show the custom spinner component when loading
       ) : (
         <>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>View Profile</Text>
-      </View>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
+            <Text style={styles.headerText}>View Profile</Text>
+          </View>
 
-      <View style={styles.profileImageSection}>
-      <Image
-          source={{ uri: profileImage }}
-          style={styles.profileImage}
-        />
-      </View>
+          <View style={styles.profileImageSection}>
+            {profileImage.uri ? (
+              <Image
+                source={profileImage}
+                style={styles.profileImage}
+              />
+            ) : (
+              <Image
+                source={require('@/assets/images/sample.jpg')}
+                style={styles.profileImage}
+              />
+            )}
+          </View>
 
-      <View style={styles.inputContainer}>
+          <View style={styles.inputContainer}>
+            <Text style={styles.label}>Name</Text>
+            <TextInput
+              style={styles.input}
+              value={userData.name}
+              editable={false}
+            />
 
-        <Text style={styles.label}>Name</Text>
-        <TextInput
-          style={styles.input}
-          value={userData.name}
-          onChangeText={(value) => setUserData({ ...userData, name: value })}
-          editable={false}
-        />
- 
-        <Text style={styles.label}>Email</Text>
-        <TextInput style={styles.input} value={userData.email} editable={false} />
+            <Text style={styles.label}>Email</Text>
+            <TextInput style={styles.input} value={userData.email} editable={false} />
 
-        <Text style={styles.label}>Mobile Number</Text>
-        <TextInput style={styles.input} value={userData.contactNumber} editable={false} />
-       {/* Single Address Field */}
-        <Text style={styles.label}>Address</Text>
-        <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
+            <Text style={styles.label}>Mobile Number</Text>
+            <TextInput style={styles.input} value={userData.contactNumber} editable={false} />
 
-     {/* Add Business Days, Opening Hours, Closing Hours */}
-    <Text style={styles.label}>Business Days</Text>
-        <TextInput
-          style={styles.input}
-          value={userData.pharmacyDetails?.businessDays || 'N/A'}
-          editable={false}
-        />
+            <Text style={styles.label}>Address</Text>
+            <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
 
-        <Text style={styles.label}>Store Hours</Text>
-        <TextInput
-          style={styles.input}
-          value={`${userData.pharmacyDetails?.openingHour || 'N/A'} - ${userData.pharmacyDetails?.closingHour || 'N/A'}`}
-          editable={false}
-        />
+            <Text style={styles.label}>Business Days</Text>
+            <TextInput
+              style={styles.input}
+              value={userData.pharmacyDetails?.businessDays || 'N/A'}
+              editable={false}
+            />
 
-      </View>
-      </>
+            <Text style={styles.label}>Store Hours</Text>
+            <TextInput
+              style={styles.input}
+              value={`${userData.pharmacyDetails?.openingHour || 'N/A'} - ${userData.pharmacyDetails?.closingHour || 'N/A'}`}
+              editable={false}
+            />
+          </View>
+        </>
       )}
     </View>
   );
@@ -144,20 +149,11 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginBottom: 10,
   },
-  selectImageButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 5,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  selectImageText: {
-    color: '#555',
-  },
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
-    marginHorizontal: 20, // Added left-right padding to input fields container
+    marginHorizontal: 20,
     marginBottom: 20,
   },
   label: {
@@ -170,31 +166,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 8,
     marginBottom: 15,
-  },
-  changePasswordContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 15,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    marginHorizontal: 20, // Padding added to the "Change Password" button
-    marginBottom: 30,
-  },
-  changePasswordText: {
-    fontSize: 16,
-    color: '#333',
-  },
-  confirmButton: {
-    backgroundColor: '#0B607E',
-    paddingVertical: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-    marginHorizontal: 20, // Padding added to the confirm button
-  },
-  confirmButtonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
 });
