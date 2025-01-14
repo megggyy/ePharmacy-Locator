@@ -57,7 +57,7 @@ const ChangePasswordScreen = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${baseURL}users/changePassword`, {
+      const response = await fetch(`${baseURL}users/change-password`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

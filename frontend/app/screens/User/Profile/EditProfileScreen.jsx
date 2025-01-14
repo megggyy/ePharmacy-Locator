@@ -9,6 +9,7 @@ import axios from 'axios';
 import * as ImagePicker from 'expo-image-picker';
 import RNPickerSelect from 'react-native-picker-select';
 import Spinner from "../../../../assets/common/spinner";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default function EditProfile() {
   const router = useRouter();
@@ -136,7 +137,7 @@ export default function EditProfile() {
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView style={styles.container}>
       {loading ? (
         <Spinner /> // Show the custom spinner component when loading
       ) : (
@@ -231,7 +232,7 @@ export default function EditProfile() {
       </TouchableOpacity>
       </>
       )}
-    </View>
+    </KeyboardAwareScrollView>
   );
 }
 
@@ -262,7 +263,7 @@ const pickerSelectStyles = StyleSheet.create({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: '#F4F4F4',
   },
   header: {

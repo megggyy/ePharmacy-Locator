@@ -24,32 +24,43 @@ const AdminDashboard = () => {
     medicines: 0,
   });
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const [usersRes, pharmaciesRes, categoriesRes, medicinesRes] = await Promise.all([
-        axios.get(`${baseURL}users`),
-        axios.get(`${baseURL}pharmacies`),
-        axios.get(`${baseURL}medication-category`),
-        axios.get(`${baseURL}medicine`),
-      ]);
-
-      // Count unique medicines by name
-      const uniqueMedicines = [...new Set(medicinesRes.data.map(med => med.name))];
-
-      setCounts({
-        users: usersRes.data.length,
-        pharmacies: pharmaciesRes.data.length,
-        categories: categoriesRes.data.length,
-        medicines: uniqueMedicines.length, // Count unique medicines
-      });
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
-  fetchData();
-}, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [usersRes, pharmaciesRes, categoriesRes, medicinesRes] = await Promise.all([
+          axios.get(`${baseURL}users`),
+          axios.get(`${baseURL}pharmacies`),
+          axios.get(`${baseURL}medication-category`),
+          axios.get(`${baseURL}medicine`),
+        ]);
+  
+        // Count unique medicines by name
+        const uniqueMedicines = [...new Set(medicinesRes.data.map(med => med.name))];
+  
+        setCounts({
+          users: usersRes.data.length,
+          pharmacies: pharmaciesRes.data.length,
+          categories: categoriesRes.data.length,
+          medicines: uniqueMedicines.length, // Count unique medicines
+        });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    // Initial fetch
+    fetchData();
+  
+    // Set up polling with a 5-second interval
+    const intervalId = setInterval(() => {
+      fetchData(); // Re-fetch the data every 5 seconds
+    }, 1000); // 5-second interval
+  
+    // Cleanup function to clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  
+  }, []); // Empty dependency array to ensure this runs only once when the component mounts
+  
 
 
   useEffect(() => {

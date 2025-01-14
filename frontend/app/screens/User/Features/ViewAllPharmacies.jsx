@@ -10,23 +10,34 @@ const ViewAllPharmacies = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // Fetch the pharmacies data from the API
-    axios
-      .get(`${baseURL}pharmacies`) // Replace with the correct endpoint for pharmacies
-      .then((response) => {
-        const pharmaciesData = response.data;
+    const fetchPharmacies = () => {
+      // Fetch the pharmacies data from the API
+      axios
+        .get(`${baseURL}pharmacies`) // Replace with the correct endpoint for pharmacies
+        .then((response) => {
+          const pharmaciesData = response.data;
   
-        // Filter pharmacies to include only approved ones
-        const approvedPharmacies = pharmaciesData.filter(pharmacy => pharmacy.approved);
+          // Filter pharmacies to include only approved ones
+          const approvedPharmacies = pharmaciesData.filter(pharmacy => pharmacy.approved);
   
-        // Update state with approved pharmacies
-        setPharmacies(approvedPharmacies);
-
-      })
-      .catch((error) => {
-        console.error('Error fetching pharmacies:', error);
-      });
-  }, []);
+          // Update state with approved pharmacies
+          setPharmacies(approvedPharmacies);
+        })
+        .catch((error) => {
+          console.error('Error fetching pharmacies:', error);
+        });
+    };
+  
+    // Fetch pharmacies initially
+    fetchPharmacies();
+  
+    // Set up the interval for periodic fetching every 5 seconds
+    const intervalId = setInterval(fetchPharmacies, 1000); // 5-second interval
+  
+    // Cleanup function to clear the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array to ensure it runs only once when the component mounts
+  
   
 
   return (

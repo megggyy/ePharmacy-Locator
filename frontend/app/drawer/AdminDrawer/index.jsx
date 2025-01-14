@@ -63,7 +63,7 @@ export default function Sidebar() {
   return (
     <View style={styles.container}>
       {/* Back Button */}
-      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+      <TouchableOpacity onPress={() => router.push('/screens/Admin/dashboard')} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>

@@ -7,6 +7,7 @@ import AuthGlobal from '@/context/AuthGlobal';
 import baseURL from "../../../../assets/common/baseurl";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from "axios";
+import Toast from 'react-native-toast-message';
 
 const ResetPassword = () => {
   const [userId, setUserId] = useState(null);
@@ -40,59 +41,57 @@ const ResetPassword = () => {
   console.log('userId', userId)
 
   const handleUpdatePassword = async () => {
-
     const validationErrors = validate();
     setErrors(validationErrors);
 
+    if (Object.keys(validationErrors).length > 0) return;
+
     if (newPassword !== confirmPassword) {
-      Toast.show({
-        topOffset: 60,
-        type: 'error',
-        text1: 'PASSWORD DO NOT MATCH',
-    });
-      return;
+        Toast.show({
+            topOffset: 60,
+            type: 'error',
+            text1: 'PASSWORD DO NOT MATCH',
+        });
+        return;
     }
+
     setLoading(true);
 
     try {
-      const response = await fetch(`${baseURL}users/resetPassword`, {
-        method: 'PUT', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, newPassword, confirmPassword }),
-      });
+        const response = await fetch(`${baseURL}users/resetPassword`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, newPassword, confirmPassword }),
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (response.status === 200 || response.status === 201) {
-        Toast.show({
-          topOffset: 60,
-          type: 'SUCCESS',
-          text1: 'PASSWORD UPDATED',
-          text2: 'PLEASE LOG IN AGAIN.',
-      });
-        try {
-          await AsyncStorage.removeItem('jwt');
-          dispatch({ type: 'LOGOUT_USER' });
-          router.push('/screens/Auth/LoginScreen');
-        } catch (errors) {
-          console.error('Error during logout:', errors);
+        if (response.ok) {
+            Toast.show({
+                topOffset: 60,
+                type: 'success',
+                text1: 'PASSWORD UPDATED',
+                text2: 'PLEASE LOG IN AGAIN.',
+            });
+            await AsyncStorage.removeItem('jwt');
+            await dispatch({ type: 'LOGOUT_USER' });
+            router.push('/screens/Auth/LoginScreen');
+        } else {
+            setErrors(data.message || 'An error occurred.');
         }
-      } else {
-        setErrors(data.message);
-      }
-    } catch (errors) {
-      Toast.show({
-        topOffset: 60,
-        type: 'error',
-        text1: 'AN ERROR OCCURED',
-        text2: 'PLEASE TRY AGAIN',
-    });
+    } catch (error) {
+        console.error('Error:', error);
+        Toast.show({
+            topOffset: 60,
+            type: 'error',
+            text1: 'AN ERROR OCCURRED',
+            text2: 'PLEASE TRY AGAIN',
+        });
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
-  };
+};
+
 
   return (
     <View style={styles.container}>

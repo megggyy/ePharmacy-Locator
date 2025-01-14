@@ -31,6 +31,7 @@ export default function PharmacyOwnerDashboard() {
         });
 
       // Fetch medications data for the logged-in pharmacy
+      
       axios
         .get(`${baseURL}medicine/${state.user.userId}`) // Adjust this to your actual endpoint
         .then((res) => {
