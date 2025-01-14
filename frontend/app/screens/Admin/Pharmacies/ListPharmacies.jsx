@@ -33,7 +33,7 @@ const PharmacyTableScreen = () => {
     } else {
       setPharmaciesFilter(
         pharmaciesList.filter((i) =>
-          i.name.toLowerCase().includes(text.toLowerCase())
+          i.userInfo.name.toLowerCase().includes(text.toLowerCase())
         )
       );
     }
