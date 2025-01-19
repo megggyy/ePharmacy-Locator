@@ -1,32 +1,72 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Alert, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
-
-const GOOGLE_VISION_API_KEY = 'AIzaSyAeSLdfKJ-yJQf7NliKF84aWjxIQzo7NPA'; // Replace with your actual API key
+import baseURL from '@/assets/common/baseurl';
 
 const PrescriptionUploadScreen = () => {
   const [imageUri, setImageUri] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
   const [ocrText, setOcrText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  // Request permissions for Camera and Gallery
   useEffect(() => {
     const requestPermissions = async () => {
       const cameraPermission = await ImagePicker.requestCameraPermissionsAsync();
       const galleryPermission = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
       if (cameraPermission.status !== 'granted' || galleryPermission.status !== 'granted') {
-        Alert.alert('Permission Denied', 'CAMERA AND GALLERY PERMISSIONS ARE REQUIRED FOR THIS FEATURE');
+        Alert.alert('Permission Denied', 'Camera and gallery permissions are required for this feature.');
       }
     };
 
     requestPermissions();
   }, []);
 
-  // Function to capture an image using the camera
+  const handleImageUpload = async (uri) => {
+    try {
+      setIsLoading(true);
+  
+      const formData = new FormData();
+      formData.append('prescriptions', {
+        uri,
+        name: 'prescription.jpg',
+        type: 'image/jpeg',
+      });
+  
+      // Make API request to backend for OCR processing
+      const response = await axios.post(`${baseURL}customers/scan-prescription`, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+  
+      // Get the OCR text and image URL from the response
+      const { ocrText, imageUrl } = response.data;
+  
+      console.log(imageUrl)
+      // Update the state with OCR text
+      setOcrText(ocrText);
+      setImageUrl(imageUrl);
+      console.log('ocrText', ocrText)
+      console.log('imageurl', imageUrl)
+      // Redirect to a new route with image URL and OCR text as query parameters
+      router.push({
+        pathname: '/screens/User/Features/PrescriptionScan',
+        state: { imageUrl, ocrText }, // Passing data using state
+      });
+      
+      
+    } catch (error) {
+      console.error('Error processing OCR:', error);
+      Alert.alert('OCR Error', 'Failed to process the image.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+
   const captureImage = async () => {
     const result = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
@@ -35,19 +75,12 @@ const PrescriptionUploadScreen = () => {
     });
 
     if (!result.canceled) {
-      const uri = result.assets[0].uri; // Access the image URI here
+      const uri = result.assets[0].uri;
       setImageUri(uri);
-      processImage(uri);
-      console.log(uri);
-      // Redirect to another screen after image capture
-      router.push({
-        pathname: '/screens/User/Features/PrescriptionScan',
-        params: { imageUri: uri }, // Pass imageUri as a parameter
-      });
+      handleImageUpload(uri);
     }
   };
 
-  // Function to pick an image from the gallery
   const pickImage = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
@@ -56,102 +89,43 @@ const PrescriptionUploadScreen = () => {
     });
 
     if (!result.canceled) {
-      const uri = result.assets[0].uri; // Access the image URI here
+      const uri = result.assets[0].uri;
       setImageUri(uri);
-      processImage(uri);
-      // Redirect to another screen after image selection
-      router.push({
-        pathname: '/screens/User/Features/PrescriptionScan',
-        params: { imageUri: uri }, // Pass imageUri as a parameter
-      });
+      handleImageUpload(uri);
     }
-  };
-
-  // Function to process image using Google Vision API
-  const processImage = async (uri) => {
-    const imageBase64 = await uriToBase64(uri);
-  
-    try {
-      const response = await axios.post(
-        `https://vision.googleapis.com/v1/images:annotate?key=${GOOGLE_VISION_API_KEY}`,
-        {
-          requests: [
-            {
-              image: {
-                content: imageBase64,
-              },
-              features: [
-                {
-                  type: 'TEXT_DETECTION',
-                },
-              ],
-            },
-          ],
-        }
-      );
-  
-      console.log(response.data); // Check the full response for debugging
-  
-      const detectedText =
-        response.data.responses[0]?.textAnnotations[0]?.description || '';
-      setOcrText(detectedText);
-    } catch (error) {
-      console.error('Error during OCR:', error);
-      if (error.response) {
-        // Log detailed error response if available
-        console.error('API error response:', error.response.data);
-        Alert.alert('OCR Error', `Failed to extract text from the image: ${error.response.data.error.message}`);
-      } else {
-        Alert.alert('OCR Error', 'An unknown error occurred while processing the image.');
-      }
-    }
-  };
-  
-
-  // Function to convert image URI to Base64
-  const uriToBase64 = async (uri) => {
-    const response = await fetch(uri);
-    const blob = await response.blob();
-    return await blobToBase64(blob);
-  };
-
-  // Function to convert Blob to Base64
-  const blobToBase64 = (blob) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result.split(',')[1]);
-      reader.onerror = reject;
-      reader.readAsDataURL(blob);
-    });
   };
 
   return (
     <View style={styles.safeArea}>
-      {/* Header with back button and title */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <View style={styles.iconBackground}>
             <Ionicons name="arrow-back" size={24} color="#005b7f" />
           </View>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>RX scanner</Text>
+        <Text style={styles.headerTitle}>RX Scanner</Text>
       </View>
 
-      {/* Action Buttons */}
       <View style={styles.container}>
         <Text style={styles.label}>Scan Prescription</Text>
-        {/* Camera Button */}
         <TouchableOpacity style={styles.button} onPress={captureImage}>
           <Ionicons name="camera-outline" size={60} color="white" />
         </TouchableOpacity>
         <Text style={styles.label}>or</Text>
         <Text style={styles.label}>Upload Prescription</Text>
-
-        {/* Upload Button */}
         <TouchableOpacity style={styles.button} onPress={pickImage}>
           <Ionicons name="cloud-upload-outline" size={60} color="white" />
         </TouchableOpacity>
       </View>
+
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#005b7f" style={{ marginTop: 20 }} />
+      ) : ocrText ? (
+        <View style={{ padding: 20 }}>
+          <Text style={{ fontSize: 16, color: '#000' }}>Extracted Text:</Text>
+          <Text style={{ fontSize: 14, color: '#555' }}>{ocrText}</Text>
+        </View>
+      ) : null}
     </View>
   );
 };

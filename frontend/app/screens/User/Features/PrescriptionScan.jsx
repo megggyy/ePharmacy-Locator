@@ -1,18 +1,30 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Ensure Ionicons is installed in your project
-import { useRouter, useSearchParams } from 'expo-router';
+import React, { useEffect, useState  } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image, Alert } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
 const PrescriptionScreen = () => {
-  const { imageUri } = useSearchParams();
   const router = useRouter();
+  const [imageUrl, setImageUrl] = useState(null);
+  const [ocrText, setOcrText] = useState(null);
+
+  useEffect(() => {
+    if (router?.state) {
+      const { imageUrl, ocrText } = router.state;
+      setImageUrl(imageUrl);
+      setOcrText(ocrText);
+      console.log("OCR Text:", ocrText);
+      console.log("Image URL:", imageUrl);
+    } else {
+      Alert.alert('No data found', 'Please upload an image first.');
+    }
+  }, [router?.state]); // Re-run when state is available
+
 
   return (
     <View style={styles.safeArea}>
-      {/* Header with back button and title */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          {/* Back button icon with background */}
           <View style={styles.iconBackground}>
             <Ionicons name="arrow-back" size={24} color="#005b7f" />
           </View>
@@ -20,16 +32,26 @@ const PrescriptionScreen = () => {
         <Text style={styles.headerTitle}>Uploaded Prescription</Text>
       </View>
 
-      {/* Prescription Image */}
       <View style={styles.imageContainer}>
-        <Image
-            source={{ uri: imageUri }}
-          style={styles.prescriptionImage}
-          resizeMode="contain"
-        />
+        {imageUrl ? (
+          <Image
+            source={{ uri: imageUrl }}
+            style={styles.prescriptionImage}
+            resizeMode="contain"
+          />
+        ) : (
+          <Text>No image to display</Text> // Placeholder text if no image URI is provided
+        )}
       </View>
 
-      {/* Scan Now Button */}
+      <View style={styles.ocrTextContainer}>
+        {ocrText ? (
+          <Text style={styles.ocrText}>{ocrText}</Text> // Display OCR text if available
+        ) : (
+          <Text>No OCR text found</Text> // Placeholder if OCR text is not available
+        )}
+      </View>
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.scanButton} onPress={() => router.push('/screens/User/Features/PrescriptionResults')}>
           <Text style={styles.scanButtonText}>Scan Now</Text>
@@ -75,6 +97,15 @@ const styles = StyleSheet.create({
   prescriptionImage: {
     width: '100%',
     height: 500, // Adjust based on your image's size
+  },
+  ocrTextContainer: {
+    padding: 20,
+    marginTop: 20,
+  },
+  ocrText: {
+    fontSize: 16,
+    color: 'black',
+    textAlign: 'center',
   },
   buttonContainer: {
     justifyContent: 'center',
