@@ -1,17 +1,37 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Button } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Ensure Ionicons is installed in your project
-import { useRouter } from 'expo-router';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; 
+import { useRouter, useLocalSearchParams } from 'expo-router';
+import axios from 'axios';
+import baseURL from '@/assets/common/baseurl';
 
 const PrescriptionResultsScreen = () => {
   const router = useRouter();
+  const { selectedText, quantity } = useLocalSearchParams();
+  const [medicines, setMedicines] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Sample data for medicines
-  const medicines = [
-    { name: 'Paracetamol', quantity: 20 },
-    { name: 'Paracetamol', quantity: 20 },
-    { name: 'Paracetamol', quantity: 20 },
-  ];
+  useEffect(() => {
+    if (selectedText) {
+      axios
+        .get(`${baseURL}medicine/available/${selectedText}`)
+        .then((response) => {
+          const filteredMedicines = response.data.filter(medicine => {
+            return medicine.quantity > parseInt(quantity); // Filter based on the quantity
+          });
+          setMedicines(filteredMedicines);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error fetching medication details:', error);
+          setLoading(false);
+        });
+    }
+  }, [selectedText, quantity]);
+
+  if (loading) {
+    return <ActivityIndicator size="large" color="#0000ff" />;
+  }
 
   return (
     <View style={styles.safeArea}>
@@ -28,16 +48,22 @@ const PrescriptionResultsScreen = () => {
 
       {/* List of detected medicines */}
       <ScrollView style={styles.container}>
-        <Text style={styles.title}>List of detected medicine:</Text>
-        {medicines.map((medicine, index) => (
-          <View key={index} style={styles.medicineCard}>
-            <Text style={styles.medicineName}>{medicine.name}</Text>
-            <Text style={styles.medicineQuantity}>Required Quantity: {medicine.quantity}</Text>
-            <TouchableOpacity style={styles.availabilityButton} onPress={() => router.push('/screens/User/Features/PrescriptionAvailability')}>
-              <Text style={styles.buttonText} >View pharmacy Availability</Text>
-            </TouchableOpacity>
-          </View>
-        ))}
+        <Text style={styles.title}>List of detected medicines with quantity greater than {quantity}:</Text>
+        {medicines.length > 0 ? (
+          medicines.map((medicine, index) => (
+            <View key={index} style={styles.medicineCard}>
+              <Text style={styles.medicineName}>{medicine.name}</Text>
+              <Text style={styles.medicineQuantity}>Available Quantity: {medicine.quantity}</Text>
+              <TouchableOpacity 
+                style={styles.availabilityButton} 
+                onPress={() => router.push('/screens/User/Features/PrescriptionAvailability')}>
+                <Text style={styles.buttonText}>View Pharmacy Availability</Text>
+              </TouchableOpacity>
+            </View>
+          ))
+        ) : (
+          <Text>No medicines found with the required quantity.</Text>
+        )}
       </ScrollView>
     </View>
   );
@@ -53,7 +79,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 30,
-    backgroundColor: '#005b7f', // Dark blue header background
+    backgroundColor: '#005b7f', 
   },
   backButton: {
     marginRight: 10,
@@ -83,8 +109,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 16,
     marginBottom: 16,
-    elevation: 3, // for shadow on Android
-    shadowColor: '#000', // for shadow on iOS
+    elevation: 3, 
+    shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 10,
     shadowOffset: { width: 0, height: 2 },

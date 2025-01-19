@@ -45,7 +45,6 @@ const PrescriptionUploadScreen = () => {
       // Get the OCR text and image URL from the response
       const { ocrText, imageUrl } = response.data;
   
-      console.log(imageUrl)
       // Update the state with OCR text
       setOcrText(ocrText);
       setImageUrl(imageUrl);
@@ -54,8 +53,9 @@ const PrescriptionUploadScreen = () => {
       // Redirect to a new route with image URL and OCR text as query parameters
       router.push({
         pathname: '/screens/User/Features/PrescriptionScan',
-        state: { imageUrl, ocrText }, // Passing data using state
+        params: { imageUrl, ocrText }, // Pass params directly
       });
+      
       
       
     } catch (error) {
