@@ -269,14 +269,10 @@ router.get('/customersPerMonth', async (req, res) => {
                 
 
                 try {
-                    // Handle diseases if present
-                    console.log('disease:', req.body.disease);
-                    if (req.body.disease === 'null') {
-                        
+                    
                         const customer = new Customer({
                             images: imagesPaths,
                             userInfo: user.id,
-                            disease: null,
                             location: {
                                 latitude: req.body.latitude,
                                 longitude: req.body.longitude,
@@ -284,26 +280,6 @@ router.get('/customersPerMonth', async (req, res) => {
                         });
 
                         await customer.save();
-                    }
-                    else {
-                        let disease = await Diseases.findOne({ name: req.body.disease });
-                        if (!disease) {
-                            disease = new Diseases({ name: req.body.disease });
-                            disease = await disease.save();
-                        }
-
-                        const customer = new Customer({
-                            images: imagesPaths,
-                            userInfo: user.id,
-                            disease: disease.id,
-                            location: {
-                                latitude: req.body.latitude,
-                                longitude: req.body.longitude,
-                            },
-                        });
-
-                        await customer.save();
-                    }
 
                     return res.status(201).json({ message: 'Customer created successfully', userId: user.id, });
 

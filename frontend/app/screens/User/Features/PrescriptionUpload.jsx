@@ -117,15 +117,6 @@ const PrescriptionUploadScreen = () => {
           <Ionicons name="cloud-upload-outline" size={60} color="white" />
         </TouchableOpacity>
       </View>
-
-      {isLoading ? (
-        <ActivityIndicator size="large" color="#005b7f" style={{ marginTop: 20 }} />
-      ) : ocrText ? (
-        <View style={{ padding: 20 }}>
-          <Text style={{ fontSize: 16, color: '#000' }}>Extracted Text:</Text>
-          <Text style={{ fontSize: 14, color: '#555' }}>{ocrText}</Text>
-        </View>
-      ) : null}
     </View>
   );
 };

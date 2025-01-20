@@ -28,8 +28,6 @@ import baseURL from "../../../../assets/common/baseurl";
 const CustomerSignup = () => {
   const router = useRouter();
 
-  const [selectedDisease, setSelectedDisease] = useState(null);
-  const [customDisease, setCustomDisease] = useState('');
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [contactNumber, setContactNumber] = useState("");
@@ -46,34 +44,11 @@ const CustomerSignup = () => {
     longitudeDelta: 0.0421,
   });
   const [images, setImages] = useState([]);
-  const [diseases, setDiseases] = useState([]);
   const [barangays, setBarangays] = useState([]);
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
 
   useEffect(() => {
-    const fetchDiseases = async () => {
-      try {
-        const response = await fetch(`${baseURL}diseases`);
-        if (!response.ok) throw new Error('Failed to fetch diseases');
-        const result = await response.json();
-        const formattedData = result.map(item => ({
-          label: item.name,
-          value: item.name,
-        }));
-        formattedData.push({ label: 'None', value: 'none' });
-        formattedData.push({ label: 'Others', value: 'others' });
-        setDiseases(formattedData);
-      } catch (error) {
-        console.error('Error fetching diseases:', error);
-        Toast.show({
-          type: 'error',
-          text1: 'Error fetching diseases',
-          text2: error.message,
-        });
-      }
-    };
-
 
     const fetchBarangays = async () => {
       try {
@@ -89,7 +64,6 @@ const CustomerSignup = () => {
       }
     };
 
-    fetchDiseases();
     fetchBarangays();
     getCurrentLocation();
   }, []);
@@ -163,8 +137,6 @@ const CustomerSignup = () => {
     if (password.length < 8 & password.length > 0) errorMessages.password = "PASSWORD MUUST BE ATLEAST 8 CHARACTERS";
     if (contactNumber.length !== 11) errorMessages.contactNumber = "CONTACT NUMBER MUST BE 11 DIGITS";
     if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
-    if (!selectedDisease) errorMessages.diseases = "PLEASE SELECT YOUR DISEASE";
-    if (selectedDisease === 'others' && !customDisease) errorMessages.customDisease = "PLEASE SPECIFY YOUR DISEASE";
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE IMAGE";
 
 
@@ -192,7 +164,6 @@ const CustomerSignup = () => {
     formData.append("longitude", longitude);
     formData.append('isAdmin', 'false');
     formData.append('role', 'Customer');
-    formData.append('disease', selectedDisease === 'none' ? null : selectedDisease === 'others' ? customDisease : selectedDisease);
 
     // Append images to FormData
     images.forEach((image, index) => {
@@ -217,7 +188,7 @@ const CustomerSignup = () => {
           Toast.show({
             type: "success",
             text1: "REGISTRATION SUCCEEDED",
-            text2: "PLEASE LOG IN TO YOUR ACCOUNT",
+            text2: "PLEASE VERIFY YOUR OTP",
           });
           console.log("User ID from response:", userId);  // Add this line to check if the userId is correct
           setTimeout(() => {
@@ -305,38 +276,6 @@ const CustomerSignup = () => {
           </TouchableOpacity>
         </View>
         {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
-
-         {/* Dropdown for diseases */}
-         <RNPickerSelect
-          onValueChange={(value) => {
-            setSelectedDisease(value);
-            if (value !== 'others') {
-              setCustomDisease('');
-            }
-          }}
-          items={diseases}
-          style={pickerSelectStyles}
-          placeholder={{
-            label: 'Choose your disease',
-            value: null,
-            color: '#AAB4C1',
-          }}
-          value={selectedDisease}
-        />
-        {errors.diseases && <Text style={styles.errorText}>{errors.diseases}</Text>}
-
-        {/* Conditionally render TextInput for "Others" */}
-        {selectedDisease === 'others' && (
-          <TextInput
-            style={styles.input}
-            placeholder="Please Specify"
-            placeholderTextColor="#AAB4C1"
-            value={customDisease}
-            onChangeText={setCustomDisease}
-          />
-        )}
-
-        {errors.customDisease && <Text style={styles.errorText}>{errors.customDisease}</Text>}
 
         <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
         {errors.street && <Text style={styles.errorText}>{errors.street}</Text>}
