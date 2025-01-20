@@ -28,7 +28,7 @@ const PrescriptionScreen = () => {
       Alert.alert('Please enter a quantity');
     } else {
       // Perform the action with the selected medicine and entered quantity
-      console.log(`Selected Medicine: ${selectedMedicine.name}, Quantity: ${quantity}`);
+      console.log(`Selected Medicine: ${selectedText}, Quantity: ${quantity}`);
       
       // Navigate to the next screen with selected medicine and quantity as params
       router.push({
@@ -120,7 +120,7 @@ const PrescriptionScreen = () => {
             />
             <View style={styles.modalButtons}>
               <TouchableOpacity style={styles.modalButton} onPress={handleSaveQuantity}>
-                <Text style={styles.modalButtonText}>Save</Text>
+                <Text style={styles.modalButtonText}>Find</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.modalButton}

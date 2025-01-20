@@ -112,12 +112,6 @@ export default function ReadUserScreen() {
           <Text style={styles.label}>Address</Text>
           <TextInput style={styles.input} value={`${user.street}, ${user.barangay}, ${user.city}` || 'N/A'} editable={false} />
 
-          <Text style={styles.label}>Disease</Text>
-          <TextInput
-            style={styles.input}
-            value={user.customerDetails?.disease?.name || 'No Disease Info'}
-            editable={false}
-          />
         </View>
       </View>
     </View>
