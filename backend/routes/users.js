@@ -138,7 +138,7 @@ router.get('/customersPerMonth', async (req, res) => {
       const getUsersPerMonth = await User.aggregate([
         {
           $match: {
-            role: "Customer", 
+            role: "Customer",
           },
         },
         {
@@ -147,7 +147,7 @@ router.get('/customersPerMonth', async (req, res) => {
               year: { $year: "$createdAt" },
               month: { $month: "$createdAt" },
             },
-            total: { $sum: 1 }, // Count the number of pharmacies
+            total: { $sum: 1 },
           },
         },
         {
@@ -178,21 +178,25 @@ router.get('/customersPerMonth', async (req, res) => {
             },
           },
         },
-        { $sort: { "_id.month": 1 } },
+        {
+          $sort: {
+            "_id.year": 1,  // Sort by year first
+            "_id.month": 1, // Then sort by month
+          },
+        },
         {
           $project: {
             _id: 0,
+            year: "$_id.year", // Include year in the response
             month: 1,
             total: 1,
           },
         },
       ]);
   
-      console.log(getUsersPerMonth);
-  
       if (!getUsersPerMonth || getUsersPerMonth.length === 0) {
         return res.status(404).json({
-          message: "No pharmacy registrations found for the requested period.",
+          message: "No customer registrations found for the requested period.",
         });
       }
   
@@ -201,12 +205,13 @@ router.get('/customersPerMonth', async (req, res) => {
         getUsersPerMonth,
       });
     } catch (error) {
-      console.error("Error fetching pharmacy registrations per month:", error);
+      console.error("Error fetching customer registrations per month:", error);
       res.status(500).json({
         message: "An error occurred while fetching data.",
       });
     }
   });
+  
 
 
   router.post(
