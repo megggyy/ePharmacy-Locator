@@ -36,7 +36,6 @@ const HomeScreen = () => {
           }
         }
       } catch (error) {
-        Alert.alert('PLEASE LOG IN FIRST');
       }
     };
   

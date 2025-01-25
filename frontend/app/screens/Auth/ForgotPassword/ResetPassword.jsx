@@ -30,10 +30,19 @@ const ResetPassword = () => {
 
   const validate = () => {
     let errorMessages = {};
-    if (!newPassword) errorMessages.newPassword = "PASSWORD IS REQUIRED";
-    if (!confirmPassword) errorMessages.confirmPassword = "PASSWORD IS REQUIRED";
-    if (!confirmPassword < 8 & !confirmPassword > 0) errorMessages.confirmPassword = "PASSWORD MUST BE ATLEAST 8 CHARACTERS";
-    if (!newPassword < 8 & !newPassword > 0) errorMessages.confirmPassword = "PASSWORD MUUST BE ATLEAST 8 CHARACTERS";
+    if (!newPassword) {
+      errorMessages.newPassword = "PASSWORD IS REQUIRED";
+    } else if (newPassword.length < 8) {
+      errorMessages.newPassword = "PASSWORD MUST BE AT LEAST 8 CHARACTERS";
+    }
+    
+    if (!confirmPassword) {
+      errorMessages.confirmPassword = "PASSWORD IS REQUIRED";
+    } else if (confirmPassword.length < 8) {
+      errorMessages.confirmPassword = "PASSWORD MUST BE AT LEAST 8 CHARACTERS";
+    }
+    
+    
 
     return errorMessages;
   };
@@ -71,7 +80,7 @@ const ResetPassword = () => {
                 topOffset: 60,
                 type: 'success',
                 text1: 'PASSWORD UPDATED',
-                text2: 'PLEASE LOG IN AGAIN.',
+                text2: 'Please log in again.',
             });
             await AsyncStorage.removeItem('jwt');
             await dispatch({ type: 'LOGOUT_USER' });
@@ -85,7 +94,7 @@ const ResetPassword = () => {
             topOffset: 60,
             type: 'error',
             text1: 'AN ERROR OCCURRED',
-            text2: 'PLEASE TRY AGAIN',
+            text2: 'Please try again.',
         });
     } finally {
         setLoading(false);
@@ -109,7 +118,6 @@ const ResetPassword = () => {
         <View style={styles.passwordContainer}>
           <TextInput
             style={styles.input}
-            placeholder="New Password"
             secureTextEntry={!showPassword1} // Conditionally secure the password
             value={newPassword}
             onChangeText={setNewPassword}
@@ -132,7 +140,6 @@ const ResetPassword = () => {
         <View style={styles.passwordContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Re-type Password"
             secureTextEntry={!showPassword2} // Conditionally secure the password
             value={confirmPassword}
             onChangeText={setConfirmPassword}

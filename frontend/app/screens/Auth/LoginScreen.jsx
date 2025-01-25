@@ -82,7 +82,7 @@ const handleSubmit = async () => {
         topOffset: 60,
         type: 'error',
         text1: 'PHARMACY NOT APPROVED',
-        text2: 'You have been logged out. Redirecting to approval status screen.',
+        text2: 'Redirecting to approval status screen.',
       });
 
       // Redirect to Pharmacy Status Screen
@@ -118,7 +118,7 @@ const handleSubmit = async () => {
           topOffset: 60,
           type: "error",
           text1: "EMAIL IS NOT EXISTING",
-          text2: "PLEASE CHECK YOUR EMAIL AND TRY AGAIN.",
+          text2: "Please check your email and try again.",
         });
         break;
       case "USER_NOT_VERIFIED":
@@ -126,7 +126,7 @@ const handleSubmit = async () => {
           topOffset: 60,
           type: "error",
           text1: "YOU'RE NOT VERIFIED",
-          text2: "REDIRECTING TO VERIFICATION PAGE",
+          text2: "Redirecting to verification page.",
         });
         break;
       case "NETWORK_ERROR":
@@ -134,8 +134,8 @@ const handleSubmit = async () => {
           topOffset: 60,
           type: "error",
           text1: "NETWORK ERROR",
-          text2: "UNABLE TO CONNECT TO THE SERVER. PLEASE TRY AGAIN LATER",
-        });
+          text2: "Unable to connect to the server. Please try again later."
+        })
         break;
       case "INCORRECT_PASSWORD":
         Toast.show({
@@ -149,7 +149,7 @@ const handleSubmit = async () => {
           topOffset: 60,
           type: "error",
           text1: "LOGIN FAILED",
-          text2: "AN UNEXPECTED ERROR OCCURRED. PLEASE TRY AGAIN LATER.",
+          text2: "An unexpected error occured. Please try again later.",
         });
     }
   }

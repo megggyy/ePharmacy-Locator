@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   View,
   Text,
@@ -17,110 +17,114 @@ import baseURL from "../../../../assets/common/baseurl";
 const ResetOTPScreen = () => {
   const { userId } = useLocalSearchParams();
   const router = useRouter();
-  const [otp, setOtp] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // To handle loading state
+  const [otp, setOtp] = useState(['', '', '', '']); // Array for each OTP digit
+  const [isLoading, setIsLoading] = useState(false);
 
-  console.log(userId)
+  const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  const handleOtpChange = (value, index) => {
+    const newOtp = [...otp];
+    newOtp[index] = value;
+
+    if (value.length === 1 && index < 3) {
+      inputRefs[index + 1].current.focus(); // Move to the next input
+    }
+    setOtp(newOtp);
+  };
+
   const verifyOtp = async () => {
-    if (!otp) {
-        Toast.show({
-            topOffset: 60,
-            type: 'error',
-            text1: 'OTP Required',
-            text2: 'Please enter the OTP sent to your email.',
-        });
-        return;
+    const enteredOtp = otp.join(''); // Combine the OTP digits
+
+    if (enteredOtp.length !== 4) {
+      Toast.show({
+        topOffset: 60,
+        type: 'error',
+        text1: 'OTP Required',
+        text2: 'Please enter the 4-digit OTP sent to your email.',
+      });
+      return;
     }
 
-    setIsLoading(true); // Start loading state
+    setIsLoading(true);
     try {
-        const response = await fetch(`${baseURL}users/resetOTP`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ userId, otp }),
-        });
+      const response = await fetch(`${baseURL}users/resetOTP`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId, otp: enteredOtp }),
+      });
 
-        // Handle non-2xx HTTP responses
-        if (!response.ok) {
-            throw new Error('Failed to connect to the server. Please try again later.');
-        }
+      if (!response.ok) {
+        throw new Error('Failed to connect to the server. Please try again later.');
+      }
 
-        const data = await response.json();
+      const data = await response.json();
 
-        // Check if OTP verification was successful
-        if (data.status === 'success') {  // Changed from 'VERIFIED' to 'success'
-            Toast.show({
-                topOffset: 60,
-                type: 'success',
-                text1: 'OTP VERIFIED',
-                text2: 'REDIRECTING TO PASSWORD RESET.',
-            });
-
-            await AsyncStorage.setItem('userId', userId);
-            console.log("after", userId)
-            setTimeout(() => {
-              router.push({
-                pathname: './ResetPassword'
-              });
-            }, 500);
-        } else {
-            // If the backend returns a failure message
-            throw new Error(data.message || 'Verification failed. Please try again.');
-        }
-    } catch (error) {
-        // Handle error (network issues, OTP invalid, etc.)
+      if (data.status === 'success') {
         Toast.show({
-            topOffset: 60,
-            type: 'error',
-            text1: 'Verification Failed',
-            text2: error.message || 'Please try again.',
+          topOffset: 60,
+          type: 'success',
+          text1: 'OTP VERIFIED',
         });
-    } finally {
-        setIsLoading(false); // Stop loading state
-    }
-};
 
+        await AsyncStorage.setItem('userId', userId);
+
+        setTimeout(() => {
+          router.push('./ResetPassword');
+        }, 500);
+      } else {
+        throw new Error(data.message || 'Verification failed. Please try again.');
+      }
+    } catch (error) {
+      Toast.show({
+        topOffset: 60,
+        type: 'error',
+        text1: 'Verification Failed',
+        text2: error.message || 'Please try again.',
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
-      {/* Back Button */}
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
 
-      {/* Logo */}
       <Image
         source={require('@/assets/images/epharmacy-logo.png')}
         style={styles.logo}
       />
 
-      {/* Title */}
       <Text style={styles.title}>Enter OTP</Text>
 
-      {/* Input Section */}
       <View style={styles.inputSection}>
         <Text style={styles.infoText}>
           Please enter the 4-digit OTP sent to your registered email.
         </Text>
 
-        {/* OTP Input */}
-        <TextInput
-          style={styles.input}
-          placeholder="Enter OTP"
-          placeholderTextColor="#AAB4C1"
-          value={otp}
-          onChangeText={setOtp}
-          keyboardType="numeric"
-          maxLength={6}
-        />
+        <View style={styles.otpContainer}>
+          {otp.map((digit, index) => (
+            <TextInput
+              key={index}
+              ref={inputRefs[index]}
+              style={styles.otpInput}
+              value={digit}
+              onChangeText={(value) => handleOtpChange(value, index)}
+              keyboardType="numeric"
+              maxLength={1}
+              returnKeyType="next"
+            />
+          ))}
+        </View>
 
-        {/* Verify Button */}
         <TouchableOpacity
           style={styles.verifyButton}
           onPress={verifyOtp}
-          disabled={isLoading} // Disable button while loading
+          disabled={isLoading}
         >
           <Text style={styles.verifyButtonText}>
             {isLoading ? 'Verifying...' : 'Verify OTP'}
@@ -163,27 +167,31 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 20,
     shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-  },
-  input: {
-    backgroundColor: '#F2F2F2',
-    borderRadius: 10,
-    padding: 10,
-    marginVertical: 10,
-    fontSize: 16,
-    color: '#333',
   },
   infoText: {
     fontSize: 14,
     color: '#555',
     marginBottom: 10,
     textAlign: 'center',
+  },
+  otpContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 10,
+    paddingHorizontal: 50
+  },
+  otpInput: {
+    width: 50,
+    height: 60,
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    textAlign: 'center',
+    fontSize: 30,
+    color: '#333',
   },
   verifyButton: {
     backgroundColor: '#027DB1',

@@ -13,7 +13,6 @@ export default function EditMedicationScreen() {
   const { id } = useLocalSearchParams();
 
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   const [categoryId, setCategoryId] = useState('');  // Store category ID
   const [stock, setStock] = useState('');
@@ -28,7 +27,6 @@ export default function EditMedicationScreen() {
         const response = await axios.get(`${baseURL}medicine/read/${id}`);
         const medication = response.data;
         setName(medication.name);
-        setDescription(medication.description);
         setCategory(medication.category.name);  // Display category name
         setCategoryId(medication.category._id);  // Store category ID
         setStock(medication.stock.toString());
@@ -113,13 +111,6 @@ export default function EditMedicationScreen() {
           style={styles.inputDisable}
           value={name}
           onChangeText={setName}
-          editable={false}
-        />
-        <Text style={styles.label}>Description</Text>
-        <TextInput
-          style={styles.inputDisable}
-          value={description}
-          onChangeText={setDescription}
           editable={false}
         />
 

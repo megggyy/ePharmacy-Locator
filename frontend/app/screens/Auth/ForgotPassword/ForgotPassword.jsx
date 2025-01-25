@@ -16,8 +16,8 @@ const ForgotPasswordScreen = () => {
         Toast.show({
           topOffset: 60,
           type: 'error',
-          text1: 'EMAIL REQUIRED!',
-          text2: 'PLEASE INPUT YOUR EMAIL',
+          text1: 'EMAIL IS REQUIRED!',
+          text2: 'Please input your email.',
         });
         return;
       }
@@ -57,7 +57,7 @@ const ForgotPasswordScreen = () => {
           topOffset: 60,
           type: "error",
           text1: "EMAIL NOT FOUND!",
-          text2: "PLEASE REGISTER FIRST.",
+          text2: "Please register first.",
         });
       }
     } catch (error) {
@@ -66,7 +66,7 @@ const ForgotPasswordScreen = () => {
         topOffset: 60,
         type: "error",
         text1: "SOMETHING WENT WRONG!",
-        text2: "PLEASE TRY AGAIN",
+        text2: "Please try again later.",
       });
     }
   };
@@ -84,7 +84,7 @@ const ForgotPasswordScreen = () => {
       <View style={styles.lowerSection}>
         <Text style={styles.title}>Forgot Password</Text>
         <Text style={styles.subText}>
-          Enter your email address to reset your password. We’ll send you an email with instructions.
+          Enter your email address to reset your password. We’ll send you an email for OTP.
         </Text>
         <TextInput
           style={styles.input}

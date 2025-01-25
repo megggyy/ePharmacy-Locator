@@ -144,8 +144,8 @@ const PharmacyOwnerSignupScreen = () => {
     });
 
     if (!result.canceled) {
-      const selectedPermits = result.assets.map((asset) => ({ id: images.length, uri: asset.uri }));
-      const filteredPermits = images.filter(image => image.uri !== undefined);
+      const selectedPermits = result.assets.map((asset) => ({ id: permits.length, uri: asset.uri }));
+      const filteredPermits = permits.filter(image => image.uri !== undefined);
       setPermit([...filteredPermits, ...selectedPermits]);
     }
   };
@@ -163,11 +163,17 @@ const PharmacyOwnerSignupScreen = () => {
     let errorMessages = {};
     if (!name) errorMessages.name = "NAME IS REQUIRED";
     if (!email) errorMessages.email = "EMAIL IS REQUIRED";
-    if (!contactNumber) errorMessages.contactNumber = "CONTACT NUMBER IS REQUIRED";
-    if (!password) errorMessages.password = "PASSWORD IS REQUIRED";
+    if (!contactNumber) {
+      errorMessages.contactNumber = "CONTACT NUMBER IS REQUIRED";
+    } else if (contactNumber.length !== 11) {
+      errorMessages.contactNumber = "MUST BE 11 CHARACTERS";
+    }
+    if (!password) {
+      errorMessages.password = "PASSWORD IS REQUIRED";
+    } else if (password.length < 8) {
+      errorMessages.password = "MUST BE AT LEAST 8 CHARACTERS";
+    }    
     if (!street) errorMessages.street = "STREET IS REQUIRED";
-    if (password.length < 8 & password.length > 0) errorMessages.password = "PASSWORD MUUST BE ATLEAST 8 CHARACTERS";
-    if (contactNumber.length !== 11) errorMessages.contactNumber = "CONTACT NUMBER MUST BE 11 DIGITS";
     if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE PERMIT";
     if (permits.length === 0) errorMessages.permits = "PLEASE UPLOAD YOUR BUSINESS PERMIT";
@@ -180,6 +186,9 @@ const PharmacyOwnerSignupScreen = () => {
 
     const validationErrors = validate();
     setError(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
 
     let formData = new FormData();
     formData.append("name", name);
@@ -236,7 +245,7 @@ const PharmacyOwnerSignupScreen = () => {
             topOffset: 60,
             type: "success",
             text1: "ACCOUNT CREATED",
-            text2: "PLEASE VERIFY YOUR EMAIL",
+            text2: "Please verify your email.",
           });
 
           // Redirect to OTP verification screen and pass userId as a parameter
@@ -277,7 +286,7 @@ const PharmacyOwnerSignupScreen = () => {
           Toast.show({
             type: "error",
             text1: "NETWORK ERROR!",
-            text2: "PLEASE CHECK YOU INTERNAT CONNECTION AND TRY AGAIN",
+            text2: "Please check your internet connection and try again.",
           });
         }
       });
@@ -286,7 +295,7 @@ const PharmacyOwnerSignupScreen = () => {
   const handleClose = (type) => {
     if (type === "opening") {
       setShowOpeningTime(false);
-    } else {
+    } else if (type === "closing") {
       setShowClosingTime(false);
     }
   };
@@ -377,8 +386,8 @@ const PharmacyOwnerSignupScreen = () => {
 
         </View>
 
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
-        
+        <TextInput style={styles.inputCity} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
+
         <Text style={styles.uploadLabel}>Pin Exact Location</Text>
         <MapView
           style={styles.map}
@@ -449,7 +458,10 @@ const PharmacyOwnerSignupScreen = () => {
                 mode="time"
                 display="default"
                 onChange={(event, selectedDate) => {
-                  setOpeningHour(selectedDate || openingHour);
+                  if (event.type === 'set') { // Check if the user set a time
+                    setOpeningHour(selectedDate || openingHour); // Update time
+                  }
+                  setShowOpeningTime(false); // Close the picker after a selection or cancel
                 }}
               />
               <TouchableOpacity onPress={() => handleClose("opening")} style={styles.closeButton}>
@@ -457,6 +469,7 @@ const PharmacyOwnerSignupScreen = () => {
               </TouchableOpacity>
             </View>
           )}
+
 
           {/* Closing Hour */}
           <TouchableOpacity onPress={() => setShowClosingTime(true)} style={[styles.input, styles.timeInput]}>
@@ -469,14 +482,18 @@ const PharmacyOwnerSignupScreen = () => {
                 mode="time"
                 display="default"
                 onChange={(event, selectedDate) => {
-                  setClosingHour(selectedDate || closingHour);
+                  if (event.type === 'set') { // Only handle when a valid time is selected
+                    setClosingHour(selectedDate || closingHour);
+                  }
+                  setShowClosingTime(false); // Close the picker
                 }}
               />
-              <TouchableOpacity onPress={() => handleClose("closing")} style={styles.closeButton}>
+              <TouchableOpacity onPress={() => setShowClosingTime(false)} style={styles.closeButton}>
                 <Ionicons name="close" size={24} color="black" />
               </TouchableOpacity>
             </View>
           )}
+
         </View>
 
         {/* Upload Pharmacy Image */}
@@ -601,6 +618,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
   },
+  inputCity: {
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    fontSize: 16,
+    color: '#333',
+  },
   uploadLabel: {
     fontSize: 16,
     fontWeight: 'bold',
@@ -701,7 +726,7 @@ const styles = StyleSheet.create({
     marginVertical: 0,
   },
   halfInput: {
-    width: '50%'
+    width: '49%'
   },
   errorText: {
     color: 'red',
@@ -801,11 +826,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   locationPin: {
+    width: '49%',
     backgroundColor: '#F2F2F2',
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 10,
-    marginHorizontal: 5,
     fontSize: 16,
     color: '#333',
   },
@@ -828,8 +853,8 @@ const pickerSelectStyles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden', // Prevents overflow if picker content is larger
     backgroundColor: '#f9f9f9',
-    paddingVertical: 10,
-    paddingHorizontal: 15,
+    paddingVertical: 0,
+    paddingHorizontal: "24%",
     fontSize: 16,
     color: '#333',
   },

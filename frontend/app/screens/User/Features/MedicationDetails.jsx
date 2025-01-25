@@ -35,6 +35,14 @@ const MedicationDetails = () => {
     }
   }, [name]);
 
+  const formatDateTime = (date) => {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = date.toLocaleString('default', { month: 'long' }); // Get full month name
+    const year = String(date.getFullYear());
+    return `${month} ${day}, ${year}`;
+};
+
+
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
@@ -51,7 +59,7 @@ const MedicationDetails = () => {
     );
   }
 
-  const { name: medicationName, description } = medications[0]; // Extract name and description from the first item
+  const { name: medicationName } = medications[0]; // Extract name and description from the first item
 
   return (
     <View style={styles.safeArea}>
@@ -64,11 +72,6 @@ const MedicationDetails = () => {
       </View>
 
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollViewContent}>
-        {/* Medication Description */}
-        <View style={styles.descriptionContainer}>
-          <Text style={styles.descriptionTitle}>Description</Text>
-          <Text style={styles.descriptionText}>{description}</Text>
-        </View>
 
         <View style={styles.pharmacyContainer}>
           <Text style={styles.pharmacyTitle}>AVAILABLE PHARMACIES</Text>
@@ -105,6 +108,9 @@ const MedicationDetails = () => {
               <View style={styles.infoRow}>
                 <Ionicons name="cube-outline" size={18} color="#555" />
                 <Text style={styles.stockText}>{medication.stock} in stock</Text>
+                <Text style={styles.dateText}>        
+                (Last updated on {medication.timeStamps ? formatDateTime(new Date(medication.timeStamps)) : 'No Date Available'})
+                </Text>
               </View>
 
               {/* Map View */}
@@ -165,6 +171,7 @@ const styles = StyleSheet.create({
   },
   infoRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
   infoText: { marginLeft: 8, fontSize: 16, color: '#555' },
+  dateText: { marginLeft: 5, fontSize: 12, color: '#555', fontStyle: 'italic' },
   stockText: { marginLeft: 8, fontSize: 16, color: 'green' },
   descriptionContainer: { marginTop: 0, padding: 10, backgroundColor: '#FFF', borderRadius: 8, elevation: 2 },
   descriptionTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 5 },

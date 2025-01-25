@@ -172,9 +172,6 @@ const HomeScreen = () => {
         <Text style={styles.medicationCategory}>
           {medication.category ? medication.category.name : 'No Category'}
         </Text>
-        <Text style={styles.medicationPharmacy}>
-          {medication.description}
-        </Text>
       </View>
     </TouchableOpacity>
   ))}

@@ -131,11 +131,16 @@ const CustomerSignup = () => {
     let errorMessages = {};
     if (!name) errorMessages.name = "NAME IS REQUIRED";
     if (!email) errorMessages.email = "EMAIL IS REQUIRED";
-    if (!contactNumber) errorMessages.contactNumber = "CONTACT NUMBER IS REQUIRED";
-    if (!password) errorMessages.password = "PASSWORD IS REQUIRED";
-    if (!street) errorMessages.street = "STREET IS REQUIRED";
-    if (password.length < 8 & password.length > 0) errorMessages.password = "PASSWORD MUUST BE ATLEAST 8 CHARACTERS";
-    if (contactNumber.length !== 11) errorMessages.contactNumber = "CONTACT NUMBER MUST BE 11 DIGITS";
+    if (!contactNumber) {
+      errorMessages.contactNumber = "CONTACT NUMBER IS REQUIRED";
+    } else if (contactNumber.length !== 11) {
+      errorMessages.contactNumber = "CONTACT NUMBER MUST BE 11 CHARACTERS";
+    }
+    if (!password) {
+      errorMessages.password = "PASSWORD IS REQUIRED";
+    } else if (password.length < 8) {
+      errorMessages.password = "PASSWORD MUST BE AT LEAST 8 CHARACTERS";
+    }    if (!street) errorMessages.street = "STREET IS REQUIRED";
     if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE IMAGE";
 
@@ -188,7 +193,7 @@ const CustomerSignup = () => {
           Toast.show({
             type: "success",
             text1: "REGISTRATION SUCCEEDED",
-            text2: "PLEASE VERIFY YOUR OTP",
+            text2: "Please verify your otp.",
           });
           console.log("User ID from response:", userId);  // Add this line to check if the userId is correct
           setTimeout(() => {
@@ -221,14 +226,14 @@ const CustomerSignup = () => {
             Toast.show({
               type: "error",
               text1: "REGISTRATION FAILED!",
-              text2: "PLEASE TRY AGAIN LATER",
+              text2: "Please try again later.",
             });
           }
         } else {
           Toast.show({
             type: "error",
             text1: "NETWORK ERROR!",
-            text2: "PLEASE CHECK YOU INTERNAT CONNECTION AND TRY AGAIN",
+            text2: "Please check your internet connection and try again.",
           });
         }
       });

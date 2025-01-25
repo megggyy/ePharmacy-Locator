@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   View,
   Text,
@@ -16,16 +16,31 @@ import baseURL from "../../../../assets/common/baseurl";
 const VerifyOTPScreen = () => {
   const { userId } = useLocalSearchParams();
   const router = useRouter();
-  const [otp, setOtp] = useState('');
+  const [otp, setOtp] = useState(['', '', '', '']); // Array for each OTP digit
   const [isLoading, setIsLoading] = useState(false); // To handle loading state
 
+  const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  
+  const handleOtpChange = (value, index) => {
+    const newOtp = [...otp];
+    newOtp[index] = value;
+
+    if (value.length === 1 && index < 3) {
+      inputRefs[index + 1].current.focus(); // Move to the next input
+    }
+    setOtp(newOtp);
+  };
+
   const verifyOtp = async () => {
-    if (!otp) {
+    const enteredOtp = otp.join(''); // Combine the OTP digits
+
+    if (enteredOtp.length !== 4) {
       Toast.show({
         topOffset: 60,
         type: 'error',
         text1: 'OTP Required',
-        text2: 'Please enter the OTP sent to your email.',
+        text2: 'Please enter the 4-digit OTP sent to your email.',
       });
       return;
     }
@@ -37,7 +52,7 @@ const VerifyOTPScreen = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userId, otp }),
+        body: JSON.stringify({ userId, otp: enteredOtp }),
       });
 
       const data = await response.json();
@@ -47,7 +62,6 @@ const VerifyOTPScreen = () => {
           topOffset: 60,
           type: 'success',
           text1: 'OTP Verified',
-          text2: 'Please wait for your account approval.',
         });
 
         setTimeout(() => {
@@ -90,22 +104,25 @@ const VerifyOTPScreen = () => {
           Please enter the 4-digit OTP sent to your registered email.
         </Text>
 
-        {/* OTP Input */}
-        <TextInput
-          style={styles.input}
-          placeholder="Enter OTP"
-          placeholderTextColor="#AAB4C1"
-          value={otp}
-          onChangeText={setOtp}
-          keyboardType="numeric"
-          maxLength={6}
-        />
+        <View style={styles.otpContainer}>
+          {otp.map((digit, index) => (
+            <TextInput
+              key={index}
+              ref={inputRefs[index]}
+              style={styles.otpInput}
+              value={digit}
+              onChangeText={(value) => handleOtpChange(value, index)}
+              keyboardType="numeric"
+              maxLength={1}
+              returnKeyType="next"
+            />
+          ))}
+        </View>
 
-        {/* Verify Button */}
         <TouchableOpacity
           style={styles.verifyButton}
           onPress={verifyOtp}
-          disabled={isLoading} // Disable button while loading
+          disabled={isLoading}
         >
           <Text style={styles.verifyButtonText}>
             {isLoading ? 'Verifying...' : 'Verify OTP'}
@@ -169,6 +186,21 @@ const styles = StyleSheet.create({
     color: '#555',
     marginBottom: 10,
     textAlign: 'center',
+  },
+  otpContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 10,
+    paddingHorizontal: 50
+  },
+  otpInput: {
+    width: 50,
+    height: 60,
+    backgroundColor: '#F2F2F2',
+    borderRadius: 10,
+    textAlign: 'center',
+    fontSize: 30,
+    color: '#333',
   },
   verifyButton: {
     backgroundColor: '#027DB1',

@@ -67,10 +67,6 @@ const CategoryFilterMedications = () => {
                 >
                   <View style={styles.medicationInfo}>
                     <Text style={styles.medicationName}>{medication.name}</Text>
-                    <Text style={styles.medicationDescription}>
-                      {medication.description || 'No description available.'}
-                    </Text>
-                    <Text style={styles.medicationPrice}>{medication.category.name}</Text>
                   </View>
                 </TouchableOpacity>
               ))

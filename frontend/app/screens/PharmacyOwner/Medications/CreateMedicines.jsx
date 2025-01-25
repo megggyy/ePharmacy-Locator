@@ -110,7 +110,6 @@ const CreateMedicines = () => {
             // Send a POST request to your API using axios
             const response = await axios.post(`${baseURL}medicine/create`, {
                 name: selectedMedicine.name,
-                description: selectedMedicine.description,
                 stock: stockValue,
                 pharmacy: state.user.userId,
                 category: selectedCategory,
@@ -213,8 +212,6 @@ const CreateMedicines = () => {
                     <View style={styles.inputContainer}>
                         <Text style={styles.label}>Name</Text>
                         <Text style={styles.input}>{item.name}</Text>
-                        <Text style={styles.label}>Description</Text>
-                        <Text style={styles.input}>{item.description}</Text>
                         <Text style={styles.label}>Stock: {item.stock}</Text>
                         <TextInput
                             style={styles.input}
