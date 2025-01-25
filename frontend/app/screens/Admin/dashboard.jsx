@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect} from "@react-navigation/native"
 import { BarChart, LineChart } from 'react-native-chart-kit';
@@ -23,6 +23,7 @@ const AdminDashboard = () => {
     categories: 0,
     medicines: 0,
   });
+  const [loading, setLoading] = useState(true);  // Add loading state
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,8 +61,6 @@ const AdminDashboard = () => {
     return () => clearInterval(intervalId);
   
   }, []); // Empty dependency array to ensure this runs only once when the component mounts
-  
-
 
   useEffect(() => {
     const fetchCustomersData = async () => {
@@ -74,6 +73,7 @@ const AdminDashboard = () => {
           const data = result.getUsersPerMonth.map((item) => item.total);
 
           setCustomersData({ labels, data });
+          setLoading(false);  // Set loading to false once data is fetched
         }
       } catch (error) {
         console.error('Error fetching customers per month data:', error);
@@ -108,6 +108,7 @@ const AdminDashboard = () => {
         };
     }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
 );
+
   return (
     <ScrollView style={styles.safeArea}>
       {/* Header */}
@@ -124,8 +125,8 @@ const AdminDashboard = () => {
         </View>
       </View>
 
-     {/* Dashboard Cards */}
-     <View style={styles.dashboardCards}>
+      {/* Dashboard Cards */}
+      <View style={styles.dashboardCards}>
         <View style={styles.card} >
           <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Pharmacies/ListPharmacies')}>Pharmacies</Text>
           <Text style={styles.cardNumber}>{counts.pharmacies}</Text>
@@ -144,53 +145,60 @@ const AdminDashboard = () => {
         </View>
       </View>
 
-      {/* Bar Chart for Monthly New Users */}
-      <Text style={styles.chartTitle}>Monthly New Customers</Text>
-      <BarChart
-        data={{
-          labels: customersData.labels,
-          datasets: [
-            {
-              data: customersData.data,
-            },
-          ],
-        }}
-        width={screenWidth - 30} // from react-native
-        height={220}
-        chartConfig={{
-          backgroundColor: '#e26a00',
-          backgroundGradientFrom: '#fb8c00',
-          backgroundGradientTo: '#ffa726',
-          decimalPlaces: 0,
-          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-          labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-        }}
-        style={styles.chart}
-      />
+      {/* Show a spinner while loading */}
+      {loading ? (
+        <View style={styles.spinnerContainer}>
+          <ActivityIndicator size="large" color="#005b7f" />
+        </View>
+      ) : (
+        <>
+          <Text style={styles.chartTitle}>Monthly New Customers</Text>
+          <LineChart
+            data={{
+              labels: customersData.labels,
+              datasets: [
+                {
+                  data: customersData.data.map(item => (isNaN(item) || item === Infinity ? 0 : item)), // Sanitize data
+                },
+              ],
+            }}
+            width={screenWidth - 30}
+            height={220}
+            chartConfig={{
+              backgroundColor: '#e26a00',
+              backgroundGradientFrom: '#fb8c00',
+              backgroundGradientTo: '#ffa726',
+              decimalPlaces: 0,
+              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+              labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            }}
+            style={styles.chart}
+          />
 
-      {/* Line Chart for Monthly Scanned Prescriptions */}
-      <Text style={styles.chartTitle}>Monthly Scanned Prescription</Text>
-      <LineChart
-        data={{
-          labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-          datasets: [
-            {
-              data: [100, 80, 45, 60, 70, 35, 85, 90, 100],
-            },
-          ],
-        }}
-        width={screenWidth - 30} // from react-native
-        height={220}
-        chartConfig={{
-          backgroundColor: '#26872a',
-          backgroundGradientFrom: '#43a047',
-          backgroundGradientTo: '#66bb6a',
-          decimalPlaces: 0,
-          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-          labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-        }}
-        style={styles.chart}
-      />
+          <Text style={styles.chartTitle}>Most Scanned Prescription</Text>
+          <BarChart
+            data={{
+              labels: ['Prescription A', 'Prescription B', 'Prescription C', 'Prescription D'], // Update with real data
+              datasets: [
+                {
+                  data: [100, 80, 45, 60].map(item => (isNaN(item) || item === Infinity ? 0 : item)), // Sanitize data
+                },
+              ],
+            }}
+            width={screenWidth - 30}
+            height={220}
+            chartConfig={{
+              backgroundColor: '#26872a',
+              backgroundGradientFrom: '#43a047',
+              backgroundGradientTo: '#66bb6a',
+              decimalPlaces: 0,
+              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+              labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            }}
+            style={styles.chart}
+          />
+        </>
+      )}
     </ScrollView>
   );
 };
@@ -261,6 +269,12 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     borderRadius: 10,
     marginLeft: 10,
+  },
+  spinnerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 220,  // Match chart height
   },
 });
 
