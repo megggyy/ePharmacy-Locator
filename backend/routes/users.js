@@ -758,12 +758,11 @@ router.put('/resetPassword', async (req, res) => {
 // Edit Profile Route
 router.put('/:id', uploadOptions.array('images'), async (req, res) => {
     const { id } = req.params;
-    const { name, contactNumber, street, barangay, city, businessDays, openingHour, closingHour } = req.body;
+    const { name, contactNumber, street, barangay, city } = req.body;
 
     try {
         // Check if the user is an Admin
-        const admin = await User.findById(id); // Assuming User is the main model for all users
-
+        const admin = await User.findById(id);
         if (admin && admin.role === 'Admin') {
             // Update Admin fields
             admin.name = name || admin.name;
@@ -771,56 +770,62 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
             admin.street = street || admin.street;
             admin.barangay = barangay || admin.barangay;
             admin.city = city || admin.city;
-
             await admin.save();
             return res.status(200).json({ message: 'Admin profile updated successfully', admin });
         }
 
-        // If not admin, check if the user is a Customer
+        // If not admin, check if the user is a Customer or Pharmacy
         const customer = await Customer.findOne({ userInfo: id }).populate('userInfo');
         const pharmacy = await Pharmacy.findOne({ userInfo: id }).populate('userInfo');
 
         if (!customer) {
-            // If customer is not found, check if it's a pharmacy update
             if (!pharmacy) return res.status(404).send('Entity not found');
 
-            // Update fields in the related User document (userInfo) for Pharmacy
+            // Update User and Pharmacy fields
             if (pharmacy.userInfo) {
                 const user = pharmacy.userInfo;
-
                 user.name = name || user.name;
                 user.contactNumber = contactNumber || user.contactNumber;
                 user.street = street || user.street;
                 user.barangay = barangay || user.barangay;
                 user.city = city || user.city;
-
                 await user.save();
             }
 
-            // Replace old images with new ones for Pharmacy
+            // Check if images were uploaded
             const imageUrls = req.files.map((file) => file.path);
-            pharmacy.images = imageUrls;
+            if (imageUrls.length > 0) {
+                pharmacy.images = imageUrls; // New images are set if any
+            } else if (req.body.existingImages) {
+                try {
+                    pharmacy.images = JSON.parse(req.body.existingImages); // Retain old images if no new ones
+                } catch (e) {
+                    console.error('Error parsing existing images:', e);
+                    return res.status(400).send('Invalid format for existing images');
+                }
+            }
+            
 
             await pharmacy.save();
             return res.status(200).json({ message: 'Pharmacy updated successfully', pharmacy });
         }
 
-        // Update fields in the related User document (userInfo) for Customer
         if (customer.userInfo) {
             const user = customer.userInfo;
-
             user.name = name || user.name;
             user.contactNumber = contactNumber || user.contactNumber;
             user.street = street || user.street;
             user.barangay = barangay || user.barangay;
             user.city = city || user.city;
-
             await user.save();
         }
 
-        // Replace old images with new ones for Customer
         const imageUrls = req.files.map((file) => file.path);
-        customer.images = imageUrls;
+        if (imageUrls.length > 0) {
+            customer.images = imageUrls; // New images
+        } else if (req.body.existingImages) {
+            customer.images = JSON.parse(req.body.existingImages); // Retain old images
+        }
 
         await customer.save();
 
@@ -830,6 +835,7 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
         res.status(500).send('Error updating entity');
     }
 });
+
 
   
 
