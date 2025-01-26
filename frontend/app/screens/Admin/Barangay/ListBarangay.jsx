@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   createButton: {
     flexDirection: 'row', // Align icon and text horizontally
     alignItems: 'center', // Center items vertically
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 5,

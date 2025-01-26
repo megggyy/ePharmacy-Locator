@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
+import { StatusBar, View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect} from "@react-navigation/native"
 import { BarChart, LineChart } from 'react-native-chart-kit';
@@ -111,6 +111,7 @@ const AdminDashboard = () => {
 
   return (
     <ScrollView style={styles.safeArea}>
+        <StatusBar backgroundColor="#005b7f" barStyle="light-content" />  
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity
@@ -212,12 +213,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 30,
+    paddingVertical: 8,
     backgroundColor: '#005b7f',
   },
   menuIcon: {
     marginRight: 10,
-    marginTop: 35,
+    marginTop: 0,
   },
   userInfo: {
     alignItems: 'flex-start',
@@ -227,7 +228,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
-    marginTop: 35,
+    marginTop: 0,
   },
   userRole: {
     color: 'white',

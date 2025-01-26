@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity, ActivityIndicator, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
+import { ScrollView, View, Text, TextInput, Image, StyleSheet, TouchableOpacity, ActivityIndicator, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
@@ -65,55 +65,57 @@ export default function ReadUserScreen() {
         <Text style={styles.headerText}>{user.name.toUpperCase()}</Text>
       </View>
 
-      {/* User Details */}
-      <View style={styles.detailsContainer}>
-        {/* Image Carousel */}
-        <FlatList
-          data={user.customerDetails?.images}
-          horizontal={true}
-          pagingEnabled={true} // This ensures only one image at a time
-          renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => handleImagePress(item)}>
-              <Image source={{ uri: item }} style={styles.image} />
-            </TouchableOpacity>
-          )}
-          keyExtractor={(image, index) => index.toString()}
-        />
+      {/* Scrollable Content */}
+      <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
+        <View style={styles.detailsContainer}>
+          {/* Image Carousel */}
+          <FlatList
+            data={user.customerDetails?.images}
+            horizontal
+            pagingEnabled
+            renderItem={({ item }) => (
+              <TouchableOpacity onPress={() => handleImagePress(item)}>
+                <Image source={{ uri: item }} style={styles.image} />
+              </TouchableOpacity>
+            )}
+            keyExtractor={(image, index) => index.toString()}
+          />
 
-        {/* Modal for Expanded Image */}
-        <Modal
-          visible={isModalVisible}
-          transparent={true}
-          onRequestClose={closeImageModal}
-          animationType="fade"
-        >
-          <TouchableWithoutFeedback onPress={closeImageModal}>
-            <View style={styles.modalBackground}>
-              {selectedImage ? (
-                <Image
-                  source={{ uri: selectedImage }}
-                  style={styles.modalImage}
-                />
-              ) : (
-                <ActivityIndicator size="large" color="#fff" />
-              )}
-            </View>
-          </TouchableWithoutFeedback>
-        </Modal>
+          {/* Modal for Expanded Image */}
+          <Modal
+            visible={isModalVisible}
+            transparent
+            onRequestClose={closeImageModal}
+            animationType="fade"
+          >
+            <TouchableWithoutFeedback onPress={closeImageModal}>
+              <View style={styles.modalBackground}>
+                {selectedImage ? (
+                  <Image source={{ uri: selectedImage }} style={styles.modalImage} />
+                ) : (
+                  <ActivityIndicator size="large" color="#fff" />
+                )}
+              </View>
+            </TouchableWithoutFeedback>
+          </Modal>
 
-        {/* User Details */}
-        <View style={styles.inputContainer}>
-          <Text style={styles.label}>Email</Text>
-          <TextInput style={styles.input} value={user.email} editable={false} />
+          {/* User Details */}
+          <View style={styles.inputContainer}>
+            <Text style={styles.label}>Email</Text>
+            <TextInput style={styles.input} value={user.email} editable={false} />
 
-          <Text style={styles.label}>Mobile Number</Text>
-          <TextInput style={styles.input} value={user.contactNumber} editable={false} />
+            <Text style={styles.label}>Mobile Number</Text>
+            <TextInput style={styles.input} value={user.contactNumber} editable={false} />
 
-          <Text style={styles.label}>Address</Text>
-          <TextInput style={styles.input} value={`${user.street}, ${user.barangay}, ${user.city}` || 'N/A'} editable={false} />
-
+            <Text style={styles.label}>Address</Text>
+            <TextInput
+              style={styles.input}
+              value={`${user.street}, ${user.barangay}, ${user.city}` || 'N/A'}
+              editable={false}
+            />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -124,8 +126,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 60,
+    backgroundColor: '#005b7f',
+    paddingTop: 20,
     paddingBottom: 15,
   },
   headerText: {
@@ -136,8 +138,11 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: 'absolute',
-    top: 59,
+    top: 20,
     left: 20,
+  },
+  scrollContent: {
+    paddingBottom: 20,
   },
   detailsContainer: {
     margin: 20,
@@ -166,7 +171,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 20,
     marginBottom: 20,
-    marginTop: 20
+    marginTop: 20,
   },
   label: {
     fontWeight: 'bold',

@@ -97,15 +97,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E', // Blue header background, full width
-    paddingTop: 80,
+    backgroundColor: '#005b7f', // Blue header background, full width
+    paddingTop: 20,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   headerText: {

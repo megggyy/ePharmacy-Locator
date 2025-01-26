@@ -191,14 +191,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 60,
+    backgroundColor: '#005b7f',
+    paddingTop: 40,
     paddingBottom: 20,
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 40,
     left: 20,
   },
   logo: {

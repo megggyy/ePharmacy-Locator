@@ -63,7 +63,7 @@ export default function MedicinePieChartScreen() {
         <PieChart
           data={chartData}
           width={screenWidth * 0.9} // Adjust width to fit nicely within screen width
-          height={300}
+          height={220}
           chartConfig={chartConfig}
           accessor="population"
           backgroundColor="transparent"
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 60,
     paddingBottom: 20,
     alignItems: 'center',

@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 100,
   },
   profileSection: {

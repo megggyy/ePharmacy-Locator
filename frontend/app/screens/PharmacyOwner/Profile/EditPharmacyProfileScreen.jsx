@@ -310,8 +310,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 80,
+    backgroundColor: '#005b7f',
+    paddingTop: 20,
     paddingBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -319,7 +319,7 @@ const styles = StyleSheet.create({
   backButton: {
     position: 'absolute',
     left: 20,
-    top: 35,
+    top: 20,
   },
   headerText: {
     color: 'white',
@@ -400,7 +400,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#0B607E',
     paddingVertical: 15,
     marginHorizontal: 20,
-    marginTop: 10,
+    marginTop: 0,
+    marginBottom: 10,
     borderRadius: 10,
   },
   confirmButtonText: {

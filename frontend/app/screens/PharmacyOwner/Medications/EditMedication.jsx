@@ -143,15 +143,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 80,
+    backgroundColor: '#005b7f',
+    paddingTop: 20,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   headerText: {
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   confirmButton: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: 'center',

@@ -236,15 +236,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#f8f8f8',
     },
     header: {
-        backgroundColor: '#0B607E',
-        paddingTop: 80,
+        backgroundColor: '#005b7f', 
+        paddingTop: 20,
         paddingBottom: 20,
         justifyContent: 'center',
         alignItems: 'center',
     },
     backButton: {
         position: 'absolute',
-        top: 50,
+        top: 20,
         left: 20,
     },
     headerText: {

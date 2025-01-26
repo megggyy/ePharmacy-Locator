@@ -136,22 +136,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 30,
+    paddingVertical: 0,
     backgroundColor: '#005b7f',
   },
   menuIcon: {
     marginRight: 10,
-    marginTop: 35,
+    marginTop: 0,
   },
   userInfo: {
     alignItems: 'flex-start',
     marginLeft: 10,
+    marginBottom: 5,
   },
   userName: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
-    marginTop: 35,
+    marginTop: 10,
   },
   userRole: {
     color: 'white',

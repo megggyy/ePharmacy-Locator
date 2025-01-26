@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 80,
     paddingBottom: 20,
     justifyContent: 'center',
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     textAlign: 'justify'
   },
   confirmButton: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: 'center',

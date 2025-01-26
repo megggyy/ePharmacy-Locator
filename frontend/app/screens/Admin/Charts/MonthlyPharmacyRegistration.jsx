@@ -20,7 +20,7 @@ export default function MonthlyPharmacyRegistrationScreen() {
         const { getUsersPerMonth } = response.data;
 
         // Map the response to chart data format
-        const labels = getUsersPerMonth.map((item) => item.month);
+        const labels = getUsersPerMonth.map((item) => `${item.month} ${item.year}`);
         const data = getUsersPerMonth.map((item) => item.total);
 
         setChartData({
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 60,
     paddingBottom: 20,
     alignItems: 'center',

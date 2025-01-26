@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { jwtDecode } from "jwt-decode";
 import baseURL from '@/assets/common/baseurl';
 import Spinner from "../../../../assets/common/spinner";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default function ViewProfile() {
   const router = useRouter();
@@ -54,7 +55,7 @@ export default function ViewProfile() {
       : require('@/assets/images/sample.jpg');
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView style={styles.container}>
       {loading ? (
         <Spinner /> // Show the custom spinner component when loading
       ) : (
@@ -113,7 +114,7 @@ export default function ViewProfile() {
           </View>
         </>
       )}
-    </View>
+    </KeyboardAwareScrollView>
   );
 }
 
@@ -123,15 +124,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E', // Blue header background, full width
-    paddingTop: 80,
+    backgroundColor: '#005b7f', // Blue header background, full width
+    paddingTop: 20,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   headerText: {

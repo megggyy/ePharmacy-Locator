@@ -41,16 +41,17 @@ const UserTableScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
-      // Fetch users
       axios
         .get(`${baseURL}users`)
         .then((res) => {
-          setUserList(res.data);
-          setUserFilter(res.data);
+          // Filter for users with the "Customer" role
+          const customers = res.data.filter(user => user.role === "Customer");
+          setUserList(customers);
+          setUserFilter(customers);
           setLoading(false);
         })
         .catch((err) => console.error(err));
-
+  
       return () => {
         setUserList([]);
         setUserFilter([]);
@@ -58,7 +59,7 @@ const UserTableScreen = () => {
       };
     }, [])
   );
-
+  
   return (
     <View style={styles.container}>
       {loading ? (
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 60,
     paddingBottom: 20,
     alignItems: 'center',
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     paddingVertical: 10,
     color: 'white',
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
   },
   buttonContainer: {
     margin: 10,

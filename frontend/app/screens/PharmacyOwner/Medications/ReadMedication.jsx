@@ -44,8 +44,6 @@ export default function ReadMedicationScreen() {
 
       {/* Medication Details */}
       <View style={styles.detailsContainer}>
-        <Text style={styles.label}>Description:</Text>
-        <Text style={styles.value}>{medicationData.description}</Text>
         <Text style={styles.label}>Category:</Text>
         <Text style={styles.value}>{medicationData.category?.name}</Text>
         <Text style={styles.label}>Stock:</Text>
@@ -61,14 +59,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 60,
+    backgroundColor: '#005b7f',
+    paddingTop: 20,
     paddingBottom: 20,
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   title: {

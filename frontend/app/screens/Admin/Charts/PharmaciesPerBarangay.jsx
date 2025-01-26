@@ -62,7 +62,7 @@ export default function PharmacyPieChartScreen() {
       <PieChart
         data={chartData}
         width={screenWidth}
-        height={300}
+        height={220}
         chartConfig={chartConfig}
         accessor="population"
         backgroundColor="transparent"
@@ -71,18 +71,6 @@ export default function PharmacyPieChartScreen() {
         absolute
         style={styles.chartStyle}
       />
-
-      {/* Custom Legend
-      <View style={styles.legendContainer}>
-        {chartData.map((item, index) => (
-          <View key={index} style={styles.legendItem}>
-            <View style={[styles.legendColorBox, { backgroundColor: item.color }]} />
-            <Text style={styles.legendText}>
-              {item.name}: {item.population}
-            </Text>
-          </View>
-        ))}
-      </View> */}
     </View>
   );
 }
@@ -102,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 60,
     paddingBottom: 20,
     alignItems: 'center',

@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingTop: 60,
     paddingBottom: 15,
   },
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   confirmButton: {
-    backgroundColor: '#0B607E',
+    backgroundColor: '#005b7f',
     paddingVertical: 15,
     borderRadius: 5,
     alignItems: 'center',
