@@ -20,23 +20,29 @@ const PrescriptionResultsScreen = () => {
   const [medicines, setMedicines] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (selectedText) {
-      axios
-        .get(`${baseURL}medicine/available/${selectedText}`)
-        .then((response) => {
-          const filteredMedicines = response.data.filter(medicine => {
-            return medicine.stock > parseInt(quantity); // Filter based on the quantity
-          });
-          setMedicines(filteredMedicines);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error('Error fetching medication details:', error);
-          setLoading(false);
+ useEffect(() => {
+  if (selectedText) {
+    axios
+      .get(`${baseURL}medicine/available/${selectedText}`)
+      .then((response) => {
+        const filteredMedicines = response.data.filter(medicine => {
+          return medicine.stock > parseInt(quantity); // Filter based on the quantity
         });
-    }
-  }, [selectedText, quantity]);
+
+        if (filteredMedicines.length === 0) {
+          // Optionally, handle the case when no medicine matches the filter
+          console.log('No medications available with the given quantity.');
+        }
+
+        setMedicines(filteredMedicines);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
+  }
+}, [selectedText, quantity]);
+
 
   if (loading) {
     return (
@@ -54,7 +60,14 @@ const PrescriptionResultsScreen = () => {
     );
   }
 
-  const { name: medicationName, description } = medicines[0]; // Extract name and description from the first item
+  const formatDateTime = (date) => {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = date.toLocaleString('default', { month: 'long' }); // Get full month name
+    const year = String(date.getFullYear());
+    return `${month} ${day}, ${year}`;
+  };
+
+  const { name: medicationName } = medicines[0]; // Extract name and description from the first item
 
   return (
     <View style={styles.safeArea}>
@@ -70,7 +83,6 @@ const PrescriptionResultsScreen = () => {
         {/* Medication Description */}
         <View style={styles.descriptionContainer}>
           <Text style={styles.descriptionTitle}>REQUIRED QUANTITY: {quantity}</Text>
-          <Text style={styles.descriptionText}>{description}</Text>
         </View>
 
         <View style={styles.pharmacyContainer}>
@@ -108,6 +120,9 @@ const PrescriptionResultsScreen = () => {
               <View style={styles.infoRow}>
                 <Ionicons name="cube-outline" size={18} color="#555" />
                 <Text style={styles.stockText}>{medication.stock} in stock</Text>
+                <Text style={styles.dateText}>
+                  (Last updated on {medication.timeStamps ? formatDateTime(new Date(medication.timeStamps)) : 'No Date Available'})
+                </Text>
               </View>
 
               {/* Map View */}
@@ -151,13 +166,14 @@ const styles = StyleSheet.create({
   headerText: { color: 'white', fontSize: 20, fontWeight: 'bold' },
   container: { padding: 16 },
   scrollViewContent: { paddingBottom: 100 },
-  pharmacyName: { 
-    fontSize: 20, 
-    textAlign: 'center', 
-    marginBottom: 15, 
-    backgroundColor: '#005b7f', 
-    padding: 10, 
-    color: 'white' },
+  pharmacyName: {
+    fontSize: 20,
+    textAlign: 'center',
+    marginBottom: 15,
+    backgroundColor: '#005b7f',
+    padding: 10,
+    color: 'white'
+  },
   infoContainer: {
     marginTop: 20,
     padding: 10,
@@ -169,6 +185,7 @@ const styles = StyleSheet.create({
   infoRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
   infoText: { marginLeft: 8, fontSize: 16, color: '#555' },
   stockText: { marginLeft: 8, fontSize: 16, color: 'green' },
+  dateText: { marginLeft: 5, fontSize: 12, color: '#555', fontStyle: 'italic' },
   descriptionContainer: { marginTop: 0, padding: 10, backgroundColor: '#FFF', borderRadius: 8, elevation: 2 },
   descriptionTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 5 },
   descriptionText: { fontSize: 16, color: '#555' },

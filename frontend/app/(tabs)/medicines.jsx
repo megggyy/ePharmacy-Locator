@@ -205,7 +205,6 @@ function MedicationCard({ name, description, onPress }) {
     <TouchableOpacity style={styles.medicationCard} onPress={onPress}>
       <View style={styles.medicationInfo}>
         <Text style={styles.medicationName}>{name}</Text>
-        <Text style={styles.descriptionText}>{description}</Text>
       </View>
     </TouchableOpacity>
   );

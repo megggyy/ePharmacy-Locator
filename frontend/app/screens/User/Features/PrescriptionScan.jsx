@@ -46,19 +46,21 @@ const PrescriptionScreen = () => {
 
   const getMatchedMedicines = () => {
     if (!ocrText) return [];
-  
+    
     const ocrWords = ocrText.split(/\s+|\n+/).map(word => word.toLowerCase()).filter(Boolean);
-  
+    
     const matchedMedicines = medicinesList.filter(medicine => {
       return ocrWords.some(word => {
         const medicineName = medicine.name.toLowerCase();
         const lowerWord = word.toLowerCase();
-        return medicineName.startsWith(lowerWord);
+        return lowerWord.length >= 5 && medicineName.includes(lowerWord); // Match consecutive substring
       });
     });
-  
+    
     return matchedMedicines;
   };
+  
+
 
   return (
     <View style={styles.safeArea}>
