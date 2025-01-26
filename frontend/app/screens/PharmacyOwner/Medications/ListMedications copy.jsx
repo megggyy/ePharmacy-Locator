@@ -44,7 +44,6 @@ export default function EditMedicationScreen() {
     onPress={() => router.push(`/screens/PharmacyOwner/Medications/ReadMedication?id=${item._id}`)}>
       {/* <Text style={styles.cell}>{item.id}</Text> */}
       <Image source={{ uri: item.images[0] }} style={styles.image} /> 
-      <Text style={styles.cell}>{item.description}</Text>
       <Text style={styles.cell}>{item.category.name}</Text>
       <Text style={styles.cell}>{item.stock}</Text>
       <Text style={styles.cell}>{item.pharmacy.userInfo.name}</Text>
@@ -82,7 +81,6 @@ export default function EditMedicationScreen() {
       <View style={styles.tableHeader}>
         {/* <Text style={styles.headerCell}>ID</Text> */}
         <Text style={styles.headerCell}>Image</Text>
-        <Text style={styles.headerCell}>Description</Text>
         <Text style={styles.headerCell}>Category</Text>
         <Text style={styles.headerCell}>Stock</Text>
         <Text style={styles.headerCell}>Pharmacy</Text>

@@ -150,7 +150,6 @@ export default function MedicationScreen() {
             <MedicationCard
               key={med._id}
               name={med.name}
-              description={med.description}
               onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${med.name}`)}
             />
           ))}

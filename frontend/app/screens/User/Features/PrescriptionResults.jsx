@@ -55,7 +55,7 @@ const PrescriptionResultsScreen = () => {
   if (!medicines || medicines.length === 0) {
     return (
       <View style={styles.loadingContainer}>
-        <Text style={styles.errorText}>No medications available.</Text>
+        <Text style={styles.errorText}>No pharmacy available.</Text>
       </View>
     );
   }

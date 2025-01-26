@@ -12,7 +12,6 @@ export default function CreateMedication() {
   const router = useRouter();
 
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
   const [stock, setStock] = useState('');
   const [pharmacyId, setPharmacyId] = useState('');  // Changed to pharmacyId
   const [categoryId, setCategoryId] = useState('');
@@ -105,7 +104,6 @@ export default function CreateMedication() {
     });
 
     formData.append('name', name);
-    formData.append('description', description);
     formData.append('stock', stock);
     formData.append('pharmacy', pharmacyId);  // Changed to pharmacyId
     formData.append('category', categoryId);
@@ -156,14 +154,6 @@ export default function CreateMedication() {
           value={name}
           onChangeText={setName}
           placeholder="Enter medication name"
-        />
-
-        <Text style={styles.label}>Description</Text>
-        <TextInput
-          style={styles.input}
-          value={description}
-          onChangeText={setDescription}
-          placeholder="Enter description"
         />
 
         <Text style={styles.label}>Stock</Text>

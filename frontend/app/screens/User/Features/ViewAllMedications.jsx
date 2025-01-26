@@ -43,7 +43,6 @@ const ViewAllMedications = () => {
               />
               <View style={styles.medicationInfo}>
                 <Text style={styles.medicationName}>{medication.name}</Text>
-                <Text style={styles.medicationDescription}>{medication.description}</Text>
                 <Text style={styles.medicationPrice}>Stock: {medication.stock}</Text>
                 <Text style={styles.pharmacyName}>{medication.pharmacy.userInfo.name}</Text>
                 <Text style={styles.pharmacyBarangay}>{medication.pharmacy.userInfo.barangay}</Text>
