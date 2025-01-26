@@ -13,6 +13,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 export default function EditProfile() {
   const router = useRouter();
+  const [userId, setUserId] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
@@ -44,6 +45,7 @@ export default function EditProfile() {
         });
 
         const { name, email, contactNumber, street, barangay, city, pharmacyDetails } = response.data;
+        setUserId(userId);
         setName(name);
         setEmail(email);
         setMobile(contactNumber);
@@ -51,9 +53,9 @@ export default function EditProfile() {
         setBarangay(barangay || '');
         setCity(city || '');
 
-       // Filter out non-string image URIs to avoid the error
-       const fetchedImages = (pharmacyDetails?.images || []).filter((img) => typeof img === 'string');
-       setImages(fetchedImages); // Set the valid images
+        // Filter out non-string image URIs to avoid the error
+        const fetchedImages = (pharmacyDetails?.images || []).filter((img) => typeof img === 'string');
+        setImages(fetchedImages); // Set the valid images
 
         const businessDays = pharmacyDetails?.businessDays || [];
         setBusinessDays(businessDays);
@@ -106,7 +108,7 @@ export default function EditProfile() {
         console.error('Invalid URI format:', selectedUri);
       }
     }
-    
+
   };
 
   const handleDeleteImage = (uri) => {
@@ -156,118 +158,121 @@ export default function EditProfile() {
 
   return (
     <KeyboardAwareScrollView style={styles.container}>
-       {loading ? (
+      {loading ? (
         <Spinner /> // Show the custom spinner component when loading
       ) : (
         <>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>Edit Profile</Text>
-      </View>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
+            <Text style={styles.headerText}>Edit Profile</Text>
+          </View>
 
-      <View style={styles.profileImageSection}>
-        <View style={styles.imagePreviewContainer}>
-        {images.map((uri, index) => (
-          typeof uri === 'string' ? (
-            <View key={index} style={styles.imageContainer}>
-              <Image source={{ uri }} style={styles.profileImage} />
-              <TouchableOpacity
-                style={styles.deleteImageButton}
-                onPress={() => handleDeleteImage(uri)}
-              >
-                <Ionicons name="trash" size={20} color="white" />
-              </TouchableOpacity>
+          <View style={styles.profileImageSection}>
+            <View style={styles.imagePreviewContainer}>
+              {images.map((uri, index) => (
+                typeof uri === 'string' ? (
+                  <View key={index} style={styles.imageContainer}>
+                    <Image source={{ uri }} style={styles.profileImage} />
+                    <TouchableOpacity
+                      style={styles.deleteImageButton}
+                      onPress={() => handleDeleteImage(uri)}
+                    >
+                      <Ionicons name="trash" size={20} color="white" />
+                    </TouchableOpacity>
+                  </View>
+                ) : null
+              ))}
+
             </View>
-          ) : null
-        ))}
+            <TouchableOpacity style={styles.selectImageButton} onPress={selectImages}>
+              <Text style={styles.selectImageText}>Select Images</Text>
+            </TouchableOpacity>
+          </View>
 
-        </View>
-        <TouchableOpacity style={styles.selectImageButton} onPress={selectImages}>
-          <Text style={styles.selectImageText}>Select Images</Text>
-        </TouchableOpacity>
-      </View>
+          <View style={styles.inputContainer}>
+            <Text style={styles.label}>Name</Text>
+            <TextInput
+              style={styles.input}
+              value={name}
+              onChangeText={setName}
+            />
 
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Name</Text>
-        <TextInput
-          style={styles.input}
-          value={name}
-          onChangeText={setName}
-        />
+            <Text style={styles.label}>Email</Text>
+            <TextInput
+              style={styles.input}
+              value={email}
+              editable={false} // Email is not editable
+            />
 
-        <Text style={styles.label}>Email</Text>
-        <TextInput
-          style={styles.input}
-          value={email}
-          editable={false} // Email is not editable
-        />
+            <Text style={styles.label}>Mobile Number</Text>
+            <TextInput
+              style={styles.input}
+              value={mobile}
+              onChangeText={setMobile}
+            />
 
-        <Text style={styles.label}>Mobile Number</Text>
-        <TextInput
-          style={styles.input}
-          value={mobile}
-          onChangeText={setMobile}
-        />
+            <Text style={styles.label}>Street</Text>
+            <TextInput
+              style={styles.input}
+              value={street}
+              onChangeText={setStreet}
+            />
 
-        <Text style={styles.label}>Street</Text>
-        <TextInput
-          style={styles.input}
-          value={street}
-          onChangeText={setStreet}
-        />
+            <Text style={styles.label}>Barangay</Text>
+            <RNPickerSelect
+              onValueChange={(value) => setBarangay(value)}
+              items={barangays} // Use fetched barangays here
+              style={pickerSelectStyles}
+              placeholder={{
+                label: 'Select your barangay',
+                value: null,
+                color: '#AAB4C1',
+              }}
+              Icon={() => {
+                return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
+              }}
+              value={barangay}
+            />
 
-        <Text style={styles.label}>Barangay</Text>
-        <RNPickerSelect
-          onValueChange={(value) => setBarangay(value)}
-          items={barangays} // Use fetched barangays here
-          style={pickerSelectStyles}
-          placeholder={{
-            label: 'Select your barangay',
-            value: null,
-            color: '#AAB4C1',
-          }}
-          Icon={() => {
-            return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-          }}
-          value={barangay}
-        />
+            <Text style={styles.label}>City</Text>
+            <TextInput
+              style={styles.input}
+              value={city}
+              editable={false}
+              selectTextOnFocus={false}
+            />
 
-      <Text style={styles.label}>City</Text>
-      <TextInput
-        style={styles.input}
-        value={city}
-        editable={false}  
-        selectTextOnFocus={false}  
-      />
+            <Text style={styles.label}>Business Days</Text>
+            <TextInput
+              style={styles.input}
+              value={businessDays}
+              editable={false}
+              selectTextOnFocus={false}
+            />
 
-      <Text style={styles.label}>Business Days</Text>
-      <TextInput
-        style={styles.input}
-        value={businessDays}
-        editable={false}  
-        selectTextOnFocus={false}  
-      />
+            <Text style={styles.label}>Store Hours</Text>
+            <TextInput
+              style={styles.input}
+              value={`${openingHours} - ${closingHours}`}
+              editable={false}
+              selectTextOnFocus={false}
+            />
 
-      <Text style={styles.label}>Store Hours</Text>
-      <TextInput
-        style={styles.input}
-        value={`${openingHours} - ${closingHours}`}
-        editable={false}  
-        selectTextOnFocus={false}  
-      />
+          </View>
 
-      </View>
-
-      <TouchableOpacity style={styles.changePasswordContainer}  onPress={() => router.push('/screens/PharmacyOwner/Profile/ChangePassword')}>
-        <Text style={styles.changePasswordText}>Change Password</Text>
-        <Ionicons name="chevron-forward" size={24} color="black" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
-        <Text style={styles.confirmButtonText}>CONFIRM</Text>
-      </TouchableOpacity>
-      </>
+          <TouchableOpacity
+            style={styles.changePasswordContainer}
+            onPress={() => router.push({ pathname: '/screens/Auth/ChangePassword/ChangePassword', params: { userId } })}
+          >
+            <Text style={styles.changePasswordText}>Change Password</Text>
+            <Ionicons name="chevron-forward" size={24} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
+            <Text style={styles.confirmButtonText}>CONFIRM</Text>
+          </TouchableOpacity>
+        </>
       )}
     </KeyboardAwareScrollView>
   );
@@ -353,7 +358,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 10,
-    marginBottom:10,
+    marginBottom: 10,
   },
   selectImageText: {
     color: 'white',

@@ -43,12 +43,12 @@ export default function RootLayout() {
             <Stack.Screen name="screens/Auth/ForgotPassword/ResetPassword" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Auth/OTPVerification/ReVerifyOTP" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Auth/OTPVerification/VerifyOTP" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Auth/ChangePassword/ChangePassword" options={{ headerShown: false }} />
 
             {/* USER */}
             <Stack.Screen name="screens/User/Account/CustomerSignupScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/EditProfileScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/ViewProfileScreen" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/User/Profile/ChangePassword" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/SuggestedMedicine" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/Maps" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/Settings" options={{ headerShown: false }} />
@@ -69,57 +69,55 @@ export default function RootLayout() {
             <Stack.Screen name="screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Dashboard" options={{ headerShown: false }} />
 
-              {/* PROFILE */}
-              <Stack.Screen name="screens/PharmacyOwner/Profile/ViewProfile" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/Profile/EditPharmacyProfileScreen" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/Profile/ChangePassword" options={{ headerShown: false }} />
+            {/* PROFILE */}
+            <Stack.Screen name="screens/PharmacyOwner/Profile/ViewProfile" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/PharmacyOwner/Profile/EditPharmacyProfileScreen" options={{ headerShown: false }} />
 
-              {/* MEDICATIONS */}
-              <Stack.Screen name="screens/PharmacyOwner/Medications/ListMedications" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/Medications/EditMedication" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/Medications/ReadMedication" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/PharmacyOwner/Medications/CreateMedicines" options={{ headerShown: false }} />
+            {/* MEDICATIONS */}
+            <Stack.Screen name="screens/PharmacyOwner/Medications/ListMedications" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/PharmacyOwner/Medications/EditMedication" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/PharmacyOwner/Medications/ReadMedication" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/PharmacyOwner/Medications/CreateMedicines" options={{ headerShown: false }} />
 
             {/* ADMIN */}
             <Stack.Screen name="screens/Admin/dashboard" options={{ headerShown: false }} />
 
-              {/* USERS CRUD */}
-              <Stack.Screen name="screens/Admin/Users/ListUsers" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Users/ReadUser" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Users/EditUser" options={{ headerShown: false }} />
+            {/* USERS CRUD */}
+            <Stack.Screen name="screens/Admin/Users/ListUsers" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Users/ReadUser" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Users/EditUser" options={{ headerShown: false }} />
 
-              {/* PHARMACIES CRUD */}
-              <Stack.Screen name="screens/Admin/Pharmacies/ListPharmacies" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Pharmacies/ReadPharmacy" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Pharmacies/EditPharmacy" options={{ headerShown: false }} />
+            {/* PHARMACIES CRUD */}
+            <Stack.Screen name="screens/Admin/Pharmacies/ListPharmacies" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Pharmacies/ReadPharmacy" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Pharmacies/EditPharmacy" options={{ headerShown: false }} />
 
-          {/* BARANGAY CRUD */}
-          <Stack.Screen name="screens/Admin/Barangay/ListBarangay" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/Barangay/CreateBarangay" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/Barangay/ReadBarangay" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/Barangay/EditBarangay" options={{ headerShown: false }} />
+            {/* BARANGAY CRUD */}
+            <Stack.Screen name="screens/Admin/Barangay/ListBarangay" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Barangay/CreateBarangay" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Barangay/ReadBarangay" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Barangay/EditBarangay" options={{ headerShown: false }} />
 
-          {/* CATEGORY CRUD */}
-          <Stack.Screen name="screens/Admin/MedicationCategory/ListCategories" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/MedicationCategory/CreateCategory" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/MedicationCategory/ReadCategory" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/MedicationCategory/EditCategory" options={{ headerShown: false }} />
-          
-          {/* MEDICINE CRUD */}
-          <Stack.Screen name="screens/Admin/Medications/ListMedications" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/Medications/CreateMedication" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/Medications/ReadMedication" options={{ headerShown: false }} />
-          <Stack.Screen name="screens/Admin/Medications/EditMedication" options={{ headerShown: false }} />
-              {/* PROFILE */}
-              <Stack.Screen name="screens/Admin/Profile/ViewProfile" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Profile/EditProfileScreen" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Profile/ChangePassword" options={{ headerShown: false }} />
+            {/* CATEGORY CRUD */}
+            <Stack.Screen name="screens/Admin/MedicationCategory/ListCategories" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/MedicationCategory/CreateCategory" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/MedicationCategory/ReadCategory" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/MedicationCategory/EditCategory" options={{ headerShown: false }} />
 
-              {/* CHARTS */}
-              <Stack.Screen name="screens/Admin/Charts/PharmaciesPerBarangay" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Charts/MostScannedMedication" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Charts/MonthlyPharmacyRegistration" options={{ headerShown: false }} />
-              <Stack.Screen name="screens/Admin/Charts/MedicinesPerCategory" options={{ headerShown: false }} />
+            {/* MEDICINE CRUD */}
+            <Stack.Screen name="screens/Admin/Medications/ListMedications" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Medications/CreateMedication" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Medications/ReadMedication" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Medications/EditMedication" options={{ headerShown: false }} />
+            {/* PROFILE */}
+            <Stack.Screen name="screens/Admin/Profile/ViewProfile" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Profile/EditProfileScreen" options={{ headerShown: false }} />
+
+            {/* CHARTS */}
+            <Stack.Screen name="screens/Admin/Charts/PharmaciesPerBarangay" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Charts/MostScannedMedication" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Charts/MonthlyPharmacyRegistration" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Charts/MedicinesPerCategory" options={{ headerShown: false }} />
 
 
             {/* DRAWER */}

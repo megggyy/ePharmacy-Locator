@@ -570,6 +570,8 @@ router.put('/change-password', async (req, res) => {
 
     // Validate input
 
+    console.log(userId)
+
     if (newPassword !== confirmPassword) {
         return res.status(400).json({ message: 'Passwords do not match' });
     }
@@ -584,7 +586,7 @@ router.put('/change-password', async (req, res) => {
         // Verify the old password
         const isMatch = await bcrypt.compare(oldPassword, user.passwordHash);
         if (!isMatch) {
-            return res.status(400).json({ message: 'Old password is incorrect' });
+            return res.status(400).json({ message: 'NOT_MATCH' });
         }
 
         // Hash the new password

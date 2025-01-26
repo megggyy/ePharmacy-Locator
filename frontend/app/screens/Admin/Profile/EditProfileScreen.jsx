@@ -12,6 +12,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 export default function EditProfile() {
   const router = useRouter();
+  const [userId, setUserId] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
@@ -39,6 +40,7 @@ export default function EditProfile() {
         });
 
         const { name, email, contactNumber, street, barangay, city } = response.data;
+        setUserId(userId);
         setName(name);
         setEmail(email);
         setMobile(contactNumber);
@@ -172,10 +174,13 @@ export default function EditProfile() {
           onChangeText={setCity}
         />
       </View>
-      <TouchableOpacity style={styles.changePasswordContainer}  onPress={() => router.push('/screens/Admin/Profile/ChangePassword')}>
-        <Text style={styles.changePasswordText}>Change Password</Text>
-        <Ionicons name="chevron-forward" size={24} color="black" />
-      </TouchableOpacity>
+      <TouchableOpacity
+            style={styles.changePasswordContainer}
+            onPress={() => router.push({ pathname: '/screens/Auth/ChangePassword/ChangePassword', params: { userId } })}
+          >
+            <Text style={styles.changePasswordText}>Change Password</Text>
+            <Ionicons name="chevron-forward" size={24} color="black" />
+          </TouchableOpacity>
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirmButtonText}>CONFIRM</Text>
       </TouchableOpacity>

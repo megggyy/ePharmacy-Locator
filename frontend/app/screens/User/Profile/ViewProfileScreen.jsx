@@ -92,13 +92,6 @@ export default function ViewProfile() {
         <Text style={styles.label}>Address</Text>
         <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
 
-        <Text style={styles.label}>Disease</Text>
-        <TextInput
-          style={styles.input}
-          value={userData.disease || 'N/A'}
-          editable={false}
-        />
-
       </View>
       </>
       )}

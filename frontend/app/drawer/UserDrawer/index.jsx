@@ -97,10 +97,10 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Edit Profile</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Features/SuggestedMedicine')}>
+        {/* <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Features/SuggestedMedicine')}>
           <FontAwesome5 name="prescription-bottle" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Suggested Medicine</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/User/Features/Maps')}>
           <FontAwesome5 name="map-marker-alt" size={25} color="#5A5A5A" />
