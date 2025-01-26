@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
+  Modal,
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  ScrollView,
   Image,
   Platform
 } from 'react-native';
@@ -53,7 +55,37 @@ const PharmacyOwnerSignupScreen = () => {
   const [closingHour, setClosingHour] = useState(new Date());
   const [showOpeningTime, setShowOpeningTime] = useState(false);
   const [showClosingTime, setShowClosingTime] = useState(false);
-
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+    const CustomCheckBox = ({ value, onValueChange }) => {
+      return (
+        <TouchableOpacity
+          onPress={() => onValueChange(!value)}
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginVertical: 8,
+          }}
+        >
+          <View
+            style={{
+              width: 24,
+              height: 24,
+              borderRadius: 4,
+              borderWidth: 2,
+              borderColor: value ? '#007BFF' : '#AAB4C1',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: value ? '#007BFF' : 'transparent',
+            }}
+          >
+            {value && (
+              <Ionicons name="checkmark" size={16} color="white" />
+            )}
+          </View>
+        </TouchableOpacity>
+      );
+    };
   useEffect(() => {
     // Fetch barangay list from API
     axios.get(`${baseURL}barangays`)
@@ -179,7 +211,7 @@ const PharmacyOwnerSignupScreen = () => {
     if (permits.length === 0) errorMessages.permits = "PLEASE UPLOAD YOUR BUSINESS PERMIT";
     if (!businessDays) errorMessages.businessDays = "PLEASE SELECT BUSINESS DAYS";
     if (!openingHour || !closingHour) errorMessages.hours = "PLEASE SELECT OPENING AND CLOSING HOURS";
-
+    if (!agreedToTerms) errorMessages.terms = 'YOU MUST AGREE TO THE TERMS AND CONDITIONS';
     return errorMessages;
   };
   const register = () => {
@@ -551,7 +583,20 @@ const PharmacyOwnerSignupScreen = () => {
         </View>
         {error.permits && <Text style={styles.errorText}>{error.permits}</Text>}
 
+        <View style={styles.checkboxContainer}>
+        <CustomCheckBox
+          value={agreedToTerms}
+          onValueChange={(newValue) => setAgreedToTerms(newValue)}
+        />
+        <Text style={styles.label}>
+          I agree to the
+          <Text style={styles.link} onPress={() => setIsTermsOpen(true)}>
+            {' Terms and Conditions'}
+          </Text>
+        </Text>
+      </View>
 
+      {error.terms && <Text style={styles.errorText}>{error.terms}</Text>}
         {/* Sign up Button */}
         <TouchableOpacity style={styles.signUpButton} onPress={() => register()}>
           <Text style={styles.signUpButtonText}>Sign up</Text>
@@ -565,6 +610,57 @@ const PharmacyOwnerSignupScreen = () => {
           Login
         </Text>
       </Text>
+      <Modal
+      visible={isTermsOpen}
+      transparent
+      animationType="slide"
+      onRequestClose={() => setIsTermsOpen(false)}
+    >
+      <View style={styles.modalOverlay}>
+        <View style={styles.modalContent}>
+          <Text style={styles.modalTitle}>Pharmacy Owner Terms and Conditions</Text>
+          <ScrollView style={styles.modalBody}>
+            <Text style={styles.modalText}>
+              Welcome to ePharmacy Locator. By using our service, you agree to the following terms:
+            </Text>
+            <Text style={styles.modalText}>
+              By signing up as a Pharmacy Owner, you agree to the following terms:
+            </Text>
+            <Text style={styles.listItem}>
+              • You are required to upload your valid business permit, which will be subject to approval by the admins.
+            </Text>
+            <Text style={styles.listItem}>
+              • Your account must be verified before access is granted to the platform. An email will be sent once approved.
+            </Text>
+            <Text style={styles.listItem}>
+              • Once approved, you will be able to pin your pharmacy location on the map and provide your pharmacy's address for users to find.
+            </Text>
+            <Text style={styles.listItem}>
+              • You will manage your own medicines, including adding, editing, and deleting them as necessary.
+            </Text>
+            <Text style={styles.listItem}>
+              • You will update your stock regularly. The stock update details, including the last update time, will be visible to users for transparency.
+            </Text>
+            <Text style={styles.listItem}>
+              • As a Pharmacy Owner, you are responsible for keeping your pharmacy's information accurate and up to date.
+            </Text>
+            <Text style={styles.listItem}>
+              • You are responsible for managing your profile and editing your details as needed.
+            </Text>
+          </ScrollView>
+          <TouchableOpacity
+            style={styles.closeButton}
+            onPress={() => {
+              setAgreedToTerms(true);
+              setIsTermsOpen(false);
+            }}
+          >
+            <Text style={styles.closeButtonText}>I Agree</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </Modal>
+
     </KeyboardAwareScrollView>
   );
 };
@@ -834,6 +930,87 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
   },
+     // modal
+     modalContainer: {
+      padding: 20,
+      flex: 1,
+      justifyContent: 'center',
+    },
+    checkboxContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 10,
+    },
+    label: {
+      fontSize: 16,
+      color: '#333',
+    },
+    link: {
+      color: '#007BFF',
+      textDecorationLine: 'underline',
+    },
+    errorText: {
+      color: 'red',
+      fontSize: 14,
+      marginBottom: 10,
+    },
+    registerButton: {
+      backgroundColor: '#28a745',
+      padding: 15,
+      borderRadius: 5,
+      alignItems: 'center',
+    },
+    registerButtonText: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    modalOverlay: {
+      flex: 1,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    modalContent: {
+      width: '90%',
+      backgroundColor: '#fff',
+      borderRadius: 10,
+      padding: 20,
+    },
+    modalTitle: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      marginBottom: 15,
+      textAlign: 'center',
+    },
+    modalBody: {
+      maxHeight: 300,
+      marginBottom: 20,
+    },
+    modalText: {
+      fontSize: 16,
+      color: '#333',
+      marginBottom: 10,
+    },
+    listItem: {
+      marginLeft: 20,
+      marginVertical: 2,
+      fontSize: 14,
+      color: '#4A4A4A',
+    },
+    bold: {
+      fontWeight: 'bold',
+    },
+    closeButton: {
+      backgroundColor: '#007BFF',
+      padding: 10,
+      borderRadius: 5,
+      alignItems: 'center',
+    },
+    closeButtonText: {
+      color: '#fff',
+      fontSize: 16,
+    },
 });
 
 const pickerSelectStyles = StyleSheet.create({

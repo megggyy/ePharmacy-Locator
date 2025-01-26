@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
+  Modal,
   TextInput,
   TouchableOpacity,
   StyleSheet,
@@ -47,7 +48,39 @@ const CustomerSignup = () => {
   const [barangays, setBarangays] = useState([]);
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
+  const CustomCheckBox = ({ value, onValueChange }) => {
+    return (
+      <TouchableOpacity
+        onPress={() => onValueChange(!value)}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginVertical: 8,
+        }}
+      >
+        <View
+          style={{
+            width: 24,
+            height: 24,
+            borderRadius: 4,
+            borderWidth: 2,
+            borderColor: value ? '#007BFF' : '#AAB4C1',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: value ? '#007BFF' : 'transparent',
+          }}
+        >
+          {value && (
+            <Ionicons name="checkmark" size={16} color="white" />
+          )}
+        </View>
+      </TouchableOpacity>
+    );
+  };
+  
   useEffect(() => {
 
     const fetchBarangays = async () => {
@@ -143,8 +176,7 @@ const CustomerSignup = () => {
     }    if (!street) errorMessages.street = "STREET IS REQUIRED";
     if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE IMAGE";
-
-
+    if (!agreedToTerms) errorMessages.terms = 'YOU MUST AGREE TO THE TERMS AND CONDITIONS';
     return errorMessages;
   };
 
@@ -339,17 +371,14 @@ const CustomerSignup = () => {
         {latitude && longitude && (
           <View style={styles.locationInfo}>
           <Text style={styles.locationPin}>
-            Latitude: {latitude.toFixed(5)}...
+            {latitude.toFixed(5)}...
           </Text>
           <Text style={styles.locationPin}>
-            Longitude: {longitude.toFixed(5)}...
+           {longitude.toFixed(5)}...
           </Text>
         </View>
         
         )}
-
-       
-
         {/* Upload Images UI */}
         <Text style={styles.uploadLabel}>Upload Your Image</Text>
         <View style={styles.uploadContainer}>
@@ -370,10 +399,80 @@ const CustomerSignup = () => {
         </View>
         {errors.images && <Text style={styles.errorImages}>{errors.images}</Text>}
 
+        <View style={styles.checkboxContainer}>
+        <CustomCheckBox
+          value={agreedToTerms}
+          onValueChange={(newValue) => setAgreedToTerms(newValue)}
+        />
+        <Text style={styles.label}>
+          I agree to the
+          <Text style={styles.link} onPress={() => setIsTermsOpen(true)}>
+            {' Terms and Conditions'}
+          </Text>
+        </Text>
+      </View>
+
+      {errors.terms && <Text style={styles.errorText}>{errors.terms}</Text>}
         {/* Sign Up Button */}
         <TouchableOpacity style={styles.signUpButton} onPress={() => register()}>
           <Text style={styles.signUpButtonText}>Sign up</Text>
         </TouchableOpacity>
+        <Modal
+        visible={isTermsOpen}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setIsTermsOpen(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Terms and Conditions</Text>
+            <ScrollView style={styles.modalBody}>
+              <Text style={styles.modalText}>
+                Welcome to ePharmacy Locator. By using our service, you agree to the following terms:
+              </Text>
+              <Text style={styles.modalText}>
+                1. <Text style={styles.bold}>User Privacy:</Text> We are committed to protecting your privacy. All personal data
+                shared with us will be stored securely and will only be used for the purpose of providing services related to
+                ePharmacy Locator.
+              </Text>
+              <Text style={styles.modalText}>
+                2. <Text style={styles.bold}>Pharmacy Responsibility:</Text> Pharmacies are responsible for providing accurate
+                and up-to-date information regarding their locations, stock of medicines, and operating hours.
+              </Text>
+              <Text style={styles.modalText}>
+                3. <Text style={styles.bold}>Medicine Stock Information:</Text> The system displays medicine stock information
+                provided by pharmacies. We are not responsible for any inaccuracies or discrepancies in stock data.
+              </Text>
+              <Text style={styles.modalText}>
+                4. <Text style={styles.bold}>Limitation of Liability:</Text> ePharmacy Locator is not responsible for any
+                consequences arising from the use of the information provided by pharmacies.
+              </Text>
+              <Text style={styles.modalText}>
+                5. <Text style={styles.bold}>User Actions:</Text> Users of ePharmacy Locator are verified and are restricted to the following actions:
+                <Text>{'\n'}</Text>
+                <Text style={styles.listItem}>• Searching for medicines and pharmacies.</Text> <Text>{'\n'}</Text>
+                <Text style={styles.listItem}>• Locating pharmacies by search, nearby, or all pharmacies.</Text> <Text>{'\n'}</Text>
+                <Text style={styles.listItem}>• Uploading prescriptions for pharmacy verification.</Text> <Text>{'\n'}</Text>
+                <Text style={styles.listItem}>• Managing their profile information.</Text>
+              </Text>
+              <Text style={styles.modalText}>
+                6. <Text style={styles.bold}>Terms of Use:</Text> By agreeing to these terms, you confirm that you will not misuse the system,
+                provide false or misleading information, or engage in any activity that could harm the functionality of the platform or other users.
+              </Text>
+            </ScrollView>
+      <TouchableOpacity
+            style={styles.closeButton}
+            onPress={() => {
+              setAgreedToTerms(true);
+              setIsTermsOpen(false);
+            }}
+          >
+            <Text style={styles.closeButtonText}>I Agree</Text>
+          </TouchableOpacity>
+          </View>
+        </View>
+        </Modal>
+
       </View>
     </KeyboardAwareScrollView>
   );
@@ -589,5 +688,86 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     fontSize: 16,
     color: '#333',
+  },
+  // modal
+  modalContainer: {
+    padding: 20,
+    flex: 1,
+    justifyContent: 'center',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  label: {
+    fontSize: 16,
+    color: '#333',
+  },
+  link: {
+    color: '#007BFF',
+    textDecorationLine: 'underline',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 14,
+    marginBottom: 10,
+  },
+  registerButton: {
+    backgroundColor: '#28a745',
+    padding: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  registerButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContent: {
+    width: '90%',
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 20,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  modalBody: {
+    maxHeight: 300,
+    marginBottom: 20,
+  },
+  modalText: {
+    fontSize: 16,
+    color: '#333',
+    marginBottom: 10,
+  },
+  listItem: {
+    marginLeft: 20,
+    marginVertical: 2,
+    fontSize: 14,
+    color: '#4A4A4A',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+  closeButton: {
+    backgroundColor: '#007BFF',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  closeButtonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });
