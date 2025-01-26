@@ -16,7 +16,6 @@ const HomeScreen = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // Fetch data on component mount
   useFocusEffect(
     React.useCallback(() => {
       // Fetch categories
@@ -28,12 +27,33 @@ const HomeScreen = () => {
       axios.get(`${baseURL}pharmacies`)
         .then(response => setPharmacies(response.data))
         .catch(error => console.error('Error fetching pharmacies:', error));
-        
+
       // Fetch medications
       axios.get(`${baseURL}medicine`)
         .then(response => setMedications(response.data))
         .catch(error => console.error('Error fetching medications:', error));
-    }, []) // Empty dependency array to run only once when the component mounts
+
+      // Set up the interval for periodic fetching every 5 seconds
+      const intervalId = setInterval(() => {
+         // Refetch categories
+        axios.get(`${baseURL}medication-category`)
+        .then(response => setCategories(response.data))
+        .catch(error => console.error('Error fetching categories:', error));
+
+        // Refetch medications
+        axios.get(`${baseURL}medicine`)
+          .then(response => setMedications(response.data))
+          .catch(error => console.error('Error fetching medications during polling:', error));
+
+        // Refetch pharmacies
+        axios.get(`${baseURL}pharmacies`)
+          .then(response => setPharmacies(response.data))
+          .catch(error => console.error('Error fetching pharmacies during polling:', error));
+      }, 1000); // 5-second interval
+
+      // Cleanup function to clear the interval when the screen is unfocused or unmounted
+      return () => clearInterval(intervalId);
+    }, []) // Empty dependency array to ensure it runs once when the component mounts or refocuses
   );
 
   // Handle search input change
@@ -55,10 +75,25 @@ const HomeScreen = () => {
   );
 
 
-  const filteredMedications = medications.filter((medication) =>
-    medication.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    medication.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+    // Helper function to get unique medications by name
+    const getUniqueMedications = (medications) => {
+      const uniqueNames = new Set();
+      return medications.filter((medication) => {
+        if (uniqueNames.has(medication.name)) {
+          return false;
+        }
+        uniqueNames.add(medication.name);
+        return true;
+      });
+    };
+
+    // Filter medications based on search query and remove duplicates by name
+    const filteredMedications = getUniqueMedications(
+      medications.filter((medication) =>
+        medication.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    );
+
 
   const handleCategoryPress = (categoryId, categoryName) => {
     setSelectedCategory(categoryId);
