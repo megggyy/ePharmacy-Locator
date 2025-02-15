@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
+import React, { useState, useCallback } from 'react';
+import { useFocusEffect } from "@react-navigation/native";
+import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
 
@@ -11,17 +11,36 @@ export default function CreateCategory() {
 
   // State for new category details
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
   const [token, setToken] = useState();
+  const [categoriesList, setCategoriesList] = useState([]);
+  const [filteredCategories, setFilteredCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+
+  useFocusEffect(
+    useCallback(() => {
+      axios
+        .get(`${baseURL}medication-category`)
+        .then((res) => {
+          setCategoriesList(res.data);
+          setFilteredCategories(res.data);
+          setLoading(false);
+        })
+        .catch((err) => console.error(err));
+
+      return () => {
+        setCategoriesList([]);
+        setFilteredCategories([]);
+        setLoading(true);
+      };
+    }, [])
+  );
 
   const handleCreate = async () => {
     const formData = new FormData();
-
     formData.append('name', name);
-    formData.append('description', description);
 
     try {
-      // Make POST request to create category
       const config = {
         headers: {
           "Content-Type": "application/json",
@@ -37,6 +56,25 @@ export default function CreateCategory() {
       console.error('Error creating category:', error);
       Alert.alert('Error', 'Failed to create category');
     }
+  };
+
+  // Handle text input change and filter category list
+  const handleInputChange = (text) => {
+    setName(text);
+    if (text.trim() === '') {
+      setFilteredCategories([]);
+    } else {
+      const filtered = categoriesList.filter(category =>
+        category.name.toLowerCase().includes(text.toLowerCase())
+      );
+      setFilteredCategories(filtered);
+    }
+  };
+
+  // Handle selecting a category from suggestions
+  const handleSelectCategory = (categoryName) => {
+    setName(categoryName);
+    setFilteredCategories([]); // Hide suggestions after selection
   };
 
   return (
@@ -55,19 +93,27 @@ export default function CreateCategory() {
         <TextInput
           style={styles.input}
           value={name}
-          onChangeText={setName}
+          onChangeText={handleInputChange}
           placeholder="Enter category name"
         />
 
-        <Text style={styles.label}>Description</Text>
-        <TextInput
-          style={[styles.input, styles.textArea]} 
-          value={description}
-          onChangeText={setDescription}
-          placeholder="Enter description"
-          multiline={true} 
-          textAlignVertical="top"
-        />
+        {/* Category suggestions dropdown */}
+        {filteredCategories.length > 0 && (
+          <View style={styles.suggestionsContainer}>
+            <FlatList
+              data={filteredCategories}
+              keyExtractor={(item) => item.id.toString()}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  style={styles.suggestionItem}
+                  onPress={() => handleSelectCategory(item.name)}
+                >
+                  <Text style={styles.suggestionText}>{item.name}</Text>
+                </TouchableOpacity>
+              )}
+            />
+          </View>
+        )}
       </View>
 
       {/* Create Button */}
@@ -100,7 +146,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-
   inputContainer: {
     backgroundColor: 'white',
     borderRadius: 10,
@@ -118,14 +163,25 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 8,
-    marginBottom: 15,
-    textAlign: 'justify'
+    marginBottom: 5,
+    textAlign: 'justify',
   },
-  textArea: {
-    height: 100,
-    paddingTop: 10,
+  suggestionsContainer: {
+    backgroundColor: 'white',
+    borderRadius: 5,
+    maxHeight: 150,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    marginTop: 5,
   },
-
+  suggestionItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+  suggestionText: {
+    fontSize: 16,
+  },
   confirmButton: {
     backgroundColor: '#005b7f',
     paddingVertical: 15,

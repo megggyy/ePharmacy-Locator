@@ -9,7 +9,6 @@ export default function EditCategory() {
   const router = useRouter();
   const { id } = useLocalSearchParams();
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
   const [token, setToken] = useState();
 
   useEffect(() => {
@@ -18,7 +17,6 @@ export default function EditCategory() {
         const response = await axios.get(`${baseURL}medication-category/${id}`);
         const category = response.data;
         setName(category.name);
-        setDescription(category.description);
       } catch (error) {
         console.error('Error fetching category:', error);
         Alert.alert('Error', 'Failed to load category details');
@@ -31,7 +29,6 @@ export default function EditCategory() {
     const formData = new FormData();
 
     formData.append('name', name);
-    formData.append('description', description);
 
     try {
       const config = {
@@ -65,14 +62,6 @@ export default function EditCategory() {
           value={name}
           onChangeText={setName}
           placeholder="Enter category name"
-        />
-        <Text style={styles.label}>Description</Text>
-        <TextInput
-          style={styles.input}
-          value={description}
-          onChangeText={setDescription}
-          placeholder="Enter category description"
-          multiline
         />
       </View>
 

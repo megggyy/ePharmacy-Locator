@@ -3,22 +3,10 @@ const { MedicationCategory } = require("../models/medication-category");
 const { uploadOptions } = require("../utils/cloudinary");
 const router = express.Router();
 
-// Create a medication category with image upload
-router.post("/create", (req, res, next) => {
-    req.folder = "medicationcategory"; // Set the folder name
-    next();
-}, uploadOptions.array("images", 10), async (req, res) => {
-    const files = req.files;
-    let imagePaths = [];
-
-    if (files) {
-        imagePaths = files.map((file) => file.path); // Cloudinary URLs
-    }
+router.post("/create", async (req, res) => {
 
     let medicationCategory = new MedicationCategory({
         name: req.body.name,
-        description: req.body.description,
-        images: imagePaths,
     });
 
     try {
@@ -28,7 +16,6 @@ router.post("/create", (req, res, next) => {
         res.status(400).send("The medication category cannot be created!");
     }
 });
-
 
 
 router.get('/', async (req, res) => {
@@ -52,23 +39,12 @@ router.get('/:id', async (req, res) => {
 });
 
 
-router.put("/update/:id", (req, res, next) => {
-    req.folder = "medicationcategory"; // Set the folder name
-    next();
-}, uploadOptions.array("images", 10), async (req, res) => {
-    const files = req.files;
-    let imagePaths = [];
-
-    if (files) {
-        imagePaths = files.map((file) => file.path); // Cloudinary URLs
-    }
-
+router.put("/update/:id", async (req, res) => {
+   
     const updatedCategory = await MedicationCategory.findByIdAndUpdate(
         req.params.id,
         {
             name: req.body.name,
-            description: req.body.description,
-            images: imagePaths.length ? imagePaths : undefined,
         },
         { new: true }
     );

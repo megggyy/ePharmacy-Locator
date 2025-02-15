@@ -5,6 +5,15 @@ const diseasesSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    type: {
+        type: String,
+        required: true,
+    },
+    medicine: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Medicine',
+        required: true,
+    }],
 })
 
 diseasesSchema.virtual('id').get(function () {

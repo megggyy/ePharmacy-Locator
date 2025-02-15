@@ -20,12 +20,16 @@ import { useRouter } from 'expo-router';
 import baseURL from "../../../../assets/common/baseurl";
 import Spinner from "../../../../assets/common/spinner";
 
+const ITEMS_PER_PAGE = 10;
+
 const MedicationCategoriesScreen = () => {
   const router = useRouter();
   const [categoriesList, setCategoriesList] = useState([]);
   const [categoriesFilter, setCategoriesFilter] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const [page, setPage] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(ITEMS_PER_PAGE);
 
   const searchCategories = (text) => {
     if (text === "") {
@@ -37,32 +41,30 @@ const MedicationCategoriesScreen = () => {
         )
       );
     }
+    setPage(0);
   };
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     setTimeout(() => {
-        axios
-        .get(`${baseURL}medication-category`)
-            .then((res) => {
-                // console.log(res.data)
-                setCategoriesList(res.data);
-                setCategoriesFilter(res.data);
-                setLoading(false);
-            })
-        setRefreshing(false);
-    }, 2000);
-}, []);
-
-  useFocusEffect(
-    useCallback(() => {
-      // Fetch categories
       axios
         .get(`${baseURL}medication-category`)
         .then((res) => {
           setCategoriesList(res.data);
           setCategoriesFilter(res.data);
-          console.log(res.data)
+          setLoading(false);
+        })
+      setRefreshing(false);
+    }, 2000);
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      axios
+        .get(`${baseURL}medication-category`)
+        .then((res) => {
+          setCategoriesList(res.data);
+          setCategoriesFilter(res.data);
           setLoading(false);
         })
         .catch((err) => console.error(err));
@@ -80,18 +82,22 @@ const MedicationCategoriesScreen = () => {
       await axios.delete(`${baseURL}medication-category/delete/${categoryId}`);
       setCategoriesList(categoriesList.filter(category => category._id !== categoryId));
       Alert.alert('Success', 'Category deleted successfully');
-
-      onRefresh()
+      onRefresh();
     } catch (error) {
       console.error('Error deleting category:', error);
       Alert.alert('Error', 'Failed to delete category');
     }
   };
 
+  const paginatedData = categoriesFilter.slice(
+    page * itemsPerPage,
+    (page + 1) * itemsPerPage
+  );
+
   return (
     <View style={styles.container}>
       {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
+        <Spinner />
       ) : (
         <>
           <View style={styles.header}>
@@ -115,7 +121,7 @@ const MedicationCategoriesScreen = () => {
               onPress={() => router.push('/screens/Admin/MedicationCategory/CreateCategory')}
               style={styles.createButton}
             >
-               <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
+              <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
               <Text style={styles.createButtonText}>Create Category</Text>
             </TouchableOpacity>
           </View>
@@ -124,12 +130,15 @@ const MedicationCategoriesScreen = () => {
             <Text style={styles.tableTitle}>MEDICINE CATEGORIES</Text>
             <DataTable>
               <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>DESCRIPTION</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ACTIONS</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>NAME</Text>
+                </DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>ACTIONS</Text>
+                </DataTable.Title>
               </DataTable.Header>
 
-              {categoriesFilter.map((item, index) => (
+              {paginatedData.map((item, index) => (
                 <TouchableOpacity
                   key={index}
                   onPress={() => router.push(`/screens/Admin/MedicationCategory/ReadCategory?id=${item._id}`)}
@@ -138,12 +147,8 @@ const MedicationCategoriesScreen = () => {
                   }}
                 >
                   <DataTable.Row style={styles.rowCell}>
-
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>{item.name}</Text>
-                    </DataTable.Cell>
-                    <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>{item.description}</Text>
                     </DataTable.Cell>
                     <DataTable.Cell style={styles.textCell}>
                       <View style={styles.actionCell}>
@@ -161,6 +166,25 @@ const MedicationCategoriesScreen = () => {
                   </DataTable.Row>
                 </TouchableOpacity>
               ))}
+
+              <DataTable.Pagination
+                style={styles.pagination}
+                page={page}
+                numberOfPages={Math.ceil(categoriesFilter.length / itemsPerPage)}
+                onPageChange={(newPage) => setPage(newPage)}
+                label={
+                  <Text style={styles.paginationText}>
+                    {`${page * itemsPerPage + 1}-${Math.min(
+                      (page + 1) * itemsPerPage,
+                      categoriesFilter.length
+                    )} of ${categoriesFilter.length}`}
+                  </Text>
+                }
+                theme={{
+                  colors: { text: "white", primary: "white" },
+                }}
+              />
+
             </DataTable>
           </ScrollView>
         </>
@@ -168,6 +192,7 @@ const MedicationCategoriesScreen = () => {
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
@@ -236,16 +261,6 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 13
   },
-  image: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-  },
-  imageCell: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 60,
-  },
   textCell: {
     flex: 1,
     justifyContent: 'center',
@@ -269,6 +284,15 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     marginHorizontal: 5,
+  },
+  pagination: {
+    backgroundColor: '#005b7f',
+    paddingVertical: 5,
+  },
+  paginationText: {
+    color: 'white',
+    fontSize: 15,
+    marginLeft: 100
   },
 });
 

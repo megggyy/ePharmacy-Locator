@@ -9,7 +9,7 @@ let baseURL = '';
 // }
 
 if (Platform.OS === 'ios' || Platform.OS === 'android') {
-    baseURL = 'http://192.168.68.101:4000/api/v1/';
+    baseURL = 'http://192.168.68.106:4000/api/v1/';
 } else {
     baseURL = 'http://192.168.68.240:4000/api/v1/';
 }

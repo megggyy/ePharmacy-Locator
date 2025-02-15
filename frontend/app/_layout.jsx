@@ -101,7 +101,6 @@ export default function RootLayout() {
             {/* CATEGORY CRUD */}
             <Stack.Screen name="screens/Admin/MedicationCategory/ListCategories" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/MedicationCategory/CreateCategory" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/Admin/MedicationCategory/ReadCategory" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/MedicationCategory/EditCategory" options={{ headerShown: false }} />
 
             {/* MEDICINE CRUD */}

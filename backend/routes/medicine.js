@@ -1,8 +1,11 @@
 const express = require('express');
 const { Medicine } = require('../models/medicine');
+const { Stock } = require('../models/pharmacyStock');
 const { Pharmacy } = require('../models/pharmacy');
 const { MedicationCategory } = require('../models/medication-category');
 const router = express.Router();
+const fs = require('fs');
+const path = require('path');
 
 // medicine per category chart
 router.get('/medicinesPerCategory', async (req, res) => {
@@ -33,9 +36,28 @@ router.get('/medicinesPerCategory', async (req, res) => {
         res.status(500).json({ success: false, message: 'Error fetching medicines per category' });
     }
 });
+
+// JSON MEDICINES
+router.get('/json', (req, res) => {
+    const filePath = path.join(__dirname, '../utils/medicines.json');
+
+    const readStream = fs.createReadStream(filePath, { encoding: 'utf8' });
+
+    res.setHeader('Content-Type', 'application/json');
+
+    readStream.on('error', (err) => {
+        res.status(500).json({ success: false, message: err.message });
+    });
+
+    readStream.pipe(res);
+});
+
+
 // Create Medicine
 router.post('/create', async (req, res) => {
-    const { name, stock, pharmacy, category } = req.body;
+    const { brandName, compositionOne, compositionTwo,
+        stock, expirationDate, pharmacy, category } = req.body;
+
     console.log(req.body)
 
     // Validate if pharmacy exists
@@ -46,24 +68,40 @@ router.post('/create', async (req, res) => {
     const categoryExists = await MedicationCategory.findOne({ name: category });
     if (!categoryExists) return res.status(400).send("Invalid Category name");
 
-    // Create new medicine document
-    let medicine = new Medicine({
-        name,
-        timeStamps: new Date(),  // This will store the current date and time
-        stock,
+    const medicineExists = await MedicationCategory.findOne({ brandName: brandName });
+    if (!medicineExists) {
+        let medicine = new Medicine({
+            brandName,
+            compositionOne,
+            compositionTwo
+        });
+        try {
+            medicine = await medicine.save();
+            medicineExists = medicine._id
+        } catch (err) {
+            res.status(500).send('The medicine cannot be created');
+        }
+    }
+
+    let pharmacyStock = new Stock({
+        medicine: medicineExists._id,
+        expirationDate:
+            [
+                {
+                    stock,
+                    expirationDate
+                }
+            ],
+        timeStamps: new Date(),  
         pharmacy: pharmacyExists._id,
         category: categoryExists._id,
     });
-    
-    console.log(medicine)
 
     try {
-        // Save the medicine document to the database
-        medicine = await medicine.save();
-        res.send(medicine); // Return the saved medicine
+        pharmacyStock = await pharmacyStock.save();
+        res.send(pharmacyStock); 
     } catch (err) {
-        // Handle any errors during the save process
-        res.status(500).send('The medicine cannot be created');
+        res.status(500).send('The pharmacy stock cannot be saved');
     }
 });
 
@@ -145,7 +183,7 @@ router.put('/update/:id', async (req, res) => {
             req.params.id,
             {
                 stock,
-                timeStamps: new Date(),  
+                timeStamps: new Date(),
             },
             { new: true }  // Return the updated document
         );

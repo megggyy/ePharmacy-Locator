@@ -1,28 +1,16 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
 const medicineSchema = mongoose.Schema({
-    name: {
+    brandName: {
         type: String,
         required: true,
     },
-    stock: {
-        type: Number, 
-        required: true,
-    },
-    timeStamps:
-    {
+    compositionOne: {
         type: String,
-        required: true
-    },
-    pharmacy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Pharmacy',
         required: true,
     },
-    category: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'MedicationCategory',
-        required: true,
+    compositionTwo: {
+        type: String,
     },
 });
 

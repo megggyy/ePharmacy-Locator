@@ -1,0 +1,1902 @@
+[
+    {
+      "disease": "Anemia",
+      "type": "Anemia",
+      "compositionOne": "lenalidomide"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Anemia Associated with Chronic Renal Failure",
+      "compositionOne": "darbepoetin alfa"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Anemia Associated with Iron Deficiency",
+      "compositionOne": "ferrous fumarate",
+      "compositionTwo": "folic acid"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Anemia, Chemotherapy Induced",
+      "compositionOne": "darbepoetin alfa"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Anemia, Megaloblastic",
+      "compositionOne": "folic acid"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Anemia, Sickle Cell",
+      "compositionOne": "hydroxyurea"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Anemia, Sickle Cell",
+      "compositionOne": "vitamin e"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Aplastic Anemia",
+      "compositionOne": "filgrastim"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Aplastic Anemia",
+      "compositionOne": "sargramostim"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Aplastic Anemia",
+      "compositionOne": "eltrombopag"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Hemolytic Anemia",
+      "compositionOne": "dexamethasone"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Hemolytic Anemia",
+      "compositionOne": "triamcinolone"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Iron Deficiency Anemia",
+      "compositionOne": "iron sucrose"
+    },
+    {
+      "disease": "Anemia",
+      "type": "Pernicious Anemia",
+      "compositionOne": "cyanocobalamin"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "clonazepam"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "alprazolam"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "lorazepam"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "buspirone"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "hydroxyzine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "diazepam"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "gabapentin"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "propranolol"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "trazodone"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "bupropion"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "clonidine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "venlafaxine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "duloxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "paroxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety",
+      "compositionOne": "mirtazapine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "sertraline"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "citalopram"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "fluoxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "amitriptyline"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "venlafaxine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "paroxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "prazosin"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Anxiety and Stress",
+      "compositionOne": "fluvoxamine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "quetiapine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "sertraline"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "citalopram"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "pregabalin"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "venlafaxine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "duloxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Generalized Anxiety Disorder",
+      "compositionOne": "paroxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Performance Anxiety",
+      "compositionOne": "propranolol"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Social Anxiety Disorder",
+      "compositionOne": "sertraline"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Social Anxiety Disorder",
+      "compositionOne": "paroxetine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Social Anxiety Disorder",
+      "compositionOne": "venlafaxine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Social Anxiety Disorder",
+      "compositionOne": "fluvoxamine"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Social Anxiety Disorder",
+      "compositionOne": "risperidone"
+    },
+    {
+      "disease": "Anxiety",
+      "type": "Social Anxiety Disorder",
+      "compositionOne": "atomoxetine"
+    },
+    {
+      "disease": "Appendicitis",
+      "type": "Appendicitis",
+      "compositionOne": "piperacillin",
+      "compositionTwo": " tazobactam"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Allergic Asthma",
+      "compositionOne": "terbutaline"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Allergic Asthma",
+      "compositionOne": "salmeterol"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "montelukast"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "ipratropium"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "methylprednisolone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "dexamethasone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "formoterol",
+      "compositionTwo": "mometasone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "triamcinolone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma",
+      "compositionOne": "ciclesonide"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, acute",
+      "compositionOne": "methylprednisolone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, acute",
+      "compositionOne": "hydrocortisone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, acute",
+      "compositionOne": "theophylline"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, acute",
+      "compositionOne": "dexamethasone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, acute",
+      "compositionOne": "terbutaline"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, Maintenance",
+      "compositionOne": "montelukast"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, Maintenance",
+      "compositionOne": "fluticasone"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, Maintenance",
+      "compositionOne": "budesonide"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, Maintenance",
+      "compositionOne": "budesonide",
+      "compositionTwo": "formoterol"
+    },
+    {
+      "disease": "Asthma",
+      "type": "Asthma, Maintenance",
+      "compositionOne": "theophylline"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "azithromycin"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "doxycycline"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "amoxicillin"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "guaifenesin"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "levofloxacin"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "clarithromycin"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "cefdinir"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "cefuroxime"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "sulfamethoxazole",
+      "compositionTwo": "trimethoprim"
+    },
+    {
+      "disease": "Bronchitis",
+      "type": "Bronchitis",
+      "compositionOne": "erythromycin"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Chronic Mucocutaneous Candidiasis",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Chronic Mucocutaneous Candidiasis",
+      "compositionOne": "ketoconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Cutaneous Candidiasis",
+      "compositionOne": "nystatin"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Cutaneous Candidiasis",
+      "compositionOne": "clotrimazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Cutaneous Candidiasis",
+      "compositionOne": "ketoconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Cutaneous Candidiasis",
+      "compositionOne": "miconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Cutaneous Candidiasis",
+      "compositionOne": "terbinafine"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Cutaneous Candidiasis",
+      "compositionOne": "ciclopirox"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "ketoconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "amphotericin b"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "itraconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "voriconazole"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "caspofungin"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "anidulafungin"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Esophageal Candidiasis",
+      "compositionOne": "micafungin"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Gastrointestinal Candidiasis",
+      "compositionOne": "nystatin"
+    },
+    {
+      "disease": "Candidiasis (Yeast Infection)",
+      "type": "Systemic Candidiasis",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Costochondritis",
+      "type": "Costochondritis",
+      "compositionOne": "ibuprofen"
+    },
+    {
+      "disease": "Costochondritis",
+      "type": "Costochondritis",
+      "compositionOne": "naproxen"
+    },
+    {
+      "disease": "Costochondritis",
+      "type": "Costochondritis",
+      "compositionOne": "lidocaine"
+    },
+    {
+      "disease": "Croup",
+      "type": "Croup",
+      "compositionOne": "dexamethasone"
+    },
+    {
+      "disease": "Dengue Fever",
+      "type": "Dengue Fever",
+      "compositionOne": "acetaminophen"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes Insipidus",
+      "compositionOne": "hydrochlorothiazide"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes Insipidus",
+      "compositionOne": "desmopressin"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes Insipidus",
+      "compositionOne": "vasopressin"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes Mellitus",
+      "compositionOne": "insulin degludec"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes Mellitus",
+      "compositionOne": "insulin aspart",
+      "compositionTwo": "insulin degludec"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 1",
+      "compositionOne": "insulin glargine"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 1",
+      "compositionOne": "insulin lispro"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 1",
+      "compositionOne": "insulin aspart"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 1",
+      "compositionOne": "insulin glulisine"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "metformin"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "glipizide"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "glimepiride"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "pioglitazone"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "liraglutide"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "sitagliptin"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 2",
+      "compositionOne": "metformin",
+      "compositionTwo": "sitagliptin"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Diabetes, Type 3c",
+      "compositionOne": "metformin"
+    },
+    {
+      "disease": "Diabetes",
+      "type": "Gestational Diabetes",
+      "compositionOne": "insulin isophane"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Campylobacter Gastroenteritis",
+      "compositionOne": "erythromycin"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Campylobacter Gastroenteritis",
+      "compositionOne": "ofloxacin"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Campylobacter Gastroenteritis",
+      "compositionOne": "minocycline"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Gastroenteritis",
+      "compositionOne": "ondansetron"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Gastroenteritis",
+      "compositionOne": "doxycycline"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Gastroenteritis",
+      "compositionOne": "ceftriaxone"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Gastroenteritis",
+      "compositionOne": "ampicillin"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Salmonella Gastroenteritis",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Salmonella Gastroenteritis",
+      "compositionOne": "ceftriaxone"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Salmonella Gastroenteritis",
+      "compositionOne": "ofloxacin"
+    },
+    {
+      "disease": "Gastroenteritis",
+      "type": "Salmonella Gastroenteritis",
+      "compositionOne": "cefotaxime"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "omeprazole"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "pantoprazole"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "ranitidine"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "famotidine"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "lansoprazole"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "esomeprazole"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "rabeprazole"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "sucralfate"
+    },
+    {
+      "disease": "GERD",
+      "type": "GERD",
+      "compositionOne": "dexlansoprazole"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout",
+      "compositionOne": "allopurinol"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout",
+      "compositionOne": "febuxostat"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout",
+      "compositionOne": "probenecid"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout, Acute",
+      "compositionOne": "colchicine"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout, Acute",
+      "compositionOne": "indomethacin"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout, Acute",
+      "compositionOne": "naproxen"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout, Acute",
+      "compositionOne": "ibuprofen"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout, Acute",
+      "compositionOne": "methylprednisolone"
+    },
+    {
+      "disease": "Gout",
+      "type": "Gout, Prophylaxis",
+      "compositionOne": "colchicine"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Autoimmune Hepatitis",
+      "compositionOne": "azathioprine"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Autoimmune Hepatitis",
+      "compositionOne": "budesonide"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Autoimmune Hepatitis",
+      "compositionOne": "mercaptopurine"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Autoimmune Hepatitis",
+      "compositionOne": "mycophenolate mofetil"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Chronic Active Hepatitis",
+      "compositionOne": "azathioprine"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis B",
+      "compositionOne": "entecavir"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis B",
+      "compositionOne": "lamivudine"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis B",
+      "compositionOne": "adefovir"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis B",
+      "compositionOne": "tenofovir alafenamide"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis C",
+      "compositionOne": "ribavirin"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis C",
+      "compositionOne": "ledipasvir",
+      "compositionTwo": " sofosbuvir"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis C",
+      "compositionOne": "sofosbuvir"
+    },
+    {
+      "disease": "Hepatitis",
+      "type": "Hepatitis C",
+      "compositionOne": "sofosbuvir",
+      "compositionTwo": "velpatasvir"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "lisinopril"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "amlodipine"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "losartan"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "hydrochlorothiazide"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "metoprolol"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "atenolol"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "carvedilol"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "furosemide"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "clonidine"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "enalapril"
+    },
+    {
+      "disease": "Hypertension",
+      "type": "Hypertension",
+      "compositionOne": "valsartan"
+    },
+    {
+      "disease": "Hypoglycemia",
+      "type": "Hypoglycemia",
+      "compositionOne": "glucagon"
+    },
+    {
+      "disease": "Hypotension",
+      "type": "Hypotension",
+      "compositionOne": "midodrine"
+    },
+    {
+      "disease": "Hypotension",
+      "type": "Hypotension",
+      "compositionOne": "norepinephrine"
+    },
+    {
+      "disease": "Hypotension",
+      "type": "Hypotension",
+      "compositionOne": "phenylephrine"
+    },
+    {
+      "disease": "Hypotension",
+      "type": "Hypotension",
+      "compositionOne": "ephedrine"
+    },
+    {
+      "disease": "Hypotension",
+      "type": "Induced Hypotension",
+      "compositionOne": "nitroprusside"
+    },
+    {
+      "disease": "Influenza",
+      "type": "Influenza",
+      "compositionOne": "amantadine"
+    },
+    {
+      "disease": "Influenza",
+      "type": "Influenza",
+      "compositionOne": "zanamivir"
+    },
+    {
+      "disease": "Influenza",
+      "type": "Influenza A",
+      "compositionOne": "amantadine"
+    },
+    {
+      "disease": "Influenza",
+      "type": "Influenza Prophylaxis",
+      "compositionOne": "amantadine"
+    },
+    {
+      "disease": "Influenza",
+      "type": "Influenza Prophylaxis",
+      "compositionOne": "zanamivir"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "trazodone"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "zolpidem"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "amitriptyline"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "lorazepam"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "clonazepam"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "mirtazapine"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "doxepin"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "quetiapine"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "eszopiclone"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "diphenhydramine"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "gabapentin"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia",
+      "compositionOne": "flurazepam"
+    },
+    {
+      "disease": "Insomnia",
+      "type": "Insomnia, Stimulant-Associated",
+      "compositionOne": "clonidine"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "sumatriptan"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "rizatriptan"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "gabapentin"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "cyclobenzaprine"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "diclofenac"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "naratriptan"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "almotriptan"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "zolmitriptan"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine",
+      "compositionOne": "eletriptan"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "topiramate"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "propranolol"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "amitriptyline"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "verapamil"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "nortriptyline"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "amlodipine"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "atenolol"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "baclofen"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "lisinopril"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "clonazepam"
+    },
+    {
+      "disease": "Migraine",
+      "type": "Migraine Prevention (Migraine Prophylaxis)",
+      "compositionOne": "zonisamide"
+    },
+    {
+      "disease": "Pancreatitis",
+      "type": "Chronic Pancreatitis",
+      "compositionOne": "pancreatin"
+    },
+    {
+      "disease": "Pancreatitis",
+      "type": "Pancreatitis",
+      "compositionOne": "pancreatin"
+    },
+    {
+      "disease": "Pancreatitis",
+      "type": "Pancreatitis",
+      "compositionOne": "albumin human"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Aspiration Pneumonia",
+      "compositionOne": "clindamycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Aspiration Pneumonia",
+      "compositionOne": "metronidazole"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Aspiration Pneumonia",
+      "compositionOne": "dexamethasone"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Aspiration Pneumonia",
+      "compositionOne": "lansoprazole"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Aspiration Pneumonia",
+      "compositionOne": "piperacillin",
+      "compositionTwo": "tazobactam"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Aspiration Pneumonia",
+      "compositionOne": "ampicillin",
+      "compositionTwo": "sulbactam"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Fungal Pneumonia",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Fungal Pneumonia",
+      "compositionOne": "voriconazole"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Legionella Pneumonia",
+      "compositionOne": "azithromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Legionella Pneumonia",
+      "compositionOne": "clarithromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Legionella Pneumonia",
+      "compositionOne": "erythromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Mycoplasma Pneumonia",
+      "compositionOne": "azithromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Mycoplasma Pneumonia",
+      "compositionOne": "clarithromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Mycoplasma Pneumonia",
+      "compositionOne": "doxycycline"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Mycoplasma Pneumonia",
+      "compositionOne": "erythromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Mycoplasma Pneumonia",
+      "compositionOne": "minocycline"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "meropenem"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "levofloxacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "vancomycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "linezolid"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "piperacillin",
+      "compositionTwo": "tazobactam"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "ceftazidime"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "cefepime"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Nosocomial Pneumonia",
+      "compositionOne": "amikacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "levofloxacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "clarithromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "ceftriaxone"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "azithromycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "doxycycline"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "amoxicillin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "clindamycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "cefdinir"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "sulfamethoxazole",
+      "compositionTwo": "trimethoprim"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "cefotaxime"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "metronidazole"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "moxifloxacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia",
+      "compositionOne": "cefuroxime"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia",
+      "compositionOne": "dapsone"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia",
+      "compositionOne": "sulfamethoxazole",
+      "compositionTwo": "trimethoprim"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia",
+      "compositionOne": "clindamycin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia",
+      "compositionOne": "trimethoprim"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia",
+      "compositionOne": "primaquine"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia Prophylaxis",
+      "compositionOne": "dapsone"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia Prophylaxis",
+      "compositionOne": "sulfamethoxazole",
+      "compositionTwo": "trimethoprim"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumocystis Pneumonia Prophylaxis",
+      "compositionOne": "pyrimethamine"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia with Cystic Fibrosis",
+      "compositionOne": "ceftazidime"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia with Cystic Fibrosis",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Pneumonia",
+      "type": "Pneumonia with Cystic Fibrosis",
+      "compositionOne": "piperacillin"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "cetirizine"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "loratadine"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "montelukast"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "fexofenadine"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "azelastine"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "diphenhydramine"
+    },
+    {
+      "disease": "Rhinitis",
+      "type": "Allergic Rhinitis",
+      "compositionOne": "levocetirizine"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Barbae (Beard Ringworm)",
+      "compositionOne": "griseofulvin"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Capitis  (Scalp Ringworm)",
+      "compositionOne": "terbinafine"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Capitis  (Scalp Ringworm)",
+      "compositionOne": "griseofulvin"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Capitis  (Scalp Ringworm)",
+      "compositionOne": "itraconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "betamethasone",
+      "compositionTwo": "clotrimazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "ketoconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "clotrimazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "terbinafine"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "miconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "griseofulvin"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "tolnaftate"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Corporis (Body Ringworm)",
+      "compositionOne": "ciclopirox"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "betamethasone",
+      "compositionTwo": "clotrimazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "ketoconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "clotrimazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "terbinafine"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "miconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "tolnaftate"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "ciclopirox"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Cruris (Jock Itch)",
+      "compositionOne": "griseofulvin"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "clotrimazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "ketoconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "terbinafine"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "terbinafine"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "betamethasone",
+      "compositionTwo": "clotrimazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "tolnaftate"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "ciclopirox"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "miconazole"
+    },
+    {
+      "disease": "Tinea (Ringworm) Infection",
+      "type": "Tinea Pedis (Athlete's Foot)",
+      "compositionOne": "griseofulvin"
+    },
+    {
+      "disease": "Scabies",
+      "type": "Scabies",
+      "compositionOne": "permethrin"
+    },
+    {
+      "disease": "Scabies",
+      "type": "Scabies",
+      "compositionOne": "ivermectin"
+    },
+    {
+      "disease": "Scabies",
+      "type": "Scabies",
+      "compositionOne": "crotamiton"
+    },
+    {
+      "disease": "Scabies",
+      "type": "Scabies",
+      "compositionOne": "lindane"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "levetiracetam"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "phenytoin"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "diazepam"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "oxcarbazepine"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "zonisamide"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "topiramate"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "valproic acid"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizures (Convulsions)",
+      "compositionOne": "primidone"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prevention (Seizure Prophylaxis)",
+      "compositionOne": "lamotrigine"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prevention (Seizure Prophylaxis)",
+      "compositionOne": "clonazepam"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prevention (Seizure Prophylaxis)",
+      "compositionOne": "topiramate"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prevention (Seizure Prophylaxis)",
+      "compositionOne": "diazepam"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prevention (Seizure Prophylaxis)",
+      "compositionOne": "valproic acid"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prevention (Seizure Prophylaxis)",
+      "compositionOne": "acetazolamide"
+    },
+    {
+      "disease": "Seizures",
+      "type": "Seizure Prophylaxis During or Following Neurosurgery",
+      "compositionOne": "phenytoin"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "vancomycin"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "ceftriaxone"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "cefuroxime"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "ceftazidime"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "cefotaxime"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "tobramycin"
+    },
+    {
+      "disease": "Sepsis",
+      "type": "Sepsis",
+      "compositionOne": "filgrastim"
+    },
+    {
+      "disease": "Shingles (Herpes Zoster)",
+      "type": "Shingles (Herpes Zoster)",
+      "compositionOne": "acyclovir"
+    },
+    {
+      "disease": "Shingles (Herpes Zoster)",
+      "type": "Shingles (Herpes Zoster)",
+      "compositionOne": "valacyclovir"
+    },
+    {
+      "disease": "Shingles (Herpes Zoster)",
+      "type": "Shingles (Herpes Zoster)",
+      "compositionOne": "famciclovir"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "amoxicillin"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "cefdinir"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "azithromycin"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "levofloxacin"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "cefuroxime"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "clarithromycin"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "clindamycin"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "sulfamethoxazole",
+      "compositionTwo": "trimethoprim"
+    },
+    {
+      "disease": "Sinusitis",
+      "type": "Sinusitis",
+      "compositionOne": "moxifloxacin"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "amoxicillin"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "azithromycin"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "cefuroxime"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "clarithromycin"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "cefdinir"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "cefixime"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "cefadroxil"
+    },
+    {
+      "disease": "Tonsillitis/Pharyngitis",
+      "type": "Tonsillitis/Pharyngitis",
+      "compositionOne": "cefaclor"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Candida Urinary Tract Infection",
+      "compositionOne": "fluconazole"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Candida Urinary Tract Infection",
+      "compositionOne": "itraconazole"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Candida Urinary Tract Infection",
+      "compositionOne": "amphotericin b"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Candida Urinary Tract Infection",
+      "compositionOne": "flucytosine"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "ciprofloxacin"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "nitrofurantoin"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "sulfamethoxazole",
+      "compositionTwo": "trimethoprim"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "amoxicillin"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "doxycycline"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "levofloxacin"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "ceftriaxone"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "cefuroxime"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "trimethoprim"
+    },
+    {
+      "disease": "Urinary Tract Infection",
+      "type": "Urinary Tract Infection",
+      "compositionOne": "ampicillin"
+    },
+    {
+      "disease": "Vertigo",
+      "type": "Vertigo",
+      "compositionOne": "meclizine"
+    },
+    {
+      "disease": "Warts",
+      "type": "Warts",
+      "compositionOne": "salicylic acid"
+    },
+    {
+      "disease": "Warts",
+      "type": "Warts",
+      "compositionOne": "fluorouracil"
+    },
+    {
+      "disease": "Warts",
+      "type": "Warts",
+      "compositionOne": "silver nitrate"
+    }
+]
