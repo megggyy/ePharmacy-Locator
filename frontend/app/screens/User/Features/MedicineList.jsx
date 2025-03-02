@@ -170,7 +170,9 @@ const MedicineList = () => {
                 </Text>
 
                 <Text style={styles.label}>Stock:                </Text>
-                <Text style={styles.value}>{totalStock} in stock</Text>
+                <Text style={styles.value}>
+                  {totalStock > 0 ? `${totalStock} in stock` : "Out of Stock"}
+                </Text>
                 <Text style={styles.valueT}>(Last updated on {medication.timeStamps ? new Date(medication.timeStamps).toLocaleString() : 'No Date Available'})
                 </Text>
               </View>

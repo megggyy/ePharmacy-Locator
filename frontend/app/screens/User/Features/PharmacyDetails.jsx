@@ -21,7 +21,7 @@ const PharmacyDetails = () => {
         const response = await axios.get(`${baseURL}pharmacies/${id}`);
         setPharmacy(response.data);
       } catch (error) {
-        console.error('Error fetching pharmacy details:', error);
+        console.error("Error fetching pharmacy details:", error);
       }
     };
 
@@ -30,12 +30,21 @@ const PharmacyDetails = () => {
         const response = await axios.get(`${baseURL}medicine/features/${id}`);
         setMedicationData(response.data || []); // Ensure it's always an array
       } catch (error) {
-        console.error('Error fetching medicine stocks:', error);
+        console.error("Error fetching medicine stocks:", error);
       }
     };
 
-    Promise.all([fetchPharmacyDetails(), fetchMedicineStocks()])
-      .finally(() => setLoading(false));
+    const fetchData = () => {
+      Promise.all([fetchPharmacyDetails(), fetchMedicineStocks()]).finally(() =>
+        setLoading(false)
+      );
+    };
+
+    fetchData(); // Fetch immediately when component mounts
+
+    const interval = setInterval(fetchData, 5000); // Fetch every 30 sec
+
+    return () => clearInterval(interval); // Cleanup on unmount
   }, [id]);
 
   useEffect(() => {
@@ -45,12 +54,12 @@ const PharmacyDetails = () => {
         const newCategory = Array.isArray(firstMedicine.category)
           ? firstMedicine.category.map((cat) => cat.name).join('/ ')
           : firstMedicine.category?.name || 'No Category';
-  
+
         setCategory(newCategory);
       }
     }
   }, [medicationData]);
-  
+
 
   const handleCategoryClick = (index) => {
     setIsCategory((prev) => ({
@@ -172,7 +181,9 @@ const PharmacyDetails = () => {
                   </Text>
 
                   <Text style={styles.label}>Stock:</Text>
-                  <Text style={styles.value}>{totalStock} in stock</Text>
+                  <Text style={styles.value}>
+                    {totalStock > 0 ? `${totalStock} in stock` : "Out of Stock"}
+                  </Text>
                   <Text style={styles.valueT}>
                     (Last updated on {medication.timeStamps ? new Date(medication.timeStamps).toLocaleString() : 'No Date Available'})
                   </Text>

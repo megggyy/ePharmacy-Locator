@@ -22,21 +22,31 @@ const MedicationDetails = () => {
 
   useEffect(() => {
     if (name) {
-      console.log("Fetching for name:", name); // Debugging
-      console.log("API URL:", `${baseURL}medicine/available/${name}`);
+      const fetchData = () => {
+        console.log("Fetching for name:", name); // Debugging
+        console.log("API URL:", `${baseURL}medicine/available/${name}`);
 
-      axios
-        .get(`${baseURL}medicine/available/${name}`)
-        .then((response) => {
-          console.log("API Response:", response.data); // Debugging
-          setMedications(response.data.data); // Fix here
-          setLoading(false);
-        })
-        .catch((error) => {
-          setLoading(false);
-        });
+        axios
+          .get(`${baseURL}medicine/available/${name}`)
+          .then((response) => {
+            console.log("API Response:", response.data); // Debugging
+            setMedications(response.data.data); // Fix here
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+            setLoading(false);
+          });
+      };
+
+      // Fetch immediately, then set interval
+      fetchData();
+      const interval = setInterval(fetchData, 5000); // Fetch every 30 seconds
+
+      return () => clearInterval(interval); // Cleanup interval on unmount
     }
   }, [name]);
+
 
 
   const formatDateTime = (date) => {
@@ -65,6 +75,22 @@ const MedicationDetails = () => {
 
   const medicationName = medications[0]?.medicine?.genericName;
 
+  const totalStock = medications?.reduce((total, medication) => {
+    if (!medication.expirationPerStock || !Array.isArray(medication.expirationPerStock)) {
+      return total; // Skip if expirationPerStock is missing or not an array
+    }
+
+    return total + medication.expirationPerStock.reduce((sum, stockItem) => {
+      const stockValue = Number(stockItem.stock);
+      return !isNaN(stockValue) ? sum + stockValue : sum; // Ignore NaN values
+    }, 0);
+  }, 0);
+
+
+
+  console.log('total stock: ', totalStock)
+
+
   return (
     <View style={styles.safeArea}>
       {/* Header Section */}
@@ -86,15 +112,26 @@ const MedicationDetails = () => {
           const pharmacy = medication.pharmacy || {};
           const userInfo = pharmacy.userInfo || {};
           const location = pharmacy.location || {};
-          const totalStock = medication.expirationPerStock?.reduce((sum, stockItem) => sum + stockItem.stock, 0) || 0;
+          // const totalStock = medications?.reduce(
+          //   (total, medication) =>
+          //     total + (medication.expirationPerStock?.reduce((sum, stockItem) => sum + stockItem.stock, 0) || 0),
+          //   0
+          // );
 
           return (
             <View key={index} style={styles.infoContainer}>
               <TouchableOpacity
-                onPress={() => router.push(`/screens/User/Features/MedicineList?pharmacyId=${pharmacy._id}&genericName=${medicine.genericName}`)}
+                onPress={() => {
+                  if (totalStock > 0) {
+                    router.push(`/screens/User/Features/MedicineList?pharmacyId=${pharmacy._id}&genericName=${medicine.genericName}`);
+                  }
+                }}
+                disabled={totalStock === 0}
+                style={{
+                  opacity: totalStock === 0 ? 0.5 : 1, // Reduce opacity when disabled
+                }}
               >
                 <Text style={styles.pharmacyName}>{userInfo.name || 'Unknown Pharmacy'}</Text>
-
                 <View style={styles.infoRow}>
                   <Ionicons name="location-outline" size={18} color="#555" />
                   <Text style={styles.infoText}>
@@ -116,7 +153,9 @@ const MedicationDetails = () => {
 
                 <View style={styles.infoRow}>
                   <Ionicons name="cube-outline" size={18} color="#555" />
-                  <Text style={styles.stockText}>{totalStock} in stock</Text>
+                  <Text style={styles.stockText}>
+                    {totalStock > 0 ? `${totalStock} in stock` : "Out of Stock"}
+                  </Text>
                   <Text style={styles.dateText}>
                     (Last updated on {medication.timeStamps ? formatDateTime(new Date(medication.timeStamps)) : 'No Date Available'})
                   </Text>

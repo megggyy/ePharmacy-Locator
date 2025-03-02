@@ -56,7 +56,6 @@ const MedicationScreen = () => {
             setLoading(false);
           })
           .catch((err) => {
-            console.error('Error message:', err.message);
             setLoading(false);
           });
       };
@@ -90,8 +89,6 @@ const MedicationScreen = () => {
           setLoading(false);
         })
         .catch((err) => {
-
-          console.error('Error message:', err.message);
 
         })
         .finally(() => {
@@ -182,7 +179,7 @@ const MedicationScreen = () => {
 
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>
-                        {item.expirationPerStock.reduce((sum, exp) => sum + exp.stock, 0)} units
+                      {item.expirationPerStock.reduce((sum, exp) => sum + exp.stock, 0)} units
                       </Text>
                     </DataTable.Cell>
 

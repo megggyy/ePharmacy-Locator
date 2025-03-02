@@ -61,6 +61,7 @@ router.get('/', async (req, res) => {
         // Find all medicines where pharmacy.userInfo matches the id parameter
         const medicines = await Medicine.find()
             .populate('category')
+            .lean();
 
         res.status(200).send(medicines);
     } catch (error) {
@@ -86,7 +87,8 @@ router.get('/admin/read/:id', async (req, res) => {
                 populate: {
                     path: 'userInfo', // Populate category inside medicine
                 }
-            });
+            })
+            .lean();
 
         res.status(200).json(medicine);
     } catch (error) {
@@ -218,22 +220,44 @@ router.get('/:id', async (req, res) => {
                 path: 'medicine',
                 populate: { path: 'category' },
             })
-            .populate('pharmacy');
+            .populate('pharmacy')
+            .lean();
 
         const today = new Date();
         let updatedStocks = [];
 
         for (let item of stock) {
             let updatedExpirationPerStock = item.expirationPerStock.map(exp => {
-                if (new Date(exp.expirationDate) < today) {
+                // Convert expirationDate from "MMMM, dd, yyyy" (e.g., "March, 03, 2025") to Date
+                let expDate = new Date(exp.expirationDate); 
+
+                // Check if conversion was successful
+                if (isNaN(expDate)) {
+                    const parts = exp.expirationDate.split(', ').map(p => p.trim());
+                    if (parts.length === 3) {
+                        expDate = new Date(`${parts[0]} ${parts[1]}, ${parts[2]}`);
+                    }
+                }
+
+                // Set stock to 0 if expired
+                if (!isNaN(expDate) && expDate < today) {
                     return { ...exp, stock: 0 };
                 }
                 return exp;
             });
 
-            await PharmacyStock.findByIdAndUpdate(item._id, { expirationPerStock: updatedExpirationPerStock });
+            // Update timestamp as a string (formatted "YYYY-MM-DD HH:mm:ss")
+            const updatedTimeStamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
 
+            // Update the document
+            await PharmacyStock.findByIdAndUpdate(item._id, { 
+                expirationPerStock: updatedExpirationPerStock,
+                timeStamps: updatedTimeStamp
+            });
+
+            // Update response data
             item.expirationPerStock = updatedExpirationPerStock;
+            item.timeStamps = updatedTimeStamp;
             updatedStocks.push(item);
         }
 
@@ -242,6 +266,7 @@ router.get('/:id', async (req, res) => {
         res.status(500).json({ success: false, message: error.message });
     }
 });
+
 
 router.get('/features/:id', async (req, res) => {
     try {
@@ -258,6 +283,7 @@ router.get('/features/:id', async (req, res) => {
                 path: 'medicine',
                 populate: { path: 'category' },
             })
+            .lean();
 
         // Send response including userInfoId and stock
         res.status(200).json(stock);
@@ -277,6 +303,7 @@ router.get('/category/:id', async (req, res) => {
         }
 
         const medicine = await Medicine.find({ category: req.params.id })
+        .lean();
     
         res.status(200).json(medicine);
     } catch (error) {
@@ -303,7 +330,8 @@ router.get('/existing/:pharmacyId/:genericName', async (req, res) => {
             .populate({
                 path: 'medicine',
                 match: { genericName: genericName }, // Filter medicines by genericName
-            });
+            })
+            .lean();
 
         // Filter out null medicines (if no match is found in populate)
         const filteredStock = stock.filter(item => item.medicine);
@@ -326,7 +354,8 @@ router.get('/read/:id', async (req, res) => {
                     path: 'category', // Populate category inside medicine
                 }
             })
-            .populate('pharmacy');
+            .populate('pharmacy')
+            .lean();
 
         // Send the fetched medicines
         res.status(200).send(stock);
@@ -411,28 +440,69 @@ router.get('/available/:name', async (req, res) => {
                 populate: {
                     path: 'category',
                 },
-            });
+            })
+            .lean();
 
         if (pharmacyStocks.length === 0) {
             return res.status(404).json({ success: false, message: 'No pharmacy stocks found for this medicine' });
         }
 
-        // Filter to get unique pharmacies, keeping only one stock per pharmacy
-        const uniquePharmacies = new Map(); // Use a map to store unique pharmacies
+        // ✅ Calculate total stock and find the latest timeStamps
+        let totalStock = 0;
+        let latestTimestamp = null;
+
         pharmacyStocks.forEach(stock => {
-            const pharmacyId = stock.pharmacy._id.toString();
-            if (!uniquePharmacies.has(pharmacyId)) {
-                uniquePharmacies.set(pharmacyId, stock);
+            // Add to total stock
+            if (stock.expirationPerStock) {
+                stock.expirationPerStock.forEach(exp => {
+                    totalStock += exp.stock;
+                });
+            }
+
+            // Get the latest timeStamps
+            const stockTimestamp = new Date(stock.timeStamps);
+            if (!latestTimestamp || stockTimestamp > latestTimestamp) {
+                latestTimestamp = stockTimestamp;
             }
         });
 
-        res.status(200).json({ success: true, data: Array.from(uniquePharmacies.values()) });
+        console.log(`Total stock for ${name}:`, totalStock);
+        console.log(`Latest timestamp:`, latestTimestamp);
+
+        // ✅ Filter to get unique pharmacies while keeping all expiration data
+        const uniquePharmacies = new Map();
+        pharmacyStocks.forEach(stock => {
+            const pharmacyId = stock.pharmacy._id.toString();
+
+            if (!uniquePharmacies.has(pharmacyId)) {
+                uniquePharmacies.set(pharmacyId, {
+                    pharmacy: stock.pharmacy,
+                    medicine: stock.medicine,
+                    totalStock: 0,
+                    expirationPerStock: [],
+                    timeStamps: stock.timeStamps
+                });
+            }
+
+            const pharmacyData = uniquePharmacies.get(pharmacyId);
+            pharmacyData.totalStock += stock.expirationPerStock?.reduce((sum, item) => sum + item.stock, 0) || 0;
+            pharmacyData.expirationPerStock.push(...stock.expirationPerStock);
+        });
+
+        res.status(200).json({ 
+            success: true, 
+            totalStock, 
+            latestTimestamp, 
+            data: Array.from(uniquePharmacies.values()) 
+        });
 
     } catch (error) {
         console.error('Error fetching available medicine:', error);
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 });
+
+
 
 // Available Different brands and dosages based on the generic name
 router.get('/list/:pharmacyId/:genericName', async (req, res) => {
@@ -469,7 +539,8 @@ router.get('/list/:pharmacyId/:genericName', async (req, res) => {
                 populate: {
                     path: 'category',
                 },
-            });
+            })
+            .lean();
 
         if (pharmacyStocks.length === 0) {
             return res.status(404).json({ success: false, message: 'No pharmacy stocks found for this medicine at the given pharmacy' });

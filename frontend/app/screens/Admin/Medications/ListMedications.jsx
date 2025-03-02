@@ -55,7 +55,6 @@ const MedicationScreen = () => {
             setLoading(false);
           })
           .catch((err) => {
-            console.error('Error message:', err.message);
             setLoading(false);
           });
       };
@@ -87,7 +86,6 @@ const MedicationScreen = () => {
         })
         .catch((err) => {
 
-          console.error('Error message:', err.message);
 
         })
         .finally(() => {
