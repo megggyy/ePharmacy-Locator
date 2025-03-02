@@ -17,14 +17,12 @@ const CategoryFilterMedications = () => {
       try {
         setIsLoading(true);
         setError(null); // Reset error state
-        const response = await axios.get(`${baseURL}medicine?category=${id}`);
+        const response = await axios.get(`${baseURL}medicine/category/${id}`);
         
-        // Filter the medications to match the current category
-        const filteredMedications = response.data.filter(
-          (medication) => medication.category._id === id
-        );
-        
-        setMedications(filteredMedications);
+        // Filter unique genericName values
+       
+  
+        setMedications(response.data);
       } catch (err) {
         setError('Failed to load medications. Please try again.');
       } finally {
@@ -34,6 +32,7 @@ const CategoryFilterMedications = () => {
   
     fetchMedications();
   }, [id]);
+  
   
 
   return (
@@ -63,10 +62,12 @@ const CategoryFilterMedications = () => {
                 <TouchableOpacity
                   key={medication._id}
                   style={styles.medicationCard}
-                  onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.name}`)}
+                  onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.genericName}`)}
                 >
                   <View style={styles.medicationInfo}>
-                    <Text style={styles.medicationName}>{medication.name}</Text>
+                    <Text style={styles.medicationName}>{medication.brandName}</Text>
+                    <Text style={styles.genericName}>{medication.genericName}</Text>
+
                   </View>
                 </TouchableOpacity>
               ))

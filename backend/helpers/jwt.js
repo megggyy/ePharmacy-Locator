@@ -26,10 +26,6 @@ function authJwt() {
                     methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'DELETE']
                 },
                 {
-                    url: /\/api\/v1\/diseases(.*)/,
-                    methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'DELETE']
-                },
-                {
                     url: /\/api\/v1\/medication-category(.*)/,
                     methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'DELETE']
                 },

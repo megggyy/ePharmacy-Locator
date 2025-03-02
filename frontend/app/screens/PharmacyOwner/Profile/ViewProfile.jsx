@@ -34,9 +34,7 @@ export default function ViewProfile() {
         if (!response.ok) throw new Error('Failed to fetch user data');
         const data = await response.json();
 
-        // Check if disease information exists
-        const disease = data.customerDetails?.disease?.name || 'N/A';
-        setUserData({ ...data, disease });
+        setUserData({ ...data });
       } catch (error) {
         Alert.alert('Error', error.message);
       } finally {

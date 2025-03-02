@@ -41,18 +41,30 @@ const UserTableScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
-      axios
-        .get(`${baseURL}users`)
-        .then((res) => {
-          // Filter for users with the "Customer" role
-          const customers = res.data.filter(user => user.role === "Customer");
-          setUserList(customers);
-          setUserFilter(customers);
-          setLoading(false);
-        })
-        .catch((err) => console.error(err));
+      const fetchUsers = () => {
+        axios
+          .get(`${baseURL}users`)
+          .then((res) => {
+            // Filter only "Customer" role users
+            const customers = res.data.filter(user => user.role === "Customer");
+            setUserList(customers);
+            setUserFilter(customers);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.error('Error fetching users:', err.message);
+            setLoading(false);
+          });
+      };
+  
+      // Fetch users initially
+      fetchUsers();
+  
+      // Set interval to refresh every 30 seconds
+      const interval = setInterval(fetchUsers, 5000);
   
       return () => {
+        clearInterval(interval); // Clear interval when screen loses focus
         setUserList([]);
         setUserFilter([]);
         setLoading(true);

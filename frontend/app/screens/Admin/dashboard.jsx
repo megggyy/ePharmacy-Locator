@@ -33,19 +33,17 @@ const AdminDashboard = () => {
           axios.get(`${baseURL}pharmacies`),
           axios.get(`${baseURL}medication-category`),
           axios.get(`${baseURL}medicine`),
-        ]);
-  
-        // Count unique medicines by name
-        const uniqueMedicines = [...new Set(medicinesRes.data.map(med => med.name))];
-  
+        ]);       
+        console.log('users') 
         setCounts({
           users: usersRes.data.length,
           pharmacies: pharmaciesRes.data.length,
           categories: categoriesRes.data.length,
-          medicines: uniqueMedicines.length, // Count unique medicines
+          medicines: medicinesRes.data.length,  // Fix: medicinesRes.length → medicinesRes.data.length
         });
+        
       } catch (error) {
-        console.error('Error fetching data:', error);
+        // console.error('Error fetching data:', error);
       }
     };
   

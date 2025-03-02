@@ -21,12 +21,8 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(authJwt());
 app.use(errorHandler);
 
-
-
-
 //Routes
 const usersRoutes = require("./routes/users");
-const diseasesRoutes = require("./routes/diseases");
 const medicationcategoryRoutes = require("./routes/medication-category");
 const medicineRoutes = require("./routes/medicine");
 const pharmacyRoutes = require("./routes/pharmacy");
@@ -38,7 +34,6 @@ const api = process.env.API_URL;
 
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/customers`, customerRoutes);
-app.use(`${api}/diseases`, diseasesRoutes);
 app.use(`${api}/medication-category`, medicationcategoryRoutes);
 app.use(`${api}/medicine`, medicineRoutes);
 app.use(`${api}/pharmacies`, pharmacyRoutes);

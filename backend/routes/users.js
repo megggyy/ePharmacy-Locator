@@ -1,7 +1,6 @@
 const { User } = require('../models/user');
 const { Pharmacy } = require('../models/pharmacy');
 const { Customer } = require('../models/customer');
-const { Diseases } = require('../models/disease');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -39,7 +38,7 @@ router.get('/', async (req, res) => {
         const usersWithDetails = await Promise.all(
             users.map(async (user) => {
                 if (user.role === 'Customer') {
-                    const customer = await Customer.findOne({ userInfo: user.id }).populate('disease', 'name');
+                    const customer = await Customer.findOne({ userInfo: user.id });
                     return { ...user._doc, customerDetails: customer };
                 } else if (user.role === 'PharmacyOwner') {
                     const pharmacy = await Pharmacy.findOne({ userInfo: user.id });
@@ -544,7 +543,7 @@ router.get('/:id', async (req, res) => {
 
         // Fetch additional details based on the user's role
         if (user.role === 'Customer') { 
-            const customer = await Customer.findOne({ userInfo: userId }).populate('disease', 'name');
+            const customer = await Customer.findOne({ userInfo: userId });
             if (customer) {
                 userDetails.customerDetails = customer;
             }

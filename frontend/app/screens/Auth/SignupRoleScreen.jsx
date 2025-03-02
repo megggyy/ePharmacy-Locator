@@ -23,7 +23,7 @@ const RoleSelectionScreen = () => {
           <Text style={styles.buttonText}>Customer</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => router.push('/screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen')}>
+        <TouchableOpacity style={styles.button} onPress={() => router.push('/screens/PharmacyOwner/Account/CheckLicense')}>
           <Text style={styles.buttonText}>Pharmacy Owner</Text>
         </TouchableOpacity>
       </View>

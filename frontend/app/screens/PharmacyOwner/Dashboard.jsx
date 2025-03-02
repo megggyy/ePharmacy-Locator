@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 0,
+    paddingVertical: 40,
     backgroundColor: '#005b7f',
   },
   menuIcon: {

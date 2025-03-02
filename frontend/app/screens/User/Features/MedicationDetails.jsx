@@ -22,25 +22,29 @@ const MedicationDetails = () => {
 
   useEffect(() => {
     if (name) {
+      console.log("Fetching for name:", name); // Debugging
+      console.log("API URL:", `${baseURL}medicine/available/${name}`);
+
       axios
         .get(`${baseURL}medicine/available/${name}`)
         .then((response) => {
-          setMedications(response.data);
+          console.log("API Response:", response.data); // Debugging
+          setMedications(response.data.data); // Fix here
           setLoading(false);
         })
         .catch((error) => {
-          console.error('Error fetching medication details:', error);
           setLoading(false);
         });
     }
   }, [name]);
+
 
   const formatDateTime = (date) => {
     const day = String(date.getDate()).padStart(2, '0');
     const month = date.toLocaleString('default', { month: 'long' }); // Get full month name
     const year = String(date.getFullYear());
     return `${month} ${day}, ${year}`;
-};
+  };
 
 
   if (loading) {
@@ -59,7 +63,7 @@ const MedicationDetails = () => {
     );
   }
 
-  const { name: medicationName } = medications[0]; // Extract name and description from the first item
+  const medicationName = medications[0]?.medicine?.genericName;
 
   return (
     <View style={styles.safeArea}>
@@ -78,71 +82,77 @@ const MedicationDetails = () => {
         </View>
 
         {medications.map((medication, index) => {
+          const medicine = medication.medicine || {};
           const pharmacy = medication.pharmacy || {};
           const userInfo = pharmacy.userInfo || {};
           const location = pharmacy.location || {};
+          const totalStock = medication.expirationPerStock?.reduce((sum, stockItem) => sum + stockItem.stock, 0) || 0;
 
           return (
             <View key={index} style={styles.infoContainer}>
-              <Text style={styles.pharmacyName}>{userInfo.name || 'Unknown Pharmacy'}</Text>
+              <TouchableOpacity
+                onPress={() => router.push(`/screens/User/Features/MedicineList?pharmacyId=${pharmacy._id}&genericName=${medicine.genericName}`)}
+              >
+                <Text style={styles.pharmacyName}>{userInfo.name || 'Unknown Pharmacy'}</Text>
 
-              <View style={styles.infoRow}>
-                <Ionicons name="location-outline" size={18} color="#555" />
-                <Text style={styles.infoText}>
-                  {`${userInfo.street || ''}, ${userInfo.barangay || ''}, ${userInfo.city || ''}`
-                    .replace(/(, )+/g, ', ')
-                    .trim()}
-                </Text>
-              </View>
+                <View style={styles.infoRow}>
+                  <Ionicons name="location-outline" size={18} color="#555" />
+                  <Text style={styles.infoText}>
+                    {`${userInfo.street || ''}, ${userInfo.barangay || ''}, ${userInfo.city || ''}`
+                      .replace(/(, )+/g, ', ')
+                      .trim()}
+                  </Text>
+                </View>
 
-              <View style={styles.infoRow}>
-                <Ionicons name="call-outline" size={18} color="#555" />
-                <Text
-                  style={styles.infoText}
-                  onPress={() => Linking.openURL(`tel:${userInfo.contactNumber || ''}`)}
-                >
-                  {userInfo.contactNumber || 'N/A'}
-                </Text>
-              </View>
+                <View style={styles.infoRow}>
+                  <Ionicons name="call-outline" size={18} color="#555" />
+                  <Text
+                    style={styles.infoText}
+                    onPress={() => Linking.openURL(`tel:${userInfo.contactNumber || ''}`)}
+                  >
+                    {userInfo.contactNumber || 'N/A'}
+                  </Text>
+                </View>
 
-              <View style={styles.infoRow}>
-                <Ionicons name="cube-outline" size={18} color="#555" />
-                <Text style={styles.stockText}>{medication.stock} in stock</Text>
-                <Text style={styles.dateText}>        
-                (Last updated on {medication.timeStamps ? formatDateTime(new Date(medication.timeStamps)) : 'No Date Available'})
-                </Text>
-              </View>
+                <View style={styles.infoRow}>
+                  <Ionicons name="cube-outline" size={18} color="#555" />
+                  <Text style={styles.stockText}>{totalStock} in stock</Text>
+                  <Text style={styles.dateText}>
+                    (Last updated on {medication.timeStamps ? formatDateTime(new Date(medication.timeStamps)) : 'No Date Available'})
+                  </Text>
+                </View>
 
-              {/* Map View */}
-              <View style={styles.mapContainer}>
-                <MapView
-                  style={styles.map}
-                  initialRegion={{
-                    latitude: parseFloat(pharmacy.location.latitude),
-                    longitude: parseFloat(pharmacy.location.longitude),
-                    latitudeDelta: 0.01,
-                    longitudeDelta: 0.01,
-                  }}
-                  showsUserLocation
-                >
-                  <Marker
-                    coordinate={{
+                {/* Map View */}
+                <View style={styles.mapContainer}>
+                  <MapView
+                    style={styles.map}
+                    initialRegion={{
                       latitude: parseFloat(pharmacy.location.latitude),
                       longitude: parseFloat(pharmacy.location.longitude),
+                      latitudeDelta: 0.01,
+                      longitudeDelta: 0.01,
                     }}
-                    title={userInfo.name || 'Pharmacy'}
-                    description={pharmacy.address || 'No address available'}
-                  />
-                </MapView>
-              </View>
+                    showsUserLocation
+                  >
+                    <Marker
+                      coordinate={{
+                        latitude: parseFloat(pharmacy.location.latitude),
+                        longitude: parseFloat(pharmacy.location.longitude),
+                      }}
+                      title={userInfo.name || 'Pharmacy'}
+                      description={pharmacy.address || 'No address available'}
+                    />
+                  </MapView>
+                </View>
+              </TouchableOpacity>
             </View>
           );
         })}
 
         {/* Extra padding at the bottom */}
         <View style={styles.bottomSpace}></View>
-      </ScrollView>
-    </View>
+      </ScrollView >
+    </View >
   );
 };
 
@@ -154,13 +164,14 @@ const styles = StyleSheet.create({
   headerText: { color: 'white', fontSize: 20, fontWeight: 'bold' },
   container: { padding: 16 },
   scrollViewContent: { paddingBottom: 100 },
-  pharmacyName: { 
-    fontSize: 20, 
-    textAlign: 'center', 
-    marginBottom: 15, 
-    backgroundColor: '#005b7f', 
-    padding: 10, 
-    color: 'white' },
+  pharmacyName: {
+    fontSize: 20,
+    textAlign: 'center',
+    marginBottom: 15,
+    backgroundColor: '#005b7f',
+    padding: 10,
+    color: 'white'
+  },
   infoContainer: {
     marginTop: 20,
     padding: 10,

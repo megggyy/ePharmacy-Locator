@@ -36,35 +36,48 @@ const MedicationScreen = () => {
     } else {
       setMedicationsFilter(
         medicationsList.filter((i) =>
-          i.name.toLowerCase().includes(text.toLowerCase())
-        ) 
+          [i.genericName, i.brandName]
+            .some((field) => field?.toLowerCase().includes(text.toLowerCase()))
+        )
       );
     }
   };
+  
 
   useFocusEffect(
     React.useCallback(() => {
-      axios
-        .get(`${baseURL}medicine/${state.user.userId}`)
-        .then((res) => {
-          setMedicationsList(res.data);
-          setMedicationsFilter(res.data); 
-          console.log(res.data);
-          setLoading(false);
-        })
-        .catch((err) => {
-
-          console.error('Error message:', err.message);
-          setLoading(false);
-        });
-
+      const fetchMedications = () => {
+        axios
+          .get(`${baseURL}medicine/${state.user.userId}`)
+          .then((res) => {
+            setMedicationsList(res.data);
+            setMedicationsFilter(res.data);
+            console.log(res.data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.error('Error message:', err.message);
+            setLoading(false);
+          });
+      };
+  
+      fetchMedications(); // Initial fetch
+  
+      // Set up polling with a 5-second interval
+      const intervalId = setInterval(() => {
+        fetchMedications();
+      }, 5000);
+  
+      // Cleanup function to clear interval & reset state on unmount
       return () => {
+        clearInterval(intervalId);
         setMedicationsList([]);
         setMedicationsFilter([]);
         setLoading(true);
       };
-    }, [])
+    }, [state.user.userId]) // Dependency array ensures re-run when userId changes
   );
+  
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
@@ -91,7 +104,7 @@ const MedicationScreen = () => {
     try {
       await axios.delete(`${baseURL}medicine/delete/${medicationId}`);
       setMedicationsList(medicationsList.filter(medication => medication._id !== medicationId));
-      Alert.alert('Success', 'Category deleted successfully');
+      Alert.alert('Success', 'Medicine Stock deleted successfully');
 
       onRefresh()
     } catch (error) {
@@ -136,7 +149,8 @@ const MedicationScreen = () => {
             <Text style={styles.tableTitle}>MEDICINES</Text>
             <DataTable>
               <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>GENERIC</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>BRAND</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>CATEGORY</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STOCK</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ACTIONS</Text></DataTable.Title>
@@ -153,14 +167,25 @@ const MedicationScreen = () => {
                   <DataTable.Row style={styles.rowCell}>
 
                     <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>{item.name}</Text>
+                      <Text style={styles.cellText}>{item.medicine.genericName}</Text>
                     </DataTable.Cell>
+
                     <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>{item.category.name}</Text>
+                      <Text style={styles.cellText}>{item.medicine.brandName}</Text>
                     </DataTable.Cell>
+
                     <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>{item.stock}</Text>
+                      <Text style={styles.cellText}>
+                        {item.medicine.category.map(cat => cat.name).join("/ ")}
+                      </Text>
                     </DataTable.Cell>
+
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>
+                        {item.expirationPerStock.reduce((sum, exp) => sum + exp.stock, 0)} units
+                      </Text>
+                    </DataTable.Cell>
+
                     <DataTable.Cell style={styles.textCell}>
                       <View style={styles.actionCell}>
                         <TouchableOpacity
@@ -175,6 +200,7 @@ const MedicationScreen = () => {
                       </View>
                     </DataTable.Cell>
                   </DataTable.Row>
+
                 </TouchableOpacity>
               ))}
             </DataTable>

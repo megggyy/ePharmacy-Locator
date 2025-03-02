@@ -60,22 +60,32 @@ const MedicationCategoriesScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
-      axios
-        .get(`${baseURL}medication-category`)
-        .then((res) => {
-          setCategoriesList(res.data);
-          setCategoriesFilter(res.data);
-          setLoading(false);
-        })
-        .catch((err) => console.error(err));
-
+      const fetchData = () => {
+        axios
+          .get(`${baseURL}medication-category`)
+          .then((res) => {
+            setCategoriesList(res.data);
+            setCategoriesFilter(res.data);
+            setLoading(false);
+          })
+          .catch((err) => console.error(err));
+      };
+  
+      fetchData();
+  
+      const intervalId = setInterval(() => {
+        fetchData();
+      }, 5000); 
+  
       return () => {
+        clearInterval(intervalId);
         setCategoriesList([]);
         setCategoriesFilter([]);
         setLoading(true);
       };
     }, [])
   );
+  
 
   const handleDelete = async (categoryId) => {
     try {
@@ -84,7 +94,7 @@ const MedicationCategoriesScreen = () => {
       Alert.alert('Success', 'Category deleted successfully');
       onRefresh();
     } catch (error) {
-      console.error('Error deleting category:', error);
+      // console.error('Error deleting category:', error);
       Alert.alert('Error', 'Failed to delete category');
     }
   };

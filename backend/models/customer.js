@@ -4,11 +4,6 @@ const customerSchema = new mongoose.Schema({
     images: [{
         type: String
     }],
-    disease: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Diseases',
-        default: null,
-    },
     userInfo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

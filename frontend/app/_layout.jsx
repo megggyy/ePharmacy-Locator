@@ -57,6 +57,7 @@ export default function RootLayout() {
             <Stack.Screen name="screens/User/Features/PharmaciesNearMe" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/ViewAllMedications" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/MedicationDetails" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/User/Features/MedicineList" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/CategoryFilterMedications" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/PrescriptionUpload" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/PrescriptionScan" options={{ headerShown: false }} />
@@ -66,6 +67,7 @@ export default function RootLayout() {
             <Stack.Screen name="screens/User/Features/FAQs" options={{ headerShown: false }} />
 
             {/* PHARMACY OWNER */}
+            <Stack.Screen name="screens/PharmacyOwner/Account/CheckLicense" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Dashboard" options={{ headerShown: false }} />
 
@@ -105,9 +107,7 @@ export default function RootLayout() {
 
             {/* MEDICINE CRUD */}
             <Stack.Screen name="screens/Admin/Medications/ListMedications" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/Admin/Medications/CreateMedication" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/Medications/ReadMedication" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/Admin/Medications/EditMedication" options={{ headerShown: false }} />
             {/* PROFILE */}
             <Stack.Screen name="screens/Admin/Profile/ViewProfile" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/Profile/EditProfileScreen" options={{ headerShown: false }} />

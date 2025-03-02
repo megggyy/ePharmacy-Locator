@@ -5,13 +5,31 @@ const medicineSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    compositionOne: {
+    genericName: {
         type: String,
         required: true,
     },
-    compositionTwo: {
+    dosageStrength: {
         type: String,
+        required: true,
     },
+    dosageForm: {
+        type: String,
+        required: true,
+    },
+    classification: {
+        type: String,
+        required: true,
+    },
+    category: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'MedicationCategory',
+        required: true,
+    }],
+    description: [{
+        type: String,
+        required: true,
+    }]
 });
 
 medicineSchema.virtual('id').get(function () {

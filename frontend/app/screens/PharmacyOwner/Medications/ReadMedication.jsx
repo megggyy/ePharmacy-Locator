@@ -9,20 +9,37 @@ export default function ReadMedicationScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams(); // Get the medication ID from route params
   const [medicationData, setMedicationData] = useState(null);
+  const [category, setCategory] = useState("");
+  const [isCategory, setIsCategory] = useState(true); // Toggle state
 
   useEffect(() => {
     const fetchMedication = async () => {
       try {
         const response = await axios.get(`${baseURL}medicine/read/${id}`);
         setMedicationData(response.data);
+        console.log('medicationdata:', medicationData)
       } catch (error) {
-        console.error('Error fetching medication:', error);
+        console.error('Error fetching medication:', error.response?.data || error.message);
         Alert.alert('Error', 'Failed to load medication details');
       }
     };
 
     if (id) fetchMedication();
   }, [id]);
+
+  useEffect(() => {
+    if (medicationData?.medicine?.category) {
+      const newCategory = Array.isArray(medicationData.medicine.category)
+        ? medicationData.medicine.category.map((cat) => cat.name).join('/ ')
+        : medicationData.medicine.category?.name || 'No Category';
+
+      setCategory(newCategory);
+    }
+  }, [medicationData]); // Runs when medicationData updates
+
+  const handleCategoryClick = () => {
+    setIsCategory((prev) => !prev); // Toggle between true/false
+  };
 
   if (!medicationData) {
     return (
@@ -39,16 +56,60 @@ export default function ReadMedicationScreen() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.title}>{medicationData.name}</Text>
+        <Text style={styles.title}>{medicationData.medicine.brandName}</Text>
       </View>
 
       {/* Medication Details */}
       <View style={styles.detailsContainer}>
+        <Text style={styles.label}>Generic Name:</Text>
+        <Text style={styles.value}>{medicationData.medicine.genericName}</Text>
+        <Text style={styles.label}>Dosage Strength:</Text>
+        <Text style={styles.value}>{medicationData.medicine.dosageStrength}</Text>
+        <Text style={styles.label}>Dosage Form:</Text>
+        <Text style={styles.value}>{medicationData.medicine.dosageForm}</Text>
+        <Text style={styles.label}>Classification:</Text>
+        <Text style={styles.value}>{medicationData.medicine.classification}</Text>
         <Text style={styles.label}>Category:</Text>
-        <Text style={styles.value}>{medicationData.category?.name}</Text>
-        <Text style={styles.label}>Stock:</Text>
-        <Text style={styles.value}>{medicationData.stock}</Text>
+        <Text style={styles.value} onPress={handleCategoryClick}>
+          {isCategory
+            ? category || "No Category"
+            : medicationData?.medicine?.description || "No Description"}
+        </Text>
+
+
+
+
+        <View style={styles.expirationStock}>
+          <View style={styles.expirationDate}>
+            <Text style={styles.label}>Expiration Date:</Text>
+          </View>
+          <View style={styles.stock}>
+            <Text style={styles.label}>Stock:</Text>
+          </View>
         </View>
+
+        {medicationData.expirationPerStock?.length > 0 ? (
+          medicationData.expirationPerStock.map((exp, index) => {
+
+
+
+            return (
+              <View key={index} style={styles.expirationStock}>
+                <View style={styles.expirationDate}>
+                  <Text style={styles.value}>{exp.expirationDate}</Text>
+                </View>
+                <View style={styles.stock}>
+                  <Text style={styles.value}>{exp.stock}</Text>
+                </View>
+              </View>
+            );
+          })
+        ) : (
+          <Text style={styles.value}>No Expiration Data</Text>
+        )}
+
+
+      </View>
     </View>
   );
 }
@@ -98,4 +159,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  expirationStock: {
+    flexDirection: 'row',
+    justifyContent: 'space-between', // Space out the columns
+    alignItems: 'center', // Align items at the start of each column
+  },
+  expirationDate:
+  {
+    width: '60%'
+  },
+  stock:
+  {
+    width: '35%'
+  }
 });

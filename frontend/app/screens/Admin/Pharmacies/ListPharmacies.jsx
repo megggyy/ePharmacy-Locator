@@ -41,17 +41,27 @@ const PharmacyTableScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
-      // Fetch pharmaciess
-      axios
-        .get(`${baseURL}pharmacies`)
-        .then((res) => {
-          setPharmaciesList(res.data);
-          setPharmaciesFilter(res.data);
-          setLoading(false);
-        })
-        .catch((err) => console.error(err));
-
+      const fetchPharmacies = () => {
+        axios
+          .get(`${baseURL}pharmacies`)
+          .then((res) => {
+            setPharmaciesList(res.data);
+            setPharmaciesFilter(res.data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.error('Error fetching pharmacies:', err.message);
+            setLoading(false);
+          });
+      };
+  
+      // Fetch pharmacies initially
+      fetchPharmacies();
+  
+      const interval = setInterval(fetchPharmacies, 5000);
+  
       return () => {
+        clearInterval(interval); // Clear interval when screen loses focus
         setPharmaciesList([]);
         setPharmaciesFilter([]);
         setLoading(true);

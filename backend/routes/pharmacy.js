@@ -3,12 +3,15 @@ const express = require('express');
 const { Pharmacy } = require('../models/pharmacy');
 const router = express.Router();
 const nodemailer = require('nodemailer');
+const { PharmacyStock } = require('../models/pharmacyStock');
+const fs = require('fs');
+const path = require('path');
 
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-      user: process.env.AUTH_EMAIL,
-      pass: process.env.AUTH_PASS,
+    user: process.env.AUTH_EMAIL,
+    pass: process.env.AUTH_PASS,
   },
 
 })
@@ -58,23 +61,38 @@ router.get('/pharmaciesPerBarangay', async (req, res) => {
   }
 });
 
+// PHARMACY JSON
+router.get('/json', (req, res) => {
+  const filePath = path.join(__dirname, '../utils/pharmacies.json');
+
+  const readStream = fs.createReadStream(filePath, { encoding: 'utf8' });
+
+  res.setHeader('Content-Type', 'application/json');
+
+  readStream.on('error', (err) => {
+      res.status(500).json({ success: false, message: err.message });
+  });
+
+  readStream.pipe(res);
+});
+
 // GET all pharmacies with userInfo populated
 router.get('/', async (req, res) => {
-    try {
-        const pharmacies = await Pharmacy.find()
-            .populate({
-                path: 'userInfo',  // Populate userInfo field
-                select: 'name contactNumber street barangay city' 
-            });
+  try {
+    const pharmacies = await Pharmacy.find()
+      .populate({
+        path: 'userInfo',  // Populate userInfo field
+        select: 'name contactNumber street barangay city'
+      });
 
-        if (!pharmacies) {
-            return res.status(500).json({ success: false, message: 'No pharmacies found' });
-        }
-
-        res.status(200).json(pharmacies);
-    } catch (error) {
-        res.status(500).json({ success: false, error: error.message });
+    if (!pharmacies) {
+      return res.status(500).json({ success: false, message: 'No pharmacies found' });
     }
+
+    res.status(200).json(pharmacies);
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
 });
 
 router.get('/:id', async (req, res) => {
@@ -95,50 +113,51 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-
 router.put('/approved/:id', async (req, res) => {
   try {
-      // Update the pharmacy approval status
-      const approvedPharmacy = await Pharmacy.findByIdAndUpdate(
-          req.params.id,
-          {
-              approved: true,
-          },
-          { new: true }
-      );
+    // Update the pharmacy approval status
+    const approvedPharmacy = await Pharmacy.findByIdAndUpdate(
+      req.params.id,
+      {
+        approved: true,
+      },
+      { new: true }
+    );
 
-      if (!approvedPharmacy) {
-          return res.status(404).json({ message: "Pharmacy not found" });
-      }
+    if (!approvedPharmacy) {
+      return res.status(404).json({ message: "Pharmacy not found" });
+    }
 
-      // Get the pharmacy owner's user information
-      const pharmacyOwner = await User.findById(approvedPharmacy.userInfo);
-      if (!pharmacyOwner) {
-          return res.status(404).json({ message: "Pharmacy owner not found" });
-      }
+    // Get the pharmacy owner's user information
+    const pharmacyOwner = await User.findById(approvedPharmacy.userInfo);
+    if (!pharmacyOwner) {
+      return res.status(404).json({ message: "Pharmacy owner not found" });
+    }
 
-      // Send approval email to the pharmacy owner
-      const mailOptions = {
-          from: process.env.AUTH_EMAIL, // Sender address
-          to: pharmacyOwner.email, // Receiver's email (Pharmacy Owner)
-          subject: "YOUR PHARMACY IS NOW APPROVED", // Subject
-          html: `<p>Dear ${pharmacyOwner.name},</p>
+    // Send approval email to the pharmacy owner
+    const mailOptions = {
+      from: process.env.AUTH_EMAIL, // Sender address
+      to: pharmacyOwner.email, // Receiver's email (Pharmacy Owner)
+      subject: "YOUR PHARMACY IS NOW APPROVED", // Subject
+      html: `<p>Dear ${pharmacyOwner.name},</p>
                  <p>Your pharmacy has been approved! We reviewed your business permits and validated them.</p>
                  <p>Congratulations on being officially approved!</p>
                  <p>Best regards,</p>
                  <p>Admins</p>`,
-      };
+    };
 
-      // Send the email
-      await transporter.sendMail(mailOptions);
-      console.log("Approval email sent successfully.");
+    // Send the email
+    await transporter.sendMail(mailOptions);
+    console.log("Approval email sent successfully.");
 
-      // Respond with the updated pharmacy information
-      res.status(200).json(approvedPharmacy);
+    // Respond with the updated pharmacy information
+    res.status(200).json(approvedPharmacy);
 
   } catch (error) {
-      console.error(error);
-      res.status(500).json({ success: false, message: error.message });
+    console.error(error);
+    res.status(500).json({ success: false, message: error.message });
   }
 });
+
+
 module.exports = router;

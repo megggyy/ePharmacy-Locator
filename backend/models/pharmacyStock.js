@@ -25,12 +25,7 @@ const pharmacyStockSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',
         required: true,
-    },
-    category: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'MedicationCategory',
-        required: true,
-    },
+    }
 });
 
 pharmacyStockSchema.virtual('id').get(function () {
