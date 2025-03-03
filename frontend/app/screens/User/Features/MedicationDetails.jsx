@@ -30,7 +30,7 @@ const MedicationDetails = () => {
           .get(`${baseURL}medicine/available/${name}`)
           .then((response) => {
             console.log("API Response:", response.data); // Debugging
-            setMedications(response.data.data); // Fix here
+            setMedications(response.data.data); 
             setLoading(false);
           })
           .catch((error) => {
@@ -39,23 +39,19 @@ const MedicationDetails = () => {
           });
       };
 
-      // Fetch immediately, then set interval
       fetchData();
-      const interval = setInterval(fetchData, 5000); // Fetch every 30 seconds
+      const interval = setInterval(fetchData, 5000);
 
-      return () => clearInterval(interval); // Cleanup interval on unmount
+      return () => clearInterval(interval);
     }
   }, [name]);
 
-
-
   const formatDateTime = (date) => {
     const day = String(date.getDate()).padStart(2, '0');
-    const month = date.toLocaleString('default', { month: 'long' }); // Get full month name
+    const month = date.toLocaleString('default', { month: 'long' });
     const year = String(date.getFullYear());
     return `${month} ${day}, ${year}`;
   };
-
 
   if (loading) {
     return (
@@ -74,22 +70,6 @@ const MedicationDetails = () => {
   }
 
   const medicationName = medications[0]?.medicine?.genericName;
-
-  const totalStock = medications?.reduce((total, medication) => {
-    if (!medication.expirationPerStock || !Array.isArray(medication.expirationPerStock)) {
-      return total; // Skip if expirationPerStock is missing or not an array
-    }
-
-    return total + medication.expirationPerStock.reduce((sum, stockItem) => {
-      const stockValue = Number(stockItem.stock);
-      return !isNaN(stockValue) ? sum + stockValue : sum; // Ignore NaN values
-    }, 0);
-  }, 0);
-
-
-
-  console.log('total stock: ', totalStock)
-
 
   return (
     <View style={styles.safeArea}>
@@ -112,24 +92,23 @@ const MedicationDetails = () => {
           const pharmacy = medication.pharmacy || {};
           const userInfo = pharmacy.userInfo || {};
           const location = pharmacy.location || {};
-          // const totalStock = medications?.reduce(
-          //   (total, medication) =>
-          //     total + (medication.expirationPerStock?.reduce((sum, stockItem) => sum + stockItem.stock, 0) || 0),
-          //   0
-          // );
+
+          // Calculate stock for each pharmacy individually
+          const pharmacyStock = medication.expirationPerStock?.reduce((sum, stockItem) => {
+            const stockValue = Number(stockItem.stock);
+            return !isNaN(stockValue) ? sum + stockValue : sum;
+          }, 0) || 0;
 
           return (
             <View key={index} style={styles.infoContainer}>
               <TouchableOpacity
                 onPress={() => {
-                  if (totalStock > 0) {
+                  if (pharmacyStock > 0) {
                     router.push(`/screens/User/Features/MedicineList?pharmacyId=${pharmacy._id}&genericName=${medicine.genericName}`);
                   }
                 }}
-                disabled={totalStock === 0}
-                style={{
-                  opacity: totalStock === 0 ? 0.5 : 1, // Reduce opacity when disabled
-                }}
+                disabled={pharmacyStock === 0}
+                style={{ opacity: pharmacyStock === 0 ? 0.5 : 1 }}
               >
                 <Text style={styles.pharmacyName}>{userInfo.name || 'Unknown Pharmacy'}</Text>
                 <View style={styles.infoRow}>
@@ -154,7 +133,7 @@ const MedicationDetails = () => {
                 <View style={styles.infoRow}>
                   <Ionicons name="cube-outline" size={18} color="#555" />
                   <Text style={styles.stockText}>
-                    {totalStock > 0 ? `${totalStock} in stock` : "Out of Stock"}
+                    {pharmacyStock > 0 ? `${pharmacyStock} in stock` : "Out of Stock"}
                   </Text>
                   <Text style={styles.dateText}>
                     (Last updated on {medication.timeStamps ? formatDateTime(new Date(medication.timeStamps)) : 'No Date Available'})
@@ -188,15 +167,13 @@ const MedicationDetails = () => {
           );
         })}
 
-        {/* Extra padding at the bottom */}
         <View style={styles.bottomSpace}></View>
-      </ScrollView >
-    </View >
+      </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  // styles as before
   safeArea: { flex: 1, backgroundColor: '#F4F4F4' },
   header: { backgroundColor: '#0B607E', paddingTop: 40, paddingBottom: 20, alignItems: 'center' },
   backButton: { position: 'absolute', top: 50, left: 20 },
@@ -223,11 +200,8 @@ const styles = StyleSheet.create({
   infoText: { marginLeft: 8, fontSize: 16, color: '#555' },
   dateText: { marginLeft: 5, fontSize: 12, color: '#555', fontStyle: 'italic' },
   stockText: { marginLeft: 8, fontSize: 16, color: 'green' },
-  descriptionContainer: { marginTop: 0, padding: 10, backgroundColor: '#FFF', borderRadius: 8, elevation: 2 },
-  descriptionTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 5 },
-  descriptionText: { fontSize: 16, color: '#555' },
   pharmacyContainer: { marginTop: 20, padding: 10, backgroundColor: '#005b7f', elevation: 2 },
-  pharmacyTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 5, color: 'white', textAlign: 'center' },
+  pharmacyTitle: { fontSize: 18, fontWeight: 'bold', color: 'white', textAlign: 'center' },
   mapContainer: { marginTop: 20, height: 200, borderRadius: 10, overflow: 'hidden' },
   map: { flex: 1 },
   bottomSpace: { height: 50 },

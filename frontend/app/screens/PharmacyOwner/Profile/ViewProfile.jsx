@@ -53,11 +53,13 @@ export default function ViewProfile() {
       : require('@/assets/images/sample.jpg');
 
   return (
-    <KeyboardAwareScrollView style={styles.container}>
-      {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
-      ) : (
-        <>
+    <View style={styles.container}>
+    {loading ? (
+      <View style={styles.spinnerContainer}>
+        <Spinner />
+      </View>
+    ) : (
+      <KeyboardAwareScrollView contentContainerStyle={styles.scrollViewContent}>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
@@ -110,16 +112,24 @@ export default function ViewProfile() {
               editable={false}
             />
           </View>
-        </>
+        </KeyboardAwareScrollView>
       )}
-    </KeyboardAwareScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1,  // Ensures full height
     backgroundColor: '#F4F4F4',
+  },
+  scrollViewContent: {
+    flexGrow: 1,  // Ensures the content takes the full height
+  },
+  spinnerContainer: {
+    flex: 1, 
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     backgroundColor: '#005b7f', // Blue header background, full width

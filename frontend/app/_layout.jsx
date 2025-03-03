@@ -55,6 +55,8 @@ export default function RootLayout() {
             <Stack.Screen name="screens/User/Features/ViewAllPharmacies" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/PharmacyDetails" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/PharmaciesNearMe" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/User/Features/ViewPharmacyMedicine" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/User/Features/FilterMedicinesByCategoryPerPharmacy" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/ViewAllMedications" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/MedicationDetails" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/MedicineList" options={{ headerShown: false }} />

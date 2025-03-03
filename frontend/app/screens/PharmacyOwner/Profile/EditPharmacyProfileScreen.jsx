@@ -157,11 +157,13 @@ export default function EditProfile() {
   };
 
   return (
-    <KeyboardAwareScrollView style={styles.container}>
-      {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
-      ) : (
-        <>
+    <View style={styles.container}>
+    {loading ? (
+      <View style={styles.spinnerContainer}>
+        <Spinner />
+      </View>
+    ) : (
+      <KeyboardAwareScrollView contentContainerStyle={styles.scrollViewContent}>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
@@ -230,9 +232,6 @@ export default function EditProfile() {
                 value: null,
                 color: '#AAB4C1',
               }}
-              Icon={() => {
-                return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-              }}
               value={barangay}
             />
 
@@ -272,9 +271,9 @@ export default function EditProfile() {
           <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
             <Text style={styles.confirmButtonText}>CONFIRM</Text>
           </TouchableOpacity>
-        </>
+        </KeyboardAwareScrollView>
       )}
-    </KeyboardAwareScrollView>
+    </View>
   );
 }
 
@@ -292,22 +291,26 @@ const pickerSelectStyles = StyleSheet.create({
   inputAndroid: {
     backgroundColor: '#F2F2F2',
     borderRadius: 10,
-    padding: 10,
-    marginVertical: 10,
+    padding: 0,
+    marginVertical: 0,
     fontSize: 16,
     color: '#333',
     paddingRight: 30,
-  },
-  iconContainer: {
-    top: 15,
-    right: 10,
   },
 });
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1,  // Ensures full height
     backgroundColor: '#F4F4F4',
+  },
+  scrollViewContent: {
+    flexGrow: 1,  // Ensures the content takes the full height
+  },
+  spinnerContainer: {
+    flex: 1, 
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     backgroundColor: '#005b7f',
@@ -409,5 +412,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
   },
+  spinnerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },  
 });
 
