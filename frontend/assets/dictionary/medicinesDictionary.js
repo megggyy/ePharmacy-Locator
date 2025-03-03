@@ -1,0 +1,34440 @@
+export const affContent = `
+SET UTF-8
+`;
+
+export const dicContent = `
+34433
+Japanese Encephalitis Virus (Live, Attenuated)
+Heparin Sodium
+Heparin Sodium
+Human Insulin (rDNA)
+Insulin Human
+Isophane Insulin Human, Recombinant DNA
+Insulin Detemir
+Insulin Human
+Somatropin
+Biphasic Insulin Aspart 30
+Insulin Aspart
+Liraglutide
+Laronidase
+Insulin Glulisine
+Agalsidase Beta
+Agalsidase Beta
+Insulin Lispro (rDNA origin)
+Somatropin
+Trastuzumab
+Ranibizumab
+Filgrastim
+Quadrivalent Seasonal Influenza Vaccine (Split) Virion, Inactivated) 2024 Southern Hemisphere Strain.
+Epoetin beta
+Alteplase
+Tocilizumab
+Trastuzumab
+Rituximab
+Obinutuzumab
+Quadrivalent Seasonal Influenza Vaccine (Split Virion, Inactivated) Southern Hemisphere 2024 Strain.
+Secukinumab
+Secukinumab
+Secukinumab
+Pneumococcal Conjugate Vaccine, 13-Valent (adsorbed) [See formulation on reverse side]
+Chorionic Gonadotrophin
+Pembrolizumab
+Rituximab
+Combined Diphtheria, Tetanus, Acellular Pertussis Vaccine, Adsorbed
+Siltuximab
+Siltuximab
+Insulin Glargine
+Human Normal Immunoglobulin
+Human Normal Immunoglobulin
+Human Albumin
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Human Albumin
+Human Papillomavirus 9-Valent Vaccine (Recombinant, Adsorbed)
+Human Albumin
+Human Albumin
+Filgrastim
+Filgrastim
+Insulin Degludec + Insulin Aspart
+Lactobacillus gasseri + Lactobacillus rhamnosus
+Filgrastim
+Filgrastim
+Heparin Sodium
+Heparin Sodium
+Follitropin Alfa / Lutropin Alfa
+Human Coagulation Factor VIII
+Human Coagulation Factor VIII
+Alteplase
+Insulin aspart
+Filgrastim
+Affinity-Purified Antibodies To Human Interferon Gamma
+Menotrophin
+Filgrastim
+Clostridium Botulinum Type A Neurotoxin complex
+Vedolizumab
+Idarucizumab
+Peginterferon alfa-2a
+Human Papillomavirus 9-Valent Vaccine (Recombinant, Adsorbed)
+RECOMBINANT HUMAN ERYTHROPOIETIN
+Streptokinase
+Isophane Insulin Human
+Insulin Human (Regular)
+Biphasic Insulin
+Adalimumab
+Pegfilgrastim
+Filgrastim
+Filgrastim
+Insulin Degludec + Liraglutide
+Insulin Detemir
+Botulinum Toxin Type A (from Clostridium botulinum)
+Botulinum Toxin Type A (from Clostridium botulinum)
+Botulinum Toxin Type A (from Clostridium botulinum)
+Botulinum Toxin* Type A (*from Clostridium botulinum)
+Isophane Insulin Human, Recombinant DNA
+Regular Insulin Human, Recombinant DNA
+Neutral Insulin Human + Isophane Insulin Human, Recombinant DNA
+Trastuzumab
+Trastuzumab
+Human Normal Immunoglobulin
+Human Normal Immunoglobulin
+Follitropin Alfa
+Follitropin Alfa
+Follitropin Alfa
+Follitropin Alfa
+Heparin Sodium
+Nimotuzumab
+Menotrophin
+Menotrophin
+Chorionic Gonadotrophin
+Urofollitropin
+Diphtheria, Tetanus, Pertussis, Hepatitis B Recombinant and Haemophilus influenza B Tyoe (Hib) Vaccine
+Diphtheria, Tetanus, Pertussis, Hepatitis B Recombinant and Haemophilus influenza B Tyoe (Hib) Vaccine
+Adalimumab
+Evolocumab
+Evolocumab
+Insulin aspart
+Insulin aspart
+Insulin Glargine/ Lixisenatide
+Insulin Glargine/ Lixisenatide
+Human Albumin
+Human Albumin
+Human Albumin
+Human Albumin
+Atezolizumab
+Eptacog alfa activated
+Isophane Insulin (Recombinant DNA)
+Inactivated Poliomyelitis Vaccine (Types 1, 2 And 3)
+Dulaglutide
+Dulaglutide
+Ixekizumab
+Ixekizumab
+Hepatitis A (Inactivated) Vaccine (Adsorbed)
+Hepatitis A (Inactivated) Vaccine (Adsorbed)
+Pneumococcal Conjugate Vaccine, 13-Valent (adsorbed) [See formulation]
+Ustekinumab
+Pneumococcal Polysaccharide Vaccine, Polyvalent
+Trastuzumab
+Trastuzumab
+Follitropin Alfa / Lutropin Alfa
+Follitropin alfa / Lutropin alfa
+Follitropin alfa / Lutropin alfa
+Botulinum Toxin Type A
+Adalimumab
+Somatropin
+Somatropin
+Semaglutide
+Semaglutide
+Semaglutide
+Rabies Vaccine (Inactivated) (Wistar Strain Rabies)
+Typhoid Polysaccharide Vaccine
+Rabbit Anti-Human Thymocyte Immunoglobulin
+Hepatitis B Immunoglobulin (Human)
+Diphtheria-Tetanus Toxoids And Pertussis ( DTP ) Vaccines
+Diphtheria-Tetanus Toxoid ( DT )
+Tetanus Toxoid (Adsorbed)
+Hepabig
+Measles Vaccine (Live, Attenuated)
+Clostridium botulinum Type A Neurotoxin Complex
+Factor IX Complex
+Factor IX Complex
+Measles, Mumps, Rubella (MMR) Vaccine (Live, attenuated) [see formulation on reverse side]
+Measles, Mumps and Rubella Vaccine (Live, Attenuated)
+Tetanus Toxoid ( Adsorbed )
+Human Albumin
+Diphtheria-Tetanus Toxoids ( Adsorbed )
+Human Albumin
+Live Attenuated Measles Vaccine
+Tetanus Toxoid ( Adsorbed )
+Human Albumin
+Hepatitis B Vaccine (rdna)
+Hepatitis B Vaccine (rdna)
+Hepatitis B Vaccine (rdna)
+Hepatitis A Vaccine (Inactivated, Adsorbed)
+Rabies Vaccine (Inactivated) (Wistar Strain Rabies)
+Rabies Vaccine (Inactivated)
+Diphtheria, Tetanus, Pertussis (Acellular Component), And Poliomyelitis (Inactivated) Vaccine (Adsorbed)
+Diphtheria, Tetanus, Pertussis (Acellular Poliomyelitis (Inactivated) Vaccine and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Tetanus Antitoxin Refined
+Tetanus Antitoxin Refined
+Tetanus Antitoxin Refined
+Human Albumin
+Human Plasma Coagulation Factor VIII
+Human Coagulation Factor IX
+Botulinum Toxin Type A
+HEPATITIS B VACCINE ( rDNA )
+HEPATITIS B VACCINE ( rDNA )
+Hepatitis B vaccine (rDNA)
+Hepatitis B Vaccine ( rDNA)
+Tuberculin Purified Protein Derivative
+Bacillus Calmette-Guerin (BCG) Vaccine
+Human Tetanus Immunoglobulin
+Human Papillomavirus Vaccine (Types 6, 11, 16 And 18) (Recombinant Adsorbed
+Human Papillomavrius Vaccine [Types 6, 11, 16, 18] (Recombinant, Adsorbed)
+Rotavirus Vaccine, Live
+Human Papillomavirus Vaccine [Types 16, 18] (Recombinant, Adjuvanted, Adsorbed)
+Tetanus Toxoid Adsorbed
+Purified Vero Cell Rabies Vaccine
+Diphtheria, Tetanus and Acellular Pertussis Vaccine, Adsorbed'
+Epoetin alfa (Recombinant Human Erythropoietin)
+Epoetin Alfa
+Methoxy Polyethylene Glycol-Epoetin Beta
+Methoxy Polyethylene Glycol-Epoetin Beta
+Epoetin Alfa
+Methoxy Polyethylene Glycol-Epoetin Beta
+Human Normal Immunoglobulin
+Measles, Mumps, Rubella and Varicella Vaccine (Live, Attenuated)
+Tetanus Toxoid
+Cholera Vaccine (inactivated, oral)
+Purified Rabies Vaccine (Vero Cell)
+Human Normal Immunoglobulin(IGIV)
+Recombinant Human Thrombopoietin
+Live Attenuated Rotavirus Vaccine
+Anti-Rabies Serum (Equine)
+HEPATITIS B VACCINE (RECOMBINANT DNA )
+Tocilizumab
+Tocilizumab
+Tocilizumab
+Filgrastim
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Recombinant Human Erythropoietin Alfa
+Human Normal Immunoglobulin (IVIg)
+Diphtheria and Tetanus Vaccine (Adsorbed)
+Somatropin
+Recombinant Hepatitis B Vaccine
+Recombinant Hepatitis B Vaccine
+Filgastrim
+Human Albumin
+Thyrotropin Alfa
+Meningococcal (Groups A, Polysaccharide Diphtheria Toxoid Conjugate Vaccine
+Epoetin Alfa
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Epoetin alfa
+Albumin
+Interferon Alfa-2B (Human)
+Interferon Alfa-2B (Human)
+Interferon Alfa-2B (Human)
+Interferon Beta-1A (Human)
+Interferon Beta-1A (Human)
+Rotavirus Vaccine (Live, Attenuated)
+Filgrastim
+Epoetin Alfa
+Human Papillomavirus Vaccine [Types 16 and 18] (Recombinant, adjuvanted, adsorbed)
+Hepatitis B Immunoglobulin (Human)
+Clostridium botulinum Type A Neurotoxin Complex
+Enoxaparin (as Sodium)
+Enoxaparin Sodium
+Enoxaparin (as sodium)
+Factor VIII
+Human Tetanus Immunoglobulin
+Tetanus Antitoxin (equine)
+Tetanus Antitoxin (equine)
+Tetanus Antitoxin (equine)
+Lutropin Alfa
+Epoetin Alfa
+Diphtheria, Tetanus, Pertussis (Whole-Cell), Recombinant Hepatitis B, Haemophilus Influenzae Type B Combined Vaccine
+Typhoid Polysaccharide Vaccine
+Typhoid Polysaccharide Vaccine
+Follitropin Alfa
+Gonal-F
+Follitropin Alfa
+Denosumab
+Measles and Rubella Vaccine (Live)
+Interferon-Beta 1B
+Bacillus Calmette-Guerin Vaccine (Live, Attenuated)
+Recombinant Human Erythropoietin Alfa
+Recombinant Human Erythropoietin Alfa
+Human Rabies Immunoglobulin
+Follitropin Alfa
+Cholera Vaccine (Inactivated, Oral)
+Somatropin
+Somatropin
+Recombinant Human Epidermal Growth Factor
+Measles, Mumps and Rubella Vaccine (Live, Attenuated)
+Live Measles, Mumps and Rubella Vaccine
+Panitumumab
+Human Norml Immunoglobulin
+Pneumococcal Conjugate Vaccine, 13-valent (adsorbed)
+Golimumab
+Enoxaparin Sodium
+LIVE ATTENUATED MEASLES, MUMPS and RUBELLA VACCINE
+Choriogonadotropin Alfa
+Measles, Mumps and Rubella Vaccine (Live, Attenuated)
+Clostridium Botulinum Toxin Type A
+Filgrastim (Recombinant Human Granulocyte Colony Stimulating Factor)
+Human Rabie Immunoglobulin
+Human Tetanus Immunoglobulin
+Japanese Encephalitis Vaccine (Live, Attenuated)
+Human Papillomavirus Vaccine [Types 16 and 18] (Recombinant, adjuvanted, adsorbed)
+Diphtheria, Tetanus, Pertussis (Acellular Component), Hepatitis B, Poliomyelitis (Inactivated) and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Poliomyelitis Vaccine (Type 1, 2 and 3) (Inactivated)
+Epoetin alfa
+Enoxaparin Sodium
+Epoetin alfa (Recombinant Human Erythropoietin)
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Trastuzumab Emtansine
+Trastuzumab Emtansine
+Varicella Virus Vaccine, Live
+Insulin Lispro (rDNA)
+Clostridium botulinum Type A Toxin
+Pegfilgrastim
+Humulin N
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Recombinant Human Erythropoietin
+Human Chorionic Gonadotropin
+Recombinant Human Insulin (70% Isophane/30% Soluble)
+Insulin Human (rDNA)
+Ustekinumab
+Menotrophin
+Insulin Lispro
+Urofollitropin
+Menotrophin
+Hepatitis A Vaccine (Live, Attenuated)
+Diphtheria, Tetanus, Pertussis, Hepatitis B (rDNA) and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Diphtheria, Tetanus, Pertussis, Hepatitis B And Haemophilus Influenzae Type B Conjugate Vaccine (Adsorbed)
+Bemiparin sodium
+Bemiparin sodium
+Insulin Glargine
+Insulin Glargine
+Lantus Solostar
+Insulin Glargine
+Biphasic Isophane Human Insulin 30/70 (recombinant DNA)
+Biphasic Isophane Human Insulin 50/50 (Recombinant DNA)
+Regular Insulin Human (Recombinant DNA)
+Isophane Insulin Human (Recombinant DNA)
+Insulin Glulisine
+Biphasic Isophane Insulin (Rdna Origin)
+Biphasic Isophane Insulin (Rdna Origin)
+Biphasic Isophane Insulin (rDNA)
+Regular Insulin Human (Rdna Origin)
+Regular Insulin Human (Rdna Origin)
+Isophane Insulin Human (Rdna Origin)
+Isophane Insulin Human (Rdna Origin)
+Insulin Glargine
+Insulin Glargine
+Insulin Glargine
+Isophane Insulin Human, Recombinant DNA
+Isophane Insulin Human, Recombinant DNA
+Heparin Sodium
+Enoxaparin Sodium
+Enoxaparin sodium
+Enoxaparin sodium
+Human Albumin
+Filgrastim
+Filgrastim
+Filgrastim
+Recombinant Alfa-2B
+Human Normal Immunoglobulin
+Human Normal Immunoglobulin
+Human Normal Immunoglobulin
+Human Normal Immunoglobulin
+Human Normal Immunoglobulin
+Biphasic Isophane Insulin Human (Recombinant DNA Origin)
+Insulin Glargine
+Insulin Glargine
+Human Albumin
+Human Albumin
+Insulin Glargine
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Isophane Insulin Human
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Epoetin Alfa
+Filgrastim
+Peginterferon Alfa-2B
+Botulinum Toxin Type A (from clostridium botulinum)
+Insulin Human (rDNA)
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Rituximab
+Epoetin Beta
+Heparin Sodium
+Heparin Sodium
+Human Normal Immunoglobulin
+Equine Anti-Rabies Immunoglobulin
+Epoetin Alfa
+Epoetin Alfa
+Balanced Multiple Maintenance Solution With 5% Dextrose (See formulation on reverse side)
+Clobetasol Propionate
+Clobetasol Propionate
+Prednisolone (as acetate)
+Furosemide
+Furosemide (as sodium)
+Sodium Fusidate
+Sodium Fusidate
+Fluocinolone Acetonide + Polymyxin B Sulfate + Neomycin Sulfate
+Paracetamol
+Erythromycin (as estolate)
+Erythromycin (as estolate)
+Lidocaine
+Pethidine Hydrochloride
+Prednisolone + Chlorphenamine Maleate
+Aspirin
+Chlorphenamine Maleate
+Glutamic Acid + Dicalcium Phosphate + Thiamine Hydrocloride (Vitamin B1) + Cyanocobalamin (Vitamin B12)
+Fluocinolone Acetonide
+Norethisterone
+Dexamethasone
+Digoxin
+Digoxin
+Allopurinol
+Vitamin B-Complex + Lysine + Iron
+Cefuroxime (as Axetil)
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Guaifenesin
+6% Dextran 70 In 0.9% Sodium Chloride
+Balanced Multiple Replacement Solution With 5% Dextrose
+Warfarin Sodium (As Clathrate)
+Warfarin Sodium (As Clathrate)
+Fusidate Sodium
+Betamethasone (As Valerate)
+Hyoscine-N-Butyl-Bromide
+Paracetamol
+Prednisolone
+Aminophylline
+Atropine (as sulfate)
+Dextrose Monohydrate
+Ephedrine Sulfate
+Epinephrine
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+0.9% Sodium Chloride
+Tranexamic Acid
+Betamethasone (as valerate)
+Policresulen
+Iron (as ferrous sulfate heptahydrate)
+Phenobarbital
+Sodium Bicarbonate
+Vitamin B Complex + Vitamin C
+Benzylpenicillin (as sodium)
+Magnesium Sulfate
+Magnesium Sulfate Heptahydrate
+Phenylpropanolamine Hydrochloride + Guaifenesin
+Standardized Senna Concentrate
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Fusidic acid
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Dexamethasone
+Diazepam
+Dextromethorphan Hbr + Phenylpropanolamine Hydrochloride + Paracetamol
+Carbimazole
+Dextromethorphan Hydrobromide + Phenylpropanolamine Hydrochloride + Paracetamol
+5% Dextrose In Lactated Ringer'S
+5% Dextrose In 0.3% Sodium Chloride
+Lactated Ringer'S (see reverse)
+20% Mannitol
+Dexamethasone
+Pyridostigmine Bromide
+Bacitracin/ Polymyxin B Sulfate/ Neomycin
+5% Dextrose In Water
+Sterile Water for Injection
+Fluocinolone Acetonide/Neomycin Sulfate
+Suxamethonium Chloride
+Iron + Vitamin B Complex
+Dexamethasone
+Multivitamins
+Terbutaline Sulfate
+Fluocinolone Acetonide
+Allopurinol
+Pyrantel Embonate
+Norethisterone + Ethinylestradiol
+Mebeverine Hydrochloride
+Fluocinolone Acetonide
+Dextromethorphan Hbr + Guiafenesin
+Isoniazid + Pyridoxine Hydrochloride (Vitamin B6)
+Iron + Folic Acid + Vitamin B -Complex
+Chloramphenicol (As Palmitate)
+Multivitamins
+Benzocaine / Boric Acid / Eucalyptus
+Glycerol
+Fluocinonide
+Clotrimazole
+Amoxicillin (As Trihydrate)
+Amoxicillin (as trihydrate)
+Metronidazole (as benzoate)
+Iron + Vitamin B-Complex
+Betamethasone (As Valerate)
+Morphine Sulfate
+Morphine Sulfate
+Levomepromazine (as maleate)
+Levomepromazine (as maleate)
+Phenoxymethylpenicillin Potassium
+Bumetanide
+Betamethasone (As Dipropionate)
+Hydrocortisone 10 Mg+ Bacitracin 200 Units + Polymyxin B Sulfate 4000 Units + Neomycin 3 Mg
+Ascorbic Acid
+Monobasic Sodium Phosphate + Dibasic Sodium Phosphate
+Silver Sulfadiazine
+Levothyroxine Sodium
+Levothyroxine Sodium
+Clorazepate Dipotassium
+Isoxsuprine Hydrochloride
+Diclofenac Sodium
+Metoprolol Tartrate
+Phenobarbital
+Metoprolol Tartrate
+Aluminum Hydroxide + Magnesium Trisilicate Calcium Carbonate
+Calcium Lactate
+Phenobarbital
+Fluocinonide
+Multivitamins + Iron + Docusate Sodium
+Multivitamis + Iron
+Pyrantel (as embonate)
+Nalbuphine Hydrochloride
+Thiamine Hydrochloride (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Paracetamol
+Mebendazole
+Piracetam
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Loperamide Hydrochloride
+Gliclazide
+Multivitamins + Iron
+Multivitamins + Minerals + Deanol + Royal Jelly + Korean Panax Ginseng
+Aplosyn-10
+Fluocinolone Acetonide
+Chloramphenicol (as Palmitate)
+Fluocinolone Acetonide
+Timolol Maleate
+Oxantel Embonate + Pyrantel Embonate
+Chlorphenamine Maleate
+Fluocinolone Acetonide
+Naproxen Sodium
+Dexamethasone Sodium Phosphate/Neomycin Base (As Sulfate)/Polymixin B Sulfate
+Fluocinonide
+Paracetamol + Phenylpropanolamine Hydrochloride+ Chlorphenamine Maleate
+PARACETAMOL
+Allopurinol
+Piribedil
+Betamethasone (as dipropionate)/ Salicylic Acid
+Amoxicillin (As Trihydrate)
+Benzylpenicillin Sodium
+Trimipramine maleate
+Cefaclor
+Allopurinol
+Guaifenesin + Sodium Citrate
+Furosemide
+Diphenhydramine Hydrochloride
+Amoxicillin (as trihydrate)
+Bromhexine Hydrochloride
+Amoxicillin (Trihydrate)
+Fluocinolone Acetonide
+Cetrorelix (as acetate)
+Balanced Multiple Maintenance Solution With 5% Dextrose (see formulation on reverse side)
+5% Dextrose In 0.9% Sodium Chloride (See formulation in reverse side
+Policresulen+Cinchocaine hydrochloride
+Policresulen+Cinchocaine HCl
+Diphenhydramine Hydrochloride
+Dicycloverine Hydrochloride
+Mefenamic Acid
+Amoxicillin (As Trihydrate)
+Erythromycin (as estolate)
+Fluocinonide + Neomycin Sulfate + Gramicidin + Nystatin
+Ceftriaxone (as sodium)
+Erythromycin (as ethylsuccinate)
+Dicycloverine Hydrochloride
+Diphenhydramine Hydrochloride
+Prednisone
+Chloroquine Phosphate
+Paracetamol
+Dextromethorphan HBr + Phenylpropanolamine HCl + Chlorpheniramine maleate + Sodium citrate
+Cotrimoxazole
+Mefenamic Acid
+Dicycloverine Hydrochloride
+Multivitamins + Iron
+Paracetamol
+Paracetamol
+Lidocaine (as hydrochloride)
+Amoxicillin (As Trihydrate)
+Pilocarpine Hydrochloride
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (as Trihydrate)
+10% Dextrose In Water
+5% Dextrose In Water
+5% Dextrose In 0.9% Sodium Chloride
+Hyoscine-N-Butylbromide
+Amoxicillin (As Trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone
+Famotidine
+Livoncel
+Metoprolol Succinate (equivalent to 100 mg Metoprolol Tartrate)
+Diosmin + Hesperidin
+Morphine Sulfate
+5% Dextrose in 0.3% Sodium Chloride
+Paracetamol
+Fluoxetine (As Hydrochloride)
+Docusate Sodium
+6% Dextran 70 in 5% Dextrose
+Ibuprofen + Paracetamol
+Amoxicillin (as trihydrate)
+0.9% Sodium Chloride
+Ondansetron (As Hydrocloride Dihydrate)
+5% Dextrose in 0.9% Sodium Chloride
+5% Dextrose in 0.3% Sodium Chloride
+Ondansetron (As Hydrochloride Dihydrate)
+Sodium Chloride
+Imipenem + Cilastatin Sodium
+Dexamethasone + Neomycin Sulfate (Equivalent To Neomycin) + Polymyxin B Sulfate
+Fluorometholone Acetate
+Paracetamol
+Paracetamol
+Salbutamol (as sulfate)
+Proparacaine Hydrochloride
+Nalidixic Acid
+Bromhexine Hydrochloride
+Paracetamol
+Dexamethasone
+Sodium Chloride
+L-Carnitine
+Lactated Ringer'S Solution
+Balanced Multiple Maintenance Solution With 5% Dextrose
+Tropicamide
+Betahistine mesylate
+Water for Injection
+Budesonide
+5% Dextrose in Lactated Ringer's
+Peritoneal Dialysis With 1.5% Dextrose
+Balanced Multiple Replacement Solution With 5% Dextrose
+Salbutamol
+Atenolol
+Tamoxifen (as citrate)
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Mecobalamin
+Haloperidol Decanoate
+Budesonide
+Metronidazole
+Nicardipine Hydrochloride
+Iron (as ferrous sulfate)
+Erythromycin
+Miconazole Nitrate
+Miconazole
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone
+Diclofenac Sodium
+Mannitol
+Tobradex + Dexamethasone
+Alprazolam
+Betaxolol (As Hydrochloride)
+5% Dextrose in 0.9% Sodium Chloride
+0.9% Sodium Chloride
+Aluminum Hydroxide + Magnesium Hydroxide
+Fluorouracil
+Mannitol
+Cefazolin Sodium
+Ketorolac Trometamol
+Lisinopril
+Lisinopril
+Lisinopril (as dihydrate)
+Multivitamins + Iron + Calcium
+Warfarin Sodium (As Clathrate)
+Aluminum Hychloride Hexahydrate
+Potassium Chloride
+Balanced Multiple Maintenance Solution/5% Dextrose
+5% Dextrose with Electrolytes Maintenance
+Loperamide Hydrochloride
+Salbutamol (as sulfate)
+Doxorubicin Hydrochloride
+Amoxicillin (as trihydrate)
+Zuclopenthixol acetate
+Calcipotriol
+Tobramycin + Dexamethasone
+ISONIAZID
+Hydrocortisone (As Sodium Succinate)
+Hydrochlorthiazide
+TERBUTALINE SULFATE
+Ferrous Fumarate + Vitamin B Complex
+Mecobalamin
+Sodium Bicarbonate
+Tizanidine (As Hydrochloride)
+Amoxicillin (As Trihydrate)
+Bupivacaine Hydrochloride
+Amoxicillin (as Trihydrate)
+Lidocaine Hydrochloride
+Ketotifen (As Hydrogen Fumarate)
+AMOROLFINE (as hydrochloride)
+5% Dextrose in 0.9% Sodium Chloride
+Paracetamol
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Survanta
+Cefixime
+Paracetamol+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Idarubicin Hydrochloride
+Fluticasone Propionate
+Cefalexin (as monohydrate)
+Paracetamol
+Carboplatin
+Terbinafine (As Hydrochloride)
+Flucloxacillin (As Sodium)
+Flucloxacillin (As Sodium)
+Tramadol hydrochloride
+Dextromethorphan Hydrobromide + Guaifenesin + Sodium Citrate + Phenylpropanolamine Hydrochloride
+Paroxetine
+Cefalexin (as Monohydrate)
+Multivitamins + Lysine + Buclizine
+Cotrimoxazole
+Cefuroxime (As Sodium)
+Ceftazidime (as pentahydrate)
+Amoxicillin (As Trihydrate)
+Acyclovir
+Mefenamic Acid
+Ceftazidime (as pentahydrate)
+Castor Oil
+Cefixime
+Cefixime
+BENZOYL PEROXIDE
+Cetirizine Dihydrochloride
+Erythromycin (as stearate)
+Amoxicillin (As Trihydrate)
+Thiamine Mononitrate (Vit. B1)/ Pyridoxine Hydrochloride (Vit. B6) / Cyanocobalamine (Vit. B12)
+Prednisone
+Cefalexin (as monohydrate)
+CEFALEXIN (AS MONOHYDRATE)
+Cefalexin (As Monohydrate)
+Ganciclovir (As Sodium)
+Finasteride
+Bss (Balanced Salt Solution) Sterile Intraocular Irrigating Solution
+SALBUTAMOL (AS SULFATE)
+Cefalexin (As Monohydrate)
+Cefalexin (as Monohydrate)
+Diclofenac Sodium
+Naproxen
+Pheniramine Maleate + Naphazoline Hydrochloride
+Goserelin (As Acetate)
+Alprazolam
+Ascorbic Acid
+Terbutaline Sulfate
+Terbutaline Sulfate
+Cefalexin (As Monohydrate)
+Lacidipine
+Lacidipine
+Salbutamol (as sulfate)
+Dextromethorphan Hydrobromide + Phenylpropanolamine Hydrochloride + Paracetamol
+Dextromethorphan Hydrobromide + Chlorphenamine Maleate
+Prednisone
+SALBUTAMOL (AS SULFATE)
+Ciprofloxacin (as Hydrochloride)
+Cefalexin
+Cefalexin (As Monohydrate)
+Amoxicillin (As Trihydrate)
+Cotrimoxazole
+Salbutamol (as Sulfate)
+Carbocisteine
+Phenylephrine hydrochloride
+Diphenhydramine
+Cefalexin (as Monohydrate)
+Cefalexin (As Monohydrate)
+Ambroxol hydrochloride
+Guaifenesin + Phenylpropanolamine HCl + Chlorphenamine Maleate
+Ambroxol Hydrochloride
+Sodium Bicarbonate
+Chloramphenicol (As Palmitate)
+Cefalexin (as monohydrate)
+Balanced Multiple Replacement Solution For Iv Infusion
+Acibar +Fluid Extract Regaliz + Fluid Extract Rhubarb
+Atropine Sulfate
+Amoxicillin (Trihydrate)
+Methyl Salicylate , Essence Of Eucalyptus , Camphor Powder , Menthol Crystals
+Diphenhydramine Hydrochloride
+Cotrimoxazole
+Allopurinol
+TERBUTALINE SULFATE
+Cotrimoxazole
+Salbutamol (As Sulfate) + Guaifenesin
+PARACETAMOL
+Lactated Ringer's Solution for Injection
+BENZOYL PEROXIDE
+Thiamine Hydrochloride (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12) + Lysine Hydrochloride + Zinc (As Gluconate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Paracetamol
+Amoxicillin (as Trihydrate)
+Diphenhydramine Hydrochloride
+Cotrimoxazole
+Betamethasone Valerate
+Minerals
+Cefalexin (as Monohydrate)
+Cefalexin (as Monohydrate)
+Lamotrigine
+Lamotrigine
+Cassia Angustifolia Vahl. (Senna leaves)
+Cotrimoxazole
+Cefalexin (As Monohydrate)
+Amikacin (as Sulfate)
+Tramadol Hydrochloride
+Fentanyl (As Citrate)
+Balanced Multiple Maintenance Solution For Iv Infusion
+Cefalexin (As Monohydrate)
+Salbutamol (as sulfate)
+Gentamicin (as Sulfate)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+5% Dextrose In Lactated Ringer'S Solution
+Dexamethasone
+Salbutamol (as sulfate)
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (as trihydrate)
+Desonide
+Lynestrenol
+Fat Soluble Vitamins
+Mefenamic Acid
+Cefaclor (As Monohydrate)
+Amoxicillin (as trihydrate)
+Cefalexin (As Monohydrate)
+Omeprazole
+Chloramphenicol
+Rifampicin
+Paracetamol
+Paracetamol
+Dextromethorphan hydrobromide/ Guaifenesin/ Chlorphenamine maleate/ Paracetamol/ Phenylpropanolamine hydrochloride
+Cefuroxime (As Axetil)
+Cefuroxime (as axetil)
+Chloramphenicol (as sodium succinate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (as Trihydrate)
+Cefalexin (as monohydrate)
+Aluminum Hydroxide + Magnesium Hydroxide
+Metronidazole
+Paracetamol
+Guiafenesin
+Chloramphenicol (As Palmitate)
+Tretinoin
+SALBUTAMOL (AS SULFATE)
+Silver Sulfadiazine
+Ofloxacin
+Menadione Sodium Bisulfite
+Cefalexin (as Monohydrate)
+Paracetamol
+Metronidazole
+Ofloxacin
+Amino Acids
+Amoxicillin (As Trihydrate)
+Cefalexin (As Monohydrate)
+Dicycloverine (As hydrochloride)
+Furazolidone
+Ofloxacin
+PARACETAMOL
+Mefenamic Acid
+Tolnaftate/Clioquinol/Gentamicin (as sulfate)/ Betamethasone (as valerate)
+Prednisone
+Inosine Acedoben Dimepranol
+Gelzid
+Salbutamol (as Sulfate)
+Cefalexin (As Monohydrate)
+Vitamin B-Complex
+0.9% Sodium Chloride
+Amoxicillin (As Trihydrate)
+Desonide
+Erythromycin (as Ethylsuccinate)
+Ascorbic Acid
+Ciclosporin
+Cotrimoxazole
+Cotrimoxazole
+Erythromycin (as ethylsuccinate)
+Vitamin B Complex + Lysine Hydrochloride
+d-Alpha Tocopheryl Acid Succinate (Vitamin E)/ Korean Ginseng/ Bee Pollen/ Calcium Pantothenate/ Lecithin
+Aluminum Hydroxide + Magnesium Hydroxide
+Mulvitamins + Iron
+Cotrimoxazole
+Dicycloverine
+Carbocisteine
+Metronidazole (as Benzoate)
+FERROUS SULFATE
+Zinc Oxide + Benzoic Acid + Sulfur + Salicylic Acid
+Zinc Oxide + Benzoic Acid + Sulfur + Salicylic Acid
+Ciclosporin
+Ciclosporin
+Piracetam
+BENZYL BENZOATE 25% LOTION
+Ceftriaxone
+Cefixime (as Trihydrate)
+Dibencozide
+Cinnarizine
+Cefalexin (as monohydrate)
+Cefalexin (As Monohydrate)
+Mefenamic Acid
+Metoprolol Tartrate
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Cefalexin (as Monohydrate)
+Cefalexin (as Monohydrate)
+Paracetamol
+Paracetamol
+Mefenamic Acid
+Mesalazine
+Ranitidine Hydrochloride
+Cefalexin (As Monohydrate)
+Mometasone Furoate
+Chloramphenicol (as palmitate)
+Paracetamol
+Carbocisteine
+Vitamin B1 + B6 + B12
+Salbutamol (as Sulfate)
+Meclizine Hydrochloride
+Metronidazole (as benzoate)
+Cefuroxime (As Sodium)
+Ampicillin (As Sodium)
+Carbocisteine
+Dexamethasone
+Sodium Chloride
+Sodium Chloride
+Potassium Chloride
+Carbocisteine
+Pyrantel (as Embonate)
+Cefuroxime (As Sodium)
+Hydroxychloroquine Sulfate
+Paracetamol
+Acyclovir
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Amoxicillin (as trihydrate)
+Tretinoin
+Cefalexin (as Monohydrate)
+Phenylpropanolamine Hydrochloride Chlorphenamine Maleate
+Cefalexin (As Monohydrate)
+Benzathine Benzylpenicillin
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Valaciclovir (as Hydrochloride)
+Guaifenesin
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cloxacillin (As Sodium)
+Paracetamol
+Epinephrine (As Hydrochloride)
+Epinephrine (As Hydrochoride)
+Tramadol Hydrochloride
+Indomethacin
+Cefalexin (As Monohydrate)
+Furosemide
+Cotrimoxazole
+Salbutamol (As Sulfate)
+Antiox
+Potassium Citrate
+Desferrioxamine mesilate
+Cefalexin (As Monohydrate)
+Cloxacillin (As Sodium)
+Ofloxacin
+Ambroxol Hydrochloride
+Ampicillin (as Sodium)
+Ampicillin (as Sodium)
+Aluminum Hydroxide + Magnesium Hydroxide
+Salbutamol (as Sulfate)
+GUAIFENESIN
+Sumatriptan
+MEFENAMIC ACID
+Salbutamol (As Sulfate)
+Sodium Choride 0.65% Buffered Solution Nasal Spray
+Lamotrigine
+Salbutamol (As Sulfate)
+Cefalexin (As Monohydrate)
+Ferrous Fumarate (49.5mg elemental iron) + Thiamine Mononitrate (Vit. B) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Multivitamins With Taurine
+Ascorbic Acid
+Senna Leaves + Senna Pods
+Diphenhydramine Hydrochloride
+None
+L-Ornithine-L-Aspartate
+Mesalazine
+Multivitamins + Minerals + Deanol + Royal Jelly + Korean Panax Ginseng
+Dapsone
+Chloramphenicol (As Sodium Succinate)
+Multivitamins + Iron
+Ofloxacin
+Cotrimoxazole
+Ferrous Fumarate (Equivalent To 107.25 Mg Elemental Iron) + Cyanocobalamin
+Mefenamic Acid
+Cefotaxime (As Sodium)
+Carbomer
+Amoxicillin (as trihydrate)
+Cefalexin (As Monohydrate)
+Desogestrel/Ethinylestradiol
+Multivitamins
+Cefalexin (as Monohydrate)
+Vitamin B1 (Thiamine Hydrochloride) + Vitamin B6 (Pyridoxine Hydrochloride) + Vitamin B12 (Cyanocobalamin)
+Cefalexin (As Monohydrate)
+Glucosamine Sulfate
+Monobasic Sodium Phosphate+ Dibasic Sodium Phosphate
+Indapamide
+Cefalexin (As Monohydrate)
+Cefuroxime (as sodium)
+Salbutamol (As Sulfate)
+Dexpanthenol
+Mycophenolate Mofetil
+Vitamin B Complex + Iron + Lysine Hydrochloride
+Cefalexin (as Monohydrate)
+METRONIDAZOLE
+Phenobarbital
+Paracetamol
+ASCORBIC ACID
+Amoxicillin (As Trihydrate)
+Cotrimoxazole
+Meclizine Hydrochloride
+Multivitamins
+Eperisone Hydrochloride
+Bromhexine Hydrochloride
+Metronidazole
+Cefalexin (As Monohydrate)
+Carvedilol
+Paracetamol
+Allopurinol
+Dicycloverine (As Hydrochloride)
+Cotrimazine
+Sulodexide
+Adapalene
+Cefalexin (as Monohydrate)
+Dextrose Hydrous + Electrolytes (see reverse for complete formulation)
+Salbutamol (as Sulfate)
+Peritoneal Dialysis Solution Low Calcium with 1.5 % Dextrose
+Iron
+Cefalexin (As Monohydrate)
+Voglibose
+Voglibose
+Dextrose Hydrous + Electrolytes (see reverse for complete formulation)
+Diclofenac Sodium
+Harvimide
+PARACETAMOL
+Vitamin B1 + B6 + B12
+Acetylcysteine
+Co-trimoxazole
+Cefuroxime Sodium
+Cotrimoxazole
+Silver Sulfadiazine
+Pinene (Alpha & Beta); Camphene; Cineol; Menthol; Menthone; Borneol; Olive Oil
+Salbutamol (As Sulfate)/ Guaifenesin
+Gemfibrozil
+Isopropanol + N-Propanol +Mecetronium Ethylsulfate
+Olanzapine
+Olanzapine
+Peritoneal Dialysis Solution with 2.5% Dextrose
+Cefalexin (As Monohydrate)
+Formoterol Fumarate
+Multivitamins (see reverse)
+Acetylcysteine
+Acetylcysteine
+Desogestrel/Ethinylestradiol
+Methylergometrine Maleate
+Acetylcysteine
+Verapamil Hydrochloride
+Verapamil Hydrochloride
+Paracetamol
+Felodipine + Metoprolol succinate
+Vitamin B1 + B6 + B12
+Bambuterol Hydrochloride
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Dobutamine (As Hydrochloride)
+Peritoneal Dialysis Solution with 4.25% Dextrose
+Peritoneal Dialysis Solution with 1.5% Dextrose
+Pinene (Alpha + Beta) 31 Mg; Camphene 15 Mg; Cineol 3 Mg; Fenchone 4 Mg; Borneol 10 Mg; Anethol 4 Mg; Olive Oil 33 Mg
+Isosorbide-5-Mononitrate
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12
+Ferrous Fumarate + Folic Acid
+Rifampicin
+Levonorgestrel + Ethinylestradiol
+Imidapril Hydrochloride
+Imidapril Hydrochloride
+Folic Acid
+Magnesium Sulfate (as heptahydrate)
+Ioversol
+Clindamycin (As Hydrochloride)
+Amino Acids
+Carnitine Orotate + Pyridoxine Hydrochloride + Cyanocobalamin + Hepatic Extract Antitoxic Fraction + Adenine Hydrochloride + Riboflavin
+Amikacin (As Sulfate)
+Cetirizine Dihydrochloride
+30% Dextrose In Water
+Paracetamol
+None
+Prednisone
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Levofloxacin (As Hemihydrate)
+Aciclovir
+Cimetidine
+Fosfomycin Trometamol
+Amoxicillin (as trihydrate)
+Latanoprost
+L-Carnitine
+Diclofenac Sodium
+Imidapril Hydrochloride
+Imidapril Hydrochloride
+Dorzolamide (as Hydrochloride)
+Cotrimoxazole
+Silver Sulfadiazine
+Cefixime
+Cefixime
+Multivitamins + Iron With Folic Acid
+Tranexamic Acid
+Ibuprofen
+Multivitamins + Minerals + Lysine (see reverse for formulation)
+Salbutamol
+Modified Fluid Gelatin
+Vitamin B-Complex + Iron + Lysine + Buclizine Hydrochloride
+Paracetamol + Ibuprofen
+Cotrimazine
+Clindamycin (As Hydrochloride)
+Multivitamins + Lysine
+Thiamine Hydrochloride (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamine (Vit. B12)
+Co-Amoxiclav
+Metronidazole (as Benzoate)
+Paracetamol
+Multivitamins
+Terbutaline (as Sulfate)
+Paracetamol
+Montelukast (as Sodium)
+Pinaverium Bromide
+Dexamethasone Sodium Phosphate
+20% Dextrose
+Tranexamic Acid
+Sterile Water For Injection
+Gliclazide
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Paracetamol
+Betamethasone Valerate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Cotrimoxazole
+Iodized Oil Fluid
+Aciclovir
+Metformin Hydrochloride
+Mefenamic Acid
+Mefenamic Acid
+Topiramate
+Topiramate
+Benzathine Benzylpenicillin
+Lamivudine
+Leuprorelin Acetate
+Chlorpheniramine Maleate
+Silymarin
+Ambroxol Hydrochloride
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Candesartan cilexetil
+Arimidex®
+Metronidazole
+Dextromethorphan Hydrobromide
+Hydralazine hydrochloride
+SENNA (Cassia acutifolia) + GLYCYRRHIZA (Glycyrrhiza glabra) + RHUBARB (Rheum rhabarbarum) + CARAWAY (Carum carvi) + SODIUM BICARBONATE + COCHINEAL (Dactylopius coccus) + CAMPHOR + BENZOIC ACID
+Ambroxol Hydrochloride
+Paracetamol + Ibuprofen
+Iron
+Dexamethasone
+Losartan Potassium + Hydrochlorothiazide
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Tacrolimus
+Risperidone
+Sterile Water for Injection
+Sodium Chloride
+Diphenhydramine Hydrochloride
+Paracetamol
+Multivitamins + Minerals + Lysine
+N-Acetyl-P-Aminophenol/ Chlorphenamine maleate/ Salicylamide/ Ascorbic Acid/ Phenylpropanolamine
+Amoxicillin (Trihydrate)
+Balanced Salt Solution
+Granisetron
+Permethrin
+Permethrin
+Azathioprine
+Cisplatin
+Fluorouracil
+Carboplatin
+Carboplatin
+Thiamine Mononitrate (Vitamin B1)+Pyridoxine Hydrochloride (Vitamin B6)+Cyanocobalamin (Vitamin B12)
+Phytomenadione
+Dexamethasone Sodium Phosphate/Neomycin Sulfate/Polymyxin B Sulfate
+Propylthiouracil
+Ferrous Sulfate
+Dopamine hydrochloride
+Pentoxifylline
+Amisulpride
+Pemirolast Potassium
+BUTAMIRATE CITRATE
+Loperamide Hydrochloride
+Eicosapentaenoic acid (EPA) ethyl ester + Docosahexaenoic acid (DHA)  ethyl ester
+Fluorometholone
+Rabeprazole Sodium
+Rabeprazole Sodium
+Calcium (as gluconate)
+Ascorbic Acid
+Finasteride
+Hydroxyurea
+Tropicamide + Phenylephrine Hydrochloride
+Sodium Hyaluronate
+Ganciclovir
+Doxurubicin Hydrochloride
+Doxorubicin Hydrochloride
+Ambroxol Hydrochloride
+Lercanidipine
+Dactinomycin
+Vincristine Sulfate
+Vinblastine Sulfate
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Minoxidil
+Paracetamol
+Thiamine Mononitrate (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12)
+Allopurinol
+Acetylcysteine
+Acetylcysteine
+Diclofenac sodium
+Tamoxifen (As Citrate)
+Multivitamins [Retinol Palmitate (Vit. A), Cholecalciferol (Vit. D3), Tocopheryl Acetate (Vit. E), Thiamine Hydrochloride (Vit. B1), Riboflavin Phosphate (Vit. B2), Pyridoxine Hydrochloride (Vit. B6), Cyanocobalamin (Vit. B12), Ascorbic Acid (Vit. C) and Nicotinamide]
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Multivitamins
+Aciclovir
+Aciclovir
+Brinzolamide
+Ambroxol Hydrochloride
+Tirofiban Hydrochloride
+Oxytocin
+Chlorphenamine Maleate
+Salmeterol (as xinofoate) + Fluticasone propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (as xinofoate) + Fluticasone propionate
+METHOTREXATE
+Cotrimoxazole
+Ambroxol Hydrochloride
+Calcium Gluconate
+Multivitamins with Lysine (see reverse)
+Prednisolone
+Carvedilol
+Ferrous Sulfate
+Bisoprolol Fumarate + Hydrochlorothiazide
+Aescin + Diethylamine Salicylate
+Cefalexin
+Cefalexin
+Goserelin Acetate (Equivalent To Goserelin Base)
+Diclofenac Sodium
+Ambroxol Hydrochloride
+Fusidic Acid + Hydrocortisone
+Mefenamic Acid
+Furosemide + Potassium chloride
+Acetylcysteine
+Fenofibrate
+Silymarin+Multivitamins+Lecithin
+Hydralazine Hydrochloride
+Zinc Gluconate
+Paracetamol
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Mefenamic Acid
+Ranitidine (As Hydrochloride)
+Gadoteric Acid
+Trimetazidine
+Peritoneal Dialysis Solution With 4.25% Dextrose
+Hydrotalcite
+Paracetamol
+Peritoneal Dialysis
+Streptomycin (As Sulfate)
+Guaifenesin + Salbutamol
+Ceftazidime (as pentahydrate)
+Diltiazem Hydrochloride
+Tretinoin
+Bss Plus Sterile Irrigating Solution
+Diltiazem (as Hydrochloride)
+Mesalazine
+Tioconazole
+Multivitamins + Minerals
+Fusidic Acid + Betamethasone Valerate
+N(2)-L-alanyl-glutamine
+Procaterol Hydrochloride
+Procaterol Hydrochloride
+Doxycycline (As Hyclate)
+Prednisone
+Beraprost Sodium
+Paracetamol
+Sodium Bicarbonate
+Vitamin B-Complex + C
+Pioglitazone (As Hydrochloride)
+Pioglitazone (As Hydrochloride)
+Multivitamins+Mineral
+Pantoprazole (as sodium sesquihydrate)
+Ambroxol Hydrochloride
+Calcium Lactate
+Ambroxol Hydrochloride
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Nifedipine
+Progesterone
+Phentermine
+Phentermine
+Guaifenesin + Salbutamol
+Adapalene
+Chlorphenamine Maleate
+Phenylpropanolamine Hydrochloride/Brompheniramine Maleate
+Clotrimazole
+Hypromellose
+Ketorolac trometamol
+Esomeprazole (As Magnesium Trihydrate)
+Calcium Carbonate + Cholecalciferol (Vitamin D3) + Simethicone
+Pentoxifylline
+Cefradine
+Amoxicillin (as Trihydrate)
+Losartan Potassium + Hydrochlorothiazide
+Phenylpropanolamine Hydrochloride/Brompheniramine Maleate
+PHENYLPROPANOLAMINE HYDROCHLORIDE + BROMPHENIRAMINE MALEATE
+Ceftriaxone (as Sodium)
+Ambroxol Hydrochloride
+Phenylpropanolamine Hydrochloride+Brompheniramine Maleate
+Dexamethasone (As Sodium Phosphate)
+Nifedipine
+Furazolidone
+Lincomycin Hydrochloride
+Aspirin
+Diazepam
+Naproxen Sodium
+Naproxen Sodium
+Nitrofurazone
+Candesartan Cilexetil + Hydrochlorothiazide
+Multivitamins
+Salbutamol (as Sulfate)
+Bisoprolol Fumarate + Hydrochlorothiazide
+Bisoprolol Fumarate + Hydrochlorothiazide
+Ceftriaxone (As Sodium)
+CEFTRIAXONE SODIUM
+Guaifenesin + Salbutamol
+Guaifenesin + Salbutamol
+Budesonide/ Formoterol Fumarate Dihydrate
+Budesonide + Formoterol fumarate dihydrate
+Dorzolamide (As Hydrochloride) + Timolol (As Maleate)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Trimetazidine
+Cefotaxime (As Sodium)
+Cefotaxime (As Sodium)
+TRAVOPROST
+Multivitamins + Minerals Ferrous Sulfate (Equiv To 65 Mg Elemental Iron) 200Mg Thiamine Hydrochloride (Vit B1) 2 Mg Riboflavin (Vit B2) 2 Mg Pyridoxine Hydrochloride (Vit B6) 2 Mg Ascorbic Acid (Vit. C) 100 Mg Cyanocobalamin (Vit B12) 10 Mcg Nicotinamide 20 Mg Folic Acid 400 Mcg
+Sirolimus
+Cefaclor (as monohydrate)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Ampicillin Sodium
+Morphine Sulfate
+Linezolid
+Ampicillin (As Sodium)
+Cefuroxime (as Sodium)
+Morphine Sulfate
+Polymyxin B Sulfate/ Neomycin Sulfate/ Dexamethasone
+Ambroxol Hydrochloride
+Erythromycin
+Chloramphenicol
+Metoprolol Tartrate
+Metoprolol Tartrate
+Polymyxin B Sulfate/ Neomycin Sulfate/ Dexamethasone
+Ioversol
+Pheniramine Maleate + Naphazoline Hydrochloride
+Propofol
+Metformin Hydrochloride
+Allopurinol
+Cefaclor (as Monohydrate)
+Paracetamol
+Salbutamol (as sulfate)
+Clindamycin Hydrochloride
+Mefenamic Acid
+Ceftazidime (As Pentahydrate)
+Ceftazidime (As Pentahydrate)
+Methylprednisolone Aceponate
+Bisacodyl
+Pyrazinamide
+Ibuprofen + Paracetamol
+Ambroxol Hydrochloride
+Dexamethasone Sodium Phosphate
+Diclofenac Sodium
+Diclofenac Sodium
+Diclofenac (As Diethylamine) 1G/100G (1%) Emulgel
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Prednisone
+Rifampicin / Isoniazid + Pyridoxine Hydrochloride
+Thiamine Hydrochloride (B1) Pyridoxine Hydrochloride (B6) Cyanocobalamin (B12)
+Norfloxacin
+Adrenaline (As Acid Tartrate)
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Magnesium Sulfate (As Heptahydrate)
+Ambroxol Hydrochloride
+Clarithromycin
+Clarithromycin
+Prednisolone Acetate
+Cisplatin
+Multivitamins+Minerals
+Guaifenesin + Salbutamol
+Bupivacaine As Hydrochloride
+Doxycycline (As Hyclate)
+Loperamide Hydrochloride
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Pramipexole Dihydrochloride Monohydrate
+Pramipexole Dihydrochloride Monohydrate
+Cefoxitin Sodium
+Parecoxib (As Sodium)
+Methylphenidate Hydrochloride
+0.5% Bupivacaine Hydrochloride in 8% Dextrose
+Fluticasone Propionate
+Hyoscine Butylbromide
+Trace Elements Concentrated Solution
+Cefaclor (As Monohdyrate)
+Pyrazinamide
+Cefaclor (as monohydrate)
+Haloperidol
+Pyrazinamide
+Levocetirizine Dihydrochloride
+0.5% Bupivacaine (as hydrochloride) in 8% Dextrose
+Amoxicillin (As Trihydrate)
+Furosemide
+Naphazoline Hydrochloride
+Carbamazepine
+Paracetamol
+Loratadine + Betamethasone
+POLYMYXIN B SULFATE NEOMYCIN SULFATE DEXAMETHASONE
+POLYMYXIN B SULFATE NEOMYCIN SULFATE DEXAMETHASONE
+Cloxacillin (As Sodium)
+Dexamethasone Phosphate (As Sodium)
+Clavoxel
+Co-Amoxiclav
+Drospirenone + Ethinylestradiol
+Isoxsuprine Hydrochloride
+Sodium Chloride
+Glycerin
+PREDNISOLONE ACETATE
+Famotidine
+Famotidine
+Sulfacetamide Sodium
+Co-Amoxiclav
+Co-amoxiclav
+Co-Amoxiclav
+Metformin (As Hydrochloride) + Glibenclamide
+Ofloxacin (as hydrochloride)
+Ofloxacin
+Furosemide
+Metoclopramide (As Hydrochloride)
+Amisulpride
+Chloramphenicol
+Salbutamol (As Sulfate) 2 Mg/Ml Solution For Nebulization
+Rifampicin
+Sulfacetamide Sodium/ Prednisolone Acetate
+Metformin (As Hydrochloride) + Glibenclamide
+Chloramphenicol
+Carbomer
+PACLITAXEL
+Ciprofloxacin (As Lactate)
+Diclofenac Sodium
+Pantoprazole
+Pantoprazole
+Polymyxin B Sulfate/ Neomycin Sulfate/ Dexamethasone
+Clindamycin (as Hydrochloride)
+Etoposide
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Rifampicin
+Rosuvastatin (As Calcium)
+Paracetamol
+Calamine 8% Lotion
+Prednisone
+Methylphenidate Hydrochloride
+Budesonide
+Isoconazole Nitrate + Diflucortolone Valerate
+Midazolam
+Midazolam
+Midazolam
+Propofol
+Permethrin
+Pimecrolimus
+Bleomycin (As Sulfate)
+Calcitriol
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Metoclopramide (as hydrochloride)
+Sodium Bicarbonate
+Calcipotriol (As Hydrate) + Betamethasone (As Dipropionate)
+Isoniazid/ Pyridoxine Hydrochloride
+Potassium Chloride
+Aciclovir
+Ciprofloxacin
+Brimonidine tartrate
+Valganciclovir (As Hydrochloride)
+Furosemide
+Co-Amoxiclav
+Prednisone
+Fenofibrate
+TIMOLOL MALEATE
+LORATADINE
+Ampicillin (as sodium)
+Levofloxacin
+Salbutamol + Guaifenesin
+Ketotifen (As Fumarate)
+Sodium Chloride
+Rifampicin + Isoniazid + Ethambutol Hydrochloride
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol
+Rifampicin + Isoniazid
+Methotrexate
+Gefitinib
+Cotrimoxazole
+Bromhexine hydrochloride
+Amikacin (as sulfate)
+Ibuprofen
+Felodipine
+Ketoconazole
+Fluconazole
+Ferrous Sulfate + Folic Acid
+Levetiracetam
+Levetiracetam
+Prednisone
+Naproxen Sodium
+Simvastatin
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Sodium Chloride
+Co-Amoxiclav
+Cefaclor (as monohydrate)
+Omeprazole (as sodium)
+Water-Soluble Vaitamin: Thiamine Mononitrate 3.1mg (corresponding to Vit B1, 2.5mg), Riboflavin Sodium Phosphate 4.9mg (corresponding to Vit B2, 3.6mg), Nicotinamide 40mg, Pyridoxine Hydrochloride 4.9mg (corresponding to Vit B6 4mg), Cyanocobalamin 5mcg, Sodium Pantothenate 16.5mg (corresponding to Pantothenic Acid, 15mg), Sodium Ascorbate 113mg (corresponding to Vit C, 100mg), Biotin 60mcg, Folic Acid 400mcg
+Hydroxyethyl Starch 130/0.4 + Sodium Chloride
+Sodium Chloride
+Amikacin (as sulfate)
+Amikacin (as Sulfate)
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Lacipidine
+Salbutamol (As Sulfate)
+Tretinoin
+Tretinoin
+Ceftriaxone
+Benzylpenicillin sodium
+Paracetamol + Phenylephrine Hydrochloride
+Phospholipids + Multivitamins (see reverse)
+Ambroxol Hydrochloride
+Ferrous Sulfate + Folic Acid
+Glucose + Amino Acids + Lipids
+Glucose + Amino Acids + Lipids
+Divalproex sodium
+Simvastatin
+Terbutaline Sulfate
+Ketoprofen
+Cetirizine (as Dihydrochloride)
+Phenylephrine Hydrochloride +  Chlorphenamine Maleate + Paracetamol
+Co-Amoxiclav
+Dutasteride
+CIMETIDINE
+Multivitamins + L-Carnitine + Lysine + Zinc + Biotin + Inositol + Taurine + CFG
+Multivitamins + L-Carnitine + Lysine HCl + Zinc + Biotin + Inositol + Taurine + CGF
+Folic Acid
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Ursodeoxycholic Acid
+Metronidazole
+Multivitamins + Minerals
+Hydrocotisone
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Phenylephrine hydrochloride + Chlorphenamine maleate + Paracetamol
+Furosemide
+Cefalexin (as Monohydrate)
+Esomeprazole (As Sodium)
+Lymecycline
+Tramadol Hydrochloride
+Amino acids + Sorbitol (see reverse)
+Shelogel
+MSCC Complex Actisome
+Highly Refined Fish Oil
+Enalapril (as Maleate)
+Enalapril (as Maleate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Dextromethorphan hydrobromide + Phenylephrine hydrochloride + Paracetamol
+Amoxicillin (as trihydrate)
+Cloxacillin (as sodium)
+Metronidazole
+D-Alpha Tocopherol (Vitamin E)
+Cefalexin (as monohydrate)
+Depacon
+Diazepam
+Mebendazole
+Ondansetron (as Hydrochloride)
+None
+Loratadine
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Cefalexin (as monohydrate)
+Loratadine
+Atracurium Besylate
+Lansoprazole
+Levetiracetam
+Terazosin (as Hydrochloride Dihydrate)
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Ciprofloxacin (As Hydrochloride)
+Vitamin B1 + B6 + B12
+Ibuprofen/Paracetamol
+Thiamine Mononitrate (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12) / Folic Acid
+Phenylpropanolamine Hydrochloride + Phenylephrine Hydrochloride + Brompheniramine Maleate
+dL-Alpha Tocopheryl Acetate (Vitamin E)
+Ciprofloxacin (as lactate)
+Clobetasol Propionate
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Nidcor
+Cefoxitin (as Sodium)
+Amlodipine (as besilate) + Atorvastatin (as calcium)
+Amlodipine (as besilate) + Atorvastatin (as calcium)
+Diclofenac Sodium
+None
+Paracetamol
+Erdosteine
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Potassium Iodide/ Sodium Iodide
+Metoclopramide Hydrochloride
+Phenylpropanolamine Hydrochloride
+Chloramphenicol
+Phenylpropanolamine Hydrochloride
+Tranexamic Acid
+Zoledronic acid
+MOMETASONE FUROATE
+Diphenhydramine Hydrochloride
+LIDOCAINE HYDROCHLORIDE + EPINEPHRINE
+Calcium Polystyrene Sulfonate
+Atenolol
+Multivitamins + Flouride
+Atenolol
+Metoprolol Tartrate
+Thiamine Hydrochloride (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12)
+Prednisone
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Amantadine sulphate
+Methimazole
+Bromhexine Hydrochloride + Chlorphenamine Maleate
+Salbutamol (as sulfate)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+(see reverse)
+Pyrazinamide (Zcure); Rifampicin (Natricin Forte); Isoniazid + Pyridoxine Hydrochloride (Curazid Forte)
+Ambroxol Hydrochloride
+Salbutamol (as sulfate)
+Gatifloxacin
+Clarithromycin
+Salbutamol (as Sulfate)
+TOBRAMYCIN
+Simvastatin
+Atenolol
+Aceclofenac
+Ibuprofen
+Aciclovir
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Depakote
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cyclosporine
+Clotrimazole + Beclometasone
+Methylphenidate Hydrochloride
+Piracetam
+Erythromycin
+Aciclovir
+Tenoxicam
+Simvastatin
+Co-Amoxiclav
+Co-Amoxiclav
+FOLIC ACID
+Quetiapine (As Fumarate)
+Ibuprofen
+Phenylephrine hydrochloride + Brompheniramine maleate
+Cetirizine Dihydrochloride
+Paracetamol
+Lercanidipine
+Multivitamins + Iron
+Ascorbic Acid + Zinc Sulfate monohydrate
+Paracetamol
+Cefazolin (As Sodium)
+Cefalexin(As Monohydrate)
+Tobramycin + Dexamethasone
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Ambroxol Hydrochloride
+Multivitamins + Minerals
+5% Dextrose In Water
+5% Dextrose In Lactated Ringer'S
+5% Dextrose In 0.9% Sodium Chloride
+0.9% Sodium Chloride
+Balanced Multiple Maintenance Solution with 5% Dextrose (see reverse formulation)
+Ibandronic Acid
+Mitomycin
+Aciclovir
+Acyclovir
+Sildenafil (As Citrate)
+Sodium Chloride
+Glimepiride
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Budesonide / Formoterol Fumarate Dihydrate
+Racecadotril
+Levodropropizine
+Timolol (as Maleate)
+Dibencozide
+Doxorubicin Hydrochloride
+Buclizine Hyrdochloride + Multivitamins
+Paracetamol
+Co-Amoxiclav
+Isotretinoin
+Rifampicin; Isoniazid + Pyridoxine Hydrochloride; Pyrazinamide
+Rifampicin; Isoniazid + Pyridoxine Hydrochloride
+Salbutamol (as sulfate) + Bromhexine Hydrochloride + Guaifenesin
+Co-Amoxiclav
+Racecadotril
+Racecadotril
+Vitamin B-Complex + Vitamin E
+Simvastatin
+Iloprost (as trometamol)
+Doxofylline
+Multivitamins +Minerals
+Montelukast
+Clindamycin (As Phosphate) + Benzoyl Peroxide
+Clarithromycin
+Prednisolone Phosphate (As Sodium)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cotrimoxazolë
+Rosuvastatin (As Calcium)
+Paracetamol Phenylpropanolamine Hydrochloride Chlorphenamine Maleate
+Hydrocortisone
+Co-Amoxiclav
+Ampicillin (as trihydrate)
+Ampicillin (as trihydrate)
+Ofloxacin
+Co-Amoxiclav
+Bethanechol Chloride
+Tigecycline
+Iron + Multivitamins
+0.9% Sodium Chloride
+Omeprazole (As Sodium)
+Pemetrexed (as disodium)
+Flunarizine Hydrochloride
+Peritoneal Dialysis Solution with 7.5% Icodextrin
+Olmesartan Medoxomil + Hydrochlorothiazide
+Co-Amoxiclav (see reverse for formulation)
+Multivitamins
+Chloramphenicol
+Piracetam
+Fluconazole
+Gadobutrol
+Cefaclor (as monohydrate)
+Pyrantel (As Pamoate)
+Paracetamol
+Cefaclor (As Monohydrate)
+Cefuroxime (as axetil )
+Hydrocortisone (as Sodium Succinate)
+Cefuroxime (as Axetil)
+Cefaclor
+Cefaclor (As Monohydrate)
+Multivitamins
+Cetirizine Dihydrochloride
+Pioglitazone Hydrochloride
+Sangobion Iron+
+Cetirizine Dihydrochloride
+Ravenar
+Solifenacin succinate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Tramadol Hydrochloride
+Gliperide
+Verapamil Hydrochloride/ Trandolapril
+Paracetamol
+Cetirizine Hydrochloride
+Simvastatin
+Salbutamol Sulfate + Guaifenesin
+Sevoflurane
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Levofloxacin (as hemihydrate)
+Ketorolac Trometamol
+Cefalexin (Monohydrate)
+Soy Bean Oil + Medium Chain Triglyceride + Olive Oil + Purified Fish Oil
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Hypromellose
+Ciprofloxacin (As Hydrochloride)
+Simvastatin
+Paracetamol
+Ivabradine (as hydrochloride)
+Ivabradine (as hydrochloride)
+INDAPAMIDE
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Chlorphenamine Maleate + Phenylpropanolamine Hydrochloride
+Trimetazidine Dihydrochloride
+Piracetam
+Famotidine
+Salbutamol Sulfate + Guaifenesin
+Glimepiride
+Getryl
+Getryl
+Levofloxacin (As Hemihydrate)
+Amino acids
+Cefixime (as Trihydrate)
+Paracetamol + Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Guaifenesin + Salbutamol (as Sulfate)
+Leuprorelin Acetate
+Cytarabine
+Glimepiride
+Cefixime ( As Trihydrate)
+Levofloxacin
+Glimepiride
+Clopidogrel (as bisulfate)
+Dexmedetomidine (as hydrochloride)
+Paracetamol + Diphenhydramine
+Getryl
+Zolpidem (as Tartrate)
+AMBROXOL HYDROCHLORIDE
+Cefuroxime (as  sodium)
+Anagrelide (As Hydrochloride)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Docetaxel
+Co-Amoxiclav
+Chloramphenicol (as Sodium Succinate)
+Cefalexin (Monohydrate)
+OFLOXACIN
+Ascorbic Acid
+Thiamine Mononitrate (Vitamin B1)+Pyridoxine Hydrochloride(Vitamin B6)+Cyanocobalamin (Vitamin B12)
+Ceftriaxone (as Sodium)
+Cefalexin (As Monohydrate)
+Ambroxol hydrochloride
+Famotidine + Calcium Carbonate + Magnesium Hydroxide
+Fluorometholone
+Cetirizine Dihydrochloride
+Promethazine Hydrochloride
+Sorafenib (As Tosylate)
+Deferasirox
+Deferasirox
+Lactulose
+Omeprazole
+Meclizine Hydrochloride
+Lactobacillus Acidophilus + Estriol
+Phenylephrine Hydrochloride
+Ketoconazole
+Pregabalin
+Sterile Water
+Co-Amoxiclav
+Hydrochlorothiazide
+Thiamine Monohydrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Domperidone
+Domperidone
+Furosemide
+Paracetamol
+Fluconazole
+Oxaliplatin
+Cefoxitin (as sodium)
+OFLOXACIN
+Flucloxacillin (as Sodium)
+Cefalexin (as monohydrate)
+Gabapentin
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Clopidogrel (As Bisulfate)
+Cefuroxime (as Sodium)
+Hydrocortisone (As Sodium Succinate)
+Montelukast (as Sodium)
+Montelukast (as Sodium)
+Water for Injection
+Fexofenadine Hydrochloride
+Clobetasol Propionate
+Cefaclor (as Monohydrate)
+Ciprofloxacin (as Lactate)
+Multivitamins + Paracetamol
+Clotrimazole
+Clotrimazole
+Cetirizine Dihydrochloride
+Celecoxib
+Itopride Hydrochloride
+Furosemide
+Meloxicam
+Ceftriaxone (as sodium)
+Salbutamol (as Sulfate) + Guaifenesin
+Mirazep
+Cetirizine Dihydrochloride
+Ketorolac Trometamol
+Methyl Salicylate + Eucalyptus Oil + Menthol
+Celecoxib
+Medroxyprogesterone Acetate
+Meloxicam
+Methotrexate
+Fentanyl (as Citrate)
+Silymarin
+Metronidazole
+Voriconazole
+Multivitamins + Dextrose
+Doxorubicin Hydrochloride
+Domperidone
+Flucloxacillin (as sodium)
+Oxytocin
+Multivitamins
+Co-Amoxiclav
+Ibuprofen
+Iron + Vitamin B-Complex
+Fenofibrate
+Fenofibrate
+Oxaliplatin
+Domperidone (as maleate)
+Paracetamol
+Guaifenesin + Dextromethorphan Hydrobromide + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Montelukast (as sodium)
+Tobramycin
+Citicoline
+Tamsulosin Hydrochloride
+Metronidazole
+Multivitamins + Iron (Reformulated)
+Iron (as Ferrous Fumarate) + Vitamin b12+Folic Acid
+Ambroxol Hydrochloride
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Famotidine
+Zoledronic Acid
+Epirubicin Hydrochloride
+Gabapentin
+PHENYTOIN SODIUM
+Glimepiride
+Glimepiride
+Glimepiride
+Gemcitabine (as hydrochloride)
+Losartan Potassium
+Tramadol Hydrochloride
+Water for Injection
+ZINC (AS ZINC GLUCONATE)
+Dexamethasone Phosphate (As Sodium)
+Diclofenac Sodium
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Simvastatin
+Fenofibrate
+Loratadine + Phenylephrine Hydrochloride
+Fenofibrate
+Cefuroxime (as axetil)
+Fentanyl
+Fentanyl
+Fentanyl
+Multivitamins + Minerals
+Ambroxol Hydrochloride
+Cefalexin (As Monohydrate)
+Salbutamol+Guaifenesin
+Clotrimazole + Beclometasone Dipropionate
+Levocetirizine
+Clindamycin (as phosphate)
+Cefalexin (as monohydrate)
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin Hydrochloride
+Hypertonic Lactate Solution
+HYPROMELLOSE
+Calcium Carbonate
+Tretinoin
+Hydrochlorothiazide
+Ciprofloxacin (As Hydrochloride Monohydrate)
+Atorvastatin (as Calcium)
+Digoxin
+Varenicline Tartrate
+Varenicline Tartrate
+Cefalexin (As Monohydrate)
+Cefaclor (as monohydrate)
+Losartan Potassium
+Multivitamins
+Clindamycin Phosphate + Tretinoin
+Cefotaxime Sodium
+Cefotaxime Sodium
+Diphenhydramine Hydrochloride
+Iomeprol
+Guaifenesin + Dextromethorphan
+Amphotericin B
+Citicoline (as Sodium)
+Ambroxol Hydrochloride
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Omeprazole
+Vancomycin
+VITAMIN B-COMPLEX (Vitamin B1, B6, B12) + FOLIC ACID
+Metronidazole + Miconazole Nitrate + Lidocaine
+Metronidazole + Miconazole Nitrate
+Ampicillin (As Sodium)
+Zanamivir
+Ampicillin (As Sodium)
+Ascorbic Acid + Zinc
+Simvastatin
+Saccharomyces Boulardii
+Saccharomyces Boulardii
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Clindamycin (as Hydrochloride)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Diclofenac (as Sodium)
+Sodium Ascorbate + Ascorbic Acid + Zinc 56.24 mg/50 mg/10 mg per 5 mL Syrup
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Ciclosporin
+Ciclosporin
+Folic Acid
+Metformin Hydrochloride
+Hydrochlorothiazide
+Amlodipine(As Besilate)
+Amlodipine (As Besilate)
+Gabapentin
+Gabapentin
+Gabapentin
+Ferrous Sulfate 500 mg (equivalent to 161 mg elemental iron) + Zinc Sulfate Monohydrate 41.17 mg (equivalent to 15 mg Zinc) + Folic Acid 1 mg
+Pioglitazone (as hydrochloride)
+Metronidazole
+Folic Acid
+Calcium Gluconate
+Invega
+Invega
+Invega
+Lisinopril dihydrate
+Lisinopril dihydrate
+Fulvestrant
+Cefaclor (As Monohydrate)
+Folic Acid
+Ciprofloxacin (as Hydrochloride)
+Propofol
+Multivitamins + Calcium + Lysine
+Propofol
+Atropine Sulfate
+Co-Amoxiclav
+Gabapentin
+Gabapentin
+Propofol
+Propofol
+Diclofenac sodium
+Losartan Potassium + Hydrochlorothiazide
+Multivitamins + Buclizine Hydrochloride + Lysine Hydrochloride + Ferrous Sulfate
+Budesonide
+Folic Acid
+Vitamin B-Complex + Taurine +Folic Acid
+Benzylpenicillin (As Sodium)
+Oxaliplatin
+Dexamethasone Phosphate (As Sodium)
+Tamsulosin Hydrochloride
+Ampicillin (As Sodium)
+Ceftazidime (As Pentahydrate)
+Iopamidol
+Medroxyprogesterone Acetate
+Glucosamine Sulfate
+Cefepime (As Hydrochloride) With Arginine
+Benzylpenicillin (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftazidime (As Pentahydrate)
+Iopamidol
+Iopamidol
+Prednisolone
+Cefoxitin (As Sodium)
+Fluoxetine hydrochloride
+Itraconazole
+Trypan Blue
+Pantoprazole (As Sodium Sesquihydrate)
+Procaterol Hydrochloride
+Oseltamivir (As Phosphate)
+Cephradine
+Amlodipine (as besilate)
+Diclofenac Potassium
+Nilotinib (As Hydrochloride Monohydrate)
+Ceftriaxone (As Sodium)
+Hydrochlorothiazide
+Seroquel XR
+Seroquel XR
+Ampicillin sodium + Sulbactam sodium
+Perindopril Arginine
+Perindopril Arginine
+Brimonidine Tartrate + Timolol Maleate
+Glimepiride
+Omeprazole
+Valproic Acid
+D-Alpha Tocopheryl Acid Succinate+Korean Ginseng+ Bee Pollen +Lecithin+Calcium Pantothenate
+Quinapril Hydrochloride
+Glimepiride
+Tramadol Hydrochloride
+Salbutamol (As Sulfate) + Guaifenesin
+Iopamidol
+Cefepime (As Hydrochloride) With Arginine
+Salbutamol + Guaifenesin
+Ranitidine (As Hydrochloride)
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Zinc
+Zinc
+Fluconazole
+Bromhexine Hydrochloride
+Antazoline hydrochloride / Tetrahydrozoline hydrochloride
+Ceftazidime (As Pentahydrate)
+Ceftazidime (As Pentahydrate)
+Levofloxacin (as hemihydrate)
+Divalproex Sodium
+Ketorolac Trometamol
+Chlorpromazine Hydrochloride
+Losartan Potassium
+Losartan Potassium
+Chlorpromazine (As Hydrochloride)
+Metformin Hydrochloride
+Levofloxacin
+Silver Sulfadiazine
+Olopatadine Hydrochloride
+Seroquel XR
+Topiramate
+Topiramate
+Sertraline
+Ibuprofen
+Cotrimoxazole
+Seroquel XR
+Cefotaxime (As Sodium)
+Doxofylline
+Simvastatin
+Sildenafil (As Citrate)
+Sodium Chloride
+Aceclofenac
+Isotonic Electrolyte Solution (I.V.)
+Levetiracetam
+Thiamine (Vitamins B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ibuprofen
+Ibuprofen
+Folic Acid
+Folic Acid
+Sodium Alginate+ Sodium Bicarbonate + Calcium Carbonate
+Erythromycin (as ethylsuccinate)
+Cephradine
+Perindopril Erbumine
+Iron Sucrose
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Sevoflurane
+Clindamycin (As Hydrochloride)
+Clindamycin (as phosphate)
+Quinapril Hydrochloride
+Cinnarizine
+Zinc (as Sulfate Monohydrate)
+Betahistine Hydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Fluticasone Propionate
+Zinc (as sulfate monohydrate)
+Topiramate
+Citicoline (As Sodium)
+Thiamine hydrochloride (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Piracetam
+Sodium Alginate + Sodium Bicarbonate + Calcium Carnonate
+Celecoxib
+Celecoxib
+Ispaghula (Plantago ovata seed shells)
+Sertraline (as hydrochloride)
+Drospirenone + Ethinylestradiol
+Gadoxetic acid, disodium
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Paracetamol/ Phenylpropanolamine hydrochloride/ Chlorphenamine maleate
+Nimodipine
+Sucralfate
+Clarithromycin
+Tramadol + Paracetamol
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Azelastine Hydrochloride
+Bromhexine Hydrochloride + Phenylephrine Hydrochloride + Guaifenesin
+Losartan Potassium
+Sildenafil (as citrate)
+Sildenafil (as citrate)
+Doxycycline (as hyclate)
+Fluconazole
+CLOPIDOGREL (as bisulfate)
+Clindamycin (as hydrochloride)
+Simeticone
+Suxamethonium Chloride
+Pantoprazole Sodium Sesquihydrate
+Risperidone
+Risperidone
+Thiopental Sodium
+Amphotericin B
+Vitamin B-Complex + Calcium Pantothenate + Folic Acid
+Cefradine (As Monohydrate)
+Cefradine (As Monohydrate)
+Butamirate Citrate
+Lysozyme hydrochloride
+Tobramycin
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Haloperidol
+Timolol ( as maleate)
+Fluticasone furoate
+Pemetrexed (as disodium)
+Divalproex sodium (equivalent to Valproic Acid)
+Ascorbic Acid (as Sodium Ascorbate)
+Biperiden hydrochloride
+0.9% Sodium Chloride
+Sodium Chloride
+Mannitol
+Sterile Water For Injection
+Orlistat
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Micafungin Sodium
+Sodium Chloride
+Cefpodoxime Proxetil
+Paclitaxel
+Salmeterol Xinafoate + Fluticasone Propionate
+Pilocarpine Hydrochloride
+Cetirizine Dihydrochloride
+Cefuroxime (as sodium)
+Desmopressin (as acetate)
+Memantine HCl
+Buprenorphine
+Buprenorphine
+Buprenorphine
+Folic Acid
+Enalapril Maleate
+Salbutamol (as Sulfate) + Guaifenesin
+Multivitamins + Folic Acid + Iron
+Azithromycin (as dihydrate)
+Dextromethorphan Hydrobromide + Guaifenesin
+ACICLOVIR
+Anastrozole
+Cefaclor (as monohydrate)
+Cisplatin
+Pioglitazone Hydrochloride
+Fluconazole
+Cefixime
+Co-Amoxiclav
+Oxaliplatin
+Ipratropium (as bromide) + Salbutamol (as sulfate)
+Glimepiride
+Hypromellose
+Norethisterone Enanthate + Estradiol Valerate
+Aspirin
+Flurbiprofen Sodium
+Lactated Ringer's Solution
+Aciclovir
+Aciclovir
+Pyrazinamide
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Piracetam
+Escitalopram
+Amlodipine (as besilate)
+Clevudine
+Paracetamol + Phenylpropanolamine hydrochloride + Chlorphenamine maleate
+Paracetamol + Phenylpropanolamine hydrochloride + Chlorphenamine maleate
+Azelaic Acid
+Co-Amoxiclav
+Amlodipine (as besilate)
+N-Acetyl Aspartyl Glutamic Acid Sodium Salt
+Esomeprazole (as magnesium trihydrate)
+Donepezil Hydrochloride
+Donepezil Hydrochloride
+Tranexamic Acid
+Tranexamic Acid
+Betamethasone (as dipropionate)
+Benzydamine Hydrochloride
+Sodium Alginate / Sodium Bicarbonate / Calcium Carbonate
+Vitamin B-Complex
+Vecuronium Bromide
+Amiodarone Hydrochloride
+Metoprolol
+Cefaclor (as monohydrate)
+Co-amoxiclav
+ALLOPURINOL
+Cefuroxime (as Sodium)
+Cefoxitin (as Sodium)
+Co-amoxiclav
+L-Carnitine
+CEFACLOR (AS MONOHYDRATE)
+CIPROFLOXACIN
+LOSARTAN POTASSIUM + HYDROCHLORIDE
+Ascorbic Acid
+Ceftriaxone (as Sodium)
+Atorvastatin (as Calcium)
+Diclofenac (as Diethylamine)
+Ceftriaxone (as Sodium)
+Ceftriaxone (as Sodium)
+Lipids with Omega-3
+Thiopental Sodium
+Betahistine Dihydochloride
+Betahistine hydrochloride
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Baclofen
+Omeprazole
+Nalbuphine (as hydrochloride)
+Clozapine
+Clozapine
+Cetirizine Dihydrochloride + Phenylephrine Hydrochloride
+Piperacillin (as Sodium) / Tazobactam (as Sodium)
+Thiamine Mononitrate (Vitamin B1)+Pyridoxine Hydrochloride (Vitamin B6)+Cyanocobalamin (Vitamin B12)
+Co-Amoxiclav
+Phenylpropanolamine Hydrochloride + Paracetamol + Chlorphenamine Maleate + Salicylamide
+Folic Acid
+Mosapride Citrate (as dihydrate)
+Alfuzosin Hydrochloride
+Omeprazole
+Methimazole
+5% Dextrose in Water
+Cetirizine (as hydrochloride)
+Tramadol Hydrochloride
+Tacrolimus
+Mycophenolate Mofetil
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Diclofenac Sodium
+Alendronic Acid
+Amlodipine (as besilate)
+Metoprolol Tartrate
+Perindopril (as arginine) + Amlodipine (as besilate)
+Perindopril (as arginine) + Amlodipine (as besilate)
+Perindopril (as arginine) + Amlodipine (as besilate)
+Perindopril (as arginine) + Amlodipine (as besilate)
+Tropisetron (as Hydrochloride)
+Sodium Hyaluronate
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Prednisolone
+5% Dextrose in 0.9% Sodium Chloride
+Sugammadex (As Sodium)
+Co-Amoxiclav
+Montelukast (as sodium)
+Montelukast (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Each kit contains: Isoniazid + Pyridoxine HCl (Curazid Forte); Rifampicin (Natricin Forte); Pyrazinamide (Zcure Forte)
+Glimepiride
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+5% Dextrose in 0.9% Sodium Chloride
+Lactated Ringer'S Solution
+0.9% Sodium Chloride
+Hydroxyzine (as Hydrochloride)
+10% Dextrose in Water
+5% Dextrose in Water
+Sodium Chloride
+Thiamine Mononitrate (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12)
+Carvedilol
+Carvedilol
+Bimatoprost + Timolol (as maleate)
+Co-Amoxiclav
+Cefaclor (as monohydrate)
+Desvenlafaxine (As Succinate)
+Norfloxacin
+Ciprofloxacin Hydrochloride
+Candesartan Cilexetil + Hydrochlorothiazide
+Guaifenesin + Salbutamol (as sulfate)
+Glucose + Amino Acids + Electrolytes + Purified Soy Bean Oil
+Glucose + Amino Acids + Electrolytes + Purified Soy Bean Oil
+Dexketoprofen (as Trometamol)
+Ciprofloxacin (As Hydrochloride)
+Pioglitazone (as Hydrochloride) + Glimepiride
+Aciclovir
+Silver Sulfadiazine
+Thiamine Mononitrate (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12)
+Simvastatin
+Losartan (As Potassium) / Hydrochlorothiazide
+Cefradine
+Levofloxacin
+Cefradine
+Carbimazole
+Oxycodone Hydrochloride
+Carvedilol
+Co-Amoxiclav
+Cetirizine (as Dihydrochloride)
+Cetirizine (as Dihydrochloride)
+Levofloxacin
+5% Dextrose In Lactated Ringer'S
+Multivitamins+ Minerals
+Multivitamins+ Minerals
+VANCOMYCIN (as hydrochloride)
+Ceftazidime (as Pentahydrate)
+Clindamycin (as Hydrochloride)
+Multivitamins + Choline Bitartrate + Inositol
+PIPERACILLIN (AS SODIUM) + TAZOBACTAM ( AS SODIUM)
+Levofloxacin (as Hemihydrate)
+Amlodipine (as besilate)
+Tamsulosin Hydrochloride
+Cefuroxime (as Sodium)
+Celecoxib
+Ofloxacin
+Cetirizine Dihydrochloride + Phenylephrine Hydrochloride
+Isosorbide-5-Mononitrate
+Isosorbide-5-Mononitrate
+Risperidone
+Risperidone
+Citicoline
+Levetiracetam
+Chlorhexidine Gluconate
+Docusate Sodium
+Paracetamol + Propyphenazone + Caffeine
+Timolol (As Maleate)
+Ofloxacin
+0.9% Sodium Chloride
+Cefepime (as Hydrochloride)
+Terlipressin (as acetate)
+Levofloxacin (as hemihydrate)
+Montelukast (as sodium)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Levofloxacin (as Hemihydrate)
+Levofloxacin (as Hemihydrate)
+10% Dextrose in Water
+Dextrose in Water (5%)
+5% Dextrose in 0.9% Sodium Chloride
+Tobramycin + Dexamethasone
+Salbutamol (as Sulfate)
+Sulfinpyrazone
+Lactated Ringer's Solution
+5% Dextrose in 0.9% Sodium Chloride
+Cefazolin (as  Sodium)
+Hydrocortisone (as sodium succinate)
+5% Dextrose in Water
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Losartan Potassium
+Sodium bicarbonate + Sodium citrate + Citric Acid + Tartaric Acid
+Clopidogrel
+Escitalopram (as oxalate)
+Multivitamins
+Cefotaxime (as Sodium)
+Phenylephrine hydrochloride + Brompheniramine maleate
+CEFUROXIME (AS AXETIL)
+Mecobalamin
+Chlorphenamine Maleate
+Proparacaine Hydrochloride
+Ketoralac Trometamol
+Lidocaine hydrochloride + Prilocaine hydrochloride
+Cefuroxime (As Axetil)
+Piracetam
+Adapalene + Benzoyl Peroxide
+Levocetrizine dihyrdrochloride
+Clonazepam
+Levofloxacin (as hemihydrate)
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol
+Losartan Potassium
+Acyclovir (as sodium)
+Fosinopril Sodium
+Simvastatin
+Cholecalciferol
+Meropenem (As Trihydrate)
+Rabeprazole Sodium
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Risperidone
+Retinol Palmitate (Vitamin A)
+Prednisolone
+Montelukast (as sodium)
+Atosiban (as acetate)
+Atosiban (as acetate)
+Pioglitazone (as hydrochloride)
+Co-Amoxiclav
+Cefuroxime (as axetil)
+Olmesartan medoxomil + Hydrochlorothiazide
+Olmesartan medoxomil + Hydrochlorothiazide
+Betahistine hydrochloride
+Lisinopril
+Betahistine hydrochloride
+CIPROFLOXACIN (as Hydrochloride) DEXAMETHASONE
+Timolol Maleate
+Amlodipine (as Besilate)
+Co-Amoxiclav
+Cinnarizine
+Sildenafil citrate
+Citicoline (as sodium)
+Tetrahydrozoline Hydrochloride
+Phenytoin (as sodium)
+LOSARTAN POTASSIUM
+Brinzolamide + Timolol (as maleate)
+Triamcinolone Acetonide
+Glucose 30% (w/v) Solution for IV Infusion; Amino acid 10% (w/v) with Electrolytes Solution for IV Injection; Intravenous Fat emulsion with Medium and Long Chain Triglycerides 20% Emulsion for IV Infusion
+Trimetazidine dihydrochloride
+Ceftazidime (as Pentahydrate)
+Sertraline (as hydrochloride)
+Clopidogrel (as bisulfate)
+Esomeprazole (as Magnesium Trihydrate)
+CEFUROXIME (AS AXETIL)
+Escitalopram (as oxalate)
+Cinnarizine
+Ticarcillin (as Disodium) + Clavulanic Acid (as Clavulanate Potassium)
+Risperidone
+Levocetirizine Dihydrochloride
+Metoprolol Tartrate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Clopidogrel (As Bisulfate)
+Butamirate Citrate
+LETROZOLE
+Co-Amoxiclav
+Ranolazine
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Cefuroxime (as Axetil)
+Cetirizine Hydrochloride
+Mesna
+Lactulose (As Lactulose Concentrate)
+Thiopental Sodium
+Simvastatin
+Thiopental Sodium
+Levodopa + Carbidopa
+Cefepime (as hydrochloride)
+Mecobalamin
+Isosorbide 5 - Mononitrate
+Glucosamine Sulfate (As Sodium Chloride)
+Zinc Sulfate
+Hydroxypropylmethylcellulose
+Boric Acid + Borax
+Dextrose
+Tramadol Hydrochloride
+Carnitine Orotate + Hepatic Extract Antitxic Fraction + Pyridoxine Hydrochloride + Adenine Hydrochloride + Riboflavin + Cyanocobalamin
+Diphenhydramine Hydrochloride
+Losartan Potasium + Hydrochlorothiazide
+Ambroxol Hydrochloride
+Phospholipids
+d-Alpha Tocopherol (Vitamin E)
+d-Alpha Tocopherol (Vitamin E)
+Multivitamins
+Levofloxacin (as Hemihydrate)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Seroquel XR
+Carnitine Orotate + Hepatic Extract Antitoxic Fraction + Adenine HCl + Pyridoxine HCl + Riboflavin + Cyanocobalamin
+Carnitine Orotate + Hepatic Extract Antitoxic Fraction + Adenine HCl + Pyridoxine HCl + Riboflavin + Cyanocobalamin
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Cefotaxime (as sodium)
+Cefotaxime (As Sodium)
+Lidocaine + Prilocaine
+Terazosin (As Hydrochloride)
+Carbamazepine
+Diazepam
+Multivitamins
+Calcipotriol (as Monohydrate) + Betamethasone (as dipropionate)
+OCTREOTIDE ACETATE
+OCTREOTIDE ACETATE
+OCTREOTIDE ACETATE
+Amlodipine Besilate
+Levonorgestrel + Ethinylestradiol; Ferrous Fumarate
+Simethicone + Alverine citrate
+Oxytocin
+Hyoscine-N-Butylbromide
+*Rifampicin (Crisarfam DS) **Isoniazid + Pyridoxine hydrochloride (Nicazid DS)
+D-Alpha Tocopheryl Acetate (Vitamin E)
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Glimepiride
+Glimepiride
+Alendronic Acid (as Alendronate Sodium)
+Kedar
+Amlodipine (As Besilate)
+Homatropine Methylbromide
+Metformin Hydrochloride
+Levocetirizine Dihydrochloride
+Allopurinol
+LATANOPROST
+Ibuprofen + Paracetamol
+Ibuprofen + Paracetamol
+Cefotaxime As Sodium
+Mometasone Furoate
+Hydroquinone
+Pioglitazone (as hydrochloride) + Metformin (as hydrochloride)
+Meclizine Hydrochloride
+Ciprofloxacin (as hydrochloride)
+Onglyza
+Onglyza
+Gabapentin
+Cefixime (as trihydrate)
+Betahistine Hydrochloride
+Amoxicillin (As Trihydrate)
+Amlodipine (As Besilate) + Hydrochlorothiazide
+Amlodipine (As Besilate) + Hydrochlorothiazide
+Retinol Palmitate
+Montelukast (As Sodium)
+Cefaclor (as monohydrate)
+Tretinoin
+Letrozole
+Flunarizine (as dihydrochloride)
+Capecitabine
+Soybean Oil + Avocado Oil Unsaponifiable
+Levofloxacin (As Hemihydrate)
+Montelukast (as Sodium)
+Arsenic Trioxide
+Olanzapine
+Permethrin
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin
+Tranexamic Acid
+Cefuroxime (As Axetil)
+Digoxin
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Norepinephrine (As Bitartrate)
+None
+D-Alpha Tocopherol (Vitamin E)
+Multivitamins + Minerals
+Calcium Ascorbate
+Ciclosporin
+Amino Acid + Sorbitol
+Itraconazole
+Azithromycin (Dihydrate)
+Ciclosporin
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Levonorgestrel + Ethinylestradiol; Ferrous Fumarate
+Pantoprazole (as sodium)
+Guaifenesin
+Amlodipine (As Besilate)
+Marfen
+Eraxis
+Cardilol
+Clopidogrel (as bisulfate)
+Dobutamine (as hydrochloride)
+Amlodipine (as besilate)
+Clopidogrel
+Ambroxol (as hydrochloride)
+Mesalazine
+Amoxicillin
+Naproxen Sodium
+Co-Amoxiclav
+Sultamicillin (as tosylate)
+Amlodipine (As Besilate)
+Hydrocortisone
+Estradiol Valerate + Dienogest
+Levocetirizine Dihydrochloride
+Cefuroxime (As Axetil)
+Atropine Sulfate
+Midazolam
+5% Dextrose In Water
+Atorvastatin (As Calcium)
+Perindopril Arginine / Indapamide
+Lactated Ringer'S Solution
+5% Dextrose In Lactated Ringer'S Solution
+Ceftazidime (as pentahydrate)
+Multivitamins + Minerals
+0.9% Sodium Chloride
+Diphenhydramine Hydrochloride
+Gliclazide
+Atorvastatin (As Calcium)
+AMLODIPINE (as BESILATE)
+AMLODIPINE (as BESILATE)
+Hydrocortisone
+Gliclazide
+Ciprofloxacin
+Ciprofloxacin
+Losartan Potassium
+Cefixime (As Trihydrate)
+Lidocaine + Prilocaine
+Cetrizil
+Atorvastatin (As Calcium)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Lansoprazole
+Metformin Hydrochloride
+Metformin Hydrochloride
+None
+Diazepam
+Losartan (As Potassium)
+Losartan (As Potassium)
+Pyrazinamide
+Losartan Potassium
+Ciprofloxacin (As Hydrochloride)
+Clopidogrel (As Bisulfate)
+Atorvastatin (as Calcium)
+Cinnarizine
+Atorvastatin (As Calcium)
+Ciprofloxacin (As Hydrochloride)
+Tacrolimus (As Monohydrate)
+Oxcarbazepine
+Co-Amoxiclav
+Hydrotalcite + Dicycloverine hydrochloride + Simeticone
+Ibuprofen
+Dobutamine (As Hydrochloride)
+Clobetasol Propionate + Gentamicin (As Sulphate)
+Azithromycin (As Dihydrate)
+Ampicillin (As Soidum) + Sulbactam (As Sodium)
+Furosemide
+Isotretinoin
+Folic Acid; Thiamine Mononitrate (Vit. B1); Pyridoxine Hydrochloride (Vit. B6); Cyanocobalamin (Vit. B12)
+Cetirizine Dihydrochloride
+Cassi Angustifolia Vahl (Senna Leaves)
+Tretinoin
+Tretinoin
+Imipenem (as monohydrate) + Cilastatin (as sodium)
+Clopidogrel (As Bisulfate)
+Diphenhydramine Hydrochloride
+Diclofenac Potasisum
+Azithromycin (As Dihydrate)
+Azithromycin Dihydrate
+Chloramphenicol (As Sodium Succinate)
+Norepinephrine (As Bitartrate)
+Calcium Carbonate + Cholecalciferol (Vit. D3)
+Loperamide Hydrochloride
+Naproxen Sodium
+Gadobutrol
+Montelukast (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Tacrolimus
+Ofloxacin
+Atorvastatin (As Calcium)
+Natalbes
+Metformin Hydrochloride
+Metoprolol Tartrate
+Xylometazoline Hydrochloride
+Atenolol
+Propofol
+Lacidipine
+Metronidazole
+Linezolid
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Voriconazole
+Phenylephrine hydrochloride + Brompheniramine maleate
+Nebivolol (as hydrochloride) + Amlodipine (as besilate)
+Nebivolol (as Hydrochloride) + Amlodipine (as Besilate)
+Mecobalamin
+Sterile Water For Injection
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Febuxostat
+Febuxostat
+Febuxostat
+Iron (As Ferrous Fumarate) + Folic Acid
+Inosine Acedoben Dimepranol
+Cefpirome (As Sulfate)
+Tramadol Hydrochloride + Paracetamol
+Escitalopram ( as oxalate )
+Medroxyprogesterone Acetate
+Ibandronic Acid
+DIOSMIN + HESPERIDIN
+Fexofenadine Hydrochloride
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Citicoline
+Isotretinoin
+Clopidogrel + Aspirin
+Multivitamins+Minerals+Ginseng+Amino Acids
+Chamomile Extract + Methyl Salicylate + Peppermint Oil + Sage Oil + Anise Oil + Dwarf Pine-Needle Oil + Bergamot Oil + Cineol
+Miconazole Nitrate
+Haloperidol
+Haloperidol
+Fluorescein (As Sodium)
+Amlodipine (as besilate)
+Alfacalcidol
+Ketoconazole + Clobetasol Propionate
+Paracetamol
+Calcium Carbonate
+Atenolol
+Atenolol
+Ceftazidime (As Pentahydrate)
+Glycine Max (L.) Merr. (Refined Soybean Oil)
+Glycine Max (L.) Merr (Refined Soybean Oil)
+Prednisolone (As Sodium Phosphate)
+Ibuprofen
+Finasteride
+Ketoprofen
+Unsin
+Bortezomib
+Fenofibrate
+Iron Polymaltose Complex
+Cefalexin (As Monohydrate)
+Carbox
+Aciclovir
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Deferiprone
+OMEPRAZOLE
+Desloratadine
+Metoprolol (As Succinate)
+Selegiline Hydrochloride
+Sitinox
+Clarithromycin
+Diclofenac Sodium
+Clopidogrel (As Bisulfate)
+Carvedilol
+Cilostazol
+Cilostazol
+Meloxicam
+Methyldopa
+Multivitamins + Iron
+Lamotrigine
+Thiamine (as Hydrochloride) (Vitamin B1) + Pyridoxine (as Hydrochloride) (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Olanzapine
+Co-Amoxiclav
+Retinol Palmitate
+Retinol Palmitate
+Ranitidine (As Hydrochloride)
+Chlorhexedine Gluconate
+Vitamin B1 + B6 + B12
+Medglu
+Cefazolin (As Sodium)
+Gatifloxacin
+Clobetasol Propionate
+Kastel
+Lansoprazole
+Tobramycin
+Paracetamol + Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Chloramphenicol (as Palmitate)
+Lopivasc
+Losartan Potassium
+None
+Atorvastatin (As Calcium)
+Metformin Hydrochloride
+Piperacillin (as Sodium ) + Tazobactam (as Sodium)
+Ursodeoxycholic Acid
+Flupentixol Decanoate
+Clotrimazole
+Co-Amoxiclav
+Warfedin
+Warfedin
+Atenolol
+Pigrel
+Metformin (As Hydrochloride) / Glibenclamide
+TGP Zinc Gluconate
+Zinc
+Ranitidine (As Hydrochloride)
+Citicoline (As Sodium)
+5% Dextrose In 0.3% Sodium Chloride
+Balanced Multiple Maintenance Solution With 5% Dextrose (Adult)
+None
+Balanced Multiple Replacement Solution With 5% Dextrose
+Zinc
+Escitalopram ( as oxalate )
+Rosuvastatin (as calcium)
+Atorvastatin (as calcium propylene glycol solvate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Polymyxin B Sulfate + Bacitracin Zinc + Neomycin Sulfate
+Cefazolin
+Citicoline (As Sodium)
+Loratadine
+Cefazolin
+Fleicanide Acetate
+Metformin Hydrochloride
+Paracetamol
+Domperidone
+Cefixime (As Trihydrate)
+Balanced Multiple Maintenance Solution With 5% Dextrose (Pedia)
+Cefotaxime (as sodium)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Amlodine HD
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Neomycin Sulfate + Triamcinolone Acetonide + Gramicidin + Nystatin
+Sildenafil (as citrate)
+Multivitamins + Inositol + Choline Bitartrate + Para-Aminobenzoic Acid (see reveerse)
+Cognitine
+Docetaxel
+METFORMIN HYDROCHLORIDE
+Losartan Potassium
+Methylergometrine Maleate
+Co-Amoxiclav
+Co-Amoxiclav
+Cefaclor (As Monohydrate)
+0.9% Sodium Chloride
+5% Dextrose in Water
+10% Dextrose In Water
+Lactated Ringer's Solution
+5% Dextrose In 0.9% Sodium Chloride
+5% Dextrose In Lactated Ringer's
+Metoclopramide (As Hydrochloride)
+Metronidazole
+Pantoprazole (as Sodium Sesquihydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridixime Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ibuprofen
+Betamethasone (as Valerate) + Neomycin (as Sulfate)
+Clopidogrel (As Bisulfate)
+Moxifloxacin (as hydrochloride)
+Colchicine
+Colchicine
+5% Dextrose in Lactated Ringer's
+Ceftriaxone (As Sodium) + Dextrose
+Metformin Hydrochloride
+Ibuprofen
+CeeZinc
+Cefoxitin (as Sodium)
+Amlodipine (as Besilate)+ Valsartan
+Atenolol
+Prochlorperazine Mesilate
+Terbutaline Sulfate
+Omeprazole (As Sodium)
+Azithromycin (As Dihydrate)
+Escitalopram (as Oxalate)
+Cefaclor (as Monohydrate)
+Vitamin C/ Grape Seed
+Losartan Potassium
+Tadalafil
+Paracetamol + Caffeine
+Selenium
+Citicoline (as sodium)
+Netiline
+Peritoneal Dialysis Solution with 4.25% Dextrose
+Peritoneal Dialysis Solution with 2.3% Dextrose
+Peritoneal Dialysis Solution with 1.5 Dextrose
+Peritoneal Dialysis Solution with 2.3% Dextrose
+Peritoneal Dialysis Solution with1.5% Dextrose
+MOMETASONE FUROATE
+Aceclofenac
+Losartan Potassium
+Metronidazole
+Irbesartan
+Mecobalamin
+Omeprazole
+Clotrimazole
+Cefuroxime (as sodium)
+Atenolol
+Cefpodoxime (As Proxetil)
+Celecoxib
+Citicoline (as Sodium)
+Timolol (As Maleate)
+Aciclovir
+Enalapril Maleate
+Amlodipine (as besilate) + Valsartan
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Anastrazole
+Aciclovir
+Desloratadine
+Cefaclor (as monohydrate)
+Folic Acid
+Zinc Gluconate
+Olmesartan medoxomil + Amlodipine (as besilate) + Hydrochlorothiazide
+Olmesartan medoxomil + Amlodipine (as besilate) + Hydrochlorothiazide
+Atorvastatin (as calcium propylene glycol solvate)
+Nalbuphine (as Hydrochloride)
+METOCLOPRAMIDE (as Hydrochloride)
+Diphenhydramine Hydrochloride
+Clonidine (as hydrochloride)
+Lidocaine Hydrochloride (as monohydrate)
+0.9% Sodium Chloride
+Esomeprazole
+Ceftazidime (As Pentahydrate)
+Pioglitazone (As Hydrochloride) + Glimepiride
+Paclitaxel
+GLIBENCLAMIDE
+Ketotifen (as Fumarate)
+Paracetamol/ Ibuprofen 325 Mg/ 200 Mg Capsule
+Phenylephrine Hydrochloride + Chlorpheniramine Maelate
+AMINO ACIDS CRYSTALLINE
+Levamlodipine (as Besilate)
+Levamlodipine (as Besilate)
+Omeprazole
+Bacitracin Zinc + Neomycin Sulfate + Polymyxin B Sulfate
+Pantoprazole (as Sodium)
+Docetaxel
+Docetaxel
+Hexylresorcinol
+Amoxicillin (As Trihydrate)
+Multivitamins + Minerals
+Vitamin A + Vitamin D3 + Vitamin B1 + Vitamin B2 PO4 + Vitamin B12 + Vitamin B3 + Vitamin C + Ca gluconate + Fe polymaltose + Zn gluconate + Taurine + L-lysine Hydrochloride + Chlorella powder + Chlorella extract powder
+Sildenafil (As Citrate)
+Tranexamic Acid
+Ketorolac Trometamol
+Sirolimus
+Sodium Chloride + Xylitol
+IRBESARTAN
+Forexine
+Oxacillin (As Sodium)
+Tolnaftate
+Paracetamol + Phenylephrine Hydrochloride +Chlorphenamine Maleate
+MULTIVITAMINS + MINERALS + IRON + FOLIC ACID
+Famotidine + Calcium Carbonate + Magnesium Hydroxide
+Sildenafil (as Citrate)
+Sodium Chloride
+Levodopa + Benserazide (As Hydrochloride)
+5% Dextrose In 0.9% Sodium Chloride
+Hyoscine butylbromide
+Xylometazoline Hydrochloride
+Clarithromycin
+Gemcitabine
+Gemcitabine
+Tacrolimus
+Clarithromycin
+Ciprofloxacin (as Lactate)
+Amino Acids Crystalline
+Oxaliplatin
+Oxaliplatin
+Ephedrine (As Hydrochloride)
+Carvedilol
+Trimetazidine dihydrochloride
+Dexamethasone Phosphate (as Sodium)
+Esomeprazole Magnesium
+5% Dextrose in Lactated Ringer's Solustion
+Citicoline (as Sodium)
+Levocetirizine Dihydrochloride
+Medroxyprogesterone Acetate
+Irbesartan
+Irbesartan
+Levodopa + Carbidopa
+Glucosamine Sulfate
+Bromazepam
+Metformin (as Hydrochloride)
+METFORMIN (AS HYDROCHLORIDE)
+Tolnaftate
+Ketoconazole + Clobetasol Propionate
+Oxytocin
+Fusidic Acid
+Levofloxacin (as Hemihydrate)
+Finasteride
+Olmesartan Medoxomil
+Cefpodoxime (As Proxetil)
+Multivitamins + Minerals
+Atorvastatin (As Calcium)
+Diclofenac Sodium
+Vitamin C (as Ascorbate) + Grapeseed Extract + Citrus Bioflavonoids Complex + L-Glutathione + Alpha-Lipoic Acid
+Docetaxel (as trihydrate)
+Nalbuphine Hydrochloride
+Meropenem (as Trihydrate)
+Celecoxib
+Cefpodoxime (As Proxetil)
+Cefuroxime (As Axetil)
+Cefoperazone (As Sodium) + Sulbactam (As Sodium)
+Cefuroxime (As Axetil)
+Chlorpromazine Hydrochloride
+Orlistat
+Ascorbic Acid
+Pheniramine Maleate + Naphazoline Hydrochloride
+Levofloxacin (as hemihydrate)
+Linezolid
+Pyridoxine Hydrochloride (Vit.B6) + Thiamine Mononitrate (Vit.B1) + Cyanocobalamin (Vit.B12)
+Bicalutamide
+Dobutamine (as Hydrochloride)
+Levodopa + Benserazide (As Hydrochloride)
+Salbutamol (As Sulfate) + Guiafenesin
+Carvedilol
+Ascorbic Acid (as Sodium Ascorbate) + Folic Acid + iron (as Ferrous Sulfate)
+Kanamycin (As Sulfate)
+Tacrolimus
+Bacillus clausii
+Oseltamivir (as Phospate)
+Ranitidine (as Hydrochloride)
+Carvedilol
+Hydralazine Hydrochloride
+Erythromycin (as ethylsuccinate)
+Roflumilast
+Metoprolol Succinate
+Omeprazole
+Ceftriaxone (as Sodium)
+Silver Sulfadiazine
+Paracetamol + Tramadol Hydrochloride
+Risperidone
+Risperidone
+Baclofen
+Clopidogrel (as bisulfate)
+Amlodipine (As Besilate)
+Furosemide
+Rifaximin
+Methionine-bound Zinc Complex+Vitamin C+ D. Salina Extract+Natural Vitamin E+Chromium Picolinate
+Mycophenolate Mofetil
+CO-AMOXICLAV
+Valsartan
+Mupirocin
+Ticagrelor
+Clotrimazole + Gentamicin (as Sulfate) + Betamethasone (as Diproprionate)
+Balanced Multiple Maintenance Solution With 5% Dextrose
+Aciclovir
+Dexamethasone Phosphate (As Sodium)
+Cinnarizine
+Tacrolimus
+Anastrozole
+Mebendazole
+Guiafenesin + Salbutamol
+Tamsulosin Hydrochloride
+Fexofenadine Hydrochloride
+Fexofenadine Hydrochloride
+Verapamil Hydrochloride
+Cetirizine Dihydrochloride
+Tarceva
+Erlotinib
+Meloxicam
+Meloxicam
+Rivaroxaban
+Rivaroxaban
+Cefixime (as trihydrate)
+Montelukast ( As Sodium)
+Cabazitaxel
+Cefuroxime (As Axetil)
+Granisetron
+Alfacalcidol
+Tramadol (As Hydrochloride)
+Benzydamine Hydrochloride
+Diphenhydramine Hydrochloride
+Midazolam
+Oxacillin (as Sodium)
+Multivitamins + Minerals
+Calcitriol + Calcium Citrate + Magnesium Oxide + Zinc Oxide
+Multivitamins + Minerals
+Ascorbic Acid (as Calcium Ascorbate)
+Benzydamine Hydrochloride + Cetylpyridinium Chloride
+Diclofenac Sodium
+Multivitamins + Minerals + Lysine + Taurine (see reverse for formulation)
+Felodipine
+Esomeprazole (As Magnesium Trihydrate)
+Co-Amoxiclav
+Latanoprost
+Exemestane
+Potassium Chloride
+Docetaxel (As Trihydrate)
+Docetaxel (As Trihydrate)
+Vancomycin (As Hydrochloride)
+Rosuvastatin (as Calcium)
+Vancomycin (As Hydrochloride)
+0.9% Sodium Chloride
+Metformin Hydrochloride
+Cefuroxime (as Axetil)
+Omeprazole
+Salbutamol (As Sulfate)
+Aceclofenac
+Losartan Potassium
+Paclitaxel
+Propacetamol Hydrochloride
+Iron+ Zinc +Folic Acid+ Cyanocobalamin
+Aciclovir
+Ephedrine Sulfate
+Cefixime (As Trihydrate)
+Simvastatin
+Diazepam
+Diazepam
+Co-Amoxiclav
+Cefuroxime (As Axetil)
+Lactated Ringer'S Solution
+Azithromycin(As Monohydrate)
+Cefuroxime (As Axetil)
+Ceftazidime (As Pentahydrate)
+Ciprofloxacin
+Salbutamol (As Sulfate)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Dextromethorphan Hydrobromide + Phenylephrine Hydrochloride + Paracetamol
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Minerals + Cholecalciferol (Vitamin D3)
+Thiamine Hydrochloride+Pyridoxine+Hydrochloride+Cyanocobalamin
+Sodium Chloride
+Sterile Water For Irrigation
+Paracetamol + Propyphenazone + Anhydrous Caffeine
+Levofloxacin (As Hemihydrate)
+Halobetasol Propionate
+Halobetasol Propionate
+Fusidic Acid
+Salbutamol (As Sulfate) + Bromhexine Hydrochloride + Guiafenesin
+Poractant Alfa
+Co-Amoxiclav
+Nebivolol (as hydrochloride)
+Losartan Potassium + Hydrochlorothiazide
+Calcium folinate
+Paracetamol + Phenypropanolamine Hydrochloride + Chlorphenamine Maleate
+Butamirate Citrate
+Diclofenac Sodium
+Ascorbic Acid + Zinc
+Fluorouracil
+Mometasone Furoate
+Minocycline (As Hydrochloride)
+CLINDAMYCIN (AS HYDROCHLORIDE)
+Hyoscine N-Butylbromide
+Nalbuphine Hydrochloride
+Triamcinolone Acetonide
+Ketamine
+Pregabalin
+Pregabalin
+Amisulpride
+METHYL SALICYLATE + MENTHOL + EUGENOL
+Amisulpride
+Nilotinib (As Hydrochloride Monohydrate)
+Calcium Sennosides
+Allopurinol
+Hydroquinone
+Esomeprazole (As Magnesium)
+Balanced Multiple Maintenance Solution With 5% Dextrose (For Pedia)
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+5% Dextrose In 0.3% Sodium Chloride
+Ketamine (As Hydrochloride)
+Azelastine Hydrochloride
+0.9% Sodium Chloride
+Naftazone
+Benzydamine hydrochloride + Chlorhexidine gluconate.
+Esomeprazole (As Magnesium)
+Potassium Chloride 10 Meq (20 Meq/L) In 5% Dextrose And 0.33% Sodium Chloride Solution For I.V. Infusion
+Bupivacaine Hydrochloride
+Pantoprazole (as sodium sesquihydrate)
+Fluphenazine Decanoate
+Hypromellose
+Tranexamic Acid
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Amlodipine (As Besilate)
+Doxorubicin Hydrochloride
+Polymyxin B Sulfate + Bacitracin Zinc + Neomycin Sulfate
+Degarelix
+Degarelix
+Midazolam (as hydrochloride)
+Paracetamol
+Phenytoin Sodium
+Hydroxyzine Hydrochloride
+Levedopa + Carbidopa
+Adenosine
+5% Dextrose in Lactated Ringer'S
+Cholecalciferol
+Cefixime (as Trihydrate)
+Trimetazidine Hydrochloride
+Iohexol
+Iohexol
+Rifampicin/ Ethambutol/ Isoniazid
+Diphenhydramine (As Hydrochloride)
+Dextrose 5% In Water
+5% Dextrose Lactated Ringer'S Solution
+Clopidogrel (As Bisulfate) + Aspirin
+Balanced Multiple Maintenance Solution With 5% Dextrose (For Adult)
+Atracurium Besilate
+Clotrimazole + Gentamicin (As Sulfate) +Betamethasone (As Dipropionate)
+Sodium Picosulfate+Magnesium Oxide+Citric Acid
+Phytomenadione
+Ibuprofen
+Aceclofenac
+Atracurium Besilate
+Ceftriaxone Sodium
+Cefalexin (As Monohydrate)
+Progestogen
+Omeprazole Sodium
+None
+Dexlansoprazole
+Dexlansoprazole
+None
+Omeprazole
+Diclofenac (As Diethylamine)
+Chloramphenicol
+Ambroxol Hydrochloride
+Cefepime (as hydrochloride)
+Ambroxol Hydrochloride
+Esomeprazole (As Sodium)
+Tramadol Hydrochloride
+Netilmicin (as Sulfate)
+Metformin Hydrochloride
+Beclomethasone Dipropionate
+Beclomethasone Dipropionate
+Ibuprofen
+Lithium Carbonate
+Metoclopramide Hydrochloride
+Paclitaxel
+MOMETASONE  FUROATE
+Sodium Ascorbate
+Midazolam
+Carvedilol
+Sildenafil (as Citrate)
+Naphazoline Hydrochloride
+Tranexamic Acid
+Vancomycin (As Hydrochloride)
+Terbinafine (As Hydrochloride)
+Hydrocortisone + Miconazole Nitrate
+Butamirate Citrate
+Amiodarone Hydrochloride
+Esomeprazole (as Magnesium Trihydrate)
+Fluconazole
+Esomeprazole
+Esomeprazole
+Meropenem (As Trihydrate)
+Cefotaxime (As Sodium)
+Cefuroxime (As Axetil)
+Hyoscine-N-Butylbromide
+Sodium Ascorbate 113.63 Mg/Ml (Equivalent To 100 Mg Ascorbic Acid)
+Ascorbic Acid + Zinc
+Ambroxol Hydrochlride
+Calcium Gluconate
+Candesartan Cilexetil + Amlodipine (As Besilate)
+Lactulose
+Omeprazole
+Gentamicin (as sulfate)
+Paracetamol
+Aspirin
+Theophylline
+Theophylline
+Calcium (as carbonate)
+Loratadine
+Multivitamins
+Retinol Palmitate (Vitamin A)
+Retinol Palmitate (Vitamin A)
+Midazolam
+Paracetamol
+Omeprazole (As Sodium)
+Paracetamol
+Salbutamol (As Sulfate)
+Abiraterone Acetate
+Iohexol
+Paracetamol
+Carboplatin
+Carboplatin
+Water For Injection
+Clarithromycin
+Amphotericin B
+Ambroxol Hydrochloride
+Clarithromycin
+L-Ornithine-L-Aspartate
+Calcipotriol (as Monohydrate) + Betamethasone (as dipropionate)
+Sodium Chloride
+Clopidogrel
+Sodium Chloride
+Salbutamol (as sulfate)
+Ibuprofen
+Multivitamins +Minerals
+Paclitaxel
+Irinotecan Hydrochloride Trihydrate
+Salicylic Acid + Lactic Acid
+Everolimus
+Eribulin Mesilate
+Neostigmine Methylsulfate
+Sildenafil (As Citrate)
+Paracetamol
+Ceftazidime (As Pentahydrate)
+Cefepime (As Hydrochloride)
+Cefepime (As Hydrochloride)
+Cefepime (As Hydrochloride)
+Clopidogrel (As Bisulfate)
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Alendronic Acid (As Alendronate Sodium Trihydrate)
+CLOMIFENE CITRATE
+Salbutamol (As Sulfate)
+D-Alpha Tocotrienol +D-Gamma+D-Delta Tocotrienol + D-Alpha Tocopherol+Plant Squalene+Phytosterol+Phytocarotenoid
+Glutamic Acid + Calcium + Thiamine Mononitrate + Cyanocobalamin
+D-Alpha Tocopheryl Acid Succinate(Vit E) / Calcium Pantothenate/ Apis mellifera L. (Bee Pollen)/ Panax ginseng L. (korean Ginseng) rhizome/ Lecithin
+D-Alpha Tocopheryl Acid Succinate (Vit. E) Bee Pollen
+Lactated Ringer'S Solution (Ringer'S Lactate)
+Amlodipine (As Besilate)
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Domperidone (As Maleate)
+Levodopa + Carbidopa (As Monohydrate)
+Zinc Sulfate Monohydrate
+Zinc Sulfate Monohydrate
+Acarbose
+Sterile Water for Injection
+Losartan Potassium + Hydrochlorothiazide
+Gentamicin (As Sulfate) + Dexamethasone Phosphate (As Sodium Phosphate)
+Rosuvastatin (as Calcium)
+Temozolomide
+Gentamicin (As Sulfate)
+Meloxicam
+Meloxicam
+Colecalciferol
+Dacarbazine
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Vemurafenib
+Clindamycin (As Phosphate)
+Ascorbic Acid
+Rupatadine (As Fumarate)
+Sildenafil (As Citrate)
+Sojourn
+Febuxostat
+Febuxostat
+Sildenafil (As Citrate)
+Propofol
+Levocetirizine Hydrochloride
+TELMISARTAN
+Telmisartan
+Paclitaxel
+Rabeprazole
+Zoledronic Acid
+L-Alanyl-L-Glutamine
+Pregabalin + Mecobalamin
+Dextromethorphan Hydrobromide
+Lactulose
+Medroxyprogesterone Acetate
+Oxymetazoline Hydrochloride
+Amlodipine (As Besilate) + Losartan Potassium
+Metformin Hydrochloride
+Celecoxib
+Tolvaptan
+Rebamipide
+Zinc Gluconate
+Ferrous Sulfate + Folic Acid
+Zinc
+Rosuvastatin (as calcium)
+Zinc (as Zinc gluconate)
+Zinc (as Zinc gluconate)
+Rosuvastatin (as calcium)
+Cefuroxime (as axetil)
+Piracetam
+Lapatinib (As Ditosylate)
+Lidocaine Hydrochloride
+Ciprofloxacin (as hydrochlride)
+Verapamil hydrochloride
+Metformin Hydrochloride
+Ascorbic acid + Calcium + Cholecalciferol (Vitamin D3)
+Tolnaftate
+D-Alpha Tocopherol (Vitamin E)
+Tafluprost
+Valsartan
+Valsartan
+Candesartan Cilexetil
+Candesartan Cilexetil
+Hyoscine N-Butylbromide
+Clindamycin (As Phosphate)
+Atorvastatin (as calcium)
+Ondansetron (as Hydrochloride Dihydrate)
+Isoxsuprine Hydrochloride
+Ciprofloxaxin (as hydrochloride) + Dexamethasone
+Pregabalin
+Lidocaine Hydrochloride + Epinephrine (Local Infiltration)
+Cefixime (As Trihdyrate)
+Potassium Chloride
+Peritoneal Dialysis Solution + 4.25% Dextrose Solution
+Famotidine
+Cetirizine (as Hydrochloride)
+Cefepime
+Olanzapine
+Atropine Sulfate
+Ciprofloxacin
+Ciprofloxacin
+Lithium Carbonate
+Metronidazole
+Paracetamol
+Doxycycline (as Hyclate) (FOR DOH Complete Treatment Pack)
+Paracetamol
+Pirenoxine
+Amlodopine (as Besilate)
+Mometasone (As Furoate)
+Ibuprofen + Paracetamol
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Ketorolac Trometamol
+Olanzapine
+Methylprednisolone (As Sodium Succinate)
+Ambroxol Hydrochloride
+Aceclofenac
+Epinephrine (as hydrochloride)
+Metronidazole
+Cefuroxime (as Sodium)
+Hydroxycarbamide
+Fluconazole
+Levofloxacin
+Ursodeoxycholic Acid
+Tramadol Hydrochloride
+Cetirizine hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Doxorubicin Hydrochloride
+Temozolomide
+Tramadol Hydrochloride
+Sildenafil (As Citrate)
+Rocuronium Bromide
+Diclofenac Potassium
+Valsartan
+5% Dextrose in Water
+Heparin (as Sodium)
+Citicoline (as sodium)
+Calcium gluconate
+Donepezil Hydrochloride
+Dulcolax
+Doxorubicin Hydrochloride
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Zoledronic Acid
+Ascorbic Acid + Zinc
+Ondansetron (as Hydrochloride Dihydrate)
+Clarithromycin
+Sultamicillin (as tosylate)
+Mycophenolate Mofetil
+Dienogest
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Bortezomib
+Amlodipine (as besilate)
+Potassium Citrate (as monohydrate)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Clopidogrel (as Bisulfate)
+Carvedilol
+Amlodipine (as besilate)
+Losartan Potassium + Hydrochlorithiazide
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Tramadol Hydrochloride
+Benzoyl Peroxide
+Prednisone
+Cylophosphamide
+Prednisone
+Chlorphenamine Maleate
+Terbinafine (as Hydrochloride)
+Valsartan + Hydrochloride
+SILVER SULFADIAZINE
+Omeprazole
+ZINC (as Zinc Sulfate Monohydrate)
+Ketoconazole
+Celecoxib
+Diclofenac (as sodium)
+Clarithromycin
+Dipyridamole
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Gluconate)
+Folic Acid
+d-Alpha Tocopherol (Vitamin E)
+Ambroxol Hydrochloride
+Sodium Chloride
+Doxorubicin HCl
+Doxorubicin HCl
+Gabapentin
+Clindamycin Phosphate
+Azithromycin (As Dihydrate)
+Irbesartan + Hydrochlorothiazide
+Paracetamol
+Multivitamins + Minerals
+FLUCONAZOLE
+Guaifenesin
+Levofloxacin (As Hemihydrate)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloriodwe (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Desloratadine
+Oxycodone Hydrochloride+Naloxone Hydrochloride
+Cilostazol
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Isoniazid
+Levofloxacin
+Doxycycline (As Hyclate)
+Clotrimazole
+Clotrimazole
+CISPLATIN
+Clotrimazole
+Cefaclor (as monohydrate)
+Gatifloxacin
+Mometasone furoate
+Capecitabine
+Multivitamins + Minerals + Choline + Methionine + Linseed Oil + Siberian Ginseng + Saw Palmetto
+Clotrimazole
+Aminophylline
+Levocetirizine
+Acetylcysteine
+Moxifloxacin (As Hydrochloride)
+Desloratadine
+Butamirate Citrate
+Alendronic Acid (as Alendronate Sodium)
+Paracetamol + Guaifenesin + Phenylpropanolamine Hydrochloride + Dextromethorphan Hydrobromide + Chlorpheniramine Maleate
+Omeprazole
+Cisplatin
+Prednisone
+Multivitamins
+Zoledronic Acid
+Isosorbide Mononitrate
+Thiamine mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Ambroxol Hydrochloride
+Bisacodyl
+Ferrous Sulfate
+Ursodeoxycholic Acid
+Sodium chloride
+Bimatoprost
+Olopatadine (hydrochloride)
+Ascorbic Acid + Zinc (as Sulfate Monohydrate)
+Ursodeoxycholic Acid
+Ganciclovir (as sodium)
+Chlorphenamine Maleate + Phenylephrine Hydrochloride
+Meclizine
+Co-Amoxiclav
+FLUCONAZOLE
+Omeprazole + Sodium Bicarbonate
+Omeprazole + Sodium Bicarbonate
+Potassium Chloride
+Acevon
+Clonidine Hydrochloride
+Paracetamol + Phenylephrine HCl + Chlorpheniramine Maleate
+Azithromycin (as dihydrate)
+Doxofylline
+Rebamipide
+Paracetamol + Phenylephrine Hydrochloride
+Cefuroxime (as sodium)
+Ampicillin (as Sodium)
+Cefuroxime Sodium
+Aspirin
+Ketorolac Trometamol
+Letrozole
+Oxcarbamazepine
+Estradiol (as hemihydrate)
+Loratadine
+Pantoprazole (as sodium sesquihydrate)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Metformin Hydrochloride
+Iron Sucrose
+Erythromycin
+Citicoline Sodium
+Esmolol Hydrochloride
+Multivitamins+Minerals+Lecithin+Inositol+Hydrolysed Rice Protein
+Polymixin B Sulfate + Bacitracin Zinc
+Dextrose
+Ibuprofen
+Montelukast (as sodium)
+Multivitamins + Iron
+Memantine HCl
+Clotrimazole
+Co-amoxiclav
+Phenylephrine Hydrochloride + Paracetamol
+Azithromycin (as dihydrate)
+Phenylephrine Hydrochloride + Brompheniramine maleate
+Potassium Chloride
+Magnesium Sulfate
+Fentanyl (As Citrate)
+Paracetamol
+Losartan Potassium
+Losartan Potassium
+Oxytocin
+Prednisolone (As Sodium Phosphate)
+Adapalene
+Ursodeoxycholic Acid
+Cefuroxime (as axetil)
+Mometasone furoate
+Loratadine
+Salmeterol (as xinafoate) + Fluticasone propionate
+Ceftizoxime (as sodium)
+Metformin Hydrochloride
+Metronidazole
+Zinc (as Zinc Sulfate Monohydrate)
+Lacosamide
+Dimenhydrinate + Cinnarizine
+Montelukast (as sodium) + Cetirizine hydrochloride
+Lansoprazole
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Prednisolone
+Dexamethasone
+Naproxen
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Alcaftadine
+Capecitabine
+Cefuroxime (as Axetil)
+Glimepiride
+Meropenem (as Trihydrate)
+Metformin Hydrochloride
+Branched-Chain Amino Acids
+Isosorbide Mononitrate
+Nifedipine
+Meropenem (As Trihydrate)
+Carvedilol
+Propranolol Hydrochloride
+RABEPRAZOLE SODIUM
+Levofloxacin (as hemihydrate)
+Isoniazid
+Paracetamol
+Ketorolac Trometamol
+Ibuprofen
+Oxaliplatin
+Citicoline (as sodium)
+Glimepiride
+Salbutamol (as sulfate)
+Escitalopram (as oxalate)
+Escitalopram (As Oxalate)
+Doxycycline (as hyclate)
+Hyoscine-N-Butylbromide
+Tranexamic acid
+Lacosamide
+Rosuvastatin (as Calcium)
+Carvedilol
+Prednisolone
+Lidocaine Hydrochloride
+Amlodipine (as Besilate)
+Amlodipine (As Besilate)
+Atracurium Besilate
+Atracurium Besilate
+Cefuroxime (as Axetil)
+Tramadol Hydrochloride
+Glycerin
+Tranexamic Acid
+IRBESARTAN
+Phenylephrine Hydrochloride
+Clopidogrel (as bisulfate)
+Metformin Hydrochloride
+Isopropanolol+benzalkonium Chloride
+TRIMETAZIDINE HYDROCHLORIDE
+Rifampicin (Rifacare) ; Isonizid + Pyridoxine Hydrochloride (Isoprim)
+Fexofenadine Hydrochloride
+Ketoconazole
+Raloxifene Hydrochloride
+Cilostazol
+Levocetirizine Hydrochloride
+Sodium Chloride
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Olopatadine Solution (Eye Drops) as hydrochloride
+Minoxidil
+Ursodeoxycholic Acid
+Temozolomide
+Palonosetron (as hydrochloride)
+AcicIovir
+Eperisone Hydrochloride
+Orlistat
+Donepezil Hydrochloride
+Fexofenadine Hydrochloride
+Atorvastatin (As Calcium) + Amlodipine (As Besilate)
+Simvastatin
+Simvastatin
+Ascorbic Acid + Zinc (as sulfate monohydrate)
+OMEPRAZOLE
+Salbutamol (as Sulfate)
+TOBRAMYCIN + DEXAMETHASONE (AS SODIUM PHOSPHATE)
+Tacrolimus (as monohydrate)
+Tacrolimus (as monohydrate)
+Tacrolimus (as monohydrate)
+Gabapentin
+Celecoxib
+Celecoxib
+Celecoxib
+Multivitamins + Minerals
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin
+Nimodipine
+Clotrimazole + Clindamycin (as phosphate)
+Doxofylline
+Multivitamins + Lysine HCl + Buclizine HCl
+Pregabalin
+Tigecycline
+Ofloxacin
+Piracetam
+Domperidone
+Pantoprazole (as sodium sesquihydrate)
+Captopril
+Febuxostat
+CEFUROXIME (AS SODIUM)
+Sterile Water for Injection
+Warfarin Sodium ( as Clathrate)
+Adenosine
+Articaine hydrochloride + Epinephrine (as bitartrate)
+Imidafenacin
+Aspirin
+Zoledronic Acid
+Mupirocin
+Triamcinolone Acetonide
+Olanzapine
+Olanzapine
+Levocetirizine dihydrochloride
+Multivitamins + Minerals (see formulation on reverse side)
+Irbesartan
+Co-Amoxiclav
+Terlipressin acetate
+Losartan Potassium + Hydrochlorothiazide
+Clindamycin Phosphate
+Omeprazole (as Sodium)
+Paclitaxel
+Paclitaxel
+Ondansetron (as hydrochloride)
+Ondansetron (as hydrochloride dihydrate)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Metformin Hydrochloride + Glibenclamide
+Metformin Hydrochloride + Glibenclamide
+Pantoprazole (as Sodium Sesquihydrate)
+Iopromide
+Ethambutol hydrochloride
+Ethambutol hydrochloride
+Theophylline
+Iopromide
+Cefexime (as trihydrate)
+Cefixime ( as trihydrate)
+Iron Sucrose
+Nimodipine
+Gabapentin
+Propofol
+Imipenem + Cilastatin (as Sodium)
+Meropenem (as trihydrate)
+Terbinafine Hydrochloride
+CEFIXIME(AS TRIHYDRATE)
+Ondansetron (as hydrochloride dihydrate)
+SODIUM ALGINATE + SODIUM BICARBONATE + CALCIUM CARBONATE
+Losartan potassium
+Tramadol Hydrochloride
+Meropenem (as trihydrate)
+Cefixime (as trihydrate)
+Gliclazide
+Gliclazide
+Gliclazide
+Ceftriaxone (As Sodium)
+Gliclazide
+Gliclazide
+Hydrochlorothiazide
+Levocetirizine Dihydrochloride
+Cefuroxime (as axetil)
+ETORICOXIB
+ETORICOXIB
+ETORICOXIB
+Clindamycin (as phosphate)
+Clobetasol Propionate
+Carboxymethylcellulose (As Sodium)
+Cefepime (as hydrochloride)
+Paracetamol
+Gliclazide
+Lipid Emulsion + Amino Acid + Electrolytes + Glucose
+Lipid Emulsion + Amino Acids + Electrolytes + Glucose
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Axitinib
+Axitinib
+Ceftazidime (as Pentahydrate)
+CEFTAZIDIME (AS PENTAHYDRATE)
+Betamethasone Valerate
+Betamethasone (as valerate)
+Azithromycin (as dihydrate)
+Afatinib (as dimaleate)
+Afatinib (as dimaleate)
+Afatinib (as dimaleate)
+Sodium Nitroprusside
+Metoprolol Tartrate
+Simvastatin
+Azithromycin (As Dihydrate)
+Irbesartan
+FLUMAZENIL
+Potassium Chloride + Sodium Chloride
+Canagliflozin (as hemihydrate)
+Phenylpropanolamine Hydrochloride + Paracetamol
+Canagliflozin (as hemihydrate)
+Enalapril Maleate
+Crizotinib
+Crizotinib
+Docetaxel
+Azithromycin (as Dihydrate)
+Tadalafil
+Indacaterol (as maleate)/Glycopyrronium (as bromide)
+Levofloxacin (as Hydrochloride)
+Fenofibrate
+Dobutamine (as Hydrochloride)
+Mesalazine
+Teicoplanin
+Paracetamol
+Clobetasol Propionate
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Paclitaxel
+Co-Amoxiclav
+Mecobalamin
+Finasteride
+Azithromycin (as Dihydrate)
+Amoxicillin (as trihydrate) + Clavulanic Acid (as Potassium clavulanate)
+Domperidone (As Maleate)
+Diosmin + Hesperidin
+Citicoline sodium
+Risedronic Acid (as Risedronate Sodium)
+Risperidone
+Zonisamide
+Metformin Hydrochloride + Glipizide
+Enzalutamide
+Ketoanalogues + Essential Amino Acids
+Meloxicam
+Ondansetron (as Hydrochloride Dihydrate)
+Ciprofloxacin (as hydrochloride)
+Atorvastatin (as calcium)
+Esomeprazole (as magnesium)
+Silodosin
+Phospathidyl Choline + Multivitamins
+Multivitamins
+Capecitabine
+LINEZOLID
+Mometasone Furoate
+Isotretinoin
+Pregabalin
+Atenolol
+Atenolol
+Amitriptyline Hydrochloride
+Telmisartan
+Desloratadine
+Betamethasone (as dipropionate)
+DONEPEZIL (as hydrochloride)
+Co-Amoxiclav
+Zoledronic Acid (as monohydrate)
+VALSARTAN + HYDROCHLOROTHIAZIDE
+VALSARTAN
+Zoledronic Acid
+Multivitamins + Minerals + Korean Ginseng + Garlic Extract
+Losartan Potassium
+Ciprofloxacin (as Hydrochloride)
+Mupirocin
+Rosuvastatin Calcium
+Diclofenac Sodium
+Simvastatin
+Meropenem (as trihydrate)
+Levofloxacin (as Hemihydrate)
+Oxytocin
+Clonidine hydrochloride
+Clonidine Hydrochloride
+Simvastatin
+Acarbose
+Fluphenazine Decanoate
+Docetaxel
+Docetaxel
+CETIRIZINE dihydrochloride
+Amlodipine (as besilate)
+Co-Amoxiclav
+Co-Amoxiclav
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Montelukast (as sodium)
+Vitamin B1 + B6 + B12
+Citicoline (as Sodium)
+Sodium Fusidate
+Cefixime (as Trihydrate)
+Clonidine Hydrochloride
+Levofloxacin
+Epinephrine (As Hydrochloride)
+Zinc Sulfate Monohydrate
+Irbesartan
+Nitrofurantoin
+Fat Emulsion + Amino Acids with Electrolytes + Glucose
+Cetirizine Hydrochloride
+Telmisartan
+Ascorbic Acid
+Perampanel
+Perampanel
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Glipizide
+Allopurinol
+Lauromacrogol 400 + Hydrocortisone Acetate
+Cefuroxime (As Sodium)
+Olanzapine
+Tramadol hydrochloride + Paracetamol
+Enalapril Maleate
+Enalapril Maleate
+Bupivacaine Hydrochloride in Dextrose
+Ofloxacin
+Azithromycin (as dihydrate)
+Metoprolol Tartrate
+Diclofenac Diethylamine
+Perampanel
+Atosiban (As Acetate)
+QUETIAPINE (as fumarate)
+QUETIAPINE (as fumarate)
+Amlodipine (as Besilate)
+Fexofenadine Hydrochloride
+Celecoxib
+Olopatadine (As Hydrochloride)
+Celecoxib
+Celecoxib
+Fexofenadine Hydrochloride
+Letrozole
+Meloxicam
+Meloxicam
+Levodopa + Carbidopa
+Ursodeoxycholic Acid
+QUETIAPINE (as fumarate)
+Levofloxacin (As Hemihydrate)
+Salmeterol Xinafoate + Fluticasone Propionate
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Cefixime (as Trihydrate)
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Rosuvastatin Calcium
+Paracetamol + Phenylpropanolamine (As Hydrochloride)+ Chlorphenamine Maleate
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Losartan Potassium
+Mupirocin
+Quetiapine (as Fumarate)
+Terbinafine Hydrochloride
+Citicoline (As Sodium)
+Salbutamol (As Sulfate)
+Desloratadine
+Calcium Ascorbate
+Rosuvastatin (As Calcium)
+Tranexamic Acid
+Bisacodyl
+Salmeterol Xinafoate + Fluticasone Propionate
+Salmeterol (as xinafoate) + Fluticasone propionate + Fluticasone propionate
+Finasteride
+Metformin Hydrochloride
+Amlodipine (as Besilate)
+Gentamicin Sulfate
+Strattera
+Fluconazole
+Pregabalin
+Pregabalin
+Ciprofloxacin (As Hydrochloride)
+Mannitol
+Potassium Citrate
+Memantine hydrochloride
+Mupirocin
+Omeprazole
+Levodopa+Carbidopa
+Telmisartan + Hydrochlorothiazide
+Losartan Potassium
+Telmisartan
+Praziquantel
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Meropenem (as trihydrate)
+Cefuroxime (As Axetil) + Clavulanate Potassium
+Zinc Sulfate Monohydrate
+Esomeprazole (As Magnesium Trihydrate)
+Hyoscine Butylbromide
+Paracetamol + Ascorbic Acid
+Felodipine
+Felodipine
+Epinephrine
+Clobetasol Propionate
+Atomoxetine (As Hydrochloride)
+Strattera
+Strattera
+Bortezomib
+Ceftriaxone (As Sodium)
+Cefaclor (As Monohydrate)
+Citicoline
+Bisoprolol Fumarate + Hydrochlorothiazide
+Doxofylline
+Multivitamins + Dexpanthenol
+Silver Sulfdiazine
+Bisoprolol Fumarate + Amlodipine (As Besilate)
+Bisoprolol Fumarate + Amlodipine (As Besilate)
+Bisoprolol Fumarate + Amlodipine (As Besilate)
+Bisoprolol Fumarate + Amlodipine (As Besilate)
+Naproxen sodium
+Imipenem + Cilastatin (as sodium)
+Moxifloxacin Hydrochloride
+Orlistat
+Multivitamins + Iron
+Tiotropium (as bromide monohydrate)
+Tramadol Hydrochloride
+Pregabalin
+Metronidazole
+Dinoprostone
+Ascorbic Acid
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Levocetirizine Hydrochloride
+Gefitinib
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Celecoxib
+Rosuvastatin (As Calcium)
+Amlodipine (As Besilate)
+Mecobalamin
+Multivitamins + Iron
+Multivitamins + Iron
+ETORICOXIB
+Etoricoxib
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin Calcium
+Atorvastatin (as calcium)
+Atenolol
+Metformin Hydrochloride
+Irbesartan
+Fluticasone Propionate
+Iron + Folic Acid
+Montelukast (As Sodium)
+Clopidogrel
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Amlodipine (As Besilate)
+Rosuvastatin (as calcium)
+Esomep
+Sodium Valproate
+Propofol
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Multivitamins + Buclizine Hydrochloride
+Rosuvastatin (As Calcium)
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Quetiapine(As Fumarate)
+Bendamustine Hydrochloride
+Bendamustine Hydrochloride
+Atorvastatin Calcium + Amlodipine (As Besilate)
+Fenofibrate
+Metformin Hydrochloride + Pioglitazone ( As Hydrochloride ) + Glimepiride
+Paracetamol
+Cholecalciferol (Vitamin D3)
+Paracetamol + Phenylephrine Hydrochloride
+Paracetamol + Ibuprofen
+Pregabalin
+Pregabalin
+Paracetamol + Caffeine
+Co-Amoxiclav
+Gliclazide
+Rosuvastatin (As Calcium)
+Asbutol
+Methylprednisolone
+Methylprednisolone
+Beclomethasone Dipropionate
+Gliclazide
+Gliclazide
+Topiramate
+Vinorelbine (As Tartrate)
+Vinorelbine (As Tartrate)
+Carvedilol
+Ornidazole + Ofloxacin
+Sucralfate
+Metformin Hdyrochloride
+Ipratropium Bromide + Salbutamol (As Sulfate)
+Esomeprazole (As Magnesium)
+Cilostazol
+Levothyroxine Sodium
+Brinzolamide + Brimonidine tartrate
+Cefpodoxime (As Proxetil)
+Albendazole
+Cefpodoxime (As Proxetil)
+Paracetamol + Caffeine
+Diethylcarbamazine Citrate
+Rosuvastatin (as calcium)
+Iohexol
+Febuxostat
+Aprepitant
+Aprepitant
+Aprepitant
+Atorvastatin (As Calcium)
+Progesterone
+Progesterone
+Progesterone
+Meropenem (As Trihydrate)
+Norepinephrine Bitartrate
+Ipratropium Bromide
+Bortezomib
+Celecoxib
+Paracetamol
+Indacaterol (as maleate)/Glycopyrronium (as bromide)
+Salbutamol (as sulfate) + Bromghexine Hydrochloride + Guaifenesin
+Bisacodyl
+Allopurinol
+Multivitamins + Zinc + Copper
+Glutathione (as Reduced Glutathione)
+Pregabalin
+Letrozole
+Sulodexide
+Ceftriaxone (As Sodium)
+Oenothea biennis + Lecithin + Methionin + brewer's yeast + Taraxacum Officinale Wigg. + Apple Cide Vinegar + Choline + Inositol + Selenium
+Multivitamins + Zinc + Copper
+Dapagliflozin (as propanediol monohydrate) + Metformin Hydrochloride
+Dapagliflozin (as propanediol monohydrate) + Metformin Hydrochloride
+Dapagliflozin (as propanediol monohydrate) + Metformin Hydrochloride
+Dapagliflozin (as propanediol monohydrate) + Metformin Hydrochloride
+Perindopril Arginine + Indapamide + Amlodipine (as besilate)
+Perindopril Arginine + Indapamide + Amlodipine (As Besilate)
+Perindopril arginine + Indapamide + Amlodipine (as besilate)
+Multivitamins + Minerals
+Cilostazol
+Tadalafil
+Flumazenil
+Dabrafenib (As Mesilate)
+Dabrafenib (As Mesilate)
+Omeprazole
+Phosphatidyl Choline + Multivitamins
+Phosphatidyl Choline + Vitamin B-Complex + Vitamin E
+Phosphatidyl Choline + Multivitamins
+Desonide
+Febuxostat
+Minoxidil
+Co-Amoxiclav
+Pregabalin
+Pregabalin
+Metformin Hydrochloride
+Ceritinib
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Calcium + Cholecalciferol (Vitamin D3) + Minerals
+Spironolactone
+Meropenem (As Trihydrate)
+Irbesartan
+Sodium Valproate
+Furosemide
+Sacubitril + Valsartan
+Sacubitril + Valsartan
+Sacubitril + Valsartan
+Bupivacaine Hydrochloride
+Oxymetazoline Hydrochloride
+Oxymetazoline Hydrochloride
+Phytomenadione
+Salbutamol (as sulfate) + Bromhexine hydrochloride + Guaifenesin
+Lactitol Monohydrate
+Calcium + Cholecalciferol (Vitamin D3)
+Multivitamins + Lysine Hydrochloride + Buclizine Hydrochloride
+Biotin
+Metformin Hydrochloride
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Bisacodyl
+Patent Blue V Sodium
+Iron + Folic Acid + Vitamin B12 + Zinc
+Erythromycin (as stearate)
+Fenofibrate / Pravastatin Sodium
+Doxofylline
+Metoclopramide Hydrochloride
+Neurobion Forte
+Diacerein
+Paracetamol
+Desloratadine
+Cefuroxime (As Sodium)
+Ursodeoxycholic Acid + Thiamine Mononitrate + Riboflavin
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Amlodipine (As Besilate) + Losartan Potassium
+Nifedipine
+Azithromycin (As Monohydrate)
+Paracetamol
+Pemetrexed (as Disodium)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Pyronaridine tetraphosphate + Artesunate
+Lansoprazole
+Risperidone
+Anastrozole
+Losartan Potassium
+Mefenamic Acid
+Meropenem (as trihydrate)
+0.9% Sodium Chloride
+Pregabalin
+Sodium Chloride
+Doxorubicin Hydrochloride
+Fentanyl (as citrate) [Fentanyl Citrate 628 mcg equivalent to Fentanyl base 400 mcg]
+Fentanyl (as citrate) [Fentanyl Citrate 471 mcg equivalent to Fentanyl base 300 mcg]
+Fentanyl (as Citrate)
+Fentanyl (As Citrate)
+Meropenem (As Trihydrate)
+Multivitamins + Minerals (see formulation on reverse side)
+Bicalutamide
+Valsartan
+Valsartan
+Peridon
+Teicoplanin
+Teicoplanin
+Docetaxel
+Multivitamins
+Paracetamol
+Carboplatin
+Zinc (as Sulfate Monohydrate)
+Citicoline (As Sodium)
+Losartan Potassium + Hydrochlorothiazide
+Salbutamol (As Sulfate) + Ipratropium Bromide
+Omeprazole
+Saccharomyces Boulardii
+Ketoconazole
+Pregabalin
+D-Alpha -Tocopherol (Vitamin E)
+Paclitaxel
+Betamethasone (As Valerate)
+Foxin
+Immuzinc
+Ciprofloxacin (As Hydrochloride) + Fluocinolone Acetonide
+Metronidazole
+Ibuprofen
+Ketamine (As Hydrochloride)
+Tramadol Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Co-Amoxiclav
+Perindopril (as arginine) + Amlodipine (as besilate)
+Perindopril (as arginine) + Amlodipine (as besilate)
+Pancreatin
+Tobramycin
+Cefuvic 250
+Pantoprazole ( As Sodium )
+Multivitamins + Zinc
+Ciprofloxacin
+Diclofenac Sodium (as diethylamine)
+Nepafenac
+Telmisartan
+Multivitamins + Minerals + Choline Bitartrate + Inositol
+ESOMEPRAZOLE (AS SODIUM)
+Ceftriaxone (As Sodium) + Sulbactam (As Sodium)
+Metoclopramide
+Azithromycin
+Ascorbic Acid + Zinc (As Citrate)
+Sultamicillin (as Tosilate Dihydrate)
+Lidocaine (As Hydrochloride)
+Dexamethasone Sodium Phosphate
+Amlodipine (as besilate) + Valsartan
+Amlodipine (as besilate) + Valsartan
+Pantoprazole (as sodium)
+Omeprazole
+Bepotastine besilate
+Fluconazole
+Valsartan + Hydrochlorothiazide
+Doxycycline (As Hyclate)
+Mometasone furoate Monohydrate
+Zipromin
+Utexyn
+Irbesartan + Amlodipine (as besilate)
+Irbesartan + Amlodipine (As Besilate)
+Irbesartan + Amlodipine (as besilate)
+Sofosbuvir
+Each gram contains: Polymyxin B sulfate- eq. to 10000 units; Neomycin sulfate- eq. to 3400 units; Bacitracin Zinc- eq. to 500 units
+Natamycin
+Pantoprazole (as Sodium Sesquihydrate)
+Nicardipine hydrochloride
+Clindamycin (as phosphate)
+d-Alpha Tocopheryl Succinate + Ascorbic Acid + Zinc
+Pregabalin
+Pregabalin
+Bisoprolol Fumarate + Hydrochlorothiazide
+Calcitriol
+Co-Amoxiclav
+Fluconazole
+Bimatoprost + Timolol Maleate
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Multivitamins + Iron + Lysine Hydrochloride + Buclizine Hydrochloride (see reverse for formulation)
+Latanoprost + Timolol (as maleate)
+Latanoprost
+Trimetazidine hydrochloride
+Clonidine hydrochloride
+Salmeterol (Xinafoate) + Fluticasone Propionate
+Salmeterol (Xinafoate) + Fluticasone Propionate
+Salmeterol (Xinafoate) + Fluticasone Propionate
+Macitentan
+Oxytocin
+Mupirocin
+Methyldopa
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Levofloxacin (as hemihydrate)
+Ondansetron (As Hydrochloride Dihydrate)
+Olmesartan Medoxomil + Hydrochlorothiazide
+Azithromycin (as dihydrate)
+Thiopental sodium
+Aripiprazole
+Aripiprazole
+Bisacodyl
+Bisacodyl
+Rupatadine (as fumarate)
+Tamsulosin Hydrochloride
+Iron (as Ferrous Sulfate) + Folic Acid
+Mometasone furoate (as monohydrate)
+Lidocaine hydrochloride + Chlorhexidine dihydrochloride
+Paracetamol
+Rabeprazole Sodium + Itopride Hydrochloride
+Nintedanib (As Esilate)
+Nintedanib (As Esilate)
+Iohexol
+Sodium Chloride
+Tamoxifen (as Citrate)
+Diclofenac Sodium
+Candesartan cilexetil + Hydrochlorothiazide
+Moxifloxacin (as hydrochloride)
+Ascorbic Acid (Vitamin C) + Rutin + Hesperidin + Bioflavonoids + Rosa canina L. (Dog-Rose Fruit) + Malpighia emarginata (Acerola Fruit)
+Doxycycline (as hyclate)
+Nicardipine Hydrochloride
+13C-Urea
+Paracetamol
+Montelukast (as sodium)
+Diphenhydramine Hydrochloride
+Mesalazine
+Beclometasone dipropionate + Formoterol fumarate dihydrate
+Ambroxol hydrochloride
+Ambroxol hydrochloride
+Febuxostat
+Cefuroxime (as Sodium)
+Gabapentin
+Esomeprazole (as sodium)
+Finasteride
+Finasteride
+Pemetrexed (as disodium)
+Pemetrexed (as disodium)
+Ascorbic Acid
+Ascorbic acid (as Sodium Ascorbate)
+Ascorbic Acid (Vitamin C)
+Paracetamol
+Clobetasol propionate
+Acetylcysteine
+Tafluprost
+Paracetamol
+Tiotropium (as bromide) + Olodaterol (as hydrochloride)
+None
+Lenvatinib (as mesilate)
+Folic Acid
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid
+Ascorbic acid (as Sodium Ascorbate)
+Bromhexine hydrochloride
+Simvastatin
+Budesonide + Formoterol fumarate dihydrate
+Budesonide + Formoterol fumarate dihydrate
+Esmolol hydrochloride
+Oxycodone hydrochloride
+Oxycodone hydrochloride
+Oxycodone hydrochloride
+Oxycodone hydrochloride
+Dexamethasone Sodium Phosphate
+Ceftolozane (as sulfate) + Tazobactam (as sodium)
+Multivitamins and Minerals (Orange Flavor)
+Phenylpropanolamine hydrochloride Chlorphenamine Maleate + Paracetamol
+Docetaxel
+Pemetrexed (As Disodium Hemipentahydrate)
+Triamcinolone acetonide
+Meropenem (as Trihydrate)
+Empagliflozin + Linagliptin
+Empagliflozin + Linagliptin
+Mefenamic Acid
+Adapalene + Clindamycin (as phosphate)
+Pantoprazole (as sodium sesquihydrate)
+Metformin hydrochloride
+Adapalene + Benzoyl Peroxide
+Tenofovir Disoproxil Fumarate
+Teneligliptin (as Hydrobromide Hydrate)
+Fluconazole
+Ceftriaxone (as sodium)
+Ascorbic Acid + Zinc (as sulfate monohydrate)
+Latanoprost + Timolol (as maleate)
+Triptorelin (as Acetate)
+Fluconazole
+Tramadol Hydrochloride + Paracetamol
+Gentamicin (as Sulfate)
+Betamethasone (as Valerate) + Gentamicin (as Sulfate)
+Dextran 70 + Hypromellose
+Multivitamins + Minerals + Lysine
+Multivitamins + Iron (see reverse for formulation)
+Sodium Ascorbate + Zinc Sulfate Monohydrate
+Sterile Water for Injection
+Multivitamins + Minerals
+Remifentanil (As Hydrochloride)
+Remifentanil (As Hydrochloride)
+Clopidogrel (as bisulfate) + Rosuvastatin (as calcium)
+Clopidogrel (As Bisulfate) + Rosuvastatin (as Calcium)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Cimetidine
+Meropenem
+Eribulin Mesilate
+Lipid Emulsion + Amino acids w/ Electrolytes + Glucose
+Etoricoxib
+Lacosamide
+Mecobalamin
+Polymyxin B Sulfate
+Valsartan
+Valsartan
+Phospholipids + Multivitamins
+Estradiol (as hemihydrate)
+Capecitabine
+Silymarin + Vitamin B-Complex
+Ursodeoxycholic Acid
+Oxcarbazepine
+Thiopental Sodium
+Esomeprazole (as sodium)
+Metformin HCl
+Glycyrrhizic Acid + Glycine + L-Cysteine Hydrochloride
+Meropenem (as trihydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+CEFTRIAXONE (AS SODIUM) + SULBACTAM (AS SODIUM)
+Metoclopramide Hydrochloride
+Moxifloxacin (as hydrochloride)
+Flurbiprofen
+Flurbiprofen
+Hydroxyethyl Starch + Sodium Chloride
+Hydroxyethyl Starch + Sodium Chloride
+Ibrutinib
+Paracetamol
+Ruxolitinib (as phosphate)
+Cefotaxime (as sodium)
+Strontium ranelate
+Saccharomyces boulardii
+Metronidazole + Miconazole nitrate
+Nadifloxacin
+Fluconazole
+Citicoline Sodium
+Citicoline Sodium
+Lactulose
+Oxaliplatin
+Testosterone undecanoate
+Ascorbic Acid
+Ezetimibe
+Cholecalciferol D-3 (Vit.D)
+Osimertinib (as mesylate)
+Osimertinib (as mesylate)
+Arginine Hydrochloride
+Dolutegravir (as sodium)
+5% Dextrose in 0.9% Sodium Chloride
+Tenofovir disoproxil fumarate
+Efavirenz
+Lamivudine + Zidovudine
+Lopinavir + Ritonavir
+Nevirapine
+Fentanyl (as citrate)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Paracetamol
+Adefovir Dipivoxil
+Meropenem (as Trihydrate)
+Lamivudine + Tenofovir disoproxil fumarate
+Aripiprazole
+KETOCONAZOLE + ZINC (AS PYRITHIONE)
+Topiramate
+Ascorbic Acid (as Calcium Ascorbate and Sodium Ascorbate)
+Pyridoxine (as hydrochloride)
+Ciprofloxacin (as Hydrochloride)
+Montelukast (as sodium) + Levocetirizine dihydrochloride
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Montelukast (as sodium) + Levocetirizine dihydrochloride
+Netupitant + Palonosetron (as HCI)
+GANCICLOVIR
+Ascorbic Acid + Zinc
+Amlodipine besilate
+Clopidogrel (as Bisulfate)
+Chlorphenamine maleate
+Ceftriaxone Sodium + Sulbactam Sodium
+Phospholipids
+Imatinib (as Mesilate)
+Ledipasvir + Sofosbuvir
+Cefalexin Monohydrate
+Cefalexin Monohydrate
+Cefalexin (as monohydrate)
+Nepafenac
+d-Alpha Tocopherol + d-Alpha Tocopheryl Acetate (Vit.E)
+Sevelamer Carbonate
+Ticagrelor
+Sugammadex (As Sodium)
+CALCITRIOL
+Fenofibrate + Simvastatin
+Fenofibrate + Simvastatin
+Tamsulosin hydrochloride
+Multivitamins + L-Lysine Hydrochloride + Buclizine Hydrochloride
+Multivitamins + L-Lysine Hydrochloride + Buclizine Hydrochloride
+Ascorbic acid (as Sodium Ascorbate)
+Isoxsuprine Hydrochloride
+Metoclopramide hydrochloride
+Tafluprost + Timolol (As Maleate)
+Tafluprost + Timolol Maleate
+Potassium Chloride
+Pemetrexed (as disodium)
+Pemetrexed (as disodium)
+Buprenorphine
+Buprenorphine
+Multivitamins (Vitamin B1 + Vitamin B2 + Vitamin B6 + Vitamin B12 + Vitamin C) with Buclizine Hydrpchloride + Lysine Hydrochloride
+Cefazolin (as Sodium)
+Meropenem (as trihydrate)
+Thioctic Acid
+Ketoconazole + Clobetasol Propionate + Neomycin Sulfate
+Silybin + Phospholipids + Multivitamins + Zinc
+Cefuroxime (as Sodium)
+Multivitamins + Amino Acids + Iron + Guarana
+Daclatasvir (as hydrochloride)
+PARACETAMOL
+Adapalene + Benzoyl Peroxide
+Adapalene + Benzoyl Peroxide
+Co-Amoxiclav
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Terbinafine (as hydrochloride)
+Irinotecan
+Tranexamic Acid
+Epirubicin hydrochloride
+Irinotecan Hydrochloride
+Levofloxacin (as Hemihydrate)
+Ciclosporin
+Candesartan Cilexetil + Hydrochlorothiazide
+Diquafosol sodium
+Montelukast (as Sodium)
+Gentamicin (as sulfate)
+Moxifloxacin (as hydrochloride)
+Vitamin B1 + B6 + B12 + Zinc
+Guaifenesin
+Pemetrexed (As Disodium Hemipentahydrate)
+Iron (as Ferric Carboxymaltose)
+LACTATED RINGER'S
+Propranolol Hydrochloride
+LEVOFLOXACIN
+Carbetocin
+Silybin+Phospholipids+Multivitamins+Zinc
+Ascorbic Acid
+Vonoprazan (as fumarate)
+Vonoprazan (as fumarate)
+0.9% Sodium Chloride
+Multivitamins + Zinc + Selenium + Lecithin
+Salbutamol sulphate + Ipratropium bromide
+Folic acid
+Allopurinol
+PREGABALIN
+PREGABALIN
+SODIUM PICOSULFATE HYDRATE + MAGNESIUM OXIDE + CITRIC ACID
+Paracetamol
+Co-Amoxiclav
+OXALIPLATIN
+Ascorbic acid (as Sodium Ascorbate)
+Aripiprazole
+Cliostazol
+Iron + Folic Acid + Vitamin B-Complex
+Tofacitinib (as citrate)
+Multivitamins + Minerals + Herbs
+Multivitamins + Minerals + Herbs Tablet
+Multivitamins + Minerals + Herb
+KETOROLAC TROMETAMOL
+Folic Acid
+Ascorbic acid (as Sodium Ascorbate)
+Mefenamic Acid
+Ibuprofen
+Multivitamins + Minerals + Beta-Carotene + Lutein + Lycopene
+Irbesartan Hydrochlorothiazide
+Calcium Ascorbate
+Cefepime Hydrochloride
+Labetalol hydrochloride
+Piperacillin + Tazobactam
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Ascorbic Acid (As Calcium Ascorbate) + Lemon Bioflavonoids
+Multivitamins + Lysine + Iron
+MultiVitamins + Minerals
+Choline Alfoscerate
+Bicarbonate Buffered Solution for Haemofiltration
+Loperamide Hydrochloride
+Pyridoxine Hydrochloride + Folic Acid + Cyanocobalamin
+Estriol
+Gliclazide
+Ascorbic Acid
+Celox
+Multivitamins
+Guaifenesin
+Paracetamol + Caffeine
+Paracetamol
+Minerals
+Magnesium + Calcium + Boron + Vitamin D
+Mupirocin
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Isotretinoin
+Deferasirox
+Deferasirox
+Pethidine Hydrochloride
+Clotrimazole
+Fimasartan Potassium (As Trihydrate)
+Fimasartan Potassium (As Trihydrate)
+Tranexamic Acid
+Levoamlodipine Besylate
+Levoamlodipine Besylate
+Zinc Sulfate (as Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc
+Co-Amoxiclav
+Glutathione (as Reduced L-Glutathione)
+Sodium Ascorbate + Zinc
+Ascorbic Acid + Zinc
+Phenylpropanolamine Hydrochloride + Paracetamol
+Phenylpropanolamine HCl + Paracetamol
+Phenylephrine Hydrochloride + Paracetamol
+Atropine Sulfate
+Multivitamins + Minerals + Amino Acids
+Silver Sulfadiazine
+Dextrose 5% in 1/2 (0.45%) Normal Saline
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin
+Cefuroxime (As Axetil) + Clavulanate Potassium
+Budesonide
+Multivitamins + Herbs + Choline bitartrate + Alpha-lipoic acid + CoEnzyme Q10 + Lycopene
+Ascorbic acid (as calcium ascorbate, potassium ascorbate, magnesium ascorbate, and zinc ascorbate) + Citrus bioflavonoids extract + Rutin + Quercetin dihydrate
+Multivitamins + Minerals + Amino Acids
+Sacubitril-Valsartan
+Sacubitril-Valsartan
+Sacubitril-Valsartan
+Meropenem
+Meropenem (as Trihydrate)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Gemigliptin (as tartrate sesquihydrate)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Acyclovir
+Febuxostat
+Febuxostat
+Bimatoprost
+Levocetirizine hydrochloride
+Ceftriaxone (As Sodium) + Sulbactam (As Sodium)
+Iopamidol
+Ixazomib (as citrate)
+Ixazomib (As Citrate)
+Salbutamol (as Sulfate)
+Ursodeoxycholic Acid
+Paracetamol
+Paracetamol
+Paracetamol
+Brexpiprazole
+Brexpiprazole
+Brexpiprazole
+Brexpiprazole
+Brexpiprazole
+Atorvastatin + Perindopril (as arginine) + Amlodipine
+Atorvastatin + Perindopril (as arginine) + Amlodipine
+Atorvastatin + Perindopril (as arginine) + Amlodipine
+Atorvastatin + Perindopril (as arginine) + Amlodipine
+Atorvastatin + Perindopril (as arginine) + Amlodipine
+Ceftriaxone
+Diclofenac sodium 
+Meropenem (as Trihydrate)
+Meropenem
+Inosine Dimepranol Acedoben
+Imipenem + Cilastatin
+Medroxyprogesterone Acetate
+Tofacitinib (as citrate)
+Peritoneal Dialysis Solution with 4.25% Dextrose
+Levofloxacin (as hydrate)
+Sildenafil (as citrate)
+Tramadol (as hydrochloride) + Dexketoprofen (as trometamol)
+Cholecalciferol (Vitamin D3)
+Sertraline Hydrochloride
+Ipratropium Bromide + Salbutamol
+Zoledronic acid
+Ribociclib (As Succinate)
+Oxaliplatin
+Oxaliplatin
+Cetirizine Dihydrochloride
+Vitamin A (As Palmitate) 200,000 I.U. Softgel Capsule
+Salicylic Acid/ Lactic Acid
+dl-Alpha Tocopheryl Acetate (Vitamin E)
+Calcium Carbonate
+Paracetamol + Caffeine
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Hemofiltration Solution
+Isotretinoin
+Isotretinoin
+Isotretinoin
+Entecavir
+Calcium (as Carbonate) + Cholecalciferol + Cyanocobalamin
+Calcium (as Carbonate) + Cholecalciferol + Cyanocobalamin
+Multivitamins + Lecithin (see reverse for formulation)
+Polyethylene Glycol 3350
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Gluconate) + Copper (as Gluconate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Gluconate) + Copper (as Gluconate)
+Ascorbic Acid (as Sodium Ascorbate)
+Multivitamins + Zinc + Selenium + Lecitihin
+Iodine (as Iohexol)
+Polyethylene Glycol + Glycerin + Hypromellose
+Alpha Lipoic Acid + Benfotiamine + Pyridoxine Hydrochloride + Inositol + Lutein + Folic Acid + Zeaxanthin + Methylcobalamin
+Gentamicin (as Sulfate)
+Aciclovir
+Paracetamol
+Sodium Chloride
+Sofosbuvir + Velpatasvir
+Calcium Carbonate
+Tenofovir alafenamide (as fumarate)
+Terbinafine (as hydrochloride)
+Pyridoxine Hydrochloride
+Ibandronic acid
+Metformin (as hydrochloride)
+Naproxen sodium + Paracetamol
+Prochlorpherazine maleate
+Cefepime (as hydrochloride)
+Cefoperazone (as Sodium) + Sulbactam (as Sodium)
+MULTIVITAMINS + MINERALS + GINKGO BILOBA
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Calcium (as Calcium Carbonate)
+Loratadine
+10% Dextrose in Water
+Entecavir (as monohydrate)
+Sodium chloride + Potassium chloride + Magnesium Chloride hexahydrate + Calcium chloride dihydrate + Sodium acetate trihydrate + L-Mlaic acid
+Ondansetron (as hydrochloride)
+Loperamide Hydrochloride
+Ibuprofen
+Meclizine Hydrochloride
+Cetirizine (as Dihydrochloride)
+Loperamide Hydrochloride
+Benzydamine Hydrochloride + Cetylpyridinium Chloride
+Benzydamine Hydrochloride + Cetylpyridinium Chloride
+Pemetrexed (as disodium hemipentahydrate)
+Etoricoxib
+Ibuprofen (as Sodium Dihydrate) + Paracetamol
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Pemetrexed (as disodium)
+Pemetrexed (as disodium)
+Peritoneal Dialysis Solution with 1.5% Dextrose
+Fluorouracil
+Paracetamol
+Entecavir (as monohydrate)
+Paracetamol + Phenylephrine
+Cefuroxime (as axetil)
+Ascorbic Acid
+Sterile Water for Injection
+5% Dextrose in Water
+Telmisartan
+Telmisartan
+Polyethylene Glycol 3350 + Sodium Chloride + Sodium Bicarbonate + Potassium Chloride
+Paracetamol
+Docetaxel
+Nicotine
+Naproxen Sodium
+Naproxen Sodium
+LORATADINE
+Cetirizine Hydrochloride
+Oxymetazoline Hydrochloride
+Paracetamol
+Loratadine
+Domperidone
+Paracetamol
+Domperidome
+Paracetamol
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol
+Paracetamol
+Paracetamol + Hyoscine Butylbromide
+Paracetamol + Hyoscine Butylbromide
+Doxorubicin hydrochloride
+Nicardipine hydrochloride
+Atropine (as sulfate)
+0.9% Sodium chloride
+0.9% Sodium chloride
+Aztreonam
+Multivitamins + Zinc
+Pantoprazole (as sodium sesquihydrate)
+Metronidazole
+Multivitamins + Minerals
+Fenofibrate + Atorvastatin ( as calcium )
+Dextromethophan Hydrobromide
+7% Amino Acids
+Paliperidone (as Palmitate)
+Paliperidone (as Palmitate)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Betamethasone (as valerate)
+Paracetamol + Dextromethorphan HBr + Phenylephrine HCI
+Sodium Alginate + Magnesium Alginate
+Butamirate Citrate
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Lysine + Multivitamins + Iron
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Cefuroxime (as sodium)
+Cefepime (as hydrochloride)
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Multivitamins
+Thiamine monitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Meclizine Hydrochloride
+Citicoline (as sodium)
+Fentanyl
+Fentanyl
+Abiraterone Acetate
+Cyproterone Acetate + Ethinylestradiol
+Dexketoprofen (as trometamol)
+Dexketoprofen (as trometamol)
+Nicardipine Hydrochloride
+Amorolfine (as hydrochloride)
+Lopinavir + Ritonavir
+Guiafenesin
+Ceftazidime (as pentahydrate) + Avibactam (as Sodium)
+Ponatinib (as Hydrocloride)
+Citicoline
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ibuprofen
+Ibuprofen
+Cetirizine Hydrochloride
+Cefuroxime (as Sodium)
+Paracetamol
+Paracetamol
+Calamine
+Palbociclib
+Palbociclib
+Palbociclib
+Olmesartan Medoxomil + Hydrochlorothiazide
+Salbutamol (as sulfate)
+Co-Amoxiclav
+Emtricitabine + Tenofovir disoproxil fumarate
+Norepinephrine (as bitartrate)
+Nicardipine Hydrochloride
+Paclitaxel
+Budesonide
+Norepinephrine (As Bitartrate)
+Nicardipine Hydrochloride
+Lactated Ringer'S Solution
+Glucosamine Sulfate (as Sodium Chloride)
+Ephedrine Hydrochloride
+Amikacin (as sulfate)
+Methotrexate
+Cholecalciferol + Minerals
+Cholecalciferol + Minerals
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Nicardipine Hydrochloride
+Salbutamol (as Sulfate)
+Multivitamins + Minerals + Lysine
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Donepezil Hydrochloride
+Mometasone Furoate
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Paracetamol
+0.9% Sodium Chloride
+Vitamin E (as d-Alpha Tocopherol and D-Gamma Tocotrienol)
+Tobramycin Sulfate
+Budesonide
+Zinc (as Sulphate monohydrate)
+Celecoxib
+Mupirocin
+Irinotecan Hydrochloride Trihydrate
+Rosuvastatin (As Calcium)
+Lactated Ringer's Solution
+Peritoneal Dialysis Solution with 4.25% Dextrose
+5% Dextrose in 0.3% Sodium Chloride
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Irbesartan + Hydrochlorothiazide
+Ceftazidime (as pentahydrate)
+Levofloxacin (As Hemihydrate)
+Diclofenac Sodium
+Thiamazole
+Baloxavir Marboxil
+Baloxavir Marboxil
+Desflurane
+Decitabine
+Ursodeoxycholic Acid
+Enalapril Maleate
+Canagliflozin (as hemihydrate) + Metformin Hydrochloride
+Canagliflozin (as hemihydrate) + Metformin Hydrochloride
+Canagliflozin (as hemihydrate) + Metformin Hydrochloride
+Busulfan
+Cefotaxime (as sodium) + Sulbactam (as sodium)
+Ceftriaxone (as Sodium) + Sulbactam (as Sodium)
+Perindopril Arginine + Amlodipine (as Besilate)
+Atomoxetine (As Hydrochloride)
+Febuxostat
+Pregabalin
+Teneligliptin (as hydrobromide hydrate) + Pioglitazone (as Hydrochloride)
+Levodopa + Carbidopa (as monohydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (as Trihydrate)
+Celecoxib
+Ascorbic Acid
+Ascorbic Acid
+Loperamide Hydrochloride
+Loratadine
+Levofloxacin (As Hemihydrate)
+Medroxyprogesterone Acetate
+Cefoxitin (as Sodium)
+Lidocaine Hydrochloride
+Tramadol Hydrochloride + Paracetamol
+Tobramycin
+Metformin Hydrochloride
+Metformin Hydrochloride
+Praziquantel
+Praziquantel
+Lamivudine + Ziduvodine
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Atracurium Besilate
+Polyethylene Glycol 3350 + Sodium Chloride + Sodium Bicarbonate + Potassium Chloride
+Ascorbic acid + Citrus Bioflavonoids + Rosa canina L. (Rose hips) Fruit + Zinc
+d-Alpha Tocopherol
+d-Alpha Tocopherol
+Zinc
+Clotrimazole
+Ambroxol Hydrochloride
+Quetiapine (As Fumarate)
+ROSUVASTATIN (as calcium)
+Memantine hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ketamine (as hydrochloride)
+Meropenem (as trihydrate)
+Isoniazid
+Cefdinir
+Temozolomide
+Temozolomide
+Mometasone Furoate (as monohydrate0
+Mometasone Furoate (as monohydrate)
+Cefuroxime (As Axetil)
+Tramadol Hydrochloride
+Topiramate
+Topiramate
+Topiramate
+Simvastatin
+Moxifloxacin (as hydrochloride)
+Telmisartan
+Nicotine
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Ascorbic Acid + Vitamin D + Zinc
+Ascorbic Acid + Zinc
+Cefoxitin (as Sodium)
+Ascorbic Acid
+Ibuprofen Paracetamol
+Paracetamol
+Amoxicillin (as trihydrate)
+Guaifenesin/ Chlorphenamine Maleate/ Dextromethorphan Hbr/ Phenylpropanolamine
+Urea
+Pheniramine Maleate/ Naphazoline Hydrochloride
+Ferrous Sulfate(equivalent to 65mg elemental iron) / Thiamine Hydrochloride (Vitamin B1)/ Riboflavin Phosphate (Vitamin B2) / Pyridoxine Hydrochloride (Vitamin B6)/ Hydroxocobalamine (Vitamin B12) /Ascorbic Acid (Vitamin C) / Folic Acid / Nicotinamide
+Fusidic Acid
+Ciprofloxacin (as lactate)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Multivitamins (see reverse)
+Guaifenesin + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate + Sodium Citrate
+Chloroquine Diphosphate
+Guaifenesin
+None
+Chloramphenicol (as Palmitate)
+Extract Cepae 10G + Heparin Sodium 5000 Iu + Allantoin 1G
+Isordil
+Salbutamol (As Sulfate) + Carbocisteine
+Isosorbide dinitrate
+BETAXOLOL (as hydrochloride)
+Vincristine sulfate
+Butamirate Citrate
+Paracetamol
+Sodium Chloride
+Fusidic Acid
+Minoxidil
+Minoxidil
+Guaifenesin
+Multivitamins
+Calcium Dobesilate
+Bromocriptine (As Mesylate)
+Mecobalamin
+Calcium Carbonate
+Azithromycin (As Monohydrate)
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Dl-Alpha Tocopheryl Acetate
+Carbimazole
+Ofloxacin
+Chloramphenicol
+Multivitamins + Lysine
+Amoxicillin (as Trihydrate)
+Carbachol
+Multivitamins + Minerals
+Dexamethasone + Polymixin B Sulfate + Neomycin Sulfate
+Paracetamol
+Paracetamol + Carisoprodol
+Acyclovir
+Clobetasol Propionate
+Fluocinolone Acetonide
+Aluminum Hydroxide/Magnesium Hydroxide/Simethicone
+Paracetamol
+Chlorphenamine Maleate
+Prednisolone Acetate
+Calcium Monohydrogen Phosphate + Calcium Ascorbate
+Guaifenesin + Sodium Citrate + Dextromethorphan Hydrobromide
+Dextromethorphan (as Hydrobromide)
+Mefenamic Acid
+Betamethasone (As Dipropionate)
+Paracetamol
+Azathioprine
+Multivitamins + Minerals
+Multivitamins + Lysine
+Multivitamins + Minerals
+Guaifenesin
+Multivitamins + Minerals
+Hydrogen Peroxide
+Salicylic Acid
+Ascorbic Acid
+Ascorbic Acid
+Hexetidine
+Methyl Salicylate + Camphor + Menthol
+Ascorbic Acid
+Zinc Oxide + Benzoic Acid + Sulfur + Salicylic Acid
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+ASCORBIC ACID (AS SODIUM ASCORBATE)
+Ascorbic Acid
+Povidone-Iodine
+Ethyl Alcohol
+Sulfur
+Povidone-Iodine
+ETHYL ALCOHOL
+ASCORBIC ACID
+Isopropyl Alcohol
+Methyl Salicylate + Camphor + Menthol + Eucalyptol
+Methyl Salicylate+ Menthol + Camphor
+ORAL REHYDRATION SALTS
+Carbocisteine
+ISOPROPYL ALCOHOL
+Sulfur
+Salicylic Acid/ Resorcin/ Phenol/ Glycerin/ Benzoin Tincture Lotion
+Ethyl Alcohol
+Carbocisteine
+Avagard
+SALICYLIC ACID
+Methyl salicylate + Menthol + Camphor
+Menthol + Camphor + Methyl Salicylate
+Ammonium Carbonate + Strong Ammonia Solution (Aromatic Spirit of Ammonia)
+Paracetamol
+Paracetamol
+Povidone - Iodine
+Ascorbic Acid
+Benzalkonium Chloride
+Carbocisteine
+Carbocisteine
+Aceite De Manzanilla
+Aceite De Alcanforado
+Carbocisteine
+MENTHOL + METHYL SALICYLATE + CAMPHOR
+Paracetamol
+Ascorbic Acid
+Aceite Alcanforado
+Camphor + Eucalyptus Oil + Dementholized Mint Oil + Menthol
+Camphor + Eucalyptus Oil + Dementholized Oil + Menthol + Capsicum
+Methyl Salicylate +Camphor + Menthol + Eucalyptus Oil
+Camphor + Menthol + Dementholised Mint Oil
+Methyl Salicylate + Camphor + Menthol
+Ascorbic Acid
+Methyl salicylate + Menthol + Camphor
+Carbocisteine
+Paracetamol
+Oral Rehydration Salts (ORS-75 Replacement)
+Salicylic Acid
+Pyrethrin
+Pyrethrin
+Povidone-Iodine
+Calcium Ascorbate
+Camphor + Menthol + Eucalyptus Oil
+Methyl Salicylate + Menthol
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Menthol + Camphor + Eucalyptus Oil
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Pyrethrin
+Carbocisteine
+Carbocisteine
+Paracetamol
+Paracetamol
+Hydroquinone + Tretinoin
+Camphor + Cajupot Oil + Menthol + Clove Oil
+ISOPROPYL ALCOHOL
+Povidone-Iodine
+Calamine + Zinc Oxide
+Povidone-Iodine
+Hydrogen Peroxide
+Salicylic Acid
+Carbocisteine
+Carbocisteine
+Camphor + Menthol + Eucalyptus Oil
+Strepsils
+Dichlorobenzyl Alcohol + Amylmetacresol
+Isopropyl Alcohol
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Oral Rehydration Salt
+Carbocisteine
+2,4 Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol + Vitamin C
+Sodium Ascorbate
+MINT OIL + CAJUPUT OIL + CAMPHOR + MENTHOL
+Carbocisteine
+Methyl Salicylate + Menthol + Eucalyptus Oil
+Methyl Salicylate + Menthol + Camphor + Eucalyptus Oil
+Menthol + Methyl Salicylate + Eucalyptus Oil + Camphor
+Methyl Salicylate + Menthol + Camphor
+Dichlorobenzyl Alcohol + Amylmetacresol
+Camphor + Menthol
+Carbocisteine
+Menthol + Camphor + Eucalyptus Oil
+Ascorbic Acid
+Ascorbic Acid
+CARBOCISTEINE
+Carbocisteine
+CARBOCISTEINE
+Sodium Ascorbate
+2,4-Dichlorobenzyl Alcohol/ Amylmetacresol
+2,4-Dichlorobenzyl Alcohol/ Amylmetacresol/ Vitamin C
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Methyl Salicylate + Menthol + Camphor
+Carbocisteine
+Benzoic Acid + Salicylic Acid
+Povidone-Iodine
+Chamomile Oil (Aceite de Manzanilla)
+Carbocisteine
+Carbocisteine
+Isopropyl Alcohol
+Ascorbic Acid
+Ascorbic Acid (as Calcium Ascorbate + Sodium Ascorbate)
+Aceite de Alcamporado
+Aceite De Manzanilla
+Aceite De Alcamforado
+Hydrogen Peroxide
+Chlorhexidine Digluconate
+Ketoconazole
+Dextromethorphan Hydrobromide
+Povidone Iodine 100 Mg/Ml (10%) Solution
+Dichlorobenzyl Alcohol + Amylmetacresol
+Ascorbic Acid
+Povidone Iodine
+Paracetamol
+Oral Rehydration Salts
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic acid
+Ethyl Alcohol + Propyl Alcohol
+Carbocisteine
+Oral Rehydration Salt
+Sodium Ascorbate
+Methyl Salicylate / Camphor / Menthol / Eucalyptus Oil
+Dichlorobenzyl Alcohol + Amylmetacresol
+Chlorhexidine Gluconate + Ethanol
+Menthol + Mentha x piperita + Camphor + Syzygium aromaticum
+Methyl Salicylate + Camphor + Menthol + Mentha x piperita + Syzygium aromaticum
+Methyl Salicylate + Camphor + Menthol + Mentha x piperita + + Syzygium aromaticum
+Isopropyl Alcohol
+Povidone-Iodine
+Isopropyl Alcohol
+Carbocisteine
+Povidone-Iodine
+Sebo De Macho
+Ascorbic Acid
+Isopropyl Alcohol
+Paracetamol
+Povidone-Iodine
+Povidone-Iodine
+Hydrogen Peroxide
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Salicylic Acid + Resorcinol
+Povidone-Iodine
+Povidone-Iodine
+Paracetamol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Ethyl Alcohol
+Carbocisteine
+Dequalinium Chloride
+Dequalinium Chloride (For Export Only)
+Dequalinium Chloride (For Export Only)
+Dequalinium Chloride (For Export Only)
+Dequalinium Chloride (For Export Only)
+Dequalinium Chloride (For Export Only)
+Methyl Salicylate + Menthol + Camphor
+Isopropyl Alcohol
+Chlorhexidine Gluconate
+Ketoconazole
+Aceite Alcanforado
+ALUMINUM HYDROXIDE + MAGNESIUM HYDROXIDE
+CALAMINE + ZINC OXIDE
+Povidone - Iodine
+Isopropyl Alcohol With Moisturizer
+Isopropyl Alcohol
+Methyl Salicylate + Menthol + Camphor
+Povidone Iodine
+Isopropyl Alcohol
+Isopropyl Alcohol
+METHYL SALICYLATE+CAMPHOR+MENTHOL+EUCALYPTUS OIL
+ETHYL ALCOHOL
+Ethyl Alcohol + Chlorhexidine Digluconate
+Chlorhexidine Digluconate
+Dequalinium Chloride
+ETHYL ALCOHOL
+Dequalinium Chloride
+Zinc Oxide + Calamine
+Zinc Oxide + Calamine
+Ethyl Alcohol
+Ethyl Alcohol
+Isopropyl Alcohol
+Ethyl Alcohol
+Carbocisteine
+Carbocisteine
+Oral Rehydration Salts
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Isopropyl Alcohol
+Menthol + Pine Oil + Orange Oil + Wintergreen Oil + Bergamot Oil + Lemon Oil + Terpineol + Terpinyl acetate + Rosemary Oil + Lavender Oil
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Petroleum Jelly
+Petroleum Jelly
+Petroleum Jelly
+Camphor + Eucalyptus Oil + Menthol
+Oral Rehydration Salts
+Oral Rehydration Salts
+Oral Rehydration Salts
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol + Ascorbic Acid
+Zinc Oxide + Calamine
+Zinc Oxide + Calamine
+Ethyl Alcohol
+Chlorhexidine Gluconate + Isopropyl Alcohol
+Ethyl Alcohol
+Zinc Oxide
+Isopropyl Alcohol + Benzalkonium Chloride
+MENTHOL + PEPPERMINT OIL + CAMPHOR + CLOVE OIL
+MENTHOL + PEPPERMINT OIL + CAMPHOR + CLOVE OIL
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Isopropyl Alcohol
+Camphor + Menthol + Eucalyptus Oil + Nonivamide
+Dequalinium Chloride
+Dequalinium Chloride
+Povidone Iodine
+Methyl Salicylate + Menthol
+Menthol + Camphor + Eucalyptus Oil
+Ethyl Alcohol
+Isopropyl Alcohol
+Dequalinium Chloride
+Hydroquinone + Tretinoin
+SENNA LEAVES (Cassia angustifolia) + SODIUM POTASSIUM TARTRATE (Rochelle Salt) + FLUID EXTRACT OF WORM SEEDS (Chenopodium ambrosioides) + FLUID EXTRACT OF PUMPKIN SEEDS (Cucurbita pepo Linne) + SODIUM BICARBONATE
+Senna Leaves (Cassia angustifolia) + Sodium Potassium Tartrate + Fluid Extract of Worm Seeds (Chenopodium ambrosioides) + Fluid Extract of Pumpkin Seeds (Cucurbita pepo Linne) + Sodium Bicarbonate
+Salicylic Acid
+Methyl Salicylate + Camphor + Menthol + Eucalyptol
+Ascorbic Acid (As Sodium Ascorbate)
+Zinc Oxide + Calamine
+Ketoconazole
+Ketoconazole
+Zinc Oxide + Calamine
+Camphor + Menthol + Cajuput Oil + Mint Oil + Clove Oil
+Aceite de Manzanilla
+Paracetamol
+Paracetamol
+Isopropyl Alcohol
+Clove Oil + Eucalyptus Oil
+Benzoic Acid + Salicylic Acid
+Chlorhexidine Gluconate
+Menthol + Eucalyptus Oil + Camphor
+Paracetamol
+Carbocisteine
+Ethyl Alcohol
+Ethyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Sodium Bicarbonate (Balsamo Carminativo)
+Hexetidine
+Hexetidine
+Ethyl Alcohol +Chlorhexidine Digluconate
+Ethyl Alcohol +Chlorhexidine Digluconate
+Ethyl Alcohol +Chlorhexidine Digluconate
+Salicylic Acid
+Hydrogen Peroxide
+Gentian Violet
+Menthol + Eucalyptus Oil + Camphor
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ketoconazole
+Aceite De Alcamporado
+Aceite De Manzanilla
+Benzoic Acid + Salicylic Acid + Resorcinol [Ap-Ap Solution]
+Methyl Salicylate
+Ethyl Alcohol
+Ethyl Alcohol
+Isopropyl Alccohol
+Aceite Alcamforado
+ETHYL ALCOHOL
+Isopropyl Alccohol
+Ethyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Oral Rehydration Salts (Maintenance) Sodium mEq/L, Potassium 20 mEQ/L, Chloride 35mEQ/L, Citrate 30mEQ/L, Dextrose 25g/L
+Fluid Extract Orange Peel Bitter, Fluid Extract Glycyrrhiza, Fluid Extract Rhubarb
+Hydrogen Peroxide
+Oral Rehydration Salts (Maintenance)
+Methyl Salicylate + Camphor + Menthol
+Menthol + Pine Oil + Orange Oil + Wintergreen Oil + Bergamot Oil + Lemon Oil + Terpineol + Terpinyl Acetate + Rosemary Oil + Lavender Oil
+Methyl Salicylate + Camphor + Menthol
+Salicylic Acid
+Benzoic Acid + Salicylic Acid + Resorcinol
+Sulfur
+Camphol + Menthol + Eucalyptus Oil
+Isopropyl Alcohol
+Hydrogen Peroxide
+Methyl Salicylate + Menthol
+Methyl Salicylate + Camphor + Menthol
+Menthol Crystals + Methyl Salicylate + Eucalyptus Oil
+ETHYL ALCOHOL
+Capsicum Extract+Zinc Oxide
+Salicylic Acid
+Povidone-Iodine
+Povidone-Iodine
+Povidone-Iodine
+Isopropyl Alcohol
+Sulfur
+Zinc Oxide
+Glycerol
+Ferrous Sulfate (as Heptahydrate)
+Salicylic Acid + Benzoic Acid
+Povidone-Iodine
+Betadine
+Ethyl Alcohol
+Povidone-Iodine
+Isopropyl Alcohol
+Petroleum Jelly
+Menthol + Methyl Salicylate + Camphor + Thymol + Borneol + Zinc Oxide
+CLOVE OIL + CREOSOTE
+Glycol Salicylate + L-Menthol + Tocopherol acetate (Vitamin E) + dl-Camphor
+Ketoconazole
+Tetrahydrozoline Hydrochloride
+Ethyl Alcohol
+Povidone-Iodine
+Povidone-Iodine
+Paracetamol
+Hydroquinone
+Paracetamol
+Aceite De Manzanilla
+Camphor (Aceite De Alcamforado)
+Povidone - Iodine
+Sodium Bicarbonate
+Camphor + Menthol + Eucalyptus Oil
+Methyl salicylate + l-Menthol + Tocopherol acetate dl-Camphor
+Hydrogen Peroxide
+Ethyl Alcohol
+POVIDONE-IODINE
+Camphor + Chlorbutanol + Clove oil + Creosote + Phenol Liquid
+Povidone-Iodine
+Paracetamol
+Paracetamol
+Hydrogen Peroxide
+Castor Oil
+Isopropyl Alcohol
+Methyl Salicylate
+Aluminum Hydroxide + Magnesium Hydroxide
+Aluminum hydroxide/ Magnesium hydroxide
+Camphor + Menthol
+Isopropyl Alcohol
+Methyl Salicylate + L-Menthol + dL-Camphor + Vanillylamide Nonylate
+Ascorbic Acid
+Carbocisteine
+Aromatic Spirit Of Ammonia
+Carbocisteine
+Methyl Salicylate + Menthol + Camphor
+Ascorbic Acid
+Troclosene Sodium
+Paracetamol
+Carbocisteine
+First Aid Kit
+Calcium Lactate
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Sulfur
+Methyl Salicylate L-Menthol Tocopherol Acetate Dl-Camphor
+Carbocisteine
+Carbocisteine
+Paracetamol
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Sulfur+ Zinc Oxide+ Resorcinol+ Salicylic Acid
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Aceite De Manzanilla
+Carbocisteine
+Ethyl Alcohol
+Paracetamol 250 Mg/5 Ml Suspension
+Carbocisteine
+Paracetamol
+Carbocisteine
+Ascorbic Acid (as Sodium Ascorbate)
+Carbocisteine
+Ascorbic Acid
+Sodium Ascorbate
+Ascorbic Acid
+CARBOCISTEINE
+Carbocisteine
+Salicylic Acid
+Carbocisteine
+Nitrous Oxide
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+MEDICAL GRADE OXYGEN
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medicinal Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen (Medicinal Gas)
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+MEDICAL GRADE OXYGEN
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Mefenamic Acid
+Glimepiride
+Ampicillin (As Sodium)
+Cefepime (As Hydrochloride)
+CO-Amoxiclav
+Irbesartan/Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Glimepiride
+Glimepiride
+Glimepiride
+Metronidazole
+Aluminum Hydroxide + Magnesium Hydroxide
+Clindamycin (As Hydrocholride)
+Clindamycin (As Hydrochloride)
+Vitamin B Complex + Iron + Buclizine Hydrochloride
+Vitamin B Complex + Iron + Buclizine Hydrochloride
+Vitamin B Complex + Iron + Buclizine Hydrochloride
+Vitamin B-Complex + Ferrous Fumarate
+Ascorbic Acid
+Ascorbic Acid
+Phenylpropanolamine Hcl+Chlorphenamine Maleate+Paracetamol
+Amiodarone hydrochloride
+Nitrofurantoin
+Nitrofurantoin
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+THIAMINE MONONITRATE + PYRIDOXINE HYDROCHLORIDE + CYANOCOBALAMIN
+Vitamin B1 + B6 + B12
+Thiamine Mononitrate (Vit B1) + Pyridoxine Hydrochloride (Vit B6) + Cyanocobalamin (Vit B12)
+Vitamin B1 + Vitamin B6+ Vitamin B12
+Carbocisteine
+Ambroxol Hydrochloride
+AMBROXOL HYDROCHLORIDE
+Alfuzosin Hydrochloride
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Multivitamins Syrup
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Metronidazole + Nystatin
+Tramadol Hydrochloride
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Metronidazole
+Metronidazole
+Ketorolac Tromethamine
+Co-Amoxiclav
+Levobact
+Cefuroxime (As Sodium)
+Ferrous Sulfate + Folic Acid
+Salbutamol
+Salbutamol (As Sulfate)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Pantoprazole (As Sodium Sesquihydrate)
+Co-Amoxiclav
+Cefuroxime (As Sodium)
+Ciprofloxacin (As Hydrochloride)
+Clindamycin (As Phosphate)
+Clindamycin (As Phosphate)
+Clindamycin (As Phosphate)
+Amikacin (As Sulfate)
+Amikacin (As Sulfate)
+Amikacin (As Sulfate)
+Amikacin (As Sulfate)
+Tranexamic Acid
+Tranexamic Acid
+Felodipine
+Guaifenesin
+Isoniazid + Pyridoxine Hydrochloride
+Isoniazid + Pyridoxine Hydrochloride
+Bisacodyl
+Bisacodyl
+Co-Amoxiclav
+Co-Amoxiclav
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Clarithromycin
+Prednisone
+Prednisone
+Simvastatin
+Simvastatin
+Simvastatin
+Methyldopa
+Methyldopa
+Simvastatin
+Cefaclor (as Monohydrate)
+Gabapentin
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Metronidazole
+Metronidazole
+Cefuroxime (as sodium)
+Ciprofloxacin
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Salbutamol (as Sulfate) + Guaifenesin
+Salbutamol (as Sulfate) + Guaifenesin
+Cloxacillin (as sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Gabapentin
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Salbutamol (as Sulfate)
+CO-AMOXICLAV
+Ranitidine (As Hydrochloride)
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin (as Hydrochloride)
+Cefuroxime (as Sodium)
+Cefuroxime (As Sodium)
+Pizotifen Maleate
+Pizotifen Maleate
+Pizotifen Maleate
+Cefaclor (as Monohydrate)
+Cefaclor
+ALUMINUM HYDROXIDE + MAGNESIUM HYDROXIDE
+ALUMINUM HYDROXIDE + MAGNESIUM HYDROXIDE
+Isotretinoin
+Naproxen
+Naproxen
+Naproxen
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Cotrimoxazole
+Cloxacillin (As Sodium)
+Levofloxacin (as hemihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (as hemihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (as hemihydrate)
+Felodipine
+Felodipine
+Felodipine
+Felodipine
+Felodipine
+Felodipine
+Mupirocin
+Mupirocin
+Ambroxol Hydrochloride
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Clonidine Hydrochloride
+Clonidine Hydrochloride
+Amlodipine (as besilate)
+Methylprednisolone
+Methylprednisolone
+Pantoprazole (As Sodium Sesquihydrate)
+Pantoprazole (as Sodium Sesquihydrate)
+Glimepiride
+Glimepiride
+Sultamicillin (As Tosylate)
+Cefuxim
+None
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Tamoxifen (as citrate)
+Cefuroxime (as axetil)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Amlodipine (as besilate)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Cefuroxime (As AXetil)
+Cefuroxime (As AXetil)
+Metoprolol Tartrate
+Amiodarone hydrochloride
+Amiodarone hydrochloride
+AMIODARONE HYDROCHLORIDE
+Amlodipine Besilate
+Clindamycin (As Phosphate)
+Methylprednisolone
+Methylprednisolone
+Felodipine
+Felodipine
+Amlodipine Besilate
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Glibenclamide
+Glibenclamide
+Glibenclamide
+Ramipril
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Paracetamol
+Paracetamol
+Paracetamol
+Losartan Potassium
+Losartan Potassium
+Omeprazole
+Fenofibrate
+Potassium Iodide + Sodium Iodide
+Purified Water(Distilled Water)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Ranitidine (as hydrochloride)
+Ranitidine (as hydrochloride)
+Simvastatin
+Simvastatin
+Simvastatin
+Simvastatin
+Simvastatin
+Simvastatin
+Cetirizine Hydrochloride
+Triamcinolone Acetonide
+Fenofibrate
+Paracetamol + Phenylephrine Hci + Dextromethorphan Hbr
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorpan Hydrobromide
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Paracetamol + Phenylephrine Hci + Dextromethorphan Hbr
+Triamcinolone Acetonide
+Triamcinolone Acetonide
+Amlodipine (As Besilate)
+Amlodipine (as Besilate)
+Gliclazide
+Gliclazide
+Gliclazide
+Gliclazide
+Clarithromycin
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as Hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as Hydrochloride)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Hydrocortisone Sodium Succinate
+Hydrocortisone Sodium Succinate
+Hydrocortisone Sodium Succinate
+Hydrocortisone Sodium Succinate
+Hydrocortisone Sodium Succinate
+Gentamicin (As Sulfate)
+Paracetamol
+Amlodipine besilate
+Amlodipine besilate
+Ceftriaxone (as Sodium)
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Ceftriaxone (as Sodium)
+Azithromycin (as monohydrate)
+Azithromycin (As Monohydrate)
+Azithromycin (as monohydrate)
+Calcium Gluconate
+Clarithromycin
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+LEVOFLOXACIN (as HEMIHYDRATE)
+Meloxicam
+Ceftriaxone (as Sodium)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Amino Acids
+Mefenamic Acid
+Mefenamic Acid
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Omeprazole
+Omeprazole
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cefalexin (as monohydrate)
+CEFALEXIN (AS MONOHYDRATE)
+Docetaxel (as trihydrate)
+Ambroxol Hydrochloride
+Fluoxetine (as hydrochloride)
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodopine (as Besilate)
+Amlodipine (as Besilate)
+amlodipine (as besilate)
+Multivitamins
+Multivitamins Syrup
+Simvastatin
+Simvastatin (Reformulated)
+Simvastatin (Reformulated)
+Paracetamol
+Cefuroxime (as Axetil)
+Pizotifen (as Hydrogen maleate) + Multivitamins
+Cefotaxime (As Sodium)
+Cefotaxime (as sodium)
+Cefotaxime (as sodium)
+Cefotaxime (As Sodium)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+AMLODIPINE (AS BESILATE)
+Ciprofloxacin (As Hydrochloride)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Pizotifen + Vitamin B Complex
+Co-Amoxiclav
+Clarithromycin
+Simvastatin (Reformulated)
+Simvastatin (Reformulated)
+Simvastatin (Reformulated)
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Cefazolin (as Sodium)
+Fenofibrate
+Multivitamins + Lysine (see reverse)
+PYRAZINAMIDE
+PYRAZINAMIDE
+PYRAZINAMIDE
+PARACETAMOL
+Captopril
+Glimepiride
+Glimepiride
+Salbutamol Sulfate + Ipratropium Bromide
+Salbutamol Sulfate + Ipratropium Bromide
+Salbutamol Sulfate + Ipratropium Bromide
+Salbutamol Sulfate + Ipratropium Bromide
+Salbutamol Sulfate + Ipratropium Bromide
+Salbutamol (As Sulfate) + Ipratropium (As Bromide)
+Omperazole
+Omeprazole
+Simvastatin
+Amoxicillin (as Trihydrate)
+Amoxicillin (as Trihydrate)
+Amoxicillin (As Trihydrate)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Co-Amoxiclav
+Rifampicin/Ethambutol/Isoniazid
+Tramadol Hydrochloride
+Co-Amoxiclav
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol
+Citicoline Sodium
+Citicoline Sodium
+Paracetamol
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Clindamycin (as hydrochloride)
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine mononitrate (Vitamin B,) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine mononitrate (Vitamin B) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Amoxicillin trihydrate
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Erythromycin (as ethylsuccinate)
+Erythromycin (as ethylsuccinate)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Bupivacaine Hydrochloride in Dextrose
+Domperidone
+Docetaxel
+Cefalexin (As Monohydrate)
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Cefalexin (as monohydrate)
+Paracetamol
+Paracetamol
+Cefalexin (As Monohydrate)
+Erythromycin (as Stearate)
+Paroxetine (as Hydrochloride)
+Bromhexine Hydrochloride
+Ciprofloxacin (As Hydrochloride)
+Clarithromycin
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+Mefenamic Acid
+Metronidazole
+Cefalexin (as Monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Ferrous Sulfate
+Cefalexin (As Monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (As Monohydrate)
+Furazolidone
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol (as tartrate)
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Clobetasol Propionate
+Ampicillin Sodium + Sulbactam Sodium
+Silver Sulfadiazine
+Metoclopramide (as hydrochloride)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Iron
+Tobramycin Sulfate
+Guaifenesin + Salbutamol
+Hydrocortisone(As Acetate) / Polymyxin B Sulfate/ Neomycin (As Sulfate)
+Ferrous Sulfate (as Heptahydrate)
+Aluminumhydroxide + Magnesium Hydroxide
+Ibuprofen + Paracetamol
+Ibuprofen + Paracetamol
+Ibuprofen + Paracetamol
+Domperidone
+Glimepiride
+Glimepiride
+Glimepiride
+Glimepiride
+Glimepiride
+Glimepiride
+Ranitidine (as hydrochloride )
+Ranitidine (as hydrochloride)
+Ranitidine (as hydrochloride)
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+CALCIUM ASCORBATE
+Clarithromycin
+Clarithromycin
+Ferrous Sulfate
+Zinc (as Sulfate Monohydrate)
+Zinc (as Sulfate Monohydrate)
+Zinc (as Sulfate Monohydrate)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Pioglitazone Hydrochloride
+Aciclovir
+Paracetamol
+Paracetamol
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Amlodipine (As Besilate)
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Ferrous Sulfate
+Cotrimoxazole
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+Bupivacaine Hydrochloride
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Salbutamol (as sulfate) + Guaifenesin
+Amlodipine (as besilate)
+Amlodipine besilate
+Losartan Potassium / Hydrochlorothiazide
+Losartan Potassium / Hydrochlorothiazide
+Losartan Potassium / Hydrochlorothiazide
+Chloramphenicol (as sodium succinate)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as sodium)
+Loperamide
+Salbutamol (as Sulfate) + Guaifenesin
+SALBUTAMOL (as sulfate) + GUAIFENESIN
+Salbutamol (As Sulfate) + Guaifenesin
+SALBUTAMOL (as sulfate) + GUAIFENESIN
+Salbutamol (as Sulfate) + Guaifenesin
+Salbutamol (as Sulfate) +Guaifenesin
+Vitamin B1,B6, B12
+Vitamin B1,B6, B12
+Cefaclor (As Monohdyrate)
+Cefuroxime Sodium
+Sodium Fusidate
+Salbutamol (as Sulfate) + Guaifenesin
+Clotrimazole
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Aciclovir
+Aciclovir
+Ferrous Sulfate (as heptahydrate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Folic Acid
+Folic Acid
+Folic Acid
+Dopamine Hydrochloride
+Sodium Chloride
+Glimepiride
+Meloxicam
+Cefuroxime (As Axetil)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Phytomenadione
+Pantoprazole + Domperidone
+Pantoprazole + Domperidone
+Sultamicillin (As Tosylate Dihydrate)
+Clarithromycin
+Multivitamins
+Atorvastatin
+Atorvastatin
+Levofloxacin (as Hemihydrate)
+Levofloxacin (as Hemihydrate)
+Levofloxacin (as hemihydrate)
+Diclofenac Sodium
+Alfacalcidol + Mineral
+Paracetamol
+Pantoprazole (As Sodium Sesquihydrate)
+Pantoprazole (As Sodium Sesquihydrate)
+Pantoprazole (As Sodium Sesquihydrate)
+Pantoprazole (As Sodium Sesquihydrate)
+Pantoprazole (As Sodium Sesquihydrate)
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Phenylpropanolamine Hydrochloride
+Ciprofloxacin (as lactate)
+Ciprofloxacin (As Lactate)
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol Hydrochloride
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol Hydrochloride
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol Hydrochloride
+Ascorbic Acid
+Paracetamol
+Paracetamol
+Salbutamol (as sulfate) / Guaifenesin
+Salbutamol (as sulfate) + Guaifenesin
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Thiamine Mononitrate (Vit. B1) Pyridoxine Htdrochloride (Vit. B6) Cyanocobalamin (Vit. B12)
+Multivitamins + Iron
+Metoprolol Tartrate
+Metoprolol Tartrate
+Losartan Potassium
+Phenylpropanolamine Hydrochloride
+Hydroxyzine Hydrochloride
+Phenytoin Sodium
+Losartan Potassium
+Cefazolin (As Sodium)
+Cetirizine (as hydrochloride)
+Multivitamins + Minerals
+Clopidogrel
+Mefenamic Acid
+Mefenamic Acid
+Nifedipine
+Nifedipine
+Bromhexine Hydrochloride
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Salbutamol (As Sulfate)
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Metronidazole
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Carvedilol
+Carvedilol
+Carvedilol
+Carvedilol
+Carvedilol
+ASCORBIC ACID ( as Sodium Ascorbate)
+Ambroxol Hydrochloride
+Paracetamol
+Paracetamol
+Paracetamol
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Doxycycline (as hyclate)
+Doxycycline (as hyclate)
+Ranitidine (As Hydrochloride)
+Simvastatin
+Simvastatin
+Simvastatin
+Ranitidine (As Hydrochloride)
+Metoprolol Tartrate
+Nifedipine
+Nifedipine
+Ampicillin (as sodium)
+Thiamine hydrochloride + Pyridoxine hydrochloride + Cyanocobalamin
+Thiamine hydrochloride + Pyridoxine hydrochloride + Cyanocobalamin
+Thiamine HCl + Pyridoxine HCl + Cyanocobalamin
+Thiamine HCl + Pyridoxine HCl + Cyanocobalamin
+Thiamine hydrochloride + Pyridoxine hydrochloride + Cyanocobalamin
+Metoclopramide (as hydrochloride)
+Allopurinol
+Allopurinol
+Metformin (as Hydrochloride)
+Naproxen sodium
+Naproxen Sodium
+Loratadine
+Loratadine
+Loratadine
+Omeprazole (as Sodium)
+Acetazolamide
+Azithromycin (as monohydrate)
+Azithromycin (as monohydrate)
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Clopidogrel (as bisulfate)
+Loperamide Hydrochloride
+Amlodipine (as besilate)
+Amlodipine (as Besilate)
+Glimepiride
+Cetirizine Hydrochloride
+Ibuprofen
+Ampicillin (As Sodium)/ Sulbactam (As Sodium)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Glipizide
+Tolnaftate
+Tolnaftate
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Loratadine
+Loratadine
+Loratadine
+Loratadine
+Loratadine
+Loratadine
+Loratadine
+Clarithromycin
+Ampicillin (As Sodium) / Sulbactam (As Sodium)
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Metronidazole
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol +Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Guiafenesin + Salbutamol (as Sulfate)
+Guaifenesin + Salbutamol
+Exemestane
+Setraline (As Hydrochloride)
+Doxazosin (As mesilate)
+Medroxyprogesterone Acetate
+Multivitamins
+Ibuprofen
+Erythromycin (as Stearate)
+Tranexamic Acid
+Clindamycin (As Palmitate Hydrochloride)
+Clindamycin (as phosphate)
+Clindamycin (As Hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (As Hydrochloride)
+CEFUROXIME (AS SODIUM)
+OXACILLIN (AS SODIUM)
+Levofloxacin Hemihydrate
+Fluconazole
+Fluconazole
+Fluconazole
+Fluconazole
+Gabapentin
+Ampicillin (as Sodium)
+Doxycycline (as hyclate)
+Doxycycline (as hyclate)
+Ciprofloxacin ( as Hydrochloride )
+OMEPRAZOLE
+Omeprazole
+Omeprazole
+Methylergometrine (as Hydrogen Maleate)
+Oxytocin
+Norfloxacin
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Gabapentin
+Piroxicam
+Epirubicin Hydrochloride
+Gabapentin
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Quinapril Hydrochloride + Hydrochlorothiazide
+Domperidone
+Domperidone
+Clopidogrel (as bisulfate)
+Cefalexin (as Monohydrate)
+Diltiazem Hydrochloride
+Diltiazem Hydrochloride
+Spironolactone
+Spironolactone
+Spironolactone
+Ranitidine (as Hydrochloride)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Ampicillin (as Sodium)
+Cefalexin (as Monohydrate)
+Cefalexin (as Monohydrate)
+Benzylpenicillin (as Sodium)
+Diclofenac Sodium
+Furosemide
+Cefazolin (as sodium)
+Metoclopramide (As Hydrochloride)
+Mometasone (as Furoate)
+Phenytoin Sodium
+Phenytoin  sodium
+Meloxicam
+Streptomycin (as Sulfate)
+Alprazolam
+Atenolol
+Pyrazinamide
+Pyrazinamide
+Mometasone (as Furoate)
+Celecoxib
+Celecoxib
+Clarithromycin
+Metformin Hydrochloride
+Celebrex
+Celecoxib
+Metronidazole (as Benzoate)
+Ceftriaxone
+Ambroxol Hydrochloride
+Ethinylestradiol + Levonorgestrel; Ferrous Fumarate
+Rosuvastatin (as calcium)
+Furosemide
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Sildenafil (as citrate)
+Sildenafil (As Citrate)
+Sildenafil (as citrate)
+Sildenafil (as Citrate)
+Mefenamic Acid
+Sultamicillin Tosylate
+Levofloxacin (As Hemihydrate)
+Lynestrenol
+Sevoflurane
+CLOTRIMAZOLE
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Mefenamic Acid
+Mefenamic Acid
+Sunitinib malate
+Sunitinib maleate
+Sunitinib malate
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil0
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Gemfibrozil
+Fexofenadine Hydrochloride
+Fexofenadine Hydrochloride
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (as Besilate)
+Amlodipine
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Epirubicin Hydrochloride
+Solu-Cortef
+Methylprednisolone (as Sodium Succinate)
+Hydrocortisone (as Sodium Succinate)
+ESOMEPRAZOLE (AS MAGNESIUM TRIHYDRATE)
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Clopidogrel
+Ciprofloxacin
+Ciprofloxacin (as Lactate)
+Ferrous fumarate + Folic acid
+Cefuroxime (As Axetil)
+Hydrocortisone (as Sodium Succinate)
+Alprazolam
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Losartan potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin (as hydrochloride)
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Guaifenesin/ Salbutamol (as Sulfate)
+Guaifenesin/ Salbutamol (as Sulfate)
+Guaifenesin/ Salbutamol (as Sulfate)
+Guaifenesin/ Salbutamol (as Sulfate)
+Hydrocortisone Sodium Succinate
+Methylprednisolone (as Sodium Succinate)
+Solu-Medrol
+Losartan + Hydrochlorthiazide
+Losartan (As Potassium) / Hydrochlorothiazide
+Losartan (As Potassium) / Hydrochlorothiazide
+Co-Amoxiclav
+Co-Amoxiclav
+Carvedilol
+Pioglitazone (as Hydrochloride)
+Pioglitazone (as Hydrochloride)
+Pioglitazone (as Hydrochloride)
+Hydrocortisone
+Hydrocortisone
+Hydrocortisone
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Silver Sulfadiazine
+Silver Sulfadiazine
+Tobramycin
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan +Hydrochlorothiazide
+Losartan + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Diclofenac Sodium
+Ambroxol (As Hydrochloride)
+Salbutamol (As Sulfate) + Guaifenesin
+Clarithromycin
+Thiamine Mononitrate (Vit.B1) +Pyridoxine (Vit.B6 + Cyanocobalamine (Vit. B12)
+Econazole nitrate + Triamcinolone acetonide
+Amlodipine (As Besilate)
+Losartan Potassium + Hydrochlorothiazide
+Amlodipine (As Besilate)
+DYDROGESTERONE
+Tramadol Hydrochloride
+Clopidogrel (As Bisulfate)
+Amlodipine (As Besilate)
+Losartan Potassium
+Ascorbic Acid
+Amlodipine (As Besilate)
+None
+Lactulose
+Amlodipine (As Besilate)
+Levocetirizine Dihydrochloride
+Cefepime (as hydrochloride)
+Ampicillin (As Sodium)
+Ampicillin (As Sodium)
+Naproxem Sodium
+Naproxen Sodium
+Naproxen Sodium
+Naproxem Sodium
+Erythromycin (As Ethylsuccinate)
+Erythromycin (As Ethylsuccinate)
+Meloxicam
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Loratadine
+Trimetazidine (as dihydrochloride)
+Trimetazidine (as dihydrochloride)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Diclofenac Sodium
+Diclofenac Sodium
+Metoclopramide Hydrochloride
+Ambroxol (As Hydrochloride)
+Diphenhydramine Hydrochloride
+Clopidogrel (As Bisulfate)
+Glimepiride
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Bisoprolol fumarate
+Bisoprolol fumarate
+Bisoprolol fumarate
+Simvastatin
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Norepinephrine (as bitartrate)
+Paracetamol
+Paracetamol
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Hydroxyurea
+Cefixime
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Cefalexin (as monohydrate)
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Dexamethasone (As Sodium Phosphate)
+Multivitamins + Minerals + Ginseng
+Multivitamins + Minerals + Ginseng
+Ferrous Fumarate + Folic Acid + Vitamin B12
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Celecoxib
+Celecoxib
+Tranexamic Acid
+Timolol Maleate
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+PHENYLEPHRINE HYDROCHLORIDE + BROMPHENIRAMINE MALEATE
+Mervilar
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Clarithromycin
+Clarithromycin
+Ceftriaxone (As Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Felodipine
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Paracetamol + Phenylpropanolamine HC1 + Chlorphenamine Maleate
+Esomeprazole (As Sodium)
+Esomeprazole (As Sodium)
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenaamine Maleate
+Ofloxacin
+Oxaliplatin
+CARBOPLATIN
+OXALIPLATIN
+Ambroxol Hydrochloride
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Neomycin + Gramicidin + Nystatin + Triamcinolone Acetonide
+Gatifloxacin
+Pantoprazole (As Sodium Sesquihydrate
+Folic Acid
+LEVOFLOXACIN (AS HEMIHYDRATE)
+METRONIDAZOLE
+Metronidazole
+Ascorbic Acid
+Citicoline (as Sodium)
+Citicoline (as Sodium)
+Citicoline (as sodium)
+Albendazole
+Ketorolac trometamol
+Ketorolac trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac trometamol
+Ketorolac trometamol
+Ketorolac trometamol
+Clindamycin (As Phosphate)
+Terbutaline Sulfate
+Terbutaline Sulfate
+Terbutaline Sulfate
+Amoxicillin (as Trihydrate)
+Amoxicillin (as Trihydrate)
+Cefoxitin Sodium
+Cefoxitin sodium
+Cefoxitin sodium
+Doxycycline (As Hyclate)
+Doxycycline (as hyclate)
+Doxycycline (As Hyclate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Nimesulide
+Losartan Potassium + Amlodipine Besilate
+Losartan Potassium + Amlodipine (as besilate)
+Levetiracetam
+LEVETIRACETAM
+LEVETIRACETAM
+Levocetirizine (as Didhydrochloride)
+Erythromycin (as ethylsuccinate)
+Paracetamol
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Digoxin
+Rifampicin
+Mefenamic Acid
+Mefenamic Acid
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Salbutamol (as sulfate)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Iron Sucrose
+Iron Sucrose
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Metronidazole (as Benzoate)
+Metronidazole (As Benzoate)
+Metronidazole (As Benzoate)
+Betamethasone valerate
+Cefazolin (as sodium)
+Betamethasone valerate
+Betamethasone
+Betamethasone
+Metformin hydrochloride
+Metformin Hydrochloride
+Lamivudine
+Allopurinol
+Allopurinol
+Allopurinol
+Allopurinol
+AMPICILLIN (AS SODIUM)
+AMPICILLIN (AS SODIUM)
+Fusidic Acid
+Fusidic Acid
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Hydrocortisone (as sodium succinate)
+Co-Amoxiclav
+Phenylpropanolamine Hydrochloride
+Amoxicillin (as trihydrate)
+Hydrocortisone (As Sodium Succinate)
+Aciclovir
+Aciclovir
+Aciclovir
+Ketorolac (as Trometamol)
+Ketorolac Trometamol
+Trimetazidine Hydrochloride
+Trimetazidine Hydrochloride
+Trimetazidine Hydrochloride
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Chlorphenamine Maleate
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Esomeprazole (As Magnesium Trihydrate)
+ESOMEPRAZOLE (AS MAGNESIUM TRIHYDRATE)
+TRIMETAZIDINE
+Trimetazidine (As Hydrochloride)
+Trimetazidine (As Hydrochloride)
+Trimetazidine (As Hydrochloride)
+Trimetazidine (As Hydrochloride)
+Trimetazidine (As Hydrochloride)
+Trimetazidine (as hydrochloride)
+Trimetazidine (as hydrochloride)
+Trimetazidine (As Hydrochloride)
+Trimetazidine (As Hydrochloride)
+Ceftazidime
+Co-Amoxiclav
+Co-amoxiclav
+Co-amoxiclav
+Atorvastatin (As Calcium)
+Salbutamol (as sulfate) + Guaifenesin
+Salbutamol (as sulfate) + Guaifenesin
+Paracetamol
+Paracetamol
+Cotrimoxazole
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Glipizide
+Ofloxacin
+Ofloxacin
+Ofloxacin
+Ceftriaxone (As Sodium)
+Metoclopramide Hydrochloride
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Atorvastatin (As Calcium) + Amlodipine (As Besilate)
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Atorvastatin (As Calcium) + Amlodipine (As Besilate)
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Diltiazem Hydrochloride
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Multivitamins + Minerals
+Multivitamins + Minerals
+Multivitamins + Minerals
+Multivitamins + Minerals
+Ketorolac Trometamol
+Ketorolac Trometamol
+Cimetidine
+Iron
+Carbocisteine + Sodium Citrate
+Carbocisteine + Sodium Citrate
+Carbocisteine / Sodium Citrate
+Ketoconazole
+Ketoconazole
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Losartan Potassium + Hydrochlorithiazide
+Finasteride
+Finasteride
+Finasteride
+Clobetasol Proprionate
+Clobetasol Propionate
+Enalapril Maleate
+Clobetasol Proprionate
+Clobetasol Propionate
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime(As Axetil)
+Cefuroxime(As Axetil)
+Asmatrol
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+ISONIAZID
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cefuroxime Axetil
+Cefuroxime Axetil
+Diosmin + Hesperidin
+Paracetamol
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Hyoscine-N-Butylbromide
+AMPICILLIN (AS SODIUM) + SULBACTAM (AS SODIUM)
+THIAMINE MONONITRATE (VITAMIN B1) + PYRIDOXINE HYDROCHLORIDE (VITAMIN B6) + CYANOCOBALAMIN (VITAMIN B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ciprofloxacin Hydrochloride
+Ofloxacin
+Ascorbic acid
+Ascorbic acid
+Multivitamins [Retinol Palmitate (vit. A), Cholecalciferol (vit. D3), d1-Alpha Tocopherol Acetate (vit. E), Thiamine Hydrochloride (vit. B1), Riboflavink-5-Sodium Phosphate (vit. B2), Pyridoxine Hydrochloride (vit. B6), Cyanocobalamin (vit. B6), Ascorbic Acid (vit. C), Folic Acid, Niacin]
+Multivitamins
+Losartan Potassium
+Cefuroxime (As Sodium)
+Cefuroxime(As Sodium)
+Alendronic Acid (As Alendronate Sodium Trihydrate)
+Mergot
+None
+Ergotrix
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Aminophylline
+Co-Amoxiclav
+Diclofenac sodium
+Clobetasol propionate
+Clobetasol Propionate
+Clobetasol Propionate
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins + L-Lysine Hydrochloride
+Multivitamins + L-Lysine Hydrochloride
+Iron + Folic Acid (Vitamin B9)
+Iron + Folic Acid (Vitamin B9)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Atorvastatin (as calcium)
+Ibuprofen + Paracetamol
+Ibuprofen + Paracetamol
+Levofloxacin
+Ibuprofen + Paracetamol
+Cefixime (As Trihydrate)
+Ascorbic Acid + Zinc
+Cefixime (as Trihydrate)
+Prednisone
+Losartan Potassium
+Bisacodyl
+Bisacodyl
+Bisacodyl
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Guaifenesin
+AZITHROMYCIN (AS DIHYDRATE)
+Co-Amoxiclav
+Carbamazepine
+Dexamethasone
+Diclofenac sodium
+Diclofenac sodium
+Diclofenac Sodium
+Buclizine Hydrochloride + Vitamin B Complex + Iron
+Buclizine Hydrohloride + Vitamin B-Complex + iron
+Buclizine Hydrohloride + Vitamin B-Complex + iron
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Diltiazem Hydrochloride
+Irbesartan
+Irbesartan
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Domperidone
+Domperidone
+Gentamicin (As Sulfate)
+Levofloxacin (as hemihydrate)
+Levofloxacin (as hemihydrate)
+Tamsulosin Hydrochloride
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlororthiazide
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Clindamycin (As Hydrochloride)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCl (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Domperidone
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Celecoxib
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Amoxicillin (as trihydrate)
+Sertraline (As Hydrochloride)
+CARVEDILOL
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+CARVEDILOL
+Risperidone
+Esomeprazole (as Magnesium Trihydrate)
+Esomeprazole (as Magnesium Trihydrate)
+Esomeprazole (as Magnesium Trihydrate)
+Esomeprazole (as Magnesium Trihydrate)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Ambroxol Hydrochloride
+Pantoprazole
+Cisplatin
+Doxorubicin Hydrochloride
+Paracetamol + Ibuprofen
+Atenolol
+Atenolol
+Atenolol
+Atenolol
+Atenolol
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Cytarabine
+Cefuroxime (as sodium)
+Salbutamol (As Sulfate) + Guaifenesin
+Carboplatin
+Carboplatin
+Ceftazidime (as pentahydrate)
+Ceftazidime (as pentahydrate)
+Ceftazidime (as Pentahydrate)
+Letrozole
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+PANTOPRAZOLE (as sodium sesquihydarte)
+Doxorubicin Hydrochloride
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+PANTOPRAZOLE (as sodium sesquihydrate)
+Pioglitazone (as Hydrochloride)
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Nifedipine
+Nifedipine
+Nifedipine
+Nifedipine
+Nifedipine
+Nifedipine
+Lamotrigine
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (as hydrochloride)
+TOPIRAMATE
+Piracetam
+SODIUM VALPROATE + VALPROIC ACID
+Levodopa + Carbidopa
+Paracetamol
+LEVODOPA + CARBIDOPA
+Clarithromycin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Salbutamol (as Sulfate)
+Trimetazidine
+Trimetazidine
+Carbidopa + Levodopa
+Memantine hydrochloride
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Amlodipine (as besilate) + Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (As Calcium)
+Mometasone Furoate
+None
+Diametasone
+Carvedilol
+Carvedilol
+Carvedilol
+Carvedilol
+Simvastatin
+Pioglitazone Hydrochloride
+Pioglitazone Hydrochloride
+Pioglitazone Hydrochloride
+Clonazepam
+Simvastatin
+Simvastatin
+Clonazepam
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Potassium Citrate (As Monohydrate)
+K-Trit
+Verapamil Hydrochloride
+Verapamil Hydrochloride
+Verapamil Hydrochloride
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Ambroxol hydrochloride
+Ambroxol hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Omeprazole (As Sodium)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Mefenamic Acid
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Ceftazidime (as pentahydrate)
+Prednisolone Acetate
+Salbutamol + Guaifenesin
+Salbutamol + Guaifenesin
+Salbutamol + Guaifenesin
+Salbutamol + Guaifenesin
+Gentamicin (as Sulfate)
+MULTIVITAMINS + MINERALS + DHA + EPA
+Ibuprofen
+Losartan Potassium
+Losartan Potassium
+Metoprolol Tartrate
+Metoprolol Tartrate
+Trimetazidine Hydrochloride
+Vestadin
+Trimin
+Valsartan
+Valsartan
+Gabapentin
+Loratadine
+Loratadine
+Loratadine
+Cefalexin (as monohydrate)
+Etoposide
+Cefalexin (as monohydrate)
+Metoprolol Tartrate
+Metoprolol Tartrate
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+Silymarin With Vitamin B-Complex
+Furosemide
+Furosemide
+Furosemide
+Diclofenac Sodium
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Ceftriaxone (as Sodium)
+Ceftriaxone(as sodium)
+Paracetamol
+Olanzapine
+Olanzapine
+Oxaliplatin
+Amlodipine (As Besilate)
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Clobetasol Propionate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxie + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Piracetam
+Aciclovir
+Aciclovir
+Enalapril Maleate
+Enalapril Maleate
+Erythromycin
+Montelukast (as sodium)
+Montelukast (as sodium)
+Capecitabine
+Hydrocortisone
+Allopurinol
+Allopurinol
+Phenylpropanolamine Hydrochloride
+Omeprazole
+Paracetamol + Ibuprofen
+Paracetamol + Ibuprofen
+Paracetamol + Ibuprofen
+Multivitamins
+Calcium Folinate
+Co-Amoxiclav
+Co-Amoxiclav
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Ferrous Fumarate / Thiamine mononitrate / Pyridoxine hydrochloride / Cyanocobalamin
+Ferrous Fumarate / Thiamine mononitrate / Pyridoxine hydrochloride / Cyanocobalamin
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Glimepiride
+Lamotrigine
+Hydrocortisone (as sodium succinate)
+Cefixime (As Trihydrate)
+Miconazole Nitrate
+Montelukast (As Sodium)
+Montelukast (as sodium)
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Aciclovir
+Aciclovir
+Vitamin B Complex + Vitamin C + Ferrous Sulfate
+Ferrous Sulfate Capsule + Vitamins B Complex + Vitamin C
+Ibuprofen + Paracetamol
+Atorvastatin (As Calcium)
+Cimetidine
+DICYCLOVERINE HYDROCHLORIDE
+Paracetamol / Phenylpropanolamine Hydrochloride
+LOPERAMIDE HYDROHLORIDE
+LOPERAMIDE HYDROHLORIDE
+Citicoline (as Sodium)
+Salbutamol (as Sulfate)
+Salbutamol (as Sulfate)
+Paracetamol
+Paracetamol
+Felodipine
+Felodipine
+Felodipine
+Cimetidine
+Azithromycin (as Dihydrate)
+Azithromycin (as Dihydrate)
+Azithromycin (as Dihydrate)
+Azithromycin (as Dihydrate)
+Azithromycin (as Dihydrate)
+Dopamine Hydrochloride
+Dopamine Hydrochloride
+COLCHICINE
+Colchicine
+Colchicine
+Colchicine
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Atorvastatin (as calcium)
+Guaifenesin
+4Drycof
+Ceftriaxone (As Sodium)
+Eprosartan (As Mesylate)
+Enalapril Maleate
+Glimepiride
+Glimepiride
+Glimepiride
+Glimepiride
+Ambroxol Hydrochloride
+Phenylpropanolamine Hydrochloride
+Colds-Off
+Phenamine
+Phenylpropanolamine Hydrochloride
+Phenylgen
+Omeprazole
+Omeprazole
+Omeprazole
+Glimepiride
+Cefuroxime (as Sodium)
+Montelukast
+Montelukast (as sodium)
+Clarithromycin
+Hyoscine-N-Butylbromide + Paracetamol
+Hyoscine-N-Butylbromide + Paracetamol
+Ferrous Sulfate Heptahydrate + Folic Acid
+Ferrous Sulfate Heptahydrate + Folic Acid
+Iron (as Ferrous Sulphate Heptahydrate) + Folic Acid
+Ferrous Sulfate Heptahydrate + Folic Acid
+Ferrous Sulfate + Folic Acid
+Ciprofloxacin
+Salbutamol Sulphate
+Salbutamol (as sulfate)
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Amino acids
+Amino Acids + Electrolytes
+Sildenafil (as citrate)
+Sildenafil (as Citrate)
+Sildenafil Citrate
+Sildenafil Citrate
+Montelukast (as Sodium)
+Montelukast (as Sodium)
+Montelukast (as Sodium)
+Montelukast (as Sodium)
+Levocetirizine Dihydrochloride
+Levocetirizine Dihydrochloride
+Cephradine
+Piracetam
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Salbutamol (As Sulfate)
+Chlorphenamine Maleate
+Chlorphenamine Maleate
+Moxifloxacin (As Hydrochloride)
+Omeprazole
+Metoprolol Tartrate
+Metoprolol Tartrate
+Azithromycin (as dihydrate)
+Biomac
+Azithromycin (As Dihydrate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Calpress-5
+Amlodipine Besilate
+Calpress-10
+Amlodipine Besilate
+None
+Levofloxacin (As Hemihydrate)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Myretapp
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Myretapp
+Rabeprazole Sodium
+Cinnarizine
+Cinnarizine
+Cinnarizine
+Dextromethorphan Hydrobromide + Guaifenesin
+Dextromethorphan Hydrobromide + Guaifenesin
+Cefepime (as hydrochloride)
+Cefepime (as hydrochloride)
+Cefepime (as hydrochloride)
+Cefepime (as hydrochloride)
+Cefepime (as hydrochloride)
+Bptrol
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Felodipine
+Tramadol (as hydrochloride)
+Oxytocin
+Cefuroxime (as Sodium)
+Cefuroxime Sodium
+Cefuroxime Sodium
+Cefuroxime Sodium
+Cefuroxime Sodium
+Amino Acids + Sorbitol Solution
+Phytomenadione
+Levofloxacin
+Levofloxacin
+Paracetamol
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Loratadine
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Lemon-Cee Plus
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Atracurium Besilate
+Alprazolam
+Clindamycin (as phosphate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Omeprazole
+Cefuroxime Sodium
+Methotrexate
+Methotrexate
+Cetirizine Dihydrochloride
+Zopip
+Tazobet
+Ureitaz
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Amlodipine (as besilate) + Atorvastatin (as calcium)
+Buclizine Hc1 25 Mg; Pyridoxine Hc1 5 Mg; Iron, Elemental (As Ferrous Fumarate; 76 Mg) 25 Mg; : Thiamine Mononitrate 10 Mg; Cyanocobalamin 10 Mc
+Buclizine Hc1 25 Mg; Pyridoxine Hc1 5 Mg; Iron, Elemental (As Ferrous Fumarate; 76 Mg) 25 Mg; : Thiamine Mononitrate 10 Mg; Cyanocobalamin 10 Mc
+Enalapril maleate
+Cefixime (As Trihydrate)
+Gliclazide
+Sodium Chloride
+Sildenafil (as citrate)
+Sildenafil (as citrate)
+Levofloxacin (as hemihydrate)
+Levofloxacin (as hemihydrate)
+Amoxicillin (as trihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Clopidogrel Bisulfate
+Paracetamol /Phenylpropanolamine Hydrochloride
+Amoxicillin (As Trihydrate)
+Risperidone
+Paracetamol
+ATORVASTATIN (AS CALCIUM)
+Dobutamine (as hydrochloride)
+Domperidone (As Maleate)
+Domperidone (As Maleate)
+Clotrimazole
+Clotrimazole
+Clotrimazole
+Clotrimazole
+Alprazolam
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Chloramphenicol
+Calcium Ascorbate
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Telmisartan + Hydrochlorothiazide
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Aciclovir
+Azithromycin
+Azithromycin
+Azithromycin
+Azithromycin
+Azithromycin
+Co-Amoxiclav
+Propofol
+Tranexamic Acid
+Phenylpropanolamine Hydrochloride
+Diphenhydramine Hydrochloride
+Loratadine + Phenylephrine Hydrochloride
+Loratadine + Phenylephrine hydrochloride
+Bromhexine Hydrochloride
+Multivitamins With Lysine
+Multivitamins With Lysine
+Multivitamins With Lysine
+Multivitamins With Lysine
+Multivitamins With Lysine
+Multivitamins With Lysine
+Piperacillin (as sodium)/Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Iron + Zinc + Folic Acid
+Iron + Zinc + Folic Acid
+Iron + Zinc + Folic Acid
+Citicoline (As Sodium)
+Ferrous Sulfate Heptahydrate (Butter Scotch Flavor)
+Atorvastatin (As Calcium)
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Paracetamol
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Mebendazole
+Cefixime (as trihydrate)
+Salbutamol Sulfate
+Salbutamol Sulfate
+Salbutamol Sulfate
+Salbutamol (As Sulfate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as Sodium)
+Dicycloverine (as Hydrochloride)
+Dicycloverine (as Hydrochloride)
+Dicycloverine (as Hydrochloride)
+Azithromycin (as dihydrate)
+Azithromycin (As Dihydrate)
+Clopidogrel (As Bisulfate)
+Clopidogrel (As Bisulfate)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Donepezil Hydrochloride
+Donepezil Hydrochloride
+PARACETAMOL + VITAMIN B1 + VITAMIN B6 + VITAMIN B12
+PARACETAMOL + VITAMIN B1 + VITAMIN B6 + VITAMIN B12
+PARACETAMOL + VITAMIN B1 + VITAMIN B6 + VITAMIN B12
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Paracetamol / Vitamin B1/Vitamin B6/ Vitamin B12
+Cefepime (As Hydrochloride)
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Enalapril Maleate
+Ketotifen Hydrogen Fumarate
+Cetirizine hydrochloride (Apple Green Flavor)
+Dorzolamide (as hydrochloride) + Timolol (As Maleate)
+Ketorolac Trometamol
+Phenylpropanolamine (as hydrochloride) Brompheniramine (as maleate)
+Phenylpropanolamine (as hydrochloride) Brompheniramine (as maleate)
+Loratadine
+Dicycloverine Hydrochloride
+Lamotrigine
+Lamotrigine
+Salbutamol Sulfate + Bromhexine Hydrochloride + Guaifenesin
+Isoniazid
+Phenylpropanolamine Hydrochloride
+Clozapine
+Paracetamol + Phenylephrine hydrochloride + Chlorphenamine maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Clozapine
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Piperacillin (As Sodium) / Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Dextromethorphan HBr + Guaifenesin
+Losartan Potassium
+Erythromycin (as stearate)
+Erythromycin (as stearate)
+Amlodipine (as Besilate)
+Losartan Potassium
+Levofloxacin (as Hemihydrate)
+Levofloxacin (as Hemihydrate)
+Cefadroxil
+Cefadroxil (As Monohydrate)
+Cefadroxil (as Monohydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (as hemihydrate)
+Ferrous Sulfate
+Domperidone
+Ascorbic Acid + Zinc
+Ciprofloxacin
+Topiramate
+Orlistat
+Topiramate
+Alendronic Acid (as Alendronate Sodium)
+Alendronic Acid (as Alendronate Sodium)
+Alendronic Acid (As Alendronate Sodium)
+Alendronic Acid (As Alendronate Sodium)
+Alendronic Acid (As Alendronate Sodium)
+Vitamin B Complex + Dexpanthenol
+Glimepiride
+Hyoscine-N-Butylbromide
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Multivitamins + Iron (see reverse)
+Multivitamins + Iron
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Rifampicin
+Rifacare
+Amoxicillin (as trihydrate)
+Domperidone
+Domperidone
+Atorvastatin (as calcium)
+Atorvastatin Calcium
+Atorvastatin (as calcium)
+Atorvastatin calcium
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Ethinyl Estradiol + Levonorgestrel
+Levofloxacin (as hemihydrate)
+Co-Amoxiclav
+Furosemide
+Diphenhydramine Hydrochloride
+Minocycline (as hydrochloride)
+Metronidazole
+Metronidazole
+Metronidazole
+Azithromycin (As Dihydrate)
+Tramadol hydrochloride + Paracetamol
+Tramadol hydrochloride + Paracetamol
+Tramadol hydrochloride + Paracetamol
+Tramadol hydrochloride + Paracetamol
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Cefepime Hydrochloride
+Levofloxacin (as hemihydrate)
+Ceftazidime (as Pentahydrate)
+Ceftazidime (as Pentahydrate)
+Amiodarone Hydrochloride
+Amiodarone Hydrochloride
+Cefuroxime (as axetil)
+Cefuroxime Axetil
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate + Paracetamol
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate + Paracetamol
+Montelukast (as Sodium)
+Montelukast (as Sodium)
+Folic Acid
+D-Alpha Tocopherol Acetate (Vitamin E)
+Amlodipine (as Besilate)
+Finasteride
+Doxorubicin Hydrochloride
+Chlorpheniramine Maleate (Orange Flavor)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Amlodipine (as besilate)
+Glipizide
+Clarithromycin
+Clarithromycin
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Multivitamins + Minerals + Ginseng + Royal Jelly
+Multivitamins + Minerals + Ginseng + Royal Jelly
+Diphenhydramine Hydrochloride
+Amlodipine (as besilate)
+Cefoperazone (As Sodium)
+Azithromycin (as monohydrate)
+Azithromycin (as monohydrate)
+Azithromycin (as monohydrate)
+Azithromycin (as monohydrate)
+Azithromycin (as monohydrate)
+Sildenafil (As Citrate)
+Sildenafil (As Citrate)
+Etoricoxib
+Oxacillin (as Sodium)
+Methylprednisolone
+Methylprednisolone
+Methylprednisolone
+Methylprednisolone
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Gabapentin
+Olmesartan medoxomil
+Olmesartan medoxomil
+Olmesartan medoxomil
+Sultamicillin tosylate
+Azithromycin (as Dihydrate)
+Levofloxacin (as Hemihydrate)
+Enalapril Maleate
+Enalapril Maleate
+Risperidone
+Risperidone
+Risperidone
+Risperidone
+Calcium Carbonate
+Ascorbic Acid + Zinc
+Metoclopramide (as Hydrochloride)
+Amlodipine (as besilate)
+Sultamicillin (As Tosylate)
+Sultamicillin (As Tosylate)
+Sultamicillin (As Tosylate)
+Multivitamins + Buclizine Hydrochloride
+Multivitamins + Buclizine Hydrochloride
+Multivitamins + Buclizine Hydrochloride
+Multivitamins + Buclizine Hydrochloride
+Multivitamins + Buclizine Hydrochloride
+Multivitamins + Buclizine Hydrochloride
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Amlodipine (as besilate)
+Carvedilol
+Dicycloverine Hydrochloride
+Lansoprazole
+ATORVASTATIN (AS CALCIUM)
+Atorvastatin (as Calcium)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Tibolone
+Salbutamol (as sulfate)
+Salbutamol (As Sulfate)
+Paracetamol
+Paracetamol
+CHLORAMPHENICOL
+Chloramphenicol
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Escitalopram (as oxalate)
+ESCITALOPRAM (as Oxalate)
+Ketorolac Trometamol
+Lansoprazole
+Lansoprazole
+Lansoprazole
+Celecoxib
+Montelukast (As Sodium)
+Montelukast (as Sodium)
+Azithromycin (as dihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Amlodipine(as besilate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Cefalexin (as monohydrate)
+Ketoanalogues + Essential Amino Acids
+Nystatin
+PARACETAMOL + IBUPROFEN
+Cefaclor (As Monohydrate)
+Cefaclor (as monohydrate)
+Ibuprofen
+Ibuprofen
+Ibuprofen (Orange Flavor)
+Montelukast (as Sodium)
+Montelukast (As Sodium)
+Ciprofloxacin
+Ciprofloxacin
+Ciprofloxacin
+Ciprofloxacin
+Polymyxin B Sulfate + Bacitracin Zinc + Neomycin Sulfate
+Cefazolin (as sodium)
+Cefazolin (as sodium)
+Cefazolin (as sodium)
+Cefazolin (as sodium )
+Cefaclor (as monohydrate)
+Cefaclor
+Cefaclor
+Ciprofloxacin
+Azithromycin (As Dihydrate)
+Azithromycin (as dihydrate)
+Methylergometrine maleate
+Methylergometrine Maleate
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as sodium)
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Cefaclor
+Isoxsuprine Hydrochloride
+Isoxsuprine Hydrochloride
+Isoxsuprine Hydrochloride
+Isoxsuprine Hydrochloride
+Isoxsuprine Hydrochloride
+PHENYLPROPANOLAMINE Hydrochloride + CHLORPHENAMINE MALEATE
+PHENYLPROPANOLAMINE Hydrochloride + CHLORPHENAMINE MALEATE
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Cefuroxime (as sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Ceftriaxone Sodium
+Ceftriaxone Sodium
+Ceftriaxone Sodium
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cefuroxime (as Axetil)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Cefuroxime Sodium
+Glipizide
+Iron + Folic Acid
+ZInc. (as Sulfate Monohydrate)
+Zinc Sulfate (As Monohydrate) 27.5 Mg/Ml (Equivalent To 10 Mg Elemental Zinc) Syrup (Oral Drops)
+Zinc Sulfate (As Monohydrate) 27.5 Mg/Ml (Equivalent To 10 Mg Elemental Zinc) Syrup (Oral Drops)
+Zinc (as Sulfate Monohydrate)
+Olmesartan medoxomil
+Olmesartan medoxomil
+Olmesartan medoxomil
+Clarithromycin
+Clarithromycin
+Cefdinir
+Ventolin
+Salbutamol (As Sulfate)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Atenolol
+Thiamine Hydrochloride(Vitamin B1) + Pyridoxine Hydrochloride(Vitamin B6) + Cyanocobalamin (Vita
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Medroxyprogesterone Acetate
+Salbutamol sulfate
+Salbutamol sulfate
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Cefuroxime (as sodium)
+Terbinafine Hydrochloride
+Terbinafine hydrochloride
+Terbinafine hydrochloride
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Atorvastatin (As Calcium)
+Dopacare
+Aldromet
+Methyldopa (As Sesquihydrate)
+Dopacard
+Hymet
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Amlodipine (as Besilate)
+Ciprofloxacin (as Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (as Hydrochloride)
+Ciprofloxacin(as hydrochloride)
+Ciprofloxacin (as Hydrochloride)
+Ciprofloxacin (as hydrochloride)
+Roxithromycin
+DICYCLOVERINE HYDROCHLORIDE
+Dicycloverine Hydrochloride
+Mupirocin
+Mupirocin
+Terazosin (as Hydrochloride)
+Terazosin (as Hydrochloride)
+Terazosin (as Hydrochloride)
+Oxytocin
+Betacin
+Ipratropium Bromide
+Simvastatin
+Mupirocin
+Mupirocin
+MUPIROCIN
+Telmisartan
+Telmisartan
+Telmisartan 40mg
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Retinol (As Palmitate)
+Norepinephrine (As Bitatrate)
+Paracetamol
+Paracetamol
+Azithromycin (As Dihydrate)
+Phenylephrine Hydrochloride + Brompheniramine maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Meloxicam
+Meloxicam
+Silver Sulfadiazine
+Silver Sulfadiazine
+Silver Sulfadiazine
+Citicoline
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Clindamycin (As Hydrochloride)
+Clindamycin (As Hydrochloride)
+Valsartan + Hydrochlorothiazide
+Telmisartan
+Telmisartan
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Clindamycin (as hydrochloride)
+Cefazolin (as Sodium)
+Salbutamol (as Sulfate)
+Tranexamic acid
+Co-Amoxiclav
+Metoclopramide (As Hydrochloride)
+Metoclopramide (As Hydrochloride)
+Co-Amoxiclav
+Co-Amoxiclav
+Fexofenadine hydrochloride
+Levonorgestrel + Ethinylestradiol
+Desloratadine
+Metformin Hydrochloride + Glibenclamide
+Drospirenone + Ethinylestradiol
+Dopamine Hydrochloride
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan potassium + Hydrochlorothiazide
+Co-Amoxiclav
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Metformin Hydrochloride + Glibenclamide
+Pantoprazole (as sodium)
+Ambroxol hydrochloride
+Nifedipine
+Nifedipine
+Nifedipine
+Salbutamol (as Sulfate)
+Salbutamol (as Sulfate)
+Clarithromycin
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Gliclazide
+Gliclazide
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Risperidone
+Losartan Potassium + Hydrochlorothiazide
+Isoniazid
+Isoniazid
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Thiamine Mononitrate (Vitamin B1)+Pyridoxine Hydrochloride (Vitamin B6)+Cyanocobalamin (Vitamin B12)
+Multivitamins + Amino Acids (see reverse for formulation)
+Thiamine Mononitrate (Vitami B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitami B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Multivitamins / Minerals / Lysine / Inositol (See reverse)
+Multivitamins + Minerals + Lysine + Inositol
+Multivitamins + Minerals + Lysine + Inositol
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Salbutamol (As Sulfate)
+Levocetirizine
+Levocetirizine Dihydrochloride
+Levocetirizine
+Levocetirizine
+Levocetirizine
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Vitamin B Complex
+Pyrazinamide + Ethambutol hydrochloride + Rifampicin + Isoniazid
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone sodium
+Ceftriaxone (as sodium)
+Fexofenadine hydrochloride
+Ketoconazole
+Ketoconazole
+Ketoconazole
+Spironolactone
+Spironolactone
+Cefepime (As Hydrochloride)
+Cefixime (As Trihydrate)
+Cefepime (As Hydrochloride)
+Verapamil Hydrochloride
+Rabeprazole (As Sodium)
+Loratadine
+Loratadine
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Clopidogrel (As Bisulfate)
+Irbesartan
+Irbesartan
+Mupirocin
+Mupirocin
+Mupirocin
+Mupirocin
+Mupirocin
+MULTIVITAMINS + MINERALS
+MULTIVITAMINS + MINERALS
+Multivitamins + Minerals
+Co-Amoxiclav
+Co-Amoxiclav
+Multivitamins + Amino Acids
+Cetirizine dihydrochloride
+Cetirizine dihydrochloride
+Multivitamins + Amino Acids
+Exemestane
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Amlodipine (As Besilate)
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Amino Acids
+Amino Acids
+Amino Acids
+Amino Acids
+Amino acids
+Iron + Multivitamins
+Iron + Multivitamins
+Iron + Multivitamins
+Irbesartan
+Irbesartan
+Irbesartan
+Irbesartan
+Cefaclor (as Monohydrate)
+Risperidone
+Amino Acids
+AMINO ACIDS
+Multivitamins + Minerals
+Multivitamins + Minerals
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Diclofenac Sodium
+Ursodeoxycholic Acid + Thiamine Mononitrate + Riboflavin
+Hydrocortisone (As Acetate) + Miconazole (As Nitrate)
+Hydrocortisone (As Acetate) + Miconazole (As Nitrate)
+Co-Amoxiclav
+Tramadol (As Hydrochloride)
+Tramadol (As Hydrochloride)
+Ursodeoxycholic Acid
+Tamsulosin Hydrochloride
+Hyperstop
+Captopril
+Co-Amoxiclav
+Isoniazid + Pyridoxine Hydrochloride
+Isoniazid + Pyridoxine Hydrochloride
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Candesartan Cilexetil
+Candesartan Cilexetil
+Cefuroxime (As Sodium)
+Levofloxacin (As Hemihydrate)
+Paracetamol
+Paracetamol
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Oxacillin (as sodium)
+Hyoscine N-Butylbromide
+Levocetirizine Hydrochloride
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Ofloxacin
+Tamsulosin Hydrochloride
+Metronidazole
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Omeprazole (as sodium)
+Omeprazole (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Clotrimazole
+Clotrimazole
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Rifampicin
+Valsartan + Hydrochlorothiazide
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Paracetamol + Phenylephrine Hydrochloride
+Aciclovir
+Chlorpromazine ( as hydrochloride)
+Chlorpromazine ( as hydrochloride )
+Sildenafil (as Citrate)
+Sildenafil (as citrate)
+Fenofibrate
+Fenofibrate
+Cinnarizine
+Celecoxib
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Paracetamol
+Ketotifen Fumarate
+Tramadol Hydrochloride
+Tramadol hydrochloride
+Povidone-Iodine
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Carbamazepine
+Trimetazidine Dihydrochloride
+Trimetazidine Dihydrochloride
+Trimetazidine Dihydrochloride
+Isoniazid / Pyridoxine Hydrochloride
+Verapamil Hydrochloride
+Sitagliptin (as Monohydrate Phosphate) + Metformin Hydrochloride
+Sitagliptin (as Monohydrate Phosphate) + Metformin Hydrochloride
+Sitagliptin (as Monohydrate Phosphate) + Metformin Hydrochloride
+Sitagliptin (as Monohydrate Phosphate) + Metformin Hydrochloride
+Sitagliptin (as Monohydrate Phosphate) + Metformin Hydrochloride
+Carbamazepine
+Carbamazepine
+Carbamazepine
+Carbamazepine
+Carbamazepine
+Esomeprazole (As Sodium)
+Esomeprazole (As Sodium)
+Esomeprazole (As Sodium)
+Esomeprazole (As Sodium)
+Esomeprazole (As Sodium)
+Diclofenac Potassium
+Famotidine
+Tobramycin + Dexamethasone
+Tropicamide + Phenylephrine Hydrochloride
+Carvedilol
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Clopidogrel (As Bisulfate)
+Clopidogrel (As Bisulfate)
+Clopidogrel (as bisulfate )
+Clopidogrel (As Bisulfate)
+Clopidogrel (As Bisulfate)
+Clopidogrel (As Bisulfate)
+Cefixime (as Trihydrate)
+Ampicillin (As Sodium)
+Metronidazole
+Metronidazole
+Metronidazole
+Levofloxacin (as Hemihydrate)
+Levofloxacin (as Hemihydrate)
+Oxacillin (As Sodium)
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Budesonide
+Budesonide
+Salbutamol (As Sulfate)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Chloramphenicol
+Chloramphenicol
+Ranitidine (as Hydrochloride)
+Cefixime (As Trihydrate)
+Salbutamol (as sulfate)
+Salbutamol (as Sulfate)
+Anastrozole
+Anastrozole
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Baclofen
+Sertraline HCl
+Pantoprazole
+Pantoprazole
+Pantoprazole
+Guaifenesin
+Aciclovir
+Aciclovir
+Tranexamic acid
+Isoniazid + Pyridoxine hydrochloride
+Pantoprazole (as Sodium Sesquihydrate)
+Pantoprazole (as Sodium Sesquihydrate)
+Multivitamins + Dextrose
+Multivitamins + Dextrose
+CHLORPHENIRAMINE MALEATE
+Diphenhydramine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Ondansetron
+Phenylpropanolamine Hydrochloride+ Phenylephrine Hydrochloride +Brompheniramine Maleate
+Fenofibrate
+Fenofibrate
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Clarithromycin
+Clarithromycin
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Tacrolimus Monohydrate
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Tacrolimus Monohydrate
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Ranitidine (As Hydrochloride)
+Ranitidine (as hydrochloride)
+Ondansetron (As Hydrochloride)
+Dextromethorphan Hydrobromide
+Dextromethorphan Hydrobromide
+Sodium Fusidate
+Tranexamic Acid
+Dobutamine (As Hydrochloride)
+Fentanyl
+Glimepiride
+Glimepiride
+Cimetidine
+Cimetidine
+Cetirizine Hydrochloride
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Fentanyl
+Fentanyl
+Fentanyl
+Fentanyl
+Irinotecan Hydrochloride
+Irinotecan Hydrochloride
+Esomeprazole (As Sodium)
+Tramadol Hydrochloride
+Tramadol hydrochloride
+Cloxacillin
+Omeprazole
+Omeprazole
+Hydralazine Hydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Gliclazide
+Gliclazide
+Gliclazide
+Carbocisteine
+Carbocisteine
+Chlorpheniramine Maleate + Phenylpropanolamine Hydrochloride + Guaifenesin
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Topiramate
+Glimepiride
+Glimepiride
+Glimeperide
+Glimepiride
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Chlorpheniramine Maleate + Phenylpropanolamine Hydrochloride + Guaifenesin
+Chlorphenamine Maleate + Phenylpropanolamine Hydrochloride + Guaifenesin
+Metoprolol Tartrate
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxin (as axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Ferrous Sulfate (as Heptahydrate)
+Quetiapine (As Fumarate)
+Diclofenac Sodium
+Roxithromycin
+Diclofenac (As Sodium)
+Diclofenac (As Sodium)
+Pantoprazole (As Sodium Sesquihydrate)
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Aciclovir
+Paracetamol
+Paracetamol
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Sultamicillin (as tosilate dihydrate)
+Ceftriaxone (As Sodium)
+Mupirocin
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Tamsulosin hydrochloride
+Cetirizine (As Hydrochloride)
+Cetirizine Hydrochloride
+Multivitamins + Minerals
+Co-Amoxiclav
+Co-Amoxiclav
+Amino Acids + Multivitamins
+Amino acids + Multivitamins
+Amino acids + Multivitamins
+Amino acids + Multivitamins
+Tranexamic Acid
+Tranexamic Acid
+Paracetamol
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ondansetron (as hydrochloride)
+Carbocisteine
+Phenylephrine HCl + Dextromethorphan HBr + Paracetamol
+Azithromycin (as Dihydrate)
+Methylergometrine Maleate
+Methylergometrine Maleate
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (as sulfate)
+Vitamin B-Complex
+Vitamin B-Complex
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Vitamin B-Complex
+Vitamin B-Complex
+Vitamin B-Complex
+Gentamicin Sulfate
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Esomeprazole (as magnesium trihydrate)
+Tobramycin + Dexamethasone
+Tobramycin + Dexamethasone
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Cefaclor (as monohydrate)
+Levothyroxine Sodium
+Rabeprazole sodium
+Rabeprazole Sodium
+Rabeprazole sodium
+Paracetamol + Tramadol Hydrochloride
+RIFAMPICIN
+RIFAMPICIN
+RIFAMPICIN
+Sodium Hyaluronate
+Glimepiride
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Salbutamol (as sulfate)
+Paracetamol
+Paracetamol
+Paracetamol
+Citicoline (As Sodium)
+Finasteride
+Finasteride
+Tranexamic Acid
+Tranexamic Acid
+Paracetamol
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Celecoxib
+Cefradine (As Monohydrate)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Salbutamol (as sulfate) + Guaifenesin
+Celecoxib
+5% Amino Acids + 5% Sorbitol
+5% Amino Acids + 5% Sorbitol
+5% Amino Acids + 5% Sorbitol
+5% Amino Acids + 5% Sorbitol
+Ofloxacin
+Atorvastatin (as Calcium Trihydrate)
+Atorvastatin (As Calcium Trihydrate)
+Atorvastatin (As Calcium Trihydrate)
+Methotrexate
+Leal Vits Forte
+Zervit Plus
+Mega B-Flex
+Meloxicam
+Meloxicam
+Loratadine
+Loratadine
+Mefenamic Acid
+Cefuroxime Sodium
+Methylprednisolone (As Sodium Succinate)
+Tacrolimus (as monohydrate)
+Citicoline
+Citicoline
+DEXAMETHASONE (AS SODIUM PHOSPHATE)
+Clindamycin (as phosphate)
+Clindamycin (as phosphate)
+Clindamycin (As Phosphate)
+Clindamycin(As Phosphate)
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Sildenafil (as citrate)
+Citicoline
+Ibuprofen + Paracetamol
+Ibuprofen + Paracetamol
+Paracetamol + Tramadol Hydrochloride
+Fluconazole
+Fluconazole
+Fluconazole
+Folic Acid
+Folic Acid
+Folic Acid
+Celecoxib
+Citicoline (As Sodium)
+Citicoline
+Paracetamol
+Paracetamol
+Cefpodoxime Proxetil
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as Sodium)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+PIRACETAM
+Salbutamol (As Sulfate)
+Cefuroxime
+Butorphanol (as tartrate)
+Butorphanol (as tartrate)
+VANCOMYCIN (as Hydrochloride)
+Azithromycin
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Clindamycin (As Phosphate)
+Clindamycin (As Phosphate)
+Clindamycin (as phosphate)
+Clindamycin(As Phosphate)
+Mycophenolate Mofetil
+Loperamide Hydrochloride
+Cetirizine Dihydrochloride
+Diclofenac Diethylamine
+Clobetasol (as Propionate)
+Clobetasol (As Propionate)
+Candesartan Cilexetil
+Candesartan Cilexetil
+Esomeprazole (as magnesium trihydrate)
+Candesartan Cilexetil
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Irbesartan + Hydrochlorothiazide
+Bptrol
+None
+Amlodipine (As Besilate)
+Ascorbic Acid
+Multivitamins
+Multivitamins
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Cotrimoxazole
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Cefuroxime (as Axetil)
+Oxacillin (as sodium)
+Citicoline (As Sodium)
+Colchicine
+Colchicine
+Colchicine
+Colchicine
+Irbesartan
+Irbesartan
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Ketotifen (as fumarate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Letrozole
+Montelukast (as Sodium)
+Montelukast (as sodium)
+Lidocaine Hydrochloride + Epinephrine
+Simvastatin
+Simvastatin
+Simvastatin
+Simvastatin
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Hydrocortisone (As Sodium Succinate)
+Hydrocortisone (As Sodium Succinate)
+Hydrocortisone (As Sodium Succinate)
+Hydrocortisone (As Sodium Succinate)
+Enalapril Maleate + Hydrochlorothiazide
+Polymyxin B (as Sulfate) + Neomycin (as Sulfate) + Dexamethasone (as Sodium Phosphate)
+Pplymyxin B (As Sulfate)+ Neomycin (As Sulfate) + Dexamethasone ( As Sodium Phosphate)
+Paracetamol
+Hydrocortisone (As Sodium Succinate)
+Glimepiride
+Glimepiride
+Furosemide
+Furosemide
+Dicycloverine Hydrochloride
+Ceftriaxone (as sodium)
+Bromhexine Hydrochloride
+Bromhexine Hydrochloride
+Thiamine Mononitrate (Vitamins b1) + Pyridoxine Hydrochloride (Vitamin b6) + Cyanocobalamin (Vitamin B12)
+Ethambutol Hydrochloride
+Ethambutol Hydrochloride
+Ethambutol Hydrochloride
+Ethambutol Hydrochloride
+Cefalexin (As Monohydrate)
+Mannitol
+Cefixime (as trihydrate)
+Cyproterone Acetate + Ethinylestradiol
+Pilocarpine Nitrate
+Ceftriaxone (As Sodium)
+Cefuroxime (as Axetil)
+Ceftazidime (As Pentahydrate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Ferrous Sulfate + Folic Acid + Vitamin B -Complex
+Ferrous Sulfate + Folic Acid +Vitamin B Complex
+Ferrous Sulfate + Folic Acid + Vitamin B Complex
+Colchicine
+Chlorpheniramine Maleate + Phenylpropanolamine Hydrochloride + Paracetamol
+Aciclovir
+Sodium Ascorbate
+Amlodipine (as besilate)
+Multivitamins + Minerals
+Chlorpheniramine Maleate + Phenylephrine Hydrochloride + Paracetamol
+Carvedilol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Amino Acids + Sorbitol
+Amino Acids + Sorbitol
+Amino Acids + Sorbitol
+Amino Acids + Sorbitol
+Lincomycin (As Hydrochloride)
+Loratadine
+Atorvastatin (As Calcium)
+Atorvastatin (as Calcium)
+Cetirizine (as Dihydrochloride)
+Epirubicin (As Hydrochloride)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Salbutamol (as sulfate) + Guaifenesin
+Ranitidine (as hydrochloride)
+Piroxicam
+Piroxicam
+Paracetamol
+Paracetamol
+Amikacin (As Sulphate)
+Amikacin (As Sulphate)
+Dl-Alpha Tocopherol Acetate (Vitamin E)
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Dopamine Hydrochloride
+Iron
+Ranitidine (As Hydrochloride)
+Mefenamic Acid
+Levocetirizine Dihydrochloride
+Salbutamol + Ipratropium
+Salbutamol + Ipratropium Bromide
+Celecoxib
+Celecoxib
+Celecoxib
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Diphenhydramine Hydrochloride
+Sildenafil (As Citrate)
+Ketoconazole
+Ketoconazole
+Ketoconazole
+Multivitamins
+Multivitamins (see reverse for formulation)
+Multivitamins
+Multivitamins
+Levofloxacin (As Hemihydrate)
+Dicycloverine Hydrochloride
+Dicycloverine Hydrochloride
+Doxofylline
+Clopidogen
+Paracetamol
+Tranexamic Acid
+Clopidogrel (As Bisulfate)
+Clopidogrel (as bisulfate)
+Clopidogrel (As Bisulfate)
+Isosorbide dinitrate
+Clarithromycin
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (As Sodium)
+Cotrimoxazole
+Cotrimoxazole
+Clarithromycin
+Amikacin (As Sulphate)
+Amikacin (As Sulphate)
+Cilostazol
+Cilostazol
+Cefuroxime (As Sodium)
+Enalapril Maleate
+Enalapril Maleate
+Telmisartan
+Paracetamol
+Paracetamol
+Vitamins B1 + B2 + B12 (see reverse for formulation)
+Amino Acids + Multiviatmins + Minerals
+Amino Acids + Multiviatmins + Minerals
+Amino Acids + Multiviatmins + Minerals
+Amino Acids + Multiviatmins + Minerals
+Cefuroxime (as Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Vitamin B Complex + Ferrous Sulfate + L-Lysine Appetason
+METOPROLOL TARTRATE
+Metoprolol Tartrate
+Piroxicam
+Piroxicam
+Multivitamins + Minerals
+Multivitamins + Minerals
+Ampicillin (As Sodium)
+Ampicillin (As Sodium)
+Multivitamins
+Multivitamins + Buclizine Hydrochloride
+Cotrimoxazole
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Sildenafil (As Citrate)
+Cefalexin (As Monohydrate)
+Pipearcillin (As Sodium) + Tazobactam (As Sodium)
+Clarithromycin
+Cefixime (as trihydrate)
+Doxycycline (As Hydrochloride)
+Doxycycline (As Hydrochloride)
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Cotrimoxazole
+Candesartan Cilexetil
+Candesartan Cilexetil
+Candesartan Cilexetil
+Candesartan Cilexetil
+Candesartan Cilexetil
+Candesartan Cilexetil
+Vitamin B1 + Vitamin B6 +Vitamin B12
+Vitamin B1 + Vitamin B6 + Vitamin B12
+Vitamin B1 + Vitamin B6 + Vitamin B12
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Esomeprazole (As Sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Invanz
+Hyoscine-N-Butylbromide
+Bicalutamide
+Bicalutamide
+Acarbose
+Salbutamol (as Sulfate) + Bromhexine Hydrochloride + Guaifenesin
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Ketorolac Trometamol
+Esomeprazole (As Sodium)
+Atorvastatin (As Calcium)
+Iron Sucrose (Iron Iii Hydroxide Sucrose Complex)
+Losartan Potassium
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Citicoline (As Sodium)
+Citicoline (as Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Oxytocin
+Atorvastatin (as calcium)
+Thiamine Mononitrate (Vit. B1) +Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Potassium Chloride
+LEVETIRACETAM
+Imipenem + Cilastatin Sodium
+Ursodeoxycholic Acid
+Ranitidine
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ketorolac Trometamol
+Ketorolac Trometamol
+Valproic Acid
+Valproic Acid
+Valproic Acid
+Valproic Acid
+Levofloxacin (As Hemihydrate)
+Methotrexate
+Ascorbic Acid
+Spironolactone
+Spironolactone
+Spironolactone
+Pantoprazole
+Pantoprazole (as sodium)
+Pantoprazole
+Meloxicam
+Meloxicam
+Meloxicam
+Salbutamol (as sulfate)
+Salbutamol (as Sulfate)
+Salbutamol (as Sulfate)
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Salbutamol (As Sulfate)
+Salbutamol (as sulfate) + Ipratropium Bromide
+Salbutamol (as Sulfate)+ Ipratropium Bromide
+Salbutamol (as sulfate ) + Ipratropium bromide
+Salbutamol (as sulfate) + Ipratropium Bromide
+Salbutamol (as Sulfate) + lpratropium Bromide
+Colchicine
+Colchicine
+Aceclofenac
+Aceclofenac
+Aceclofenac
+Hydroxyzine Hydrochloride
+Hydroxyzine Hydrochloride
+Furosemide
+Losartan Potassium + Hydrochlorithiazide
+Losartan Potassium + Hydrochlorothiazide
+Cefaclor
+Losartan Potassium
+Losartan Potassium
+Enalapril Maleate + Hydrochlorothiazide
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Atorvastatin (As Calcium)
+Betamethasone (As Valerate)
+Betamethasone (As Valerate)
+Ciprofloxacin
+Ciprofloxacin
+Finasteride
+Valproic Acid
+Valproic Acid
+Valproic Acid
+Valproic Acid
+Azithromycin (As Dihydrate)
+Losartan Potassium
+Telmisartan
+Spironolactone
+Spironolactone
+Hydrochlorothiazide
+Dopamine Hydrochloride
+Dopamine Hydrochloride
+Dopamine Hydrochloride
+Dopamine Hydrochloride
+Dopamine Hydrochloride
+Dopamine Hydrochloride
+Ceftriaxone (As Sodium)
+Ceftriaxone As Sodium
+Ceftriaxone (As Sodium)
+Ceftriaxone As Sodium
+Ceftriaxone (As Sodium)
+Etoricoxib
+Betahistine Hydrochloride
+Salmeterol (As Xinafoate) + Fluticasone Propionate 25Mcg/250Mcg Metered Dose Inhaler
+Salmeterol (as xinafoate) + Fluticasone Propionate
+TACROLIMUS
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (As Besilate)
+Amlodipine (as Besilate)
+Paracetamol + Phenylephrine Hydrochloride
+Betahistine Hydrochloride
+Finasteride
+Azithromycin (As DIhydrate)
+Azithromycin (As Dihydrate)
+Etoricoxib
+Paracetamol
+Multivitamins + Minerals
+Montelukast (as Sodium)
+Cetirizine Hydrochloride
+Meloxicam
+Cefixime trihydrate
+Cefixime trihydrate
+Cefixime Trihydrate
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Escitalopram (as oxalate)
+Escitalopram (as oxalate)
+Escitalopram (As Oxalate)
+Sertraline (as hydrochloride)
+Levofloxacin (as hemihydrate)
+Levofloxacin (as hemihydrate)
+Telmisartan
+Telmisartan
+Omeprazole
+Omeprazole
+CEFUROXIME (AS AXETIL)
+Cefuroxime (As Axetil)
+Cefuroxime (as axetil)
+Cefuroxime (As Axetil)
+Hyoscine (as N-Butylbromide)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Domperidone
+L-Asparaginase
+Cefuroxime As Sodium
+Cefuroxime As Sodium
+Cefuroxime (As Sodium)
+Cefuroxime As Sodium
+LOSARTAN POTASSIUM
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Hydralazine Hydrochloride
+Hydralazine Hydrochloride
+L-Asparaginase
+Citicoline (as Sodium)
+Ceftazidime (As Pentahydrate)
+Imipenem + Cilastatin
+Quetiapine (as fumarate)
+Quetiapine (As Fumarate)
+Telmisartan
+Telmisartan
+Gabapentin
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Doxorubicin hydrochloride
+Doxorubicin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin
+Vildagliptin
+Vildagliptin
+Vildagliptin
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Multivitamins+ Chlorella Growth Factor (CGF)+ Lysine+Taurine+Zinc (as Sulfate Heptahydrate)
+Metronidazole
+Celecoxib
+Celecoxib
+Celecoxib
+Salbutamol (As Sulfate) + Ipratropium Bromide
+Multivitamins
+Multivitamins
+Piroxicam
+Acarbose
+GLIMEPIRIDE
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Levetiracetam
+Olmesartan Medoxomil
+Cefpodoxime (as proxetil)
+Fluorouracil
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid (as Calcium Ascorbate) + Zinc (Zinc Gluconate)
+Citicoline (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Clarithromycin
+Clarithromycin
+Escitalopram (As Oxalate)
+Escitalopram (As Oxalate)
+Finasteride
+Propranolol Hydrochloride
+Escitalopram (As Oxalate)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Losartan potassium
+Ambroxol
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Potassium Citrate
+Paclitaxel
+Ketoanalogies + Essential Amino Acids
+Haloperidol
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Multivitamins
+Multivitamins
+Dicycloverine Hydrochloride
+Isoniazid + Pyridoxine Hydrochloride
+Levetiracetam
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Esomeprazole (As Sodium)
+Esomeprazole (as Sodium)
+Esomeprazole (As Sodium)
+Esomeprazole (As Sodium)
+Mometasone Furoate (as monohydrate)
+Cefuroxime (as axetil)
+LOSARTAN POTASSIUM + HYDROCHLOTHIAZIDE
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Irbesartan
+Ceftriaxone (as sodium)
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Betamethasone + Dexchlorpheniramine Maleate
+Betamethasone + Dexchlorpheniramine Maleate
+Betamethasone + Dexchlorpheniramine Maleate
+Etoricoxib
+Clopidogrel (as bisulfate)
+CALCITRIOL
+Bupivacaine hydrochloride in 8% Dextrose
+Bupivacaine Hydrochloride In 8% Dextrose
+Bupivacaine Hydrochloride In 8% Dextrose
+Paclitaxel
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Esomeprazole (As Magnesium Trihydrate)
+Ibuprofen + Paracetamol
+Omeprazole
+Omeprazole
+Omeprazole
+Loratadine
+Capecitabine
+Capecitabine
+Midazolam
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Cefixime (as Trihydrate)
+Naproxen Sodium
+Prenisolone
+Ascorbic Acid
+Ascorbic Acid
+Levetiracetam
+Atorvastatin (As Calcium) + Amlodipine (As Besilate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as Trihydrate)
+Vitamin B1 + Vitamin B6 + Vitamin B12
+Ambroxol Hydrochloride
+Ascorbic Acid
+Etoposide
+Ceftazidime (As Pentahydrate)
+Clindamycin (As Hydrochloride)
+Sertraline (as hydrochloride)
+Sertraline (As Hydrochloride)
+Captopril
+Captopril
+Cisplatin
+Cisplatin
+Cisplatin
+Pantoprazole (as Sodium Sesquihydrate) + Domperidone
+Pantoprazole (as Sodium Sesquihydrate) + Domperidone
+Colchicine
+Hydroxyurea
+Itraconazole
+Itraconazole
+Aluminum Hydoxide + Magnesium Hydroxide
+Aluminum Hydroxide + Magnesium Hydroxide
+Tamsulosin Hydrochloride
+Quetiapine (as fumarate)
+Omeprazole
+Omeprazole
+Omeprazole
+Ketorolac Trometamol
+Cefuroxime
+Allopurinol
+Allopurinol
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as Sodium)
+Ketotifen (as hydrogen fumarate)
+Zoledronic Acid (as monohydrate)
+Ondansetron Hydrochloride
+Prednisolone
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin Hydrochloride
+Ciprofloxacin (As Hydrochloride)
+Omeprazole
+Omeprazole
+Cotrimoxazole
+Cotrimoxazole
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Simvastatin
+Calcium Ascorbate + Zinc
+Citicoline (as sodium)
+Cefuroxime (As Axetil)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Dextrose In Water
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Naproxen Sodium
+Levetiracetam
+Levetiracetam
+Oxytocin
+Oxytocin
+Oxytocin
+Oxytocin
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Vitamin B Complex
+Thiamine Mononitrate (Vit B1) + Pyridoxine HCl (Vit. B6) + Cyanocobalamin (Vit. B12)
+Anastrozole
+Bisacodyl
+Paracetamol + Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Ofloxacin
+Esomeprazole Magnesium
+Esomeprazole Magnesium
+Tamoxifen Citrate
+Olanzapine
+Paracetamol
+Paracetamol
+Atorvastatin (As Calcium) + Amlodipine (As Besilate)
+Levocetirizine Hydrochloride
+Levocetirizine Hydrochloride
+Oxaliplatin
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Celecoxib
+Paracetamol
+Paracetamol
+Paracetamol
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as sodium)
+Omeprazole (As Sodium)
+Omeprazole (as sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (as Sulfate)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Zinc
+Zinc
+Imatinib (as mesilate)
+Imatinib (as mesilate)
+Escitalopram (as oxalate)
+Zoledronic Acid (as monohydrate)
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as sodium)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Fenofibrate
+Fenofibrate
+Co-Amoxiclav
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Azithromycin (as dihydrate)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefuroxime (As Axetil)
+5% Dextrose in 0.3% Sodium Chloride
+Prostera
+Teragen
+Terazosin (As Hydrochloride Dihydrate)
+Cefuroxime (as Sodium)
+Cefuroxime Sodium
+Cefuroxime (As Sodium) 750 Mg Powder For Injection (Im / Iv)
+5% Dextrose In 0.9% Sodium Chloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Methyldopa (as Sesquihydrate)
+Methyldopa (as sesquihydrate)
+Methyldopa (as sesquihydrate)
+Ascorbic Acid
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Norepinephrine (As Bitartrate)
+Norepinephrine (As Bitartrate)
+Norepinephrine (As Bitartrate)
+Norepinephrine (As Bitartrate)
+Losartan Potassium + Hydrochlorothiazide
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Salbutamol (as Sulffate)
+Racecadotril
+Racecadotril
+Racecadotril
+Racecadotril
+Racecadotril
+Racecadotril
+Racecadotril
+Ceftriaxone (As Sodium)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ampicillin (as Sodium)
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+LOSARTAN POTASSIUM + HYDROCHLOROTHIAZIDE
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Rifampicin + Isoniazid
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Cloxacillin (As Sodium)
+Valsartan + Hydrochlorothiazide
+Hydrocortisone (as sodium succinate)
+Cefixime (As Trihydrate)
+Valsartan
+Citicoline (as sodium)
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Multivitamins + Iron + Lysine
+Multivitamins + Iron + Lysine
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Cefixime (as trihydrate)
+Valsartan
+Valsartan
+Valsartan
+Guaifenesin + Chlorphenamine Maleate + Phenylephrine HCl
+Guaifenesin + Chlorphenamine Maleate + Phenylephrine Hydrochloride
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Zoledronic Acid (as monohydrate)
+Zoledronic Acid (as monohydrate)
+Zoledronic Acid (as monohydrate)
+Zoledronic Acid (as monohydrate)
+Zoledronic Acid (as Monohydrate)
+Zoledronic Acid (as monohydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (as hemihydrate)
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Azithromycin  (as Dihydrate)
+Azithromycin (as dihydrate)
+Esomeprazole (as magnesium trihydrate)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Nystatin
+Aztreonam
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Guaifenesin + Chlorpheniramine Maleate + Phenylpropanolamine Hydrochliride
+GUAIFENESIN + CHLORPHENAMINE MALEATE + PHENYLPROPANOLAMINE
+Amphotericin B
+Metoclopramide (as hydrochloride)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Atorvastatin (as calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Prednisolone Sodium Phosphate
+Hypromellose
+Multivitamins+Iron
+Cefpodoxime (as proxetil)
+Ambroxol Hydrochloride
+Amlodipine (as besilate)
+Cefpodoxime (as Proxetil)
+Cyclophosphamide
+Cyclophosphamide
+Aspirin
+GLIMEPIRIDE
+Paracetamol + Tramadol Hydrochloride
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Cetirizine (as Hydrochloride)
+Cetirizine (as Hydrochloride)
+Levofloxacin (as hemihydrate)
+Ferrous Sulfate Heptahydrate
+Valsartan + Hydrochlorothiazide
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Losartan Potassium
+Sildenafil (as Citrate)
+Sildenafil (as Citrate)
+Cefixime
+Pantoprazole (as sodium sesquihydrate)
+Paracetamol
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Calcium (as Carbonate)
+Calcium (as Carbonate)
+Chlorphenamine Maleate
+Chlorphenamine Maleate
+Phenylpropanolamine Hydrochloride + Guaifenesin
+Paracetamol
+Paracetamol
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Etoricoxib
+Etoricoxib
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Sevelamer Carbonate
+Glimepiride + Metformin Hydrochloride
+Pioglitazone (as hydrochloride)
+Pioglitazone (As Hydrochloride)
+Pioglitazone (As Hydrochloride)
+Pioglitazone (as hydrochloride)
+Oxacillin (As Sodium)
+Glibenclamide
+Cefpodoxime (as Proxetil)
+Ibuprofen
+Ibuprofen
+Ibuprofen
+Vitamin B Complex + Vitamin E with Folic Acid
+Chlorhexidine
+Ferrous Sulfate
+Ferrous Sulfate
+Ferrous Sulfate
+Bortezomib
+Tranexamic Acid
+Cefdinir
+Iron (as Ferrous Sulfate) + Folic Acid
+Iron (as Ferrous Sulfate) + Folic Acid
+Iron + Folic Acid
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Cefixime (as trihydrate)
+Multivitamins + Minerals
+Amoxicillin Trihydrate
+Amoxicillin (As Trihydrate)
+Ibuprofen + Paracetamol
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Ambroxol Hydrochloride
+Ibuprofen
+Amoxicillin Trihydrate
+Amoxicillin Trihydrate
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Ketotifen Fumarate
+Ketotifen Fumarate
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Omeprazole
+Omeprazole
+Omeprazole
+Dexamethasone
+Dexamethasone
+Diphenhydramine Hydrochloride
+Metoclopramide (as Hydrochloride)
+Lactulose
+Orlistat
+Carboplatin
+Carboplatin
+Carboplatin
+Carboplatin
+Carboplatin
+Carboplatin
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Dicycloverine Hydrichloride
+Dicycloverine hydrochloride
+Metronidazole (as Benzoate)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Ipratropium Bromide + Salbutamol (As Sulfate)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Procaterol Hydrochloride
+Procaterol Hydrochloride
+Montelukast (as sodium)
+Montelukast (as Sodium)
+Levetiracetam
+0.9% Sodium Chloride
+Vitamin B1+Vitamin B6+Vitamin B12
+Tramadol Hydrochloride
+Candesartan Cilexetil + Hydrochlorothiazide
+Zinc Gluconate Trihydrate (equivalent to 30mg elemental Zinc)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Tramadol Hydrochloride
+Clarithromycin
+Clarithromycin
+Pantoprazole (as sodium sesquihydrate)
+Olanzapine
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Cyclophosphamide
+Cyclophosphamide
+Cyclophosphamide
+Cyclophosphamide
+Cyclophosphamide
+Celecoxib
+Celecoxib
+Celecoxib
+Hydrochlorothiazide
+Sultamicillin (as tosylate)
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Diphenhydramine
+Diphenhydramine
+Cinnarizine
+Cinnarizine
+Fenofibrate
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Iron (as ferrous sulfate)
+Iron (as ferrous sulfate)
+Aluminum Hydroxide Magnesium Carbonate
+Aluminum Hydroxide Magnesium Carbonate
+Aluminum Hydroxide + Magnesium Hydroxide
+Mefenamic Acid
+Mefenamic Acid
+Cefdinir
+Cinnarizine
+Levofloxacin (as hemihydrate)
+Esomeprazole (as sodium)
+Ketotifen (as hydrogen fumarate)
+Cyclophosphamide
+Cyclophosphamide
+Cyclophosphamide
+Paclitaxel
+Betahistine hydrochloride
+Atorvastatin (as Calcium)
+Domperidone (as maleate)
+Montelukast (As Sodium)
+Montelukast (as sodium)
+Co-Amoxiclav
+Montelukast (As Sodium)
+Co-Amoxiclav
+Finasteride
+Cilostazol
+Docetaxel (as trihydrate)
+Levofloxacin (as hemihydrate)
+Paclitaxel
+Trimetazidine Hydrochloride
+Trimetazidine Hydrochloride
+Caspofungin (as acetate)
+Caspofungin (as acetate)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Sitagliptin + Metformin Hydrochloride
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Citicoline (as sodium)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as axetil)
+Dutasteride
+Chloramphenicol (As Palmitate)
+Chloramphenicol (As Palmitate)
+Mesna
+Mesna
+Sultamicillin (As Tosylate)
+Sultamicillin (As Tosylate)
+Multivitamins + Minerals (see reverse)
+Ampicillin(as sodium)+Sulbactam(as sodium)
+Ampicillin(as sodium)+Sulbactam(as sodium)
+Multivitamins + Zinc + Lysine + Taurine + Chlorella Growth Factor
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as axetil)
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+d-Alpha Tocopheryl Acetate (Vitamin E)
+d-Alpha Tocopheryl Acetate (Vitamin E)
+Cotrimoxazole
+Isosorbide Dinitrate
+Mefenamic Acid
+Tamoxifen (as citrate)
+Bicalutamide
+Bicalutamide
+Betamethasone
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Esomeprazole (as magnesium)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride 5 Mg/5 Ml Syrup
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Sertraline Hydrochloride
+Metronidazole
+Calcium Folinate
+Calcium Folinate
+Calcium Folinate
+Methylprednisolone
+Methylprednisolone
+Lactulose
+Lactulose
+Levofloxacin (as hemihydrate)
+Levofloxacin (as hemihydrate)
+Methylprednisolone
+Ramipril
+Telmisartan
+Cefuroxime (as Axetil)
+Cefuroxime (As Axetil)
+Diosmin + Hesperidin
+Tranexamic Acid
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Quetiapine (as Fumarate)
+Moxifloxacin hydrochloride
+Multivitamins + Minerals
+Cloxacillin (As Sodium)
+Ciprofloxacin (as Hydrochloride)
+Cilostazol
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Multivitamins+Taurine+Lysine+Chlorella Growth Factor+Zinc
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+Salmeterol Xinafoate + Fluticasone Propionate
+Furosemide
+Cotrimoxazole (Butterscotch Flavor)
+Diclofenac Sodium
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+Bupivacaine (as Hydrochloride)
+Bupivacaine Hydrochloride (as monohydrate) + Dextrose
+Salbutamol (As Sulfate)
+Losartan Potassium + Amlodipine Besilate
+Irinotecan hydrochloride (as trihydrate)
+Tramadol (as hydrochloride)
+Tramadol (as hydrochloride)
+Tramadol (as hydrochloride)
+Clindamycin (As Hydrochloride)
+Clindamycin (As Hydrochloride)
+Clindamycin (As Hydrochloride)
+Clindamycin As Hydrochloride)
+Metronidazole
+Metronidazole
+Metronidazole
+CEFTRIAXONE (AS SODIUM)
+CEFTRIAXONE (AS SODIUM)
+CEFTRIAXONE (AS SODIUM)
+Olanzapine
+Olanzapine
+Olanzapine
+Olanzapine
+Olanzapine
+Methyldopa (as sesquihydrate)
+Methyldopa (as sesquihydrate)
+Metronidazole
+METRONIDAZOLE
+Metronidazole (as benzoate)
+Bromhexine Hydrochloride
+Aciclovir
+Multivitamins + Minerals
+Nystatin
+Captopril
+Cefalexin
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Etoricoxib
+Etoricoxib
+Celecoxib
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Etoricoxib
+Bisacodyl
+Bisacodyl
+Multivitamins + Minerals
+Timolol (as Maleate)
+Timolol (as Maleate)
+Timolol (as Maleate)
+Timolol (as Maleate)
+Timolol (as Maleate)
+Timolol (as Maleate)
+Celecoxib
+Celecoxib
+Cefuroxime (as Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (as Axetil)
+Guaifenesin
+Guaifenesin
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride 2.5 Mg/Ml Syrup (Oral Drops)
+Cetirizine Dihydrochloride 2.5 Mg/Ml Syrup (Oral Drops)
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Bleomycin (as sulfate)
+Ranitidine (as hydrochloride)
+Bortezomib
+Bortezomib
+Bortezomib
+Bortezomib
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Valproate Semisodium (as Valproic Acid)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Guaifenesin + Salbutamol (as sulfate)
+Celecoxib
+Celecoxib
+Pyrantel Pamoate
+Pyrantel Pamoate
+Fluorouracil
+Fluorouracil
+Carboplatin
+Carboplatin
+Tamsulosin Hydrochloride
+Acetylcysteine
+Acetylcysteine
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Methylprednisolone
+Menadione Sodium Bisulfate
+Menadione Sodium Bisulfate
+Phenylpropanolaminehydrochloride
+Finasteride
+Finasteride
+Ifosfamide
+Ifosfamide
+Gliclazide
+Cetirizine Hydrochloride
+Thiopental Sodium
+Co-Amoxiclav
+Co-Amoxiclav
+Loratadine
+Loratadine
+Multivitamins + Fluoride + Iron (see reverse for complete formulation)
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Metronidazole
+METRONIDAZOLE
+Co-Amoxiclav
+DORZOLAMIDE (as hydrochloride)
+CEFPIROME (AS SULFATE)
+Carvedilol
+Omeprazole (As Sodium)
+Chloramphenicol
+Chloramphenicol
+Phenytoin Sodium
+Phenytoin Sodium
+CEFOPERAZONE (AS SODIUM)
+Ceftazidime (as Pentahydrate)
+Amlodipine (As Besilate)
+Cefepime (As Hydrochloride)
+OLANZAPINE
+Olanzapine
+Riscare ODT
+Risdin ODT
+Multivitamins + Minerals
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Multivitamins+Lysine Hydrochloride
+Multivitamins + Lysine Hydrochloride
+Metronidazole (as Benzoate)
+Metronidazole (as Benzoate)
+Metronidazole (As Benzoate)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Cloxacillin (As Sodium)
+Cefuroxime (As Axetil)
+Cefoxitin (as Sodium)
+Cefoxitin (as Sodium)
+Cefoxitin (as Sodium)
+Cefoxitin (as Sodium)
+Ferrous Sulfate
+Iron (as Ferrous Sulfate)
+Ofloxacin
+OMEPRAZOLE
+Azithromycin (as dihydrate)
+ESOMEPRAZOLE
+Esomeprazole (as sodium)
+Esomeprazole (as sodium)
+Biodiastase 2000 III+ Lipase I+ Panprosin SS+ Pancellase SS+ Pancreatin Enteric Coated Granules+ Ursodeoxycholic Acid+ Simethicone
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Phospholipids + Multivitamins
+Diclofenac Sodium
+Diclofenac Sodium
+Paracetamol
+Paracetamol
+Paracetamol
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Cefixime (as trihydrate)
+Metformin Hydrochloride
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Loperamide Hydrochloride
+Metformin Hydrochloride
+Mycophenolate Mofetil
+Amlodipine (As Besilate)
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Levofloxacin (as Hemihydrate)
+Ibuprofen
+Ibuprofen
+Paracetamol 500 mg Tablet
+Naproxen
+Naproxen
+Isoxsuprine Hydrochloride
+Isoxsuprine Hydrochloride
+Clopidogrel (As Bisulfate)
+Clopidogrel (as bisulfate)
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Pioglitazone (As Hydrochloride)
+Pioglitazone (As Hydrochloride)
+Triamcinolone Acetonide
+Cilotazol
+Cilostazol
+Cilostazol
+Cilostazol
+Cilostazol
+Cilostazol
+Cilostazol
+Piozulin 15
+Omeprazole(As Sodium)
+Nozal
+Proxymetacaine Hydrochloride
+Co-Amoxiclav
+Diphenhydramine Hydrochloride
+Famotidine
+Mebendazole
+Glimepiride
+Omeprazole (As Sodium)
+Cimetidine
+Cimetidine
+Citicoline
+Valsartan + Hydrochlorothiazide
+Allopurinol
+Allopurinol
+Clindamycin (as Hydrochloride)
+Clindamycin (as hydrochloride)
+CEFIXIME
+CEFIXIME
+CEFIXIME
+CEFIXIME
+CEFIXIME
+CEFIXIME
+CEFIXIME
+Ascorbic Acid
+Ascorbic Acid
+Amlodipine (as Besilate) / Losartan Potassium
+Amlodipine (as Besilate) + Losartan Potassium
+Amlodipine (as Besilate) + Losartan Potassium
+Amlodipine (as Besilate) + Losartan Potassium
+Amlodipine (as Besilate) / Losartan Potassium
+Amlodipine (as Besilate) + Losartan Potassium
+Amlodipine (as Besilate) + Losartan Potassium
+Amlodipine (as Besilate) + Losartan Potassium
+Irbesartan
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Co-Amoxiclav
+Co-Amoxiclav
+Perindopril Erbumine
+Diclofenac Sodium
+Diclofenac Sodium
+Oral Rehydration Salt
+Oral Rehydration Salt
+Omeprazole
+Omeprazole
+Docetaxel (as Trihydrate)
+NAPROXEN (AS SODIUM)
+Tramadol Hydrochloride
+Celecoxib
+Tetracycline Hydrochloride
+Nifedipine
+Nifedipine
+Capecitabine
+Capecitabine
+Irbesartan
+Irbesartan
+Irbesartan / Hydrochlorothiazide
+Norfloxacin
+Dipyrimadole
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dimenhydrinate
+Co-Amoxiclav
+Co-Amoxiclav
+Clotrimazole + Beclomethasone Dipropionate
+Betamethasone+Gentamicin+ Clotrimazole
+Betamethasone (as dipropionate) + Gentamicin (as sulfate) + Clotrimazole
+Itraconazole
+Omeprazole
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Valsartan + Hydrochlorothiazide
+Carvedilol
+Carvedilol
+Carvedilol
+Carvedilol
+Cefuroxime (as axetil)
+Pioglitazone (As Hydrochloride)
+Cefuroxime (as Sodium)
+Cefuroxime (As Axetil)
+CETIRIZINE DIHYDROCHLORIDE
+CETIRIZINE DIHYDROCHLORIDE
+CETIRIZINE DIHYDROCHLORIDE
+CETIRIZINE DIHYDROCHLORIDE
+CETIRIZINE DIHYDROCHLORIDE
+Paracetamol
+Pyrazinamide
+Pyrazinamide
+Pyrazinamide
+Betamethasone Dipropionate
+Cotrimoxazole
+Cotrimoxazole (See reverse for formulation)
+Losartan Potassium
+Gliclazide
+Gliclazide
+Gliclazide
+Gliclazide
+Ciprofloxacin (As Hydrochloride)
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Ascorbic Acid
+Ascorbic Acid
+Cefradine
+Cefalexin (as monohydrate)
+Cefuroxine (as axetil)
+Cefuroxime (As Axetil)
+Albendazole
+Vitamin B Complex
+Olmesartan Medoxomil + Hydrochlorothiazide
+Albendazole
+Dextromethorphan Hydrobromide + Guaifenesin + Phenylephrine Hydrochloride (Pomegranate Flavor)
+Docetaxel (as trihydrate)
+Etoricoxib
+Ceftriaxone (as sodium)
+Cefuroxime (as sodium)
+Amlodipine (as Besilate)
+Zinaf-500
+Pramipexole Hydrochloride
+Pramipexole Hydrochloride
+OLANZAPINE
+OLANZAPINE
+Amlodipine (as Besilate)
+Methylprednisolone (as sodium succinate)
+Quetiapine (as Fumarate)
+Cefalexin (as Monohydrate)
+ATORVASTATIN (AS CALCIUM)
+ATORVASTATIN (AS CALCIUM)
+ATORVASTATIN (AS CALCIUM)
+ATORVASTATIN (AS CALCIUM)
+Carvedilol
+Ofloxacin + Prednisolone Sodium Phosphate
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Dicycloverine Hydrochloride
+Dicycloverine Hydrochloride
+Dicycloverine Hydrochloride
+Cimetidine
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Cisplatin
+Cisplatin
+Cisplatin
+Mefenamic Acid
+Mefenamic Acid
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Pantoprazole (as sodium)
+Pantoprazole (as sodium)
+Epirubicin hydrochloride
+Tramadol Hydrochloride + Paracetamol
+Losartan Potassium + Amlodipine (as besilate)
+Mycophenolate Mofetil
+Mebendazole
+None
+None
+Hyqdroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Domperidone
+Alendronate Sodium + Cholecalciferol (Vitamin D3)
+Co-Amoxiclav
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Cefuroxime (As Sodium)
+Telmisartan
+Ampicillin (As Sodium)
+Telmisartan
+Nystatin
+Nystatin
+Omeprazole
+Escitalopram (as oxalate)
+Escitalopram (as oxalate)
+Cefepime (As Hydrochloride)
+Dextromethorphan Hydrobromide
+Dried Ferrous Sulfate
+Iron
+Ampicillin (As Sodium)
+Atorvastatin (as calcium)
+Atorvastatin (as Calcium)
+Esomeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as sodium)
+Metoprolol Tartrate
+Metoprolol Tartrate
+Escitalopram (as oxalate)
+Haloperidol
+Amphotericin B
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Pantoprazole (as Sodium sesquihydrate)
+Pantoprazole (as Sodium sesquihydrate)
+Bisacodyl
+Ampicillin (As Sodium)
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Phospholipids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Carboplatin
+Vitamin B-Complex + Iron + Buclizine Hydrochloride
+Vitamin B-Complex + Iron + Buclizine Hydrochloride
+Vitamin B-Complex + Iron + Buclizine Hydrochloride
+Vitamin B-Complex + Iron + Buclizine Hydrochloride
+Vitamin B-Complex + Iron + Buclizine Hydrochloride
+Omeprazole
+Omeprazole
+Omeprazole
+Isoxsuprine Hydrochloride
+PROPOFOL
+PROPOFOL
+PROPOFOL
+PROPOFOL
+Benzylpenicillin
+Simvastatin
+Simvastatin
+Simvastatin
+Ceftriaxone (As Soidum)
+Clarithromycin
+Cefuroxime Sodium
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Pantoprazole (as Sodium Sesquihydrate)
+Pantoprazole (as Sodium Sesquihydrate)
+Pantoprazole (as Sodium Sesquihydrate)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Omeprazole Sodium
+Omeprazole Sodium
+Omeprazole Sodium
+Losartan Potassium
+Simvastatin
+Simvastatin
+Orlistat
+Orlistat
+Aluminum Hydroxide + Magnesium Hydroxide
+Aluminum Hydroxide + Magnesium Hydroxide
+Sitagliptin
+Sitagliptin
+Sitagliptin
+Sitagliptin
+Sitagliptin
+Sitagliptin
+Finasteride
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Lidocaine (As Hydrochloride) / Epinephrine (As Bitartrate)
+Meloxicam
+Meloxicam
+Meloxicam
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Losartan Potassium
+Losartan Potassium
+Latanoprost + Timolol Maleate
+Losartanpotassium + Hydrochlorothiazide
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Miconazole Nitrate
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Levofloxacin (as hemihydrate)
+Famotidine
+Pantoprazole (as sodium sesquihydrate)
+Erythromycin (as stearate)
+Erythromycin (As Ethylsuccinate)
+Multivitamins + Minerals + Lecithin + Korean Ginseng + Aloe Extract
+Multivitamins + Minerals + Lecithin + Korean Ginseng + Aloe Extract
+Multivitamins + Minerals + Lecithin + Korean Ginseng + Aloe Extract
+Dextromethorphan Hydrobromide + Guaifenesin + Phenylephrine Hydrochloride
+Dextromethorphan Hydrobromide + Guaifenesin + Phenylephrine Hydrochloride
+Imipenem + Cilastatin (As Sodium)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Cilostazol
+Cefuroxime (as sodium)
+Ifosfamide
+Ifosfamide
+Ifosfamide
+Ifosfamide
+Acarbose
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Dutasteride
+Cyclophosphamide
+CYCLOPHOSPHAMIDE
+Citicoline (As Sodium)
+Cyclophosphamide
+TEMOZOLOMIDE
+Cefepime (As Hydrochloride)
+Omeprazole
+Omeprazole
+Ofloxacin
+Hypromellose
+Candesartan (As Cilexetil)
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Clopidogrel (as bisulfate)
+Ciprofloxacin Hydrochloride
+Ciprofloxacin Hydrochloride
+Ciprofloxacin Hydrochloride
+Rabeprazole Sodium
+Rabeprazole Sodium
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Amoxicillin (as sodium) + Potassium clavulanate (as clavulanic acid)
+METHOREXATE
+Clarithromycin
+Clarithromycin
+Doxofylline
+Doxofylline
+Clopidogrel (as Bisulfate)
+Levocetirizine Dihydrochloride
+Pantoprazole
+Pantoprazole (as sodium)
+Pantoprazole (as sodium)
+Ursodeoxycholic Acid
+Tamsulosin Hydrochloride
+Salmeterol Xinafoate + Fluticasone Propionate
+Salmeterol Xinafoate + Fluticasone Propionate
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) 200 Mg/200 Mg/1 Mg Capsule
+Carvedilol
+Carvedilol
+Benzylpenicillin
+Atorvastatin (as calcium)
+Atenolol
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + ZInc. (as Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Clomifene Citrate
+Aciclovir
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Carbamazepine
+Carbamazepine
+Carbamazepine
+Carbamazepine
+Carbamazepine
+Pantoprazole (As Sodium)
+Pantoprazole (as sodium)
+Pantoprazole (as sodium)
+Felodipine
+Ondansetron (as hydrochloride dihydrate)
+Doxycycline (As Hyclate)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Methylprednisolone (as sodium succinate)
+Methylprednisolone (as sodium succinate)
+Methylprednisolone (as sodium succinate)
+Cefuroxime (as axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as axetil)
+Mupirocin
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Erythromycin
+Fluoxetine ( as Hydrochloride )
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Losartan Potassium + Hydrochlorothiazide
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Dobutamine (As Hydrochloride)
+Ampicillin (as sodium)
+Linezolid
+Linezolid
+Linezolid
+Ciprofloxacin Hydrochloride
+Ciprofloxacin Hydrochloride
+Acetylcysteine
+Tigecycline
+Felodipine
+Tigecycline
+Paracetamol
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Co-Amoxiclav
+Co-Amoxiclav
+Bupivacaine Hydrochloride In 8% Dextrose
+Carvedilol
+Doxofylline
+Doxofylline
+Doxofylline
+Doxofylline
+Doxofylline
+Doxofylline
+Doxofylline
+Doxofylline
+Latanoprost
+Latanoprost
+Ipratropiumb Bromide + Salbutamol (As Sulfate)
+Fenofibrate
+Fenofibrate
+Escitalopram (As Oxalate)
+Escitalopram (As Oxalate)
+Cefpodoxime (as proxetil)
+Cefpodoxime (as proxetil)
+Metronidazole
+Memantine Hydrochloride
+Memantine Hydrochloride
+Memantine Hydrochloride
+Levofloxacin (as Hemihydrate)
+Levetiracetam
+Salbutamol
+Benzalkonium Chloride + Cetrimide
+CO-AMOXICLAV
+CO-AMOXICLAV
+CO-AMOXICLAV
+Captopril
+Oxacillin Sodium
+Oxacillin (As Sodium)
+Ceftazidime (as Pentahydrate)
+Olanzapine
+Fusidic Acid
+Hypromellose
+Clotrimazole
+Carbimazole
+Rifampicin + Isoniazid + Pyrazinamide
+Cefixime (Anhydrous)
+Tranexamic Acid
+Mupirocin
+Mupirocin
+Mupirocin
+Mupirocin
+Citicoline (as sodium)
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Pantoprazole (As Sodium)
+Cefdinir
+Carboplatin
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Albendazole
+Clobetasol Propionate
+Clobetasol Propionate
+Cefuroxime (as Axetil)
+Omeprazole + Sodium bicarbonate
+Sodium Cromoglicate
+Xylometazoline Hydrochloride
+Xylometazoline Hydrochloride
+Cefalexin (as Monohydrate)
+Gabapentin
+Cetirizine Dihydrochloride
+Pheniramine Maleate + Naphazoline Hydrochloride
+Enalapril (As maleate)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Guaifenesin + Bromhexine HCl + Salbutamol (as sulfate)
+GUAIFENESIN + BROMHEXINE HCl + SALBUTAMOL (AS SULFATE)
+Betamethasone (dipropionate) / Gentamicin (as sulfate)
+Betamethasone / Gentamicin
+Isosorbide-5-Mononitrate
+Simvastatin
+Simvastatin
+Betamethasone (as dipropionate) + Clotrimazole + Gentamicin (as sulfate)
+Rocuronium Bromide
+Betamethasone (as dipropionate) + Betamethasone (as sodium phosphate)
+Dextromethorphan Hydrobromide + Guaifenesin + Phenylephrine Hydrochloride (Strawberry Flavor)
+Losartan Potassium
+Clarithromycin
+Clarithromycin
+Losartan Potassium
+Ezetimibe
+Ezetimibe + Simvastatin
+Ezetimibe + Simvastatin
+Ezetimibe + Simvastatin
+Entecavir
+Etoricoxib
+Candesartan (As Cilexetil)
+Tranexamic Acid
+Ceftriaxone (As Sodium)
+Esomeprazole (as magnesium)
+Esomeprazole (as magnesium)
+Gemcitabine (as Hydrochloride)
+Metoprolol Tartrate
+Gemcitabine (as hydrochloride)
+Vincristine Sulfate
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Promethazine Hydrochloride
+Salbutamol (As Sulfate) + Guaifenesin
+Guaifenesin + Salbutamol (as sulfate)
+Cefuroxime (As Sodium)
+Salbutamol (as Sulfate)
+Paracetamol
+Aripiprazole
+ARIPIPRAZOLE
+Aripiprazole
+Aripiprazole
+ARIPIPRAZOLE
+Mefenamic Acid
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (as Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Carboplatin
+Cilostazol
+Rebamipide
+Domperidone
+Ampicillin (as Sodium)
+Ampicillin (as sodium)
+Glimepiride
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Ciprofloxacin (as hydrochloride)
+Salbutamol Sulfate
+Salbutamol Sulfate
+Clonidine
+Clonidine
+Clonidine
+Ranitidine (as Hydrochloride)
+CO-AMOXICLAV
+LEVOFLOXACIN (as hemihydrate)
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Donepezil Hydrochloride
+Donepezil Hydrochloride
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Clonidine (as hydrochloride)
+Oxytocin
+Oxytocin
+Oxytocin
+Oxytocin
+Silymarin + Multivitamins
+Silymarin + Multivitamins
+Furosemide
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Biperiden Hydrochloride
+Bisacodyl
+Montelukast (As Sodium)
+Gemcitabine (as hydrochloride)
+Gemcitabine (as hydrochloride)
+Carbamazepine
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Clindamycin (As Phosphate)
+Calcitriol
+Calcitriol
+Esomeprazole (as magnesium)
+Buclizine hydrochloride + Vitamin B-Complex + Iron (see reverse for formulation)
+Buclizine hydrochloride + Vitamin B-Complex + Iron (see reverse for formulation)
+Buclizine Hydrochloride + Vitamin B-Complex + Iron
+Vitamin B-Complex + Iron
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Esomeprazole (As Sodium)
+Aciclovir
+Aciclovir
+Ketorolac Trometamol
+Ketorolac Tromethamine (As Tromethamol)
+Cinnarazine
+Ketoanalogues + Essential Amino Acids
+Loratadine
+Ubidecarenone (Coenzyme Q10)
+Cefixime (as trihydrate)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Telmisartan
+Amino Acids
+Isosorbide dinitrate
+Isosorbide dinitrate
+Cetirizine dihydrochloride
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (as Trihydrate)
+Tamoxifen (as citrate)
+Alfuzosin Hydrochloride
+Alfuzosin Hydrochloride
+Tamsulosin hydrochloride
+Tamsulosin hydrochloride
+Chloramphenicol
+Guaifenesin
+Chloramphenicol (As Palmimate)
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Vitamin B1+B6+B12
+Vitamin B1+B6+B12
+Bortezomib
+Bortezomib
+SITAGLIPTIN (as phosphate monohydrate)
+Sitagliptin (As Phosphate Monohydrate)
+SITAGLIPTIN (as phosphate monohydrate)
+Sitagliptin (As Phosphate Monohydrate)
+Diclofenac Sodium
+Diclofenac Sodium
+Potassium Chloride
+Doxofylline
+Doxofylline
+Betamethasone (as Dipropionate)
+Betamethasone (As Dipropionate)
+Betamethasone Dipropionate + Clotrimazole + Gentamicin Sulfate
+Betamethasone (as Dipropionate) + Clotrimazole + Gentamicin (as Sulfate)
+Irbesartan
+Terbutaline Sulfate
+Isoniazid
+Rosuvastation (as calcium)
+Multivitamins + Minerals + Lysine
+Iron Sucrose
+Spironolactone
+Spironolactone
+Digoxin
+Digoxin
+Glibenclamide
+Cefixime (As Trihydrate)
+Carvedilol
+Vancomycin Hydrochloride
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Mycophenolate mofetil
+MYCOPHENOLATE MOFETIL
+Betahistine (as dihydrochloride)
+Levetiracetam
+Amino Acid + Sorbitol
+Amino Acid + Sorbitol
+Co-Amoxiclav
+Co-Amoxiclav
+Meropenem (As Trihydrate)
+Fluorouracil
+Memantine Hydrochloride
+Dexchlorpheniramine Maleate + Betamethasone
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (As Besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (As Besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan potassium
+Losartan Potassium
+Losartan potassium
+Losartan potassium
+Losartan potassium
+Bisacodyl
+Clindamycin (As Hydrochloride)
+Clindamycin (as hydrochloride)
+Cefotaxime (As Sodium)
+Amoxicillin (as Trihydrate)
+Amoxicillin (As Trihydrate)
+Cetirizine Dihydrochloride
+Ofloxacin
+Ascorbic Acid
+Clindamycin (as phosphate)
+Clindamycin (as Phosphate)
+Amiodarone Hydrochloride
+Clindamycin (As Hydrochloride)
+Clindamycin (as hydrochloride)
+Co-Amoxiclav
+Levofloxacin (as hemihydrates)
+Multivitamins + Glucose
+Co-Amoxiclav
+Co-Amoxiclav
+None
+Methylprednisolone (As Sodium Succinate)
+Methylprednisolone (as sodium Succinate)
+Tamsulosin Hydrochloride
+Gliclazide
+Multivitamins + Calcium
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine citrate
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Zinc Sulfate Monohydrate
+Zinc Sulfate Monohydrate
+Metformin Hydrochloride
+Metformin Hyrochloride
+Metformin Hyrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Anastrozole
+Montelukast (As Sodium) + Levocetirizine (As Dihydrochloride)
+Paracetamol
+Tamsulosin Hydrochloride
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Merophem
+Meropenem (As Trihydrate)
+Nifedipine
+Nifedipine
+Nifedipine
+Ifosfamide
+Ifosfamide
+Ifosfamide
+Cefoxitin (As Sodium)
+Cefuroxime (As Sodium)
+Valsartan
+Atorvastatin (as calcium)
+ATORVASTATIN (AS CALCIUM)
+Colisan-2
+Fenofibrate
+Hyoscine Butylbromide
+Ranitidine (as Hydrochloride)
+Cefuroxime (As Sodium)
+Nystatin
+Nystatin
+Cefuroxime (As Axetil)
+Dibencozide
+Dibencozide
+Clopidogrel (as bisulfate)
+Irinotecan Hydrochloride (As Trihydrate)
+Anastrozole
+Ketoprofen
+Isotretinoin
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Gliclazide
+Gliclazide
+Paracetamol
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Citicoline (As Sodium)
+Diphenhydramine hydrochloride + Phenylpropanolamine hydrochloride
+Acetylcysteine
+ROSUVASTATIN (as calcium)
+ROSUVASTATIN (as calcium)
+Metronidazole
+Paracetamol
+Cefepime (as Hydrochloride)
+Cefazolin (As Sodium)
+Cefazolin (as sodium)
+Propofol
+Pregabalin
+Pregabalin
+Pregabalin
+Pregabalin
+Celecoxib
+Rifampicin + Isoniazid
+Mefenamic Acid
+Ondansetron
+FOLIC ACID
+FOLIC ACID
+FOLIC ACID
+FOLIC ACID
+Esomeprazole (As Magnesium Trihydrate)
+Rabeprazole Sodium
+Ondansetron (As Hydrochloride Dihydrate)
+Ondansetron (As Hydrochloride Dihydrate)
+Pioglitazone (As Hydrochloride)
+Pioglitazone (As Hydrochloride)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Aluminum Hydroxide + Magnesium Hydroxide+ Oxetacaine
+Qualendronic
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Escitalopram
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Metronidazole + Miconazole nitrate
+Betahistine Dihydrochloride
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Methotrexate
+Amoxicillin As Trihydrate
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Amoxicillin As Trihydrate
+Montelukast (As Sodium)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Flugen
+Oxacillin (As Sodium)
+Oxacillin (As Sodium)
+Metformin Hydrochloride
+Metronidazole
+Diclofenac (as sodium)
+Paracetamol
+dl-alpha Tocopheryl Acetate (Vitamin E) + Selenium
+di-alpha Tocopheryl Acetate (Vitamin E) + Selenium Dioxide
+Ascorbic Acid
+Vitamin B Complex
+Nicotine
+Nicotine
+Nicotine
+Glimepiride + Metformin hydrochloride
+Nacel
+Colchicine
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Paracetamol
+Amoxicillin (As Trihydrate)
+Multivitamins + Zinc
+Co- Amoxiclav
+Co-Amoxiclav
+Rofim
+Zefim
+Cefpodoxime (as Proxetil)
+Dobutamine
+Folic Acid
+Glimepiride
+SILVER SULFADIAZINE
+Glimepiride
+Cefradine (As Monohydrate)
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Cloxacillin (as sodium)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Amlodipine (As Besilate) + Losartan Potassium
+Omeprazole (as sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Omeprazole(As Sodium)
+Omeprazole (As Sodium)
+Omeprazole (as sodium)
+Clarithromycin
+Thiamine nitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Nitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Silver Sulfadiazine
+TEMOZOLOMIDE
+TEMOZOLOMIDE
+Cardiocare
+None
+Praziquantel
+Butamirate (as Citrate)
+BUTAMIRATE (AS CITRATE)
+Butamirate (as citrate)
+Butamirate (As Citrate)
+Butamirate (As Citrate)
+Butamirate Citrate
+Butamirate (As Citrate)
+Butamirate (as Citrate)
+GLICLAZIDE
+GLICLAZIDE
+Tramadol Hydrochloride
+Valsartan + Hydrochlorothiazide
+Azithromycin (As Monohydrate)
+Azithroseth
+Chlorphenamine Maleate
+Chlorphenamine Maleate
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Dutasteride
+Ertapenem (As Sodium)
+Clomifene Citrate
+Clomifene Citrate
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Hyoscine-N-Butylbromide
+Zinc (As Sulfate Monohydrate)
+Zinc (As Sulfate Monohydrate)
+Zinc (As Sulfate Monohydrate)
+Zinc (As Sulfate Monohydrate )
+Cetirizine Dihydrochloride
+Montelukast (as sodium)
+Montelukast (As Sodium)
+Telmisartan
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Clonidine Hydrochloride
+Meropenem (as Trihydrate)
+Cefuroxime (As Axetil)
+Guaifenesin + Salbutamol (As Sulfate)
+Neomycin (As Sulfate) + Polymyxin B (As Sulfate) + Bacitracin
+Hypromellose
+Cloxacillin Sodium
+Valsartan
+Valsartan
+Diphenhydramine (as hydrochloride)
+Clonidine Hydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Comnplex
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Amlodipine (as besilate)
+Amlodipine (as Besilate)
+Trimetazidine (As Dihydrochloride)
+Trimetazidine (As Dihydrochloride)
+Rabeprazole Sodium
+Bupivacaine Hydrochloride
+Salmeterol (as xinafoate) + Fluticasone propionate
+Cefepime as (Hydrochloride)
+Cefepime as (Hydrochloride)
+Lidocaine + Benzethonium Chloride
+Montelukast(as sodium)
+Montelukast Sodium
+Paracetamol + Thiamine Mononitrate (Vit B1) + Pyridoxine Hydrochloride (Vit B6) + Cyanocobalamine (Vit B12)
+Lamepil-25
+Tamoxifen (As Citrate)
+Tamoxifen (As Citrate)
+Salmeterol (as xinafoate) + Fluticasone propionate
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Ceftriaxone (as sodium)
+Ceftriaxone (as Sodium)
+Neomycin (as Sulfate) + Polymyxin (as Sulfate) + Bacitracin
+Cefradine (as Monohydrate)
+Trimetazidime Hydrochloride
+Trimetazidine Hydrochloride
+Trimetazidine Hydrochloride
+Gabapentin
+Gabapentin
+Ascorbic Acid
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Clonidine Hydrochloride
+Clonidine hydrochloride
+Enalapril Maleate
+Enalapril Maleate
+Clarithromycin
+Clarithromycin
+Multivitamins + Dextrose
+Valsartan + Amlodipine (As Besilate)
+Valsartan + Amlodipine (As Besilate)
+Co-Amoxiclav
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Ambroxol hydrochloride
+Salbutamol (as Sulfate)
+Salbutamol Sulfate
+Lamotrigine
+Lamepil-100
+Co-Amoxiclav
+Pregabalin
+Co-Amoxiclav
+Co-Amoxiclav
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine Hydrochlorothiazide
+Amlodipine Hydrochlorothiazide
+Amlodipine (as besilate) + Hydrochlorothiazide
+Amlodipine (As Besilate) + Valsartan + Hydrochlorothiazide
+Amlodipine Hydrochlorothiazide
+Loperamide Hydrochloride
+Iron (as Iron Sucrose)
+Iron (as Iron Sucrose)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Ketamine hydrochloride
+Isoxsuprine Hydrochloride
+Isoxsuprine Hydrochloride
+Neostigmine (as Methylsulfate)
+Citicoline (As Sodium)
+Citicoline (as sodium)
+Citicoline (As Sodium)
+Exemestane
+Cefotaxime (As Sodium)
+Multivitamins + Buclizine Hydrochloride + Iron
+Multivitamins + Buclizine Hydrochloride + Iron (as Ferrous sulfate)
+Multivitamins + Buclizine Hydrochloride + Iron (Ferrous Sulfate)
+Multivitamins + Buclizine Hydrochloride + Iron (As Ferrous Sulfate)
+Multivitamins + Buclizine Hydrochloride + Iron (as Ferrous Sulfate)
+Multivitamins + Buclizine Hydrochloride + Iron
+Multivitamins + Buclizine Hydrochloride + Iron (as Ferrous Sulfate)
+Multivitamins + Buclizine Hydrochloride + Iron (as Ferrous Sulfate)
+Ambroxol hydrochloride
+Paracetamol
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Isoxsuprine Hydrochloride
+Isosorbide-5-Mononitrate
+Isosorbide-5-Mononitrate
+Ofloxacin
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Azithromycin (as Dihydrate)
+Clopidogrel (as bisulfate)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Montelukast (As Sodium)
+Propofol
+Ceftazidime (as Pentahydrate)
+Clopidogrel (as bisulfate)
+Docetaxel (As Trihydrate)
+Linezolid
+Sildenafil (as citrate)
+Salbutamol (as sulfate)
+Sildenafil (as citrate)
+Propofol
+Propofol
+Leuprorelin acetate
+Leuprorelin Acetate
+Bupivacaine Hydrochloride In 8% Dextrose
+Pyrazinamide
+Ethambutol Hydrochloride
+Moxifloxacin (as Hydrochloride)
+Phytomenadione
+Multivitamins + Ferrous Fumarate
+Rifampicin + Isoniazid
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol Hydrochloride
+Isoniazid
+Budesonide
+Budesonide
+Medcort
+Asthlon
+Trimetazidine dihydrochloride
+Polymyxin B (As Sulfate) + Neomycin (As Sulfate) + Dexamethasone (As Sodium Phosphate)
+Metformin Hydrochloride
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Metformin Hydrochloride
+Cetirizine Hydrochloride
+Salmeterol (as xinafoate) + Fluticasone propionate
+Salmeterol (as xinafoate) + Fluticasone propionate
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+Salmeterol (As Xinafoate)/Fluticasone Propionate
+Salmeterol (as xinafoate) _ Fluticasone propionate
+Escitalopram (as Oxalate)
+Clotrimazole
+Levocetirizine hydrochloride
+Clarithromycin
+Calcipotriol
+Losartan Potassium
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Moxifloxacin (as hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Cefalexin (As Monohydrate)
+VALSARTAN + AMLODIPINE  (as besilate)
+Cefixime (As Trihydrate)
+Rosuvastatin (As Calcium)
+Loratadine
+Montelukast (as Sodium)
+Ciprofloxacin (As Hydrochloride)
+Cetirizine hydrochloride
+Meropenem (As Trihydrate)
+Isosorbide Dinitrate
+Mayor-40
+Beclometasone Dipropionate
+Beclometasone Dipropionate
+Docetaxel
+Docetaxel
+Docetaxel
+Pregabalin
+Pregabalin
+Pregabalin
+Nimodipine
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Amphotericin B
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Travoprost
+Prednisolone (As Acetate)
+Guaifenesin + Salbutamol
+Salbutamol (as Sulfate) + Guaifenesin
+Nicardipine hydrochloride
+Multivitamins + Iron (see reverse for formulation)
+Multivitamins + Iron
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Clindamycin (as hydrochloride)
+Omeprazole
+Nicarpine Hydrochloride
+Clindamycin (As Phosphate)
+Clindamycin As Phosphate
+Clindamycin (As Phosphate)
+Clindamycin (As Phosphate)
+Clindamycin (as phosphate)
+Clindamycin (as Phosphate)
+Omeprazole
+Omeprazole
+Omeprazole
+Cefoperazone (as Sodium) + Sulbactam (as Sodium)
+Citicoline (as sodium)
+Citicoline (As Sodium)
+Travoprost
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Pantoprazole (as Sodium Sesquihydrate)
+Zinc Sulfate Monohydrate
+Zinc (as sulfate monohydrate)
+Ferrous Sulfate Dried + Folic Acid
+Granisetron Hydrochloride
+Octreotide Acetate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Citicoline (as sodium)
+Betahistine Hydrochloride
+Hyoscine-N-Butylbromide
+HYOSCINE-N-BUTYLBROMIDE
+Hyoscine-N-Butylbromide
+Gentamicin (as Sulfate)
+Entecavir
+Esomeprazole (as Magnesium Trihydrate)
+Esomeprazole (as Magnesium Trihydrate)
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+Gabapentin
+Ursodeoxycholic Acid
+Glimepiride
+Gabapentin
+Midazolam
+LETROZOLE
+Montelukast (as sodium)
+Vitamin B1 + B6 + B12 + Vitamin E
+Vitamin B1 + B6 + B12 + Vitamin E
+CEFUROXIME (AS SODIUM)
+Multivitamins + Iron
+Amlodipine(As Besilate)
+Guaifenesin + Phenylpropanolamine Hydrochloride
+Amlodipine(As Besilate)
+Multivitamins
+Gliclazide
+Moxifloxacin (As Hydrochloride)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Valsartan + Amlodipine (As Besilate)
+Cefalexin (As Monohydrate)
+Multivitamin
+Multivitamins
+Doxofylline
+Doxofylline
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Ambroxol Hydrochloride
+Gabapentin
+Escitalopram (as oxalate)
+Capecitabine
+CIMETIDINE
+Irbesartan
+Irbesartan
+Valsartan
+Pantoprazole (as sodium sesquihydrate)
+Olanzapine
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol
+Rifampicin + Isoniazid + Pyrazinamide+ Ethambutol
+Cefalexin (As Monohydrate)
+Ketorolac Trometamol
+FLUOROMETHOLONE ACETATE
+ACICLOVIR
+Clomifene Citrate
+Clomifene Citrate
+Clomifene Citrate
+Mefenamic Acid
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Pregabalin
+Pregabalin
+Pregabalin
+Ascorbic Acid
+Rifampicin + Isoniazid
+Rifampicin + Isoniazid
+Sitaglitpin (As Phosphate Monohydrate)
+Fulclox
+Bisacodyl
+Carboxymethylcellulose Sodium+Glycerin
+Co-Amoxiclav
+Co-Amoxiclav
+Potassium Chloride
+Potassium Chloride
+Co-Amoxiclav
+Co-Amoxiclav (see reverse for formulation)
+Co-Amoxiclav
+Etoricoxib
+Azithromycin (As Dihydrate)
+Biperiden Hydrochloride
+Biperiden Hydrochloride
+Biperiden Hydrochloride
+Clopidogrel (As Bisulfate)
+Isoxsuprine Hydrochloride
+Atorvastatin (as calcium)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Cefuroxime (as Sodium)
+CEFUROXIME (AS SODIUM)
+Cefuroxime (as Sodium)
+Neostigmine Methylsulfate
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Nicardipine hydrochloride
+Nicardipine Hydrochloride
+Paracetamol+Phenylpropanolamine Hydrochloride+Chlorphenamine Maleate
+Metronidazole (As Benzoate)
+Cefaclor (as monohydrate)
+Diclofenac Sodium
+Paracetamol+Phenylpropanolamine Hydrochloride+Chlorphenamine Maleate
+Sultamicillin (as tosilate dihydrate)
+Sultamicillin (As Tosilate Dihyrate)
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Meropenem
+Meropenem
+Meropenem (As Trihydrate)
+ISOSORBIDE DINITRATE
+CARBAMAZEPINE
+Esomeprazole (As Magnesium)
+Rocuronium Bromide
+Hydrochlorothiazide
+Salbutamol (as sulfate) + Guaifenesin
+Salbutamol (as sulfate) + Guaifenesin
+Gemcitabine (As Hydrochloride)
+Cefalexin(As Monohydrate)
+Multilem+Iron
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cisplatin
+Oxacillin (As Sodium)
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Doxorubicin hydrochloride
+Doxorubicin hydrochloride
+Doxorubicin Hydrochloride
+Dorzolamide (as Hydrochloride) + Timolol (as Maleate)
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ferrous Sulfate
+Metoclopramide (as hydrochloride)
+Ciprofloxacin Hydrochloride
+Betahistine Hydrochloride
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Salbutamol (As Sulfate)
+Metronidazole
+Sitaglitpin (As Phosphate Monohydrate)
+Cefpodoxime (as proxetil)
+Iron (as Ferric Hydroxide Sucrose Complex)
+Iron (As Ferric Hydroxide Sucrose Complex)
+Iron (As Ferric Hydroxide Sucrose Complex)
+Iron (As Ferric Hydroxide Sucrose Complex)
+Iron (As Ferric Hydroxidesucrose Complex)
+Iron (As Ferric Hydroxidesucrose Complex) 20Mg/Ml (100Mg/5Ml)Solution For Injection (Iv)
+Iron (As Ferric Hydroxidesucrose Complex)
+Thiamine HCl (Vitamin B1) + Pyridoxine HCl (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Vitamin B1+B6+B12 100Mg/100Mg/1Mg Per 3Ml Soln. For Inj.
+Thiamine Hydrochloride (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocoballamin (Vit. B12)
+Losartan Potassium
+Losartan Potassium
+Cetirizine Hydrochloride
+Atorvastatin (as calcium)
+GUAIFENESIN/AMMONIUM CHLORIDE/SODIUM CITRATE/CHLORPHENAMINE MALEATE
+Paracetamol + Tramadol Hydrochloride
+Cefepime as (Hydrochloride)
+Cefepime
+Cefepime as (Hydrochloride)
+Cefepime as (Hydrochloride)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Sitaglitpin (As Phosphate Monohydrate)
+Sitaglitpin (As Phosphate Monohydrate)
+Sitaglitpin (As Phosphate Monohydrate)
+Sitagliptin (As Phosphate Monohydrate)
+Sitaglitpin (As Phosphate Monohydrate)
+Sitaglitpin (As Phosphate Monohydrate)
+Sodium Chloride
+Sodium Citrate/Dextromethorphan Hydrobromide/Phenylpropanolamine Hydrochloride/Chlorphenamine Maleate
+Montelukast (As Sodium)
+Montelukast (as Sodium)
+Montelukast (As Sodium)
+Trimetazidine Hydrochloride
+Sodium Citrate + Dextromethorphan Hydrobromide + Maleate
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Co-Amoxiclav
+Nystatin
+Paracetamol+Phenylephrine Hydrochloride+Dextromethorphan Hydrobromide
+Dexamethasone (as sodium phosphate)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Aripiprazole
+Aripiprazole
+Amoxicillin (as trihydrate)
+TACROLIMUS
+TACROLIMUS
+Cefaclor (as monohydrate)
+Cloxacillin (as sodium)
+Cefuroxime (As Axetil)
+Potassium Chloride
+Potassium Chloride
+Potassium Chloride
+Prednisolone Sodium Phosphate
+Ambroxol Hydrochloride
+Phenylpropanolamine Hydrochloride
+Ambroxol Hydrochloride
+Digoxin
+Co-Amoxiclav
+Co-Amoxiclav
+Hyoscine Butylbromide
+Ranitidine (as hydrochloride)
+Ceterizine Hydrochloride
+Paracetamol+Ibuprofen
+Ibuprofen
+Ibuprofen
+Nalbuphine Hydrochloride
+Nalbuphine Hydrochloride
+Aripiprazole
+Aripiprazole
+Aripiprazole
+Aripiprazole
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Aripiprazole
+Aripiprazole
+Zolpidem Tartrate
+Tramadol Hydrochloride
+Multivitamins + Minerals
+Etoricoxib
+Etoricoxib
+Cilostazol
+Oxaliplatin
+Oxaliplatin
+Ciprofloxacin
+Olanzapine
+Olanzapine
+Olanzapine
+Olanzapine
+Aluminum Hydroxide + Magnesium Hydroxide
+Quetiapine (As Fumarate)
+Risperidone
+Risperidone
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Clomifene Citrate
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Metoclopramide (as hydrochloride)
+Metoclopramide (as hydrochloride)
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine
+Losartan (As Potassium)
+Losartan (As Potassium)
+Losartan Potassium
+Losartan (As Potassium)
+Losartan (As Potassium)
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Tranexamic Acid
+Phenylpropanolamine Hydrochloride
+Folic Acid
+Folic Acid
+Loperamide Hydrchloride
+Letrozole
+Anastrozole
+Esomeprazole (as sodium)
+Pantoprazole (as sodium sesquihydrate)
+Cefuroxime(Axetil)
+Losartan Potassium
+Zinc Sulfate Monohydrate
+Ferrous Sulfate Heptahydrate
+Ampicillin (as Sodium)
+Dorzolamide (as Hydrochloride) + Timolol (as Maleate)
+Olopatadine (as Hydrochloride)
+Timolol Maleate
+Fluoxetine (As Hydrochloride)
+Fluoxetine
+Sodium Chloride
+Dicycloverine Hydrochloride
+Diphenhydramine Hydrochloride
+Leuprorelin Acetate
+Leuprorelin Acetate
+Tramadol Hydrochloride
+Zoldac 0.25
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Ibuprofen
+Levetiracetam
+Fenofibrate
+Ebastine
+Cloxacillin (as sodium)
+Cloxacillin (As Sodium)
+Telmisartan + Amlodipine (as Besilate)
+Telmisartan + Amlodipine (as Besilate)
+Telmisartan + Amlodipine (as besilate)
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hcl (Vit. B6) + Cyanocobalamin (Vit. B12)
+Brimonidine Tartrate + Timolol Maleate
+Brimonidine Tartrate + Timolol (As Maleate)
+Orlistat
+D-Alpha Tocopherol (Vitamin E)
+Imipenem + Cilastatin (as sodium)
+Vitamin B Complex
+Vitamin B Complex
+Gentamicin (As Sulfate)
+Dextromethorphan Hydrobromide
+Levothyroxine (as sodium)
+Levothyroxine (as sodium)
+Levothyroxine (as sodium)
+Amoxicillin (As Trihydrate)
+Ascorbic Acid
+Zoledronic acid
+Zoledronic Acid
+Zoledronic Acid
+Bortezomib
+Bortezomib
+Multivitamins + Minerals + Folic Acid
+Multivitamins + Minerals + Panax ginseng C.A. Meyer (korean ginseng) + Royal Jelly
+Timolol (as maleate)
+Esomeprazole (as magnesium)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Sildenafil (as Citrate)
+Zoldac 0.5
+Oxcarbazepine
+Desloratdine
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Multivitamins+Iron
+Ambroxol Hydrochloride
+Clindamycin (as Phosphate)
+Bupivacaine hydrochloride in 8% Dextrose
+Phenylpropanolamine Hydrochloride
+Grosartan
+Losartan Potassium
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Escitalopram (as Oxalate)
+Cilostazol
+Valsartan
+Valsartan
+Valsartan
+D-Alpha Tocopherol (Vitamin E)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Isoniazid + Pyridoxine Hydrochloride
+Furazolidone
+Co-Amoxiclav
+Comoxi DS
+Irbesartan + Hydrochlorothiazide
+Salmeterol (As Xinafoate) / Fluticasone Propionate
+Salmeterol (As Xinafoate) / Fluticasone Propionate
+Salbutamol Sulfate
+Vancomycin (As Hydrochloride) 500 mg Powder For Solution For IV Injection
+Vancomycin (as hydrohloride)
+Vancomycin (As Hydrochloride) 1 G Powder For Solution For Injection (Iv)
+Efavirenz + Emtricitabine + Tenofovir disoproxil (as fumarate)
+Emtricitabine + Tenofovir disoproxil fumarate
+Efavirenz/ Lamivudine/ Tenofovir Disoproxil Fumarate
+Piperacillin + Tazobactam
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Colchicine
+Domperidone (As Maleate)
+Losartan (As Potassium)
+Irbesartan + Hydrochlorothiazide
+Mecobalamin
+Phytomenadione
+Risperidone
+Risperidone
+Spironolactone
+Spironolactone
+Spironolactone
+Spironolactone
+Spironolactone
+Spironolactone
+Spirinolactone
+Spironolactone
+Norepinephrine (as Bitartrate)
+Doxycycline Hyclate
+Pantoprazole (as Sodium Sesquihydrate)
+Vitamin B-Complex + Silymarin
+Mupirocin
+Ambroxol Hydrochloride
+Ciprofloxacin (As Hydrochloride)
+Aminoral
+Keto Analogues + Essential Amino Acids
+Omeprazole
+Esomeprazole (As Magnesium)
+Esomeprazole (As Magnesium)
+AmLodipine Besylate
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Losartan Potassium + Hydrochlorothiazide
+Saztan-H
+Memantine Hydrochloride
+Sodium Ascorbate + Zinc
+Ascorbic Acid + Zinc
+Methyldopa
+Furosemide
+Clopidogrel (as Bisulfate)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Vancomycin (as hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (as hydrochloride)
+Vancomycin (As Hydrochloride)
+Metformin hydrochloride
+Metformin Hydrochloride
+MEMANTINE HYDROCHLORIDE
+Irinotecan Hydrochloride Trihydrate
+Vancomycin (As Hydrochloride)
+Vancomycin (as Hydrochloride)
+Rifampicin
+Rifampicin
+Ceftazidime (as Pentahydrate)
+Haloperidol
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Haloperidol
+Oxytocin
+BUCLIZINE Hydrochloride + VITAMIN B COMPLEX + IRON
+Cetirizine hydrochloride + Phenylephrine hydrochloride
+Metfromin Hydrochloride
+Dobutamine (As Hydrochloride)
+Ambroxol Hydrochloride
+Folic Acid
+Folic Acid
+Cefixime (As Trihydrate)
+Multivitamins
+Rivastigmine
+Omeprazole
+Omeprazole
+Rivastigmine
+Rivastigmine
+Piperacillin(as sodium) + Tazobactam (as sodium)
+Ceftazidime
+Ceftazidime
+Zoledronic Acid
+Ibuprofen + Paracetamol
+Colecalciferol
+Dabigatran Etexilate
+Dabigatran Etexilate
+Dabigatran Etexilate (as mesilate)
+Amitriptyline Hydrochloride
+Fluconazole
+Phenylephrine Hydrochloride + Paracetamol
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Telmisartan + Amlodipine (as Besilate)
+Etoricoxib
+Etoricoxib
+Metformin hydrochloride
+Pantoprazole (as sodium sesquihydrate)
+Rabeprazole Sodium
+Carbamazine
+Carbamazepine
+Carbamazepine
+OXCARBAZEPINE
+Pizotifen + Vitamin B Complex
+Ferrous Fumarate + Folic Acid
+Fluconazole
+Paracetamol + Oprhenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Ascorbic Acid
+Allopurinol
+Oxcarbazepine
+Pizotifen + Vitamin B-Complex
+Allopurinol
+Orlistat
+Alpha Ketoanalogues + Essential Amino Acids
+Alpha Ketoanalogues + Essential Amino Acids
+Azithromycin (As Dihydrate)
+Azeemycin
+Azithromycin Monohydrate
+Clarithromycin
+Tadalafil
+Ceftriaxone (as sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Megaclav
+Multivitamins
+Cilostazol
+Cilostazol
+Amoxicillin (As Trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Ondansetron (As Hydrochloride)
+Clarithromycin
+Cefuroxime (as axetil)
+Cefixime (As Trihydrate)
+Levetiracetam
+Bupivacaine Hydrochloride + Dextrose
+Bupivacaine Hydrochloride + Dextrose
+Amitriptyline Hydrochloride
+Atenolol
+Atenolol
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Cilostazol
+Methyl Salicylate/ Camphor/ Menthol
+Gefitinib
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+ATORVASTATIN (AS CALCIUM)
+ATORVASTATIN (AS CALCIUM)
+Imiquimod
+Ceftriaxone (As Sodium)
+Paracetamol
+Paroxetine (as Hydrochloride)
+Citicoline (as Sodium)
+Vitamin B1+B6+B12+Lysine Hydrochloride+Buclizine Hydrochloride
+Doxorubicin Hydrochloride
+Cilostazol
+Lactulose
+Lactulose
+Nicotine Polacrilex
+Cefuroxime (As Sodium)
+Atenolol
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Bisacodyl
+Carbocistine
+Irbesartan
+Irbesartan
+Irbesartan
+Naproxen
+Pregabalin
+Pregabalin
+Propranolol
+Propranolol Hydrochloride
+Cefaclor (as Monohydrate)
+Amlodipine (as besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Cefaclor (as Monohydrate)
+Pantoprazole (as Sodium Sesquihydrate)
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+CEFUROXIME (AS AXETIL)
+Telmisartan + Hydrochlorothiazide
+Folic Acid
+Donepezil Hydrochloride
+Lamotrigine
+Escitalopram (as Oxalate)
+Fusidic Acid
+Fusidic Acid
+Fusidic Acid
+Carbamazepine
+Mefenamic Acid
+Gemcitabine Hydrochloride
+Salbutamol
+Cefaclor (As Monohydrate)
+Fluticasone + Salmeterol
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Fluticasone + Salmeterol
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Docetaxel
+Calcium Ascorbate
+Sildenafil (As Citrate)
+Sildenafil (As Citrate)
+Donepezil Hydrochloride
+Mupirocin
+Mupirocin
+Mupirocin
+Mupirocin
+Mupirocin
+Atorvastatin (as Calcium)
+Montelukast (As Sodium)
+Rosuvastatin (as Calcium)
+Valsartan
+Valsartan
+Aspirin
+Clotrimazole
+Hydrocortisone (As Sodium Succinate)
+Clindamycin (As Hydrochloride)
+Cefaclor (As Monohydrate)
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Sildenafil (as citrate)
+Sildenafil (as citrate)
+Citicoline (As Sodium)
+Co-Amoxiclav
+Rosuvastatin (as Calcium)
+Gliclazide
+Pregabalin
+Pregabalin
+Irbesartan
+Propranolol Hydrochloride
+Ranitidine (as hydrochloride)
+Prednisone
+Aciclovir
+Clozapine
+Atracurium besilate
+Atracurium besilate
+Bortezomib
+Gemcitabine Hydrochloride
+Vitamin B Complex
+Clozapine
+Amoxicillin
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Levofloxacin(As Hemihydrate)
+Ciprofloxacin (As Lactate)
+Nicotine Polacrilex
+Chlorpheniramine Maleate + Paracetamol + Phenylephrine
+Clozapine
+Rosuvastatin (As Calcium)
+Ascorbic Acid
+Atenolol
+Betamethasone (as Valerate) + Gentamicin (as Sulfate) + Tolnaftate + Clioquinol
+Ascorbic Acid
+Calcium Lactate
+Ambroxol Hydrochloride
+Amlodipine (As Besilate)
+Calcium Carbonate
+Ceftriaxone (As Sodium)
+Valsartan + Hydrochlorothiazide
+Levetiracetam
+Levetiracetam
+Sodium Hyaluronate
+Sodium Hyaluronate
+Sodium Hyaluronate
+Cefepime (As Hydrochloride)
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Clarithromycin
+Amsoclar DS
+Cymicin
+Zolpidem tartrate
+Metformin Hydrochloride
+Metformin Hydrochloride
+Diclofenac Potassium
+Ambroxol Hydrochloride
+Paracetamol + Phenylpropanolamin Hcl + Chlorphenamine Maleate
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Moxifloxacin (As Hydrochloride)
+Moxifloxacin (As Hydrochloride)
+Cefuroxime (As Axetil)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Amitriptyline Hydrochloride
+Ascorbic Acid
+Ursodeoxycholic Acid
+Zinc (as Zinc sulfate monohydrate)
+Anastrozole
+Bortezomib
+Metronidazole
+Valsartan + Hydrochlorothiazide
+Levodopa + Carbidopa
+Levodopa + Carbidopa
+Vitamin Bcomplex + Iron + Folic Acid
+Vitamin Bcomplex + Iron + Folic Acid
+Vitamin Bcomplex + Iron + Folic Acid
+Vitamin Bcomplex + Iron + Folic Acid
+Vitamin Bcomplex + Iron + Folic Acid
+Vitamin Bcomplex + Iron + Folic Acid
+Vitamin B Complex+Iron+Folic Acid
+Multivitamins + Iron + Folic Acid
+Ascorbic Acid (See reverse side of the CPR)
+Doxycycline (As Hyclate)
+Dobutamine (As Hydrochloride)
+Dobutamine (As Hydrochloride)
+Dobutamine (as hydrochloride)
+Spironolactone
+Biperiden Hydrochloride
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Acetylcysteine
+Acetylcysteine
+Acyclovir
+Aciclovir
+Telmisartan + Hydrochlorothiazide
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Clozapine
+Bisoprolol Fumarate
+Butamirate Citrate
+Cefotiam (as Hydrochloride)
+Ascorbic Acid
+Tobramycin
+Amoxicilline (As Trihydrate)
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-B-Sulfate
+Metformin Hydrochloride
+Epirubicin Hydrochloride
+Tramadol Hydrochloride
+Amlodipine (as besilate)
+Amlodipine (As Besilate)
+Tolnaftate + Clioquinol + Gentamicin Sulfate + Betamethasone Valerate
+Multivitamins + Minerals + Buclizine
+Iron as Ferrous Sulfate Heptahydrate
+Entecavir
+Leuprorelin acetate
+Glibenclamide
+Glibenclamide
+Paracetamol + Phenylephrine HCl + Chlorphenamine Maleate
+Paracetamol + Phenylephrine HCl + Chlorphenamine Maleate
+Mefenamic Acid
+Bicalutamide
+Bicalutamide
+Bicalutamide
+Tiotropium (as bromide, monohydrate)
+Amoxicillin (as trihydrate)
+Tiotropium (as bromide)
+Mecobalamin
+Levofloxacin (as hemihydrate)
+Desloratadine
+Formoterol Fumarate
+Formoterol Fumarate
+Crotamiton
+Escitalopram (As Oxalate)
+Escitalopram (as oxalate)
+Atorvastatin+Ezetimibe
+Omeprazole
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Levothyroxine Sodium
+Levothyroxine Sodium
+Levothyroxine Sodium
+Levothyroxine Sodium
+Levothyroxine Sodium
+Aripiprazole
+Aripiprazole
+Sertraline (as hydrochloride)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Haloperidol
+Lidocaine Hydrochloride + Epinephrine (As Bitartrate)
+Lidocaine Hydrochloride + Epinephrine (As Bitartrate)
+Lidocaine Hydrochloride + Epinephrine (As Bitartrate)
+Lidocaine Hydrochloride + Epinephrine (As Bitartrate)
+Atorvastatin (as Calcium)
+Colchicine
+Loperamide Hydrochloride
+Hyoscine-N-Butylbromide
+Multivitamins + Iron (as Ferrous fumarate)
+Multivitamins + Zinc (As Sulfate Monohydrate)
+Chlorpheniramine Maleate + Phenylephrine Hydrochloride
+Bromhexine Hydrochlrodie
+Chlrophenamine Maleate
+Rosuvastatin (As Calcium)
+Paracetamol
+Thiamine Mononitrate (Vitamin B1)+Pyridoxine Hydrochloride (Vitamine B6)+Cyanocobalamine (vitamin B12)
+Amoxicillin (As Trihydrate)
+Metronidazole
+Atorvastatin (As Calcium)
+Telmisartan
+Telmisartan
+Epinephrine
+Ketorolac Tromethamine
+Digoxin
+Quetiapine (As Fumarate)
+Quetiapine (as Fumarate)
+Quetiapine (As Fumarate)
+Metoclopramide (as hydrochloride)
+Clindamycin (As Hydrochloride)
+Clindamycin (As Hydrochloride)
+Guaifenesin / Salbutamol (as Sulfate)
+Guaifenesin + Salbutamol (as sulfate)
+Simvastatin
+Salbutamol (as Sulfate)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Simvastatin
+VALSARTAN + HYDROCHLOROTHIAZIDE
+Acetylcysteine
+Acetylcysteine
+Iron Sucrose
+Iron (As Iron Sucrose)
+Iron (As Iron Sucrose)
+Iron (As Iron Sucrose)
+Iron (As Iron Sucrose)
+Cefalexin (As Monohydrate)
+Cefalexin (as Monohydrate)
+Ferrous Sulfate Heptahydrate
+Enalapril Maleate
+Ciprofloxacin (as Hydrochloride)
+Multivitamins Solution For Iv Infusion
+Multivitamins
+Multivitamins
+Rostatin-20
+Ceftriaxone sodium
+Citicoline Sodium
+Mupirocin
+Meropenem Trihydrate . Dried Sodium Carbonate
+Paracetamol
+Ascorbic Acid + Zinc
+Multivitamins + Minerals
+Thiamine hydrochloride
+Isoniazid
+Isoniazid
+Isoniazid
+Sultamicillin (As Tosylate Dihydrate)
+Domperidone
+Escitalopram Oxalate
+Escitalopram Oxalate
+Escitalopram Oxalate
+Escitalopram (As Oxalate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Anastrozole
+Anastrozole
+Anastrozole
+Anastrozole
+Iron (as Ferrous sulfate)
+Metronidazole
+Ketoanalogues + Essential Amino Acids
+Dorzolamide (As Hydrochloride) + Timolol (As Maleate)
+Olapatadine (as hydrochloride)
+Ipratropium Bromide + Salbutamol (As Sulfate)
+Fenoterol hydrobromide + Ipratropium bromide (as monohydrate)
+Moxifloxacin
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Alendronic Acid (as Alendronate Sodium)
+Olanzapine
+Levofloxacin (as Hemihydrate)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Celecoxib
+Gemcitabine (as hydrochloride)
+Gemcitabine (as hydrochloride)
+Celecoxib
+Trimetazidine (As Hydrochloride)
+Telmisartan + Hydrochlorothiazide
+Oxcarbazepine
+Oxcarbazepine
+Azithromycin (As Dihydrate)
+Ambroxol Hydrochloride
+Ambroxol hydrochloride
+Omeprazole
+Omeprazole
+Nitrofurantoin Macrocrystals
+Nitrofurantoin Macrocrystals
+Levofloxacin
+Ciprofloxacin
+Ofloxacin
+Fluconazole
+Co-Amoxiclav
+Co-Amoxiclav
+Amoxicillin (As Trihydrate)
+Iron (As Sucrose)
+Levofloxacin
+Paracetamol + Phenylephrine Hydrochloride
+Sertraline (As Hydrochloride)
+Isosorbide Mononitrate
+Isosorbide Mononitrate
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Ciprofloxacin (as hydrochloride)
+Escitalopram (as oxalate)
+Amlodipine (As Besilate) + Losartan Potassium
+Amlodipine (As Besilate) + Losartan Potassium
+Amlodipine (As Besilate) + Losartan Potassium
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Cloxacillin (as Sodium)
+VALSARTAN + HYDROCHLOROTHIAZIDE
+Co-Amoxiclav
+Co-Amoxiclav
+Thiamine Mononitrate + Pyridoxine Hydrochloride + Cyanocobalamin
+Cloxacillin (as sodium)
+Norepinephrine (as bitartrate)
+Captopril
+SILDENAFIL (AS CITRATE) + PANAX GINSENG
+Olmesartan Medoxomil
+Cloxacillin (as sodium)
+Prednisone
+Glibenclamide
+Naproxen Sodium
+Diclofenac Sodium
+Salbutamol (As Sulfate) + Bromhexine + Guaifenesin
+Multivitamins + Lysine Hydrochloride + Buclizine Hydrochloride
+Glimepiride
+Zinc (As Zinc Sulfate Monohydrate)
+Zinc (as Zinc sulfate monohydrate)
+Ambroxol Hydrochloride
+Chlorpheniramine Maleate
+Carbocisteine
+Hyoscine N-Butylbromide
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Rosuvastatin
+Rosuvastatin (as Calcium)
+Dopamine Hydrochloride
+Gliclazide
+Doxofylline
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Melphalan
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Rivastigmine
+Rivastigmine
+Pemetrexed (As Disodium Hemipentahydrate)
+Pemetrexed (As Disodium Hemipentahydrate)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Aluminum / Magnesium Hydroxide
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Risperidone
+Risperidone
+Orlistat
+Glycerin
+Glycerin
+Pregabalin
+Pregabalin
+Pantoprazole (As Sodium)
+Irbesartan
+Neomycin Sulfate + Polymyxin B Sulfate + Fluocinolone Acetonide
+Nimesulide
+Alverine  citrate
+Lysozyme Hydrochloride
+Clobetasol Propionate
+Aciclovir
+Hydrocortisone acetate
+Tolnaftate + Chlorhexidine Hydrochloride
+Prednisolone
+Prednisolone Acetate
+Ambroxol Hydrochloride
+Adapalene
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Piracetam
+Cefalexin (as monohydrate)
+Hydrocortisone
+Hydrocortisone
+Hydrocortisone
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Zinc Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Zinc Sulfate Monohydrate)
+Carvedilol
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Losartan Potassium
+Losartan Potassium
+Atorvastatin (As Calcium)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Valproic Acid
+Valproic Acid
+Valproic Acid
+Domperidone
+Diclofenac Sodium
+Adapalene + Clindamycin (as phosphate)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Fluticasone propionate
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ketoconazole And Zinc Pyrithione
+Cholecalciferol + Calcium (as Carbonate)
+Ascorbic Acid (As Calcium Ascorbate)
+Sodium Bicarbonate
+Sodium Bicarbonate
+Cefazolin (as sodium)
+Cefazolin (As Sodium)
+Tramadol Hydrochloride
+Pregabalin
+Pregabalin
+Orlistat
+Orlistat
+Cetirizine Hydrochloride
+Miconazole
+Glimepiride + Metformin hydrochloride
+Vitmin B-Complex
+Amlodipine (as besilate)
+Furosemide
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Oxaliplatin
+Oxaliplatin
+Oxaliplatin
+Paracetamol
+Co-Amoxiclav
+0.5% Bupivacaine (as hydrochloride) in 8% Dextrose
+Diclofenac Sodium
+Diclofenac sodium
+Rosuvastatin Calcium
+Ursodeoxycholic acid
+Rosuvastatin (As Calcium)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Dexamethasone (as sodium phosphate)
+Silver Sulfadiazine
+Silver Sulfadiazine
+Ascorbic Acid
+Omeprazole
+Vitamin B-Complex + Iron
+Calcium (as Lactate)
+Vitamins B9 + B12 + Iron + ZInc (see reverse formulation)
+dl-Alpha Tocopheryl Acetate
+Ibuprofen
+Butamirate Citrate
+Mefenamic Acid
+Zinc (as Sulfate Monohydrate)
+Cefalexin (as Monohydrate)
+Amoxicillin (as trihydrate)
+Tobramycin
+Tobramycin
+Trimetazidine
+AZITHROMYCIN (as dihydrate)
+Multivitamins + Minerals + Ginseng
+Letrozole
+Pregabalin
+Hyoscine-N-Butylbromide
+Levothyroxine Sodium
+Levothyroxine Sodium
+Levothyroxine Sodium
+Ranitidine (as hydrochloride)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Ibuprofen + Paracetamol
+Paracetamol + Phenylephrine Hydrochloride
+Amlodipine as besilate
+d-Alpha Tocopherol (Vitamin E)
+Paracetamol + Caffeine
+Anefer
+Sildenafil (as citrate)
+Dextromethorphan Hydrobromide + Phenylephrine Hydrochloride + Paracetamol
+Cefpodoxime (as proxetil)
+Clotrimazole
+Clotrimazole
+Itraconazole
+Vitamin B1 + B6 +B12 (see reverse for formulation)
+Esomeprazole (As Sodium)
+Tazarotene
+i d-alpha Tocopheryl Acid Succinate (Vitamin E) + Korean Ginseng + Bee Pollen + Lecithin + Calcium Pantothenate
+d-alpha Tocopheryl Acid Succinate (Vitamin E) + Calcium Pantothenate + Korean Ginseng + Bee Pollen + Lecithin
+Vitamin B1 + B6 +B12 (see reverse for formulation)
+Paracetamol
+Paracetamol
+Paracetamol
+Azithromycin (as dihydrate)
+Pantoprazole (as sodium)
+Pregabalin
+Trimetazidine Hydrochloride
+Cefuroxime (as axetil)
+Tacrolimus (as monohydrate)
+Rebamipide
+Telmisartan
+Acetylcysteine
+Oxytocin
+Oxytocin
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol
+Irinotecan (as hydrochloride)
+Irinotecan (as hydrochloride)
+Ceftizoxime(as sodium)
+Tiotropium (as bromide)
+Ceftriaxone (as sodium)
+Iron
+Oxytetracycline (as hydrochloride) + Polymyxin B Sulfate
+Esomeprazole (as sodium)
+Oxaliplatin
+Diclofenac Sodium
+Montelukast (as Sodium)
+Mucotuss Forte
+Dextromethorphan Hydrobromide + Guiafenesin
+Paracetamol
+Donepezil Hydrochloride
+Donepezil Hydrochloride
+Tibolone
+Cetirizine Hydrochloride
+Ascorbic Acid (As Sodium Ascorbate) + Zinc (As Sulfate Monohydrate)
+Ursodeoxycholic Acid
+Tamsulosin Hydrochloride
+Terbinafine hydrochloride + Mometasone furoate
+Mometasone furoate + Salicylic acid
+Methotrexate
+Methotrexate
+Methotrexate
+Methotrexate
+Methotrexate
+Methotrexate
+Citicoline (as sodium)
+Metronidazole
+Cisplatin
+Zoledronic acid
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Chlorphenamine maleate
+Oxaliplatin
+Citicoline (as sodium)
+Carbocisteine
+Silymarin + Multivitamins
+Cetirizine Hydrochloride
+Iodine (as Iopamidol)
+Mupirocin
+Olopatadine (as hydrochloride)
+Vitamin B1 + B6 + B12
+Vitamin B1 + B6 + B12
+Mefenamic Acid
+Meclizine Hydrochloride
+Omeprazole (as sodium)
+Vitamin B-Complex + Iron + Buclizine hydrochloride
+Ibuprofen + Paracetamol
+Doxorubicin Hydrochloride
+Cefuroxime (As Axetil)
+Azithromycin (as dihydrate)
+Vitamin B1 + B6 + B12
+Cefuroxime (As Axetil)
+Salbutamol (As Sulfate)+ Guaifenesin
+Cefazolin (As Sodium)
+Cefazolin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Doxycycline (as hyclate)
+Prednisone
+Prednisone
+Rosuvastatin (as Calcium)
+Loratadine
+Loratadine
+Ambroxol Hydrochloride
+Paracetamol
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Co-Amoxiclav
+Metronidazole
+Levofloxacin (as hemihydrate)
+Docetaxel
+Docetaxel
+NALBUPHINE HYDROCHLORIDE
+Amlodipine as besilate
+Gentamicin (as sulfate)
+Diclofenac Sodium
+Hydrocortisone (as Sodium Succinate)
+Triamcinolone Acetonide
+Ranitidine (As Hydrochloride)
+D-Alpha Tocopherol (Vitamin E)
+Rifampicin
+Caponko
+Paracetamol
+Azithromycin (As Dihydrate)
+Sitagliptin (as phosphate monohydrate)
+Telmisartan
+Telmisartan
+Telmisartan
+Phenylephrine hydrochloride + Chlorpheniramine maleate
+Fenofibrate
+Atorvastatin (as Calcium)
+Pregabalin
+Propranolol hydrochloride
+Propranolol Hydrochloride
+Ciprofloxacin (As Lactate)
+Furosemide
+Sitagliptin (as phosphate monohydrate)
+Levetiracetam
+Dobutamine (as hydrochloride)
+Phytomenadione
+Dextromethorphan hydrobromide + Guaifenesin + Phenylephrine hydrochloride + Chlorphenamine maleate
+Amitriptyline Hydrochloride
+Salbutamo + Guaifenesin
+Salbutamol + Guaifenesin
+Gabapentin
+Paracetamol
+Cefuroxime (As Axetil)
+Cefaclor (As Monohydrate)
+Dexamethasone Sodium Phosphate
+Atorvastatin
+Glibenclamide
+Glibenclamide
+Multivitamins + Iron
+Ambroxol Hydrochloride
+Bisacodyl
+Propofol
+Cefepime (as hydrochloride)
+Doxorubicin
+Butamirate Citrate
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Mycophenolate Mofetil
+Paracetamol +Dextromethophan Hydrobromide + Phenylephrine Hydrochloride
+Etoricoxib
+Etoricoxib
+Cefalexin (As Monohydrate)
+Cefalexin (as Monohydrate)
+Amoxicillin (as Trihydrate)
+Moxeth
+Mefenamic Acid
+Mefenamic Acid
+Cefixime (as trihydrate)
+Erythromycin (As Stearate)
+Erythromycin (As Stearate)
+Cotrimoxazole
+Cotrimoxazole
+Guaifenesin + Phenylpropanolamine HCl + Chlorphenamine Maleate + Ammonium Chloride + Sodium Citrate
+Paracetamol
+Omeprazole (as Sodium)
+Tramadol hydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Cefuroxime (As Axetil)
+Allopurinol
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Loratadine
+Co-Amoxiclav (see reverse for Formulation)
+Dl-Alpha Tocopheryl Acetate (Vitamin E)
+Azithromycin (As Dihydrate)
+Metformin Hydrochloride
+Folic Acid
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Amoxicillin (As Trihydrate)
+Multivitamins + Mineral
+Multivitamins + Minerals
+Gliclazide
+Ferrous Sulfate Heptahydrate
+Diphenhydramine Hydrochloride
+Pregabalin
+Fluconazole
+Paracetamol
+Cefadroxil
+Mupirocin + Betamethasone (as Dipropionate)
+Linezolid
+Methylergometrine Maleate
+Doxorubicin Hydrochloride
+Oxaliplatin
+Levofloxacin (as Hemihydrate)
+Cefixime (As Trihydrate)
+Omeprazole
+Omeprazole
+Omeprazole
+Omeprazole
+Cefuroxime (As Axetil)
+Cefuroxime (as Axetil)
+Pregabalin
+Pregabalin
+Cefuroxime (As Axetil)
+Phenylpropanolamine Hydrochloride
+PARACETAMOL + PHENYLPROPANOLAMINE HYDROCHLORIDE
+Tramadol Hydrochloride
+Calcitriol
+Simvastatin
+Simvastatin
+Simvastatin
+Simvastatin
+Simvastatin
+Prednisone
+Paracetamol
+Nicardipine Hydrochloride
+Digoxin
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ceftriaxone (As Sodium)
+Rosuvastatin (As Calcium)
+CEFUROXIME (AS AXETIL)
+Mecobalamin
+Metronidazole
+Ciprofloxacin (as Lactate)
+Salbutamol
+Oxytocin
+Paracetamol + Ibuprofen
+Ferrous sulfate + Folic acid
+Hyoscine N-Butylbromide
+Levofloxacin (as Hemihydrate)
+Rosuvastatin (As Calcium)
+Co-Amoxiclav
+Dextran 70 + Hypromellose
+Mecobalamin
+Mecobalamin
+METRONIDAZOLE
+Ascorbic Acid
+Ascorbic acid
+Loratadine
+Loratadine
+Loratadine
+Loratadine
+Tramadol Hydrochloride
+Erlotinib (as hydrochloride)
+None
+Ketoanalogues + Essential Amino Acids
+Irbesartan
+Cilostazol
+Cilostazol
+Loratadine
+Loratadine
+Loratadine
+Loratadine
+Paracetamol
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Amlodipine (As Besilate) + Losartan Potassium
+Imatinib (As Mesylate Beta Crystals)
+Cefalexin (As Monohydrate)
+Febuxostat
+Olanzapine
+Olanzapine
+Olanzapine
+Telmisartan
+Butamirate Citrate
+Cetirizine Hydrochloride
+Levofloxacin (as hemihydrates)
+Ascorbic Acid + Zinc
+Calcium Carbonate + Cholecalciferol (Vitamin D3) + Simethicone
+Calcium Carbonate + Cholecalciferol (Vitamin D3) + Simethicone
+Calcium Carbonate + Cholecalciferol (Vitamin D3) + Simethicone
+Calcium Carbonate + Cholecalciferol (Vitamin D3) + Simethicone
+Cilostazol
+Gliclazide
+Moxifloxacin (as hydrochloride)
+Docetaxel
+Docetaxel
+Paclitaxel
+Paclitaxel
+Clarithromycin
+Trimetazidine dihydrochloride
+Donepezil hydrochloride
+Donepezil hydrochloride
+Citicoline (As Sodium)
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Meropenem (as trihydrate)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic acid + Zinc (as gluconate)
+Moxifloxacin (As Hydrochloride)
+Carboxymethylcellulose sodium
+Olopatadine (As Hydrochloride)
+Olopatadine (As Hydrochloride)
+Latanoprost
+Latanoprost
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Mecobalamin
+Piroxicam
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Ketoanalogues + Essential Amino Acids
+Ascorbic Acid + Zinc
+Butamirate Citrate
+Ibuprofen
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Paracetamol
+Paracetamol
+Betahistine hydrochloride
+Betahistine hydrochloride
+Betahistine hydrochloride
+Ascorbic Acid
+Diosmin + Hesperidin
+Erythromycin (as stearate)
+Butamirate Citrate
+Guaifenesin+Pheneylpropanolamine Hydrochloride+Chlorphenamine Maleate
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone (As Sodium Phosphate)
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone (As Sodium Phosphate)
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone(as Sodium Phosphate)
+Azithromycin (as dihydrate)
+Hyoscine N-Butylbromide + Paracetamol
+Hyoscine N-Butylbromide + Paracetamol
+Paracetamol + Phenylephrine HCl + Chlorphenamine Maleate
+Ampicillin (As Sodium)
+Cefixime (as trihydrate)
+Cefoxitin (as sodium)
+Ascorbic Acid + Zinc
+Losartan Potassium
+Clomipramine Hydrochloride
+Divalproex Sodium (equivalent to Valproic Acid)
+Sodium Valproate
+Levetiracetam
+Levetiracetam
+Escitalopram (as Oxalate)
+Olanzapine
+Levodopa + Carbidopa
+Topiramate
+ESCITALOPRAM (AS OXALATE)
+Olanzapine
+Quetiapine (As Fumarate)
+Levodopa + Carbidopa
+Mycophenolate Mofetil
+Cefixime (as trihydrate)
+Rosuvastatin (as Calcium)
+Citicoline (as Sodium)
+Citicoline (as sodium)
+Quetiapine (as fumarate)
+Loperamide Hydrochloride
+Isoniazid
+Metformin Hydrochloride
+Cefotaxime(as sodium)
+Cefotaxime (as sodium)
+Cefotaxime (As Sodium)
+Tranexamic Acid
+Tranexamic Acid
+Ranitidine (as Hydrochloride)
+Quetiapine (as fumarate)
+Risperidone
+Loratadine
+dl-Alpha Tocopherol Acetate (Vitamin E)
+Orlistat
+Pemetrexed (as disodium hemipentahydrate)
+Pemetrexed (as disodium hemipentahydrate)
+Oxaliplatin
+Butorphanol Tartrate
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Pregabalin
+Esomeprazole
+Diltiazem hydrochloride
+Diltiazem Hydrochloride
+Methylprednisolone (as Sodium Succinate)
+Ascorbic Acid (As Sodium Ascorbate)
+Ascorbic Acid
+Carvedilol
+Multivitamins + Iron
+Multivitamins + Iron
+Aciclovir
+Mometasone Furoate
+Multivitamins
+Mometasone Furoate
+Etoposide
+Cefuroxime (As Axetil)
+Cilostazol
+Paracetamol
+Cefazolin (As Sodium)
+Ascorbic Acid + Zinc
+Ketorolac Trometamol
+Ampicillin (As Sodium)
+Vinorelbine (as tartrate)
+Lamotrigine
+Lamotrigine
+Lamotrigine
+Levocetirizine Dihydrochloride
+Levocetirizine dihydrochloride
+Allopurinol
+Mefenamic Acid
+Paracetamol
+Butamirate Citrate
+Butamirate Citrate
+Butamirate Citrate
+Clindamycin (As Hydrochloride)
+Butamirate Citrate
+Naproxen Sodium
+Ascorbic acid
+Ascorbic Acid
+DOPAMINE HYDROCHLORIDE
+Paclitaxel
+Paclitaxel
+Guafenesin + Dextromethorphan Hydrobromide + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Tramadol Hydrochloride
+Vitamin B-Complex + Vitamin C
+Ferrous Fumarate + Folic Acid + Riboflavin + Cyanocobalamin
+Phenylephrine Hcl + Paracetamol
+Attapulgite
+Clopidogrel (as Bisulfate)
+THIAMINE MONONITRATE (VITAMIN B1) + PYRIDOXINE HYDROCHLORIDE (VITAMIN B6) + CYANOCOBALAMIN (VITAMIN B12)
+dl-Alpha Tocopherol Acetate (Vitamin E)
+Di-Alpha Tocopherol Acetate (Vitamin E)
+Paclitaxel
+Cetirizine (as dihydrochloride) + Phenylephrine hydrochloride
+Cetirizine (as dihydrochloride) + Phenylephrine hydrochloride
+Cetirizine (as dihydrochloride) + Phenylephrine hydrochloride
+Ibuprofen
+Ibuprofen
+Ibuprofen
+Paracetamol
+Thiamine Mononitrate (Vitamin B1)+ Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B.) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid + Zinc
+Ambroxol Hydrochloride
+Pemetrexed (as disodium heptahydrate)
+Etoricoxib
+Quetiapine (as fumarate)
+Octreotide (As Acetate)
+Naproxen Sodium
+Naproxen Sodium
+Amikacin
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Levocetirizine hydrochloride
+Adapalene
+Cefuroxime (As Sodium)
+Methylprednisolone (as Sodium Succinate)
+Citicoline (as sodium)
+Ascorbic Acid
+Ascorbic acid
+Adapalene
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Risperidone
+Levofloxacin (As Hemihydrate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Zoledronic Acid
+Hydrocortisone (as acetate)
+Ketorolac Trometamol
+Irinotecan Hydrochloride
+Irinotecan Hydrochloride
+Loratadine
+Cetirizine Dihydrochloride
+Rocuronium Bromide
+Multivitamins + Dextrose
+Multivitamins + Dextrose
+Diosmin + Hesperidin
+Paracetamol + Multivitamins
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Thiamine Mononitrate(Vit,B1) Pyridoxine (Vit.B6) Cyanocobalamine (Vit.B12)
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamine (Vit. B12)
+Thiamine Monohydrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Etoricoxib
+Etoricoxib
+Sertraline (As Hydrochloride)
+Paracetamol
+Dutasteride
+Paracetamol
+Vitamin B-Complex
+Bisacodyl
+Glipizide
+Glipizide
+Ascorbic Acid + Zinc
+Cetirizine hydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Fentanyl (as Citrate)
+Hydrocortisone
+Oxaliplatin
+Oxaliplatin
+Ascorbic Acid
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Gemcitabine (as hydrochloride)
+Cefuroxime (as sodium)
+Gemcitabine (as hydrochloride)
+Clarithromycin
+Epinephrine
+Olopatadine (as Hydrochloride)
+Multivitamins + Iron + Zinc
+Multivitamins + minerals
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Ophenadrine Citrate + Paracetamol
+Attapulgite
+Vitamins B1 + B6 + B12
+Ascorbic Acid
+Prednisone
+Valsartan + Amlodipine (as besilate)
+Bortezomib
+Cefuroxime (as Sodium)
+Cefepime as (Hydrochloride)
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besilate)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Multivitamins + Minerals + Amino Acids
+Tobramycin + Dexamethasone
+Capecitabine
+Solifenacin succinate
+Solifenacin Succinate
+Metronidazole + Miconazole nitrate
+Metronidazole + Miconazole nitrate
+Rifampicin + Isoniazid+Pyrazinamide + Ethambutol Hydrochloride
+Rifampicin+ Isoniazid
+Citicoline Sodium
+Norepinephrine (as Bitartrate)
+Carboplatin
+Carboplatin
+Multivitamins + Minerals + Ginseng + Royal Jelly
+Buclizine HCL + Multivitamins + Iron
+Aspirin
+Carbocisteine
+Ascorbic Acid
+Aspirin
+Latanoprost + Timolol (as maleate)
+Rocuronium Bromide
+Betamethasone (as Valerate)
+Desloratadine
+Pantoprazole (As Sodium Sesquihydrate)
+Paracetamol
+Ophenadrine Citrate + Paracetamol
+Mometasone Furoate
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Mometasone Furoate
+Mometasone Furoate
+Nifedipine
+Nifedipine
+Loratadine
+Carboplatin
+Doxorubicin Hydrochloride
+Ascorbic Acid
+Metformin Hydrochloride
+Quetiapine (as Fumarate)
+Diclofenac Sodium
+Methyldopa (As Sesquihydrate)
+Nadifloxacin
+Carbocisteine + Zinc
+Chloramphenicol (As Palmitate)
+Paracetamol+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Paracetamol
+Pramipexole dihydrochloride monohydrate
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besylate)
+Valsartan + Amlodipine (as besylate)
+Valsartan + Amlodipine (as besylate)
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besylate)
+Losartan Potassium
+Paracetamol + Ibuprofen
+Oral Rehydration Salts
+Ascorbic Acid + Zinc
+Ascorbic Acid (as Sodium ascorbate)
+Sevoflurane
+Pantroprazole (as Sodium Sesquihydrate)
+Gliclazide
+Gliclazide
+Gliclazide
+Pemetrexed (as disodium hemipentahydrate)
+Pemetrexed (as disodium heptahydrate)
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Ascorbic Acid + Zinc
+Domperidone (As Maleate)
+Multivitamins
+Multivitamins + Iron
+Paracetamol + Phenylephrine Hydrochloride + Chlorpheniramine Maleate + Caffeine
+Terbinafine (as Hydrochloride)
+Calcium Carbonate
+Calamine + Zinc Oxide
+Multivitamins + Iron
+Thiamine Mononitrate (Vitamin B1)+ Pyridoxine Hydrochloride (Vitamin B6) + (Vitamin B12)
+Mometasone Furoate
+Fusidic Acid
+Clotrimazole
+Multivitamins + Iron
+Carbocisteine
+Carbocisteine
+Cetirizine Dihydrochloride
+Calcium + Cholecalciferol
+Calcium + Cholecalciferol
+Hydroquinone
+Fusidic Acid
+Rosuvastatin (as Calcium)
+Isosorbide-5-Mononitrate
+Sitagliptin (as phosphate monohydrate)
+Levetiracetam
+Levetiracetam
+Cefepime (hydrochloride)
+Gemcitabine (as Hydrochloride)
+Metoprolol Tartrate
+Aciclovir
+Levofloxacin (as lactate)
+Clarithromycin
+Diclofenac Sodium
+Nicardipine Hydrochloride
+Chloramphenicol
+Pramipexole (as dihydrochloride)
+Mupirocin
+Loperamide Hydrochloride
+Iron + Folic Acid
+Phenylephrine HC1 + Chlorphenamine Maleate + Paracetamol
+Ascorbic Acid + Zinc
+Folic Acid
+Losartan Potassium
+Losartan Potassium
+Meropenem ( as trihydrate)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Cefoxitin (as Sodium)
+Adapalene + Clindamycin (as Phosphate)
+Cetirizine dihydrochloride
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Venlafaxine (As Hydrochloride)
+Paclitaxel
+Nicardipine Hydrochloride
+HYDROCORTISONE (AS SODIUM SUCCINATE)
+Tranexamic Acid
+Ascorbic Acid
+Dobutamine (As Hydrochloride)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Mefenamic Acid
+Ascorbic Acid
+Ascorbic Acid
+Orlistat
+Lactated Ringer's Solution (Ringer's Lactate)
+Tenofovir Disoproxil Fumarate
+10% Dextrose In Water For Injection
+Cisplatin
+Carboplatin
+Calcium
+Zinc
+Omeprazole (As Sodium)
+Pyrazinamide
+Lactulose
+Rocuronium Bromide
+Ascorbic Acid + Zinc
+Calcium
+Ascorbic Acid-Zinc
+Ascorbic Acid
+Phenylpropanolamine Hcl + Chlorphenamine Maleate + Paracetamol
+Calcium
+Multivitamins (see reverse for formulation)
+Celecoxib
+Celecoxib
+Clopidogrel (as bisulfate)
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Budesonide
+Ceftazidime (as Pentahydrate)
+Paracetamol + Guaifenesin + Phenylpropanolamine HCl + Dextromethorphan HBr + Chlorphenamine maleate
+Enalapril maleate
+Cefuroxime (as Sodium)
+Clarithromycin
+Lactulose
+Celecoxib
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Carbocisteine + Zinc
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Ascorbic Acid
+Hydroquinone + Tretinoin
+Ascobic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol + ZInc
+Cholecalciferol(Vitamin D3)
+Carbocisteine
+Ascorbic acid + Cholecalciferol + Zinc
+Cholecalciferol
+Sodium Chloride
+Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+50% Dextrose
+Cloxacillin Sodium
+Naproxen
+Naproxen
+Naproxen
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Omeprazole
+Omeprazole
+Omeprazole
+Clopidogrel (As Bisulfate)
+Clopidogrel
+Ceftazidime (As Pentahydrate)
+CEFALEXIN (AS MONOHYDRATE)
+Paracetamol + Ibuprofen
+Paracetamol + Ibuprofen
+Paracetamol + Ibuprofen
+Paracetamol + Ibuprofen
+Paracetamol + Ibuprofen
+Amlodipine (as besilate)
+Cefuroxime (As Axetil)
+Isoflurane
+Gentamicin (As Sulfate)
+Oxytocin
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin (as Hydrochloride)
+Ceftriaxone (As Sodium)
+Pediaxil Forte
+Diclofenac Sodium
+Cloxacillin Sodium
+Cloxacillin (As Soduim)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin Sodium
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Losartan Potassium
+Trimetazidine Hydrochloride
+Amoxicillin (as Trihydrate)
+Cloxacillin sodium
+Ciprofloxacin (as Lactate)
+Ciprofloxacin (as Lactate)
+Ciprofloxacin (as Lactate)
+Cetirizine Hyrochloride
+Thiamine Mononitrate (Vit. B1), Pyridoxine Hydrochloride (Vit. B6), Cyanocobalamin (Vit. B12)
+Thiamine Mononitrate (Vitamin B1), Pyridoxine Hydrochloride (Vitamin B6), Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Fluocinolone Acetonide + Polymyxin B Sulfate + Neomycin (As Sulfate)
+Amlodipine(As Besilate)
+Amlodipine (As Besilate)
+Amlodipine
+Phenylephrine Hdyrochloride + Brompheniramine Maleate
+Multivitamins + Minerals
+Arnica montana + Calendula officinalis + Hamamelis virginiana + Echinacea angustifolia + Echinacea purpurea + Matricaria recutita + Symphytum officinale + Bellis perenis + Hypericum perforatum + Achillea millefrolium + Aconitum napellus + Atropa belladonna + Mercurius solubilis hahnemanni + Heaper sulfuros
+Vitex negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Blumea Balsamifera (L.) Dc (Sambong Leaf)
+Blumea balsamifera (L.) DC (Sambong Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex Negundo L.(Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Plantago Ovata Forssk. (Ispaghula Seed) + Plantago Ovata Forssk. (Ispaghula Husk) + Senna Alexandrina Mill. (Tinnevelly Senna Pods)
+Carmona Retusa (Vahl.) Masam (Tsaang Gubat Leaf)
+Lumbricus rubellus Extract (DLBS1033)
+Plantago Ovata Forssk. (Ispaghula Husk)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Sambucus nigra L. (Elder Flower) Primula veris L. and Primula elatior (L.) Hill (Primula flower with calyx) Rumex crispus L. (Common sorrel herb) Verbena officinalis L. (Verbena herb) Gentiana lutea L. (Gentian root)
+Sambucus nigra L. (Elder Flower) Primula veris L. and Primula elatior (L.) Hill (Primula flower with calyx) Rumex crispus L. (Common sorrel herb) Verbena officinalis L. (Verbena herb) Gentiana lutea L. (Gentian root)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Blumea balsamifera (L.) DC (Sambong Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Zingiber officinale Roscoe (Ginger Rhizome)
+Blumea balsamifera L. (Sambong Leaf)
+Blumea balsamifera L. (Sambong Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Cimicifuga Racemosa L (Black Cohosh Root & Rhizome)
+Blumea Balsamifera L. (Sambong Leaf)
+Herba Thujae Occidentalis (White Cedar Leaf) + Radix Echinaceae (Cone Flower Root) + Radix Baptisiae Tinctoriae (Wild Indigo Root)
+Vitex negundo L. (Lagundi Leaf)
+VITEX NEGUNDO L. (LAGUNDI LEAF)
+VITEX NEGUNDO L. (LAGUNDI LEAF)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Sambong Leaf (Blumea Balsamifera L.)
+Vitex Negundo L. Lagundi Leaf
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Blumea Balsamifera L. (Sambong Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Blumea Balsamifera L. (Sambong Leaf)
+Nocof
+Vitex Negundo L. Lagundi Leaf
+Vitex Negundo (Lagundi Leaf)
+VITEX NEGUNDO L. (LAGUNDI LEAF)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Blumea Balsamifera (Sambong Leaf) 500Mg Tablet
+Vitex negundo L. (Lagundi) Leaf
+Blumea balsamifera (L.) DC (Sambong leaf)
+PHYLLANTHUS NIRURI L.
+DLBS3233 Lagerstroemia Speciosa (L.) Pers. (Banaba Leaf) And Cinnamomum Burmannii (Nees & T. Nees) Blume (Indonesian Cinnamon Bark)
+Dlbs2411 Cinnamomum Burmannii (Nees & T. Nees) Blume (Indonesian Cinnamon Bark)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea balsamifera (L.) DC (Sambong leaf)
+Paracetamol
+Paracetamol
+Paracetamol
+Carbocisteine
+Povidone Iodine 100 Mg/Ml (10%) Solution
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Sodium Ascorbate
+Ascorbic acid (as Sodium Ascorbate)
+Povidone-Iodine
+Povidone-Iodine
+Isopropyl Alcohol
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Povidone Iodine
+Carbocisteine
+CARBOCISTEINE
+CARBOCISTEINE
+Paracetamol
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Carbocisteine
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid
+Aluminum Hydroxide + Magnesium Hydroxide
+Ascorbic Acid
+Ascorbic Acid (Reformulated)
+Ascorbic acid (Vitamin C)
+Ascorbic Acid (Vitamin C)
+ASCORBIC ACID
+Ascorbic Acid
+Ascorbic acid
+Ascorbic acid
+Carbocisteine
+Ascorbic Acid
+Aluminum Hydroxide/ Magnesium Hydroxide
+Aluminum Hydroxide/ Magnesium Hydroxide
+Ascorbic Acid
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Benzalkonium Chloride
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+ASCORBIC ACID
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Povidone-Iodine
+Carbocisteine
+CARBOCISTEINE
+Ascorbic Acid
+Ascorbic Acid
+Paracetamol
+Ascorbic Acid
+Carbocisteine
+Paracetamol
+Carbocisteine
+Paracetamol
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Fulvit-Cee
+Calcium Ascorbate
+Paracetamol
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Oral Rehydration Salts
+Carbocisteine
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+None
+Carbocisteine
+Carbocisteine
+Calcium Ascorbate
+Carbocisteine
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Sodium Ascorbate
+Sodium Ascorbate
+Petroleum Jelly
+Ascorbic Acid (as Sodium Ascorbate)
+Sodium Ascorbate
+Calcium Ascorbate
+Carbocisteine
+ASCORBIC ACID (EQUIVALENT TO 568.18MG SODIUM ASCORBATE)
+ASCORBIC ACID (AS SODIUM ASCORBATE)
+Ascorbic Acid
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid (as Sodium Ascorbate)
+Carbocisteine
+Carbocisteine
+Paracetamol
+Calcium Lactate
+Calcium Lactate
+Paracetamol
+Ascorbic Acid
+Ascorbic Acid
+Carbocisteine
+Menthol
+Menthol
+Paracetamol
+Paracetamol
+Paracetamol
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Mucopoysaccharide polysulfate
+Sodium Ascorbate
+Sodium Ascorbate
+Sodium Ascorbate
+BENZALKONIUM CHLORIDE
+Hydrogen Peroxide 3% Solution
+Hydrogen Peroxide 3% Solution
+Hydrogen Peroxide 6% Solution (20 Volumes)
+Salicylic Acid 5% Solution
+Isopropyl Alcohol
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Tretinoin + Hydroquinone
+Tretinoin + Hydroquinone
+Tretinoin + Hydroquinone
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Hexetidine
+Povidone-Iodine
+Povidone-Iodine
+Ethyl Alcohol
+Ethyl Alcohol
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic acid
+Camphor + Menthol + Eucalyptus Oil
+Eugenol
+L-Menthol
+Isopropyl Alcohol
+Povidone-Iodine
+Povidone-Iodine
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Ascorbic Acid
+Hydrogen Peroxide
+Ethyl Alcohol
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Menthol
+Ascorbic Acid
+Aceite de Alcamforado
+Salicylic Acid
+Benzoic Acid + Salicylic Acid + Resorcinol
+Povidone-Iodine
+Menthol + Methyl Salicylate
+Capsaicin, 4.5 Mg/G + Menthol, 40 Mg/G + Methyl Salicylate, 250 Mg/G + Gingerols, 15 Mg/G
+Camphor + Menthol + Eucalyptus Oil
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Menthol + Camphor
+Camphor + Menthol + Eucalyptus Oil
+Ascorbic Acid
+Ascorbic Acid
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Ascorbic acid
+Camphor + Menthol + Methyl Salicylate
+Camphor + Menthol + Methyl Salicylate
+Benzoic Acid + Salicylic Acid
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Carbocisteine
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Aluminum Hydroxide + Magnesium Hydroxide
+Ascorbic Acid
+Aluminum Hydroxide + Magnesium Hydroxide
+Carbocisteine
+Paracetamol
+Carbocisteine
+Isopropyl Alcohol
+Ascorbic Acid
+Povidone - Iodine
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+2,4-Dichlorobenzyl Alcohol  + Amylmetacresol
+Hydrogen Peroxide
+Carbocisteine
+Ascorbic Acid (as Calcium Ascorbate)
+Povidone - Iodine
+Povidone - Iodine
+Sodium Ascorbate
+Carbocisteine
+Dichlorobenzyl Alcohol + Amylmetacresol
+Oral Rehydration Salt
+Povidone - Iodine
+Sodium Bicarbonate
+Isopropyl Alcohol
+Paracetamol
+Carbocisteine
+Ascorbic acid (as Sodium Ascorbate)
+Isopropyl Alcohol
+Isopropyl Alcohol + Povidone Iodine
+Sulfur
+Sulfur
+Ethyl Alcohol
+Povidone-Iodine
+Menthol +Camphor +Eucalyptus Oil
+Ethyl Alcohol
+Hydroquinone
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Hydroquinone + Tretinoin
+Fritallaria cirrhosa D. Don (Tendrilleaf Fritillary Bulb) + Eriobotarya japonica (Thunb.) Lindl. (Loquat Leaf) + Adenophora tetraphyllla (Thunb.) Fisch. (Fourleaf Ladybell Root) + (see reverse to cont'd)
+Euphorbia hirta L. (Tawa-Tawa Leaf)
+Morindae Officinalis, Achyranthis Bidentatae, Corni Fructus, Rosae Laevigatae Fructus, Atractylodis Macrocephalae Rhizome, Dioscoreae Rhizome, Toosendan Fructus, Phellodendri Chinensis, Glycyrrhizae Radix Et Rhizome, Halitum, Bombyx Masculus, Psoraleae Fructus, Ginseng Radix Et Rhizome, Alpiniae Oxyphyllae Fructus, Caryophylli Flos, Citri Reticulatae Pericarpium, Atractylodis Rhizome, Curcumae Longae Rhizoma, Moutan Cortex, Myrrha
+Hedra helix L.(Ivy Leaves), Phyllanthus niruri L. (Phyllanthus niruri leaf), Mathae piperitae L. (Mint leaf) Apis Mellifers L. (Honey)
+Each Capsule contains: Forsythia suspensa (Thunb.) Vahl (Weeping Forsythia) Fruit -27.41mg Lonicera japonica Thunb. (Japanese Honeysuckle) Flower-27.41mg Gypsum Fibrosum-27.41mg Isatis indigotica Fort. (Isatis) Root-27.41mg Dryopteris crassirhizoma Nakai (Male Fern) Rhizome and Frond Bases -27.41 mg Houttuynia cordata Thunb. (Heartleaf Houttuynia) Aerial Part- 27.41 mg Pogostemon cablin (Blanco) Benth. (Cablin Patchouli) Aerial Part-9.40mg Ephedra sinica Stapf (Ephedra) Herbaceous Stem-9.14mg Prunus sibirica L. (Bitter Apricot) Ripe Seeds-9.14 mg Rhodiola crenulata (Hook. f. et Thomson) H.Ohba (Bigflower Rhodiola) Root and Rhizome-9.14mg Glycyrrhiza uralensis Fisch. (Liquorice) Root and Rhizome-9.14mg 1-Menthol-7.50mg Rheum palmatum L. (Rhubarb) Root and Rhizome-5.47mg
+Camellia sinensis (L.) Kuntze Leaves
+Insulin Human (rDNA)
+Tetanus Toxoid Adsorbed
+Epoetin Beta
+Heparin Sodium ( Bovine )
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Pneumococcal Vaccine, Polyvalent
+Rotavirus Vaccine (Live, Attenuated)
+Liraglutide
+Rituximab
+Rituximab
+Varicella Vaccine (Live, Attenuated)
+Heparin Sodium
+Pneumococcal Polysaccharide Conjugate Vaccine (Adsorbed)
+Erenumab
+Guselkumab
+Inactivated Poliomyelitis Vaccine (Type 1,2 And 3)
+Human Albumin
+Filgrastim
+Recombinant Hepatitis B Vaccine
+Recombinant Hepatitis B Vaccine
+Pneumococcal Polysaccharide Conjugate Vaccine (Adsorbed)
+Pneumococcal Vaccine, Polyvalent
+Pneumococcal Polysaccharide Conjugate Vaccine (Adsorbed)
+Filgrastim (Recombinant Granulocyte Colony-Stimulating Factor [Rhu-Gcsf])
+Human Normal Immunoglobulin (Igiv)
+Infliximab
+Pertuzumab
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Human Albumin
+Epoetin Alfa
+Omalizumab
+Biphasic Isophane Insulin (Rdna Origin)
+Regular Insulin Human (Rdna Origin)
+Isophane Insulin Human (Rdna Origin)
+Enoxaparin Sodium
+Enoxaparin sodium
+Filgrastim
+Reteplase (Recombinant Tissue Plasminogen Activator)
+Biphasic Isophane Insulin Human (Recombinant DNA Origin)
+Human Albumin
+Human Albumin
+Purified Chick Embryo Cell Culture Rabies Vaccine
+Insulin Human (rDNA)
+Enoxaparin Sodium
+Adsorbed Diphtheria-Tetanus-Pertussis-Hepatitis B (rDNA) and Haemophilus influenzae type b conjugate vaccine
+Adsorbed Diphtheria-Tetanus-Pertussis-Hepatitis B (rDNA) and Haemophilus influenzae type b conjugate vaccine
+IBUPROFEN + PARACETAMOL
+Digoxin
+Calcium gluconate
+Dextromethorphan Hydrobromide
+Isoniazid + Pyridoxine Hydrochloride
+Dexamethasone
+5% Dextrose In 0.9% Sodium Chloride
+Multivitamins (see reverse for formulation)
+Isoxsuprine Hydrochloride
+Ascorbic Acid
+Carbocisteine
+Dementholized Mint Oil/ Cajuput Oil/ Camphor/ Menthol/ Clove Oil
+Camphor/ Menthol/ Cajuput Oil/ Dementholized Mint Oil/ Clove Oil/ Cassia Oil
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Carbocisteine
+Hydrogen Peroxide
+Isopropyl Alcohol
+Sodium Ascorbate
+Pyrethrin
+Ascorbic Acid
+Paracetamol
+Carbocisteine
+Hydrogen Peroxide
+2, 4- Dichlorobenzyl Alcohol + Amylmetacresol
+Ethyl Alcohol
+Ascorbic Acid
+Chlorhexidine Digluconate
+Povidone Iodine
+Methyl Salicylate + Menthol + Eucalyptus Oil + Camphor
+Methyl Salicylate + Menthol + Eucalyptus Oil + Camphor
+Ascorbic Acid
+Ethyl Alcohol
+Ammonium Carbonate + Strong Ammonia Water (Aromatic Spirit of Ammonia)
+Methyl Salicylate + Menthol
+POVIDONE-IODINE
+Povidone Iodine
+Hydrogen Peroxide
+70% Isopropyl Alcohol
+POVIDONE-IODINE
+EUCALYPTUS OIL + CAJUPUT OIL + CLOVE OIL+ JUNIPER OIL+ MENTHOL + PEPPERMINT OIL +METHYLSALICYLATE
+Dequalinium Chloride
+Povidone-Iodine
+Oral Rehydration Salts
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+Povidone-Iodine
+Sulfur
+Camphor+ Menthol+ Dementholised Mint Oil
+Isopropyl Alcohol
+MENTHOL
+Ascorbic Acid
+METHYL SALICYLATE + MENTHOL + CAMPHOR
+Menthol
+Menthol
+Methyl Salicylate + Menthol
+Povidone-Iodine
+Isopropyl Alcohol
+Ethyl Alcohol
+Paracetamol
+Isopropyl Alcohol
+Ascorbic Acid
+Isopropyl Alcohol
+Ketoconazole
+Camphor (Aceite De Alcamforado)
+Camphor +Menthol +Methyl Salicylate +Eucalyptus Oil +Oil of Turpentine
+Essence Eucalyptus
+MENTHOL + SALICYLIC ACID + ZINC OXIDE + RESORCINOL + PRECIPITATED SULFUR 400mg/1.5g/3g/3g/3g per 30g CREAM
+Methyl Salicylate
+Paracetamol
+Sulfur + Zinc Oxide + Salicylic Acid
+Methyl Salicylate + Menthol + Camphor
+ORAL REHYDRATION SALTS
+Povidone-Iodine
+Povidone-Iodine
+Ethyl Alcohol
+Methylsalicylate + Camphor + Menthol
+Paracetamol
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Medical Grade Oxygen
+Phenylpropanolamine Hydrochloride + Phenylephrine Hydrochloride + Brompheniramine Maleate
+Vitamin B-Complex + Ferrous Fumarate
+Vitamin B Complex + Ferrous Fumarate
+Amiodarone hydrochloride
+Vitamin B1 + B6 + B12
+CEFACLOR (AS MONOHYDRATE)
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Salbutamol (as sulfate)
+Ketorolac Trometamol
+Aluminum Hydroxide + Magnesium Hydroxide
+Cloxacillin (as sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Prednisone
+Co-Amoxiclav
+Losartan Potassium
+Losartan Potassium
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Amlodipine (As Besilate)
+Ambroxol Hydrchloride
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Amiodarone hydrochloride
+Cefalexin (as Monohydrate)
+Simvastatin
+Simvastatin
+Clindamycin (As Hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Hydrocortisone (as Sodium Succinate)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as Sodium Succinate)
+Calcium Gluconate
+AMINO ACIDS
+Amino Acids
+Cefdinir
+Cetirizine Dihydrochloride
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+CEFALEXIN (AS MONO HYDRATE)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cinnarizine
+Simvastatin
+Simvastatin
+Hyoscine-N-Butylbromide
+Multivitamins + Lysine
+Levofloxacin (As Hemihydrate)
+AMOXICILLIN (as trihydrate)
+Amoxicillin (as trihydrate)
+Cefalexin (as monohydrate)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Thiamine mononitrate (Vitamin B) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Paracetamol
+Ofloxacin
+Celecoxib
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+DIPHENHYDRAMINE HYDROCHLORIDE
+Metoprolol Tartrate
+Metoprolol Tartrate
+Omeprazole (As Sodium)
+PARACETAMOL
+Ranitidine (as hydrochloride)
+Zinc (As Sulfate Monohydrate)
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Amlodipine (as besilate)
+Multivitamins
+Aciclovir
+Cefuroxime (as Sodium)
+SALBUTAMOL (as Sulfate) + GUAIFENESIN
+FOLIC ACID
+Folic Acid
+Folic Acid
+Captopril
+Clopidogrel
+Amlodipine (As Besilate)
+Glimepiride
+Meloxicam
+Phytomenadione
+Sultamicillin (as tosylate dehydrate)
+Ketotifen fumarate
+Pioglitazone (as hydrochloride)
+Cefixime (as Trihydrate)
+Atorvastatin
+Atorvastatin
+Fluoxetine (as hydrochloride)
+Nitroglycerin
+Ciprofloxacin (As Lactate)
+Felodipine
+Clopidogrel
+Metoprolol Tartrate
+Ketorolac (As Trometamol)
+Ketorolac (As Trometamol)
+Ketorolac (As Trometamol)
+Ketorolac (As Trometamol)
+Carvedilol
+Tramadol Hydrochloride
+Ranitidine (as Hydrochloride)
+Simvastatin
+Ranitidine (as Hydrochloride)
+Naproxen
+Tolnaftate
+Levofloxacin Hemihydrate
+Ampicillin (As Sodium)
+Doxycycline (as hyclate)
+Doxycycline (as hyclate)
+Doxycycline (as hyclate)
+Ciprofloxacin (as Hydrochloride)
+Ciprofloxacin (as Hydrochloride)
+OMEPRAZOLE
+Norfloxacin
+Ambroxol Hydrochloride
+Piroxicam
+Multivitamins
+Erythromycin (as Stearate)
+Domperidone
+Cefuroxime (as Sodium)
+Ampicillin (As Sodium)
+Phenytoin
+Fluconazole
+Clarithromycin
+Ceftriaxone As Sodium
+Ceftriaxone As Sodium
+Ceftriaxone As Sodium
+Ceftriaxone As Sodium
+Ceftriaxone As Sodium
+Oxytetracycline Hydrochloride/Polymyxin B Sulfate
+Paracetamol
+Levofloxacin (as hemihydrate)
+Vitamin B-Complex
+Salbutamol (As Sulfate)
+Cefuroxime (as axetil)
+Cefuroxime (as axetll)
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins
+Vitamin B Complex (see reverse)
+Cefuroxime (As Axetil)
+Methylprednisolone sodium succinate
+Co-Amoxiclav
+Hydrocortisone
+Hydrocortisone
+Silver Sulfadiazine
+Diclofenac Sodium
+Clopidogrel (as bisulfate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Loratadine
+Diclofenac Sodium
+Simvastatin
+Aciclovir
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Celecoxib
+Celecoxib
+Celecoxib
+Enalapril Maleate
+Enalapril Maleate
+Glimepiride
+Ciprofloxacin ( as Hydrochloride )
+Ciprofloxacin (As Hydrochloride)
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Isosorbide Dinitrate
+Cefoxitin sodium
+Paracetamol
+Paracetamol
+Mefenamic Acid
+Mefenamic Acid
+Salbutamol (as sulfate)
+Mefenamic Acid
+Sodium Fusidate
+Fusidic Acid
+Fusidic Acid
+Cefixime (As Trihydrate)
+Cefixime As Trihydrate
+Cefixime (As Trihydrate)
+Polyvinyl alcohol + Povidone
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Trimetazidine (As Hydrochloride)
+Trimetazidine (As Hydrochloride)
+Multivitamins + Minerals + Amino Acids + Deanol + Ginseng
+Paracetamol
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+CEFACLOR (AS MONOHYDRATE)
+CEFACLOR (AS MONOHYDRATE)
+Diosmin + Hesperidin
+Bicalutamide
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Alendronic Acid (As Alendronate Sodium Trihydrate)
+Alendronic Acid (as Alendronate Sodium Trihydrate)
+Diclofenac Sodium
+PARACETAMOL + IBUPROFEN
+Co-Amoxiclav
+Azithromycin (as dihydrate)
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Buclizine Hydrochloride +Vitamin B Complex + Iron (See reverse for formulation)
+Celecoxib
+Omeprazole (As Sodium)
+Tamsulosin Hydrochloride
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Multivitamins + Iron
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCl (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+CLOPIDOGREL (AS BISULFATE)
+Celecoxib
+Amoxicillin (As Trihydrate)
+Ambroxol hydrochloride
+Multivitamins
+Omeprazole
+Cytarabine
+Salbutamol (As Sulfate) + Guaifenesin
+Salbutamol (As Sulfate) + Guaifenesin
+Salbutamol (as sulfate) + Guaifenesin
+Salbutamol (as sulfate) + Guaifenesin
+Salbutamol (As Sulfate) + Guaifenesin
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Pantoprazole (as sodium sesquihydrate)
+Terazosin (as hydrochloride dihydrate)
+Atorvastatin(As Calcium)
+Atorvastatin(As Calcium)
+Atorvastatin(As Calcium)
+Atorvastatin (As Calcium)
+None
+Simvastatin
+Pioglitazone Hydrochloride
+Potassium Citrate (as monohydrate)
+Salbutamol + Guaifenesin
+Tranexamic Acid
+Mefenamic Acid
+Doxycycline (As Hyclate)
+Mefenamic Acid
+Famotidine
+Diphenhydramine Hydrochloride
+Glipizide
+MIRTAZAPINE
+Losartan Potassium + Hydrochlorothiazide
+Folic Acid
+Olanzapine
+Olanzapine
+Clobetasol Propionate
+Clobetasol Propionate
+Clobetasol Propionate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Aluminum Hydroxide + Magnesium Hydroxide
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Calcium Folinate
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Dicycloverine Hydrochloride
+Citicoline (as sodium)
+Felodipine
+Felodipine
+Felodipine
+Glimepiride
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Enalapril Maleate
+Metformin Hydrochloride
+Iron + Folic Acid
+Omeprazole
+Omeprazole
+Montelukast (as Sodium)
+Metoprolol Tartrate
+Amlodipine (As Besilate)
+Bisoprolol Fumarate
+Co-Amoxiclav
+Amlodipine (As Besilate)
+Norvatrol
+Amino Acids + Sorbitol
+Amino Acids + Sorbitol
+Amino Acids + Sorbitol
+Amino Acids + Sorbitol
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Sildenafil (as citrate)
+Sildenafil (as citrate)
+Dobutamine (as hydrochloride)
+Domperidone (As Maleate)
+Domperidone (As Maleate)
+Clotrimazole
+Levofloxacin (As Hemihydrate)
+Letrozole
+Cefuroxime(As Axetil)
+Cefuroxime(As Axetil)
+Salbutamol Sulfate
+Ceftriaxone (as Sodium)
+Celecoxib
+Celecoxib
+Ciprofloxacin (as hydrochloride)
+Cotrimoxazole
+Enalapril Maleate
+Intravenous Fat Emulsion
+Sildenadil (As Citrate)
+Sildenadil (As Citrate)
+Piperacillin (As Sodium) / Tazobactam (As Sodium)
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Fexofenadine Hydrochloride
+Ciprofloxacin (as Lactate)
+Lamotrigine
+Lamotrigine
+Lamotrigine
+Desloratadine
+Ferrous Sulfate Heptahydrate
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Amoxicillin (as Trihydrate)
+Ethinylestradiol + Levonorgestrel; Ferrous fumarate
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Paracetamol
+Furosemide
+Medroxyprogesterone Acetate
+Latanoprost + Timolol (as maleate)
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Finasteride
+Conjugated Estrogens
+Neostigmine (as methylsulfate)
+CIPROFLOXACIN
+Risperidone
+Risperidone
+Paracetamol
+Paracetamol
+Sultamicillin (As Tosylate)
+Multivitamins
+Multivitamins
+Multivitamins
+Multivitamins + Buclizine Hydrochloride
+Prednisone
+Celecoxib
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Azithromycin (as dihydrate)
+Azithromycin (As Dihydrate)
+Tazbac
+Nystatin
+Nystatin
+Nystatin
+Ibuprofen
+Ibuprofen
+Furosemide
+Cefazolin (as Sodium)
+Ceftriaxone Sodium
+Ceftriaxone Sodium
+Hyoscine Butylbromide
+Co-Amoxiclav
+Medroxyprogesterone Acetate
+Cefuroxime (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Clarithromycin
+Clarithromycin
+Acarbose
+Acarbose
+Omeprazole (as sodium)
+Telmisartan
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Telmisartan
+Telmisartan
+Salbutamol (as sulfate)
+Verapamil
+Desloratadine
+Desloratadine
+Co-Amoxiclav
+Drospirenone + Ethinylestradiol
+Desloratadine
+Guaifenesin + Salbutamol (As Sulfate)
+Pantoprazole (as sodium)
+Pantoprazole (as sodium)
+Ambroxol Hydrochloride
+Losartan Potassium + Hydrochlorothiazide
+Vitamin B Complex
+Ketoconazole
+Spironolactone
+Loratadine
+Hyoscine-N-Butylbromide
+Betahistine Hydrochloride
+Irbesartan
+Irbesartan
+Mupirocin
+Mupirocin
+Mupirocin
+Mupirocin
+Cefuroxime (As Sodium
+Cefaclor (As Monohydrate)
+Trimetazidine Hydrochloride
+Metoprolol Tartrate
+Diclofenac Sodium
+Paracetamol
+Ciprofloxacin (As Hydrochloride)
+Ciprofloxacin
+Levofloxacin (As Hemihydrate)
+Levofloxacin (as hemihydrate)
+Tamsulosin Hydrochloride
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Clotrimazole
+Cefuroxime (as Axetil)
+Cefuroxime (as axetil)
+Rifampicin
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Paracetamol
+Piracetam
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Trimetazidine Dihydrochloride
+Esomeprazole (As Sodium)
+Pantoprazole (as Sodium)
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Salbutamol (As Sulfate)
+Biperiden (as Hydrochloride)
+Multivitamins + Dextrose
+Multivitamins + Dextrose
+Dextromethorphan hydrobromide
+Dextromethorphan Hydrobromide
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Clarithromycin
+Clarithromycin
+Amoxicillin (As Trihydrate)
+Cefradine (as monohydrate)
+Cefradine (as monohydrate)
+Cefradine (as monohydrate)
+Vitamin b1+b6+b12
+Aluminum Hydroxide + Magnesium Hydroxide
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Cloxacillin (As Sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Omeprazole
+Omeprazole
+Trimetazidine Dihydrochloride
+Trimetazidine Dihydrochloride
+Trimetazidine Dihydrochloride
+Cefuroxime (as axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Cefuroxime (As Axetil)
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Ceftriaxone (as Sodium)
+Lithium Carbonate
+Ceftriaxone Sodium
+Ceftriaxone Sodium
+Tranexamic Acid
+Ferrous Sulfate + Folic Acid + Vitamin B Complex
+Phenylephrine HCl + Dextromethorphan HBr + Paracetamol
+Azithromycin (as dihydrate)
+Metoprolol  (as tartrate)
+Metoprolol (as tartrate)
+Hyoscine Butylbromide
+Co-Amoxiclav
+Co-Amoxiclav
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Levothyroxine Sodium
+Glucosamine Sulfate
+Glucosamine Sulfate
+Gabapentin
+Gabapentin
+Finasteride
+Montelukast (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Desloratadine
+Desloratadine
+Desloratadine
+Betahistine Dihydrochloride
+Loratadine
+Cefuroxime (as Sodium)
+Paracetamol + Tramadol hydrochloride
+Ambroxol Hydrochloride
+PIRACETAM
+Azithromycin (as dihydrate)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Clobetasol (As Propionate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Cefuroxime (as axetil)
+Atorvastatin (as calcium)
+Irbesartan + Hydrochlorothiazide
+Cefixime (as Trihydrate)
+Colchicine
+Colchicine
+Colchicine
+Enalapril Maleate + Hydrochlorothiazide
+Azithromycin (as Dihydrate)
+Cefuroxime (As Axetil)
+Medroxyprogesterone Acetate
+Cefalexin (As Monohydrate)
+Guaifenesin + Phenylpropanolamine hydrochloride + Chlorphenamine maleate
+Guaifenesin+Phenylpropanolamine hydrochlorid+Chlorphenamine Maleate
+Colchicine
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate
+Amlodipine (as besilate)
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Multivitamins + Minerals
+Multivitamins + Minerals
+Carvedilol
+Paracetamol
+Paracetamol
+Paracetamol
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Chlorpheniramine Maleate + Phenylephrine HC1 + Paracetamol
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+D-Alpha Tocopherol (Vitamin E)
+Pantoprazole (As Sodium Sesquihydrate)
+Pantoprazole (As Sodium Sesquihydrate)
+Mefenamic Acid
+Levocetirizine Dihydrochloride
+Celecoxib
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Sildenafil (as citrate)
+Sildenafil (as citrate)
+Multivitamins
+Ambroxol Hydrochloride
+Levofloxacin (As Hemihydrate)
+Topiramate
+Tacrolimus
+Tacrolimus
+Clopido-M
+Clopidogrel
+Clarithromycin
+Citicoline (as sodium)
+Cilostazol
+Cilostazol
+Cilostazol
+Cilostazol
+Cilostazol
+Cilostazol
+Cefuroxime (As Sodium)
+Ampicillin (as Sodium)
+Ampicillin (as Sodium)
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Candesartan Cilexetil
+Candesartan Cilexetil
+Candesartan Cilexetil
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Drospirenone + Ethinylestradiol
+Ketorolac Trometamol
+Citicoline (As Sodium)
+Amoxicillin (As Trihydrate)
+Ketorolac Trometamol
+Spironolactone
+Spironolactone
+Spironolactone
+Spironolactone
+Pantoprazole
+Pantoprazole
+Pantoprazole
+Pantoprazole
+Pantoprazole
+Meloxicam
+Spironolactone
+Finasteride
+Losartan Potassium + Hydrochlorithiazide
+Losartan Potassium + Hydrochlorithiazide
+Losartan Potassium + Hydrochlorithiazide
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Clopidogrel (As Bisulfate)
+Clopidogrel (As Bisulfate)
+Betamethasone (As Valerate)
+Betamethasone (As Valerate)
+Ciprofloxacin
+Ciprofloxacin
+Cefixime (As Trihydrate)
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Hydrochlorothiazide
+Clotrimazole
+LOSARTAN (as Potassium)
+Finasteride
+MEFENAMIC ACID
+Cefixime Trihydrate
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Domperidone
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Quetiapine (As Fumarate)
+Fluconazole
+Cefotaxime (as sodium)
+Gabapentin
+Gabapentin
+Gabapentin
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Celecoxib
+Celecoxib
+Celecoxib
+Celecoxib
+Domperidone (as maleate)
+Domperidone (as maleate)
+Olmesartan Medoxomil
+Lactulose
+Clarithromycin
+Escitalopram (as oxalate)
+Escitalopram (As Oxalate)
+Escitalopram (As Oxalate)
+Ceftazidime
+Potassium Citrate
+Acetylcysteine
+Acetylcysteine
+ACETYLCYSTEINE
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Esomeprazole (As Sodium)
+Esomeprazole (as sodium)
+Esomeprazole (As Sodium)
+Esomeprazole (as sodium)
+Cefuroxime (as axetil)
+Irbesartan
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Sertraline
+Etoposide
+Sertraline (As Hydrochloride)
+Cisplatin
+Omeprazole
+Tamsulosin Hydrochloride
+Tamsulosin hydrochloride
+Tamsulosin Hydrochloride
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Piperacillin (as sodium) / Tazobactam (as sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Hydrochlorothiazide
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Hyoscine Butylbromide
+Oxytocin
+Anastrozole
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Cefuroxime (as axetil)
+Celecoxib
+Omeprazole (As Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Losartan Potassium
+Zoledronic Acid (as Zoledronic Anhydrous)
+Clarithromycin
+Cefixime (As Trihydrate)
+Cefixime (as Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as trihydrate)
+Cefixime (As Trihydrate)
+Cefuroxime (As Axetil)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Co-Amoxiclav
+Salbutamol (As Sulfate)
+Racecadotril
+Losartan potassium
+Losartan Potassium
+Rifampicin + Isoniazid
+Calcium Carbonate
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Hydrocortisone (As Sodium Succinate)
+Cefixime (as trihydrate)
+Levofloxacin (as hemihydrate)
+Levofloxacin (as hemihydrate)
+Diclofenac (As Sodium)
+Diclofenac (as sodium)
+Multivitamins + Iron
+Tranexamic Acid
+Paracetamol + Tramadol Hydrochloride
+Cetirizine  (as Dihydrochloride )
+Ferrous Fumarate + Riboflavin (Vit. B2) + Cyanocobalamin (Vit. B12) + Folic Acid
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Atorvastatin(As Calcium)
+Atorvastatin(As Calcium)
+Silver Nitrate
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Cefalexin (as monohydrate)
+Carboplatin
+Carboplatin
+Ipratropium Bromide + Salbutamol (As Sulfate)
+Vitamin B1+Vitamin B6+Vitaminb12
+BETAXOLOL (AS HYDROCHLORIDE)
+Clarithromycin
+Ketorolac Trometamol
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Losartan Potassium
+Celecoxib
+Celecoxib
+Celecoxib
+Fenofibrate
+Aluminum Hydroxide + Magnesium Hydroxide
+Cyclophosphamide
+Cyclophosphamide
+Cyclophosphamide
+MONTELUKAST (AS SODIUM)
+Co-Amoxiclav
+Co-Amoxiclav
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Ibuprofen + Paracetamol
+Cefuroxime (as axetil)
+Dextromethorphan Hydrobromide
+Dextromethorphan Hydrobromide
+Sultamicillin (As Tosylate)
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin + Nicotinamide + D-Panthenol
+Mefenamic Acid
+CEFTAZIDIME
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Sertraline Hydrochloride
+Levofloxacin (as hemihydrate)
+Tamoxifen (As Citrate)
+Cefuroxime (as axetil)
+Cefuroxime (as Axetil)
+Esomeprazole (as magnesium trihydrate)
+Clopidogrel (As Bisulfate)
+Quetiapine (as Fumarate)
+Quetiapine (as Fumarate)
+Quetiapine (as Fumarate)
+Quetiapine (as Fumarate)
+Salbutamol (As Sulfate)
+Tramadol (as hydrochloride)
+Tramadol (as Hydrochloride)
+Losartan Potassium
+Ciprofloxacin
+Ciprofloxacin
+Ciprofloxacin
+Ciprofloxacin
+GLICLAZIDE
+Cefuroxime (as axetil)
+Ranitidine (as hydrochloride)
+Celecoxib
+Celecoxib
+Celecoxib
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Ketoanalogues + Essential Amino Acids (see reverse for complete formulation)
+Finasteride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Glimepiride
+Phenytoin Sodium
+OFLOXACIN
+Multivitamins + Lysine Hydrochloride
+Rabeprazole Sodium
+Cefoxitin (as Sodium)
+Ofloxacin
+Letrozole
+Azithromycin (as dihydrate)
+Esomeprazole (as sodium)
+Esomeprazole (as sodium)
+Phospholipids + Multivitamins
+PARACETAMOL
+Gabapentin
+Isosorbide Dinitrate
+Losartan Potassium
+Metronidazole
+Metronidazole
+Streptomycin (as sulfate)
+Levofloxacin (as hemihydrate)
+Betahistine Hydrochloride
+Cilostazol
+Dopamine Hydrochloride
+METFORMIN HYDROCHLORIDE
+Diphenhydramine Hydrochloride
+Citicoline
+Methyldopa
+Cefoxitin (as sodium)
+Cefoxitin (as sodium)
+Cefoxitin (as sodium)
+CEFIXIME
+CEFIXIME
+Amlodipine (as Besilate) + Losartan Potassium
+Risperidone
+Tramadol Hydrochloride
+Danazol
+Microphylline
+Celecoxib
+Carvedilol
+Carvedilol
+Carvedilol
+Carvedilol
+CETIRIZINE DIHYDROCHLORIDE
+Finasteride
+Paracetamol
+Paracetamol
+Cetirizine Dihydrochloride
+Cefuroxime (As Axetil)
+Metformin Hydrochloride
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Cyproterone Acetate
+Cimetidine
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Ceftriaxone (as sodium)
+Tramadol Hydrochloride
+Levofloxacin (as Hemihydrate)
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Clotrimazole
+Telmisartan
+Ampicillin (As Sodium)
+Ondansetron (as Hydrochloride)
+Pantoprazole (as Sodium sesquihydrate)
+Pantoprazole (as Sodium sesquihydrate)
+PROPOFOL
+Tobramycin (As Sulfate) + Dexamethasone (As Sodium Phosphate)
+Ofloxacin + Dexamethasone
+Ofloxacin + Dexamethasone
+Ofloxacin + Dexamethasone
+Ofloxacin + Dexamethasone
+Losartan Potassium
+Cefixime (As Trihydrate)
+Cefuroxime (as Sodium)
+Pantoprazole (as Sodium Sesquihydrate)
+Pantoprazole (as Sodium Sesquihydrate)
+Cefixime (As Trihydrate)
+Clarithromycin
+Loratadine
+Levetiracetam
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (As Magnesium Trihydrate)
+Losartan Potassium
+Ceftriaxone (as Sodium)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Domperidone
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Dutasteride
+Gentamicin (As Sulfate)
+Cefuroxime (as sodium)
+Cefuroxime (As Sodium)
+Rabeprazole Sodium
+Rabeprazole Sodium
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ceftazidime
+Ceftazidime
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Dorzolamide (as Hydrochloride) + Timolol (as Maleate)
+Cefdinir
+Lactulose
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ondansetron (as hydrochloride dihydrate)
+Cefuroxime (as Axetil)
+Mometasone Furoate (as monohydrate)
+Mometasone Furoate (As Monohydrate)
+Ceftazidime (as pentahydrate)
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Doxofylline
+Levofloxacin (As Hemihydrate)
+CO-AMOXICLAV
+Telmisartan
+Ceftazidime (As Pentahydrate)
+Olanzapine
+Cetirizine hydrochloride
+Pantoprazole (as sodium sesquihydrate)
+Co-Amoxiclav
+Aripiprazole
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Cilostazol
+Cilostazol
+Salbutamol Sulfate
+Omeprazole
+LEVOFLOXACIN (as hemihydrate)
+Gemcitabine (as hydrochloride)
+Calcitriol
+Aciclovir
+Aciclovir
+Co-Amoxiclav
+Cotrimoxazole
+Omeprazole
+Escitalopram (as oxalate)
+Escitalopram (as oxalate)
+Valsartan
+Valsartan
+Irbesartan
+Irbesartan
+Irbesartan
+Irbesartan
+Irbesartan
+Irbesartan
+Losartan Potassium
+Monobasic Sodium Phosphate Monohydrate + Dibasic Sodium Phosphate Heptahydrate
+Cefixime (As Trihydrate)
+Carvedilol
+Omeprazole
+Betahistine (as dihydrochloride)
+Betahistine (as dihydrochloride)
+Tacrolimus
+Dexchlorpheniramine Maleate + Betamethasone
+CARBIMAZOLE
+Ambroxol Hydrochloride + Levocetirizine Hydrochloride
+Warfarin sodium
+Cefuroxime (as Axetil)
+Warfarin sodium
+Multivitamins + Glucose
+Tamsulosin Hydrochloride
+Sertraline (As Hydrochlorode)
+Rosuvastatin (As Calcium)
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine Citrate
+Cytarabine
+Voriconazole
+Voriconazole
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Cefaclor (As Monohydrate)
+Cefoxitin (As Sodium)
+Cefoxitin (As Sodium)
+Escitalopram (As Oxalate)
+Vitamin B1 + B6 + B12
+Ivabradine (As Hydrochloride)
+Citicoline (As Sodium)
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Nifedipine
+Ifosfamide
+Ifosfamide
+Orlistat
+Lisinopril (As Dihydrate)
+Lisinopril (As Dihydrate)
+Atorvastatin (as calcium)
+Docetaxel (As Trihydrate)
+Irbesartan
+Hyoscine Butylbromide
+Cefuroxime (As Sodium)
+None
+Ceftriaxone (As Sodium)
+Vincristine Sulfate
+Mosapride Citrate
+Cefuroxime (As Axetil)
+Pantoprazole (As Sodium)
+Esomeprazole (As Magnesium)
+Cefuroxime (as Sodium)
+Letrozole
+Losartan Potassium + Hydrochlorothiazide
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Citicoline (As Sodium)
+Felodipine
+Thiamine hydrochloride (Vit B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) + L-Lysine hydrochloride + Iron + Buclizine hydrochloride
+Esomeprazole (As Magnesium Trihydrate)
+Esomeprazole (as magnesium trihydrate)
+Ondansetron (As Hydrochloride Dihydrate)
+Ondansetron (As Hydrochloride Dihydrate)
+Amlodipine (As Besilate)
+Alendronic Acid (As Alendronate Sodium Trihydrate) + Colecalciferol (Vitamin D3)
+MULTIVITAMINS + MINERALS
+Pantoprazole (As Sodium)
+Oxymetazoline Hydrochloride
+Oxymetazoline Hydrochloride
+Diclofenac (As Sodium)
+Cisplatin
+Flexcee
+Pantoprazole (As Sodium)
+Pantoprazole (As Sodium)
+Omeprazole
+Omeprazole
+AMBROXOL HYDROCHLORIDE
+Allopurinol
+Allopurinol
+Gemcitabine
+Furosemide
+Methotrexate
+Cytarabine
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Piracetam
+Tacrolimus (As Monohydrate)
+Hyoscine (As Butylbromide)
+Hyoscine (As Butylbromide)
+Imipenem (As Monohydrate) + Cilastatin (As Sodium)
+Hydralazine Hydrochloride
+Cefixime (as trihydrate)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Cefpodoxime (as Proxetil)
+Betahistine Hydrochloride
+Muconil
+Cortiright 100
+Hydrocortisone (as sodium succinate)
+Metfored
+Sterile Water For Injection
+Nicotine
+Co-Amoxiclav
+Cefuroxime (As Sodium)
+Dobutamine
+Folic Acid
+Cloxacillin (as sodium)
+Cloxacillin (as sodium)
+Amlodipine (As Besilate + Losartan Potassium
+Omeprazole (as Sodium)
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Thiamine Nitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B2) + Cyanocobalamin (Vitamin B12)
+Aspirin
+RISPERIDONE
+RISPERIDONE
+Clomifene Citrate
+Rosuvastatin (as calcium)
+Clonidine Hydrochloride
+Meropenem (As Trihydrate)
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Paracetamol + Vitamin B-Complex
+Betamethasone Valerate
+Multivitamins + Dextrose
+Multivitamins + Dextrose
+Multivitamins + Dextrose
+SPIRONOLACTONE
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Fluticasone Propionate
+Fluticasone Propionate
+Fluticasone Propionate
+Fluticasone Propionate
+Multivitamins + Buclizine Hydrochloride + Iron
+Multivitamins + Buclizine Hydrochloride + Iron
+Ambroxol Hydrochloride
+Isoxsuprine hydrochloride
+Isoxsuprine Hydrochloride
+Ofloxacin
+Clopidogrel (as bisulfate)
+Montelukast (As Sodium)
+Ofloxacin
+Meropenem (As Trihydrate)
+Linezolid
+Pregabalin
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin + Sulbactam
+Clindamycin (as Phosphate)
+Meropenem (as Trihydrate)
+Clonidine (As Hydrochloride)
+Betahistine Hydrochloride
+Salmeflo (As Xinafoate) +Fluticasone Propionate
+Ibuprofen
+Ibuprofen
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cefepime (As Hydrochloride)
+Valsartan + Amlodipine (as besilate)
+Pregabalin
+Pregabalin
+Pregabalin
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Etoricoxib
+Etoricoxib
+Potassium Chloride
+Meropenem (as Trihydrate)
+Isosorbide Dinitrate
+Hydroxyzine Hydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cefpodoxime (as Proxetil)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Ceftriaxone (as Sodium)
+Ceftriaxone (as Sodium)
+Ceftriaxone (as Sodium)
+Ceftriaxone (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Ascorbic Acid + Zinc
+Amoxicllin (As Trihyrdrate)
+Omeprazole
+Omeprazole
+Potassium Chloride
+Hyoscine Butylbromide
+Multivitamins + Minerals + Amino Acids + Deanol + Ginseng
+Brimonidine Tartrate + Timolol (As Maleate)
+NYSTATIN
+Zoledronic Acid
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Cefuroxime (as axetil)
+Vancomycin (As Hydrochloride)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Spironolactone
+Cefalexin (as Monohydrate)
+Spironolactone
+Amlodipine (As Besilate)
+Methyldopa
+Furosemide
+Furosemide
+Vancomycin (as hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Haloperidol
+Irinotecan hydrochloride
+Domperidone
+Paracetamol + Orphenadrine Citrate
+Paracetamol
+Cetirizine Dihydrochloride
+Naproxen Sodium
+Bicalutamide
+Dextromethorphan Hbr + Phenylephrine Hydrochloride + Paracetamol
+Paracetamol + Caffeine
+Alpha Ketoanalogues + Essential Amino Acids
+Alpha Ketoanalogues + Essential Amino Acids
+Vitamins + Minerals
+Multivitamins + Iron
+Cassia angustifolia Vahl (Senna Leaves)
+Ibuprofen
+Ibuprofen
+Cefuroxime (as axetil)
+Celecoxib
+Ambroxol Hydrochloride
+CEFUROXIME (AS AXETIL)
+Propranolol Hydrochloride
+Ascorbic Acid (as Sodium Ascorbate)
+Amlodipine (As Besilate)
+CEFUROXIME (AS AXETIL)
+CEFUROXIME (AS AXETIL)
+Fusidic Acid
+Fusidic Acid
+Fusidic Acid
+Clopidogrel (as Bisulfate)
+Atorvastatin (as Calcium)
+Aspirin
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Simvastatin
+Aciclovir
+Rosuvastatin (As Calcium)
+Azithromycin (as dihydrate)
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Spironolactone
+Bisoprolol Fumarate
+Ascorbic Acid
+Cefuroxime (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Tramadol Hydrochloride
+Multivitamins + Mineral + Buclizine
+Multivitamins + Minerals + Buclizine
+Imatinib (As Mesilate)
+Telmisartan + Hydrochlorothiazide
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine HCl + Chlorphenamine Maleate
+Mefenamic Acid
+CALCIUM + CHOLECALCIFEROL (VITAMIN D3)
+Felodipine
+Felodipine
+Co-Amoxiclav
+Cefuroxime (As Axetil)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+MECOBALAMIN
+Rosuvastatin (As Calcium)
+Iron (As Iron Sucrose)
+Meropenem (as Trihydrate)
+Meropenem (as Trihydrate)
+Carbocisteine
+Clonidine Hydrochloride
+Clonidine Hydrochloride
+Clonidine Hydrochloride
+Ipratropium Bromide
+Amoxicillin (As Trihydrate)
+Valsartan + Hydrochlorothiazide
+Ceftazidime (as pentahydrate)
+Mupirocin (as calcium)
+Somatostatin (as acetate)
+Multivitamins + Lysine Hydrochloride + Buclizine Hydrochloride
+BORTEZOMIB
+Nicardipine Hydrochloride
+Atorvastatin (as calcium trihydrate) + Amlodipine (as besilate)
+Atorvastatin (as calcium trihydrate) + Amlodipine (as besilate)
+Atorvastatin (as calcium trihydrate) + Amlodipine (as besilate)
+Latanoprost
+Rabeprazole Sodium
+Carvedilol
+Gentamicin (As Sulfate)
+Gentamicin (As Sulfate)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Losartan Potassium
+Atorvastatin (As Calcium)
+VITAMIN B - COMPLEX
+Cefixime (as trihydrate)
+Cefixime (As Trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (As Trihydrate)
+Zinc (as sulfate monohydrate)
+Metronidazole
+Metronidazole
+Co-Amoxiclav
+Co-Amoxiclav
+0.5% Bupivacaine (as hydrochloride) in 8% Dextrose
+0.5% Bupivacaine (as hydrochloride) in 8% Dextrose
+0.5% Bupivacaine (As Hydrochloride) In 8% Dextrose
+0.5% Bupivacaine (As Hydrochloride) In 8% Dextrose
+Omeprazole
+Clindamycin (as phosphate)
+dl-Alpha Tocopheryl Acetate
+Warfarin Sodium
+Amlodipine ( as Besilate )
+Ursodeoxycholic Acid
+Fluoxetine (as hydrochloride)
+Ciprofibrate
+Paracetamol+Tramadol Hydrochloride
+Paracetamol
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Telmisartan
+Acetylcysteine
+Oxytocin
+Salbutamol (as Sulfate) + Bromhexine Hydrochloride + Guaifenesin
+Paracetamol
+Citicoline (as sodium)
+Metformin Hydrochloride
+Cetirizine Dihydrochloride
+MECLIZINE HYDROCHLORIDE
+Bromhexine Hydrochloride
+Bromhexine Hydrochloride
+Ibuprofen
+Cholecalciferol
+Cefalexin (as monohydrate)
+Rosuvastatin (as calcium)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Mometasone Furoate (as Monohydrate)
+Amlodipine ( as Besilate )
+Telmisartan
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Cefuroxime (as Sodium)
+Doxorubicin Hydrochloride
+Oxaliplatin
+Multivitamins + Selenium
+Vitamin B6 + Folic Acid + Vitamin B12
+Zoledronic Acid
+Cetirizine (As Hydrochloride)
+Azithromycin (as Dihydrate)
+Ceftriaxone (as sodium)
+Paracetamol
+Montelukast (as sodium)
+Miconazole Nitrate
+Sodium Chloride
+Bromhexine Hydrochloride
+Mefenamic Acid
+Capecitabine
+Co-Amoxiclav
+Bromhexine Hydrochloride
+Irbesartan
+Loratadine
+Imatinib (As Mesylate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Orlistat
+Orlistat
+Orlistat
+Orlistat
+Metronidazole
+Cefuroxime (as sodium)
+PARACETAMOL + IBUPROFEN
+Butamirate Citrate
+Ferrous Sulfate + Folic Acid
+Multivitamins
+Loratadine
+Clotrimazole
+Loratadine
+Ascorbic Acid
+Ascorbic Acid
+Cefazolin (as sodium)
+Docetaxel
+Docetaxel
+Paclitaxel
+Paclitaxel
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone (As Sodium Phosphate)
+Ampicillin (As Sodium)
+Ambroxol (As Hydrochloride)
+Clozapine
+Ranitidine (as Hydrochloride)
+Sevoflurane
+Methylprednisolone (as sodium succinate)
+Doxorubicin Hydrochloride
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Omeprazole (as Sodium)
+Oxytocin
+Clindamycin (as Phosphate)
+Pregabalin
+Adapalene
+Bromhexine Hydrochloride
+Diphenhydramine Hydrochloride
+Donepezil hydrochloride
+Donepezil hydrochloride
+Metronidazole
+Paracetamol
+Cetirizine Hydrochloride
+Bupivacaine Hydrochloride
+Ascorbic Acid (as Sodium Ascorbate)
+Paracetamol+Dextromethorphan Hydrobromide +Phenylpropanolamine Hydrochloride
+Butamirate Citrate
+Butamitate Citrate
+Butamirate Citrate
+Butamirate Citrate
+Butamirate Citrate
+Naproxen Sodium
+Loratadine
+Hydroquinone + Tretinoin
+Ascorbic acid + Zinc
+Ascorbic Acid
+CITICOLINE (as Sodium)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Epirubicin Hydrochloride
+Ceftriaxone (As Sodium)
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Idarubicin hydrochloride
+Isoniazid + Pyridoxine Hydrochloride (Vitamin B6)
+Clotrimazole
+Levocetirizine Dihydrochloride
+Losartan Potassium
+Losartan Potassium
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Ceftriaxone (As Sodium)
+Linezolid
+Fluticasone Propionate
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Calcium Carbonate
+Minoxidil
+Celecoxib
+Fusidic acid + Betamethasone (as valerate)
+Fusidic Acid + Betamethasone (as Valerate)
+Methyldopa (As Sesquihydrate)
+Methyldopa (As Sesquihydrate)
+Methyldopa (As Sesquihydrate)
+Methyldopa (As Sesquihydrate)
+Dexamethasone + Tobramycin
+Carboplatin
+Valsartan + Hydrochlorothiazide
+Methyldopa (As Sesquihydrate)
+AZITHROMYCIN (as monohydrate)
+Fluphenazine Decanoate
+Methyldopa (As Sesquihydrate)
+Betamethasone (as Valerate)
+Dexamethasone phosphate (as sodium)
+Atenolol
+Atenolol
+Metformin Hydrochloride
+Doxorubicin Hydrochloride
+Warfarin sodium
+Warfarin sodium
+Warfarin sodium
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Bortezomib
+Parecoxib (as sodium)
+Ascorbic Acid + Zinc (As Sulfate Monohydrate)
+Budesonide
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cassia Angustifolia Vahl (Senna Leaves)
+Cetirizine dihydrochloride
+Doxorubicin Hcl
+Adenosine
+Paracetamol
+Ivabradine (as HCL)
+Doxorubicin hydrochloride
+Doxorubicin hydrochloride
+Ivabradine (as HCL)
+Ivabradine (as HCL)
+Ivabradine (as HCL)
+Iron (as Ferrous Sulfate Heptahydrate)
+Cassia Angustifolia Vahl (Senna Leaves And Pods)
+Cassia Angustifolia Vahl (Senna Leaves)
+Salbutamol (as Sulfate)
+Paracetamol
+Ascorbic Acid + Zinc + Vitamin D3
+Ascorbic Acid + Zinc + Vitamin D3
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Etoricoxib
+Multivitamins
+Cassia Angustifolia Hl (Senna Leaves And Pods)
+Cassia angustifolia Vahl (Senna Leaves)
+Cassia angustifolia Vahl (Senna Leaves and Pods)
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Celecoxib
+Celecoxib
+Naproxen
+Paracetamol + Ibuprofen
+Ciprofloxacin (as Hydrochloride)
+Diclofenac Sodium
+Cloxacillin (as sodium)
+Losartan Potassium
+Losartan Potassium
+Doxycycline (as Hyclate)
+Guaifenesin + Oxeladine Citrate + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Benzyl Benzoate + Presipitated Sulfur + Zinc Oxide + Menthol
+Paracetamol
+Colchicine
+Cyanocobalamin
+PARACETAMOL
+Homatropine Methylbromide
+Multivitamins + Iron + Lysine Hydrochloride
+Neomycin Sulfate + Fluocinolone Acetonide
+Domperidone
+Dextrose 50%
+Phenylpropanolamine Hydrochloride + Phenylephrine Hydrochloride + Brompheniramine Maleate
+Aceclofenac
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Mebendazole
+Diclofenac Sodium
+Multivitamins + Lysine
+Vancomycin Hydrochloride
+Amoxicillin (As Trihydrate)
+Multivitamins + Buclizine Hydrochloride + Lysine hydrochloride
+Cetirizine Dihydrochloride
+10% Dextrose In Water Solution For Iv Infusion
+5% Dextrose in 0.45% Sodium Chloride
+5% Dextrose In Water Solution For Iv Infusion
+Peritoneal Dialysis Solution With 4.25% Dextrose
+Sterile Water For Injection
+Salbutamol (As Sulfate)
+Lactated Ringer'S Solution
+Cotrimoxazole
+Leuprorelin Acetate
+Cotrimoxazole
+Water For Injection
+Balanced Multiple Maintenance Solution With 5% Dextrose
+Salbutamol (as Sulfate)
+Cefalexin (As Monohydrate)
+Quinine Sulfate
+Salbutamol (as Sulfate)
+Chloramphenicol
+Cotrimoxazole
+Cefalexin (As Monohydrate)
+Multivitamins
+Salbutamol (As Sulfate)
+Paracetamol
+Cotrimoxazole
+Gentamicin (As Sulfate)
+Isoniazid + Pyridoxine Hydrochloride
+Bromhexine Hydrochloride
+Diclofenac Sodium
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Paracetamol
+Cefalexin (As Monohydrate)
+AMIKACIN (AS SULFATE)
+Octreotide (As Acetate)
+Octreotide (As Acetate)
+Amoxicillin (as trihydrate)
+Cotrimoxazole
+Gentian Violet
+Dicycloverine Hydrochloride
+Multivitamins
+Lyophilized Bacterial Lysate
+Dextromethorphan Hydrobromide
+Mefenamic Acid
+Amoxicillin (As Trihydrate)
+Cefalexin (as Monohydrate)
+Amoxicillin (As Trihydrate)
+Magnesium Sulfate
+Potassium Chloride
+Bromhexine (As Hydrochloride)
+Amoxicillin (As Trihydrate)
+Cotrimoxazole
+Cefalexin ( As Monohydrate)
+Cefalexin ( As Monohydrate)
+Cotrimoxazole
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Leuprorelin Acetate
+Bromhexine Hydrochloride
+Cefalexin (as monohydrate)
+Mefenamic Acid
+Cefalexin (As Monohydrate)
+Mefenamic Acid
+Cotrimazine
+Salbutamol (As Sulfate)
+Allopurinol
+Sulodexide
+Isopropanol+ Benzalkonium Chloride
+Magnesium Sulfate
+Miconazole Nitrate
+Amoxicillin (As Trihydrate)
+Cloxacillin (As Sodium)
+Levofloxacin (as hemihydrate)
+Olopatadine (as Hydrochloride)
+Dicycloverine Hydrochoride
+Dicycloverine Hydrochoride
+Bupivacaine hydrochloride
+Thiamine Mononitrate(Vitamin B1 ) + Pyridoxine Hydrochloride (Vitamin B6) +   Cyanocobalamin (Vitamin B12)
+Cytarabine
+Dacarbazine
+Loperamide Hydrochloride
+Isoniazid + Pyridoxine Hydrochloride
+Ketoconazole
+Betamethasone (as valerate)
+Gestodene + Ethinylestradiol
+Isosorbide Mononitrate
+Cisplatin
+Cisplatin
+Naproxen
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Paracetamol
+Moxifloxacin (as hydrochloride)
+Domperidone
+CLOMIFENE CITRATE
+Omnipaque
+SALBUTAMOL (AS SULFATE)
+Lidocaine Hydrochloride
+FUROSEMIDE
+CINNARIZINE
+Ascorbic Acid
+Ascorbic Acid (Vitamin C)
+Propofol
+Cyclophosphamide
+Hydrotalcite + Magnesium Hydroxide + Dimethicone
+Multivitamins + Buclizine hydrochloride
+Multivitamins
+Atenolol
+Desogestrel
+Gentamicin (as sulfate)
+Budesonide
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Bicalutamide
+Standardized Senna Concentrate
+5% Dextrose In 0.45% Sodium Chloride
+Co-Amoxiclav
+Furosemide
+Methylphenidate hydrochloride
+Retinol (As Palmitate)
+Omeprazole
+Metformin Hydrochloride
+Risperidone
+Risperidone
+Risperidone
+Cetrorelix Acetate
+D-Alpha Tocopherol (Vitamin E)
+Cefalexin (As Monohydrate)
+Mometasone furoate
+Prednisone
+Hydrocortisone (As Sodium Succinate)
+Cefalexin (as monohydrate)
+Cefaclor (as monohydrate)
+Cefalexin (as monohydrate)
+Salbutamol + Guaifenesin
+Tramadol Hydrochloride
+Paracetamol
+SODIUM CHLORIDE
+Aciclovir
+Ascorbic Acid + Zinc
+Aciclovir
+Ofloxacin
+Ofloxacin
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Glimepiride
+Deferiprone
+Ibuprofen
+Mercaptopurine
+Ascorbic acid + Taurine + Lysine monohydrochloride
+Cloxacillin (as Sodium)
+Ascorbic acid + Taurine + Lysine hydrochloride
+Iron + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12) Folic Acid
+Medroxyprogesterone Acetate
+Balanced Multiple Replacement Solution With 5% Dextrose
+Duloxetine (As Hydrochloride)
+Tobramycin/ Dexamethasone
+Aspirin
+Co-Amoxiclav
+Glipizide
+Rifampicin + Isoniazid (Rimactazid) and Ethambutol
+Robitussin PS
+Solifenacin Succinate
+Roximed
+Cefalexin (as Monohydrate)
+Fluconazole
+Ramipril
+Phenazone + Benzocaine
+Docetaxel
+Potassium Chloride
+Lysine + Iron + Vitamin B Complex
+Potassium Chloride
+ASPIRIN
+Each 100 g contains: Coptidis rhizome (Golden thread rhizome)-5.5 g Phellodendri chinensis cortex (Chinese cork-tree bark)-5.5 g Scutellariae radix (Baical skullcap root)-5.5 g
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Gemcitabine (as hydrochloride)
+Hydrochlorothiazide
+Roxithromycin
+Ferrous Sulfate Heptahydrate 200 Mg/5Ml Syrup
+Orlistat
+Guaifenesin + Salbutamol
+Furosemide
+Fenofibrate
+Iron Sucrose
+Levamlodipine (as besilate)
+Levamlodipine (as besilate)
+Cefixime (As Trihydrate)
+Gentamicin Sulfate
+Salbutamol (as Sulfate) + Bromehexine Hydrochloride + Guaifenesin
+Gemcitabine (As Hydrochloride)
+Norethisterone + Ethinylestradiol; Ferrous Fumarate
+Homatropine Hydrobromide
+Ceftazidime (as Pentahydrate)
+Ranitidine (As Hydrochloride)
+Risperidone
+Tamsulosin Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Sildenafil (as citrate)
+Clarithromycin
+Pioglitazone (As Hydrochloride) + Metformin (as Hydrochloride)
+Cromolyn Sodium
+Sevoflurane
+Fentanyl Citrate
+5% Dextrose in Lactated Ringer's
+Alfuzosin Hydrochloride
+Docetaxel (As Trihydrate)
+Docetaxel (As Trihydrate)
+Aciclovir
+Gemcitabine(As Hydrochloride)
+A.N.B. Solution of Dextrose in Normal Saline
+Levofloxacin
+Mometasone furoate
+Gemcitabine (as hydrochloride)
+Zinc (as gluconate)
+Buclizine HCl + Multivitamins + Minerals (see formulation on reverse side)
+Multivitamins with Minerals
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Perindopril (as Erbumine)
+Sterile Water For Injection
+Cefuroxime Sodium
+Otilonium bromide
+Rifampicin + Isoniazid
+Metoclopramide (as hydrochloride)
+Suxamethonium Chloride
+Phenytoin Sodium
+Ibuprofen
+Ibuprofen
+Phenylephrine hydrochloride + Brompheniramine maleate
+Montelukast (as sodium)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+0.9% Sodium Chloride
+Rosuvastatin (As Calcium)
+Anastrozole
+Aceclofenac + Paracetamol
+CIPROFLOXACIN
+Betahistine Dihydrochloride
+Oxymetazoline Hydrochloride
+Lidocaine Hydrochloride (as monohydrate)
+Mannitol
+Amlodipine (as Besilate)
+Alendronic Acid (as Alendronate sodium)
+Amlodipine (as besilate)
+Citicoline (as sodium)
+Clarithromycin
+Glucose 15% (W/V) Solution For Iv Infusion; Amino Acids 10% (Wlv) '\.Vtth Electrolytes Solution For Intravenous Injection; Intravenous Fat Emulsion With Medium And Long Chain Triglycerides 20% Emulsion For Intravenous Infusion
+Sertraline (as Hydrochloride)
+Amino Acids
+Meropenem (as Trihydrate)
+Ranitidine (as hydrochloride)
+Meloxicam
+Losartan Potassium + Hydrochlorothiazide
+Levocetirizine Dihydrochloride
+Isoniazid
+Fluoxetine (As Hydrochloride)
+Carnitine Orotate + Hepatic Extract Antitoxic Fraction + Adenine hydrochloride + Multivitamins
+Mycophenolate mofetil
+Zinc Oxide + Calcium Carbonate + Bismuth Subgallate + Menthol
+Prednisone
+Diazepam
+Ofloxacin
+Mycophenolate Mofetil
+Quetiapine (As Hemifumarate)
+Quetiapine (As Hemifumarate)
+Cefuroxime (As Sodium)
+Betaxolol Hydrochloride
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Glipizide
+Tamsulosin Hydrochloride
+Ampicillin (As Sodium)
+Amlodipine (As Besilate)
+Co-Amoxiclav
+Risperidone
+Gadopentetate dimeglumine
+Carvedilol
+Alprazolam
+Tamsulosin Hydrochloride + Finasteride
+Tamsulosin Hydrochloride + Finasteride
+Olmesartan medoxomil + Amlodipine (as besilate) + Hydrochlorothiazide
+Prednisolone
+Livoncel
+Diclofenac Diethylamine
+Alprazolam
+Alprazolam
+Cefuroxime (As Axetil)
+Cefalexin (As Monohydrate)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Ibuprofen
+Lidocaine + Prilocaine
+Cotrimoxazole
+Diclofenac (As Sodium)
+Ranitidine (As Hydrochloride)
+Paracetamol + Ibuprofen
+Furosemide
+Paracetamol
+Cefixime (As Trihydrate)
+Aceclofenac
+Metformin Hydrochloride
+Cefuroxime (As Axetil)
+Esomeprazole
+Irbesartan
+Folic Acid
+Omeprazole
+Gliclazide
+Gemfibrozil
+Montelukast (As Sodium)
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Loratadine
+Clarithromycin
+Saxagliptin (as Hydrochloride) + Metformin Hydrochloride (in extended release form)
+Saxagliptin (as Hydrochloride) + Metformin Hydrochloride (in extended release form)
+Saxagliptin (as Hydrochloride) + Metformin Hydrochloride (in extended release form)
+Desogestrel + Ethinylestradiol
+Guaifenesin + Salbutamol
+Metropolol Succinate
+Cefuruxime (as axetil)
+Benzydamine Hydrochloride + Cetylpyridinium
+Boric Acid + Borax
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Methotrexate
+Balanced Multiple Replacement Solution with 5% Dextrose for Pedia
+Etonogestrel
+Metformin Hydrochloride
+Escitalopram (as Oxalate)
+Escitalopram (as Oxalate)
+Escitalopram (as Oxalate)
+Diclofenac Sodium
+Tadalafil
+Domperidone
+Iohexol
+Celecoxib
+Iopamidol
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Duloxetine (As Hydrochloride)
+Sildenafil (as Citrate)
+Sildenafil (as Citrate)
+Linagliptin + Metformin Hydrochloride
+Linagliptin + Metformin Hydrochloride
+Linagliptin + Metformin Hydrochloride
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Nifedipine
+Sodium Chloride
+Ceftriaxone (as Sodium)
+Ciprofloxacin
+Levocetirizine hydrochloride
+Ondansetron
+Azithromycin (as dihydrate)
+Co-Amoxiclav (see reverse for formulation)
+Folic Acid
+Diclofenac Sodium (as diethylamine)
+Carvedilol
+Clindamycin (as phosphate)
+Econazole Nitrate
+Ascorbic Acid + Rutoside
+Ascorbic Acid + Rutoside
+Ascorbic Acid + Zinc
+Irbesartan
+Ferrous Sulfate + Folic Acid
+Lidocaine + Prilocaine
+Dicycloverine Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Cefuroxime (as axetil)
+Cetirizine Dihydrochloride
+Metoprolol tartrate
+Carvedilol
+Citicoline (as sodium)
+Clopidogrel (as bisulfate)
+Rifampicin + Isoniazid
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Gliclazide
+Methylphenidate Hydrochloride
+Gliclazide
+Gliclazide
+5% Dextrose in 0.9% Sodium Chloride
+Sodium Chloride + Potassium Chloride + Calcium Lactate Pentahydrate
+Desloratadine
+Isoflurane
+Iron (as Iron Sucrose)
+Zoledronic Acid
+Atropine (as Sulfate)
+Irbesartan
+OXYMETAZOLINE HYDROCHLORIDE
+Sterile water for Injection
+AMINO ACIDS
+Valsartan + Amlodipine (as besilate)
+Guaifenesin + Chlorphenamine Maleate + Phenylephrine HCl
+Levocetirizine hydrochloride
+Mupirocin + Betamethasone (as diproprionate)
+Co-Amoxiclav
+Co-trimoxazole
+Valsartan + Amlodipine (as besilate)
+Ceftriaxone (as Sodium)
+Isosorbide Mononitrate
+Clopidrogel (as bisulfate)
+Lactoferrin + d-Alpha Tocopheryl Acetate + Zinc
+Pantoprazole (as Sodium)
+Zoledronic acid
+Amitriptyline Hydrochloride
+Levocetirizine Dihydrochloride
+CEFTRIAXONE (AS SODIUM)
+Simvastatin
+Simvastatin
+Co-Amoxiclav
+Quetiapine (as fumarate)
+Rosuvastatin Calcium
+Rosuvastatin Calcium
+Rosuvastatin Calcium
+Rosuvastatin Calcium
+Valsartan
+Midazolam Hydrochloride
+Midazolam Hydrochloride
+Salbutamol (as sulfate)
+Clonidine hydrochloride
+Atorvastatin (as calcium)
+Valsartan
+Valsartan
+Levocetirizine Dihydrochloride
+Citicoline (As Sodium)
+Fenofibrate
+Rosuvastatin
+Carvedilol
+Carvedilol
+Pantoprazole (as Sodium sesquihydrate) + Domperidone
+Sodium Chloride
+Atorvastatin (as Calcium)
+Olopatadine (As Hydrochloride)
+Moxifloxacin (As Hydrochloride)
+Silver Sulfadiazine
+Cefixime (As Trihydrate)
+Sodium Bicarbonate
+Mometasone Furoate
+Dextrose In Water
+Cefazolin (As Sodium)
+Olanzapine
+Diethylcarbamazine Citrate
+Bisoprolol Fumarate + Hydrochlorothiazide
+Rocuronium Bromide
+Irbesartan
+Progesterone
+Levofloxacin (As Hemihydrate)
+Fluphenazine(As Decanoate)
+Pemetrexed (as disodium)
+Optagen
+Carbamazepine
+None
+Iopamidol
+Quinine Dihydrochloride
+Sevoflurane
+Metoprolol Tartrate
+Telmisartan
+Telmisartan
+Metoprolol Tartrate
+Losartan Potassium + Hydrochlorothiazide
+Atorvastatin
+Clotrimazole
+Multivitamins + Calcium
+Rosuvastatin (as calcium)
+Amino Acids
+Octocaine 100
+Articaine Hydrochloride + Epinephrine (as bitartrate)
+Mepivacaine Hydrochloride
+Articaine Hydrochloride + Epinephrine (as bitartrate)
+Rabeprazole Sodium
+Ascorbic Acid
+Cefixime (as trihydrate)
+Tranexamic Acid
+Atracurium Besilate
+D-Alpha Tocopherol (Vitamin E)
+Thiamine Nitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Mecobalamin (Vitamin B12) + Folic Acid
+Trimetazidine Hydrochloride
+Lansoprazole
+Ondansetron (as hydrochloride dehydrate)
+Levothyroxine Sodium
+Chlorhexidine Digluconate
+Nalbuphine Hydrochloride
+Miconazole
+Multivitamins
+Montelukast (as sodium)
+Salbutamol (as sulfate)
+Diclofenac Sodium
+Clarithromycin
+Rosuvastatin (As Calcium)
+Tramadol Hydrochloride
+Teicoplanin
+Cefepime (As Hydrochloride)
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Cefixime (as trihydrate)
+Multivitamins + Minerals
+Losartan Potassium
+Sitagliptin (As Phosphate Monohydrate)
+Sitagliptin (As Phosphate Monohydrate)
+Hydrocortisone (As Sodium Succinate)
+Telmisartan
+Xylometazoline Hydrochloride
+Pregabalin
+Famotidine
+Chloramphenicol (as Palmitate)
+Calcium Gluconate
+Metronidazole
+Fluconazole
+Propranolol Hydrochloride
+Ascorbic Acid
+Adenosine
+Felodipine
+Phenylephrine hydrochloride + Chlorphenamine maleate + Ibuprofen
+Clarithromycin
+Clarithromycin
+Esomeprazole (as magnesium trihydrate)
+Rabeprazole Sodium
+Multivitamins + Zinc
+Phenylephrine Hydrochloride + Ibuprofen
+Iohexol
+Citicoline (As Sodium)
+Loperamide Hydrochloride
+Dilamine
+Lowas
+Bisacodyl
+Azithromycin (As Dihydrate)
+None
+Ambroxol Hydrochloride
+Acetylcysteine
+Prasugrel (as hydrochloride)
+Amlodipine (As Besilate)
+Pregabalin
+Pregabalin
+Amlodipine (As Besilate)
+Rosuvastatin (as Calcium)
+Tracet PN 50
+5% Dextrose In Lactated Ringer's Solution
+Atorvastatin (as Calcium)
+Ramipril
+Hydrochlorothiazide
+Gabapentin
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Cetirizine Hydrochloride
+Finasteride
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Betamethasone (As Valerate)
+Risperidone
+Mupirocin
+Dextrose
+Montelukast (As Sodium)
+Sucralfate
+Clobetasol Propionate
+Telmisartan
+PARACETAMOL + CAFFEINE + PHENYLEPHRINE HYDROCHLORIDE + CHLORPHENIRAMINE MALEATE
+Paclitaxel
+Dexketoprofen (as trometamol)
+Oseltamivir Phosphate
+Isoniazid (Jar)
+Isoniazid
+Domperidone (as maleate)
+Soybean Oil + Purified Egg Yolk Phospholipids
+Soybean Oil + Purified Egg Yolk Phospholipids
+Ixazomib (as citrate)
+Desogestrel + Ethinylestradiol
+Dequalinium chloride
+Pemetrexed (as disodium hemipentahydrate)
+Sodium Ascorbate
+Ascorbic Acid
+Meropenem (As Trihydrate)
+AMPICILLIN (AS SODIUM) + SULBACTAM (AS SODIUM)
+Ibuprofen
+Ibuprofen
+Zidovudine + Nevirapine + Lamivudine
+DOLUTEGRAVIR
+Efavirenz + Lamivudine + Tenofovir
+EFAVIRENZ
+Eicosapentanoic Acid + Docosahexaenoic Acid (see reverse for formulation)
+Moxifloxacin
+Diosmin + Hesperidin
+PACLITAXEL
+PACLITAXEL
+PACLITAXEL
+Moxifloxacin
+Iodine (as Iohexol)
+Zoledronic acid
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Hyoscine-N-Butylbromide
+Ibuprofen
+Levofloxacin (as hemihydrate)
+Mannitol
+Bortezomib
+ASCORBIC ACID + ZINC
+Zinc
+Mebendazole
+Cefotaxime (as sodium)
+Paracetamol + Caffeine
+Paracetamol + Hyoscine-N-Butyl Bromide
+Metronidazole + Miconazole nitrate
+Metronidazole + Miconazole nitrate
+Cefuroxime
+Ascorbic Acid (as Sodium Ascorbate)
+Olapatadine ( as hydrochloride )
+Valsartan + Hydrochlorothiazide
+Valsartan + Hydrochlorothiazide
+Valganciclovir (as hydrochloride)
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Baricitinib
+Baricitinib
+Paliperidone (as Palmitate)
+Paliperidone (as Palmitate)
+Miconazole Nitrate
+Pemetrexed (as sodium)
+Multivitamins + Minerals + Amino Acids
+Dorzolamide (as hydrochloride) + Timolol (as maleate)
+Verapamil hydrochloride
+Verapamil hydrochloride
+Tropisetron Hydrochloride
+Dolutegravir (as Sodium)
+Tretinoin
+Ascorbic Acid
+Tetrahydrozoline HCl
+Orlistat
+Diclofenac Diethylamine
+Sofosbuvir
+Abacavir (as Sulfate) + Lamivudine
+Diclofenac Diethylamine
+Cetirizine Dihydrochloride
+Multivitamins
+Dextromethorphan Hydrobromide + Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate + Sodium Citrate
+Moxifloxacin (As Hydrochloride)
+Caspofungin (as acetate)
+Tiotropium (As Bromide)
+Tiotropium (As Bromide)
+Tiotropium (As Bromide)
+Tiotropium (as bromide)
+Salbutamol (As Sulfate)
+Norepinephrine (as Bitartrate)
+Diosmin + Hesperidin
+Ascorbic Acid + Zinc
+Cotrimoxazole
+Cotrimoxazole
+Cotrimoxazole
+Betamethasone (as Valerate)
+Ascorbic Acid
+Levofloxacin (as Hemihydrate)
+Atomoxetine (As Hydrochloride)
+Atomoxetine (As Hydrochloride)
+Atomoxetine (As Hydrochloride)
+Atomoxetine (As Hydrochloride)
+Amino Acids
+Parecoxib (As Sodium)
+Amlodipine (as besilate) + Valsartan
+Amlodipine (as besilate) + Valsartan
+Amlodipine (as besilate) + Valsartan
+Bisoprolol Fumarate
+Nitrogylcerin
+Tranexamic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Levetiracetam
+Pregabalin
+5% Dextrose In Water
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Caspofungin (as acetate)
+Amoxicillin (as Trihydrate)
+Ethambutol Hydrochloride + Isoniazid + Pyridoxine Hydrochloride
+Multivitamins Plus Buclizine Hydrochloride
+Adenosine Triphosphate
+Allopurinol
+Tobramycin
+Paracetamol
+Aluminum Hydroxide + Magnesium Trisilicate + Calcium Carbonate + Simethicone
+Paracetamol
+Mefenamic Acid
+Thiamine Hydrochloride (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12)
+Silybum marianum ( Silymarin Fruit )
+Silybum marianum ( Silymarin Fruit )
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Blumea balsamifera (L.) DC (Sambong leaf)
+Blumea Balsamifera (L.) DC (Sambong Leaf)
+Each dragée contains: Gentianae radix (Gentian root) Primulae flos (Primrose flowers with calyx) Rumicus herba (Common sorrel 6 mg 18 mg 18 mg 18 mg 18 mg
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi leaf)
+Vitex negundo L. (Lagundi leaf)
+Coleus amboinicus Lour. (Oregano Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Paracetamol
+Ascorbic Acid
+Ascorbic acid (as Sodium Ascorbate)
+Carbocisteine
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Ascorbic Acid
+Carbocisteine
+Carbocisteine
+Ascorbic acid (as Sodium Ascorbate)
+ASCORBIC ACID
+d1-Alpha Tocopheryl Acetate (Vitamin E)
+Povidone Iodine
+Povidone Iodine
+Ascorbic Acid
+Hexetidine
+Peppermint Oil + Eucalyptus Oil + Menthol + Camphor
+Ascorbic Acid
+POVIDONE-IODINE
+Ascorbic Acid
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Methyl Salicylate + Menthol + Camphor+ Eucalyptus Oil
+Isopropyl Alcohol
+Chlorhexidine Gluconate
+Oral Rehydration Salts
+Povidone-Iodine
+Quassinoids
+Quassinoids
+Chlorhexidine Gluconate + Isopropyl Alcohol
+Chlorhexidine Gluconate + Isopropyl Alcohol
+Chlorhexidine Digluconate
+Isopropyl Alcohol
+Povidone-Iodine
+Idursulfase
+Metoclopramide (As Hydrochloride)
+Zolpidem Tartrate
+Tetanus and Diphtheria Toxoids Adsorbed combined with component Acellular Pertussis Vaccine
+Diphtheria, Tetanus, Pertussis (Whole Cell), Hepatitis B (IDNA) and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Quadrivalent Seasonal Influenza Vaccine (Split Virion, Inactivated) Southern Hemisphere 2024 Strain
+Travoprost + Timolol (as maleate)
+Moxifloxacin (As Hydrochloride)
+Nepafenac
+Moxifloxacin (as hydrochloride) + Dexamethasone Phosphate (as sodium)
+Everolimus
+Everolimus
+Ruxolitinib (as phosphate)
+Ruxolitinib (As Phosphate)
+Ruxolitinib (As Phosphate)
+Pazopanib (as Hydrochloride)
+Pazopanib (as Hydrochloride)
+Fingolimod (as hydrochloride)
+Sodium Chloride
+Dextrose
+Dextrose
+Dextrose
+Lactated Ringer'S Solution
+Peritoneal Dialysis (see reverse)
+Ascorbic Acid
+Divalproex sodium
+Lactulose
+Quadrivalent Seasonal Influenza Vaccine (Surface Antigen, Inactivated) 2024 Southern Hemisphere Strain
+Ademetionine (as butanedisulfonate)
+Ademetionine (As Butanedisulfonate)
+Follitropin Alfa
+Phenylephrine Hdyrochloride + Brompheniramine Maleate
+d-Alpha Tocopheryl Acetate (Vitamin E)
+Ibuprofen
+Guaifenesin + Phenylpropanolamine HCl + Chlorphenamine maleate
+Ibuprofen
+Chlorhexidine Gluconate
+Ascorbic Acid + Zinc
+Bevacizumab
+Emicizumab
+Emicizumab
+Emicizumab
+Emicizumab
+Filgrastim
+Follitropin Delta
+Follitropin Delta
+Follitropin Delta
+Measles and Rubella Vaccine (Live, Attenuated)
+Aflibercept
+Insulin Human (rDNA)
+Epoietin Alfa
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Isopropyl Alcohol
+Medical Grade Oxygen
+Amlodipine (As Besilate)
+Angelicae sinesis radix + Angelicae dahuricae radix + Armeniacae amarum semen + Scrophulariae radix + Gleditsia sinesis lamarck + Aconiti kusnezoffi radix + Allium fistulosum herba + Olibanum + Myrrha + Yellow Beeswax+ Menthol + Methyl Salicylate + Zinc Oxide + Resin
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Cefalexin (as monohydrate)
+Amoxicillin (As Trihydrate)
+Losartan Potassium
+Clindamycin (as hydrocloride)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cetirizine Hydrochloride
+Losartan Potassium
+Clopidogrel (as bisulfate)
+Cefalexin (as monohydrate)
+Carvedilol
+Celecoxib
+Mefenamic Acid
+Cefixime (as Trihydrate)
+Clopidogrel (as bisulfate)
+Losartan Potassium
+Losartan Potassium
+Klindex
+Omeprazole
+Amlodipine (As Besilate)
+Clopidogrel (as bisulfate)
+Imucor-Z
+Azithromycin
+Levofloxacin (as hemihydrate)
+Ascorbic Acid + Zinc
+Azithromycin (as dihydrate)
+Paracetamol
+Azithromycin (as monohydrate)
+Azithromycin (As Dihydrate)
+Mupirocin
+Mupirocin
+Paracetamol
+Losartan Potassium
+Cefuroxime (as Sodium)
+Irinotecan Hydrochloride
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid
+Folic Acid
+Paracetamol
+Cefixime (as Trihydrate)
+Citicoline (As Sodium)
+Paracetamol
+Multivitamins
+Losartan Potassium
+Amlodipine (As Besilate)
+Cefuroxime (As Axetil)
+Telmisartan
+Telmisartan
+Lactulose
+Ascorbic Acid + Zinc
+Esomeprazole (as Sodium)
+Omeprazole
+Cotrimoxazole
+Cefixime (as trihydrate)
+Ferrous. Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Cefpodoxime (as Proxetil)
+Acetylcysteine
+Olanzapine
+Betahistine Hydrochloride
+Bromhexine Hydrochloride
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Pantoprazole (as Sodium)
+Omeprazole
+Cefixime (as Trihydrate)
+Domperidone
+Clarithromycin
+Losartan Potassium + Hydrochlorothiazide
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+CO-AMOXICLAV
+Cetirizine Dihydrochloride
+Meropenem (as Trihydrate)
+Tamsulosin hydrochloride
+Doxofylline
+Pantoprazole (As Sodium)
+Montelukast (as Sodium)
+Paracetamol + Thiamine Mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Tamoxifen (As Citrate)
+Tamoxifen (As Citrate)
+Salbutamol (as Sulfate)
+Linezolid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Risperidone
+Levothyroxine (as sodium)
+Levothyroxine (as sodium)
+Ascorbic Acid + Zinc
+Alpha Ketoanalogues + Essential Amino Acids
+Meropenem (as Trihydrate)
+Meropenem (as trihydrate)
+Dexamethasone + Neomycin (As Sulfate) + Polymyxin-B-Sulfate
+Cefuroxime (As Axetil)
+Atorvastatin (As Calcium)
+Dorzolamide (as Hydrochloride) + Timolol (as Maleate)
+Ipratropium Bromide + Salbutamol as sulfate
+Cefuroxime (as axetil)
+Pregabalin
+Ascorbic Acid
+Acetylcysteine
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit.B6) + Cyanocobalamin (Vit.B12
+Hydrocortisone (As Sodium Succinate)
+Tranexamic Acid
+Trimetazidine dihydrochloride
+Trimetazidine dihydrochloride
+Hyoscine N-Butylbromide + Paracetamol
+Multivitamins + Iron
+Butamirate Citrate
+Esomeprazole (As Sodium)
+Vitamin B-Complex
+Ceftriaxone (As Sodium)
+Mometasone Furoate
+Epirubicin Hydrochloride
+EPIRUBICIN Hydrochloride
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit.B12)
+Irinotecan Hydrochloride
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Zoledronic Acid
+Epirubicin Hydrochloride
+Dobutamine (as hydrochloride)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Cefotaxime (As Sodium)
+Meropenem (as Trihydrate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Ascorbic Acid + Zinc
+Cefazolin (As Sodium)
+Ceftriaxone (as sodium)
+Salbutamol (as Sulfate)
+Diosmin + Hesperidin
+Hyoscine-N-Butylbromide
+Paracetamol
+Ascorbic Acid
+Ascorbic acid + Zinc
+Carbocisteine + Zinc
+Sodium Bicarbonate
+Sodium Bicarbonate
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Multivitamins
+Multivitamins + Iron
+Multivitamins
+Levetiracetam
+Amlodipine (as besilate)
+Moxifloxacin Hydrochloride
+Ketoanalogues + Essential Amino Acids
+Citicoline (As Sodium)
+Paracetamol + Phenylephrine Hcl
+Ascorbic acid + Cholecalciferol + Zinc
+Cetirizine (as Dihydrochloride) + Phenylephrine Hydrochloride
+Ambroxol Hydrochloride
+Paracetamol + Phenylephrine Hcl
+Paracetamol + Phenylephrine Hcl
+Cetirizine + Phenylephrine Hcl
+Multivitamins + Minerals + Korean Ginseng + Garlic Extract
+Chlorphenamine Maleate
+Ascorbic acid + Calcium + Cholecalciferol (Vitamin D3)
+Multivitamins + Mineral
+Cholecalciferol (Vitamin D3)
+Zinc
+Zinc
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Calcium Cholecalciferol (Vitamin D3)
+Carbocisteine
+Cetirizine Dihydrochloride
+Cetirizine Hydrochloride
+Loratidine
+Mefenamic Acid
+Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc + Vitamin D3
+Methyldopa (As Sesquihydrate)
+Carbocisteine
+Carbocisteine
+Fucidic Acid
+Ibuprofen
+Loratidine
+Mefenamic Acid
+Zinc
+Zinc
+Salmeterol (as xinofoate)/Fluticasone propionate
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Cefuroxime (As Axetil)
+Esomeprazole (Magnesium Trihydrate)
+Cetirizine Hydrochloride
+Folic Acid
+Ofloxacin
+Salbutamol (as sulfate)
+Granisetron (hydrochloride)
+Dorzolamide ( As Hydrochloride ) + Timolol ( As Maleate )
+Ceftriaxone (as sodium)
+Betahistine dihydrochloride
+Betahistine dihydrochloride
+Hyoscine-N-Butylbromide
+Oxcarbazepine
+Oxcarbazepine
+Rocuronium bromide
+Thiamine Mononitrate (Vit. B) + Pyridoxine Hydrochloride (Vit. B) + Cyanocobalamin (Vit. B12)
+Thiamine Mononitrate (Vit. B) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Thiamine Mononitrate (Vit. B) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Ascorbic Acid
+Ascorbic Acid
+Guaifenesin
+Ibuprofen
+Sodium Fusidate
+Ibuprofen
+Dextromethorphan Hbr
+Hyoscine-N-Butylbromide
+Phenylpropanolamine Hcl
+Phenylpropanolamine Hcl
+Diphenhydramine Hydrochloride
+Mometason Furoate
+Guaifenesin + Phenylpropanolamine Hcl+ Chlorphenamine Maleate
+Carbocisteine
+Cetirizine Dihydrochloride
+Co-Amoxiclav
+Co-Amoxiclav
+Ambroxol
+Calcium + Cholecalciferol
+Diclofenac
+Hyoscine N-Butylbromide
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Ascorbic Acid
+Multivitamins + Minerals
+Duloxetine (as hydrochloride)
+Duloxetine (As Hydrochloride)
+Cetirizine
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Iohexol
+Iohexol
+Trimetazidine dihydrochloride
+Zinc
+Zinc
+Carbocisteine
+Cetirizine Dihydrochloride
+Ibuprofen
+Guaifenesin
+Phenylpropanolamine Hcl
+Guaifenesin + Dextromethorphan HBr
+Multivitamins
+Multivitamins
+Multivitamins + Iron
+Guaifenesin + Phenylpropanolamine HCI + Chlorphenamine maleate
+Guaifenesin + Phenylpropanolamine HCl + Chlorphenamine maleate
+Diphenhydramine Hydrochloride
+Phenylpropanolamine Hcl
+Hyoscine-N-Butylbromide
+Multivitamins + Buclizine HCl + Iron
+Ibuprofen
+Ibuprofen
+Ibuprofen
+Ibuprofen
+Ascorbic Acid
+Allopurinol
+Allopurinol
+Allopurinol
+Allopurinol
+Allopurinol
+Allopurinol
+Allopurinol
+Allopurinol
+Cefaclor (as Monohydrate)
+Ibuprofen
+Loratadine
+Ascorbic Acid
+Ascorbic Acid
+Oral Rehydration Salt
+Oral Rehydration Salt
+Aripiprazole
+Aripiprazole
+Co-Amoxiclav
+Co-Amoxiclav
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Telmisartan + Hydrochlorothiazide
+Diclofenac sodium
+Bortezomib
+Bortezomib
+Hydrocortisone (as acetate)
+Clotrimazole
+Clobetasol Propionate
+Naproxen
+Paracetamol + Phenylephrine + Chlorpheniramine Maleate+Caffeine Anhydrous
+Amorolfine
+ASCORBIC ACID
+Sodium Bicarbonate
+Sodium Bicarbonate
+Ascorbic Acid
+Multivitamins
+Paracetamol + Ibuprofen
+Dextromethorphan hydrobromide
+Calcium Ascorbate + Zinc
+Dextromethorphan hydrobromide
+Multivitamins
+Zinc
+Paracetamol + Ibuprofen
+Loratadine
+Fusidic Acid
+Multivitamins
+Carmellose Sodium
+Carmellose Sodium
+Telmisartan + Amlodipine (as besilate)
+Omeprazole (as sodium)
+Bupivacaine Hydrochloride
+Bupivacaine Hydrochloride
+Oxytocin
+Calcium Lactate
+Calcium Lactate
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Bortezomib
+Bortezomib
+Bortezomib
+Erlotinib (as hydrochloride)
+Erlotinib (as hydrochloride)
+Erlotinib (as hydrochloride)
+Lidocaine Hydrochloride
+Rosuvastatin (as calcium)
+Rosuvastatin (as Calcium)
+Amoxicillin (as trihydrate)
+Ibuprofen
+Ibuprofen
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Cholecalciferol (Vitamin D3)
+Ascorbic Acid
+Cyproterone Acetate + Ethinylestradiol
+Paracetamol + Guaifenesin + Phenylpropanolamine Hydrochloride + Dextromethorphan Hydrobromide + Chlorphenamine Maleate
+Ascorbic Acid
+Gemcitabine (as hydrochloride)
+Gemcitabine (as hydrochloride)
+Carbocisteine
+Paracetamol
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Paracetamol
+Paracetamol
+Paracetamol
+Aluminum Hydroxide + Magnesium Hydroxide
+Carbocisteine
+Carbocisteine
+Paracetamol
+Paracetamol
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Amikacin (As Sulfate)
+Levocetirizine Dihydrochloride (Grape Flavor)
+Sitagliptin Phosphate + Metformin Hydrochloride
+Levetiracetam
+Timolol (as Maleate)
+Latanoprost
+Ascorbic Acid + Zinc +Cholecalciferol (Vitamin D3)
+Etelcalcetide (as hydrochloride)
+Multivitamins
+Cloxacillin as Sodium
+Cloxacillin as Sodium
+Ceftriaxone (as sodium)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Cefuroxime (As Axetil)
+Beclometasone dipropionate + Formoterol fumarate dihydrate
+Cyproterone acetate + Ethinylestradiol
+Butamirate Citrate
+Salmeterol (as xinafoate) + Fluticasone propionate
+Salmeterol (as xinafoate) + Fluticasone propionate
+Ciprofloxacin (as lactate)
+Loperamide + Simeticone
+Dobutamine Hydrochloiride
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Flunarizine (as hydrochloride)
+Zoledronic Acid
+Zoledronic Acid
+Ascorbic Acid + Zinc
+Folic Acid
+Clotrimazole
+Ascorbic Acid + Zinc + Chlorella Growth Factor
+Estradiol (as hemihydrate)
+Multivitamins + Minerals + Herbs
+Medroxyprogesterone Acetate
+Ascorbic Acid
+Calcium Citrate+ Calcitriol
+Oxaliplatin
+Oxaliplatin
+Montelukast (as Sodium)
+Cefdinir
+Ascorbic Acid + Zinc
+Diphenhydramine Hcl + Phenylpropanolamine Hcl
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Betamethasone (As Dipropionate)
+Loratadine
+Trelagliptin (as succinate)
+Gadopentetate Dimeglumine
+Silver Sulfadiazine
+Cefoxitin (As Sodium)
+Multivitamins + Minerals + Ginseng
+Clindamycin Hydrochloride
+Dolutegravir + Lamivudine + Tenofovir disoproxil fumarate
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Miconazole Nitrate
+Ascorbic Acid
+Carvedilol + Ivabradine (as hydrochloride)
+Carvedilol + Ivabradine (as hydrochloride)
+Carvedilol + Ivabradine (as hydrochloride)
+Carvedilol + Ivabradine (as hydrochloride)
+Carvedilol + Ivabradine (as hydrochloride)
+Carvedilol + Ivabradine (as hydrochloride)
+Beclometasone Dipropionate + Formoterol Fumarate Dihydrate
+Etelcalcetide (as hydrochloride)
+Etelcalcetide (as hydrochloride)
+Propofol
+Ascorbic Acid
+Chlorhexidine Gluconate
+Ascorbic Acid
+d-Alpha Tocopherol (Vitamin E)
+Docetaxel
+Docetaxel
+Sumatriptan (as succinate)
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Multivitamins + Lysine
+Multivitamins + Lysine
+Benzydamine Hydrochloride + Cetylpyridinium Chloride
+Cetirizine (as dihydrochloride)
+Doxorubicin hydrochloride
+Sodium Valproate + Valproic Acid
+Etoricoxib
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Samitol
+Multivitamins
+Ascorbic Acid
+Ascorbic Acid
+Mupirocin
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic acid + Zinc + Cholecalciferol (Vitamin D3)
+Granisetron (hydrochloride)
+Cefuroxime (As Axetil)
+Cefuroxime (as axetil)
+Oxytocin
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ammonium Chloride + Diphenhydramine Hydrochloride
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Carbocisteine + Zinc
+Ascorbic Acid
+Zingiber officinale Roscoe (Ginger Rhizome)
+Carbocisteine
+Povidone-Iodine
+Paracetamol
+Ascorbic Acid
+Ascorbic Acid
+Carbocisteine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Povidone Iodine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Salicylic Acid
+Paracetamol
+Methyl Salicylate + Menthol + Camphor
+Basiliximab
+Insulin Aspart
+Insulin Aspart
+Trastuzumab
+Tinzaparin Sodium
+Streptokinase
+Hepatitis A (inactivated) and Hepatitis B (rDNA) (HAB) Vaccine (adsorbed)
+Human Serum Immunoglobulin
+Alphanine SD 500 IU
+Antithymocyte Immunoglobulin (ATG) (Equine)
+Human Normal Immunoglobulin (IGIV)
+Inactivated Purified Rabies Vaccine (Vero-Cell)
+Diphtheria, Tetanus, Acellular Pertussis, Inactivated Poliomyelitis and Haemophilus influenzae Type B Conjugate Vaccine, Adsorbed
+Hepatitis B Vaccine (rDNA)
+Epoetin alfa
+Epoetin alfa
+Bevacizumab
+Insulin Human (rDNA)
+Isophane Insulin
+Insulin Human (rDNA)
+Streptokinase
+TETANUS ANTITOXIN
+Heparin sodium
+HEPARIN SODIUM
+Multivitamins
+Tamoxifen (As Citrate)
+Amoxicillin (As Trihydrate)
+Iron + Vitamin B Complex
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Gentian Violet
+Carbocisteine
+Benzalkonium Chloride
+Ascorbic Acid
+Carbocisteine
+Povidone Iodine
+Methyl Salicylate
+Povidone Iodine
+Tobramycin
+Carnitine Orotate + Hepatic Extract Antitoxic Fraction + Adenine HCl + Pyridoxine HCl + Riboflavin + Cyanocobalamin
+Hypromellose
+Esomeprazole (As Sodium)
+Cefalexin
+Montelukast (As Sodium)
+Ranitidine (As Hydrochloride)
+Tamoxifen (As Citrate)
+Tobramycin
+Co-Amoxiclav
+Clarithromycin
+Prednisone
+Iopamidol
+Sultamicillin (as tosylate)
+Sultamicillin (as tosylate)
+Paracetamol
+Paracetamol
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Co-Amoxiclav
+Amoxicillin (As Trihydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Amoxicillin (As Trihydrate)
+Docetaxel
+Paracetamol
+Cefalexin (As Monohydrate)
+Cefalexin (As Monohydrate)
+Cefaclor (As Monohdyrate)
+Naproxen Sodium
+Piroxicam
+Piroxicam
+Piroxicam
+Cefalexin (As Monohydrate)
+Amoxicillin (As Trihydrate)
+Carbimazole
+Fluconazole
+Fluconazole
+OMEPRAZOLE (AS SODIUM)
+Citicoline (As Sodium)
+Carvedilol
+Azithromycin (As Dihydrate)
+Paclitaxel
+PACLITAXEL
+PACLITAXEL
+Cefalexin (As Monohydrate)
+Chlorphenamine Maleate
+Meloxicam
+Meloxicam
+Meloxicam
+Multivitamins + Iron
+Multivitamins + Minerals + DHA + EPA
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Cotrimoxazole
+Metronidazole
+Metronidazole
+ISOXSUPRINE HYDROCHLORIDE
+ISOXSUPRINE HYDROCHLORIDE
+Escitalopram (As Oxalate)
+Diltiazem Hydrochloride
+Ferrous Fumarate + B Complex
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Clindamycin (As Hydrochloride)
+Diclofenac Sodium
+Losartan Potassium
+Losartan Potassium
+Gabapentin
+Diclofenac Sodium
+Diclofenac Sodium
+Diclofenac Sodium
+Ibuprofen
+Ibuprofen (Orange flavor)
+Ranitidine (As Hydrochloride)
+Hyoscine-N-Butylbromide
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Cefaclor (As Monohydrate)
+Flucloxacillin (as Sodium)
+Guaifenesin
+Chlorphenamine Maleate
+Cefuroxime (As Axetil)
+Atorvastatin
+Cefuroxime (as Axetil)
+Clarithromycin
+Cefuroxime (as sodium)
+Midazolam
+Metformin Hydrochloride
+Metformin Hydrochloride
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Multivitamins + Minerals
+Olanzapine
+Albendazole
+Dimenhydrinate
+Guaifenesin + Salbutamol (as Sulfate)
+Guaifenesin + Salbutamol
+Perindopril Erbumine
+Lamivudine
+Co-Amoxiclav
+CETIRIZINE DIHYDROCHLORIDE
+Betamethasone Dipropionate
+Dicycloverine Hydrochloride
+Clindamycin (as phosphate)
+Clindamycin (as phosphate)
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Cefuroxime (as axetil)
+Ofloxacin
+Levocetirizine Dihydrochloride
+Co-Amoxiclav
+Olmesartan Medoxomil + Hydrochlorothiazide
+Hydrochlorothiazide
+Rabeprazole Sodium
+Tobramycin
+Imipenem (As Sodium) + Cilastatin (As Sodium)
+Metoclopramide Hydrochloride
+Irbesartan
+Xylometazoline Hydrochloride
+Ciprofloxacin (As Hydrochloride)
+Atorvastatin (as calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+BLEOMYCIN  (as Sulfate)
+Furosemide
+Tramadol Hydrochloride
+Azithromycin (As Dihydrate)
+Losartan Potassium
+Losartan Potassium
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Esomeprazole (as magnesium trihydrate)
+Folic Acid
+Citicoline ( as sodium )
+Ascorbic acid + Zinc
+Montelukast (As Sodium)
+Paracetamol
+Diphenhydramine hydrochloride + Phenylpropanolamine hydrochloride
+Pantoprazole (As Sodium)
+Mometasone Furoate
+Olanzapine
+Cefalexin (As Monohydrate)
+Salmeterol (as Xinafoate) + Fluticasone propionate
+Escitalopram (as oxalate)
+Procaterol (As Hydrochloride Hemihydrate)
+Amoxicillin (as trihydrate)
+Loperamide
+Rosuvastatin (As Calcium)
+Metoprolol Tartrate
+Metoprolol Tartrate
+Losartan Potassium
+Metformin Hydrochloride
+Levetiracetam
+Ebastine
+ONDANSETRON (as hydrochloride dihydrate)
+Olanzapine
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Cilostazol
+CEFUROXIME (AS AXETIL)
+Lamotrigine
+Ascorbic Acid
+Paracetamol
+Paracetamol
+Paracetamol
+Rosuvastatin (as calcium)
+Trimetazidine Hydrochloride
+Metformin Hydrochloride
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Clonidine
+Valsartan
+Ranitidine (as hydrochloride)
+Simvastatin
+Rosuvastatin
+Rosuvastatin
+Paracetamol + Phenylpropanolamine HCI Chlorphenamine maleate
+Paracetamol
+Amoxicillin (As Trihydrate)
+Metformin Hydrochloride
+Ceftriaxone(as Sodium)
+Cefalexin (As Monohydrate)
+Levetiracetam
+Ascorbic Acid
+Multivitamins
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Allopurinol
+Ofloxacin
+Cefalexin (As Monohydrate)
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Atorvastatin ( As Calcium )
+Sulbutiamine
+Oxaliplatin
+Mefenamic Acid
+Allopurinol
+Atenolol
+Atenolol
+Pyrantel (As Embonate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Chloramphenicol (As Palmitate)
+Cefalexin (as monohydrate)
+Cefalexin (As Monohydrate)
+Carbenoxolone Sodium
+Chloramphenicol
+Amoxicillin (As Trihydrate)
+Cefalexin (As Monohydrate)
+Allopurinol
+Nitroglycerin
+Pizotifen (as Maleate)
+Bromhexine hydrochloride
+Mesalazine
+Cefalexin (as monohydrate)
+Cefalexin (As Monohydrate)
+Paracetamol
+Desmopressin (as acetate)
+Salmon Calcitonin
+Amoxicillin (as trihydrate)
+Mefenamic Acid
+Multivitamins + Lysine
+Triptorelin Acetate
+Aciclovir
+Aspirin
+Mefenamic Acid
+Paracetamol
+Ketoconazole
+Omeprazole (as sodium)
+Phenylephrine hydrochloride + Brompheniramine Maleate
+Ranitidine (As Hydrochloride)
+Cefaclor (as monohydrate)
+Paracetamol
+Midazolam
+Drospirenone + Estradiol
+Isoniazid
+Erdosteine
+Salbutamol + Guaifenesin
+5% Dextrose In 0.3% Sodium Chloride
+10% Dextrose In Water
+Lactated Ringer'S Solution
+Balanced Multiple Maintenance Solution With 5% Dextrose
+Diclofenac sodium
+Chlorpromazine Hydrochloride
+Fluvoxamine (as maleate)
+Cefradine (as Monohydrate)
+Fenofibrate
+Fexofenadine Hydrochloride
+Hydrochlorothiazide
+Losartan Potassium
+Co-Amoxiclav
+Co-Amoxiclav (see reverse for formulation)
+Citicoline (As Sodium)
+Cerebrolysin
+Losartan Potassium
+Retinol Palmitate (Vitamin A)
+Losartan Potassium + Hydrochlorothiazide
+Multivitamins + Minerals (see reverse)
+Spherical Carbon Adsorbent
+Cefuroxime (as axetil)
+Clarithromycin
+Quetiapine (As Hemifumarate)
+Ambroxol (as hydrochloride)
+Carboxymethylcellulose Sodium
+Loratadine
+Clotrimazole
+Paracetamol + Dextromethorphan Hbr + Phenylephrine Hydrochloride
+Ketoconazole
+Calcium Polysterene Sulphonate
+Amoxicillin (as Trihydrate)
+Alprazolam
+Clonidine (As Hydrochloride)
+Clonidine (as Hydrochloride)
+Levofloxacin (As Hemihydrate)
+L-Asparaginase
+Ursodeoxycholic Acid
+Meformin Hydrochloride
+Carvedilol
+Mometasone furoate
+Irbesartan + Hydrochlorothiazide
+Sodium Chloride
+Metoprolol Tartrate
+Carvedilol
+Cefixime (as trihydrate)
+Co-Amoxiclav
+Triamcinolone Acetonide
+Oxaliplatin
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Pregabalin
+Celecoxib
+Atorvastatin (As Calcium)
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Ursodeoxycholic Acid
+Sodium picosulfate+ Magnesium oxide + Citric Acid
+Paracetamol
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Celecoxib
+Irbesartan
+Cotrimoxazole
+Hydralazine Hydrochloride
+Esomeprazole (As Magnesium)
+Citicoline (as sodium)
+Meropenem (as trihydrate)
+Enalapril (As Maleate)
+Each kit contains: Rifampicin/Isoniazid; and Pyrazinamide/Ethambutol HCI/ Rifampicin/ Isoniazid (Stop TB Patients Kit)
+Brimonidine Tartrate + Timolol (as maleate)
+Fluconazole
+Ascorbic acid
+Levonorgestrel + Ethinylestradiol
+Tolnaftate + Clioquinol + Gentamicin (as sulfate) + Betamethasone (as valerate)
+Carmona retusa (Vahl.) Masam (Tsaang gubat leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Carbocisteine
+Carbocisteine
+Camphor + Menthol + Eucalyptus Oil
+Ascorbic Acid
+Povidone Iodine
+Povidone-Iodine
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Citicoline
+Levofloxacin (As Hemihydrate)
+TRANEXAMIC ACID
+Oral Rehydration Salts
+Methyl salicylate + Menthol
+Losartan Potassium
+Captopril
+Celecoxib
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Cetirizine Hydrochloride
+Clobetasol (as Propionate)
+Ceftriaxone (As Sodium)
+Ceftriaxone (as sodium)
+Cefixime (as Trihydrate)
+Co-Amoxiclav
+Hydrocortisone (as sodium succinate)
+Levetiracetam
+Clopidogrel (as bisulfate)
+Folic Acid
+Chlorpheniramine Maleate + Paracetamol + Phenylephrine
+Rosuvastatin (As Calcium)
+Valproic Acid
+Rosuvastatin (as calcium)
+Olanzapine
+Olanzapine
+Heparin + Allantoin + Allium cepa L. (Onion) extract
+Brimonidine Tartrate
+Calcium Lactate
+Miconazole
+Amikacin (as Sulfate)
+Amikacin (as Sulfate)
+Amikacin (as Sulfate)
+Ibuprofen
+Enalapril Maleate
+Enalapril Maleate
+Enalapril Maleate
+Salbutamol (as sulfate)
+Cefaclor
+Gemcitabine (as hydrochloride)
+Gabapentin
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Ascorbic Acid
+Ascorbic Aid
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic acid + Zinc
+PHYLLANTHUS NIRURI L. (MENIRAN WHOLE PLANT)
+Nigella sativa L. (Black Cumin) Seed + Phaleria macrocarpa (God's Crown) Fruit Flesh
+Povidone-Iodine
+Povidone-Iodine
+Cardipen
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Amoxicillin (As Trihydrate)
+Naproxen (As Sodium)
+Ethyl Alcohol
+Hydrocortisone Acetate + Benzocaine + Benzalkonium Chloride (1% Solution) + Bismuth Subgallate
+Miconazole Nitrate
+Multivitamins + Minerals
+Diethylcarbamazine Citrate
+Praziquantel
+Hyoscine (as N-Butylbromide) + Paracetamol
+Rosuvastation (as calcium)
+Factor VIII Purified (Human)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Zinc
+Multivitamins+Iron
+Ascorbic Acid + Zinc
+Oral Rehydration Salts
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Levocetirizine dihydrochloride
+Ketoconazole
+Tolnaftate
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aciclovir
+CO-AMOXICLAV
+Aluminum Hydroxide + Magnesium Hydroxide
+Piperacillin (as sodium) + Tazobactam (as sodium)
+DOBUTAMINE (as hydrochloride)
+Paracetamol
+Mometasone Furoate
+Paracetamol
+Paracetamol
+Paracetamol
+Ambroxol Hydrochloride
+Cefotaxime (As Sodium)
+Levonorgestrel
+Dobutamine (as hydrochloride)
+Cefadroxil (As Monohydrate)
+Metformin Hydrochloride
+Isotretinoin
+Paclitaxel
+Methylprednisolone (As Sodium Succinate)
+Herbavomitz
+Doxofylline
+Denosumab
+Mefenamic Acid
+Olmesartan medoxomil
+Olmesartan medoxomil
+Olmesartan medoxomil + Amlodipine (as besilate)
+Multivitamins + Minerals
+Glucose + Amino Acids + Electrolytes + Lipid
+Olmesartan (as medoxomil) + Amlodipine (as besilate)
+Olmesartan medoxomil + Amlodipine (as besilate)
+Olmesartan medoxomil + Amlodipine (as besilate)
+Pioglitazone (as Hydrochloride) + Glimepiride
+Atorvastatin (as calcium) + Fenofibrate
+Metformin hydrochloride + Gliclazide
+Tramadol Hydrochloride + Paracetamol
+Co-Amoxiclav
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Dutasteride
+Enoxaparin Sodium
+Cloxacillin (as sodium)
+A.B.Y.-CEE
+AMREI-C PLUS
+Citrupro SR
+None
+Dicycloverine Hydrochloride
+Salbugen Plus
+Healthcare Chesty Cough
+Healthcare Kilimpen
+Robitussin Dm
+Hydrotopic
+Multramin
+Glimepiride
+Exipine
+Biogen
+Calumin
+B-Com Forte
+None
+Healthcare Chloramphenicol
+Healthcare Triderm
+Ascorbic Acid
+Opidex
+Neopenmax
+Zoxan
+Co-Avox
+Iracet
+None
+Vherzole
+None
+Topiramate
+Abydium
+Maxinerv-E
+Co-Amoxiclav
+Mefenamic Acid
+Multivitamins
+Allervocin
+Dutabit 0.5
+Loperamide Hydrochloride
+Montelukast (as sodium)
+Montelukast (as sodium)
+Indapamide
+Natalex
+Melivitron
+Ceratim
+Moks
+Nepidol
+None
+Povidone-Iodine
+Fluocinolone Acetonide + Polymyxin B Sulfate + Neomycin Sulfate
+Human Albumin
+Sero-Tet
+I.V. - Globulin SN Injection
+Carbocisteine
+None
+None
+Phenylephrine hydrochloride + Brompheniramine maleate
+Phenylephrine hydrochloride + Brompheniramine maleate
+Enoxaparin sodium
+T-Sartan
+Valganciclovir (As Hydrochloride)
+Neuro-B's 500 FC
+Stalev
+Levodopa + Carbidopa + Entacapone
+Temozolomide
+Mefenamic Acid
+Amoxicillin (as trihydrate)
+Losartan Potassium
+Conardrine
+Prednisone
+Azithromycin (as monohydrate)
+Metoprolol Tartrate
+Simvastatin
+Pregabalin
+Phenylephrine hydrochloride + Brompheniramine maleate
+Cefixime (as trihydrate)
+Phenylephrine hydrochloride + Brompheniramine maleate
+Nasagen
+Gemazel
+Contylan
+Atorvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Mefenamic Acid
+Mefenamic Acid
+Cefalexin (As Monohydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+PARACETAMOL
+Salbutamol (As Sulfate)
+Salbutamol (As Sulfate)
+Roflox
+Orlistat
+Human Albumin
+Candesartan Cilexetil
+Sigmatram
+None
+Salbutamol Sulfate
+Entacapone
+Lysozyme Hydrochloride + Dequalinium Chloride
+Medroxyprogesterone Acetate
+Cefalexin (as monohydrate)
+Clotrimazole + Clindamycin (as phosphate)
+Perbactam
+Ainofil
+Multivitamins / Lecithin / Lysine / Minerals
+Cefuroxime (As Axetil)
+Ceratim
+None
+Chlorphenamine Maleate
+Duvacare
+Fungystine
+Menthol/Methyl Salicylate/Eucalyptus Oil/Camphor
+Co-Amoxiclav
+Clauden
+Lexsi
+D-Alpha Tocopheryl Acetate
+Metformin Hydrochloride
+Risedronate Sodium
+Dexamethasone phosphate (as sodium)
+Menthol + Camphor
+Multivitamins + Lysine Hydrochloride + Buclizine Hydrochloride + Iron
+Phospholipids
+Butamirate Citrate
+Multivitamins
+Ibuprofen
+Cetirizine Hydrochloride
+Mefenamic Acid
+Phenylephrine HCl + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Phenylephrine HCl + Chlorphenamine Maleate
+Bisacodyl
+Povidone-Iodine
+Ascorbic Acid + Zinc
+Mometasone Furoate
+Mometasone Furoate
+Tolnaftate
+Cefepime (as Hydrochloride)
+Mometasone Furoate
+Povidone-Iodine
+Methylergometrine Maleate
+Betahistine hydrochloride
+Betahistine hydrochloride
+Betahistine hydrochloride
+Cefuroxime (As Axetil)
+Co-Amoxiclav
+Fenofibrate
+Cefuroxime (As Axetil)
+Atorvastatin (as calcium)
+Azithromycin (As Dihydrate)
+Omeprazole (as Sodium)
+Ascorbic Acid
+Clobetasol Propionate
+Methylprednisolone
+Methylprednisolone
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Clarithromycin
+Omeprazole (as Sodium)
+Tranexamic Acid
+Salbutamol (As Sulfate)
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Paracetamol + Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Epirubicin Hydrochloride
+Metformin Hydrochloride
+Levofloxacin (As Hemihydrate)
+Citicoline (as sodium)
+Sterile Water For Injection
+Sterile Water For Injection
+Omeprazole
+Beclometasone dipropionate + Formoterol fumarate dihydrate + Glycopyrronium bromide
+Golimumab
+Golimumab
+Levetiracetam
+Gemcitabine (as hydrochloride)
+Fluorouracil
+Valsartan + Amlodipine (As Besilate)
+Dorzolamide (as Hydrochloride)
+Isopropyl Alcohol
+Levonorgestrel + Ethinylestradiol
+Captopril
+Captopril
+Glimepiride
+D-Alpha Tocopherol + Lecithin
+Levodopa + Carbidopa + Entacapone
+Tuberculin Purified Protein Derivative
+Tramadol Hydrochloride + Paracetamol
+Hepatitis B Vaccine (Recombinant DNA)
+Phenylephrine hydrochloride + Brompheniramine Maleate
+Furosemide
+Human Albumin
+Heparin Sodium
+Streptokinase
+Losartan Potassium
+Tetanus Toxoid (adsorbed)
+Norepinephrine (as Bitartrate)
+Chlorphenamine Maleate
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+Diphenhydramine Hydrochloride
+Dexamethasone
+Dexamethasone
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Carbocisteine
+Biotin
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Methylprednisolone (as Sodium Succinate)
+Tobramycin
+Ascorbic Acid
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Losartan Potassium
+Gefitinib
+Propranolol Hydrochloride
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate
+Isopropyl Alcohol
+Isopropyl Alcohol
+Megestrol Acetate
+Conjugated Estrogens
+Telmisartan
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid + Zinc
+Multivitamins + Iron
+Folic Acid
+Ascorbic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Folic Acid
+Moxifloxacin (as hydrochloride)
+Ranitidine (as hydrochloride)
+Ascorbic Acid
+Ciprofloxacin (as hydrochloride)
+Thiamine Mononitrate (Vitamin B) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cetirizine
+Telmisartan
+Zinc
+Paracetamol + Chlorpheniramine Maleate Phenylephrine Hydrochloride + Caffeine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+CETIRIZINE DIHYDROCHLORIDE
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Hyoscine-N-Butylbromide
+Paracetamol
+Loratadine
+Quetiapine (as fumarate)
+Ferrous Fumarate + Folic Acid + Cyanocobalamin
+Paracetamol
+Paracetamol
+Multivitamins
+Cotrimoxazole
+Mometasone furoate + Azelastine hydrochloride
+Enalapril Maleate
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Ampicillin (as sodium)
+Levetiracetam
+Bemiparin sodium
+Amoxicillin (as Trihydrate)
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Clobetasol propionate
+Levocetirizine Dihydrochloride
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Diosmin + Hesperidin
+Metronidazole (As Benzoate)
+Cefaclor (As Monohydrate)
+Bromhexine Hydorchloride
+Aceite De Manzanilla
+Hydralazine Hydrochloride
+Cefaclor (As Monohydrate)
+Brentuximab vedotin
+ASCORBIC ACID + ZINC
+Guaifenesin
+Guaifenesin
+Mefenamic Acid
+Zinc
+Losartan Potassium
+Cefalexin (as Monohydrate)
+Allopurinol
+Cefaclor (as monohydrate)
+Ascorbic Acid
+Cefepime (as hydrochloride)
+Cefepime (as hydrochloride)
+Ibuprofen
+SODIUM CHLORIDE
+Vitamin B-Complex (Vitamin B1 + Vitamin B6 + Vitamin B12)
+Hydrochlorothiazide
+Tranexamic Acid
+Cefalexin (As Monohydrate)
+Losartan Potassium
+Meclizine Hydrochloride
+Meclizine Hydrochloride
+Cefuroxime (As Axetil)
+Antibacterial (Cephalosporin)
+Entecavir (as monohydrate)
+Atorvastatin (as calcium)
+Cefixime (As Trihydrate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Trimetazidine Hydrochloride
+Ascorbic Acid (as Sodium Ascorbate)
+Pitavastatin Calcium
+Clarithromycin
+Metronidazole + Miconazole Nitrate + Lidocaine
+Thiamine Mononitrate (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6) / Cyanocobalamin (Vitamin B12)
+Cefuroxime (As Axetil)
+Ascorbic Acid
+Sodium Chloride
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Iodine (as Iohexol)
+Iodine (as Iohexol)
+Atorvastatin (as calcium) + Fenofibrate
+Povidone-Iodine
+Montelukast (as Sodium)
+Clindamycin (As Hydrochloride)
+Amlodipine (as Besilate)
+Povidone-Iodine
+Clindamycin (As Hydrochloride)
+Allopurinol
+Isopropyl Alcohol
+Bupivacaine Hydrochloride in Dextrose Anhyrdous
+AMLODIPINE (as besilate)
+Hyoscine-N-Butylbromide
+Cefuroxime (as Sodium)
+Ketoanalogues + Essential Amino Acids
+Felodipine
+Budesonide
+Anastrozole
+Dapagliflozin (as propanediol monohydrate)
+Felodipine
+Felodipine
+Isophane Insulin Human (rDNA Origin)
+Isophane Insulin Human (rDNA Origin)
+Biphasic Isophane Insulin (rDNA Origin)
+Piracetam
+Piracetam
+Olanzapine
+Quetiapine Fumarate
+Multivitamins+Minerals+Ginseng+Amino Acids
+Tobramycin Sulfate
+Budesonide
+Ascorbic Acid
+Cilostazol
+Cilostazol
+Simeticone
+Multivitamins + Minerals + Buclizine
+Multivitamins + Mineral + Buclizine
+Ascorbic Acid+Zinc
+Aluminum Hydroxide + Magnesium Hydroxide+ Oxetacaine
+Losartan Potassium
+Clotrimazole
+L-Carnitine
+Benzoyl Peroxide
+Sodium Ascorbate + Zinc Sulfate Monohydrate
+Ascorbic Acid
+Ascorbic Acid
+Vitex Negundo L. (Lagundi Leaf)
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Cassia angustifolia Vahl (Senna Leaves)
+Cassia Angustifolia Vahl (Senna Leaves And Pods)
+Cassia Angustifolia Vahl (Senna Leaves)
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Ascorbic Acid (As Sodium Ascorbate) + Zinc
+Cetirizine Dihydrochloride
+Vitex Negundo L.(Lagundi Leaf)
+Methyl Salicylate + Menthol + Camphor
+Camphor + Menthol + Eucalyptus Oil
+Camphor + Menthol + Methyl Salicylate
+Camphor + Menthol + Methyl Salicylate
+Calamine + Zinc Oxide
+Methyl Salicylate + Menthol + Camphor
+Povidone-Iodine
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cetirizine
+Multivitamins + Buclizine Hydrochloride
+Telmisartan
+Telmisartan
+Ibuprofen
+Ibuprofen
+Ascorbic Acid+Zinc
+Ascorbic Acid+Zinc
+Ascorbic Acid+Zinc
+Camphor + Menthol + Eucalyptus Oil
+Camphor + Menthol + Eucalyptus Oil
+Ascorbic Acid
+Hyoscine-N-Butylbromide
+Ascorbic Acid
+Ascorbic + Zinc
+Ascorbic Acid + Zinc
+Paracetamol
+Paracetamol
+Paracetamol
+PARACETAMOL + PHENYLEPHRINE HYDROCHLORIDE + DEXTROMETHORPHAN HYDROBROMIDE
+Domperidone
+Domperidone
+Diosmin + Hesperidin
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid
+Multivitamins + Minerals + Buclizine
+Ascorbic Acid
+Ethyl Alcohol
+Dacarbazine
+Diosmin + Hesperidin
+Brompheniramine Maleate + Phenylephrine Hydrochloride
+Paracetamol
+Paracetamol
+Iron + Folic Acid (Vitamin B9)
+Iron + Folic Acid (Vitamin B9)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Sodium)
+Ceftriaxone (as Sodium)
+Ceftriaxone (as Sodium)
+Ceftriaxone (as Sodium)
+Paracetamol (Orange Flavor)
+Paracetamol
+Citicoline (As Sodium)
+Povidone-Iodine
+Sertraline (As Hydrochloride)
+Lactic Acid + Urea + Propylene Glycol + Light Liquid Paraffin
+Ascorbic Acid
+Paracetamol
+Levofloxacin (as Hemihydrate)
+Tretinoin
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Domperidone
+Multivitamins + Minerals + Korean Ginseng + Royal Jelly (see formulation on reverse side)
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Povidone-Iodine
+Ketorolac Trometamol
+Paracetamol + Tramadol Hydrochloride
+Bupivacaine Hydrochloride
+Bromhexine Hydrochloride
+Etoposide
+Desloratadine
+Cilostazol
+Cefuroxime (as Axetil)
+Simvastatin
+Cetirizine Dihydrochloride
+Bupivacaine Hydrochloride
+Amoxicillin (As Trihydrate)
+Calcium (As Carbonate)
+Polymyxin B Sulfate + Neomycin Sulfate + Gramicidin
+Bromhexine Hydrochloride
+Isopropyl Alcohol
+Multivitamins
+Azithromycin (As Dihydrate)
+Ascorbic Acid
+Pregabalin
+Ascorbic Acid
+Anastrazole
+Venlafaxine (as hydrochloride)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L (Lagundi Leaf)
+Vitex Negundo L (Lagundi Leaf)
+Vitex Negundo L (Lagundi Leaf)
+Ascorbic Acid
+Iron + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Allopurinol
+Ascorbic Acid + Zinc (As Zinc Ascorbate)
+Imipenem + Cilastatin Sodium
+Carvedilol
+Vancomycin (As Hydrochloride)
+Phenylpropanolamine Hydrochloride+ Brompheniramine Maleate
+Phenylpropanolamine Hydrochloride+ Brompheniramine Maleate
+Topiramate
+Topiramate
+Citicoline (As Sodium)
+Dexamethasone
+Cefuroxime (As Axetil)
+Menthol + Camphor + Borneol + Eucalyptus Oil
+Gemcitabine (as hydrochloride)
+Dapagliflozin (as propanediol monohydrate)
+Cefuroxime (As Axetil)
+Fluconazole
+Amlodipine (As Besilate) + Losartan Potassium
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Levocetirizine Dihydrochloride
+Nitrofurantoin
+Paracetamol
+Ascorbic Acid (As Sodium Ascorbate)
+Ibuprofen + Paracetamol
+Aceclofenac
+Celecoxib
+Calamine + Zinc Oxide
+Sodium Valproate + Valproic Acid (as sodium valproate)
+Retinol Palmitate (Vit. A) + Ascorbic Acid (Vit. C) + dl-Alpha Tocopheryl Acetate (Vit. E) + Zinc
+Imipenem + Cilastatin Sodium
+Amlodipine (As Besilate) + Valsartan
+Amlodipine (As Besilate) + Valsartan
+Calcium + Minerals + Cholecalciferom (Vitamin D3)
+Calcium + Minerals + Cholecalciferol (Vitamin D3)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Moxifloxacin (As Hydrochloride)
+Azithromycin (As Monohydrate)
+PANTOPRAZOLE (AS SODIUM SESQUIHYDRATE)
+Acetylcysteine
+Acetylcysteine
+Mefenamic Acid
+Cinnarizine
+Mefenamic Acid
+Amiodarone Hydrochloride
+Paracetamol
+Lacidipine
+Rivaroxaban
+Brimonidine Tartrate
+LOSARTAN POTASSIUM + AMLODIPINE (as besilate)
+Rabeprazole (as sodium)
+Doxofylline
+Lornoxicam
+Mefenamic Acid
+Palonosetron (as hydrochloride)
+Filgrastim
+Meropenem (As Trihydrate)
+Naloxone Hydrochloride
+Ropivacaine hydrochloride (as monohydrate)
+Rilpivirine (as Hydrochloride)
+Bevacizumab
+Bilastine
+Bevacizumab
+Losartan Potassium + Amlodipine ( as Besilate )
+Glibenclamide
+Sertaconazole Nitrate
+Teriparatide
+Co-Amoxiclav
+Diclofenac Sodium
+Linezolid
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Iron + Folic Acid
+Zinc
+Ascorbic Acid + Zinc
+Calcium Lactate
+Ascorbic Acid + Zinc
+Calcium Lactate
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Paracetamol + Phenylephrine Hydrochloride Chlorphenamine Maleate + Caffeine Anhydrous
+Ascorbic Acid + Zinc
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Vitamin B1 + B6 + B12
+Sodium Bicarbonate
+Sodium Bicarbonate
+Loperamide Hydrochloride
+Ascorbic Acid
+Diclofenac (As Diethyla Mine)
+Radix baptisiae tinctoriae (Wild Indigo Root) + Radix echinaceae purpureae (Purple Coneflower Root) + Radix echinaceae pallidae (Pale Coneflower Root) + Herba thujae occidentalis (White Cedar Leaf)
+Multivitamins + Iron
+Sodium Ascorbate + Zinc (As Sulfate Monohydrate)
+Multivitamins
+Mupirocin
+Diosmin + Hesperidin
+Sodium Ascorbate + Zinc (As Sulfate Monohydrate)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Clarithromycin
+Sodium Chloride
+Metformin Hydrochloride
+D-Alpha Tocopherol + Lecithin
+Cefuroxime (as sodium)
+Ceftriaxone (As Sodium)
+Rosuvastatin (as calcium)
+Spirinolactone
+Metronidazole
+Neostigmine (as Methylsulfate)
+Losartan Potassium
+Cefuroxime (As Sodium)
+Spirinolactone
+Tranexamic Acid
+Donepezil Hydrochloride
+Donepezil Hydrochloride
+Azithromycin (As Dihydrate)
+Levocetirizine Dihydrochloride
+Amoxicillin (As Trihydrate)
+Sertraline (as hydrochloride)
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Hyoscine Butylbromide
+Cetirizine Hydrochloride + Phenylephrine Hydrochloride
+Loperamide Hydrochloride
+Multivitamins + Minerals
+Multivitamins + Minerals
+Methylprednisolone (as sodium succinate)
+Ascorbic Acid + Zinc
+Telmisartan + Hydrochlorothiazide
+Clotrimazole
+Ascorbic Acid + Zinc
+Meclizne Hydrochloride
+Paracetamol + Tramadol Hydrochloride
+Levetiracetam
+Carvedilol
+Citicoline (as sodium)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vit. D3) + Zinc
+Ascorbic Acid + Cholecalciferol (Vit. D3) + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Docetaxel (As Trihydrate)
+Cefuroxime (As Sodium)
+Amlodipine (As Besilate) + Losartan Potassium
+Amlodipine (As Besilate) + Losartan Potassium
+Levofloxacin (as hemihydrate)
+Pregabalin
+Nicardipine hydrochloride
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rabeprazole sodium
+Rabeprazole sodium
+Gabapentin
+Carmellose Sodium
+Carmellose Sodium
+Irinotecan Hydrochloride (As Trihydrate)
+Irinotecan Hydrochloride (As Trihydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyrodoxine (VItamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid (As Sodium Ascorbate) + Zinc
+Meclizine Hydrochloride
+Guaifenesin + Phenylpropanolamine HCI+ Chlorphennamine Maleate
+Multivitamins + Iron
+Methylcobalamin (Vitamin B12)
+Folic Acid (Vitamin B9)
+Ascorbic Acid (As Sodium Ascorbate) + Zinc (As Zinc Sulfate)
+Ascorbic Acid +Chlecalciferol (Vitamin D3) + ZInc
+Ascorbic Acid (As Sodium Ascorbate) + Zinc
+Ascorbic Acid (As Sodium Ascorbate) + Zinc
+Paracetamol
+Calcium Lactate
+Ascorbic Acid
+Etoricoxib
+Thiamine Mononitrate (Vit B1) + Pyridoxine Hydrochloride (Vit B6) + Cyanocobalamin (Vit B12)
+Biphasic Isophane Insulin (rDNA Origin)
+Enoxaparin sodium
+Enoxaparin Sodium
+Silver Sulfadiazine
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Ascorbic Acid
+Sevelamer Carbonate
+Sevelamer Carbonate
+GLIMEPIRIDE
+GLIMEPIRIDE
+Etoricoxib
+Lamivudine
+Rosuvastatin (As Calcium)
+LOSARTAN POTASSIUM
+Glimepiride
+Azithromycin (as dihydrate)
+Trimetazidine dihydrochloride
+Cefixime (as Trihydrate)
+Atorvastatin (As Calcium)
+Gliclazide
+Multivitamins + Lysine + Zinc Wih Chlorella Extract (Orange flavor)
+Amoxicillin (As Trihydrate)
+Isophane Insulin Human, Recombinant DNA
+Biphasic Isophane Insulin Human (Recombinant DNA Origin)
+Regular Insulin Human (rDNA Origin)
+Dl-Alpha Tocopheryl Acetate (Vitamin E)
+Methyl Salicylate + Menthol + Camphor
+Butamirate Citrate
+Butamirate Citrate
+Isoxsuprine Hydrochloride
+Multivitamins
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Cefuroxime (as Axetil)
+Cefuroxime (as axetil)
+Cefuroxime (as Axetil)
+Amlodipine (as Besilate) / Losartan Potassium
+Amoxicillin (as Trihydrate)
+Amlodipine (As Besilate)
+Ascorbic Acid
+Salbutamol (as sulfate)
+Ascorbic Acid
+Ascorbic Acid
+Aluminum Hydroxide + Magnesium
+Methyl Salicylate + Camphor + Menthol
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Medical Grade Oxygen
+Ascorbic Acid
+Citicoline (As Sodium)
+Loperamide Hydrochloride
+Letrozole
+Capecitabine
+Naproxen Sodium
+Bisoprolol Fumarate + Perindopril Arginine
+Bisoprolol Fumarate + Perindopril Arginine
+Loratadine
+Acetylcysteine
+Loperamide Hydrochloride
+Clotrimazole
+Carmellose Sodium
+Etoricoxib
+Folic Acid
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Azithromycin (As Dihydrate)
+Methyldopa (As Sesquihydrate)
+Bortezomib
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Clopidogrel (as bisulfate)
+Cotrimoxazole
+Levofloxacin
+Bilastine
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate + Ibuprofen
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Trimetazdine Hydrochloride
+Levothyroxine Sodium
+Levothyroxine Sodium
+Methyl Salicylate + Camphor + Menthol + Eucalyptol
+Multivitamins + Minerals
+Clonidine Hydrochloride
+Sultamicillin (As Tosylate)
+Medical Grade Oxygen
+Ketoconazole
+Inosiplex
+Medical Grade Oxygen
+Vitex Negundo L. (Lagundi Leaf)
+Ciprofloxacin (as Hydrochloride)
+Medical Grade Oxygen
+Leuprorelin Acetate
+Gemcitabine (As Hydrochloride)
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Omeprazole (As Sodium)
+Bacillus Calmette-Guerin (BCG) Vaccine
+Olmesartan Medoxomil
+Oseltamivir (As Phosphate)
+Doxofylline
+Telmisartan
+Cholecalciferol
+Fusidic Acid
+Fusidic Acid
+Calcium + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Vitamin D3
+Amlodipine (As Besilate)
+Hydrocortisone (as sodium succinate)
+Iron (As Ferric Hydroxide Sucrose Complex)
+Piperacillin (As Sodium) + Tazobactam(As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Povidone Iodine
+Dobutamine (As Hydrochloride)
+Amoxicillin (As Trihydrate)
+FOLIC ACID
+Hydrocortisone (As Sodium Succinate)
+Pantoprazole (as Sodium)
+Ciprofloxacin
+Multivitamins + Buclizine Hydrochloride + Iron (As Ferrous Sulfate)
+Etoricoxib
+Betahistine Hydrochloride
+Etoricoxib
+Dexamethasone + Neomycin (As Sulfate) + Polymyxin-B Sulfate
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Acetylcysteine
+Pregabalin
+Pregabalin
+Paclitaxel
+Paclitaxel
+Parecoxib (As sodium)
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Salbutamol (As Sulfate)
+Ascorbic Acid
+Clopidogrel (as Bisulfate)
+Etoricoxib
+Gemcitabine (As Hydrochloride)
+Furosemide
+Gemcitabine (As Hydrochloride)
+Ondansetron (as Hydrochloride)
+Mupirocin
+Domperidone (As Maleate)
+Amoxicillin (As Trihydrate)
+Levothyroxine Sodium
+Hydrocortisone (as Acetate)
+Cinnarizine
+Escitalopram (as oxalate)
+Guiafenesin
+Phytomenadione
+Amlodipine (As Besilate) + Olmesartan Medoxomil
+Amlodipine (As Besilate) + Olmesartan Medoxomil
+Amlodipine (As Besilate) + Olmesartan Medoxomil
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Terbinafine Hydrochloride
+Rosuvastatin (As Calcium)
+Metronidazole
+Atracurium besilate
+Methyl Salicylate + Menthol + Camphor
+Azithromycin (as dihydrate)
+Cefixime (as trihydrate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Trimetazidine dihydrochloride
+Diltiazem Hydrochloride
+Levofloxacin
+Ascorbic Acid + Zinc
+Diosmin + Hesperidin
+dl-Alpha Tocopheryl Acetate (Vitamin E)
+Menthol + Camphor + Eucalyptus Oil
+d-Alpha Tocopherol (Vitamin E) + Lecithin
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Methyl Salicylate + Menthol + Camphor
+Ascorbic Acid
+Ascorbic acid + Zinc
+Ascorbic Acid+ Zinc + Cholecalciferol (Vitamin D3)
+Zinc (As Zinc Gluconate)
+Lincomycin Hydrochloride + Gentamicin Sulfate + Bromhexine Hydrochloride (Vet.)
+Ascorbic Acid + Cholecalciferol (Vitamin D3 + Zinc
+Omeprazole(As Sodium)
+Salbutamol (As Sulfate)
+Trimetazidine Dihydrochloride
+Lamotrigine
+Telmisartan + Hydrochlorothiazide
+LOSARTAN POTASSIUM
+Ascobic Acid + Zinc
+Multivitamins + Iron
+Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Cetirizine Hydrochloride
+Cloxacillin (As Sodium)
+Cyclophosphamide
+Cyclophosphamide (as monohydrate)
+Sultamicillin (As Tosilate dihydrate)
+Valsartan
+Ceftriaxone (as sodium)
+Ceftriaxone (as Sodium)
+Capecitabine
+Tetracycline Hydrochloride
+Tetracycline Hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Halobetasol Propionate
+Clindamycin (as phosphate) + Adapalene
+Potassium Citrate
+Omeprazole (As Sodium)
+Sodium Valproate + Valproic Acid
+Ascorbic Acid + Zinc
+Dobutamine (As Hydrochloride)
+Guaifenesin + Salbutamol (as sulfate)
+Clonidine hydrochloride
+Dexamethasone (as sodium phosphate)
+Furosemide
+Piroxicam
+Clopidogrel (As Bisulfate)
+Piroxicam
+Mefenamic Acid
+Trimetazidine Hydrochloride
+Atorvastatin (as Calcium)
+Fluorouracil
+Ascorbic Acid
+Atorvastatin (as calcium)
+Methylergometrine Maleate
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Hydrocortisone (as sodium succinate)
+Clopidogrel (As Bisulfate)
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Multivitamins + Minerals
+Bisacodyl
+Losartan Potassium
+Rosuvastatin (as Calcium)
+Paracetamol
+Cisplatin
+Doxorubicin Hydrochloride
+Doxorubicin (as Hydrochloride)
+Diphenyhydramine Hydrochloride
+Gemcitabine (as Hydrochloride)
+Omeprazole
+Cefuroxime (As Sodium)
+Betahistine hydrochloride
+Telmisartan + Hydrochlorothiazide
+Meropenem (As Trihydrate)
+Cilostazol
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+S-Amlodipine (as besilate)
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Salbutamol(as Sulfate)
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Meropenem (as trihydrate)
+Meropenem (As Trihydrate)
+Mycophenolate Mofetil
+Ascorbic Acid (As Calcium Ascorbate)
+Ascorbic Acid
+Cholecalciferol (Vitamin D3)
+Fenofibrate
+Irbesartan
+Irbesartan
+Ambroxol Hydrochloride
+Ascorbic Acid + Cholecalciferol (Vit. D3) + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Clarithromycin
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Ascorbic Acid (As Calcium Ascorbate) + Zinc (As Zinc Gluconate)
+Minoxidil
+Levocetirizine Hydrochloride
+Loratadine
+Clopidogrel
+Methyl Salicylate + Menthol + Camphor
+Fenofibrate
+Fenofibrate
+Ceftriaxone (As Sodium)
+Amlodipine (As Besilate) + Losartan Potassium
+Carbocisteine
+Carbocisteine
+Carbocisteine
+Norepinephrine (as bitartrate)
+Medroxyprogesterone Acetate
+Bromhexine Hydrochloride
+Bromhexine Hydrochloride
+Ascorbic Acid + Zinc
+Cetirizine Hydrochloride
+Co-Amoxiclav
+Loperamide Hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Norepinephrine (As Bitartrate)
+Lactulose
+Lactulose
+Amlodipine (As Besilate) + Losartan Potassium
+Azithromycin (As Dihydrate)
+Carvedilol
+Trimetazidine Hydrochloride
+Hydrocortisone (as Sodium Succinate)
+Clopidogrel (as bisulfate)
+Oxaliplatin
+Paracetamol
+Dobutamine (As Hydrochloride)
+Ceftriaxone (As Sodium)
+Lamotrigine
+Telmisartan
+Telmisartan
+Telmisartan + Hydrochlorothiazide
+Butamirate Citrate
+Ascorbic Acid
+Benzydamine Hydrochloride
+Ascorbic Acid
+Domperidone (as maleate)
+Zinc
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Cholecalciferol (Vitamin D3)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride
+Cassia Angustifolia Vahl (Senna Leaves)
+Cetirizine Hydrochloride
+Ascorbic Acid+ Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Cholecalciferol (Vitamin D3)
+Ambroxol Hydrochloride
+Ciprofloxacin
+Medroxyprogesterone Acetate
+Losartan Potassium
+Cefixime (As Trihydrate)
+Amikacin (as sulfate)
+Methyl Salicylate + Menthol + Camphor
+Pemetrexed (as disodium)
+Meropenem (as trihydrate)
+Pioglitazone
+Tiotropium (As Bromide)
+Cholecalciferol
+Clotrimazole + Beclomethasone Dipropionate
+Ferrous Fumarate + Cyanocobalamin
+Human Normal Immunoglobulin
+Salbutamol
+Insulin Aspart
+Pantoprazole (as Sodium sesquihydrate)
+Folic Acid
+Cyclophosphamide
+Erythromycin (as Stearate)
+Paracetamol + Vitamin B1 + Vitamin B6 + Vitamin B12
+Betamethasone (as valerate)
+Methylprednisolone (As Sodium Succinate)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Guiafenesin + Salbutamol (As Sulfate)
+Iron [as Ferric hydroxide sucrose complex]
+Iron [as Ferric hydroxide sucrose complex]
+Co-Amoxiclav
+Co-Amoxiclav
+Ceftriaxone (as sodium)
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate + Paracetamol
+Prednisolone (as Sodium Phosphate)
+Each capsule contains: Astragalus membranaceous (Radix astragali) Membranous milkvetch-111.5 mg Salvia miltiorrhizae (Radix salvia miltiorrhizae) Red sage-22.3 mg Paeonia lactiflora (Radix paeoniae rubra) Red peony-22.3 mg Ligusticum chuanxiong (Rhizoma chuanxiong) Szechwan lovage-22.3 mg Angelica sinensis (Radix angelicae sinensis) Chinese angelica-22.3 mg Carthamus tinctorius (Carthami flos) Safflower-22.3 mg Prunus persicae(Semen persica) Peach seed-22.3 mg Polygala tenuifolia (Radix polygalae) Thinleaf milkwort-22.3 mg Acorus tatarinowii (Rhizoma acoritatarinowii) Grassleaf sweet flag-22.3 mg
+Levodopa + Carbidopa (as monohydrate)
+Tranexamic Acid
+Glutathione
+Gabapentin
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Iohexol
+Vitex Negundo L. (Lagundi Leaf)
+Norepinephrine (As Bitartrate)
+Linezolid
+Rivaroxaban
+Ofloxacin
+Ketorolac Trometamol
+Ketorolac Trometamol
+Ketorolac Trometamol
+Salbutamol (as sulfate) + Guafenesin
+Gabapentin
+Loperamide
+Ambroxol Hydrochloride
+Clonidine Hydrochloride
+Diclofenac Sodium
+Norepinephrine (as Bitartrate)
+Cetirizine Hydrochloride
+Ambroxol Hydrochloride
+Cefoxitin (as Sodium)
+Multivitamins
+Mefenamic Acid
+Febuxostat
+Febuxostat
+Febuxostat
+Febuxostat
+Febuxostat
+Febuxostat
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Nitrofurantoin
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Bemiparin sodium
+Bemiparin sodium
+Clarithromycin
+Aluminum Hydroxide+ Magnesium Hydroxide
+ASCORBIC ACID
+Lactulose
+Vitamin B-Complex
+Ketorolac (As Trometamol)
+Ethyl Alcohol
+Co-Amoxiclav
+Menthol + Methyl Salicylate + Eucalyptus Oil + Camphor
+Losartan Potassium
+Isopropyl Alcohol
+Ascorbic Acid
+Ascorbic Acid
+Amoxicillin (as trihydrate)
+Norepinephrine (As Bitartrate)
+Norepinephrine (As Bitartrate)
+Pantoprazole (as Sodium Sesquihydrate) + Domperidone
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Atorvastatin (As Calcium)
+Atorvastatin (as Calcium)
+Omeprazole (As Sodium)
+Ascorbic Acid (As Sodium Ascorbate) + Zinc (As Sulfate Monohydrate)
+Amoxicillin (As Trihydrate)
+Methotrexate
+Hydroxyurea
+Oxaliplatin
+Ceftriaxone (as Sodium)
+Meloxicam
+lmatinib (as mesilate)
+Clopidogrel (as Bisulfate)
+Celecoxib
+Docetaxel (as Trihydrate)
+Phytomenadione
+Norepinephrine (As Bitartrate)
+Omeprazole
+Furosemide
+Vancomycin (as hydrochloride)
+Azithromycin
+Cefuroxime (as Axetil)
+Zinc (as Sulfate Monohydrate)
+Clopidogrel (as bisulfate)
+Betahistine Hydrochloride
+Loratadine
+Ascorbic Acid
+Vancomycin (As Hydrochloride)
+Cefalexin (As Monhydrate)
+Amoxicillin (As Trihydrate )
+Cefixime (as Trihydrate)
+Cefixime (As Trihydrate)
+Epoetin Alfa
+Levofloxacin (As Hemihydrate)
+Levofloxacin (As Hemihydrate)
+Chlorhexidine Gluconate + Cetrimide
+Ascorbic Acid + Zinc
+Bisacodyl
+Bisacodyl
+Ascorbic Acid + Cholecalciferol + Zinc
+Calamine + Zinc Oxide
+Telmisartan
+Trimetazidine dihydrochloride
+Losartan Potassium
+Vancomycin (as hydrochloride)
+Gliclazide
+Losartan Potassium
+Thiamine Mononitrate (Vit B1) + Pyridoxine HCl (Vit B6) + Cyanocobalamin (Vit B12)
+Metoprolol Succinate
+Multivitamins + Dexpanthenol
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Paracetamol
+Miconazole Nitrate
+Oral Rehydration Salts (ORS)
+Ascorbic Acid + Zinc + Cholecalciferol (Vit. D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vit. D3)
+Clotrimazole
+Paracetamol + Guaifenesin + Phenylpropanolamine HC1 + Dextromethorphan HBr + Chlorphenamine Maleate
+Calcium Carbonate
+Ethyl Alcohol
+Ethyl Alcohol
+Amphotericin B
+Oral Rehydration Salts (ORS)
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Isophane Insulin Human (rDNA Origin)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Ascorbic Acid
+Calamine + Zinc Oxide
+Ascorbic Acid
+Ascorbic Acid
+Calcium Carbonate (Vitamin D3)
+Cholecalciferol (Vitamin D3)
+Miconazole
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Multivitamins + Minerals
+Ascorbic Acid + Zinc
+Enoxaparin Sodium
+Iron Plus Folic Acid (Vitamin B9)
+Paracetamol
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Cassia angustifolia Vahl (Senna Leaves and Pods)
+Dexamethasone Phosphate (As Sodium)
+Calcium Carbonate / Cholecalciferol (Vitamin D3)
+Zinc
+Ascorbic Acid + Zinc
+Multivitamins
+Co-Amoxiclav
+Cilostazol
+Anastrozole
+Ciprofloxacin (as Hydrochloride)
+Diclofenac Sodium (as Diethylamine) + Methyl Salicylate + Menthol + Linseed Oil
+Fenofibrate
+Ambroxol Hydrochloride
+Plerixafor
+Gentamicin (as sulfate)
+Insulin Aspart
+Metformin hydrochloride
+Ceftazidime (as pentahydrate)
+Ambroxol
+Ambroxol
+Dexamethasone Phosphate(As Sodium)
+Sevelamer Carbonate
+Sildenafil (as citrate)
+Sildenafil (As Citrate)
+Olanzapine
+Loperamide Hydrochloride
+Dequalinium Chloride
+Aspirin
+Aspirin
+Ofloxacin
+Cefaclor (As Monohydrate)
+Cefaclor (as Monohydrate)
+Cefaclor (As Monohydrate)
+Cefalexin (As Monohydrate)
+Clonidine (As Hydrochloride)
+Tamsulosin Hydrochloride
+Tamsulosin Hydrochloride
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Amoxicillin (As Trihydrate)
+Tetanus Toxoid (Adsorbed)
+Enoxaparin Sodium
+Enoxaparin Sodium
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Rifampicin + Isoniazid
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol Hydrochloride
+FUSIDIC ACID
+ASCORBIC ACID
+Losartan Potassium
+Captopril
+Enalapril Maleate
+Enalapril Maleate
+Pyridostigmine bromide
+Trimetazidine Hydrochloride
+Paracetamol
+Ceftazidime (as pentahydrate) (with sodium carbonate)
+Losartan Potassium
+Hyoscine-N-Butylbromide
+Betahistine Dihydrochloride
+Vitamin B1+ B6+ B12
+Allopurinol
+Ascorbic Acid + Zinc
+ETORICOXIB
+ATORVASTATIN CALCIUM + AMLODIPNE(AS BESILATE)
+Telmisartan
+Metformin Hydrochloride
+Telmisartan + Hydrochlorothiazide
+TELMISARTAN
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Atorvastatin (As Calcium)
+Ascorbic Acid + Zinc
+Rosuvastatin (as Calcium)
+Multivitamins + Zinc
+Paracetamol
+Sodium Ascorbate + Zinc
+Ambroxol Hydrochlorie
+Ascorbic Acid
+Salmeterol (Xinafoate) + Fluticasone Propionate
+Salmeterol (Xinafoate) + Fluticasone Propionate
+Salmeterol (Xinafoate) + Fluticasone Propionate
+Wintergreen Oil + Camphor + Turpentine Oil + Eucalyptus Oil + Menthol +Clove Oil+ Cinnamon Oil
+Povidone-Iodine
+Sodium Valproate + Valproic Acid
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Menthol + Camphor
+Calamine + Zinc Oxide
+Gabapentin
+Gabapentin
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Ascorbic Acid + Zinc
+Zinc
+Vancomycin (As Hydrochloride)
+Metformin Hydrochloride
+Xylometazoline Hydrochloride
+Cefuroxime (as Axetil)
+Ciprofloxacin
+Irbesartan
+Simvastatin
+Simvastatin
+Betamethasone (as valerate)
+Cetirizine diHydrochloride
+Cetirizine diHydrochloride
+Loratadine
+Losartan Potassium
+Valsartan + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Divalproex sodium (as valproic acid)
+Co-Amoxiclav
+Co-Amoxiclav
+Human Blood Coagulation Factor VIII
+Human Coagulation Factor VIII
+Salbutamol (as sulfate)
+Amiodarone Hydrochloride
+Betamethasone (as valerate)
+Fenofibrate
+Tamsulosin hydrochloride
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Losartan + Hydrochlorothiazide
+Phenylephrine Hydrochloride + Paracetamol
+Ibuprofen
+Ibuprofen
+Carboplatin
+Carbamazepine
+Cefalexin (As Monohydrate)
+Losartan Potassium + Amlodipine (As Besilate)
+Losartan Potassium + Amlodipine (As Besilate)
+Letrozole
+Leuprorelin Acetate
+Melphalan
+Tamoxifen (as citrate)
+Docetaxel (as trihydrate)
+Donepezil hydrochloride
+Donepezil hydrochloride
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Clarithromycin
+Finasteride
+Spirinolactone
+Finasteride
+Finasteride
+Ascorbic Acid
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Diltiazem Hydrochloride
+Montelukast (as Sodium)
+Multivitamins+Chlorella +Taurine+Lysine
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Ibuprofen
+Carbocisteine
+Omeprazole (As Sodium)
+Cefalexin
+Salbutamol (As Sulfate)
+Tadalafil
+Ascorbic Acid + Zinc
+Iron Sucrose
+Mebendazole
+ASCORBIC ACID
+Carbocisteine
+Losartan Potassium
+Cyclopentolate Hydrochloride
+Benzydamine Hydrochloride
+Ampicillin (As Sodium)
+Ursodeoxycholic Acid
+Risperidone
+ASCORBIC ACID
+ASCORBIC ACID
+Cefuroxime (as sodium)
+Cefuroxime (As Axetil)
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Etoricoxib
+Metformin Hydrochloride
+Metformin Hydrochloride
+Topiramate
+Gemcitabine (as hydrochloride)
+Imatinib (as Mesilate)
+Pregabalin
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cotrimoxazole
+Hyoscine-N-Butylbromide
+Citicoline (As Sodium)
+Zinc
+Zinc
+Zinc
+Zinc
+Zinc
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Dexamethasone + Tobramycin
+Cefepime (Hydrochloride)
+Vitamin B1 + Vitamin B6 + Vitamin B12
+Ceftazidime (As Pentahydrate)
+Isoxsuprine Hydrochloride
+Enoxaparin Sodium
+Ascorbic Acid + Zinc
+Ceftriaxone (As Sodium)
+Sodium Alginate + Aluminum Hydroxide + Calcium Carbonate
+Sodium Alginate + Aluminum Hydroxide + Calcium Carbonate + Simethicone
+Paracetamol
+Ascorbic Acid
+Ethyl Alcohol
+Paracetamol + Thiamine Mononitrate (Vitamin B) + Pyridoxine HCl (Vitamin B) + Cyanocobalamin (Vitamin B12)
+Paracetamol + Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCI (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cholecalciferol (Vitamin D3)
+Ethyl Alcohol
+Neomycin Sulfate + Triamcinolone Acetonide + Gramicidin Nystatin
+Ascorbic Acid + Zinc
+Terbinafine Hydrochloride
+Entecavir (as monohydrate)
+Cefixime (as trihydrate)
+Menthol + Eucalyptus Oil + Camphor
+Gliclazide
+Clonidine Hydrochloride
+Azithromycin (As Dihydrate)
+Povidone-Iodine
+Eucalyptus Oil
+Aspirin
+Clindamycin (As Phosphate)
+Clindamycin (As Phosphate)
+Telmisartan + Amlodipine (as besilate)
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Imatinib (as Mesilate)
+Imatinib (as Mesilate)
+Omeprazole
+Montelukast (As Sodium)
+Enoxaparin sodium
+Captopril
+Amlodipine (as Besilate)
+Ascorbic acid
+Ascorbic Acid + Zinc
+Furosemide
+Paracetamol
+Gliclazide
+Mefenamic Acid
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Enoxaparin Sodium
+Azithromycin (As Dihydrate)
+Menthol + Eucalyptus Oil + Camphor
+Cotrimoxazole
+Isoniazid
+Spironolactone
+Spironolactone
+Losartan Potassium
+Clarithromycin
+Co-Amoxiclav
+Atorvastatin (as calcium)
+Trimetazidine dihydrochloride
+ATORVASTATIN (AS CALCIUM)
+Rosuvastatin Calcium
+Clindamycin (as Phosphate)
+Mefenamic Acid
+Paracetamol + Phenylephrine Hydrochloride+ Chlorphenamine Maleate
+Guaifenesin + Salbutamol (As Sulfate)
+Losartan potassium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin sodium
+Amlodipine (As Besilate)
+Gentamicin (As Sulfate)
+Clotrimazole
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Lidocaine +Prilocaine
+Tobramycin (as sulfate) + Dexamethasone phosphate (as sodium)
+Multivitamins + Zinc + Glutamic Acid Cyproheptadine Hydrochloride
+Methyldopa (As Sesquihydrate)
+Cefalexin (as Monohydrate)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cilostazol
+Cyanocobalamin
+Azithromycin (As Dihydrate)
+Dexamethasone phosphate (as sodium)
+Amikacin (sulfate)
+Celecoxib
+Simvastatin
+Povidone Iodine
+Diphtheria, Tetanus, Pertussis (Whole Cell), Hepatitis B (rDNA) and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Diphtheria, Tetanus, Pertussis (Whole Cell), Hepatitis B (rDNA) and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Ascorbic Acid + Zinc
+Multivitamins + Minerals
+Hedera helix L.(Ivy Leaf Extract)
+Piperacillin Sodium+ Tazobactam Sodium
+Ambroxol Hydrochloride
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Domperidone
+Potassium Citrate (as monohydrate)
+Risperidone
+Risperidone
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Ascorbic Acid
+Ropinirole Hydrochloride
+Ropinirole Hydrochloride
+Ropinirole Hydrochloride
+Empagliflozin
+Empagliflozin
+Cisatracurium (As Besilate)
+Betahistine Hydrochloride
+Piroxicam Betadex
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Gliclazide
+Amoxicillin (As Trihydrate)
+Amoxicillin (As Trihydrate)
+Ofloxacin
+Camphor + Menthol + Methyl Salicylate
+Carbocisteine
+Diphenhydramine hydrochloride
+Brimonidine Tartrate
+Montelukast (As Sodium)
+Temozolomide
+Cefuroxime (as sodium)
+Montelukast (As Sodium)
+Cefaclor (As Monohdyrate)
+Cefuroxime (As Sodium)
+Ampicillin ( as Sodium)
+Azithromycin (As Dihydrate)
+Metronidazole
+Loperamide
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Citicoline
+Cetirizine Dihydrochloride
+Folic Acid
+Aripiprazole
+Aripiprazole
+Each kit contains: Wintergreen Oil + Camphor + Turpentine Oil + Eucalyptus Oil + Menthol + Clove Oil + Cinnamon Oil [Relispray Plus] Lidocaine + Cetrimide [Mistdress] Povidone-Iodine [Vinodine]
+Each kit contains: Wintergreen Oil + Camphor + Turpentine Oil + Eucalyptus Oil + Menthol + Clove Oil + Cinnamon Oil [Relispray Plus] Lidocaine + Cetrimide [Mistdress] Povidone-Iodine [Vinodine]
+Nifedipine
+Glimepiride
+Clarithromycin
+Butamirate Citrate
+Butamirate Citrate
+Mefenamic Acid
+Methylprednisolone (as sodium succinate)
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Cefuroxime (As Axetil)
+Pregabalin
+Trimetazidine Hydrochloride
+Levofloxacin (as hemihydrate)
+Paracetamol
+Ceftriaxone (as sodium)
+Ethyl Alcohol
+Co-Amoxiclav
+Dobutamine (As Hydrochloride)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Paracetamol + Tramadol Hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Etoricoxib
+Ceftriaxone (as sodium)
+Etoricoxib
+Ranitidine (as hydrochloride)
+Acetylcysteine
+Tobramycin
+Latanoprost
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Camphor + Menthol + Eucalyptus Oil
+Camphor + Menthol + Eucalyptus Oil
+Camphor + Menthol + Eucalyptus Oil
+Glimepiride + Metformin Hydrochloride
+Atorvastatin (as calcium)
+Paracetamol + Vitamin B-Complex
+CEFIXIME
+Co-Amoxiclav
+Guaifenesin+ Phenylpropanolamine Hcl+Chlorphenamine Maleate+Ammonium Chloride+Sodium Citrate)
+Co-Amoxiclav
+Paracetamol + Orphenadrine Citrate
+Gliclazide
+Telmisartan + Hydrochlorothiazide
+Cefuroxime (as Axetil)
+Ethyl Alcohol
+Mupirocin
+Methylprednisolone
+CEFTRIAXONE (AS SODIUM)
+CEFTRIAXONE (AS SODIUM)
+CEFTRIAXONE (AS SODIUM)
+Cefalexin (as monohydrate)
+CEFALEXIN (as monohydrate)
+Metronidazole
+Ethyl Alcohol
+Ursodeoxycholic Acid
+Nicardipine Hydrochloride
+Cefuroxime (As Axetil)
+Co-Amoxiclav
+Enalapril Maleate
+Rosuvastatin (As Calcium)
+Multivitamins + Minerals + Ginseng
+Gliclazide
+Gliclazide
+Levetiracetam
+Aciclovir
+Rosuvastatin (As Calcium)
+Norepinephrine (As Bitartrate)
+Citicoline (As Sodium)
+Dopamine Hydrochloride
+Cefpodoxime (As Proxetil)
+Betamethasone (As Dipropionate)
+Ascorbic Acid
+Ascorbic Acid
+CEFPODOXIME (as proxetil)
+Methyl Salicylate + Menthol + Camphor
+Atenolol
+Paracetamol + Phenylephrine Hydrochloride Chlorphenamine Maleate + Caffeine Anhydrous
+Amoxicillin (as Trihydrate)
+Multivitamins + Buclizine Hydrochloride
+Ondansetron (As Hydrochloride Dihydrate)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Ascorbic Acid + Zinc
+Digoxin
+Povidone-Iodine
+Povidone-Iodine
+Blumea balsamifera L. (Sambong Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Menthol + Camphor + Eucalyptus Oil
+Troclosene Sodium
+Troclosene Sodium
+Ascorbic Acid + Zinc
+Pitavastatin (as Calcium)
+Pitavastatin (as Calcium)
+Olopatadine (as hydrochloride) + Mometasone furoate (as monohydrate)
+Icosapent Ethyl
+Ceftazidime (as pentahydrate)
+Vancomycin (as hydrochloride)
+Olanzapine
+Irinotecan Hydrochloride (as trihydrate)
+Irinotecan Hydrochloride (as trihydrate)
+Pramipexole (as Dihydrochloride monohydrate)
+Betamethasone (as valerate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Ceftriaxone (as sodium)
+Prednisolone (as Sodium Phosphate)
+Multivitamins + Iron
+Paracetamol + Tramadol hydrochloride
+Methyl salicylate + Camphor + Menthol + Eucalyptus Oil + Capsicum
+Rabeprazole Sodium
+Eucalyptus Oil + Menthol + Methyl Salicylate + Camphor
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Camphor + Menthol
+Prednisolone Acetate
+Doxorubicin (as Hydrochloride)
+Naproxen Sodium
+Diclofenac Potassium
+Ascorbic Acid
+Pravastatin (as Sodium)
+Cefepime (As Hydrochloride)
+Clopidogrel
+Salbutamol (as Sulfate)
+Metformin (as Hydrochloride) + Glibenclamide
+Gliclazide
+Metformin hydrochloride
+Metformin hydrochloride
+Metformin Hydrochloride
+Imidapril Hydrochloride + Hydrochlorothiazide
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Meclizine Hydrochloride
+Tranexamic Acid+ Mefenamic Acid
+Glimepiride
+Febuxostat
+Febuxostat
+Pioglitazone (as Hydrochloride)
+Bicalutamide
+Doxofylline
+Candesartan Cilexetil
+Candesartan Cilexetil
+Lansoprazole
+Tacrolimus (as monohydrate)
+Ursodeoxycholic acid + Thiamine mononitrate Riboflavin
+Domperidone
+Rosuvastatin Calcium
+Metformin Hydrochloride
+Co-amoxiclav
+Cefuroxime (As Sodium)
+Montelukast (As Sodium)
+Escitalopram (as oxalate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ethambutol Hydrochloride
+Ascorbic Acid + Zinc
+Allopurinol
+Levofloxacin (As Hemihydrate)
+Furosemide
+Tamsulosin (as Hydrochloride)
+Isoxsuprine hydrochloride
+Amoxicillin (as Trihydrate)
+Irbesartan
+Fluconazole
+Cefazolin (As Sodium)
+PANTOPRAZOLE (AS SODIUM)
+Domperidone (as Maleate)
+Fenofibrate
+Aspirin
+Hydrochlorothiazide
+Aceclofenac
+Metformin Hydrochloride
+Hydrochlorothiazide
+DOXYCYCLINE (AS HYCLATE)
+Piracetam
+Oxytocin
+Tramadol (As Hydrochloride)
+Cefalexin (as monohydrate)
+Cefalexin (As Monohydrate)
+Betahistine Hydrochloride
+Cetirizine Hydrochloride
+Felodipine
+Cetirizine Hydrochloride
+Doxofylline
+Esomeprazole (as magnesium)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi Leaf)
+Calcium + Cholecalciferol (Vitamin D3)
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Ascorbic Acid + Zinc
+Dexamethasone + Neomycin (as Sulfate) + Polymyxin-B-Sulfate
+Multivitamins + Iron
+Salicylic Acid
+Levetiracetam
+Dextrose
+Aminophylline
+Isosorbide Mononitrate
+Hyoscine N-Butylbromide
+Paclitaxel
+Paclitaxel
+Rivaroxaban
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Medical Grade Oxygen
+Cefuroxime (as sodium)
+Multivitamins + Minerals + Lysine Hydrochloride + Buclizine Hydrochloride
+Diphenhydramine Hydrochloride
+Phenylpropanolamine Hydrochloride + Phenylephrine Hydrochloride + Brompheniramine Maleate
+Clonidine Hydrochloride
+Clonidine Hydrochloride
+Tenofovir disoproxil fumarate
+Febuxostat
+Febuxostat
+Nicardipine hydrochloride
+Ascorbic Acid
+Clarithromycin
+Citicoline (as sodium)
+Ceftazidime (as pentahydrate)
+Chlorhexidine
+Ticagrelor
+Cefalexin (as monohydrate)
+Chlorhexidine
+Multivitamins and Minerals (see reverse for formulation)
+Multivitamins and Minerals
+Azithromycin (as dihydrate)
+Cisplatin
+Cisplatin
+Losartan Potassium
+Multivitamins + Lysine Hydrochloride + Buclizine Hydrochloride
+Paclitaxel
+Fenofibrate
+Fenofibrate
+Carboplatin
+Methylprednisolone
+Etoricoxib
+Cefepime (As Hydrochloride)
+Glipizide
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Clozapine
+Quetiapine(As Fumarate)
+Salbutamol (As Sulfate)
+Ascorbic Acid
+Mefenamic Acid
+Mefenamic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Folic Acid (Vitamin B9)
+Imatinib (as mesilate)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Calcium Lactate
+Zinc
+Phenylephrine Hydrochloride + Paracetamol + Zinc
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol + Zinc
+Diosmin + Hesperidin
+Povidone - Iodine
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Ascorbic Acid
+Multivitamins + Iron
+Ascorbic Acid
+Cholecalciferol (Vitamin D3)
+Chlorhexidine
+Chlorhexidine
+Ascorbic Acid+Zinc
+Chlorhexidine
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Citicoline (as sodium)
+Ascorbic Acid
+Ascorbic Acid
+Hydrogen Peroxide
+Cassia angustifolia Vahl (Senna Pods and Leaves)
+Cholecalciferol (Vitamin D3)
+Levomenthol
+Zinc
+Zinc
+Iron
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Flucloxacillin (As Sodium)
+Salbutamol (As Sulfate)
+Zinc
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+KIT CONTAINS: (1) RIFAMPICIN 200 MG / 5 ML SUSPENSION (PICINAF) (2) ISONIAZID / PYRIDOXINE HCI 200 MG / 20 MG PER 5 ML SYRUP (ISOWEST) (3) PYRAZINAMIDE 250MG / 5 ML SUSPENSION (ZYNAPHAR)
+Olanzapine
+Atorvastatin (As Calcium)
+Cefepime (As Hydrochloride)
+Ascorbic Acid + Zinc
+Potassium Alum
+Caspofungin (as Acetate)
+Cetirizine Dihydrochloride
+Paclitaxel
+Isavuconazonium Sulfate
+Mefenamic Acid
+Ertapenem
+Methyldopa
+Mebendazole Usp
+Celecoxib
+Brinzolomide
+Spironolactone
+Acetylcysteine
+Olopatadine (as Hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Eperisone Hydrochloride
+Fusidic Acid
+Hyoscine N-Butylbromide
+Ciprofloxacin (as Hydrochloride)
+Chlorhexidine + Isopropyl Alcohol
+Levetiracetam
+Levetiracetam
+Levetiracetam
+Sterile Water For Injection
+Rosuvastatin (as calcium)
+Rosuvastatin (As Calcium)
+Azithromycin (As Dihydrate)
+Insulin Human (rDNA)
+Paracetamol
+Paracetamol
+Carbocisteine
+Amlodipine (As Besilate)
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Enoxaparin Sodium
+Metronidazole
+Cloxacillin (as Sodium Monohydrate)
+Oxacillin (as Sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (As Sodium)
+Pioglitazone (As Hydrochloride)
+Ceftriaxone (As Sodium)
+ASCORBIC ACID
+ASCORBIC ACID
+Multivitamin + Iron
+Blumea Balsamifera L. (Sambong Leaf)
+Telmisartan + Hydrochlorothiazide
+Levothyroxine (as sodium)
+Amphotericin B
+Quetiapine (as Fumarate)
+Dutasteride
+Anastrozole
+Bortezomib
+Capecitabine
+Temozolomide
+Temozolomide
+Doxorubicin Hydrochloride
+Esomeprazole (As Sodium)
+Zoledronic Acid
+Clomifene Citrate
+Gemcitabine (As Hydrochloride)
+Azithromycin (As Dihydrate)
+Diclofenac Potassium
+Gabapentin
+Levetiracetam
+Topiramate
+Rosuvastatin (as Calcium)
+Cefalexin (As Monohydrate)
+Metformin hydrochloride
+Metformin hydrochloride
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Metformin hydrochloride
+Cetirizine + Phenylephrine Hydrochloride
+Cilostazol
+Salbutamol (As Sulfate)
+Citicoline (as sodium)
+Dexchlorpheniramine Maleate + Betamethasone
+Paracetamol
+Cholecalciferol (Vitamin D3)
+Levofloxacin (as hemihydrate)
+Ceftriaxone (As Sodium)
+Chlorhexidine
+Metformin Hydrochloride
+Iron (As Sucrose)
+Clotrimazole
+Paracetamol + Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride Cyanocobalamin (Vitamin B12)
+Thiamine Hydrochloride (Vitamin B) + Pyridoxine Hydrochloride (Vitamin B.) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate Hydrochloride (Vitamin B12)
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Multivitamins + Iron
+Ascorbic Acid + Zinc
+Cetirizine Dihydrochloride
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Oral Rehydration Salts (ORS)
+Oral Rehydration Salts (ORS)
+Carbocisteine
+Multivitamins + Minerals + Panax quinquefolium L. (American Ginseng) Ro
+Loratadine
+Cetirizine hydrochloride
+Cholecalciferol (Vitamin D3)
+Cholecalciferol (Vitamin D3)
+di-Alpha-Tocopherol Acetate (Vitamin E)
+Paracetamol + Phenylephrine Hcl + Chlorphenamine Maleate
+Dichlorobenzyl Alcohol + Amylmetacresol
+Dichlorobenzyl Alcohol + Amylmetacresol
+Ibuprofen + Paracetamol
+Multivitamins + Mineral + Amino Acids + Herbs
+Zinc + Copper
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Ascorbic Acid + Bioflavonoids
+Celecoxib
+Benzalkonium Chloride
+Telmisartan + Hydrochlorothiazide
+Eucalyptus Oil + Dementholized Mint Oil + Cajuput Oil + Menthol + Methyl Salicylate + Juniper Oil + Clove Oil
+Levocetirizine Dihydrochloride
+Beclometasone Dipropionate + Formoterol Fumarate Dihydrate
+Clotrimazole
+Tretinoin
+Tretinoin
+Tretinoin
+Tretinoin
+Calcium Sennosides
+Ceftriaxone (As Sodium)
+Salbutamol (as sulfate)
+Mefenamic Acid
+Cefixime (as trihydrate)
+Mefenamic Acid
+Mefenamic Acid
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Meropenem (as trihydrate)
+Irbesartan
+Irbesartan
+Febuxostat
+Febuxostat
+Multivitamins
+Povidone Iodine
+Lacidipine
+Lacidipine
+Lacidipine
+Oxaliplatin
+Oxaliplatin
+Clarithromycin
+Clarithromycin
+Isosorbide Dinitrate
+Bisacodyl
+Loratadine
+Paracetamol
+Ketoanalogues + Essential Amino Acids
+Pioglitazone (As Hydrochloride)
+Telmisartan
+Telmisartan
+Tramadol Hydrochloride
+Ketoconazole
+Thiamine Mononitrate (Vit. B) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Piperacillin (as sodium) + Tazobactam(as sodium)
+Azithromycin (as dihydrate)
+Sodium Valproate
+Amoxicillin (As Trihydrate)
+Sultamicillin (As Tosilate)
+Abiraterone Acetate
+Paclitaxel
+Fenofibrate
+Spironolactone
+Spironolactone
+Losartan Potassium + Hydrochlorothiazide
+Etoricoxib
+Diltiazem Hydrochloride
+Ofloxacin
+Ofloxacin
+Diosmin + Hesperidin
+Cefuroxime (As Axetil)
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Salbutamol (As Sulfate)
+Dipyridamole
+Clopidogrel (as bisulfate)
+Azithromycin (as monohydrate)
+Telmisartan + Hydrochlorothiazide
+Azithromycin (As Dihydrate)
+Montelukast (as Sodium)
+Co-Amoxiclav
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Tramadol Hydrochloride
+Ceftriaxone (As Sodium)
+Levodopa+Carbidopa
+Mupirocin
+Guaifenesin+Phenylpropanolamine HCL+Chlorphenamine Maleate+Ammonium Chloride+Sodium Citrate
+Citicoline (As Sodium)
+Omeprazole (As Sodium)
+Losartan Potassium
+Cefixime (As Trihydrate)
+Co-Amoxiclav
+Omeprazole
+Cefuroxime (as sodium)
+Carbocisteine
+Montelukast (As Sodium)
+Carvedilol
+Losartan Potassium
+Losartan Potassium
+Paracetamol + Tramadol Hydrochloride
+Hydrocortisone
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Montelukast (as sodium)
+Montelukast (as Sodium)
+Tramadol Hydrochloride
+Mefenamic Acid
+Imatinib (as mesilate)
+Dioctahedral Smectite
+Captopril
+Captopril
+Paracetamol
+Tamoxifen (As Citrate)
+Cefpodoxime (as proxetil)
+Risperidone
+Diosmin + Hesperidin
+Atorvastatin (As Calcium)
+Dobutamine (As Hydrochloride)
+Esomeprazole (As Magnesium)
+Tadalafil
+Carbamazepine
+Metronidazole
+Norepinephrine (As Bitartrate)
+Atorvastatin (as calcium)
+Rosuvastatin (As Calcium)
+Amlodipine (As Besilate)
+Metformin Hydrochloride
+Mupirocin
+Valsartan
+Salbutamol (as sulfate) + Guaifenesin
+Metformin Hydrochloride
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Fenofibrate
+Fenofibrate
+Valsartan
+Esomeprazole (As Magnesium)
+Esomeprazole (As Magnesium)
+Hydrocortisone (as sodium succinate)
+Trimetazidine Hydrochloride
+Isoxsuprine Hydrochloride
+Phyllanthus niruri L. (Meniran Whole Plant)
+Candesartan Cilexetil
+Amoxicillin (as trihydrate)
+Amoxicillin (As Trihydrate)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Dobutamine (As Hydrochloride)
+Paracetamol + Tramadol Hydrochloride
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (as calcium)
+Rosuvastatin (as calcium)
+Fluconazole
+Amlodipine (as besilate)
+Pantoprazole (As Sodium
+Clotrimazole
+Ascorbic Acid + Zinc
+Hydroquinone + Tretinoin
+Paracetamol+Hyoscine N-Butylromide
+Methyl Salicylate
+Dexchlorpheniramine Maleate + Betamethasone
+ESOMEPRAZOLE (as magnesium)
+Clindamycin (As Hydrochloride)
+Mefenamic Acid
+Cholecalciferol (Vit.D3)
+Losartan Potassium + Hydrochlorothiazide
+Clopidogrel (as bisulfate)
+Amoxicillin (As Trihydrate)
+Etoricoxib
+Dopamine Hydrochloride
+Menthol + Camphor + Eucalyptus Oil
+Azithromycin (as dihydrate)
+Ofloxacin
+Cefixime (as trihydrate)
+Norepinephrine (As Bitartrate)
+Clarithromycin
+CEFUROXIME (AS AXETIL)
+Sterile Water For Injection
+Clobetasol Propionate
+Hydrocortisone
+Cetirizine Dihydrochloride
+Cefalexin
+Paracetamol + Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCl (Vitamin B) + Cyanocobalamin (Vitamin B12
+PARACETAMOL
+Butamirate Citrate
+Butamirate Citrate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Isopropyl Alccohol
+Ketoanalogues + Essential Amino Acids
+Iron
+Levofloxacin
+Dacarbazine
+Gemcitabine(As Hydrochloride)
+Anastrozole
+Docetaxel (As Trihydrate)
+L-Asparaginase
+Amlodipine (as Besilate) + Losartan Potassium
+Mycophenolate mofetil
+Levofloxacin
+Aeculus hippocastanum L.(B-escin Horse Chestnut Seeds)
+Ivabradine (as hydrochloride)
+Bendamustine hydrochloride
+Bendamustine hydrochloride
+Exemestane
+Co-Amoxiclav
+Leuprorelin Acetate
+Bimatoprost
+R-Thioctic Acid Tromethamine
+Atorvastatin (As Calcium)
+Baclofen
+Heparin Sodium + Allium cepa L. (Onion) Bulb Allantoin
+Turpentine oil, Capsicum oleoresin, Sanguis draconis (Daemonorops draco fruit), Methyl salicylate
+Salmeterol (as xinafoate) + Fluticasone propionate
+Salmeterol (as xinafoate) + Fluticasone propionate
+Domperidone (as maleate)
+Cefoperazone (As Sodium) + Sulbactam (As Sodium)
+Amoxicillin(As Trihydrate)
+Povidone Iodine+Psidium Guajava L. (Guava) Leaf
+Benzoic acid + Resorcinol + Salicylic acid + Iodine
+Mannitol
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Remifentanil (as hydrochloride)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Cefepime (as hydrochloride)
+Valsartan + Amlodipine (As Besilate)
+Methyl Salicylate + Zingiber officinale (Ginger) Root + Menthol + Camphor + Eucalyptus
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Ceftriaxone (as sodium)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Carbamazepine
+Cefepime (as Hydrochloride)
+Cefepime (as Hydrochloride)
+Meropenem (as trihydrate)
+Salbutamol (As Sulfate)
+Aciclovir
+Celecoxib
+Ivabradine (as hydrochloride)
+Oxytocin
+Linezolid
+Co-Amoxiclav
+Lamivudine + Zidovudine
+Belimumab
+Tenofovir disoproxil fumarate
+Oxaliplatin
+Oxaliplatin
+Ketoanalogues + Essential Amino Acids
+Cefepime (as hydrochloride)
+Oxaliplatin
+Oxaliplatin
+Paclitaxel
+Allopurinol
+Paclitaxel
+Irbesartan + Hydrochlorothiazide
+Multivitamins + Minerals (Vet.)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Chicken Anemia Virus (CLI Strain) Antibody Test Kit
+Avian Encephalomyelitis (Van Roekel Strain) Antibody Test Kit
+Sulfadiazine + Trimethoprim + Bromhexine (Vet.)
+Multivitamins + Lysine (Vet.)
+Multivitamins + Minerals (Vet.)
+Multivitamins/Minerals
+Live Newcastle Disease Virus (VG/GA Avinew Strain) Vaccine
+dl-a-Tocopherol Acetate (Vet.)
+Sterile Phosphate Buffered Saline (Vet.)
+Butaphosphan + Cyanocobalamin (Vet.)
+Live Infectious Bursal Disease Virus (IBD) Virus + Bursal Disease Antibody (BDA) Complexed Vaccine
+Multivitamins + Iron (Vet.)
+African Swine Fever (ASF) Polymerase Chain Reaction (PCR) Detection Kit
+Oxytetracycline (Vet.)
+Cefoxitin Sodium
+Teneligliptin (as hydrobromide hydrate + Pioglitazone (Hydrochloride)
+Linezolid
+Somatropin
+Somatropin
+Somatropin
+Paclitaxel
+Morphine Hydrochloride
+Clonazepam
+Ascobic Acid + Zinc
+Sulfur
+Esomeprazole (As Magnesium Trihydrate)
+Cefuroxime(As Sodium)
+Montelukast (As Sodium)
+Rosuvastatin (as calcium)
+Bevacizumab
+Bevacizumab
+Montelukast (As Sodium)
+Telmisartan
+Hydrocortisone (as sodium succinate)
+Dobutamine (As Hydrochloride)
+Gliclazide
+Gliclazide
+Celecoxib
+Gliclazide
+Mefenamic Acid
+Cefuroxime (As Axetil)
+Cloxacillin (as sodium)
+Cloxacillin (as sodium)
+Folic Acid
+Paracetamol + Phenylephrine Hydrochloride
+Carvedilol
+Carvedilol
+Betahistine dihydrochloride
+Betahistine Dihydrochloride
+Valsartan + Amlodipine (as besilate)
+Cefuroxime (as axetil)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Atorvastatin (As Calcium)
+Trimetazidine Hydrochloride
+Atorvastatin (As Calcium)
+Tramadol Hydrochloride
+Isoxsuprine Hydrochloride
+Omeprazole (As Sodium)
+Duloxetine (As Hydrochloride)
+Duloxetine (as hydrochloride)
+Tramadol Hydrochloride + Paracetamol
+Lactulose
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Co-Amoxiclav
+Ondansetron (as Hydrochloride)
+Azithromycin (as dihydrate)
+Doxofylline
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Azithromycin (as dihydrate)
+Folic Acid
+Ascorbic Acid + Zinc
+Cefepime (As Hydrochloride)
+Cefuroxime (As Sodium)
+Chrlorhexidine
+Chlorhexidine
+Chrlorhexidine
+Ascorbic Acid + Zinc
+Butamirate Citrate
+Silybin/Phospholipids + Multivitamins + Zinc
+Clopidogrel(As Bisulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Chlorhexidine + Isopropyl Alcohol
+Chlorhexidine + Isopropyl Alcohol
+Menthol + Camphor + Eucalyptus Oil
+Glycol Salicylate + 1-Menthol + Tocopherol Acetate (Vitamin E) + Capsaicin (Capsicum Extract)
+Cetirizine Hydrochloride
+Amlodipine (As Besilate) + Losartan Potassium
+Cefuroxime (as sodium)
+Ceftriaxone (As Sodium)
+Etoricoxib
+Isopropyl Alcohol
+Ibuprofen
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Dicycloverine (as Hydrochloride)
+Dicycloverine Hydrochloride
+Rosuvastatin (as calcium)
+Fenofibrate
+Nicardipine Hydrochloride
+Amlodipine (As Besilate)
+Losartan Potassium
+Ampicillin (As Sodium)
+Cefoxitin (As Sodium)
+Clindamycin (As Hydrochloride)
+Felodipine
+Cefepime (as Hydrochloride)
+Omeprazole (As Sodium)
+Cefuroxime (As Axetil)
+Ketoanalogues + Essential Amino Acids
+Amlodipine (as Besilate) + Valsartan
+Amlodipine (as Besilate) + Valsartan
+Cefuroxime (As Sodium)
+Menthol + Eucalyptus Oil + Camphor
+Salbutamol (as Sulfate)
+Irbesartan
+Irbesartan
+Aspirin
+Methylprednisolone (As Sodium Succinate)
+Meropenem (As Trihydrate)
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besilate)
+Salbutamol (As Sulfate)
+Paclitaxel
+Gliclazide
+Clopidogrel (as bisulfate)
+Rosuvastation (as calcium)
+Ursodeoxycholic Acid
+0.9% Sodium Chloride
+Ascorbic Acid + Zinc
+Azithromycin (As Dihydrate)
+Omeprazole (As Sodium)
+Vancomycin (As Hydrochloride)
+Enoxaparin sodium
+Enoxaparin sodium
+Enoxaparin sodium
+Enoxaparin sodium
+Meropenem (As Trihydrate)
+Cefuroxime (as Axetil)
+Aspirin
+Naproxen Sodium
+Aspirin
+5% Amino Acids + 5% Sorbitol
+Pioglitazone (As Hydrochloride)
+Pioglitazone Hydrochloride
+Cotrimaxozole
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cotrimoxazole
+Mefenamic Acid
+Mefenamic Acid
+Aluminum Hydroxide + Magnesium Trisilicate + Simethicone
+Paracetamol
+Salbutamol (As Sulfate)
+Hexetidine
+Acetylcysteine
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Cassia angustifolia Vahl (Senna Fruits and Leaves)
+Ascorbic Aci
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Thiamine Mononitrate (Vitamin B) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Carbocisteine
+Sildenadil (As Citrate)
+Multivitamins + Minerals + Ginseng + Amino Acids
+Tretinoin
+Tretinoin
+Enoxaparin sodium
+Zinc
+Enoxaparin sodium
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate + Caffeine Anhydrous
+Ethyl Alcohol
+Amlodipine (as besilate) + Losartan Potassium
+Amlodipine (As Besilate) + Losartan Potassium
+Bupivacaine Hydrochloride in 8% Dextrose
+Retinol (as Palmitate) (Vitamin A)
+Colecalciferol (Vitamin D3) + Calcium
+Calcium + Calcitriol + Zinc
+Paracetamol
+Fluorouracil
+Pemetrexed (as disodium)
+Zinc
+Docetaxel (As Trihydrate)
+Paracetamol
+Zinc
+Vitamin B-Complex + Iron + Lysine + Buclizine Hcl
+Calcium Lactate
+Calcium Lactate
+Calcium Lactate
+Amoxicillin (As Trihydrate)
+AMOXICILLIN (AS TRIHYDRATE)
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Cefalexin (As Monohydrate)
+Ascorbic Acid+Zinc
+Cefalexin (as monohydrate)
+Cefuroxime (as Axetil)
+Amlodipine (As Besilate)
+Metformin Hydrochloride
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3
+Dexamethasone Phosphate (As Sodium)
+Carvedilol
+Cefpodoxime (As Proxetil)
+Ascorbic Acid
+Ambroxol Hydrochloride
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate + Paracetamol
+Ascorbic Acid + Zinc
+Enoxaparin Sodium
+Enoxaparin sodium
+Enoxaparin Sodium
+Enoxaparin sodium
+Naproxen Sodium
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ceftazidime (As Pentahydrate)
+Dipyridamole
+Prednisone
+Ascorbic Acid + Zinc
+Cetirizine
+Betahistine Dihydrochloride
+Metformin hydrochloride
+Co-amoxiclav
+Tramadol Hydrochloride + Paracetamol
+Timolol (as maleate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Tranexamic Acid
+Nicardipine hydrochloride
+Rifampicin + Isoniazid + Pyrazinamide
+Rifampicin + Isoniazid + Pyrazinamide
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Sertraline (as Hydrochloride)
+Cefuroxime (as axetil)
+Paclitaxel
+Cefaclor(as monohydrate)
+Clobetasol Propionate
+Mupirocin
+Mupirocin
+Vitamin B-Complex
+Peritoneal dialysis solution with 1.5% Dextrose
+Agomelatine
+Oxytocin
+Hydrocortisone (as sodium succinate)
+Telmisartan + Hydrochlorothiazide
+Olanzapine
+Rasagiline
+Dexmedetomidine (as hydrochloride) in 0.9% w/v Sodium Chloride
+Prednisolone (as sodium phosphate)
+Telmisartan
+Telmisartan
+Mentha + Camphor + Menthol + Thymol + Eucalyptus
+Multivitamins + Iron + Rhodiola rosea Root Paulinia cupana (Guarana) Seeds
+Mupirocin
+Cyanocobalamin (Vitamin B12)
+Paclitaxel
+Iron (as Iron Polymaltose Complex) + Folic Acid
+Methotrexate
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Doxorubicin hydrochloride
+Doxorubicin hydrochloride
+Carvedilol
+Tamsulosin hydrochloride
+Metformin Hydrochloride
+Diclofenac
+Oral Rehydration Salts
+Etoricoxib
+Etoricoxib
+Ascorbic Acid
+Maxxi Nerve
+Losartan Potassium
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Rosuvastatin (as calcium)
+Rocuronium Bromide
+Paracetamol
+Paracetamol
+Omeprazole
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Oral Rehydration Salts
+Zoledronic Acid (as monohydrate)
+Levodropropizine
+Cloxacillin (As Sodium)
+Glutathione
+Lamotrigine
+Lamotrigine
+Lamotrigine
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Granisetron (as hydrochloride)
+Granisetron (as hydrochloride)
+Perampanel
+Perampanel
+Rosuvastatin (As Calcium)
+Caspofungin (as acetate)
+Caspofungin (as acetate)
+Febuxostat
+Carboprost (as trometamol)
+Esomeprazole (as sodium)
+Esomeprazole (as sodium)
+Zoledronic Acid (as monohydrate)
+Doxofylline
+Doxofylline
+Docetaxel
+Docetaxel
+Simvastatin
+Simvastatin
+Metformin Hydrochloride
+Cefuroxime (as sodium)
+Cloxacillin (As Sodium)
+Cloxacillin (As Sodium)
+Clopidogrel (As Bisulfate) + Aspirin
+Betamethasone (as Valerate)
+Cloxacillin (As Sodium)
+Paclitaxel
+Amoxicillin (as Trihydrate)
+Amoxicillin (As Trihydrate)
+Ranitidine
+Cefixime (as trihydrate)
+Digoxin
+Cefuroxime (as Sodium)
+Bortezomib
+Menthol + Camphor + Eucalyptus Oil
+Menthol + Camphor + Eucalyptus Oil
+Menthol Camphor Eucalyptus
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Capecitabine
+Metronidazole
+Aspirin
+Bromhexine Hydrochloride
+Bromhexine Hydrochloride
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Chloramphenicol
+Chloramphenicol
+Omeprazole (As Sodium)
+Moxifloxacin (As Hydrochloride)
+Omeprazole (As Sodium)
+Pantoprazole (as Sodium)
+Clarithromycin
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Hypromellose
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Baclofen
+Cloxacillin
+Ascorbic Acid
+Leuprorelin Acetate
+Povidone Iodine
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Mefenamic Acid
+Mefenamic Acid
+Valsartan
+Valsartan
+Etoricoxib
+Loratadine
+Clomifene Citrate
+Mannitol
+Irbesartan
+Salbutamol (As Sulfate)
+Cefuroxime (as sodium)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (as sodium)
+Co-Amoxiclav
+Methylergometrine maleate
+Valsartan
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Latanoprost
+Metronidazole
+Levodropropizine
+Enalapril Maleate +Hydrochlorothiazide
+Cisplatin
+Montelukast (As Sodium)
+Gemcitabine (as Hydrochloride)
+Etoricoxib
+Gemcitabine (as Hydrochloride)
+Oxaliplatin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Losartan potassium
+Losartan Potassium
+Acetylcysteine
+Acetylcysteine
+Potassium Chloride
+Azithromycin (as Dihydrate)
+Azithromycin (As Dihydrate)
+Loratadine
+Ibuprofen + Paracetamol
+Ibuprofen + Paracetamol
+Co-Amoxiclav
+Guaifenesin + Salbutamol (as Sulfate)
+Montelukast
+Montelukast
+Co-Amoxiclav
+Ketoconazole
+Methylphenidate hydrochloride
+Methylphenidate Hydrochloride
+Cefuroxime (as Sodium)
+Claritret Clarifying and Rejuvenating Toner
+Claritret Clarity Night Cream
+Vitamin B1 + Vitamin B6 + Vitamin B12 + Buclizine Hydrochloride + Lysine Hydrochloride
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Olanzapine
+Phenoxymethylpenicillin Potassium
+Glycopyrronium (as bromide) + Formoterol fumarate dihydrate
+Olmesartan medoxomil
+Olmesartan medoxomil
+Moxifloxacin Hydrochloride
+Folic Acid
+Hydrocortisone (as sodium succinate)
+Azithromycin (as dihydrate)
+Salbutamol (as sulfate)
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Ketoprofen
+Metformin Hydrochloride + Gliclazide
+Sodium Ascorbate
+Salmeterol (as xinafoate) + Fluticasone propionate
+Carvedilol
+Isosorbide mononitrate
+Azithromycin (as Dihydrate)
+Tacrolimus
+Tacrolimus
+Clindamycin (as Phosphate)
+Hedera helix L. (Ivy) Leaf
+Cholecalciferol (Vitamin D3)
+Pregabalin
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (as Calcium)
+Piperacillin (as sodium) + Tazolactam (as sodium)
+Piperacillin (as sodium) + Tazolactam (as sodium)
+Multivitamins + Zinc + Copper
+Sildenafil (As Citrate)
+Sildenafil (As Citrate)
+Piperacillin (As Sodium) And Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Ethambutol Hydrochloride
+Paracetamol
+Oxaliplatin
+Cholecalciferol (Vitamin D3)
+Sildenafil (As Citrate)
+Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Gliclazide
+Flucloxacillin (As Sodium)
+Quetiapine (As Fumarate)
+ORAL REHYDRATION SALTS
+Salbutamol (As Sulfate)
+Dapagliflozin
+Dapagliflozin
+Pregabalin
+Midazolam (as hydrochloride)
+Metoprolol Tartrate
+Ketoanalogues Essential Amino Acids.
+Ibuprofen + Paracetamol
+Midazolam (as hydrochloride)
+Desloratadine
+Flumazenil
+Sildenafil (As Citrate)
+Epinephrine
+Capecitabine
+Acetylcysteine
+Phenylpropanolamine Hydrochloride Chlorpheniramine Maleate + Paracetamol
+Pregabalin
+Citicoline (as Sodium)
+Sildenafil (As Citrate)
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Sildenafil (As Citrate)
+Cefixime (as Trihydrate)
+Fondaparinux Sodium
+Cytarabine
+Cytarabine
+Cytarabine
+Amphotericin B
+Levothyroxine Sodium
+Levothyroxine Sodium
+Levothyroxine Sodium
+Ivabradine (as hydrochloride)
+Digoxin
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Febuxostat
+Febuxostat
+Mupirocin
+Human Immunoglobulin
+Moxifloxacin (Hydrochloride)
+Methylergometrine Maleate
+Gliclazide
+Sodiumcitrate+Dextromethorphan+Chlorphenamine Maleate
+Mebendazole
+Biperiden Hydrochloride
+Iron + Folic Acid
+Iron
+Tranexamic Acid
+Oxytocin
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Rabeprazole Sodium
+Dimenhydrinate
+Ascorbiv Acid
+Ceftazidime
+Thiamazole
+Amoxicillin (As Trihydrate)
+Tobramycin + Dexamethasone
+Ofloxacin
+Ofloxacin
+Diosmin + Hesperidin
+Moxifloxacin (As Hydrochloride)
+Losartan Potassium + Hydrochlorothiazide
+Hyoscine-N-Butylbromide
+Bisoprolol Fumarate
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B) + Cyanocobalamin (Vitamin B12)
+Co-Amoxiclav
+Atorvastatin (As Calcium)
+Tranexamic Acid
+Ampicillin (As Sodium)
+Salbutamol (as sulfate)
+Carbocisteine
+Mebendazole
+Etoricoxib
+Etoricoxib
+Olopatadine (as hydrochloride)
+Mecobalamin
+Sodium Chloride
+Polymyxin B Sulfate + Neomycin (as Sulfate) + Gramicidin
+CLARITHROMYCIN
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil + Gingerols + Capsaicin
+Cefixime
+Cetirizine Hydrochloride
+Lisinopril (As Dihydrate)
+Lisinopril (As Dihydrate)
+Nystatin
+Cefuroxime (As Axetil)
+Ketotifen Fumarate
+Ascorbic Acid
+Enalapril Maleate
+Dutasteride + Tamsulosin hydrochloride
+Lansoprazole
+Losartan Potassium + Amlodipine (as besilate)
+Piperacillin+ Tazobactam
+Calamine + Zinc Oxide
+Cefoxitin (As Sodium)
+Ascorbic Acid
+Ceftazidime (As Pentahydrat)
+Clopidogrel (As Bisulfate)
+Amlodipine (As Besilate) + Losartan Potassium
+Risperidone
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Salbutamol (as sulfate)
+Guafenesin+Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbutamol (As Sulfate)
+Loteprednol etabonate
+Amoxicillin (As Trihydrate)
+Losartan Potassium
+Losartan Potassium
+Amikacin (as sulfate)
+Loratadine
+Esomeprazole (as magnesium trihydrate)
+Domperidone
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Nifedipine
+5.4% Amino Acids
+Enoxaparin sodium
+Enoxaparin Sodium
+Multivitamins + Dextrose
+Amlodipine (As Besilate)
+Montelukast (as sodium)
+Tramadol Hydrochloride
+Atorvastatin (as calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Multivitamins (see formulation on reverse side)
+Amino Acid + Sorbitol
+Amino Acid + Sorbitol
+Pregabalin
+Pregabalin
+Paracetamol + Vitamin B + Vitamin B6 + Vitamin B12
+Salbutamol (as sulfate) + Guaifenesin
+Clopidogrel(As Bisulfate)
+Cefaclor
+Paracetamol
+Chlorhexidine + Isopropyl Alcohol
+Chlorhexidine
+Ophenadrine Citrate + Paracetamol
+Levocetirizine Dihydrochloride
+Hedera helix (Ivy) Leaf Extract
+Bacitracin Zinc
+Bisacodyl
+Polymyxin B Sulfate + Bacitracin Zinc + Neomycin Sulfate
+Chlorhexidine
+Mefenamic Acid
+Calcium Carbonate + Cholecalciferol (Vitamin D3)
+Ciprofloxacin (As Hydrochloride)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Diphenhydramine Hydrochloride
+Co-Amoxiclav
+Zinc Oxide
+Sodium Ascorbate + Zinc
+Ascorbic Acid + Zinc + Cholecalciferol
+Diphenhydramine Hydrochloride
+Trastuzumab
+Enoxaparin sodium
+Amino Acids + Multivitamins + Minerals
+Oxaliplatin
+Telmisartan + Hydrochlorothiazide
+Gliclazide
+Glimepiride
+Methyl Salicylate
+Sebo de Macho
+Ursodeoxycholic Acid
+Adapalene
+Povidone Iodine
+Telmisartan
+Telmisartan
+Methylprednisolone (As Sodium Succinate)
+Ceftriaxone (As Sodium)
+Pantoprazole (as Sodium)
+Ascorbic Acid
+Salicylic Acid
+Aceite de Manzanilla
+Ibuprofen
+Cetirizine
+Ciprofloxacin (As Hydrochloride)
+Guaifenesin + Salbutamol (As Sulfate)
+Mefenamic Acid
+Cetirizine Dihydrochloride
+Cetirizine Dihydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Capecitabine
+Troclosene Sodium
+Cefuroxime (As Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (as Axetil)
+Potassium Iodide + Sodium Iodide
+Tacrolimus (As Monohydrate)
+Ranitidine (as Hydrochloride)
+Ascorbic Acid + Zinc
+Multivitamins
+Multivitamins
+Carbocisteine
+Carbocisteine
+Multivitamins + Iron + Buclizine
+Ambroxol Hydrochloride + Levocetirizine Hydrochloride
+Ambroxol Hydrochloride + Levocetirizine Hydrochloride
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+2, 4 Dichlorobenzyl Alcohol + Amylmetacresol
+Loratadine
+Loratadine
+Loratadine
+Aluminum Hydroxide + Magnesium Hydroxide
+Tramadol (as hydrochloride)
+Carvedilol
+Losartan Potassium / Hydrochlorothiazide
+Cefuroxime (As Axetil)
+Sitagliptin (as phosphate)
+Tobramycin
+Losartan Potassium
+Tretinoin
+5% Dextrose In 0.3% Sodium Chloride
+10% Dextrose In Water For Injection
+Ciprofloxacin (As Hydrochloride)
+Rosuvastatin Calcium
+5% Dextrose In 0.9% Sodium Chloride
+Multivitamins + Minerals + Dimethylaminoethanol (Deanol) + Royal Jelly + Panax ginseng (Korean Panax Ginseng) Root Powder
+Multivitamins + Minerals + Dimethylaminoethanol (Deanol) + Royal Jelly + Panax ginseng (Korean Panax Ginseng) Root Powder
+Paracetamol + Vitamin B-Complex
+Multivitamins + Iron + Folic Acid
+Mefenamic Acid
+Paracetamol
+Paracetamol + Tramadol Hydrochloride
+Sitagliptin (as phosphate)
+Irbesartan + Hydrochlorothiazide
+Topiramate
+Cefoperazone (As Sodium) + Sulbactam (As Sodium)
+Mefenamic Acid
+Cefpodoxime (As Proxetil)
+Multivitamins + Silymarin
+Inactivated Poliomyelitis Vaccine (Types 1, 2 And 3)
+Ascorbic Acid + Zinc (as Sulfate Heptahydrate)
+Ambroxol Hydrochloride
+Guaifenesin + Salbutamol (as sulfate)
+Carbocisteine
+Carbocisteine
+Salbutamol + Guaifenesin
+Paracetamol
+Paracetamol
+Paracetamol
+Calamine + Zinc Oxide
+Insulin Human (rDNA)
+Ibuprofen + Phenylephrine Hydrochloride
+Cholecalciferol (Vitamin D3)
+Metformin Hydrochloride
+Capecitabine
+Carbocisteine + Zinc
+Carbocisteine + Zinc
+Carbocisteine
+Guaifenesin + Salbutamol (as Sulfate)
+Salbutamol + Guaifenesin
+Metformin Hydrochloride
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Cefuroxime (As Axetil)
+Ciprofloxacin(as hydrochloride)
+Irbesartan
+Metoprolol Tartrate
+Febuxostat
+Cefalexin (As Monohydrate)
+Ursodeoxycholic Acid
+Levofloxacin
+Losartan Potassium
+Losartan Potassium
+Metformin Hydrochloride
+Paracetamol + Phenylephrine hydrochloride + Dextromethorphan hydrobromide
+Salbutamol (as sulfate)
+Erythromycin (As Stearate)
+Amoxicillin (as trihydrate)
+Budesonide
+Budesonide + Formoterol fumarate dihydrate
+Budesonide + Formoterol fumarate dihydrate
+Progesterone
+Progesterone
+Buclizine hydrochloride + Vitamin B-Complex + Iron
+Celecoxib
+Silver Sulfadiazine
+Escitalopram (As Oxalate)
+Zinc Orotate
+Azelastine hydrochloride + Fluticasone propionate
+Cineole + Eucalyptus + Menthol + Camphor + Rosemary Oil
+Losartan (As Potassium)
+Dextrose In Water
+Esomeprazole (As Sodium)
+Betahistamine Dihydrochloride
+Finasteride
+Ciprofloxacin (As Hydrochloride)
+Co-Amoxiclav
+Ascorbic Acid + Zinc
+Chlorhexidine
+Ascorbic Acid + Zinc
+Tretinoin + Hydroquinone
+Tretinoin
+Losartan Potassium
+Chrlorhexidine
+Diclofenac Sodium
+Ascorbic Acid
+Methyl Salicylate
+Calcium Lactate
+Phenylephrine HCI + Dextromethorphan HBr + Paracetamol
+Ursodeoxycholic Acid
+Insulin detemir
+Rosuvastatin (As Calcium)
+Amoxicillin (as Trihydrate)
+Cefixime (as trihydrate)
+Ibuprofen + Phenylephrine HC1
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Mefenamic Acid
+Multivitamins + Minerals
+Multivitamins + Minerals
+Sevoflurane
+Cetirizine Hydrochloride
+Hyoscine-N-Butylbromide
+Ascorbic Acid + Zinc
+Erythromycin
+Clotrimazole
+Isosorbide mononitrate
+Doxycycline (As Hyclate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B + Cyanocobalamin (Vitamin B12)
+Docetaxel
+Docetaxel
+Azithromycin (as Dihydrate)
+Meloxicam
+Metoprolol Tartrate
+Ceftriaxone (As Sodium)
+Fluconazole
+Adapalene
+Cefuroxime (as Sodium)
+Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin
+Cilnidipine
+Cilnidipine
+Eucalyptus + Menthol + Methyl Salicylate
+Ledipasvir + Sofosbuvir
+Trimetazidine hydrochloride
+Acetylcysteine
+Ketotifen (As Fumarate)
+Vitex Negundo L. (Lagundi Leaf)
+Telmisartan
+Carvedilol
+Salmeterol (as xinafoate) + Fluticasone propionate
+Sodium bicarbonate
+Menthol + Methyl Salicylate + Camphor + Borneol + Thymol + Zinc Oxide
+Menthol + Methyl Salicylate + Camphor + Borneol + Thymol + Zinc Oxide
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Lactulose
+Levetiracetam
+Cefixime (as trihydrate)
+Oral Rehydration Salts
+Itraconazole
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Hydrochloride (Vitamin B1) / Pyridoxine Hydrochloride (Vitamin B6)/ Cyanocobalamin (Vitamin B12)
+Thiamine mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Multivitamins
+Omeprazole
+Levetiracetam
+Lactulose Solution
+Metformin Hydrochloride
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Captopril
+Calcipotriol (as monohydrate) + Betamethasone (as dipropionate)
+Calcipotriol (as monohydrate) + Betamethasone (as dipropionate)
+Captopril
+Azithromycin (as dihydrate)
+Trimetazidine Hydrochloride
+Metronidazole (as Benzoate)
+dl-Alpha Tocopheryl Acetate (Vitamin E)
+Fexofenadine Hydrochloride
+Fexofenadine Hydrochloride
+FOLIC ACID
+Dicycloverine Hydrochloride
+Prednisone
+Amoxicillin (as Trihydrate)
+Escitalopram (as oxalate)
+Escitalopram (as oxalate)
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Ascorbic Acid
+Phenylpropanolamine Hydrochloride
+Calfactant
+Amlodipine (as besilate) + Valsartan
+Dexamethasone phosphate (as sodium)
+Losartan (As Potassium)
+Clindamycin (as hydrochloride)
+Clindamycin (as hydrochloride)
+Filgrastim
+Montelukast
+Bortezomib
+Lactulose
+Perampanel
+Benzoic Acid + Salicylic Acid
+Loratadine + Phenylephrine Hydrochloride
+Tamsulosin Hydrochloride
+Domperidone
+Ceftriaxone (As Sodium)
+Each kit contains: Pyrazinamide 250 mg/ 5mL Suspension (Pyzather) Rifampicin 200 mg/ 5 mL Suspension (Fampisec) Isoniazid 200 mg/5 mL Syrup (Bacciter Forte)
+Cefuroxime (as axetil)
+Ascorbic Acid + Zinc
+Trimetazidine hydrochloride
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Ezetimibe
+Amino Acid + Sorbitol
+Losartan Potassium + Hydrochlorothiazide
+Amlodipine (As Besilate)
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Iron (as Ferric Hydroxide Sucrose Complex)
+Vancomycin (as hydrochloride)
+Fenofibrate
+Fenofibrate
+Sevelamer Carbonate
+Losartan potassium + Hydrochlorothiazide
+Sevelamer Carbonate
+Oxaliplatin
+Oxaliplatin
+Aceite de Manzanilla
+Ethyl Alcohol
+Telmisartan + Hydrochlorothiazide
+Ascorbic Acid + Zinc
+Iron
+Lidocaine hydrochloride (as monohydrate)
+Dienogest
+Ampicillin (As Sodium)
+Hyoscine-N-Butylbromide
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCI (Vitamin B6) +Cyanocobalamin (Vitamin B12)
+Plantago ovata Forssk. (Ispaghula husk)
+Ampicillin (As Sodium)
+Ondansetron (as hydrochloride)
+Ascorbic Acid + Zinc (as Zinc Ascorbate)
+Ascorbic Acid + Zinc
+Paracetamol + Dextromethorphan Hydrobromide + Phenylephrine Hydrochloride
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Simethicone
+Sulfur
+Dextromethorphan Hydrobromide + Phenylephrine Hydrochloride
+Tramadol Hydrochloride
+Bromhexine Hydrochloride
+Pantoprazole (As Sodium Sesquihydrate) + Domperidone
+Tretinoin
+Retinol (as palmitate) (Vitamin A)
+Ascorbic Acid
+Vitex Negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi) Leaves
+Ascorbic Acid + Zinc
+Erlotinib (as hydrochloride)
+Erlotinib (As Hydrochloride)
+Erlotinib (as hydrochloride)
+Cromolyn Sodium
+Cefalexin (As Monohydrate)
+Rosuvastatin (as calcium) + Clopidogrel (as bisulfate)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Budesonide
+Diclofenac Potassium
+Cefuroxime (as axetil)
+Letrozole
+Clopidogrel (as bisulfate)
+Ceftriaxone (as sodium) + Sulbactam (as sodium
+Betamethasone (as valerate)
+Pantoprazole (as sodium sesquihydrate)
+Fulvestrant
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Calcium folinate (as Folinic acid)
+Amlodipine (as besilate)
+Losartan (As Potassium)
+Sertaconazole nitrate
+Doxofylline
+Menthol + Camphor + Methyl Salicylate + Glycol Salicylate + Diphenhydramine
+Gabapentin
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Moroctocog Alfa
+Moroctocog Alfa
+Latanoprost
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Tretinoin
+Losartan Potassium
+Losartan Potassium
+Capecitabine
+Oxaliplatin
+Mometasone Furoate
+Vitamin B-Complex + Iron + Buclizine hydrochloride
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Dicycloverine Hydrochloride
+Omeprazole
+Cefixime (As Trihydrate)
+Tretinoin + Hydroquinone
+Gemcitabine (as hydrochloride)
+Gemcitabine (as hydrochloride)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Ketoprofen
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Esomeprazole (as sodium)
+Clindamycin (as phosphate)
+Losartan Potassium + Hydrochlorothiazide
+Tirofiban (as hydrochloride monohydrate)
+Cefuroxime (As Sodium)
+Propofol
+Cefuroxime (as sodium)
+Cefepime (as hydrochloride) + Sulbactam (as sodium)
+Cefepime(As Hydrochloride)
+Tranexamic Acid
+Iron
+Choline Salicylate + Benzalkonium Chloride
+Prednisone
+Betaxolol (as hydrochloride)
+Camphor + Menthol + Methyl Salicylate + Diphenhydramine (as hydrochloride) + Glycyrrhizic Acid + Chlorhexidine
+Telmisartan
+Salmeterol Xinafoate + Fluticasone Propionate
+Etoricoxib
+Cefepime (as hydrochloride)
+Multivitamins + Zinc + Selenium
+Ondansetron (as hydrochloride)
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Ondansetron (as hydrochloride)
+Zolendronic Acid (Monohydrate)
+Levetiracetam
+Omeprazole (as sodium)
+Thiamine Hydrochloride/Fluid Extract of Tiki-Tiki/Fluid Extract of Cinchona/Fluid Extract of Cola/Alcohol
+Iron + Folic Acid
+Enalapril Maleate
+Co-Amoxiclav
+Citicoline
+Diclofenac Sodium
+Epoetin Alfa
+Ketoanalogues + Essential Amino Acids
+Levofloxacin (as hemihydrate)
+Cimetidine
+Prednisone
+Doxorubicin Hydrochloride
+Mefenamic Acid
+Furazolidone
+Clonidine Hydrochloride
+Acetated Ringer's Solution
+Lidocaine Hydrochloride + Epinephrine (as bitartrate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Gefitinib
+Multivitamins + Minerals
+Heparin Sodium
+Dexamethasone phosphate (as sodium)
+Nicardipine Hydrochloride
+Lactulose
+Oxaliplatin
+Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Multivitamins + Minerals
+Co-Amoxiclav
+Co-Amoxiclav
+Ketoanalogues + Essential Amino Acids
+Ethyl Alcohol
+Clindamycin (As Phosphate)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Ceftriaxone (As Sodium)
+Ascorbic Acid
+Povidone Iodine
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Azithromycin (As Dihydrate)
+Carnitine Orotate + Liver Extract Antitoxic Fraction + Adenine HCI + Pyridoxine HCI (Vit. B6) + Riboflavin (Vit. B2) + Cyanocobalamin (Vit. B12)
+Cetirizine Hydrochloride
+Bromhexine Hydrochloride
+Zinc
+Ascorbic Acid + Zinc
+Ibuprofen
+Tioconazole
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Iron
+Paracetamol + Phenylephrine Hydrochloride
+Ascorbic Acid + Zinc
+Buclizine Hydrochloride + Vitamin B Complex + Iron
+Carbocisteine
+Scutellaria baicalensis (Baikal skullcap) Root Extract + Acacia catechu (Catechu) Heartwood Extract
+Scutellaria baicalensis (Baikal skullcap) Root Extract + Acacia catechu (Catechu) Heartwood Extract
+Glucosamine Sulfate + Scutellaria baicalensis (Baikal skullcap) Root Extract + Acacia catechu (Catechu) Heartwood Extract
+Ascorbic Acid
+Naproxen Sodium
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Mupirocin
+Ascorbic Acid (As Sodium Ascorbate)
+Carbocisteine
+Ascorbic Acid+Zinc
+Ascorbic Acid + Zinc
+Multivitamins
+Tranexamic Acid
+Vino De Quina
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Dobutamine (As Hydrochloride)
+Paracetamol + Phenylephrine Hydrochloride
+Povidone Iodine
+Atorvastatin (As Calcium)
+Nicardipine Hydrochloride
+Lactulose
+Citicoline (As Sodium)
+Lactulose
+Ipratropium (as Bromide) + Salbutamol (as Sulfate)
+Budesonide
+Digoxin
+Rosuvastatin (As Calcium)
+Nicardipine Hydrochloride
+Erythromycin (As Stearate)
+Tamsulosin Hydrochloride
+Iron (As Iron Sucrose)
+Sitagliptin (As Phosphate Monohydrate)
+Sitagliptin (As Phosphate Monohydrate)
+FOLIC ACID
+Guaifenesin + Salbutamol (As Sulfate)
+Glimepiride
+Amlodipine (as besilate)
+Levetiracetam
+Ticagrelor
+Telmisartan + Hydrochlorthiazide
+Telmisartan + Hydrochlorthiazide
+Atomoxetine (as hydrochloride)
+Cefpodoxime (as proxetil)
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Diclofenac (as sodium)
+Esomeprazole (as magnesium trihydrate)
+Esomeprazole (as magnesium trihydrate)
+Pramipexole dihydrochloride (as monohydrate)
+Lornoxicam
+Pramipexole dihydrochloride (as monohydrate)
+Tadalafil
+Imatinib (As Mesilate)
+Indapamide
+Fructus Cnidii + Radix Sophorae + Rhizoma Smilacis + Cortex Dictamni + Semen Hydnocarp+ Benzoic Acid +Salicylic Acid+ Ethyl Alcohol
+Trimetazidine Hydrochloride
+Ipratropium bromide (as monohydrate) + Salbutamol (as sulfate)
+Ascorbic Acid + Zinc
+Ascorbic Acid (Vitamin C) + Zinc
+Dorzolamide (As Hydrochloride) + Timolol (As Maleate)
+Folic Acid
+Clotrimazole
+Cholera Vaccine (Inactivated, Oral)
+Etomidate
+Esomeprazole (as sodium)
+Esomeprazole (as sodium)
+Exemestane
+Multivitamins + Minerals + Amino Acids + Vitis vinifera L. (Grape) Seed
+Gentamicin (as Sulfate)
+Omeprazole
+Solifenacin Succinate
+Cefoxitin (as sodium)
+Iron (as Ferrous fumarate) + Vitamin B-Complex
+Losartan Potassium
+Furosemide
+Sodium Bicarbonate + Sodium Citrate + Citric Acid + Tartaric Acid
+Tiotropium (as bromide)
+Clotrimazole
+Donepezil hydrochloride
+Valsartan
+Valsartan
+Topotecan (as hydrochloride)
+Esketamine (as hydrochloride)
+Clotrimazole + Gentamicin Sulfate + Betamethasone Dipropionate
+Prednisone
+Pregabalin
+Pregabalin
+Pregabalin
+Pemetrexed (as disodium)
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Rocuronium Bromide
+Allopurinol
+Quetiapine (As Fumarate)
+Piroxicam
+Iron (as Iron sucrose)
+Iron (as Iron sucrose)
+Iron (as Iron sucrose)
+Neostigmine Methylsulfate
+Thiamazole
+Methimazole
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+CETIRIZINE DIHYDROCHLORIDE
+Levofloxacin (as Hemihydrate)
+Linezolid
+Betamethasone (as valerate)
+Imipenem+Cilastatin (as sodium)
+Paracetamol
+Paracetamol
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Losartan Potassium
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Desloratadine
+Co-Amoxiclav
+Cefotaxime Sodium + Sulbactam Sodium
+Etoricoxib
+Etoricoxib
+Vitex Negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Lagundi) Leaf
+Vitex Negundo L. (Lagundi) Leaf
+Vitex Negundo L. (Lagundi) Leaf
+Vitex Negundo L. (Lagundi) Leaf
+Vitex Negundo L. (Lagundi) Leaf
+Bupivacaine hydrochloride in Dextrose
+Pemetrexed (as disodium hemipentahydrate)
+Ketorolac trometamol
+Pemetrexed (as disodium hemipentahydrate)
+Ceftriaxone (as Sodium)
+Clotrimazole
+Co-Amoxiclav
+Co-Amoxiclav
+Cefuroxime (as sodium)
+Hydroxychloroquine sulfate
+Dexamethasone phosphate (as sodium)
+Imipenem (as monohydrate) + Cilastatin (as sodium)
+Ceftriaxone (as Sodium)
+Telmisartan
+Telmisartan
+Progesterone
+Progesterone
+Sitagliptin (As Hydrochloride) + Metformin Hydrochloride
+Citicoline
+Citicoline
+Losartan potassium + Amlodipine (as camsilate)
+Ceftriaxone (as Sodium)
+Losartan potassium + Amlodipine (as camsilate)
+Fusidic Acid
+Mometasone Furoate
+Salbutamol (as Sulfate)
+Vitex Negundo L. (Lagundi Leaf)
+Losartan potassium + Hydrochlorothiazide
+Hydroxyethyl Starch + Sodium Chloride
+Vitex Negundo L. (Lagundi Leaf)
+Amlodipine (As Besilate)
+Clindamycin (as Phosphate)
+Domperidone
+Lactulose
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Cefepime (As Hydrochloride)
+Paracetamol + Phenylpropanolamine HCl + Chlorphenamine Maleate
+Chlorphenamine Maleate
+Losartan Potassium + Amlodipine (as besilate)
+Metoprolol Tartrate
+Levofloxacin (as Hemihydrate)
+Cholecalciferol (Vitamin D3) + Minerals
+Thiamazole
+Thiamazole
+Cefdoxime (as proxetil)
+ASCORBIC ACID
+Ascorbic Acid + Zinc + Vitamin D3
+Cyanocobalamin (Vitamin B12)
+Ascorbic Acid
+Paracetamol
+Nicardipine Hydrochloride
+Ascorbic Acid + Zinc
+Celecoxib
+Celecoxib
+Celecoxib
+Telmisartan
+Telmisartan
+Bevacizumab
+Clopidogrel
+Medroxyprogesterone acetate
+Povidone Iodine
+Sebo De Macho
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Sodium Valproate + Valproic Acid
+Retinol (as palmitate) (Vitamin A)
+Clotrimazole
+Domperidone
+Cholecalciferol (Vitamin D3)
+Cholecalciferol (Vitamin D3)
+Paracetamol + Guaifenesin Hydrochloride + Dextromethorphan Hydrobromide + Chlorphenamine Maleate
+Ascorbic Acid + Zinc
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Minoxidil
+Multivitamins + Iron
+Mupirocin
+Ibuprofen
+Hydroquinone + Tretinoin
+Oral Rehydration Salts (ORS)
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Cefixime (As Trihydrate)
+Losartan Potassium
+Ketoanalogues + Essential Amino Acids
+Lactulose
+Clopidogrel (As Bisulfate)
+Cefpodoxime(As Proxetil)
+Ascorbic Acid + Zinc
+Tranexamic Acid
+Rosuvastatin (As Calcium)
+Multivitamins
+Carboplatin
+Febuxostat
+Febuxostat
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Amlodipine (As Besilate)
+Paracetamol
+Clopidogrel (As Bisulfate)
+Medical Grade Oxygen
+Cefuroxime (As Axetil)
+Cetirizine Hydrochloride
+Povidone Iodine
+Conjugated Estrogen
+Cefriaxone (as sodium)
+Telmisartan
+Fusidic Acid
+Amoxicillin (as Trihydrate)
+Citicoline
+Atomoxetine (as hydrochloride)
+Atomoxetine (as hydrochloride)
+Atomoxetine (as hydrochloride)
+Alfuzosin hydrochloride
+Eugenol
+Fosphenytoin Sodium
+Tenoxicam
+Oxaliplatin
+Cefuroxime (as sodium)
+Potassium Citrate
+Amiodarone (As Hydrochloride)
+Cefpodoxime (As Proxetil)
+Exemestane
+Ticagrelor
+Ketorolac Tromethamine
+Pamidronate (as disodium)
+Piperacillin (As Sodium)+ Tazobactam (As Sodium)
+Losartan Potassium
+Dexmedetomidine (as Hydrochloride)
+Tadalafil
+Gliclazide
+Acetylcysteine
+Mebendazole
+Aripiprazole
+Metronidazole
+Metronidazole
+Acetylcysteine
+Ursodeoxycholic Acid
+Timolol (as maleate)
+Cefuroxime (As Axetil)
+Diclofenac Sodium
+Diclofenac Sodium
+Diclofenac Sodium
+Rosuvastatin (As Calcium)
+Rosuvastatin (As Calcium)
+Valsartan
+Ursodeoxycholic Acid
+Ceftrixone (As Sodium)+ Sulbactam (As Sodium)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Ibuprofen
+Alpelisib
+Alpelisib
+Alpelisib
+Piperacillin (as sodium) + Tazobactam (As sodium)
+Ceftriaxone (As Sodium)
+Cloxacillin (as Sodium)
+Lansoprazole
+Trimetazidine Dihydrochloride
+Warfarin Sodium
+Propranolol Hydrochloride
+Nimodipine
+Docetaxel
+Mefenamic Acid
+Ketoprofen
+Ketoanalogues + Essential Amino Acids
+Propranolol Hydrochloride
+Rifampicin + Isoniazid + Ethambutol Hydrochloride
+Oral Rehydration Salts
+Progesterone
+Acetylcysteine
+Sevoflurane
+Progesterone
+Epirubicin Hydrochloride
+Hexetidine
+Clozapine
+Clozapine
+Cloxacillin (as Sodium)
+Citicoline
+Cefuroxime (as sodium)
+Ceftazidime (as pentahydrate)
+Cefaclor (As Monohydrate)
+Caspofungin (as acetate)
+Letrozole
+Zinc Oxide + Myroxylon balsamum var. pereirae (Royle) Harms (Balsam of Peru) Resin + Benzyl Benzoate
+Progesterone
+Per Kit contains: Sitagliptin (as phosphate monohydrate) 50 mg Film Coated Tablet + Metformin hydrochloride 1 g Extended Release Tablet
+Salbutamol (as sulfate)
+Salbutamol (as Sulfate) + Ipratropium Bromide
+Pregabalin
+Azithromycin (As Dihydrate)
+Salbutamol (As Sulfate)
+Symclosene (Trichloroisocyanuric Acid)
+Propofol
+Ampicillin(as sodium)+Sulbactam(as sodium)
+Febuxostat
+Magnesium sulfate (as heptahydrate)
+Febuxostat
+Paracetamol
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Febuxostat
+Cefepime (As Hydrochloride)
+Cefuroxime (As Axetil)
+Levetiracetam
+Sevoflurane
+Prednisolone (As sodium Phosphate)
+Silver Sulfadiazine
+Racecadotril
+Racecadotril
+Telmisartan
+Lemborexant
+Lemborexant
+Fenofibrate
+Indapamide + Amlodipine (as besilate)
+Indapamide + Amlodipine (as besilate)
+Salmeterol (As Xinafoate) + Fluticasone Propionate
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+SALBUTAMOL (AS SULFATE) + BECLOMETASONE DIPROPIONATE
+Nebivolol (as hydrochloride)
+Dutasteride + Tamsulosin Hydrochloride
+Iodixanol
+Rosuvastatin (as calcium)
+Pioglitazone (as hydrochloride)
+Prucalopride Succinate
+Prucalopride Succinate
+Montelukast (as sodium)
+Dexketoprofen (as trometamol)
+Measles, Mumps, Rubella and Varicella Vaccine (Live)
+Nebivolol hydrochloride
+Carboprost (as tromethamine)
+Carboprost (As Tromethamine)
+Rosuvastatin (as calcium)
+Rosuvastatin (as Calcium)
+Doxofylline
+Triptorelin (as embonate)
+Triptorelin (as embonate)
+Triptorelin (as embonate)
+Methimazole
+Aciclovir
+Paliperidone (as palmitate)
+Paliperidone (as palmitate)
+Paliperidone (as palmitate)
+Testosterone enantate
+Chlorphenamine Maleate
+Lornoxicam
+MEROPENEM ( as trihydrate )
+Oxycodone hydrochloride + Naloxone hydrochloride
+Oxycodone Hydrochloride + Naloxone Hydrochloride
+Oxycodone Hydrochloride + Naloxone Hydrochloride
+Rosuvastatin (As Calcium)
+Clopidogrel (as bisulfate) + Aspirin
+Iodixanol
+Gadobenate dimeglumine
+Metformin Hydrochloride + Glimepiride
+Nebivolol (as hydrochloride)
+Ginkgo Biloba EGb 761
+Ginkgo Biloba EGb 761
+Montelukast (As Sodium)
+Tramadol Hydrochloride
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+Sildenafil (As Citrate)
+Paracetamol
+Cetirizine Dihydrochloride
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+Bisoprolol Fumarate
+Telmisartan + Hydrochlorothiazide
+Bevacizumab
+Bevacizumab
+Cinnarizine
+Sitagliptin (as phosphate monohydrate)
+Epoetin Alfa
+Vortioxetine (As Hydrobromide)
+Vortioxetine (As Hydrobromide)
+Vortioxetine (As Hydrobromide)
+Vortioxetine (As Hydrobromide)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Etoricoxib
+Norepinephrine (as bitartrate)
+Cefuroxime Axetil
+Guaifenesin + Salbutamol (As Sulfate)
+Pregabalin
+Amlodipine (as besilate) + Atorvastatin (as calcium)
+Ascorbic Acid + Zinc
+Paracetamol + Caffeine
+Paracetamol + Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Ammonium Chloride + Diphenhydramine HCI
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Paracetamol
+Tretinoin + Hydroquinone
+Cetirizine Hydrochloride
+Ascorbic Acid + Zinc
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Loperamide + Simethicone
+Telmisartan
+Octreotide (as acetate)
+Co-Amoxiclav
+Levetiracetam
+Cefazolin (As Sodium)
+Meropenem
+Cisplatin
+Cisplatin
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Gemcitabine (as hydrochloride)
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol НСІ
+Rifampicin + Isoniazid
+Tetrahydrozoline Hydrochloride
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Metronidazole
+Lactated Ringer'S Solution (Ringer'S Lactate)
+Bismuth Subsalicylate
+Cholecalciferol (Vitamin D3)
+Zinc
+Loperamide + Simeticone
+Losartan Potassium + Hydrochlorothiazide
+Bupivacaine Hydrochloride In 8 % Dextrose
+Butamirate Citrate
+Ethyl Alcohol
+Ascorbic Acid + Zinc + Colecalciferol (Vitamin D3)
+Trimetazidine Hydrochloride
+Doxycycline (As Hyclate)
+Febuxostat
+Febuxostat
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Co-Amoxiclav
+Pelargonium sidoides DC.
+Pelargonium sidoides DC
+Nebivolol (as hydrochloride) + Amlodipine (as besilate)
+Zinc (as gluconate)
+Rosuvastatin (as calcium)
+Paracetamol + Caffeine
+Co-Amoxiclav
+Co-Amoxiclav
+Teicoplanin
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Mefenamic Acid
+Cefpodoxime (as Proxetil)
+Gabapentin
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as Phosphate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Ibrutinib
+Rosuvastatin (as zinc) + Ezetimibe
+Rosuvastatin (as zinc) + Ezetimibe
+Biperiden Hydrochloride
+Atorvastatin (As Calcium)
+Sultamicillin tosilate
+Tigecycline
+Sultamicillin tosilate
+Sultamicillin tosilate
+Sultamicillin tosilate
+Pemetrexed (as disodium)
+Pemetrexed (as disodium)
+Montelukast (as Sodium) + Levocetirizine hydrochloride
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Fexofenadine hydrochloride
+Fexofenadine Hydrochloride
+Fexofenadine Hydrochloride
+Palonosetron (as hydrochloride)
+Palonosetron (as hydrochloride)
+Pregabalin
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Montelukast (as sodium)
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Hyoscine-N-Butylbromide
+Tranexamic Acid
+Haloperidol Decanoate
+Hyoscine-N-Butylbromide
+Fexofenadine Hydrochloride
+Benzoyl Peroxide
+Labetalol hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Calcitriol
+Tranexamic Acid
+Iron Sucrose
+Paracetamol
+Ceftriaxone (as Sodium)
+Menthol + Glycyrrhiza glabra (Liquorice root) + Zingiber officinale (Ginger rhizome) + Phyllanthus emblica (Indian gooseberry fruit)
+Menthol + Glycyrrhiza glabra (Liquorice) Root + Zingiber officinale (Ginger) Rhizome + Phyllantus emblica (Indian Gooseberry) Fruit
+Menthol + Glycyrrhiza glabra (Liquorice) Root + Zingiber officinale (Ginger) Rhizome + Phyllantus emblica (Indian Gooseberry) Fruit
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Olanzapine
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium) + Wfi
+Diclofenac Sodium
+Solifenacin Succinate
+Solifenacin Succinate
+Cefuroxime (as Sodium)
+Ketorolac trometamol
+Valaciclovir (As Hydrochloride)
+Valaciclovir (As Hydrochloride)
+Pregabalin
+Risperidone
+Co-Amoxiclav
+Cinnarizine
+Iron (as iron Sucrose)
+Montelukast (as Sodium)
+Prednisone
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Cotrimoxazole
+Allopurinol
+Xylometazoline HCI
+Ascorbic Acid
+Vitamin B1 + B6 + B12
+Sanclary-125
+Loperamide HCl
+Zinc
+Ascorbic Acid + Chlolecalciferol (Vitamin D3) + Zinc
+Bromhexine Hydrochloride
+Ascorbic Acid + dl-Alpha Tocopheryl Acetate (Vitamin E)
+Biotin (Vitamin B7)
+Iron
+Telmisartan
+Salbutamol (As Sulphate)
+Zinc
+Oxaliplatin
+Paclitaxel
+Dexamethasone
+Phytomenadione (Vitamin K1)
+Oxaliplatin
+Cyclophosphamide (As Monohydrate)
+Miconazole (As Nitrate)
+Ciprofloxacin (as hydrochloride)
+Chloramphenicol
+Cholecalciferol (Vitamin D3)
+Paracetamol
+Ibuprofen + Paracetamol
+Cholecalciferol
+Domperidone
+Buclizine Hydrochloride + Vitamin B Complex + Iron
+Cetirizine hydrochloride
+Ascorbic Acid + Zinc
+Cholecalciferol (Vitamin D3)
+Paracetamol
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Atracurium (As Besilate)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Famciclovir
+Epirubicin
+Metronidazole
+Irbesartan
+Irbesartan
+Irbesartan
+Pancreatin
+Ambroxol Hydrochloride
+Metronidazole (As Benzoate)
+Gefitinib
+Doxorubicin Hydrochloride
+Esomeprazole (as magnesium)
+Acetylcysteine
+Naproxen Sodium + Omeprazole
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Sitagliptin (as Phosphate)
+Ascorbic Acid
+Doxycycline (as hydrochloride)
+Neomycin Sulfate + Dexamethasone Sodium Phosphate + Polymyxin B Sulfate
+Tolnaftate + Clioquinol + Gentamicin (as sulfate) + Betamethasone (as valerate)
+Gatifloxacin
+Levocetirizine Dihydrochloride
+Cefazolin
+Cefuroxime (As Sodium)
+Febuxostat
+Lynestrenol
+Cefuroxime (as sodium)
+Ascorbic Acid
+Ascorbic Acid
+Miconazole Nitrate
+Erlotinib (as hydrochloride)
+Iron
+Acyclovir
+Multivitamins + Zinc
+Sumatriptan (As Succinate)
+Zinc (as citrate dihydrate)
+Chlorhexidine Gluconate + Isopropyl Alcohol : Sureguard
+Ascorbic Acid + Zinc
+Lactulose
+Mupirocin
+Febuxostat
+Guaifenesin + Salbutamol (As Sulfate)
+Paracetamol + Ibuprofen
+Herbs + Ascorbic Acid + Selenium + Zinc
+Ampicillin (as sodium)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ampicillin (as sodium)
+Trimetazidine Hydrochloride
+Pelargonium sidoides DC. Root
+Doripenem (as monohydrate)
+Warfarin Sodium
+First Aid Kit
+Complete Wound Management Kit
+Naltrexone Hydrochloride
+Doxofylline
+Multivitamins + Dextrose
+Alendronic Acid (as alendronate sodium)
+Levocetirizine hydrochloride
+Co-Amoxiclav
+Amino Acids
+Acetylcysteine
+Acetylcysteine
+Flumazenil
+Atracurium Besilate
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Voriconazole
+Topotecan (as hydrochloride)
+Metronidazole (As Benzoate)
+Imatinib (As Mesilate)
+Imatinib (As Mesilate)
+Cetirizine
+Zoledronic acid (as monohydrate)
+Omidenepag Isopropyl
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Enzalutamide
+Tirofiban (as hydrochloride monohydrate)
+Metoclopramide Hydrochloride
+Gefitinib
+Ethyl Alcohol
+Co-Amoxiclav (see reverse for formulation)
+Epoetin Alfa
+Levocetirizine Dihydrochloride
+Isopropyl Alcohol
+Tramadol hydrochloride + Paracetamol
+Hydralazine Hydrochloride
+Abemaciclib
+Abemaciclib
+Abemaciclib
+Abemaciclib
+Simvastatin
+Domperidone
+Thiamine mononitrate (Vit. B) + Pyridoxine hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12) + Lysine hydrochloride + Iron
+ASCORBIC ACID
+Paracetamol
+Amoxicillin (As Trihydrate)
+Cefuroxime (As Axetil)
+Quetiapine (as Fumarate )
+Mefenamic Acid
+Mupirocin
+Entecavir
+Entecavir
+Emergency Kit
+Everolimus
+Isoniazid+Pyridoxine
+Co-Amoxiclav
+Doxofylline
+Omevex-1
+Ofloxacin
+Rocuronium Bromide
+Zonisamide
+Zonisamide
+Zonisamide
+Zoledronic acid (as monohydrate)
+Vancomycin (as hydrochloride)
+Cinnarizine
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Rivastigmine
+Rivastigmine
+Estradiol valerate
+Macitentan
+Ondansetron (as hydrochloride dihydrate)
+Darunavir
+Darunavir
+Darunavir
+Cholecalciferol
+Montelukast (as Sodium)
+Darunavir
+Darunavir
+Darunavir
+Pregabalin
+Hydrocortisone acetate
+Entecavir (as monohydrate)
+Entecavir (as monohydrate)
+Isoflurane
+Clobetasol Propionate
+Furosemide
+Ezetimibe
+Vancomycin Hydrochloride
+Vancomycin Hydrochloride
+Tranexamic Acid
+Candesartan cilexetil
+Candesartan Cilexetil
+Anastrozole
+Tranexamic Acid
+Cefixime (as trihydrate)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Cefuroxime (as sodium)
+Imatinib (as mesilate)
+Sevelamer Carbonate
+Rosuvastatin (As Calcium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ceftriaxone (as Sodium)
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Sildenafil (As Citrate)
+Sildenafil (As Citrate)
+Capecitabine
+Thiamine mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Sildenafil (As Citrate)
+Capecitabine
+Capecitabine
+Rocuronium Bromide
+Sildenafil (As Citrate)
+Sodium bicarbonate
+Etoricoxib
+Zinc
+Ascorbic Acid
+Zinc Oxide
+Clopidogrel (as bisulfate)
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Ibuprofen + Phenylephrine HCl
+Aluminum Hydroxide + Magnesium Hydroxide
+Aluminum Hydroxide + Magnesium Hydroxide
+Ibuprofen + Phenylephrine HCl
+Clotrimazole + Hydrocortisone
+Tretinoin + Hydroquinone
+Iron + Folic Acid
+Multivitamins + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+70% Isopropyl Alcohol Solution Unscented
+Herbs + d-Alpha Tocopheryl Acetate (Vitamin E) + Ascorbic Acid + Retinyl Acetate (Vitamin A) + Minerals
+Ascorbic Acid (Vitamin C) + Zinc + Colecalciferol (Vitamin D3)
+Multivitamins
+Spironolactone
+Ascorbic Acid
+dl-alpha Tocopheryl Acetate (Vitamin E)
+Orlistat
+Meningococcal Group A, C, W-135 and Y Conjugate Vaccine
+Iron
+Ascorbic Acid + Cholecalciferol + Calcium + Zinc
+Multivitamins + Iron
+Polyethylene Glycol 3350 (PEG) + Mineral Salts
+Povidone-Iodine
+Multivitamins + Amino Acids
+Amlodipine (as besilate) + Valsartan
+Pantoprazole
+Lactulose
+Nepafenac
+Paracetamol
+Efavirenz
+Clotrimazole
+Valporic Acid
+Cefotaxime (As Sodium)
+Pantoprazole
+Omeprazole
+Adapalene + Clindamycin (as phosphate)
+Carboplatin
+Fondaparinux Sodium
+Cefixime (as trihydrate)
+Vinorelbine (as tartrate)
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Carboplatin
+Sofosbuvir
+Ascorbic Acid + Citrus Bioflavonoid Complex + Rosa canina (Rose Hips) Fruit
+Acetylcysteine
+Acetylcysteine
+Dexmedetomidine (as hydrochloride)
+Omeprazole
+Coleus Amboinicus Lour. (Oregano Leaf)
+Sofosbuvir
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Silver Sulfadiazine
+Moxifloxacin (as Hydrochloride)
+Enzalutamide
+Montelukast (As Sodium)
+Montelukast Sodium
+Levetiracetam
+Folic Acid
+Acetylcysteine
+Acetylcysteine
+Enzalutamide
+Telmisartan + Amlodipine (as besilate)
+Acyclovir
+Cefotaxime (As Sodium)
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Botulinum Toxin Type A
+Anastrozole
+Esomeprazole (As Sodium)
+Levetiracetam
+Insulin Degludec
+Capecitabine
+Clotrimazole
+Zinc
+Clotrimazole
+Azithromycin (as dihydrate)
+Ambroxol Hydrochloride
+Amoxicillin (As Trihydrate)
+Cefuroxime (as Sodium)
+Cassia angustifolia Vahl (Senna Leaves and Pods)
+Cassia Angustifolia Vahl (Senna Leaves)
+Salbutamol (As Sulfate)
+Febuxostat
+Purified Water (Distilled Water)
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Vancomycin
+Vancomycin
+Tranexamic Acid
+Multivitamins + Iron + Folic Acid
+Hydrogen Peroxide
+Cefuroxime (as sodium)
+Hypromellose
+Dienogest
+Cefoxitin (As Sodium)
+Telmisartan + Amlodipine (As Besilate)
+Acetylcysteine
+Rosuvastatin (as calcium)
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium)
+Paracetamol + Phenylephrine Hydrochloride Chlorphenamine Maleate
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Amlodipine (As Besilate)
+Telmisartan +Amlodipine (As Besylate)
+Rosuvastatin (as calcium)
+Calcium + Docosahexaenoic Acid (DHA) + Cholecalciferol (Vitamin D3)
+Fluorouracil
+Linezolid
+Rifampicin + Isoniazid
+Povidone-lodine
+Chlorhexidine Gluconate + Isopropyl Alcohol
+Retinyl Palmitate (Vitamin A)
+Multivitamins
+Vitamin D3 (Cholecalciferol)
+Hexylresorcinol
+Magnesium
+Lutein + Zeaxanthin
+ASCORBIC ACID + ZINC
+5% Amino Acids + 5% Sorbitol
+Clonidine Hydrochloride
+Co-Amoxiclav
+Epinephrine (As Hydrochloride)
+Hyoscine-N-Butylbromide
+Memantine Hydrochloride
+Memantine hydrochloride
+Phytomenadione
+Paracetamol + Ascorbic Acid
+5.4% Amino Acids
+Levodopa + Carbidopa
+Amino Acids (see formulation on reverse side)
+Citicoline (as sodium)
+Ascorbic Acid
+Gemcitabine (as hydrochloride)
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Celecoxib
+S-Amlodipine (as besilate)
+Loperamide Hydrochloride
+Doxycycline (as hyclate)
+Loratadine
+Ondansetron (as hydrochloride dehydrate)
+Paracetamol
+Tropisetron (As Hydrochloride)
+Febuxostat
+Febuxostat
+Omeprazole (as sodium)
+Paracetamol + Tramadol HCi
+Carbocisteine
+Carboplatin
+Paclitaxel
+Paclitaxel
+Calcium + Cholecalciferol (Vitamin D3) + Minerals
+Paclitaxel
+Ascobic Acid + Zinc
+Potassium Chloride
+Gliclazide
+Dobutamine Hydrochloride
+Losartan Potassium + Hydrocholorothiazide
+Aciclovir
+Betamethasone + Dexchlorpheniramine Maleate
+Clindamycin (as hydrochloride)
+Hydroquinone
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Omeprazole (As Sodium)
+Ampicillin Sodium
+Telmisartan + Amlodipine
+Sitagliptin
+Vitex negundo L. (Lagundi Leaf)
+Vitex Negundo L. (Nirgundi Leaf)
+Olmesartan Medoxomil + Amlodipine (As Besilate)
+Ivabradine (as hydrochloride)
+Ivabradine (as hydrochloride)
+Diclofenac (as Diethylamine) + Methyl Salicylate + Levomenthol + Linum usitatissimum (Linseed) Seed
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Ascorbic Acid + Colecalciferol (Vitamin D3) + Zinc
+Clotrimazole
+Paclitaxel
+Orlistat
+Colistimethate Sodium
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12
+Multivitamins
+Zinc
+Zinc
+Cholecalciferol (Vitamin D3)
+Cholecalciferol (Vitamin D3)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Diphenhydramine Hydrochloride + Phenylpropanolamine Hydrochloride
+Cholecalciferol (Vitamin D3)
+Chlormadinone acetate + Ethinylestradiol
+Ferrous Sulfate (as Heptahydrate)
+Clotrimazole
+Clotrimazole
+Dapagliflozin
+Dapagliflozin
+Cefotaxime (As Sodium)
+Sterile Water for Injection
+Pethidine Hydrochloride
+Sterile Water For Injection
+Cefotaxime (As sodium)
+Hemodialysis and Hemofiltration Solution
+Pemetrexed (as disodium hemipentahydrate)
+Epirubicin
+Multivitamins + Iron
+Bortezomib
+Topiramate
+Spironolactone
+Spironolactone
+Citicoline (as sodium)
+Silver Sulfadiazine
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Gabapentin
+Coleus Amboinicus Lour. (Oregano Leaf)
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Spironolactone
+Spironolactone
+Sterile Water For Injection
+Montelukast (As Sodium)
+Montelukast (As Sodium)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Meropenem
+Meropenem
+Meropenem
+Paracetamol
+Coleus amboinicus Lour. (Oregano) Leaf
+L-Ornithine L-Asparate
+Fusidic Acid
+Fusidic Acid + Betamethasone Dipropionate
+Metronidazole
+Febuxostat
+Esomeprazole (As Sodium)
+Hydrocortisone (as sodium succinate)
+Ciprofloxacin (As Hydrochloride)
+Ceftazidime (as pentahydrate)
+Clopidogrel (as bisulfate)
+Montelukast (as sodium)
+Aceclofenac
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Methylprednisolone Acetate
+Sitagliptin (As Phosphate)
+Sitagliptin (As Phosphate)
+Cyanocobalamin (Vitamin B12)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Allopurinol
+Amoxicillin (As Trihydrate)
+Vitex Negundo L. (Lagundi Leaf)
+Ascorbic Acid + Zinc
+Pneumococcal Polysaccharide Conjugate Vaccine (Adsorbed) (10-valent)
+Pneumococcal Polysaccharide Conjugate Vaccine. (Adsorbed) (10-valent)
+Levocetirizine Hydrochloride
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Salbutamol (as sulfate)
+Tamoxifen (as Citrate)
+Ketoanalogues + Essential Amino Acids
+Paracetamol
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Trimetazidine Hydrchloride
+Dobutamine (as Hydrochloride)
+Pregabalin
+Paracetamol + Thiamine ( Vitamin B1) + Pyridoxine ( Vitamin B6 ) + Cyanocobalamin ( Vitamin B12 )
+Rabeprazole Sodium
+Hydrocortisone
+Irbesartan + Hydrochlorothiazide
+Metformin Hydrochloride
+Thiamine Hydrochloride( Vitamin B1)+ Pyridoxine Hydrochloride Vitamin B2)+ Cyanocobalamin (Vitamin B12)
+Letrozole
+Metoclopramide (As Hydrochloride)
+Mefenamic Acid
+Oxytocin (Vet.)
+Lincomycin Hydrochloride + Gentamicin Sulfate + Bromhexine Hydrochloride (Vet.)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Sulfonamides + Kaolin + Glycine + Pectin + Hyoscine + Minerals (Vet.)
+Guaifenesin + Bromhexine Hydrochloride
+Ophenadrine Citrate + Paracetamol
+Menothropin
+Live Attenuated Canine Parvovirus (CPV) + Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV 2) + Canine Parainfluenza (CPIV) Vaccine + Leptospira interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Canicola Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus + Egg Drop Syndrome-76 (EDS-76) Virus Vaccine (Vet.)
+Inactivated Pseudorabies (Aujesky's Disease) Virus (ADV) Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) + Newcastle Disease (ND) + Egg Drop Syndrome-76 (EDS-76) Virus + Avibacterium paragallinarum Vaccine (Vet.)
+Live Fowl Pox (FP) Virus Vaccine (Vet.)
+Inactivated Pigeon Paramyxovirus (PPMV) Vaccine (Vet.)
+Live Pseudorabies (Aujeszky's) Disease Virus Vaccine (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesin + Heat Labile Toxoid (LT) Toxoid Vaccine (Vet.)
+Magnesium (as Sulfate) (Vet.)
+Avilamycin (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Pregabalin
+Live Attenuated Avian Infectious Bronchitis (IB) Vaccine (Vet.)
+Live Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Retinol Palmitate (Vit. A) + Ascorbic Acid (Vit. C) + dl-Alpha Tocopheryl Acetate (Vit. E) + Zinc
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Retinol Palmitate (Vit. A) + Ascorbic Acid (Vit. C) + dl-Alpha Tocopheryl Acetate (Vit. E) + Zinc
+Levofloxacin (As Hemihydrate)
+Losartn Potassium + Hydrochlorothiazide
+Cefotiam (As Hydrochloride)
+Levofloxacin (As Hemihydrate)
+N/A
+N/A
+N/A
+N/A
+N/A
+Ascorbic Acid+Zinc
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Glaesserella parasuis Vaccine (Vet.)
+Inactivated Porcine Parvovirus (PPV) + Erysiphelothrix rhusiopathiae Vaccine (Vet.)
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+L-Carnitine (Vet.)
+Colistin (Vet.)
+Phosphatidylcholine + Lysophosphatidylcholine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Mycoplasma hyopneumoniae Vaccine (Vet.)
+Guaiffenesin + Salbutamol (as sulfate)
+Glimepiride
+Glimepiride
+Factor VIII Purified (Human)
+Imiglucerase
+Co-Amoxiclav
+Cefaclor (as Monohydrate)
+MEROPENEM (AS TRIHYDRATE)
+Fluconazole
+Fluconazole
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Cefixime (as Trihydrate)
+Testosterone
+Isopropyl Alcohol
+Isopropyl Alcohol
+Capecitabine
+Ascorbic Acid (as Sodium Ascorbate)
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Telmisartan + Hydrochlorothiazide
+Ascorbic Acid
+Cotrimoxazole
+Amlodipine (As Besilate)
+Paracetamol
+Oxytocin
+Folic Acid
+Mupirocin (As Calcium Dihydrate)
+Clindamycin (as phosphate) + Clotrimazole + Metronidazole
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Guaifenesin + Salbutamol (As Sulfate)
+Paracetamol
+Pantoprazole (as Sodium)
+Candesartan Cilexetil
+Dobutamine
+Mupirocin
+Phenytoin Sodium
+Iron + Folic Acid
+Cefuroxime (As Axetil)
+Trastuzumab
+Trastuzumab
+Rabies Vaccine (Inactivated)
+Tranexamic Acid
+Telmisartan + Hydrochlorothiazide
+Zolendronic Acid
+Povidone-Iodine
+Ambroxol Hydrochloride
+Darifenacin (as Hydrobromide)
+Darifenacin (As Hydrobromide)
+Fenofibrate
+Ketoconazole
+Ascorbic Acid + Bioflavonoids
+Dabigatran etexilate (as mesylate)
+Azithromycin (as dihydrate)
+Trimetazidine hydrochloride
+Tolvaptan
+Paclitaxel
+Ofloxacin
+Ondansetron (As Hydrochloride)
+Ibuprofen + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol
+Oxytocin
+Multivitamins + Iron
+Dextromethorphan Hydrobromide + Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate + Sodium Citrate
+Ivermectin
+Ivermectin
+Everolimus
+Daclastavir (As dihydrochloride)
+Daclastavir Dihydrochloride
+Daclastavir (As dihydrochloride)
+Ibandronic Acid (as sodium monohydrate)
+Ibandronic Acid (as sodium monohydrate)
+Moxifloxacin
+Heparin Sodium
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Methylcobalamin (Vitamin B12)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Erlotinib Hydrochloride
+Fluconazole
+Fluconazole
+Clotrimazole
+Pioglitazone (as hydrochloride) + Metformin (as hydrochloride)
+Paracetamol
+Plantago ovata Forssk. (Ispaghula husk)
+Carbocisteine
+Hydroquinone + Tretinoin
+Zinc Oxide
+Methyl Salicylate + Peppermint Oil + Eucalyptus Oil + Menthol
+Vancomycin (As Hydrochloride)
+Vancomycin (As Hydrochloride)
+Norepinephrine (as bitartrate)
+Nicardipine Hydrochloride
+Donepezil hydrochloride
+Zinc
+Multivitamins + Minerals
+Ascorbic Acid
+Isopropyl Alcohol
+Omeprazole (as sodium)
+Iron + Calcium + Zinc + Folic Acid (Vitamin B9) + Cyanocobalamin (Vitamin B12)
+Pemetrexed (As Disodium)
+Pemetrexed
+Sevelamer Carbonate
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone
+Bupivacaine Hydrochloride
+Aciclovir
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Etoricoxib
+Ascorbic Acid
+Thiamine Monohydrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Simethicone
+Remdesivir
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil
+Mupirocin
+2% Chlorhexidine In 70% Alcohol
+Clopidogrel (as bisulfate)
+Chlorhexidine Gluconate + Isopropyl Alcohol
+Cefoxitin
+Ascorbic Acid
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Remdesivir
+Ascorbic Acid + Colecalciferol (Vitamin D3) + Zinc
+Colecalciferol (Vitamin D3)
+Calcipotriol
+Paracetamol
+Mupirocin
+Hydrocortisone
+Dexamethasone (as sodium phosphate)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Ascorbic Acid
+IRON + FOLIC ACID
+Pregabalin
+Omeprazole (as sodium)
+Metoprolol tartrate
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Metformin hydrochloride + Gliclazide + Pioglitazone (as hydrochloride)
+Carica papaya (Papain) + Anethum graveolens L. (Dill oil fruit) + Pimpinella anisum L. (Anise oil fruit) + Carum carvi L. (Caraway oil fruit) + Alpha amylase
+Omeprazole (As Sodium)
+Vitex trifolia (Lagundi Leaf) + Zingiber officinale (Ginger Rhizome) + Abrus precatorius (Rosary pea Leaf) + Phaleria macrocarpa (God's crown Fruit)
+Ledipasvir + Sofosbuvir
+Alendronic acid (as Alendronate sodium) + Cholecalciferol (Vitamin D3)
+Abiraterone Acetate
+Moxifloxacin hydrochloride
+Dexmedetomidine (as hydrochloride)
+Ceftazidime (As Pentahydrate)
+Isosorbide Mononitrate
+Olmesartan Medoxomil
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Olmesartan Medoxomil
+Rosuvastatin (as calcium)
+Telmisartan
+Telmisartan + Hydrochlorothiazide
+Olmesartan Medoxomil) + Amlodipine (as besilate)
+Olmesartan Medoxomil + Amlodipine (as besilate)
+Aripiprazole
+Dichlorobenzyl alcohol + Amylmetacresol + Lidocaine hydrochloride
+Dichlorobenzyl alcohol + Amylmetacresol + Lidocaine hydrochloride
+Dichlorobenzyl alcohol + Amylmetacresol Lidocaine hydrochloride
+Tenofovir alafenamide (as fumarate)
+Rivaroxaban
+Rivaroxaban
+Solifenacin Succinate
+Solifenacin Succinate
+Iron (as Ferric hydroxide sucrose complex)
+Ascorbic Acid
+Iron + Folic Acid + Cyanocobalamin
+Tigecycline
+Tigecycline
+Tadalafil
+Biotin
+Cefuroxime (as sodium)
+Rosuvastatin (as calcium)
+Esomeprazole (as sodium)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Propofol
+Paracetamol
+Paracetamol
+Paclitaxel
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Clopidogrel (as bisulfate)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Amlodipine (as Besilate) + Valsartan
+Clopidogrel (as bisulfate)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Montelukast (as sodium)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Levofloxacin
+Entecavir (as monohydrate)
+Gemcitabine(as hydrochloride)
+Cefuroxime (as sodium)
+Febuxostat
+Esomeprazole (As Sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cisplatin
+Cisplatin
+Bendamustine hydrochloride (as monohydrate)
+Montelukast Sodium + Cetirizine Hydrochloride
+Salbutamol
+Sodium Hyaluronate
+Tigecycline
+Tramadol Hydrochloride
+Cholecalciferol (Vitamin D3)
+Cefoxitin (As Sodium)
+Ranolazine
+Bortezomib
+Ceftazidime (as pentahydrate)
+Citicoline
+Adapalene
+Polatuzumab vedotin
+Paracetamol
+Ceftazidime (as pentahydrate)
+Esomeprazole (as sodium)
+Nicardipine Hydrochloride
+Norepinephrine (as bitartrate)
+Salmeterol Xinafoate + Fluticasone Propionate
+Acetylcysteine
+Salmeterol Xinafoate + Fluticasone Propionate
+Olmesartan Medoximil
+Brolucizumab
+Cefotaxime (As Sodium)
+Co-Amoxiclav
+Celecoxib
+Pemetrexed (as disodium)
+Multivitamins + Minerals
+Ceftazidime (as pentahydrate)
+Hydrogen Peroxide
+Carbocisteine
+Meningococcal Group A, C, W-135 And Y Conjugate
+Peritoneal Dialysis Solution Low Calcium with 2.5% Dextrose
+Peritoneal Dialysis Solution Low Calcium with 1.5% Dextrose
+Osimertinib (As Mesylate)
+Osimertinib (As Mesylate)
+Peritoneal Dialysis Solution Low Calcium with 4.25% Dextrose
+Povidone-Iodine
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid + Zinc + Colecalciferol (Vitamin D3)
+Omeprazole
+Omeprazole
+Ascorbic Acid + Zinc
+Povidone-Iodine
+Blumea balsamifera L. (Sambong Leaf)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Carbocisteine
+Ascorbic Acid+Zinc
+Multivitamins + Minerals
+Loperamide Hydrochloride
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid + Zinc
+Ibuprofen
+Carbimazole
+Trastuzumab
+Sulfur
+Aceite de Alcamforado
+Rabeprazole Sodium
+Omeprazole (as sodium)
+D-Alpha Tocopherol (Vitamin E)
+Colecalciferol (Vitamin D3)
+Colecalciferol (Vitamin D3)
+Povidone Iodine
+Paracetamol
+Peritoneal Dialysis Solution with 4.25% Dextrose
+Pacliatcel
+Peritoneal Dialysis Solution with 1.5% Dextrose
+Multivitamins + Minerals
+Paracetamol
+Fusidic Acid
+Azacitidine
+Bendamustine hydrochloride (as monohydrate)
+Bendamustine hydrochloride (as monohydrate)
+Cefuroxime
+Co-Amoxiclav
+Co-Amoxiclav
+Silodosin
+Daclatasvir (as dihydrochloride)
+Daclatasvir (as dihydrochloride)
+Calcium (as carbonate).
+Celecoxib
+Doxofylline
+Doxofylline
+Doxofylline
+Temsirolimus
+Ranolazine
+Ranolazine
+Menthol + Glycyrrhiza glabra (Liquorice) Root + Zingiber officinale (Ginger) Rhizome + Phyllantus emblica (Indian Gooseberry) Fruit
+Menthol + Glycyrrhiza glabra (Liquorice) Root + Zingiber officinale (Ginger) Rhizome + Phyllantus emblica (Indian Gooseberry) Fruit
+Menthol + Glycyrrhiza glabra (Liquorice) Root + Zingiber officinale (Ginger) Rhizome + Phyllantus emblica (Indian Gooseberry) Fruit
+Montelukast (as sodium)
+Montelukast (as sodium)
+Gemcitabine
+Flourouracil
+Levetiracetam
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Celecoxib
+Levobupivacaine (As Hydrochloride)
+Cephalexin
+Budesonide
+Docetaxel (as Trihydrate)
+Docetaxel (as Trihydrate)
+Docetaxel (as Trihydrate)
+Cholecalciferol (Vitamin D3)
+Manganese
+Methylprednisolone Sodium Succinate
+Bendamustine Hydrochloride (as monohydrate)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Hyoscine Butylbromide
+Esomeprazole Magnesium
+Acetylcysteine
+Paclitaxel
+Paclitaxel
+Enoxaparin sodium
+Doxofylline
+Ascorbic Acid + d-Alpha Tocopherol (Vitamin E) + Beta Carotene + Zinc
+Aluminum Hydroxide + Magnesium Hydroxide + Oxetacaine
+Zinc
+Multivitamins + Mineral
+Ascorbic Acid + Zinc
+Ibuprofen
+Ibuprofen + Paracetamol
+Benzydamine Hydrochloride
+Chamomile Extract + Methyl Salicylate + Peppermint Oil + Sage Oil + Anise Oil + Dwarf Pine Oil + Bergamot Oil + Cineol
+Hyoscine-N-Butylbromide
+Ibuprofen
+Ascorbic Acid
+Ascorbic Acid
+Miconazole Nitrate
+Clobetasol Propionate
+Mometasone Furoate
+Ascorbic Acid + Zinc
+Zinc (As Sulfate Monohydrate)
+Clotrimazole
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Paracetamol
+Iron + Zinc + Vitamin B-Complex
+l-menthol + Methyl Salicylate + Turpentine Oil + Camphor + Cinnamon Oil + Eucalyptus Oil
+Decitabine
+Secukinumab
+Secukinumab
+Ethyl Alcohol
+Salbutamol (As Sulfate)
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Lactated Ringer'S Solution (Ringer'S Lactate)
+Vancomycin
+Risdiplam
+Loperamide + Simeticone
+Levocetirizine Dihydrochloride
+Omeprazole Sodium
+Clopidogrel
+Celecoxib
+Esomeprazole (as magnesium trihydrate)
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Cefuroxime (as axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Cefuroxime
+Levodopa + Carbidopa
+Simvastatin
+Simvastatin
+Clarithromycin
+Teneligliptin (as Hemipentahydrobromide hydrate) Tenglyn
+Simvastatin
+Olmesartan Medoxomil + Amlodipine (as besilate)
+Dichlorobenzyl alcohol + Amylmetacresol + Lidocaine hydrochloride
+Olopatadine Hydrochloride
+Ketoconazole + Clobetasol Propionate
+Glutathione
+Esomeprazole (as Sodium)
+Drospirenone + Ethinylestradiol
+Drospirenone + Ethinylestradiol
+Cefotaxime (As Sodium)
+Triamcinolone Acetonide
+Cefotaxime (As Sodium)
+Quetiapine (as fumarate)
+Cefepime (as hydrochloride)
+Cefepime Hydrochloride
+Salbutamol (As Sulfate)
+Norepinephrine (as bitartrate)
+Sevelamer Carbonate
+Hypromellose
+Ampicillin (As Sodium) + Sulbactam(As Sodium)
+Clarithromycin
+Gemcitabine
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Folic Acid (Vitamin B9) + Cyanocobalamin (Vitamin B12) + Iron
+Iron
+Ciprofloxacin (as hydrochloride)
+Gentamicin sulfate + Betamethasone (as dipropionate)
+Fenoterol hydrochloride + ipratropium bromide
+Budesonide
+Omeprazole (As Sodium)
+Omeprazole (As Sodium)
+Moxifloxacin (as Hydrochloride)
+Furosemide
+Norepinephrine (As Bitartrate)
+Betahistine hydrochloride
+Omeprazole (As Sodium)
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Medroxyprogesterone Acetate
+Medroxyprogesterone Acetate
+Medroxyprogesterone Acetate
+Medroxyprogesterone Acetate
+TELMISARTAN + HYDROCHLOROTHIAZIDE
+Medroxyprogesterone Acetate
+Citicoline (as sodium)
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Cisplatin
+Clindamycin (as hydrochloride)
+Diltiazem Hydrochloride
+Ceftazidime (As Pentahydrate)
+Linagliptin + Metformin Hyydrochloride
+Linagliptin + Metformin Hyydrochloride
+Piracetam
+Levonorgestrel + Ethinylestradiol
+Enoxaparin sodium
+Enoxaparin sodium
+Ketoconazole
+Carbocisteine
+Hyoscine-N-Butylbromide
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Methotrexate
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Insulin Human (DNA)
+Vitex Negundo L. (Lagundi Leaf)
+Multivitamins+Minerals
+500mg (equivalent to 200mg Ascorbic Acid and 300mg Sodium Ascorbate)
+Cetirizine Dihydrochloride
+Hypromellose
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Betahistine hydrochloride
+Phenylpropanolamine Hydrochloride/Brompheniramine Maleate
+Paracetamol + Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Mesna
+Methotrexate
+Ascorbic Acid + Zinc
+Telmisartan + Amlodipine (as besilate)
+Multivitamins + Zinc
+Omeprazole (as sodium)
+Pantoprazole (as sodium sesquihydrate)
+Dapagliflozin
+Febuxostat
+Gabapentin
+Piroxicam
+Dexmedetomidine (As Hydrochloride)
+Hidrosmin
+Teneligliptin (as hydrobromide hydrate)
+Cephalexin
+Dolutegravir (as sodium)
+Olmesartan Medoxomil + Amlodipine (as besilate)
+Midazolam (as hydrochloride)
+Midazolam (as hydrochloride)
+Drospirenone + Ethinylestradiol
+Drospirenone + Ethinylestradiol
+Efavirenz + Lamivudine + Tenofovir disoproxil fumarate
+Lamivudine + Tenofovir disoproxil fumarate
+Solifenacin succinate
+Dolutegravir (as sodium) + Lamivudine + Tenofovir disoproxil fumarate
+Fenofibrate
+Salbutamol (as sulfate) + Guaifenesin
+Gefitinib
+Erythromycin (As Stearate)
+Metformin hydrochloride
+Lamivudine + Zidovudine
+10% Dextrose In Water
+Co-Amoxiclav
+5% Dextrose In Lactated Ringer'S Solution
+Duloxetine Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Empagliflozin + Metformin Hydrochloride
+Cefuroxime (As Sodium)
+Carboplatin
+Pregabalin
+Ascorbic Acid + Zinc
+Ofloxacin
+Paracetamol + Ibuprofen
+Dutasteride + Tamsulosin Hydrochloride
+Irbesartan
+Irbesartan
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Iron
+Chlorhexidine Digluconate
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sterile Water for Injection
+Fentanyl (as Citrate)
+5% Dextrose in Water
+Isoniazid + Pyridoxine HCI
+Isoniazid + Pyridoxine HCI
+Povidone Iodine
+Teneligliptin (as hydrobromide hydrate)
+Milrinone
+Dutasteride + Tamsulosin Hydrochloride
+Fexofenadine Hydrochloride
+Emtricitabine + Tenofovir disoproxil fumarate
+Irinotecan hydrochloride
+Emtricitabine + Tenofovir disoproxil fumarate
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Donepezil Hydrochloride
+Losartan Potassium + Amlodipine (as besilate)
+Oxytocin
+Aceclofenac
+Citicoline
+Timolol (as Maleate)
+Betamethasone (as Dipropionate)
+Guaifenesin + Salbutamol (As Sulfate)
+Guaifenesin + Salbuttamol (As Sulfate)
+Cefazolin (As Sodium)
+Imiquimod
+Captopril
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Zoledronic Acid
+Diosmin + Hesperidin
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Diclofenac Potassium
+Cefuroxime (As Axetil)
+Cilostazol
+Ethyl Alcohol
+Multivitamins + Mineral
+Iron
+Cholecalciferol (Vitamin D3
+Cetirizine Dihydrochloride
+Cetirizine Hydrochloride
+Clotrimazole
+Bisacodyl
+Diclofenac
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Mannitol
+Atorvastatin (As Calcium)
+Calcium + Zinc + Calcitriol
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Multivitamins
+Permethrin
+Tegoprazan
+Imipenem + Cilastatin
+Paracetamol + Phenylephrine HCl + Chlorphenamine Maleate
+Dobutamine (as Hydrochloride)
+Folic Acid (Vitamin B9)
+Methyl Salicylate + Menthol + Camphor
+Bromhexine Hydrochloride
+Minoxidil
+Rosuvastatin (As Calcium)
+Saroglitazar magnesium
+Sevelamer Hydrochloride
+Levetiracetam
+Efavirenz
+Bendamustine Hydrochloride
+Valaciclovir (as Hydrochloride)
+Salbutamol (as sulfate) + Guaifenesin
+Rivaroxaban
+Rivaroxaban
+Rivaroxaban
+Rasagiline (as mesilate)
+Tirofiban hydrochloride
+Salbutamol (As Sulfate)
+Citicoline (As Sodium)
+Salbutamol (As Sulfate)
+Escitalopram (as Oxalate)
+Deflazacort
+Celecoxib
+Tadalafil
+Cefuroxime (as Sodium)
+Diclofenac Sodium
+Standardized Senna Concentrate
+Cefazolin (As Sodium)
+Vancomycin (As Hydrochloride)
+Salbutamol (as Sulfate)
+Pramipexole (as dihydrochloride monohydrate)
+Dicycloverine Hydrochoride
+Dicycloverine Hydrochoride
+Dorzolamide + Timolol
+Dorzolamide + Timolol
+Irbesartan
+Ibandronic acid
+Levofloxacin(As Hemihydrate)
+Budesonide + Formoterol Fumarate Dihydrate
+Esmolol Hydrochloride
+Salmeterol Xinafoate + Fluticasone Propionate
+Levofloxacin(As Hemihydrate)
+Olanzapine
+Cefazolin (as Sodium)
+Ceftriaxone (As Sodium)
+Paracetamol
+Sevoflurane
+Mecobalamin
+Hyoscine N-Butylbromide
+Salbutamol (as sulfate) + Ipratropium (as bromide)
+Cetirizine Dihydrochloride
+Pregabalin
+Calcium Folinate
+Rosuvastatin (as Calcium)
+Rosuvastatin (As Calcium)
+Sebo de Macho
+Ambroxol
+Rituximab
+Metformin hydrochloride
+Clopidogrel (as bisulfate) + Aspirin
+Azithromycin
+Meropenem
+Metformin hydrochloride
+Irbesartan
+Irbesartan
+Ascorbic Acid + Calcium + Colecalciferol (Vitamin D3)
+Tamsulosin Hydrochloride
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Mupirocin
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Mupirocin
+Meropenem
+Ascorbic Acid + Zinc
+Fusidic Acid
+Clobetasol Propionate
+Clotrimazole
+Candesartan Cilexetil
+Isopropyl Alcohol
+Metronidazole
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Tretinoin
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Risperidone
+Risperidone
+Testosterone
+Paracetamol/Vitamin B1/ Vitamin B6/Vitamin B12
+Paracetamol/Vitamin B1/ Vitamin B6/Vitamin B12
+Metronidazole
+Dorzolamide (as hydrochloride)
+Simvastatin
+Simvastatin
+Simvastatin
+Hydrocortisone
+Thiamine hydrochloride (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid + Zinc
+Rocuronium Bromide
+Ceftriaxone (as sodium)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCl (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cloxacillin (As Sodium)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Bevacizumab
+Bevacizumab
+Meropenem
+Mosapride citrate (as dihydrate)
+Losartan potassium + Hydrochlorothiazide
+Calcifediol
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Pregabalin + Methylcobalamin (Vitamin B12)
+Pregabalin + Methylcobalamin (Vitamin B12)
+Lidocaine Hydrochloride
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Lactated Ringer's
+Pantoprazole
+Phenylephrine (as hydrochloride)
+Paricalcitol
+Paricalcitol
+Losartan Potassium
+Losartan potassium
+Pantoprazole (As Sodium)
+Losartan potassium + Hydrochlorothiazide
+Losartan Potassium
+Brimonidine (as Tartrate) + Timolol (as Maleate)
+Montelukast (as sodium)
+Esflurbiprofen
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Trastuzumab
+Dexmedetomide (as Hydrochloride)
+Hydrocortisone (as sodium succinate)
+Esmolol hydrochloride
+Doxofylline
+Cefepime (as hydrochloride)
+Deflazacort
+Fluticasone propionate
+Metoprolol Tartrate
+Ofloxacin
+Emedastine (as Difumarate)
+Alendronic acid (as alendronate sodium trihydrate)
+Montelukast (as sodium)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Levofloxacin (As Hemihydrate)
+Ambroxol Hydrochloride
+Carboprost (As Trometamol)
+Finasteride
+Fingolimod (As Hydrochloride)
+Piperacillin &Tazobactam
+Tranexamic Acid
+Bupivacaine hydrochloride in Dextrose
+Furosemide
+Travoprost
+Moxifloxacin (as hydrochloride)
+Imidapril Hydrochloride + Hydrochlorothiazide
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Anastrozole
+Cefuroxime (As Sodium)
+Salbutamol (as sulfate)
+Salbutamol (as sulfate)
+Bupivacaine
+Oxaliplatin
+Oxaliplatin
+Co-Amoxiclav
+Co-Amoxiclav
+Metronidazole
+Dobutamine (as hydrochloride)
+Telmisartan + Hydrochlorothiazide
+Dopamine Hydrochloride
+Dobutamine (As hydrochloride)
+Dobutamine (As hydrochloride)
+Sevelamer Carbonate
+Pregabalin
+L- Asparaginase
+Ondansetron (As Hydrochloride Dihydrate)
+Ascorbic Acid
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cefepime (As Hydrochloride)
+Tranexamic Acid.
+Losartan Potassium + Hydrochlorothiazide + Amlodipine ( as Besilate )
+Linagliptin + Metformin Hyydrochloride
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Pemetrexed
+Atorvastatin (as Calcium) + Fenofibrate
+Atorvastatin (as Calcium) + Fenofibrate
+Febuxostat
+Clopidogrel (As Bisulfate)
+Meclizine Hydrochloride
+Levodropropizine
+Abiraterone Acetate
+Azacitidine
+Citicoline (As sodium)
+Diclofenac (as sodium)
+Entecavir
+Entecavir
+Clotrimazole + Betamethasone (as dipropionate) + Gentamicin (as sulfate)
+Vancomycin (as Hydrochloride)
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Betahistine Dihydrochloride
+Valeriana wallichii DC. (Indian Valerian) Rhizome
+Clotrimazole
+Azacitidine
+Lisinopril (as dihydrate)
+Decitabine
+Clindamycin (As Phosphate)
+Tranexamic Acid
+Avanafil
+Avanafil
+Sevelamer Carbonate
+Monobasic Sodium Phosphate + Dibasic Sodium Phosphate
+Palonosetron (as hydrochloride)
+Palonosetron (as hydrochloride)
+Esomeprazole (as Magnesium Trihydrate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Isoniazid
+Isoniazid
+Losartan potassium + Hydrochlorothiazide
+Letrozole
+Bisoprolol (as Fumarate)
+Bisoprolol fumarate
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Diclofenac (as diethylamine)
+Imatinib (as mesilate)
+Imatinib (as mesilate)
+Nebivolol (as hydrochloride)
+Nebivolol (as hydrochloride)
+Neratinib Maleate
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Milrinone
+Bortezomib
+Letrozole
+Glibenclamide + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Sitagliptin (as Phosphate Monohydrate) + Metformin Hydrochloride
+Gefitinib
+Omeprazole (As Sodium)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Cyproterone Acetate + Ethinylestradiol
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Cisatracurium (as besilate)
+Lactated Ringer's Solution
+Bilastine
+Betamethasone (as valerate)
+Azacitidine
+Efavirenz
+Atenolol
+Aciclovir
+Ondansetron (as hydrochloride)
+Dexketoprofen (as trometamol)
+Brimonidine Tartrate
+Efavirenz + Lamivudine + Tenofovir disoproxil fumarate
+Efavirenz + Lamivudine + Tenofovir disoproxil fumarate
+Tadalafil
+Tadalafil
+Tadalafil
+Mometasone Furoate (As monohydrate)
+Gefitinib
+Glycine Max (L.) Merr. (Refined Soyabean Oil)
+Pantoprazole (as sodium)
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Rosuvastatin (as calcium) & Ezetimibe
+Rosuvastatin (as calcium) & Ezetimibe
+Hydroxychloroquine Sulfate
+Pramipexole dihydrochloride monohydrate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Dinoprostone
+Ceftriaxone (As Sodium)
+Solifenacin succinate
+Glipizide
+Glipizide
+Paracetamol
+Iron (As Iron Sucrose)
+Vancomycin Hydrochloride
+Vancomycin (as hydrochloride)
+Pegfilgrastim
+Peritoneal Dialysis with 1.5% Dextrose
+Meropenem (As trihydrate)
+Meropenem (As trihydrate)
+Decitabine
+Rasagiline (as tartrate)
+Ceftriaxone (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Metformin Hydrochloride + Pioglitazone ( As Hydrochloride ) + Glimepiride
+Pemetrexed (as disodium)
+Losartan Potassium
+Econazole Nitrate + Triamcinolone Acetonide + Gentamicin (as sulfate)
+Febuxostat
+Citicoline (As Sodium)
+Electrolyte Solution
+Exemestane
+Ascorbic Acid + Rosa carnina (Rose Hips Fruit)
+Ascorbic Acid + Zinc
+Povidone-Iodine
+Folic Acid (Vitamin B9)
+Folic Acid (Vitamin B9)
+Aciclovir (as sodium)
+Piroxicam
+Thiamine Hydrochloride (Vit. Bi) + Pyridoxine Hydrochloride (Vit. B.) + Cyanocobalamin (Vit. B12)
+Ascorbic Acid
+Ibuprofen + Paracetamol
+Salbutamol (As Sulfate)
+Ambroxol Hydrochloride
+Abrocitinib
+Ciprofloxacin
+Loratadine
+Loperamide Hydrochloride
+Azithromycin (as dihydrate)
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Rituximab
+Rituximab
+Topiramate
+Topiramate
+Topiramate
+Topiramate
+Topiramate
+Topiramate
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin(as sodium)+Sulbactam(as sodium)
+Paracetamol +Phenylephrine HCl + Chlorphenamine Maleate
+Multivitamins + Minerals
+Isopropanol + Benzalkonium Chloride
+Multivitamins + Choline
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (As Calcium)
+Rosuvastatin (as calcium)
+Azithromycin (as dihydrate)
+Paracetamol + Phenylpropanolamine Hydrochloride+ Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+d-Alpha Tocopherol (Vitamin E)
+Pantoprazole (as sodium)
+Metoclopramide (As Hydrochloride)
+Levocetirizine Dihydrochloride
+Hydroquinone
+Fenofibrate
+Rabeprazole Sodium
+Omeprazole (As Sodium)
+5% Dextrose in Lactated Ringer's Solution
+Tigecycline
+Tadalafil + Tamsulosin Hydrochloride
+Cetirizine Hydrochloride
+Risperidone
+Risperidone
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Olopatadine (as hydrochloride)
+Vildagliptin
+Ertapenem (as sodium)
+Chlorhexidine
+Fusidic Acid
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Ketoconazole
+Co-Amoxiclav
+Capecitabine
+Febuxostat
+Febuxostat
+Trimetazidine (as hydrochloride)
+Propacetamol Hydrochloride
+Gadoteric Acid
+Remifentanil (as hydrochloride)
+Remifentanil (as hydrochloride)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Atorvastatin (as Calcium)
+Vancomycin (As Hydrochloride)
+Dutasteride + Tamsulosin Hydrochloride
+Ritonavir
+Sultamicillin (as tosylate dihydrate)
+Sultamicillin (as tosylate dihydrate)
+Rosuvastatin (as calcium)
+Eltrombopag (as olamine)
+Eltrombopag (as olamine)
+Rituximab
+Phospholipids + Multivitamins
+Palonosetron (as hydrochloride)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Metoprolol Tartrate
+Levocarnitine
+Tadalafil + Tamsulosin hydrochloride
+Co-Amoxiclav
+Diosmin + Hesperidin
+Escitalopram (as Oxalate)
+Valproic Acid
+Atorvastatin (As Calcium trihydrate)
+Atorvastatin (As Calcium trihydrate)
+Atorvastatin (As Calcium trihydrate)
+Atorvastatin(as Calcium Trihydrate)
+Olmesartan medoxomil + Hydrochlorothiazide
+Olmesartan medoxomil + Hydrochlorothiazide
+Aceclofenac
+Azathioprine
+Dutasteride
+Sildenafil (as citrate)
+Doripenem (as monohydrate)
+Cefoxitin (As Sodium)
+Meropenem (As Trihydrate)
+Meropenem (as trihydrate)
+Silver Sulfadiazine
+Silver Sulfadiazine
+Moxifloxacin (As Hydrochloride)
+Amlodipine (as Besilate)
+Micajub
+Salbutamol (As Sulfate)
+Ciprofloxacin
+Granisetron (as hydrochloride)
+Dexamethasone Phosphate (as sodium)
+Potassium Chloride
+Potassium Chloride
+Cholecalciferol + Calcium (as Carbonate) 400 IU/600 mg Film-coated Tablet
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Vancomycin Hydrochloride
+Olmesartan medoxomil
+Cefotaxime (as sodium)
+Ceftriaxone (as sodium)
+Glimepiride
+Paracetamol
+Omeprazole Sodium
+Cefuroxime (as Sodium)
+CARBOPLATIN
+Telmisartan
+Telmisartan
+Hydroxyzine Hydrochloride
+Candesartan Cilexetil
+Moxifloxacin Hydrochloride
+Tobramycin
+Nepafenac
+Esomeprazole (As Sodium)
+Esomeprazole (as sodium)
+Venlafaxine (as hydrochloride)
+Prednisolone (as acetate)
+Hydroxypropyl Methylcellulose
+Olopatadine (as hydrochloride)
+Moxifloxacin (as hydrochloride)
+Dorzolamide (as hydrochloride) + Timolol (as maleate)
+Naproxen Sodium
+Losartan Potassium
+Trimetazidine Hydrochloride
+Febuxostat
+Ampicillin (Sodium) + Sulbactam (Sodium)
+Esomeprazole (as sodium)
+Latanoprost
+Ipratropium bromide + Salbutamol (as sulfate)
+Vitamin B-Complex
+Etoricoxib
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Co-Amoxiclav
+Chlorpheniramine Maleate + Paracetamol + Phenylephrine
+Diosmin + Hesperidin
+Febuxostat
+Nicardipine Hydrochloride
+Progesterone
+Ceftriaxone (as Sodium) + Sulbactam (As Sodium)
+Cefotaxime (as sodium)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Cloxacillin (as Sodium)
+Nicardipine Hydrochloride
+Doxycycline (as Hydrochloride)
+Ascorbic Acid
+Paracetamol
+Paracetamol
+Paracetamol / Vitamin B1 / Vitamin B6 / Vitamin B12
+Multivitamins+Dextrose
+Gabapentin
+Aluminum Hydroxide + Magnesium Hydroxide
+Multivitamins + Minerals
+Paracetamol
+Rosuvastatin (as Calcium)
+Terbinafine hydrochloride + Mometasone furoate
+Ketorolac Trometamol
+Levetiracetam
+Levetiracetam
+Sevelamer Carbonate
+Ketoanalogues + Essential Amino Acids
+Cefuroxime (as sodium)
+Clopidogrel (as bisulfate)
+Ceftazidime (as pentahydrate)
+Atorvastatin (as Calcium)
+Midazolam (as hydrochloride)
+Folium Senna Leaves + Semen Cana Valiae
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Sitagliptin (As Phosphate)
+Clindamycin (as phosphate)
+Menthol + Eucalyptus Oil + Camphor
+Olanzapine
+Insulin Aspart
+Chlorhexidine Gluconate
+Vancomycin (As Hydrochloride)
+Febuxostat
+Febuxostat
+Ropinirole (as hydrochloride)
+Ropinirole (as hydrochloride)
+Nintendanib
+Etoricoxib
+Fenofibrate
+Phospholipids + Multivitamins
+Co-Amoxiclav
+Fusidic Acid
+Folic Acid
+Rifampicin + Isoniazid
+Rifampicin + Isoniazid
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Daclastavir (as dihydrochloride)
+Co-Amoxiclav
+Linezolid
+Loxoprofen (as Sodium dihydrate)
+Cabergoline
+Abiraterone
+Telmisartan
+Telmisartan
+Co-Amoxiclav
+Atorvastatin (As Calcium)
+Atorvastatin (as Calcium)
+Vinorelbine (as tartrate)
+Fimasartan potassium + Rosuvastatin (as calcium)
+Fimasartan potassium + Rosuvastatin (as calcium)
+Teicoplanin
+Teicoplanin
+Emtricitabine + Tenofovir Disoproxil Fumarate
+Drospirenone
+Sildenafil (As Citrate)
+Chloramphenicol
+Paracetamol
+Cefotaxime (As Sodium)
+Olmesartan Medoxomil + Amlodipine + Hydrochlorothiazide
+Metformin Hydrochloride
+Atazanavir (as sulfate)
+Clindamycin (as hydrochloride)
+Amlodipine (As Besilate)
+Amlodipine (as besilate)
+Sevelamer Carbonate
+Co-Amoxiclav
+Montelukast (as Sodium)
+Metformin Hydrochloride + Gliclazide
+Bendamustine Hydrochloride (as monohydrate)
+Fludarabine (as phosphate)
+Co-Amoxiclav
+Co-Amoxiclav
+Ceftazidime (As Pentahydrate)
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Atorvastatin (As Calcium Trihydrate)
+Atazanavir (As Sulfate)
+Atazanavir (As Sulfate)
+Amlodipine(As Besilate)
+Amino Acids
+Abiraterone Acetate
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Ascorbic Acid
+Bromhexine Hydrochloride
+Ambroxol Hydrochloride
+Lorlatinib
+Lorlatinib
+Paracetamol
+Dexmedetomidine (as hydrochloride)
+Lenalidomide
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Ceftriaxone (As Sodium)
+Tigecycline
+Citicoline (as sodium)
+Clindamycin Hydrochloride
+Afatinib (as dim aleate)
+Tirofiban (as hydrochloride monohydrate)
+Apixaban
+Apixaban
+Dexamethasone Phosphate (as Sodium)
+Amiodarone Hydrochloride
+Domperidone
+Rosuvastatin (As Calcium)
+Ciprofloxacin (As Lactate)
+Lenalidomide
+Cefepime (as hydrochloride)
+Dabigatran etexilate (as mesilate)
+Dabigatran etexilate (as mesilate)
+Lenalidomide
+Ciprofloxacin (as hydrochloride)
+Celecoxib
+Olanzapine
+Ascorbic Acid + Zinc
+Ticagrelor
+Ticagrelor
+Loratadine
+Sitagliptin (as phosphate) + Metformin HCl
+Anagrelide (as hydrochloride)
+Loperamide
+Apixaban
+Diphtheria-Tetanus Vaccine (Adsorbed, Reduced Antigen Content)
+Epinephrine (as hydrochloride)
+Dobutamine (as hydrochloride)
+Povidone Iodine
+Erythromycin
+Apixaban
+Trifarotene
+Multivitamins + Iron + Calcium
+Multivitamins + Iron + Lysine + Buclizine
+Ascorbic Acid
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Dl-Alpha-Tocopheryl Acetate (Vitamin E)
+Ascorbic Acid
+Abiraterone acetate
+Folic Acid
+Fenofibrate
+Multivitamins + Iron + L-Lysine + Buclizine
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Minoxidil
+Acetylcysteine
+Hydroquinone + Tretinoin
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Cefuroxime (as axetil)
+Cefixime
+Pyrazinamide
+Iodine (As Iohexol)
+Iodine (As Iohexol)
+Ursodeoxycholic Acid
+CLOPIDOGREL
+Chlorhexidine + Isopropyl Alcohol
+Sulfur
+Salbutamol (as Sulfate)
+PANTOPRAZOLE (AS SODIUM SESQUIHYDRATE)
+Cilostazol
+Apixaban
+Epoetin Alfa
+Paracetamol
+Ascorbic Acid (as Sodium Ascorbate)
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Paracetamol
+Paracetamol
+Paracetamol
+Cefixime (as trihydrate)
+Betamethasone (as dipropionate) + Gentamicin (as sulfate) + Clotrimazole
+Tamoxifen (as citrate)
+Multivitamins + Iron
+Multivitamins (see formulation reverse side)
+CEFUROXIME (AS AXETIL)
+Omeprazole (as sodium)
+Citicoline (as sodium)
+Ascorbic acid + Zinc
+Olmesartan medoxomil
+Febuxostat
+Co-Amoxiclav
+Co-Amoxiclav
+CLOPIDOGREL
+Ceftriaxone Sodium
+Vitamin B1 + Vitamin B6 + Vitamin B12
+Tamsulosin Hydrochloride
+Multivitamins + Iron
+Vitamin B1 + B6 + B12
+Anastrozole
+Oxaliplatin
+Oxaliplatin
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Multivitamins + Dexpanthenol
+Levetiracetam
+Sevoflurane
+Gefitinib
+Rabeprazole Sodium
+CHOLECALCIFEROL
+Cefuroxime (as sodium)
+Ezetimibe
+Moxifloxacin (as hydrochloride)
+Capecitabine
+ESOMEPRAZOLE (AS SODIUM)
+CEFTAZIDIME (AS PENTAHYDRATE)
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+Sitagliptin (as phosphate)
+Febuxostat
+CLINDAMYCIN (as Phosphate)
+Butamirate Citrate
+Carboprost (as trometamol)
+Telmisartan
+Cefotaxime (as sodium)
+ASCORBIC ACID
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Methyl Salicylate + Zingiber officinale (Ginger) Root + Menthol + Camphor + Eucalyptus
+Norepinephrine as Bitartrate
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Pregabalin + Mecobalamin
+Pantoprazole (as sodium sesquihydrate)
+Salbutamol (as Sulfate)
+Zoledronic Acid
+Anastrozole
+Febuxostat
+Propofol
+Omeprazole (as sodium)
+EPOETIN ALFA (RECOMBINANT HUMAN ERYTHROPOIETIN)
+EPOETIN ALFA (RECOMBINANT HUMAN ERYTHROPOIETIN)
+IRON (AS FERROUS SULFATE HEPTAHYDRATE)
+IRON
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Cefixime (as trihydrate)
+Carbocisteine
+Irbesartan + Hydrochlorothiazide
+Piroxicam
+Amlodipine (as besilate)
+Salbutamol (as sulfate) + Ipratropium Bromide
+Paracetamol
+Montelukast (as sodium)
+Hydrochlorothiazide
+Esomeprazole (as sodium)
+Isoxsuprine Hydrochloride
+Amino Acids (See Formulation on Reverse Side)
+Omeprazole
+Omeprazole
+Ciprofloxacin (as hydrochloride)
+Paracetamol + Phenylpropanolamine HCl + Chlorphenamine maleate
+Paracetamol + Ibuprofen
+Tramadol Hydrochloride
+Trimetazidine dihydrochloride
+Hyoscine N-Butylbromide + Paracetamol
+Ascorbic Acid
+Celecoxib
+Telmisartan
+Febuxostat
+ASCORBIC ACID + ZINC
+Mefenamic Acid
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+CLINDAMYCIN (as Phosphate)
+Fentanyl
+Tramadol Hydrochloride + Paracetamol
+Folic Acid
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Etoricoxib
+Losartan potassium
+Rosuvastatin (as calcium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Potassium Citrate
+Clindamycin (as Phosphate)
+Paracetamol
+Ceftriaxone (as sodium)
+PARACETAMOL
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Levofloxacin (as hemihydrate)
+Paracetamol + Tramadol Hydrochloride
+Pramipexole dihydrochloride monohydrate
+Enzalutamide
+0.9% Sodium Chloride S
+Sugammadex (As Sodium)
+Montelukast (as Sodium) + Levocetirizine Hydrochloride
+Sugammadex (As Sodium)
+Loratadine
+Loratadine
+Paracetamol
+Multivitamins
+Betahistine Hydrochloride
+Metoprolol Tartrate
+Metoprolol Tartrate
+Vinorelbine (as Tartrate)
+Mefenamic Acid
+Paracetamol
+Telmisartan
+Oxytocin
+Losartan Potassiumn
+Topiramate
+Topiramate
+Nicardipine Hydrochloride
+Phenylpropanolamine Hydrochloride + Brompheniramine Maleate
+Levofloxacin (As Hemihydrate)
+Amlodipine (As Besilate)
+Metoclopramide (As Hydrochloride)
+Levocetirizine Dihydrochloride
+Edaravone
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine HC1 (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Diosmin + Hesperidin
+Castor Oil
+Ascorbic Acid
+Ascorbic Acid
+Diosmin + Hesperidin
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Paclitaxel
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Multivitamins + Dextrose
+Multivitamins + Dextrose
+Valsartan
+Ciprofloxacin (As Hydrochloride)
+Trastuzumab
+Trastuzumab
+Paracetamol + Vitamin B-Complex
+Hydroquinone + Tretinoin
+Levodropropizine
+Dabigatran Etexilate (as mesylate)
+Dabigatran Etexilate (as mesylate)
+Lamotrigine
+Ciprofloxacin (As Lactate)
+Acetylcysteine
+Acetylcysteine
+Metformin hydrochloride + Sitagliptin (as phosphate)
+Docetaxel
+Levocetirizine Dihydrochloride
+Olmesartan Medoxomil + Amlodipine (As Besilate)
+Vancomycin (as Hydrochloride)
+Pantoprazole (As Sodium Sesquihydrate)
+Vaccinium macrocarpan Ait. L. (Cranberry fruit juice refined dry extract)
+Levofloxacin (as hemihydrate)
+Nintedanib
+Elobixibat (as monohydrate)
+Palonosetron (as hydrochloride)
+Fexofenadine Hydrochloride
+Fexofenadine Hydrochloride
+Ranolazine
+Febuxostat
+Febuxostat
+Neostigmine Methylsulfate
+Esomeprazole (as magnesium trihydrate)
+Diclofenac Sodium
+Mesalazine
+Busulfan
+Budesonide + Formoterol Fumarate Dihydrate
+Isosorbide Mononitrate
+Amoxicillin (as trihydrate)
+Sodium Hyaluronate
+Levocetirizine Dihydrochloride
+Folinic acid (as calcium folinate)
+Diquafosol sodium
+Cefepime (as hydrochloride)
+Mycophenolic Acid
+Ascorbic Acid
+Bosentan (as monohydrate)
+Bosentan (as monohydrate)
+Phyllanthus niruri L.
+Levetiracetam
+Pregabalin
+Pregabalin
+Pregabalin
+Levetiracetam
+Omeprazole (as sodium)
+Acetylcysteine
+Irinotecan hydrochloride (as trihydrate)
+Mesna
+Levetiracetam
+Dutasteride + Tamsulosin Hydrochloride
+Ceftazidime (as pentahydrate)
+Ceftriaxone (as sodium)
+Pomalidomide
+Pomalidomide
+Pomalidomide
+Pomalidomide
+Betamethasone (as Dipropionate)
+Carnitine Orotate + Liver Extract Antitoxic Fraction + Adenine Hydrochloride + Pyridoxine Hydrochloride + Riboflavin + Cyanocobalamin
+Finasteride
+Ketotifen (as fumarate
+Iohexol
+Iohexol
+Imipenem +Cilastatin Sodium
+Ceftazidime
+NEBIVOLOL
+ATORVASTATIN (AS CALCIUM)
+ATORVASTATIN (AS CALCIUM)
+Multivitamins + Buclizine Hydrochloride
+Vancomycin Hydrochloride
+Lactobacillus gasseri + Lactobacillus rhamnosus
+TRETINOIN + HYDROQUINONE
+Prednisone
+Ceftriaxone (as sodium)
+Co-Amoxiclav
+Isotretinoin
+CEFUROXIME (AS SODIUM)
+Paracetamol
+Sevoflurane
+Timolol (as maleate)
+PIPERACILLIN (AS SODIUM) + TAZOBACTAM (AS SODIUM)
+Cefuroxime (as axetil)
+Iron + Folic Acid (Vitamin B9)
+Citicoline (as Sodium)
+Olmesartan medoxomil
+Nicardipine Hydrochloride
+Cisplatin
+Omeprazole (as sodium)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Metformin hydrochloride
+Salbutamol (as sulfate)
+Pantoprazole
+Acetylcysteine
+Meropenem (as trihydrate)
+Apixaban
+Apixaban
+LEVOFLOXACIN (AS HEMIHYDRATE)
+Trimetazidine Dihydrochloride
+Paracetamol + Tramadol Hydrochloride
+PANTOPRAZOLE (AS SODIUM SESQUIHYDRATE)
+Omeprazole Sodium
+Linagliptin
+Salbutamol
+Salbutamol (As Sulfate)
+Carboplatin
+Cetrorelix (as acetate)
+Sodium Bicarbonate
+Peritoneal Dialysis Solution with 4.25% Dextrose
+Peritoneal Dialysis Solution with 2.5% Dextrose
+Peritoneal Dialysis Solution with 1.5% Dextrose
+0.9% Sodium Chloride
+Ketoconazole
+Diphtheria-Tetanus Vaccine (Adsorbed, Reduced Antigen Content)
+Vildagliptin
+Multivitamins + Minerals
+Vitamin B Complex + Iron
+Iron (As Ferrous Sulfate Heptahydrate)
+Glycerol
+Sodium Fusidate
+Multivitamins
+Zinc
+Simvastatin
+Simvastatin
+Simvastatin
+Ketoconazole
+Zinc
+Ascorbic acid + Zinc + Colecalciferol (Vitamin D3)
+Olmesartan medoxomil
+Paracetamol
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Sevoflurane
+Sevoflurane
+Spironolactone
+Docetaxel
+Lamotrigine
+Lamotrigine
+Telmisartan
+Telmisartan
+Pregabalin
+Pregabalin
+Capmatinib (As Hydrochloride)
+Capmatinib (As Hydrochloride)
+Losartan (as potassium) + Hydrochlorothiazide
+Sevelamer carbonate
+Anagrelide (as hydrochloride)
+Pregabalin
+Pregabalin
+Dapoxetine (as hydrochloride)
+Dapoxetine (as hydrochloride)
+Vancomycin (as Hydrochloride)
+Ropinirole (as hydrochloride)
+Peritoneal Dialysis Solution with 4.25% Dextrose
+Safinamide (as mesilate)
+Omeprazole (as sodium monohydrate)
+Citicoline (as sodium)
+Rizatriptan
+Ascorbic Acid + Zinc
+Pertuzumab + Trastuzumab
+Pertuzumab + Trastuzumab
+Ascorbic Acid + Calcium + Colecalciferol (Vitamin D3) + Zinc
+Multivitamins + Minerals
+Ascorbic Acid + Zinc
+Paracetamol
+Simvastatin
+Alendronic Acid
+Ranolazine
+Rosuvastatin (as calcium) + Ezetimibe
+Tenofovir alafenamide (as hemifumarate)
+Rosuvastatin (as calcium) + Fenofibrate
+Sildenafil Citrate
+Mesalazine
+Colistimethate Sodium
+Ketoconazole
+Atorvastatin (as calcium) + Ezetimibe
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Brompheniramine
+Astralagus membranaceus (Radix astragali)- 227.5mg Angelica sinensis (Chinese angelica)-162.5mg Herba solani lyrati (Lyrate nightshade)-130mg Herba solani nigra (Long kui cao)-130mg
+Benzydamine(As Hydrochloride)
+Benzydamine(As Hydrochloride)
+Clindamycin (as phosphate)
+Troclosene Sodium
+Troclosene Sodium
+Multivitamins
+Multivitamins
+Darunavir
+Darunavir
+Cefazolin (As Sodium)
+Docetaxel
+Blumea Balsamifera L. (Sambong) Leaf
+Lenalidomide
+Pregabalin
+Pregabalin
+Cefepime (as Hydrochloride) with Argine
+Escitalopram (As Oxalate)
+Losartan Potassium
+Idarubicin Hydrochloride
+Gemcitabine (as hydrochloride)
+Gemcitabine (As Hydrochloride)
+Fluticasone Propionate
+Paracetamol + Orphenadrine Citrate
+Amino acids + Sorbitol
+Ketoanalogues + Essential Amino Acids
+Amoxicillin (as trihydrate)
+Tobramycin
+Meropenem (as trihydrate)
+Ceftriaxone (as sodium)
+Febuxostat
+Nicardipine Hydrochloride
+Omeprazole (as sodium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Cotrimoxazole
+Aceclofenac + Paracetamol
+Aceclofenac
+Hydroxychloroquine sulfate
+Amoxicillin (as Trihydrate)
+Co-Amoxiclav
+Cefuroxime (as axetil)
+Fluticasone Propionate
+Co-Amoxiclav
+CEFACLOR (AS MONOHYDRATE)
+Felodipine
+Candesartan Cilexetil
+Ketorolac Trometamol
+Co-Amoxiclav
+Amlodipine (as besilate) + Losartan Potassium
+Gliclazide
+Sitagliptin (as phosphate)
+Salbutamol (as sulfate)
+Sodium bicarbonate
+Nicardipine Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Atorvastatin (as Calcium Trihydrate)
+Chloramphenicol
+Morphine Sulfate
+Clopidogrel (as bisulfate)
+Omeprazole
+Boric Acid + Borax
+Zinc Oxide
+Mometasone Furoate
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Vitamin B Complex + Inositol + Choline Bitartrate
+Fluconazole
+Aciclovir + Hydrocortisone
+Fenofibric Acid
+Fenofibric Acid
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Paclitaxel
+Paclitaxel
+Myox
+Metoprolol Tartrate
+Ascorbic Acid + Zinc
+Dolutegravir (as sodium)
+Dolutegravir (as sodium) + Emtricitabine + Tenofovir alafenamide (as fumarate)
+Atorvastatin (as Calcium) + Fenofibrate
+Fimasartan potassium + Amlodipine (as besilate)
+Lamivudine + Tenofovir disoproxil Fumarate + Dolutegravir (as sodium)
+Losartan Potassium
+Oseltamivir (as phosphate)
+Erdosteine
+Lactulose
+Quetiapine (As Fumarate)
+Lactulose
+Solifenacin Succinate
+Bendamustine Hydrochloride
+Cefepime (as Hydrochloride)
+Docetaxel
+Docetaxel
+Haloperidol Decanoate
+Letrozole
+Carnitine Orotate + Hepatic Extract Antitoxic Fraction + Adenine HCI + Pyridoxine HCl + Riboflavin + Cyanocobalamin
+Oxaliplatin
+Moxifloxacin Hydrochloride
+Calcium + Vitamin D + Minerals
+Levofloxacin (as Hemihydrate)
+Metronidazole
+Co-Amoxiclav
+Chloramphenicol
+Medical Grade Oxygen
+Dexamethasone
+Paracetamol
+Amlodipine (As Besilate)
+Co-Amoxiclav
+Azithromycin (as Dihydrate)
+Clotrimazole
+Ramipril
+Methyldopa (as Sesquihydrate)
+Aciclovir
+Doxorubicin Hydrochloride
+Vitamin B-Complex + Iron + Lysine + Buclizine HCI
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Co-Amoxiclav
+Sitagliptin (as phosphate)
+Cetirizine dihydrochloride
+Nicardipine Hydrochloride
+Paracetamol
+Paracetamol + Tramadol Hydrochloride
+Salbutamol (As Sulfate)
+Digoxin
+Tetanus Antitoxin
+Enoxaparin
+Ampicillin (as sodium)
+Folic Acid
+Mecobalamin
+Mecobalamin
+Ketoanalogues + Essential Amino Acids
+Hydroxychloroquine Sulfate
+AZITHROMYCIN (AS DIHYDRATE)
+Telmisartan
+Ketorolac Trometamol
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Pantoprazole (as Sodium)
+Cefazolin (as sodium)
+Losartan Potassium
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Levocetirizine Hydrochloride
+Tramadol Hydrochloride + Paracetamol
+Betahistine hydrochloride
+Latanoprost
+Dobutamine (as hydrochloride)
+Escitalopram (as Oxalate)
+Levetiracetam
+Co-Amoxiclav
+Paracetamol + Tramadol Hydrochloride
+Losartan Potassium + Amlodipine (as besilate)
+Methylprednisolone (as Sodium Succinate)
+Co-Amoxiclav
+Pregabalin
+Paracetamol
+Clonidine Hydrochloride
+Cloxacillin (as Sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Enoxaparin sodium
+Fenofibrate
+Levofloxacin (as hemihydrate)
+Povidone-Iodine
+Cefixime (as trihydrate)
+Cefuroxime (as Axetil)
+Ranitidine Hydrochloride
+Bortezomib
+Ceftriaxone (as sodium)
+Cefuroxime (As Axetil)
+Anastrazole
+Enoxaparin sodium
+Pantoprazole (as Sodium Sesquihydrate)
+Ceftazidime
+Diosmin + Hesperidin
+Azithromycin (as Dihydrate)
+Isotretinoin
+Propranolol hydrochloride
+Salbutamol (as sulfate)
+Metformin Hydrochloride
+Co-Amoxiclav
+Ketorolac Trometamol
+Oral Rehydration Salt
+Amoxicillin (as Trihydrate)
+Povidone-Iodine
+Linezolid
+Ascorbic acid + Zinc
+Azithromycin (as dihydrate)
+Trimetazidine dihydrochloride
+Levofloxacin (as hemihydrate)
+Atorvastatin (as Calcium)
+Azithromycin (as dihydrate)
+Carbocisteine
+Isoxsuprine Hydrochloride
+Paracetamol + Caffeine
+Dichlorobenzyl Alcohol + Amylmetacresol
+Tretinoin + Hydroquinone
+Levetiracetam
+Dobutamine (as hydrochloride)
+Norepinephrine (as bitartrate)
+Filgrastim
+Medroxyprogesterone Acetate
+Fenofibrate
+Oral Rehydration Salts
+Cefuroxime (as axetil)
+Sodium Ascorbate
+Tamsulosin hydrochloride
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+CEFOXITIN (as sodium) + Dextrose
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Meropenem (as trihydrate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Folic Acid
+Azithromycin (as Dihydrate)
+Losartan Potassium + Hydrochlorothiazide
+Methylprednisolone (as Sodium Succinate)
+Methylprednisolone (as sodium succinate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Neomycin + Gramicidin + Nystatin + Triamcinolone Acetonide
+Sitagliptin (as phosphate monohydrate)
+Loratadine
+Dexamethasone phosphate (as sodium)
+Temisartan
+Azithromycin (as dihydrate)
+Ceftriaxone (as sodium)
+Losartan Potassium + Hydrochlorothiazide
+Fenofibrate
+Ascorbic acid + Zinc
+Tamsulosin Hydrochloride
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Sitagliptin (as phosphate monohydrate)
+Telmisartan
+Tretinoin + Hydroquinone
+Azithromycin (as Dihydrate)
+Cefpodoxime (as proxetil)
+Amlodipine (as Besilate)
+Ascorbic Acid
+Cefoperazone (as Sodium) + Sulbactam (as Sodium)
+Salbutamol (as sulfate) + Guaifenesin
+Spironolactone
+Letrozole
+Ascorbic Acid + Zinc Ascorbate
+Oral Rehydration Salts
+Febuxostat
+Atomoxetine (as hydrochloride)
+Atomoxetine (as hydrochloride)
+Simvastatin
+Pioglitazone Hydrochloride
+Colchicine
+Telmisartan
+Quetiapine (as fumarate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Pantoprazole (as sodium)
+Iron + Multivitamins
+Nicardipine Hydrochloride
+Febuxostat
+Simvastatin
+Cefuroxime (as Axetil)
+Granisetron (hydrochloride)
+Telmisartan
+Mefenamic Acid
+Omeprazole (as sodium
+Spironolactone
+Dutasteride + Tamsulosin hydrochloride
+Citicoline (as sodium)
+Febuxostat
+Enoxaparin sodium
+Paracetamol + Caffeine
+Olanzapine
+Risperidone
+Irbesartan
+Epoetin Alfa
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Dichlorobenzyl Alcohol + Amylmetacresol
+Clopidogrel
+Cefuroxime (as Sodium)
+Bisacodyl
+Omeprazole
+Letrozole
+Valsartan
+Salbutamol (as sulfate)
+Dutasteride
+Oxytetracycline (as hydrochloride) + Polymyxin B Sulfate
+Gliclazide
+Ascorbic acid + Zinc
+Febuxostat
+Ascorbic Acid + Zinc
+Iron (as sucrose)
+Telmisartan
+Hyoscine-N-Butylbromide
+Simethicone
+Cefuroxime (as Axetil)
+Mefenamic Acid
+Gentamicin (as sulfate)
+Olmesartan Medoxomil + Hydrochlorothiazide
+Cetirizine Dihydrochloride
+Sodium bicarbonate
+Montelukast (as sodium ) + Levocetirizine Hydrochloride
+Co-Amoxiclav
+Carvedilol
+Loratadine
+Metformin hydrochloride
+Linezolid
+Vancomycin (as hydrochloride)
+Nicardipine Hydrochloride
+Epirubicin Hydrochloride
+Nebivolol (as hydrochloride)
+CLOPIDOGREL
+Rosuvastatin (as calcium) + Fenofibrate
+Rosuvastatin (As Calcium + Fenofibrate
+Gadopentetate Dimeglumine
+Cefepime (as hydrochloride)
+Cefuroxime (as axetil)
+Fusidic Acid
+Febuxostat
+Febuxostat
+Cetirizine Dihydrochloride
+Ascorbic Acid + Zinc
+Paracetamol
+Cefuroxime (as Sodium)
+Cefoperazone (as Sodium) + Sulbactam (as Sodium)
+Amlodipine (as Besilate)
+Domperidone
+Carvedilol
+Paracetamol
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate
+Ascorbic Acid
+Paracetamol
+Celecoxib
+Doxofylline
+Losartan Potassium + Hydrochlorothiazide
+Pantoprazole (as sodium)
+Sevelamer Carbonate
+Levetiracetam
+Etoricoxib
+Tretinoin + Hydroquinone
+Folic Acid
+Oral Rehydration Salts
+Oral Rehydration Salts
+Carbocisteine
+Cefuroxime (as Axetil)
+Levocetirizine Dihydrochloride
+Celecoxib
+Cefixime (as trihydrate)
+Levetiracetam
+Aluminum Hydroxide + Magnesium Carbonate
+Citicoline (as sodium)
+Ketoanalogues + Essential Amino Acids
+Tamsulosin Hydrochloride
+Mosapride Citrate
+Cefuroxime (as Sodium)
+Valsartan + Amlodipine (as besilate)
+Meropenem (as trihydrate)
+Paracetamol
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Azithromycin (as dihydrate)
+Vancomycin (as hydrochloride)
+Norepinephrine (as bitartrate)
+Ketoanalogues + Essential Amino Acids
+Cefepime (as hydrochloride)
+Acetylcysteine
+Citicoline
+Meropenem
+Ertapenem (as sodium)
+Amoxicillin (as trihydrate)
+Co-Amoxiclav
+Hydroxyethyl Starch + Sodium Chloride
+Etoricoxib
+Cefuroxime (as axetil)
+Ascorbic Acid + Zinc
+Polyethylene Glycol 3350 (PEG) + Mineral Salts
+Doxorubicin hydrochloride
+Zinc (as sulfate monohydrate)
+Levetiracetam
+Azithromycin (as dihydrate)
+Nicardipine Hydrochloride
+Irbesartan + Hydrochlorothiazide
+Celecoxib
+Ascorbic Acid
+Cefaclor (as Monohydrate)
+Hydroquinone
+Metronidazole
+Cefalexin (As Monohydrate)
+Semaglutide
+Cholecalciferol
+Orlistat
+Tadalafil
+Epoetin Alfa
+Pantoprazole (As Sodium Sesquihydrate)
+Escitalopram (AS Oxalate)
+Escitalopram (AS Oxalate)
+Escitalopram (As Oxalate)
+Vitamin B1+B6+B12
+Clarithromycin
+Iron
+Iron
+Diclofenac (as diethylamine) + Methyl Salicylate + Levomenthol +Linum usitatissimum (Linseed) Seed
+Clopidogrel (as Bisulfate)
+Bortezomib
+Bortezomib
+Sitagliptin (as Phosphate)
+Sitagliptin (as Phosphate)
+Sitagliptin (as Phosphate)
+Paclitaxel
+Piracetam
+dl-Alpha Tocopherol (Vitamin E)
+Folic Acid
+Paracetamol
+Vitamin B1 + Be + B12
+Acetylcysteine
+Ondansetron (As Hydrochloride)
+Losartan Potassium + Hydrochlorothiazide
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Celecoxib
+Tioconazole+Tinidazole
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Rasagiline (as mesilate)
+Pregabalin
+Pregabalin
+Semaglutide
+Semaglutide
+Metoprolol Tartrate
+Cloxacillin (As Sodium)
+Cloxacillin (as sodium)
+Cloxacillin (As Sodium)
+Remifentanil (as hydrochloride)
+Brimonidine Tartrate
+Salbutamol
+Cabazitaxel
+Bupropion Hydrochloride
+Bupropion Hydrochloride
+Hepatitis B Vaccine (rDNA)
+Pemetrexed (as disodium)
+Ceftriaxone (as sodium)
+Goserelin (as acetate)
+Goserelin (as acetate)
+Thiamine Mononitrate+ Pyridoxine Hydrochloride + Cyanocobalamin
+Pegaspargase
+Cisplatin
+Oseltamivir (as phosphate)
+Ampicillin (As Sodium) + Sulbactam(As Sodium)
+Folic Acid
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Nepafenac
+Carboplatin
+Carboplatin
+Carboplatin
+Carboplatin
+Cetirizine Hydrochloride
+Diclofenac Sodium
+Azithromycin (as dihydrate)
+Escitalopram (As Oxalate)
+Salmeterol Xinafoate + Fluticasone Propionate
+Salmeterol Xinafoate + Fluticasone Propionate
+Clonidine Hydrochloride
+Clonidine Hydrochloride
+Cefixime (As Trihydrate)
+Mupirocin + Betamethasone (As Dipropionate)
+Paclitaxel
+Amoxicillin (as Trihydrate)
+Candesartan Cilexetil
+CEFIXIME
+Losartan Potassium
+Rocuronium bromide
+Anastrozole
+Febuxostat
+Propofol
+Cefixime
+Colchicine
+Cefalexin (As Monohydrate)
+Ascorbic Acid
+Fluconazole
+Ciprofloxacin (as hydrochloride)
+Epinephrine (as hydrochloride)
+Amoxicillin (as Trihydrate)
+Cefuroxime (as Sodium)
+Doxofylline
+Citicoline (as sodium)
+Ceftriaxone (as sodium)
+Losartan Potassium + Hydrochlorothiazide
+Anastrozole
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Salbutamol (as sulfate) + Ipratropium bromide
+Gentamicin (as sulfate)
+Lidocaine (as Hydrochloride) + Epinephrine
+Trimetazidine Dihydrochloride
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride ( Vitamin B6) + Cyanocobalamin ( Vitamin B12)
+Norepinephrine (as bitartrate)
+Zoledronic Acid (As Monohydrate)
+Multivitamins
+Carboplatin
+Carbocisteine
+Esomeprazole (as magnesium trihydrate)
+Esomeprazole (as magnesium trihydrate)
+Olmesartan medoxomil + Amlodipine (as besilate)
+Meropenem (as trihydrate)
+Lisinopril
+Mefenamic Acid
+Gefitinib
+Levodropropizine
+Febuxostat
+Febuxostat
+Sitagliptin (as hydrochloride) + Metformin Hydrochloride
+Sodium bicarbonate
+Cassia angustifolia Vahl (Senna Pods and Leaves)
+Ceftriaxone (as sodium)
+Carvedilol
+Cassia angustifolia Vahl (Senna Leaves and Pods)
+Multivitamins + Minerals
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Meropenem (as trihydrate)
+Tranexamic Acid
+Nicardipine Hydrochloride
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Vitamin B1 + B6 + B12
+Fenofibrate
+Ascorbic Acid (as Sodium Ascorbate) + Zinc (as Sulfate Monohydrate)
+Guaifenesin + Salbutamol (as sulfate)
+Trimetazidine Hydrochloride
+Amlodipine (as besilate)
+Finasteride
+Furosemide
+Paracetamol
+Cetirizine Hydrochloride
+Ceftriaxone Sodium
+Co-Amoxiclav
+ASCORBIC ACID ( as Sodium Ascorbate)
+CETIRIZINE DIHYDROCHLORIDE
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Ascorbic Acid + Zinc
+Ceftriaxone (as Sodium) + Sulbactam (As Sodium)
+Etoricoxib
+Piperacillin (as sodium) / Tazobactam (as sodium)
+CEFIXIME
+Ceftazidime (as pentahydrate)
+Alfuzosin hydrochloride
+Ascorbic Acid
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc (as heptahydrate)
+Cefuroxime (as axetil)
+Cefpodoxime (as proxetil)
+Brimonidine Tartrate
+Tobramycin + Dexamethasone
+Rabeprazole Sodium
+Cholecalciferol
+Aciclovir
+Sitagliptin (as phosphate)
+Propranolol hydrochloride
+Levofloxacin hemihydrate
+Moxifloxacin + Dexamethasone
+Silver Sulfadiazine
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Montelukast (as sodium)
+Betahistine hydrochloride
+Irbesartan
+Omeprazole
+Omeprazole
+Telmisartan + Hydrochlorothiazide
+Latanoprost + Timolol (as maleate)
+Montelukast (as sodium)
+Telmisartan
+Azithromycin (as dihydrate)
+Azithromycin
+Risperidone
+Telmisartan
+Omeprazole
+Co-Amoxiclav
+Etoricoxib
+Mefenamic Acid
+Febuxostat
+Colchicine
+Cetirizine dihydrochloride
+Atomoxetine (as hydrochloride)
+Atomoxetine (as hydrochloride)
+Levofloxacin (as hemihydrate)
+Telmisartan
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Quetiapine (as Fumarate)
+Meropenem (as trihydrate)
+Febuxostat
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Pioglitazone (as hydrochloride)
+Azithromycin (as dihydrate)
+Thiamine Mononitrate (Vitamin B1)+ Pyridoxine Hydrochloride (Vitamin B6)+ Cyanocobalamin (Vitamin B12)
+Escitalopram (as Oxalate)
+Febuxostat
+Telmisartan
+Febuxostat
+Epoetin alfa
+Epoetin Alfa
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Co-Amoxiclav
+Azithromycin (as dihydrate)
+Tramadol Hydrochloride + Paracetamol
+Telmisartan
+Escitalopram (as oxalate)
+Levofloxacin (as Hemihydrate)
+Trimetazidine dihydrochloride
+Ceftriaxone (As Sodium)
+Sitagliptin (as phosphate)
+Norepinephrine (as bitartrate)
+Levetiracetam
+Esomeprazole (as Magnesium Dihydrate)
+Telmisartan
+Linezolid
+Sitagliptin (as phosphate)
+Cefepime (as hydrochloride) + Sulbactam (as sodium)
+Ceftriaxone (as Sodium) + Sulbactam (as Sodium)
+Levetiracetam
+Ascorbic acid + Citrus Bioflavonoids + Rosa canina L. (Rose hips) Fruit + Zinc
+Hydrocortisone (As Acetate)
+Levetiracetam
+Sitagliptin (as phosphate)
+Telmisartan + Amlodipine (Besilate)
+Paracetamol
+Paracetamol
+Cetirizine Hydrochloride
+Mefenamic Acid
+Multivitamins
+Telmisartan
+Cetirizine Hydrochloride
+Sitagliptin (as hydrochloride) + Metformin Hydrochloride
+Mupirocin
+Telmisartan
+Moxifloxacin (As Hydrochloride)
+Betamethasone (as valerate)
+Clotrimazole
+Clobetasol Propionate
+Ambroxol Hydrochloride
+Diclofenac (As Sodium)
+Paracetamol
+Hyoscine-N-Butylbromide
+Clotrimazole
+Cetirizine Dihydrochloride
+Hypromellose
+Telmisartan
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Pantoprazole (as sodium)
+Ascorbic Acid
+Paracetamol
+Mometasone Furoate
+Telmisartan
+Hydrocortisone acetate
+Levetiracetam
+Telmisartan + Amlodipine (Besilate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Telmisartan
+Atorvastatin (as calcium)
+Citicoline (as sodium)
+Ketoconazole
+Mefenamic Acid
+Pantoprazole (as Sodium Sesquihydrate)
+Telmisartan
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Citicoline (as sodium)
+Co-Amoxiclav
+Carbamazepine
+Levofloxacin (as hemihydrate)
+Paclitaxel
+Diosmin + Hesperidin
+Omeprazole (as sodium)
+Ambroxol Hydrochloride
+Esomeprazole (as sodium)
+Montelukast
+Folic Acid
+Telmisartan
+Azithromycin (as Dihydrate)
+CETIRIZINE DIHYDROCHLORIDE
+Ascorbic Acid + Zinc
+Levetiracetam
+Tetanus Antitoxin
+Epirubicin (as hydrochloride)
+Piperacillin (as sodium) / Tazobactam (as sodium)
+Rabeprazole sodium
+Pantoprazole (as sodium sesquihydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ursodeoxycholic Acid
+Pregabalin
+Cefoxitin (as sodium)
+Celecoxib
+Insulin Glargine
+Febuxostat
+Cefixime (as trihydrate)
+Montelukast (as sodium)
+Ambroxol Hydrochloride
+Carbocisteine
+Sevelamer Carbonate
+Moxifloxacin (as Hydrochloride)
+BORTEZOMIB
+Trimetazidine Hydrochloride
+Furosemide
+Chlorphenamine Maleate
+Cefotaxime sodium
+Povidone-Iodine
+Nicardipine Hydochloride
+Vitamins B1 + B6 + B12 (see reverse for formulation)
+Potassium Chloride
+Candesartan Cilexetil
+Vitex negundo L. (Lagundi Leaf)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ambroxol Hydrochloride
+Co-Amoxiclav
+Cetirizine Hydrochloride
+Loratadine
+Tadalafil
+Tadalafil
+Folic Acid
+Iron
+Iron
+Turmeric Oil + Menthol + Eucalyptus Oil
+Vitamin B1 + B6 + B12
+Clonidine Hydrochloride
+Ascorbic Acid + Zinc + Vitamin D3 + Vitamin E
+Fosfomycin (as trometamol)
+Sitagliptin (As Phosphate)
+Sitagliptin (As Phosphate)
+Sunitinib (as maleate)
+Clobazam
+Clobazam
+Metronidazole
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Diosmin + Hesperidin
+Calamine + Zinc Oxide
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Metronidazole
+Ketoconazole
+Diosmin + Hesperidin
+Multivitamins
+Vancomycin (as hydrochloride)
+Naratriptan (as hydrochloride)
+Ciprofloxacin (As Hydrochloride)
+Calcium + Zinc + Calcitriol
+Adalimumab
+Adalimumab
+Cefuroxime (As Axetil)
+Pelargonium sidoides Root (South African Geranium Dry Extract)
+Erdafitinib
+Erdafitinib
+Erdafitinib
+Omeprazole (as Sodium)
+Sildenafil (as citrate)
+Bisoprolol fumarate
+Ustekinumab
+Propofol
+Meformin hydrochloride + Gliclazide
+Levocetirizine dihydrochloride + Montelukast (as sodium)
+Mesalazine
+Levetiracetam
+Levetiracetam
+Methocarbamol + Paracetamol
+Omeprazole Sodium
+Oxytocin
+Clobetasol Propionate
+Epirubicin (as hydrochloride)
+Ceftazidime
+Azithromycin (as dihydrate)
+Celecoxib
+Azithromycin(As Dihydrate)
+Levobupivacaine (as hydrochloride)
+Meformin Hydrochloride
+Meformin Hydrochloride
+Pretomanid
+Ketorolac Trometamol
+Losartan Potassium
+Losartan Potassium
+Lamivudine
+Meropenem (As Trihydrate)
+Meropenem (as trihydrate)
+Ceftriaxone (as sodium)
+Fingolimod
+Cetirizine Dihydrochloride Phenylephrine Hydrochloride
+Sodium Bicarbonate
+Omeprazole (Sodium)
+Tenofovir Alefenamide (As Fumarate)
+Doripenem (as monohydrate)
+Bendamustine Hydrochloride
+Pregabalin
+Pregabalin
+Furosemide
+Simvastatin
+Methylcobalamine
+Mecobalamin
+Mecobalamin
+Dobutamine (As Hydrochloride)
+Benzoic Acid + Salicylic Acid
+Ascorbic Acid + Zinc
+Clotrimazole + Beclomethasone Dipropionate
+Ascorbic Acid + Zinc
+Levofloxacin (as hemihydrate)
+Montelukast (as sodium)+ Levocetirizine Hydrochloride
+Hyoscine Butylbromide
+Butamirate Citrate
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Vitamin B-Complex + Iron + Lysine + Buclizine HCl
+Epinephrine
+Paracetamol + Tramadol HCl
+Ondansetron (as hydrochloride dihydrate)
+Atorvastatin (as calcium)
+Rosuvastatin (as calcium)
+Azithromycin (as dihydrate)
+Folic Acid
+Paracetamol
+Nitrofurantoin
+Ascorbic Acid + Zinc
+Omeprazole
+Metoprolol (as tartrate)
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Clopidogrel
+Gliclazide
+Amoxicillin (as trihydrate)
+Aciclovir
+Rosuvastatin (as calcium)
+Paracetamol + Orphenadrine Citrate
+Capecitabine
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Fenofibrate
+Telmisartan
+Cefixime (as trihydrate)
+Metronidazole
+Aciclovir
+Letrozole
+Co-Amoxiclav
+Glimepiride
+Paclitaxel
+Meropenem (as trihydrate)
+Vancomycin (as hydrochloride)
+Fexofenadine hydrochloride
+Co-Amoxiclav
+Danazol
+Meropenem (as Trihydrate)
+Ciprofloxacin (as hydrochloride)
+Paclitaxel
+Nicardipine Hydrochloride
+Paclitaxel
+Tramadol Hydrochloride + Paracetamol
+Mefenamic Acid
+Ascorbic acid (as Sodium Ascorbate)
+Carbocisteine + Zinc
+Amlodipine (as besilate)
+Salbutamol (as Sulfate) + Ipratropium Bromide
+Multivitamins+Dextrose
+Amlodipine (as besilate) + Losartan Potassium
+Imatinib (as mesilate)
+Cefuroxime (as Axetil)
+Citicoline (as Sodium)
+Olmesartan Medoxomil + Hydrochlorothiazide
+Esomeprazole (as sodium)
+Acetylcysteine
+Cefoperazone (as Sodium) + Sulbactam (as Sodium)
+Pregabalin
+Epirubicin Hydrochloride
+Co-Amoxiclav
+Rosuvastatin (as Calcium)
+Linezolid
+Ascorbic Acid (as Sodium Ascorbate)
+Paracetamol
+Piperacillin Sodium + Tazobactam Sodium
+Piperacillin sodium + Tazobactam sodium
+Carvedilol
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Telmisartan
+Cefixime (as trihydrate)
+Meropenem (as Trihydrate)
+Zinc (as sulfate monohydrate)
+Meropenem (as trihydrate)
+Digoxin
+Rosuvastatin (as calcium)
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Azithromycin (as Dihydrate)
+Paracetamol
+Salbutamol (as sulfate)
+Fluconazole
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Metformin hydrochloride
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Olmesartan medoxomil
+Sodium bicarbonate
+Hydroxychloroquine sulfate
+Citicoline
+Ketonalogues + Essential Amino Acids
+Salbutamol (as Sulfate)
+Amlodipine (as besilate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Fenofibrate
+Mupirocin
+Mupirocin
+Losartan Potassium
+Venlafaxine (as hydrochloride)
+Cefuroxime (as axetil)
+Paracetamol
+Levodropropizine
+Metronidazole
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone (as Sodium Phosphate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Metoclopromide (as Hydrochloride)
+Zinc (as gluconate)
+Capecitabine
+Ambroxol Hydrochloride
+Trimetazidine Hydrochloride
+Losartan Potassium
+Amoxicillin (as trihydrate)
+Methylprednisolone (as sodium succinate)
+Cefixime (as trihydrate)
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone (as Sodium Phosphate)
+Tamsulosin Hydrochloride
+Amoxicillin (as Trihydrate)
+Etoricoxib
+Ketoanalogues + Essential Amino Acids
+Metronidazole
+Ceftriaxone (as Sodium)
+Ascorbic Acid + Zinc
+Co-Amoxiclav
+Dutasteride + Tamsulosin hydrochloride
+Butamirate Citrate
+Aminophylline
+Iron (as fumarate) + Folic acid + Cyanocobalamin (Vitamin B12)
+Omeprazole (as sodium)
+Pregabalin
+Salbutamol (as sulfate)
+Sevoflurane
+Diclofenac Sodium
+Tretinoin + Hydroquinone
+Paracetamol
+Bupivacaine hydrochloride in Dextrose
+Ferrous Fumarate + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Paracetamol
+Ascorbic Acid (as Sodium Ascorbate)
+Paracetamol
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Doxorubicin hydrochloride
+Amlodipine (as besilate)
+Ascorbic Acid + Zinc
+Vancomycin (as hydrochloride)
+Risperidone
+Co-Amoxiclav
+Atorvastatin (as calcium)
+Pregabalin
+Ascorbic Acid + Zinc
+Docetaxel
+Ascorbic Acid + Zinc
+Dicycloverine Hydrochloride
+Rabeprazole Sodium
+Atorvastatin (as Calcium)
+Atorvastatin (as calcium)
+Irbesartan
+Sitagliptin (as phosphate)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Letrozole
+Cefoperazone ( as sodium ) + Sulbactam ( as sodium )
+Acetylcysteine
+Paracetamol + Tramadol HCl
+Co-Amoxiclav
+Hydroxyzine Hydrochloride
+Amoxicillin (as Trihydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Atorvastatin (as Calcium)
+Hyoscine Butylbromide
+Paracetamol + Phenylpropanolamine HCl + Chlorphenamine maleate
+Gliclazide
+Diosmin + Hesperidin
+Multivitamins
+Mecobalamin
+Vitamin B-Complex + Iron + Lysine + Buclizine HCl
+Sevelamer Carbonate
+Ascorbic Acid + Zinc
+Nicardipine Hydrochloride
+Mupirocin
+Cefuroxime (as axetil)
+Ceftazidime (as pentahydrate)
+Cefuroxime (as axetil)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Ceftazidime (as pentahydrate)
+Ceftazidime (as pentahydrate)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Amlodipine (as besilate)
+Amlodipine(as besilate) + Losartan Potassium
+Valsartan + Amlodipine (as besilate)
+Febuxostat
+Losartan Potassium + Hydrochlorothiazide
+Losartan potassium + Hydrochlorothiazide
+Epoetin Alfa
+Thiamine Hydrochloride ( VitaminB1) + Pyridoxine Hydrochloride (VitaminB6) + Cyanocobalamin (Vitamin B12)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Celecoxib
+Cetirizine dihydrochloride
+Dutasteride + Tamsulosin hydrochloride
+Mefenamic Acid
+Sodium Bicarbonate
+Sodium Bicarbonate
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Metronidazole + Miconazole nitrate
+Isoxsuprine hydrochloride
+FOLIC ACID
+Mefenamic Acid
+Ketotifen (as hydrogen fumarate)
+Ketotifen (as hydrogen fumarate)
+Amlodipine (as besilate)
+Ibuprofen + Paracetamol
+Loratadine
+Salbutamol (as sulfate)
+Phenylephrine HCl + Dextromethorphan HBr + Paracetamol
+Fentanyl
+Fentanyl
+Ibuprofen + Paracetamol
+Ketorolac trometamol
+Co-Amoxiclav
+Cetirizine Dihydrochloride
+Brimonidine tartrate + Timolol (as maleate)
+Promethazine Hydrochloride
+Paracetamol
+Zinc Sulfate
+Risperidone
+Tranexamic Acid
+Levofloxacin (as hemihydrate)
+Glimepiride
+Omeprazole (as Sodium)
+Vitamin B1 + B6 + B12
+Azithromycin (as monohydrate)
+Levofloxacin (as hemihydrate)
+Gentamicin (as sulfate)
+Amlodipine (as besilate) + Losartan Potassium
+Meropenem (as trihydrate)
+Dicycloverine Hydrochloride
+Cefuroxime (as axetil)
+Multivitamins
+Amlodipine (as besilate)
+Ascorbic + Zinc
+Ascorbic Acid + Zinc
+Clobetasol Propionate
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Salbutamol (as Sulfate) + Ipratropium Bromide
+Norepinephrine (as bitartrate)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Irbesartan
+Paracetamol + Vitamin B-Complex
+Ivabradine (as hydrochloride)
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Amlodipine (as besilate)
+Multivitamins + Dextrose
+Epinephrine
+Cefuroxime (as axetil)
+Paracetamol
+Tigecycline
+Fenofibrate
+Fluconazole
+Sitagliptin (as phosphate)
+Trimetazidine dihydrochloride
+Gabapentin
+Levofloxacin (as hemihydrate)
+2,4-Dichlorobenzyl Alcohol + Amylmetacresol
+PARACETAMOL
+CARBOCISTEINE
+DILOXANIDE FUROATE
+GUAIFENESIN
+Omeprazole
+Metoprolol Tartrate
+Metoprolol Tartrate
+Zinc
+Ascorbic Acid + Colecalciferol + Zinc
+Betahistine Hydrochloride
+Ascorbic Acid
+Ascorbic Acid
+Paclitaxel
+Multivitamins + Amino Acids + Iron + Guarana
+Fingolimod (as hydrochloride)
+Metronidazole
+Oxaliplatin
+Cefuroxime (as Axetil)
+Tildrakizumab
+Zanubrutinib
+Multivitamins + Iron
+Miconazole
+Oral Rehydration Salts
+Salicylic Acid
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Mometasone Furoate
+Vildagliptin
+Ascorbic Acid + Zinc
+Febuxostat
+Vitamin B-Complex + Choline Bitartrate + Inositol
+Biotin (Vitamin B7)
+Aciclovir
+Xylometazoline Hydrochloride
+Ursodeoxycholic Acid
+Oxacillin (as sodium)
+Midazolam (as Hydrochloride)
+Ibuprofen
+Oxacillin (As Sodium)
+Paclitaxel
+Multivitamins + Zinc
+Tretinoin
+Nicardipine Hydrochloride
+Tretinoin
+Omeprazole (As Sodium)
+Oxaliplatin
+Palonosetron (As Hydrochloride)
+Ferrous Sulfate
+Ferrous Sulfate
+Temozolomide
+Temozolomide
+Temozolomide
+Ferrous Sulfate
+Ferrous Sulfate
+Ferrous Sulfate
+Sodium Bicarbonate
+Ethyl Alcohol
+Flupentixol Decanoate
+Solifenacin Succinate
+Solifenacin Succinate
+Calcium Lactate
+Captopril
+Captopril
+Cefoperazone + Sulbactam
+Cefuroxime (As Axetil)
+Leflunomide
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Povidone-Iodine
+Rifampicin + Isoniazid + Pyrazinamide
+Emtricitabine + Dolutegravir (as sodium) + Tenofovir The alafenamide (as hemifumarate)
+Ofatumumab
+Aciclovir (As Sodium)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ceftriaxone (as sodium)
+Roxadustat
+Roxadustat
+Thiocolchicoside
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Simvastatin
+Meropenem (as trihydrate)
+Fenofibrate
+Fenofibrate
+Domperidone
+Furosemide
+Carbocisteine + Zinc
+Pregabalin
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil + Gingerols + Thyme Oil + Cedarwood Oil
+Memantine Hydrochloride
+Ceftriaxone (as Sodium)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Povidone Iodine
+Prednisone
+Carboplatin
+Metformin hydrochloride
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Multivitamins + Iron (see reverse)
+Fenofibrate
+Co-Amoxiclav (see reverse)
+Cefuroxime (as axetil)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Iron [equivalent to 250 mg Ferrous Sulfate (Dried)]
+Ascorbic Acid
+Carvedilol
+Levocetirizine dihydrochloride
+Multivitamins + Dextrose
+Fexofenadine hydrochloride
+Mycophenolate Mofetil
+Mycophenolate Mofetil
+Ascorbic Acid + Zinc
+Metoclopramide (as Hydrochloride)
+Fexofenadine hydrochloride
+Epoetin Alfa
+Ranitidine Hydrochloride
+Nystatin
+Ibuprofen
+Ciprofloxacin (as Hydrochloride)
+Ascorbic Acid + Zinc
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Trimetazidine Hydrochloride
+Propranolol Hydrochloride
+Ceftazidime (as pentahydrate)
+Cefotaxime (As Sodium)
+Multivitamins + Minerals
+Montelukast (As Sodium)
+Tretinoin
+Cefazolin (as sodium)
+Paracetamol
+Live Attenuated Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Docetaxel (as trihydrate)
+Castor Oil
+Tadalafil
+Orlistat
+Levetiracetam
+Isopropyl Alcohol + Ethyl Alcohol
+Miconazole
+Calcium + Cholecalciferol
+Febuxostat
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Oral Rehydration Salts
+Ascorbic Acid
+Paracetamol
+Paracetamol + Phenylephrine Hydrochloride (Day Tablet) and Paracetamol + Phenylephrine Hydrochloride + Chlorpheniramine Maleate (Night Tablet)
+Methyl Salicylate+ Menthol + Camphor
+Ascorbic Acid + Colecalciferol (Vitamin D3) + Zin
+Ofloxacin
+Ethyl Alcohol + Chlorhexidine Gluconate
+Ethyl Alcohol
+Isopropyl Alcohol
+Povidone-Iodine
+Terbinafine Hydrochloride
+Quadrivalent Seasonal Influenza Vaccine (Split Virion, Inactivated) 2024 Southern Hemisphere Strain.
+Miconazole Nitrate
+Mometasone Furoate
+Clotrimazole
+Fusidic Acid
+Vildagliptin
+Vildagliptin
+Vildagliptin
+Ethyl Alcohol
+Clotrimazole
+Multivitamins + Minerals
+Metformin Hydrochloride + Sitagliptin (as phosphate monohydrate)
+Cefixime (As Trihydrate)
+Cefixime (As Trihydrate)
+Calcium Sennosides
+Calcium Sennosides
+Adenosine
+Ethyl Alcohol
+Clotrimazole
+Multivitamins + Iron
+Clotrimazole
+Multivitamins + Iron
+Multivitamins + Iron
+Benzylpenicillin sodium
+Benzylpenicillin sodium
+Levonorgestrel + Ethinylestradiol Conchoice
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Meropenem (as trihydrate)
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Clotrimazole
+Ampicillin (As Sodium)
+Ampicillin (as sodium)
+Losartan potassium
+Lidocaine Hydrochloride
+Pemetrexed (as disodium heptahydrate)
+Ivabradine (as hydrochloride)
+Nebivolol (as Hydrochloride)
+Tigecycline
+Vildagliptin
+Lidocaine Injection
+Ivabradine (as hydrochloride)
+0.9 % Sodium Chloride
+Bortezomib
+Celecoxib
+Sertraline (as Hydrochloride)
+Lysozyme Hydrochloride + Cetylpyridinium Chloride
+Lysozyme Hydrochloride + Pyridoxine Hydrochloride (Vitamin B6)
+Xylometazoline Hydrochloride + Lysozyme Hydrochloride
+Paclitaxel
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Levofloxacin (as hemihydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Tranexamic Acid
+Ketorolac Tromethamine
+Metformin Hydrochloride + Pioglitazone (as hydrochloride) + Glimepiride
+Iron Sucrose
+Acetylcysteine
+Aciclovir
+Insulin Degludec + Liraglutide
+Cetirizine Hydrochloride + Phenylephrine Hydrochloride
+Loratadine
+Iohexol
+Irbesartan
+Esomeprazole(As Sodium)
+Metformin hydrochloride + Sitagliptin (as phosphate)
+Sevelamer carbonate
+Divalproex sodium (equivalent to Valproic acid)
+Mannitol
+Ethyl Alcohol
+Bisoprolol Fumarate
+Bisoprolol fumarate
+Telmisartan
+Valproic Acid (as Sodium Valproate)
+Telmisartan + Hydrochlorothiazide
+Prednisolone (As Sodium Phosphate )
+Pregabalin
+Pregabalin
+Tolvaptan
+Isopropyl Alcohol
+Ketorolac Tromethamine
+Pregabalin
+Ceftriaxone (as Sodium)
+Pregabalin
+Norepinephrine (As Bitartrate)
+Ceftriaxone (As Sodium)
+Imatinib (as Mesilate)
+Ketorolac trometamol
+Imatinib (as Mesilate)
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (as sodium sesquihydrate)
+Mecobalamin
+Pramipexole (as hydrochloride)
+Telmisartan
+Amlodipine (As Besilate) + Hydrochlorothiazide
+Meropenem (as trihydrate)
+Guiafenesin + Chlorphenamine Maleate + Phenylpropanolamine Hcl + Sodium Citrate + Ammonium Chloride
+Omeprazole (as sodium)
+Co-Amoxiclav
+Salbutamol (as sulfate)
+Prednisolone (as sodium phosphate)
+Sugammadex (as Sodium)
+Rosuvastatin (as Calcium)
+Rosuvastatin (as calcium)
+Trimetazidine hydrochloride
+TAMSULOSIN HYDROCHLORIDE
+Prednisolone (as sodium phosphate)
+Glimepiride
+Oxaliplatin
+Rosuvastatin (as calcium)
+Cefalexin (as monohydrate)
+Ambroxol Hydrochloride
+Filgrastim
+CLOPIDOGREL
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Amlodipine (as Besilate)
+Cefixime (as Trihydrate)
+Ceftriaxone (as sodium)
+Rocuronium bromide
+Telmisartan
+Telmisartan
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Cefepime (as hydrochloride) + Sulbactam (as sodium)
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Vancomycin (as Hydrochloride)
+Ascorbic Acid
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Sugammadex (As Sodium)
+ISOXSUPRINE HYDROCHLORIDE
+Omeprazole
+Metformin Hydrochloride
+Cefixime (as trihydrate)
+Esomeprazole (as magnesium)
+Salbutamol
+Vancomycin (as hydrochloride)
+5% Dextrose in Water
+Lactated Ringer's Solution
+5% Dextrose In 0.9% Sodium Chloride
+Meropenem (as trihydrate)
+Meropenem (as Trihydrate)
+Omeprazole Sodium
+Mupirocin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Cefuroxime(as axetil)
+Trimetazidine Hydrochloride
+Multivitamins + Dexpanthenol
+Vancomycin (as hydrochloride)
+Nicardipine
+Telmisartan + Amlodipine
+Bupivacaine Hydrochloride
+Propofol
+Cefuroxime (as axetil)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Telmisartan
+Sodium Bicarbonate
+Spironolactone
+Losartan Potassium
+Anagrelide (as hydrochloride)
+Cefixime
+5% Dextrose in Lactated Ringer's
+Rosuvastatin (as Calcium)
+Montelukast (as Sodium) + Levocetirizine hydrochloride
+Co-amoxiclav
+Rifampicin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Pheniramine Maleate + Naphazoline Hydrochloride
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Salbutamol (as sulfate)
+Spironolactone
+Celecoxib
+Capecitabine
+Tolnaftate/ Clioquinol/ Gentamicin (as sulfate)/Betamethasone (as valerate)
+Ebastine + Betamethasone (as Sodium Phosphate)
+Irbesartan
+Betamethasone Valerate
+Terbinafine Hydrochloride
+Oxytocin
+Filgrastim
+Povidone-Iodine
+Pantoprazole (as sodium sesquihydrate)
+Losartan Potassium
+Losartan Potassium
+Piperacillin (as sodium) + Tazobactam (as sodium)
+CETIRIZINE (as dihydrochloride)
+Co-Amoxiclav
+Hyoscine butylbromide
+Neostigmine (as methylsulfate)
+Sitagliptin (as phosphate monohydrate)
+Multivitamins + Minerals + Buclizine
+Rosuvastatin (as calcium)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Nicardipine Hydrochloride
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Telmisartan
+Sodium bicarbonate
+Ascorbic Acid + Zinc
+Ceftazidime (As Pentahydrate)
+Losartan Potassium
+Methimazole
+Methimazole
+Co-Amoxiclav
+Simvastatin
+Simvastatin
+Calcium + Colecalciferol (Vitamin D3)
+Ticagrelor
+Pantoprazole (as sodium sesquihydrate)
+Cetrorelix (as acetate)
+Ascorbic Acid + Zinc + Vitamin D3
+Losartan Potassium + Hydrochlorothiazide
+Meloxicam
+Meloxicam
+Sildenafil (as Citrate)
+Anastrozole
+Multivitamins
+Methylprednisolone (as sodium succinate)
+Colecalciferol (Vitamin D3)
+Iron
+Phenylephrine HCl + Chlorphenamine Maleate
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Chlorhexidine
+Chlorhexidine
+Ascorbic Acid
+Anastrozole
+Meclizine Hydrochloride
+Amlodipine (as Besilate)
+Meclizine Hydrochloride
+Pantoprazole
+Ascorbic Acid + Zinc + Colecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Colecalciferol (Vitamin D3)
+Multivitamins + Iron
+Colecalciferol (Vitamin D3)
+Ascorbic Acid (as Sodium Ascorbate + Zinc + Colecalciferol (Vitamin D3)
+Ascorbic Acid (as Sodium Ascorbate) + Zinc + Colecalciferol (Vitamin D3)
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc + Colecalciferol (Vitamin D3)
+Acetylcysteine
+This CPR is granted following A.O. 31 s. 2005.
+Acetylcysteine
+Atenolol
+Calcium + Colecalciferol (Vitamin D3)
+Phenylpropanolamine Hydrochloride/Brompheniramine Maleate
+Daratumumab
+Hydrogen Peroxide
+Abrocitinib
+Bupropion Hydrochloride + Naltrexone Hydrochloride
+Loratadine
+Carvedilol
+Co-Amoxiclav
+Diclofenac
+Colecalciferol (Vitamin D3)
+Colecalciferol (Vitamin D3)
+Colecalciferol (Vitamin D3)
+Amlodipine (As Besilate)
+Citicoline (as sodium)
+Carvedilol
+Pregabalin + Methylcobalamin
+Gefitinib
+Dextromethorphan Hydrobromide
+Chlorhexidine Gluconate
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Colecalciferol (Vitamin D3)
+Sultamicillin (as tosilate dihydrate)
+Ranitidine (as hydrochloride)
+Tranexamic Acid
+Mefenamic Acid
+Exemestane
+Paclitaxel
+Diphtheria, Tetanus, Pertussis (Whole Cell), Hepatitis B (IDNA) and Haemophilus influenzae Type B Conjugate Vaccine (Adsorbed)
+Irinotecan Hydrochloride
+Irinotecan Hydrochloride
+Irinotecan Hydrochloride
+Paclitaxel
+Ivabradine (as hydrochloride)
+Mirtazapine
+Mirtazapine
+Mirtazapine
+Mirtazapine
+Atracurium Besilate
+Azithromycin (as Dihydrate)
+Levofloxacin (as hemihydrate) + Dexamethasone (as sodium phosphate)
+Tranexamic Acid
+Lysozyme + Cetylpyridinium Chloride + Lidocaine Hydrochloride
+Lurasidone Hydrochloride
+Lurasidone Hydrochloride
+Revefenacin
+Brinzolamide
+Gemigliptin (as tartrate sesquihydrate) + Metformin hydrochloride
+Rivaroxaban
+Inactivated Poliomyelitis Vaccine (Types 1, 2, and 3)
+Oxycodone Hydrochloride
+Busulfan
+Ioversol
+Ioversol
+Ioversol
+Nicardipine Hydrochloride
+Aluminum Hydroxide + Magnesium Hydroxide
+Simvastatin
+Sitagliptin (As Phosphate)
+Gefitinib
+Iron (as Ferric Hydroxide Sucrose Complex)
+Telmisartan+ Amlodipine (as Besilate)
+Telmisartan+ Amlodipine (as Besilate)
+Telmisartan+ Amlodipine (as Besilate)
+Telmisartan+ Amlodipine (as Besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Indacaterol (as acetate) + Mometasone furoate
+Montelukast (As Sodium)
+Montelukast (as Sodium)
+Pregabalin
+Oxycodone hydrochloride
+Acyclovir
+Aciclovir
+Clindamycin (As Hydrocholride)
+Clobetasol Propionate
+Fusidic Acid
+Docetaxel
+Iron
+Folic Acid
+Thiamazole
+Escitalopram (as Oxalate)
+Cetirizine Hydrochloride
+Amoxicillin (As Trihydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Nebivolol hydrochloride
+Pioglitazone (as hydrochloride) + Metformin hydrochloride
+Pioglitazone (as hydrochloride) + Metformin hydrochloride
+Tolvaptan
+Cilostazol
+Sitagliptin (as phosphate)
+Ibuprofen
+Aluminum Hydroxide + Magnesium Hydroxide
+Iron
+Febuxostat
+Febuxostat
+Dutasteride + Tamsulosin hydrochloride
+Ascorbic Acid + Zinc
+Azithromycin (as dihydrate)
+Diphenhydramine
+Sitagliptin (as phosphate)
+Ambroxol Hydrochloride
+Levetiracetam
+Ascorbic Acid + Zinc
+Febuxostat
+Sitagliptin (as phosphate)
+Azithromycin
+Vitex negundo L. (Lagundi Leaf)
+Paracetamol + Vitamin B-Complex
+Norepinephrine (As Bitartrate)
+Levetiracetam
+Cefuroxime (as sodium)
+Cefalexin (as monohydrate)
+Sitagliptin (as phosphate)
+Nicardipine Hydrochloride
+Ascorbic Acid + Zinc
+Fluticasone propionate
+Cefalexin (as monohydrate)
+Anastrozole
+Paracetamol + Ibuprofen
+Ascorbic Acid + Zinc
+Febuxostat
+Losartan Potassium
+Meropenem (as Trihydrate)
+Telmisartan
+Telmisartan
+Norepinephrine (As Bitartrate)
+Trimetazidine dihydrochloride
+Febuxostat
+Norepinephrine (As Bitartrate)
+Butamirate Citrate
+Ursodeoxycholic Acid
+Nicardipine Hydrochloride
+Norepinephrine (As Bitartrate)
+Febuxostat
+Omeprazole (as sodium)
+Cefalexin (as monohydrate)
+Etoricoxib
+Ascorbic Acid + Zinc
+Telmisartan + Hydrochlorothiazide
+Vitamin B1 + B6 + B12
+Sitagliptin (as phosphate monohydrate)
+Vitamin B1 + B6 + B12
+Norepinephrine (as bitartrate)
+Sevelamer Carbonate
+Cefuroxime (as axetil)
+Norepinephrine (As Bitartrate)
+Azithromycin (as Dihydrate)
+Cefotaxime (as sodium)
+Norepinephrine (As Bitartrate)
+Paracetamol
+Febuxostat
+Salbutamol (as Sulfate) + Ipratropium Bromide
+Cefixime (as trihydrate)
+Cefuroxime (as axetil)
+Multivitamins
+Trimetazidine (as Hydrochloride)
+Febuxostat
+Paracetamol
+Co-Amoxiclav
+Ascorbic Acid
+Palonosetron (as hydrochloride)
+Valsartan + Amlodipine (as besilate)
+Salbutamol (as sulfate)
+Meropenem (as Trihydrate)
+Nicardipine Hydrochloride
+Norepinephrine (As Bitartrate)
+Norepinephrine (As Bitartrate)
+Paracetamol
+Sitagliptin (as phosphate)
+Cyclophosphamide
+Ofloxacin
+Hydrocortisone (as sodium succinate)
+Olmesartan medoxomil
+Salbutamol (as Sulfate)
+Spironolactone
+Sitagliptin (as phosphate)
+Co-Amoxiclav
+Norepinephrine (As Bitartrate)
+Norepinephrine (As Bitartrate)
+Paracetamol
+Losartan potassium + Hydrochlorothiazide
+Olmesartan medoxomil
+Meropenem (as trihydrate)
+Sevelamer Carbonate
+Nicardipine Hydrochloride
+Telmisartan
+Adapalene + Clindamycin (as phosphate)
+Iron + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Ascorbic Acid + Zinc
+Cefoperazone (as Sodium) + Sulbactam (as Sodium)
+Sitagliptin (as phosphate)
+Ascorbic Acid + Zinc
+Febuxostat
+Metformin Hydrochloride
+Citicoline (as sodium)
+Cefalexin (as monohydrate)
+Sodium alginate + Sodium bicarbonate + Calcium carbonate
+Ofloxacin
+Polyethylene Glycol 3350 (PEG) + Mineral Salts
+Ciprofloxacin (as hydrochloride)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Norepinephrine (As Bitartrate)
+Cefixime (as trihydrate)
+Co-Amoxiclav
+Norepinephrine (as bitartrate)
+Ascorbic Acid
+Atorvastatin (as Calcium)
+Sitagliptin (as phosphate monohydrate)
+Telmisartan
+Telmisartan
+Losartan Potassium
+Cefalexin (as monohydrate)
+Cefixime (as trihydrate)
+Sodium bicarbonate
+Losartan Potassium
+Citicoline (as sodium)
+Ascorbic Acid
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Telmisartan
+Ascorbic Acid + Zinc
+Meropenem
+Telmisartan
+Ceftazidime (as pentahydrate)
+Meropenem (as trihydrate)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cefuroxime (as axetil)
+MEFENAMIC ACID
+Cefalexin (as monohydrate)
+Sitagliptin (as phosphate)
+Nicardipine Hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid + Zinc
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Cefalexin (as monohydrate)
+Omeprazole (as sodium)
+Sitagliptin (as phosphate)
+Febuxostat
+Sitagliptin (as phosphate)
+Paracetamol
+Levocetirizine dihydrochloride
+Rosuvastation (as calcium)
+Cefuroxime (as axetil)
+Epoetin Alfa (Recombinant Human Erythropoietin)
+Rosuvastatin (as calcium)
+Ascorbic Acid + Zinc
+Cefixime (as trihydrate)
+Nicardipine Hydrochloride
+Cyanocobalamin (Vitamin B12)
+Sitagliptin (as Phosphate Monohydrate) + Metformin Hydrochloride
+Cassia angustifolia Vahl (Senna Pods and Leaves)
+Levetiracetam
+Vitamin B1 + B6 + B12
+Losartan potassium + Hydrochlorothiazide
+Norepinephrine (As Bitartrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Meropenem (As Trihydrate)
+Norepinephrine (As Bitartrate)
+Ascorbic Acid + Zinc
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Nicardipine Hydrochloride
+Sitagliptin (as phosphate)
+Ascorbic Acid (as Sodium Ascorbate)
+Salbutamol (as Sulfate) + Ipratropium (as Bromide)
+Esomeprazole (as magnesium dihydrate)
+Telmisartan + Hydrochlorothiazide
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Clopidogrel (as bisulfate)
+Paracetamol
+Telmisartan
+Trimetazidine dihydrochloride
+Fluconazole
+Piracetam
+Ketoanalogues + Essential Amino Acids
+Pregabalin
+Sitagliptin (as phosphate monohydrate)
+Progesterone
+Progesterone
+Bupivacaine Hydrochloride
+Timolol (As Maleate)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+5% Dextrose in Lactated Ringer's Solution
+5% Dextrose in Lactated Ringer's Solution
+0.9% Sodium Chloride
+Amoxicillin (as trihydrate)
+Gefitinib
+Glimepiride
+Amoxicillin(As Trihydrate)
+Amoxicillin(As Trihydrate)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Vancomycin (as hydrochloride)
+Metronidazole + Miconazole Nitrate
+Metronidazole + Miconazole Nitrate
+Metronodazole + Miconazole Nitrate + Lidocaine
+Loratadine
+Povidone-Iodine
+Mupirocin
+Diclofenac sodium (equivalent to Diclofenac diethylamine)
+Trifarotene
+Ascorbic Acid + dl-Alpha Tocopheryl Acetate (Vitamin E)
+Epoetin Alfa
+Sodium Chloride
+Ascorbic acid + Colecalciferol (Vitamin D3) + Zinc
+Ascorbic acid + Colecalciferol (Vitamin D3) + Zinc
+Vitamin B-Complex
+d-Alpha Tocopherol (Vitamin E)
+Piracetam
+Piracetam
+Carvedilol
+Nilotinib (as hydrochloride dihydrate)
+Nilotinib (as hydrochloride dihydrate)
+Sodium Bicarbonate
+Silver Sulfadiazine
+Trifluridine + Tipiracil (as Hydrochloride)
+Trifluridine + Tipiracil (as Hydrochloride)
+Calcium Sennosides
+Verapamil Hydrochloride
+Verapamil Hydrochloride
+Sodium Chloride.
+Potassium Chloride
+Tenofovir Alafenamide (as fumarate)
+Sertaconazole (As Nitrate)
+Ticagrelor
+Sterile Water for Injection
+Omeprazole
+Ticagrelor
+Tigecycline
+Calcium Carbonate + Colecalciferol (Vitamin D3)
+Salbutamol (As Sulfate)
+Salbutamol (As Salbutamol Sulfate) + Ipratropium Bromide
+Sodium Chloride
+Tamsulosin Hydrochloride
+Pneumococcal Polysaccharide Conjugate Vaccine, 15 Valent (Adsorbed)
+Lidocaine + Prilocaine
+Gabapentin
+Indacaterol Acetate + Glycopyrronium Bromide + Mometasone Furoate
+Sodium Valproate
+Indacaterol (as acetate) + Glycopyrronium (as bromide) + Mometasone Furoate
+Clinopodium polycephalum (Clinopodium Herb) Aerial Part Extract
+Vericiguat
+Vericiguat
+Vericiguat
+Irinotecan (as hydrochloride)
+Tadalafil
+Tadalafil
+Oxytocin
+Acetylcysteine
+Paracetamol
+Citicoline (as Sodium)
+Ketorolac Trometamol
+Zoledronic acid (as monohydrate)
+Medical Grade Oxygen
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Multivitamins + Minerals
+Pralsetinib
+Fosfomycin (as trometamol)
+Ropivacaine Hydrochloride
+Ceftriaxone (As Sodium)
+Telmisartan
+Telmisartan
+Colistimethate Sodium
+Teicoplanin
+Omeprazole (as Sodium)
+Metformin Hydrochloride
+Losartan potassium + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Indacaterol (as acetate) + Mometasone furoate
+Indacaterol (as acetate) + Mometasone furoate
+Indacaterol (as acetate) + Mometasone furoate
+Indacaterol (as acetate) + Mometasone furoate
+Hydroxychloroquine Sulfate
+Pregabalin
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Cefuroxime (As Sodium)
+Epoetin Alfa
+Levofloxacin
+Anastrozole
+Cefuroxime (as axetil)
+Paclitaxel
+Rosuvastatin (as calcium)
+Capecitabine
+Cefdinir
+Ceftriaxone (As Sodium)
+Clobetasol (As Propionate)
+Citicoline (as sodium)
+Ascorbic Acid + Zinc
+Hyoscyamine Sulfate + Atropine Sulfate + Hyoscine Hydrobromide
+Co-Amoxiclav
+Ketorolac trometamol
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Gliclazide
+Clozapine
+Febuxostat
+Metoclopramide (as hydrochloride)
+Finasteride
+Fluorouracil
+Salbutamol (as sulfate)
+Clozapine
+Cefoxitin (as sodium)
+Febuxostat
+Pantoprazole (as Sodium Sesquihydrate) + Domperidone
+Nicardipine Hydrochloride
+Montelukast (as Sodium)
+Paracetamol + Vitamin B1 + Vitamin B6 + Vitamin B12
+Iron (as Ferric Hydroxide Sucrose Complex)
+Etoricoxib
+Fluphenazine decanoate
+Norepinephrine (as bitartrate)
+Ceftriaxone (as Sodium)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Ceftriaxone (as Sodium)
+Folic Acid
+Ketorolac Trometamol
+Atorvastatin (as Calcium)
+Miconazole Nitrate
+Cefuroxime (as sodium)
+Ketoanalogues + Essential Amino Acids
+Cefepime hydrochloride
+Cefuroxime (as Sodium)
+Fenofibrate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Cefixime (as trihydrate)
+Amoxicillin (as Trihydrate)
+Cloxacillin (as Sodium)
+Allopurinol
+Clindamycin (as Hydrochloride)
+Prednisone
+Amlodipine (as Besilate)
+Omeprazole
+Montelukast (as sodium) + Levocetirizine (as dihydrochloride)
+Telmisartan
+Vitamin B1 + B6 + B12
+Docetaxel
+Allopurinol
+Omeprazole (as sodium)
+Metronidazole + Miconazole nitrate
+Dexamethasone + Tobramycin
+Febuxostat
+Colchicine
+Amoxicillin (as trihydrate)
+Cefalexin
+Vancomycin (as hydrochloride)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Cefepime (as hydrochloride) + Sulbactam (as sodium)
+Palonosetron (as hydrochloride)
+Rosuvastatin (as calcium)
+Levocetirizine hydrochloride
+Losartan Potassium
+Amlodipine (as besilate)
+Acetylcysteine
+Sitagliptin (as phosphate)
+Montelukast(as sodium) + Levocetirizine hydrochloride
+Losartan Potassium
+Febuxostat
+Propranolol Hydrochloride
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Fenofibrate
+Amlodipine (as besilate)
+Nebivolol (as hydrochloride)
+CEFACLOR (AS MONOHYDRATE)
+Metformin Hydrochloride
+Budesonide
+Salbutamol (as Sulfate)
+Tamsulosin Hydrochloride
+Ceftriaxone (as sodium)
+Bortezomib
+Ketoanalogues + Essential Amino Acids
+Ambroxol Hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Ramipril
+Ketoanalogues + Essential Amino Acids 630 Mg.
+Chloroquine Phosphate
+Mupirocin
+Azithromycin (As Dihydrate)
+Gemcitabine (as Hydrochloride)
+Ascorbic acid + Zinc
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Methyl Salicylate + Menthol + Camphor
+Azithromycin (as dihydrate)
+Ceftriaxone (as Sodium)
+Multivitamins + Dexpanthenol
+Nicardipine Hydrochloride
+Sodium Bicarbonate
+Dobutamine (as hydrochloride)
+Cefalexin (as monohydrate)
+Rosuvastatin (as Calcium)
+Cefuroxime (as sodium)
+Multivitamins + Iron + Folic Acid
+Ciprofloxacin (as Hydrochloride)
+Norepinephrine (as bitartrate)
+Ketoanalogues + Essential Amino Acids
+Cefuroxime (as Sodium)
+Clobetasol Propionate
+Terbinafine Hydrochloride
+Mometasone Furoate
+Tamsulosin Hydrochloride
+Ascorbic Acid + Zinc
+Clopidogrel (as bisulfate)
+Miconazole Nitrate
+Clotrimazole
+Clotrimazole
+Clobetasol Propionate
+Fusidic Acid
+Budesonide
+Prednisone
+Losartan Potassium
+Febuxostat
+Omeprazole
+Febuxostat
+Paracetamol + Orphenadrine Citrate
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ranitide Hydrochloride
+Ascorbic Acid
+Carbocisteine
+Ascorbic Acid
+Tobramycin
+Norepinephrine (as bitartrate)
+Telmisartan
+Rosuvastatin (as calcium)
+Vancomycin
+Sodium Bicarbonate
+Cefalexin (as monohydrate)
+Losartan Potassium
+Ethyl Alcohol
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Phytomenadione
+Adapalene
+Valsartan
+Valsartan
+Metformin Hydrochloride+ Pioglitazone ( as Hydrochloride ) + Glimepiride
+0.9% SODIUM CHLORIDE
+0.9% Sodium Chloride
+Acetylcysteine
+Povidone-Iodine
+5% Dextrose in Lactated Ringer's Solution
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B ) + Cyanocobalamin (Vitamin B12)
+Fexuprazan Hydrochloride
+Multivitamins + Herbs + Inositol + Choline
+Etoricoxib
+Glycerin
+Paracetamol + Ibuprofen
+Febuxostat
+Doxycycline (as hyclate)
+Valsartan
+Amlodipine (as besilate)
+Valsartan
+Valsartan
+Valsartan
+Irbesaph + Hydrochlorothiazide
+Irbesaph + Hydrochlorothiazide
+Irbesaph + Hydrochlorothiazide
+Cetirizine Hydrochloride
+Cefuroxime (As Axetil)
+Cefuroxime (as axetil)
+Rosuvastatin (as calcium)
+Sitagliptin + Metforinin Hydrochloride
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Lamivudine + Tenofovir disoproxil fumarate
+Celecoxib
+Semaglutide
+Metoprolol tartrate
+Metoprolol tartrate
+Nicotine
+Nicotine
+Nicotine
+Montelukast + Levocetirizine
+Olanzapine
+Olmesartan Medoxomil
+Abiraterone acetate
+Voriconazole
+Bupivacaine hydrochloride (as monohydrate)
+Benzylpenicillin (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ondansetron (as hydrochloride)
+Desloratadine
+Desloratadine
+Xylometazoline Hydrochloride + Lysozyme Hydrochloride
+Sitagliptin (As Phosphate Monohydrate)
+Atracurium (as besilate)
+Atracurium (as besilate)
+Isotretinoin
+Isotretinoin
+Amlodipine (as Besilate)
+Haloperidol
+Acetylcysteine
+Dapagliflozin
+Leflunomide
+Fludarabine Phosphate
+Cimicifuga racemosa L. (Black Cohosh) Rhizome
+Pemetrexed (as disodium)
+Simvastatin + Ezetimibe
+Risperidone
+Co-Amoxiclav
+Co-Amoxiclav
+Tenofovir Disoproxil Fumarate
+Tramadol Hydrochloride
+Lurasidone (as Hydrochloride)
+Tioconazole + Tinidazole + Lidocaine
+Gemcitabine (as hydrochloride)
+Cefixime
+Pregabalin
+Pregabalin
+Amlodipine (As Besilate) + Hydrochlorothiazide
+Amlodipine (As Besylate) + Hydrochlorothiazide
+Ezetimibe
+Ascorbic Acid + Zinc
+Cefuroxime (as axetil)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+PARACETAMOL + PHENYLEPHRINE HYDROCHLORIDE + DEXTROMETHORPHAN HYDROBROMIDE
+Cefixime (as trihydrate)
+Sitagliptin (as phosphate monohydrate)
+Pantoprazole (as sodium)
+Dibencozide
+Telmisartan
+Cefuroxime (as axetil)
+Racecadotril
+Miconazole Nitrate
+Cefalexin (as monohydrate)
+Cefalexin (as monohydrate)
+Pioglitazone (As Hydrochloride)
+Cassia angustifolia Vahl (Senna Leaves and Pods)
+Ondansetron (as hydrochloride)
+Amoxicillin (as Trihydrate)
+Citicoline (as sodium)
+Nicardipine Hydrochloride
+Ceftriaxone (as sodium)
+Ursodeoxycholic Acid
+Multivitamins
+Multivitamins
+Meropenem (as trihydrate)
+Oxaliplatin
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Mefenamic Acid
+Metronidazole
+Losartan Potassium + Amlodipine besilate
+Telmisartan + Amlodipine (as besilate)
+Cefalexin (as monohydrate)
+Amlodipine (as Besilate)
+Paracetamol
+Ceftriaxone (as sodium)
+Clotrimazole
+Fusidic Acid
+Terbinafine Hydrochloride
+Nonacog Alfa
+Nonacog Alfa
+Nonacog alfa
+Ascorbic Acid
+Ascorbic Acid + Cholecalciferol (vitamin D3) + Zinc
+Phytomenadione
+Cetirizine Hydrochloride
+Omeprazole
+Acetylcysteine
+Lidocaine Hydrochloride
+Clindamycin (as phosphate)
+Tacrolimus
+Methotrexate
+Aminophylline
+Biotin (Vitamin B7)
+Cetirizine (as dihydrochloride)
+Sitagliptin (As Phosphate Monohydrate)
+Telmisartan + Amlodipine (As Besylate)
+Nonacog Alfa
+5% Dextrose in 0.9% Sodium Chloride
+Sitagliptin (as phosphate)
+Furosemide
+Emtricitabine + Tenofovir alafenamide (as hemifumarate)
+Metformin Hydrochloride
+Ascorbic Acid
+Sulodexide
+Phenylephrine Hydrochloride (Melon Flavor)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Rosuvastatin (as calcium)
+Multivitamins + Minerals
+Tamsulosin hydrochloride
+Cetirizine Dihydrochloride
+Nicardipine Hydrochloride
+Etoricoxib
+Etoricoxib
+Amlodipine (as besilate) + Losartan Potassium
+Clarithromycin
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Clindamycin (as Hydrochloride)
+Hydrocortisone (as sodium succinate)
+Sodium Hyaluronate
+Polyethylene Glycol 4000 (PEG)
+Vildagliptin
+Domperidone
+Fusidic Acid
+Peritoneal Dialysis Solution (Lactate-G 4.25%)
+Multivitamins + Minerals
+Medical Grade Oxygen
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Tacrolimus
+Mupirocin
+Ascorbic Acid + Zinc+ Colecalciferol (Vitamin D3)
+Clotrimazole
+Ascorbic Acid + Zinc+ Colecalciferol (Vitamin D3)
+Clotrimazole
+Cholecalciferol (Vitamin D3)
+Flucloxacillin
+Diclofenac Sodium
+Diclofenac Sodium
+Tranexamic Acid
+Tranexamic Acid
+Mupirocin
+Propofol
+Pregabalin
+Rocuronium Bromide
+Tacrolimus
+Quetiapine (As Fumarate)
+Ciprofloxacin (as lactate)
+Ascorbic Acid
+Calcium Gluconate
+Acetylcysteine
+Tacrolimus
+Salbutamol (As Sulfate)
+Sugammadex (As Sodium)
+Pregabalin
+Pregabalin
+Faricimab
+Fingolimod (as hydrochloride)
+Budesonide
+Salbutamol (as Sulfate)
+Amoxicillin (as Trihydrate) (Vet.)
+Ascorbic Acid
+Silver Sulfadiazine
+Ascorbic Acid + Cholecalciferol + Zinc
+Carbocisteine + Zinc
+Rosuvastatin (as calcium) + Ezetimibe
+Rosuvastatin (as calcium) + Ezetimibe
+Salbutamol (as sulfate)
+Bacillus Clausii
+Ampiciilin (As Sodium)
+Ampiciilin (As Sodium)
+Irbesartan
+Irbesartan
+Norepinephrine (as Bitartrate)
+Sodium Bicarbonate
+Sodium Bicarbonate
+Sitagliptin (as phosphate)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Salvia miltiorrhiza Bge. (Danshen) Root and Rhizome Extract + Ligusticum chuanxiong Hort. (Szechwan Lovage) Rhizome Extract + Paeonia lactiflora Pall. (Red Peony) Root Extract + Carthamus tinctorius L. (Safflower) Flower Extract + Cyperus rotundus L. (Nutgrass Galingale) Rhizome Extract + Aucklandia lappa Decne. (Common Aucklandia) Root Extract + Crataegus pinnatifida Bge. (Hawthorn) Fruit Extract
+Paeonia lactiflora Pall. (White Peony) Root Extract + Panax ginseng (Ginseng) Stems and Leaves Powder
+Callicarpa nudiflora Hook. Et Arn. (Nakedflower Beautyberry) Leaf Dry Extract
+Gastrodia elata Bl. (Tall Gastrodia) Tuber Extract
+Ligusticum chuanxiong Hort. (Szechwan Lovage) Rhizome Extract + Gastrodia elata Bl. (Tall Gastrodia) Tuber Extract
+Brigatinib
+Brigatinib
+Brigatinib
+Telmisartan
+Fluconazole
+Levofloxacin (As Hemihydrate)
+Ceftriaxone (As Sodium)
+Gentamicin (as Sulfate)
+Pregabalin
+Pregabalin
+Tranexamic Acid
+Povidone Iodine
+Paracetamol
+Apixaban
+Apixaban
+Leuprorelin Acetate
+Ascorbic Acid + Zinc+ Cholecalciferol (Vitamin D3)
+Ascorbic Acid
+Ascorbic Acid (As Calcium Ascorbate) + Zinc (As Zinc Gluconate)
+Ascorbic Acid (as Calcium Ascorbate) + Zinc (as Zinc Sulfate Monohydrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Isopropyl Alcohol
+Ethyl Alcohol
+5% Dextrose In Water
+Paracetamol
+Omeprazole
+Metformin hydrochloride
+Risperidone
+Risperidone
+Gefitinib
+Glutathione
+Lornoxicam
+Gefitinib
+Dolutegravir (as sodium) + Lamivudine + Tenofovir Disoproxil Fumarate
+Metformin Hydrochloride
+Cefuroxime (as sodium)
+Metoprolol Tartrate
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Dobutamine (as Hydrochloride)
+Losartan Potassium
+Clopidogrel (as Bisulfate)
+Amlodipine (As Besilate)
+Multivitamins + Dextrose
+Carboplatin
+Ascorbic Acid + Zinc
+Valganciclovir (as hydrochloride)
+Linezolid
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Cetirizine dihydrochloride
+Tranexamic Acid
+Folic Acid
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+CEFIXIME
+Meropenem (as trihydrate)
+Azithromycin (as monohydrate)
+Omeprazole Sodium
+Carboplatin
+Azithromycin (as dihydrate)
+Cefixime (as trihydrate)
+Metoclopramide Hydrochloride
+Levocetirizine Dihydrochloride
+Sodium Bicarbonate
+Dexamethasone
+Esomeprazole (as sodium)
+Atorvastatin (as Calcium)
+Diosmin + Hesperidin
+Telmisartan
+Telmisartan
+Etoricoxib
+Atorvastatin (as Calcium Trihydrate)
+Metformin hydrochloride + Sitagliptin (as phosphate)
+Clindamycin (as hydrochloride)
+Phenytoin Sodium
+Ceftriaxone (as sodium)
+Cefuroxime (as Sodium)
+Fusidic acid + Betamethasone (as valerate)
+Oxaliplatin
+Paclitaxel
+Rocuronium Bromide
+Co-Amoxiclav
+Omeprazole (as Sodium)
+CEFIXIME
+Ketoanalogues + Essential Amino Acids
+Sitagliptin (as phosphate monohydrate)
+Multivitamins + Iron
+Carvedilol
+Tamsulosin Hydrochloride
+Doxorubicin hydrochloride
+Nicardipine Hydrochloride
+Etoricoxib
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Omeprazole (as sodium)
+Sodium Bicarbonate
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Methylprednisolone (as sodium succinate)
+Amoxicillin (as Trihydrate)
+Prednisone
+Oxaliplatin
+Butamirate Citrate
+Paracetamol
+Silodosin
+Rivaroxaban
+Zinc Sulfate
+Hydrogen Peroxide
+Zinc Chelate
+Ascorbic Acid + Zinc+ Colecalciferol (Vitamin D3)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Ascorbic Acid + Zinc
+Cefoxitin (As Sodium)
+Clotrimazole
+Ascorbic Acid + Zinc+ Cholecalciferol (Vitamin D3)
+Olopatadine (as hydrochloride
+Losartan Potassium
+Mupirocin
+Salbutamol (as Sulfate)
+Ascorbic Acid + Zinc+ Colecalciferol (Vitamin D3)
+Levetiracetam
+Paracetamol
+Brompheniramine Maleate + Phenylephrine
+Brompheniramine Maleate + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Brompheniramine Maleate + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Butamirate Citrate
+Dextromethorphan Hydrobromide
+Multivitamins + Zinc
+Insulin Degludec + Insulin Aspart
+Citicoline (As Sodium)
+Atracurium Besilate
+Atorvastatin (as Calcium)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Pregabalin
+Fluoxetine
+Salbutamol (as Sulfate) + Ipratropium Bromide
+Aceclofenac + Paracetamol
+Glutathione
+Indacaterol (as Acetate) + Glycopyrronium (as Bromide) + Mometasone Furoate
+Epirubicin Hydrochloride
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Epirubicin Hydrochloride
+Acetylcysteine
+Acetylcysteine
+Irinotecan Hydrochloride (as trihydrate)
+Silver Sulfadiazine
+Pyrazinamide
+Fluconazole
+Furosemide
+Mupirocin
+Ondansetron (as hydrochloride dihydrate)
+Digoxin
+Deferasirox
+Deferasirox
+Deferasirox
+Xuric 80
+Entecavir (as Monohydrate)
+Entecavir (as Monohydrate)
+Tafenoquine (as Succinate)
+Lidocaine Hydrochloride
+Lenalidomide
+Lenalidomide
+Vildagliptin
+Ursodeoxycholic Acid
+Guaifenesin + Bromhexine Hydrochloride + Salbutamol (as Sulfate)
+Febuxostat
+Ursodeoxycholic Acid
+Leuprorelin Acetate
+Leuprorelin Acetate
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Piroxicam + Methyl Salicylate + Methol + Eugenol
+Leuprorelin Acetate
+Pyrazinamide
+Tretinoin + Hydroquinone
+Febuxostat
+Montelukast (As Sodium) + Levocetirizine Hydrochloride
+Abiraterone Acetate
+Acetylcysteine + Zinc
+Losartan Potassium
+Salbutamol (as sulfate)
+Ondansetron (as hydrochloride)
+Cefixime (as trihydrate)
+Carboplatin
+Cefoxitin (as sodium)
+Fenofibrate
+Paracetamol
+Clarithromycin
+Fexofenadine hydrochloride
+Dobutamine (as hydrochloride)
+Anastrozole
+Omeprazole (as Sodium)
+Tranexamic Acid
+Ketoanalogues + Essential Amino Acids
+Ursodeoxycholic Acid
+Montelukast (as sodium) + Levocetirizine dihydrochloride
+CEFOTAXIME (AS SODIUM)
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Menthol + Eucalyptus Oil + Camphor
+Methyl Salicylate + Camphor + Menthol
+Ascorbic Acid + Zinc
+Miconazole
+Ascorbic Acid +Zinc
+Potassium Citrate
+Pregabalin
+Pregabalin
+Meropenem (as Trihydrate)
+Multivitamins + Minerals
+Meropenem (as Trihydrate)
+Vancomycin (as Hydrochloride)
+Vancomycin (as Hydrochloride)
+Salmeterol (as xinafoate) + Fluticasone propionate
+Guaifenesin
+Eucalyptus Oil + Dementholized Mint Oil (Mentha arvensis) Cajuput Oil (Melaleuca leucadendra) + Menthol Crystal + Methyl Salicylate + Juniperberry Oil (Juniperus communis) + Clove Bud Oil (Syzygium aromaticum)
+Eucalyptus Oil+ Dementholized Mint Oil (Mentha arvensis) Cajuput Oil (Melaleuca leucadendra) + Menthol Crystal Methyl Salicylate + Juniperberry Oil (Juniperus communis) + Clove Bud Oil (Syzygium aromaticum)
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Bisacodyl
+Bisacodyl
+Diosmin + Hesperidin
+Amlodipine (as Besilate)
+Levetiracetam
+Folic Acid
+Ketoanalogues + Essential Amino Acids
+Betamethasone Valerate + Neomycin Sulfate
+Phenytoin Sodium
+Methotrexate
+Ceftriaxone (As Sodium)
+Levocetirizine Dihydrochloride
+Celecoxib
+Peritoneal Dialysis Solution With 2.3% Dextrose
+Cefuroxime (as Axetil)
+Telmisartan
+Erlotinib (as hydrochloride)
+Levocetirizine (as Hydrochloride)
+Co - Amoxiclav
+Epirubicin Hydrochloride
+Gemcitabine (As Hydrochloride)
+Tadalafil
+Magnesium Trisilicate + Aluminum Hydrozide + Simethicone
+Calcium Carbonate
+Ketoanalogues + Essential Amino Acids
+Eucalyptus Oil + Camphor
+Rifampicin + Isoniazid + Ethambutol Hydrochloride
+Sitagliptin (as phosphate)
+Sitagliptin (as Phosphate)
+Multivitamins
+Diphenhydramine Hydrochloride + Phenylpropanolamine Hydrochloride
+Diphenhydramine Hydrochloride + Phenylpropanolamine Hydrochloride
+Prednisolone (As Acetate)
+Rotavirus Vaccine, (Live Attenuated)
+Tolvaptan
+Oxycodone hydrochloride
+Ceftriaxone (as sodium)
+Febuxostat
+Ascorbic Acid
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Nebivolol (as hydrochloride)
+Losartan Potassium
+Ondansetron (as hydrochloride dihydrate)
+CEFUROXIME (AS AXETIL)
+Trimetazidine Hydrochloride
+Telmisartan
+Ceftriaxone (as sodium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Medroxyprogesterone Acetate
+Telmisartan
+Iohexol
+Telmisartan
+Vancomycin (as hydrochloride)
+Ceftriaxone (as Sodium) + Sulbactam (as Sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Mupirocin
+Vancomycin (as hydrochloride)
+Cefixime (as trihydrate)
+Levetiracetam
+Etoricoxib
+Omeprazole Sodium
+Amlodipine (as besilate)
+Mupirocin
+Dibencozide
+Norepinephrine(as bitartrate)
+Simvastatin
+Glutathione
+Doripenem (as monohydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Clarithromycin
+Etoricoxib
+Cefixime (as trihydrate)
+Ursodeoxycholic Acid
+Budesonide
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Levodropropizine
+Vancomycin (as hydrochloride)
+Ketorolac Trometamol
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Omeprazole
+Vancomycin (as hydrochloride)
+Co-Amoxiclav
+Cefixime (as trihydrate)
+Clarithromycin
+Bisacodyl
+Enoxaparin Sodium
+Glimepiride
+Lactulose
+Paracetamol + Tramadol Hydrochloride
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Domperidone
+Amlodipine (as besilate)
+Multivitamins + Iron + Folic Acid
+Telmisartan + Hydrochlorothiazide
+Etoricoxib
+Cefixime (as Trihydrate)
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-BSulfate
+Glimepiride
+Spironolactone
+Montelukast (as Sodium)
+Human Chorionic Gonadotrophin
+Menotrophin
+Urofollitropin
+Multivitamins + Minerals
+Heparin sodium
+Finasteride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Rabeprazole sodium + Itopride hydrochloride
+Montelukast (as sodium) + Levocetirizine dihydrochloride
+Atosiban (as acetate)
+Ascorbic Acid + Zinc
+Telmisartan
+Methylprednisolone (As Sodium Succinate)
+Methylprednisolone (As Sodium Succinate)
+Ascorbic Acid + Zinc
+Medroxyprogesterone Acetate
+Quetiapine (As Fumarate)
+Febuxostat
+Lynestrenol
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Meclizine Hydrochloride
+Trimetazidine Dihydrohcloride
+Domperidone
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Guaifenesin
+Ascorbic Acid + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Ascorbic Acid + Cholecalciferol + Zinc
+Ascorbic Acid + Zinc
+Losartan Potassium + Amlodipine (as Besilate)
+Hydrocortisone (As Sodium Succinate)
+Telmisartan
+Mycophenolate Mofetil
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Sildenafil (As Citrate)
+Sildenafil (As Citrate)
+Norepinephrine(As Bitartrate)
+Betamethasone (As Dipropionate)
+Ethyl Alcohol
+Sildenafil (as citrate)
+Ascorbic Acid + Zinc
+Sitagliptin (as phosphate monohydrate) + Metformin. Hydrochloride
+Anastrozole
+Ascorbic Acid + Colecalciferol (Vitamin D3) + Zinc
+Isopropyl Alcohol
+Ascorbic Acid
+Levofloxacin
+Atorvastatin (As Calcium) + Fenofibrate
+Quetiapine (As Fumarate)
+Diclofenac (as Sodium)
+Clopidogrel (As Bisulfate)
+Clopidogrel (As Bisulfate)
+Amiodarone Hydrochloride
+Telmisartan + Amlodipine (as besilate)
+Irinotecan (as Hydrochloride Trihydrate)
+Ciprofloxacin (As Hydrochloride)
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Pregabalin
+Pregabalin
+Betamethasone (As Valerate)
+Tobramycin (as sulfate)
+Febuxostat
+Doxorubicin Hydrochloride
+Erlotinib (as hydrochloride
+Olmesartan Medoxomil + Amlodipine (as Besilate)
+Olmesartan Medoxomil + Amlodipine (as Besilate)
+Cefotaxime (as sodium)
+Nicardipine Hydrochloride
+Paracetamol
+Moxifloxacin (As Hydrochloride)
+Irinotecan (as hydrochloride)
+Cefuroxime (as Sodium)
+Cefotaxime
+Cisplatin
+Etoposide
+Cetrorelix (as Acetate)
+Telmisartan
+Methyldopa
+Povidone-Iodine
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Levothyroxine sodium
+Amlodipine (As Besilate)
+Amiodarone Hydrochloride
+Vancomycin (As Hydrochloride)
+Esomeprazole(As Magnesium Trihydrate)
+Vildagliptin
+Multivitamins + Zinc
+Fosaprepitant (as Dimeglumine)
+Carbocisteine + Zinc
+Doxofylline
+Pioglitazone (as Hydrochloride)
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Prednisolone (As Sodium Phosphate)
+Prednisolone (As Sodium Phosphate)
+Tacrolimus
+Fulvestrant
+Sitagliptin (As Hydrochloride)
+Sitagliptin (As Hydrochloride)
+Sitagliptin (As Hydrochloride)
+Clopidogrel (As Bisulfate) + Rosuvastatin (as Calcium)
+Clopidogrel (As Bisulfate) + Rosuvastatin (As Calcium)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Risperidone
+Fentanyl (as citrate)
+Cotrimozaxole (Butterscotch Flavor)
+Carbocisteine + Zinc
+Dobutamine (as hydrochloride)
+Ceftriaxone(As Sodium)
+Vildagliptin
+Ketorolac Trometamol
+Clobetasol (As Propionate)
+Clobetasol Propionate
+Zoledronic Acid (as monohydrate)
+Azithromycin (as dihydrate)
+Betamethasone (as dipropionate) + Clotrimazole + Gentamicin (as sulfate)
+Meropenem (as trihydrate)
+Erlotinib (as hydrochloride)
+Lidocaine
+Meropenem (as trihydrate)
+Carfilzomib
+Cefuroxime (as sodium)
+Propofol
+Rocuronium Bromide
+Febuxostat
+Omeprazole (as Sodium)
+Bupivacaine Hydrochloride
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Etoposide
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Chloramphenicol
+Eplerenone
+Atezolizumab
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Hydrocortisone (as sodium succinate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+5% Dextrose in Water
+Bromhexine Hydrochloride
+Ascorbic Acid
+Leflunomide
+Febuxostat
+Febuxostat
+Febuxostat
+Dextromethorphan Hydrobromide + Guaifenesin
+Racecadotril
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Norepinephrine (as bitartrate monohydrate)
+Rivaroxaban
+Rivaroxaban
+Rivaroxaban
+Sitagliptin (as Phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sevelamer Carbonate
+Ethyl Alcohol
+Cebo De Macho
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Paracetamol
+Hedera helix L.(Ivy Leaf Extract)
+Butamirate Citrate
+Multivitamins
+Metoclopramide (as hydrochloride)
+Pregabalin
+Aciclovir
+Eplerenone
+Enoxaparin sodium
+Enoxaparin sodium
+Amoxicillin (as Trihydrate)
+Co-Amoxiclav
+Salbutamol + Guaifenesin
+Cefuroxime (as Sodium)
+Vancomycin (as hydrochloride)
+Oxaliplatin
+Insulin Human (rDNA)
+Azithromycin (as dihydrate)
+Etoricoxib
+Cefixime (as trihydrate)
+Insulin Human (rDNA)
+Cefixime (as trihydrate)
+Etoricoxib
+CEFIXIME
+Loratadine
+Carbocisteine
+Paracetamol
+Methylergometrine (As Maleate)
+Paracetamol
+Carbocisteine
+Ceftriaxone (as sodium)
+Rocuronium Bromide
+Paclitaxel
+Epirubicin Hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Oxytocin
+Trimetazidine Hydrochloride
+Zoledronic Acid (as monohydrate)
+Progesterone
+Folic Acid
+Gliclazide
+Amlodipine (as besilate)
+Metformin hydrochloride
+Insulin Human (rDNA)
+Ceftriaxone (as sodium)
+Sevelamer carbonate
+Potassium Citrate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ceftriaxone (as Sodium)
+Losartan Potassium
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Co-Amoxiclav
+Cefixime (as trihydrate)
+CEFIXIME
+Nystatin
+Losartan Potassium
+Clopidogrel
+Levetiracetam
+Celecoxib
+Metformin hydrochloride
+Metformin hydrochloride
+Metformin hydrochloride
+Ketorolac trometamol
+Ranitidine (as hydrochloride)
+Omeprazole
+HEPARIN SODIUM
+Atorvastatin (as calcium)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Vitex Negundo L. (Lagundi Leaf)
+Telmisartan + Hydrochlorothiazide
+Dicycloverine Hydrochloride
+Apixaban
+Iron Sucrose
+Bortezomib
+Levetiracetam
+Levetiracetam
+Dasatinib
+Dasatinib
+Dasatinib
+Insulin Glargine
+Octreotide (as acetate)
+Biotin (Vitamin B7)
+Ticagrelor
+Alpha Ketoanalogues + Essential Amino Acids
+Thioctic Acid
+Mycophenolate Mofetil
+Methylprednisolone (as sodium succinate)
+Omeprazole (as sodium)
+Povidone-Iodine
+Cholecalciferol (Vitamin D3)
+Paracetamol
+Ethyl Alcohol
+0.9% Sodium chloride
+Midazolam (as Hydrochloride)
+CETIRIZINE DIHYDROCHLORIDE
+Epinephrine (As Hydrochloride)
+Casirivimab + Imdevimab
+Norepinephrine (as bitratrate)
+Bortezomib
+Esomeprazole (as magnesium trihydrate)
+Docetaxel (as trihydrate)
+Febuxostat
+Telmisartan + Amlodipine (as besilate)
+Lactulose
+Trastuzumab
+Etoricoxib
+Mefenamic Acid
+Metoclopramide (as hydrochloride)
+Loperamide Hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Alpha Ketoanalogues + Essential Amino Acids
+Iron
+Iron + Folic Acid
+Iron
+Iron + Folic Acid
+Iron + Folic Acid
+Colecalciferol (Vitamin D3)
+Sterile Water For Injection
+Rosuvastatin (as Calcium)
+Aceite De Manzanilla
+Sterile Water for Injection
+Diclofenac Sodium
+0.9% Sodium Chloride
+Sodium Bicarbonate
+Lidocaine Hydrochloride + Epinephrine (As Bitartrate),
+Ticagrelor
+Aceite De Alcamporado
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Potassium Citrate
+Olmesartan Medoxomil
+Moxifloxacin (as hydrochloride)
+Sildenafil (As Citrate)
+Sildenafil (As Citrate)
+Ofloxacin + Dexamethasone (as sodium phosphate)
+Rosuvastatin (as calcium)
+Carbocisteine
+Olanzapine
+Ascorbic Acid
+ISOFLURANE
+Midazolam Hydrochloride
+Omeprazole
+Cefaclor (as Monohydrate)
+Amoxicillin (as Trihydrate)
+Methylprednisolone (as Sodium Succinate)
+Citicoline (as sodium)
+Gefitinib
+Epoetin Alfa
+Cetirizine Dihydrochloride
+Fenofibrate
+Ondansetron (as hydrochloride)
+Cefaclor (as monohydrate)
+Cefuroxime (as sodium)
+Cefpodoxime (as proxetil)
+Clobetasol Propionate
+Methylprednisolone (as Sodium Succinate)
+Paracetamol
+Atorvastatin (as calcium)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Cefuroxime (as Sodium)
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Clonidine Hydrochloride
+Ondansetron (as Hydrochloride)
+Montelukast (as sodium)+ Levocetirizine Hydrochloride
+Amlodipine (as Besilate) + Hydrochlorothiazide
+Amlodipine (as Besilate) + Hydrochlorothiazide
+Etoposide
+Zinc
+Paracetamol
+Cefuroxime (as axetil)
+Epirubicin Hydrochloride
+Montelukast (as Sodium)
+Ifosfamide
+Carbocisteine
+Prednisone
+Cloxacillin (as Sodium)
+LOSARTAN POTASSIUM
+Ambroxol Hydrochloride
+Paclitaxel
+Tranexamic Acid
+Tranexamic Acid
+Phenylpropanolamine Hydrochloride / Brompheniramine Maleate
+Pregabalin + Mecobalamin
+Gemcitabine (as Hydrochloride)
+Telmisartan + Amlodipine (as besilate)
+Capecitabine
+Diclofenac sodium
+Amoxicillin (as Trihydrate)
+Diphenhydramine Hydrochloride
+Telmisartan + Hydrochlorothiazide
+Metronidazole
+Irinotecan Hydrochloride
+Zinc
+Carbocisteine
+Citicoline (as sodium)
+Gemcitabine (as Hydrochloride)
+Calcipotriol (as monohydrate) + Betamethasone (as dipropionate)
+Eplerenone
+Levetiracetam
+Paclitaxel
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Doxofylline
+Dobutamin (as Hydrochloride)
+Glimepiride
+Glimepiride
+Amlodipine (As Besilate)
+Gabapentin
+Calcitriol
+Ketoconazole
+Mometasone Furoate
+Palbociclib
+Palbociclib
+Palbociclib
+Ursodeoxycholic Acid
+Apixaban
+Meropenem (as Trihydrate)
+Ofloxacin
+Levetiracetam
+Levetiracetam
+Apixaban
+Apixaban
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6)+ Cyanocobalamin (Vitamin B12)
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Bisoprolol Fumarate
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Hydroquinone
+Hydroquinone
+Colecalciferol (Vitamin D3)
+Colecalciferol (Vitamin D3)
+Folic Acid
+Folic Acid
+Diphenhydramine hydrochloride.
+Multivitamins + Iron
+Imatinib (As Mesylate)
+Meclizine Hydrochloride
+Meclizine Hydrochloride
+Paracetamol + Caffeine + Chlorphenamine Maleate + Phenylephrine Hydrochloride
+Rosuvastatin (As Calcium)
+Ondansetron (as Hydrochloride)
+Irbesartan
+Irbesartan
+Epinephrine
+DYDROGESTERONE
+Methyl Salicylate + Eucalyptus Oil+ Menthol + Camphor
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Isopropyl Alcohol
+Ascorbic Acid
+Ascorbic Acid
+Aluminum Hydroxide + Magnesium Hydroxide + Oxetacaine
+Isopropyl Alcohol
+Xylometazoline Hydrochloride
+Omeprazole (As Sodium)
+Dapagliflozin + Metformin Hydrochloride (in extended- release form)
+Dapagliflozin + Metformin Hydrochloride (in extended- release form)
+Olmesartan
+Dapagliflozin + Metformin Hydrochloride (in extended- release form)
+Sterile Water For Injection
+Miconazole
+Dapagliflozin + Metformin Hydrochloride (in extended- release form)
+Rosuvastatin (As Calcium)
+Cefpodoxime ( As Proxetil)
+Sitagliptin (as phosphate monohydrate)
+Rivaroxaban
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Metoprolol Tartrate
+Sitagliptin (as phosphate monohydrate)
+Hyoscine Butylbromide
+Omeprazole (As Sodium)
+Parecoxib (As Sodium)
+Trimetazidine Dihydrochloride
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Rivaroxaban
+Rivaroxaban
+Mefenamic Acid
+Tranexamic Acid
+Ascorbic Acid + Folic Acid + Cyanocobalamin (Vitamin B12)
+Zoledronic Acid
+Loperamide Hydrochloride
+Candesartan
+Moxifloxacin (as hydrochloride)
+Fenofibrate
+Irinotecan Hydrochloride
+Acyclovir
+Vinorelbine (as tartrate)
+Febuxostat
+Mecobalamin
+Ivabradine Hydrochloride
+Ivabradine Hydrochloride
+Gemcitabine (As Hydrochloride)
+Ipratropium Bromide
+Nicardipine Hydrochloride
+Glimepiride
+Omeprazole (As Sodium)
+Salbutamol (As Sulfate)
+Bleomycin (as Sulfate)
+Cefepime (as Hydrochloride)
+Spironolactone
+Zoledronic Acid (as monohydrate)
+Telmisartan
+Telmisartan
+Paclitaxel
+Doxorubicin Hydrochloride
+Ceftazidime (as pentahydrate)
+Amitriptyline hydrochloride
+Etoricoxib
+Etoricoxib
+Dapagliflozin + Metformin Hydrochloride
+Dapagliflozin + Metformin Hydrochloride
+Dapagliflozin + Metformin Hydrochloride
+Dapagliflozin + Metformin Hydrochloride
+Gemcitabine (As Hydrochloride)
+Febuxostat
+Amivantamab
+D-Alpha Tocopherol (Vitamin E)
+D-Alpha Tocopherol (Vitamin E)
+D-Alpha Tocopherol (Vitamin E)
+Cholecalciferol (Vitamin D3
+Cholecalciferol (Vitamin D3
+Ketotifen (As Hydrogen Fumarate)
+Diclofenac Diethylamine
+Ketorolac Trometamol
+Riboflavin (Vitamin B2)
+Eplerenone
+Dobutamine (as Hydrochloride)
+Ascorbic Acid + Zinc (as Bisglycinate)
+Menthol + Methyl Salicylate + Camphor
+Mupirocin
+Bromhexine Hydrochloride
+Bromhexine Hydrochloride
+Isopropyl Alcohol
+Spironolactone
+Rifampicin
+Omeprazole (As Sodium)
+Povidone-Iodine
+Povidone-Iodine
+Povidone-Iodine
+Ondansetron
+Guaifenesin
+Mupirocin
+Nebivolol (as Hydrochloride)
+Nebivolol (as Hydrochloride)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Rivaroxaban
+Sitagliptin (as phosphate)
+Sterile Water For Injection
+Ethyl Alcohol
+Menthol + Camphor + Eucalyptus oil
+Methyl Salicylate + Menthol + Camphor
+Rivaroxaban
+Ethyl Alcohol
+Ethyl Alcohol
+Multivitamins + Minerals + Chlorella pyrenoidosa + Panax ginseng L. (Korean Ginseng) Root + Lecithin + Rutin + Taurine
+Bacterial Lysate
+Rimegepant (as sulfate)
+Gliclazide + Metformin Hydrochloride
+Losartan Potassium + Hydrochlorothiazide
+Mecobalamin
+Fondaparinux Sodium
+Citicoline (as sodium)
+Telmisartan + Amlodipine (As Besilate)
+Rosuvastatin (as calcium)
+PREGABALIN + METHYLCOBALAMIN
+Lurasidone Hydrochloride
+Rosuvastatin (as calcium)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Empagliflozin + Linagliptin
+Empagliflozin + Linagliptin
+Tacrolimus
+Lurasidone Hydrochloride
+Clindamycin (as hydrochloride)
+Teicoplanin
+Teicoplanin
+Simvastatin
+Atorvastatin (as calcium)
+Amlodipine (as besilate) + Bisoprolol fumarate
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Nitroglycerin
+Moxifloxacin (as Hydrochloride)
+Metronidazole (as benzoate)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Amlodipine (as besilale) + Bisoprolol fumarate
+Rivaroxaban
+Letrozole
+Rivaroxaban
+Rivaroxaban
+Tranexamic Acid
+Rivaroxaban
+Simvastatin
+Silver Sulfadiazine
+Cefdinir
+Celecoxib
+Esomeprazole (As Sodium)
+Ipratropium bromide + Salbutamol (as sulfate)
+Febuxostat
+Rocuronium Bromide
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Acetylcysteine
+Clopidogrel (as bisulfate)
+Tramadol Hydrochloride
+Latanoprost
+Paracetamol
+Acetylcysteine
+Hydrocortisone acetate
+Metformin Hydrochloride
+Duloxetine (as Hydrochloride)
+Cefazolin (As Sodium)
+Duloxetine (as Hydrochloride)
+Moxifloxacin (as Hydrochloride)
+Tobramycin (as Sulfate)
+Vildagliptin
+Ceftriaxone (as sodium)
+Cefuroxime(As Sodium)
+Cefuroxime (As Sodium)
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Metformin Hydrochloride
+Ciprofloxacin
+Amikacin (as sulfate)
+Aspirin
+Aspirin
+Aspirin
+Aspirin
+Turmeric Oil+ Menthol
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Bedaquiline (as Fumarate)
+Paracetamol + Phenylpropanolamine (as hydrochloride) + Chlorpheniramine maleate
+Multivitamins + Minerals
+Hydroquinone
+Ascorbic Acid + Zinc
+Ethyl Alcohol
+Glimepiride
+Isopropyl Alcohol
+Prednisone
+Prednisone
+Atorvastatin (as calcium trihydrate)
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besilate)
+Valsartan + Amlodipine (as besilate)
+Azithromycin (as dihydrate)
+Mupirocin
+Oxymetazoline Hydrochloride
+Dextromethorphan Hydrobromide + Guaifenesin + Phenylephrine Hydrochloride
+Dextromethorphan Hydrobromide + Guaifenesin + Phenylephrine Hydrochloride
+Multivitamins + Minerals
+Epirubicin (as hydrochloride)
+Isopropyl Alcohol
+Isopropyl Alcohol
+Bupivacaine (as hydrochloride) w/ Dextrose
+Metronidazole
+Metformin hydrochloride
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Menthol + Camphor
+Tobramycin (as sulfate)
+Losartan potassium + Amlodipine (as besilate)
+Pregabalin
+Pregabalin
+Pregabalin
+Epirubicin Hydrochloride
+Epirubicin Hydrochloride
+Docetaxel (as trihydrate)
+Clindamycin (As Hydrochloride)
+Etoricoxib
+Etoricoxib
+Gabapentin
+Gentamicin (as Sulfate)
+Vildagliptin
+Lactated Ringer's Solution
+Folic Acid
+Pemetrexed (As disodium)
+Pemetrexed(As disodium)
+Gliclazide
+Levetiracetam
+Levetiracetam
+Irbesartan
+Bendamustine Hydrochloride
+Tamsulosin Hydrochloride
+Lactulose
+Irbesartan
+Colecalciferol (Vitamin D)
+Rivaroxaban
+Etoricoxib
+Docetaxel
+Quetiapine (As Fumarate)
+Clotrimazole
+Omeprazole (as Sodium)
+Chlorhexidine Diguconate
+Spherical Carbon Adsorbent
+Perindopril Erbumine
+Rifampicin + Isoniazid
+Loperamide Hydrochloride
+Oxacillin (as sodium)
+Vitamin Bcomplex + Iron + Folic Acid
+Vitex Negundo (Lagundi Leaf)
+Povidone Iodine
+Daclatasvir (as dihydrochloride)
+Daclatasvir (as dihydrochloride)
+Ezetimibe
+Norepinephrine (as bitartrate)
+Fusidic Acid
+Carboplatin
+Losartan Potassium
+Povidone-Iodine
+Alpha Ketoanalogues + Essential Amino Acids
+Acetylcysteine
+Acetylcysteine
+Zoledronic acid (as monohydrate)
+Gabapentin
+Levofloxacin (as hemihydrate)
+Rabeprazole Sodium
+Rabeprazole Sodium
+Propofol
+Betametasone (as valerate) + Clotrimazole + Gentamicin (as sulfate)
+Parecoxib (as sodium)
+Moxifloxacin (as Hydrochloride) + Dexamethasone Phosphate (as Sodium)
+Sevelamer (as Carbonate)
+Metformin Hydrochloride
+Losartan (as Potassium)
+Losartan (as Potassium)
+Etoricoxib
+Aripiprazole
+Lapatinib (as distosylate monohydrate)
+Anastrozole
+Anastrozole
+Acyclovir
+Escitalopram (as oxalate)
+Ketoconazole
+Paracetamol + Tramadol Hydrochloride
+Paracetamol + Orphenadrine Citrate
+Ketorolac Tromethamine
+Levetiracetam
+Levetiracetam
+Moxifloxacin (as Hydrochloride)
+Sterile Water For Injection
+Latanoprost
+Menthol + Camphor
+Menthol + Camphor
+Menthol + Camphor
+Paracetamol
+Gabapentin
+Tobramycin (as Sulfate)
+Ceftazidime (As Pentahydrate)
+Meropenem (as trihydrate)
+Etoricoxib
+Sterile Water For Injection
+Moxifloxacin (as hydrochloride)
+Salbutamol (As Sulfate)
+Losartan Potassium
+Telmisartan + Amlodipine (as besilate)
+Mutivitamins + Zinc
+Lactulose
+Lactated Ringer's Solution
+Levocetirizine dihydrochloride
+Atenolol
+Metronidazole
+Bendamustine Hydrochloride
+Clindamycin (as hydrochloride)
+Povidone-Iodine
+Pioglitazone (As Hydrochloride)
+Pioglitazone (As Hydrochloride)
+Febuxostat
+Docetaxel
+Rifampicin + Isoniazid
+Palonosetron (as hydrochloride)
+Methyl Salicylate + Menthol + Camphor
+Evogliptin (as tartrate)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCl (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Acetylcysteine
+Blumea balsamifera (L.) DC (Sambong Leaf)
+Alfuzosin Hydrochloride
+Calcium Gluconate (as monohydrate)
+Paracetamol + Caffeine
+Sodium Bicorbonate
+Fluorouracil
+Ascorbic Acid + Colecalciferol + Zinc
+Amikacin (as sulfate)
+Thiamine Hydrochloride (Vitamin B1)
+Nitroglycerin
+Ethyl Alcohol
+Metronidazole
+Omeprazole (as sodium)
+Povidone Iodine
+Povidone-Iodine
+Menthol + Camphor + Methyl Salicylate + Eucalyptus Oil
+Erlotinib (as Hydrochloride)
+Oral Rehydration Salts
+Oral Rehydration Salts
+Oral Rehydration Salts
+Multivitamins
+Menthol + Eucalyptus Oil + Camphor
+Paracetamol
+Methyl Salicylate + Camphor + Menthol + Eucalyptus Oil Mineral Oil
+Paracetamol
+Midazolam (as hydrochloride)
+Multivitamins + Lysine + Taurine + Zinc
+Paracetamol
+Paracetamol
+Ampicillin (as sodium)
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Digoxin
+Losartan potassium + Amlodipine (as besilate)
+Losartan potassium + Amlodipine (as besilate)
+Ampicillin (As Sodium)
+Ampicillin (As Sodium)
+Teriflunomide
+Cefuroxime (as axetil)
+Enalapril maleate
+Indacaterol (as acetate) + Glycopyrronium (as bromide) + Mometasone Furoate
+Ceftriaxone (as sodium)
+Lidocaine + Prilocaine
+Silver Sulfadiazine
+Enalapril maleate
+Rivaroxaban
+Rivaroxaban
+Oxytocin
+Paracetamol
+Betamethasone (as valerate) + Neomycin (as sulfate)
+Cefixime (as trihydrate)
+Cefuroxime (as axetil)
+Lenalidomide
+Lenalidomide
+Cefixime (as trihydrate)
+Co-amoxiclav
+Losartan Potassium
+Losartan Potassium
+Metformin hydrochloride + Glibenclamide
+Finasteride
+Betahistine hydrochloride
+Betahistine hydrochloride
+Clindamycin (as hydrochloride)
+Betahistine hydrochloride
+Azithromycin (as dihydrate)
+Timolol (As Maleate)
+Epirubicin hydrochloride
+Cloxacillin (as sodium)
+Ceftriaxone (as sodium)
+Tadalafil
+Tadalafil
+Betamethasone (as dipropionate)
+Pregabalin
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Amikacin (as sulfate)
+Candesartan cilexetil
+Candesartan cilexetil
+Menthol
+Methyl Salicylate + Menthol + Eugenol
+Co-Amoxiclav
+Moxifloxacin (as hydrochloride)
+Inclisiran (as sodium)
+Alfuzosin Hydrochloride
+Diclofenac Sodium
+Icatibant
+Multivitamins + Minerals + Chorella Growth Factor (CGF)
+Multivitamins + Minerals + Chorella Growth Factor (CGF)
+Peritoneal Dialysis Solution with 2.3% Dextrose
+Fentanyl (as citrate)
+Gentamicin (as sulfate)
+Ketoconazole + Clobetasol (as propionate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Etoricoxib
+Ursodeoxycholic Acid
+Dolutegravir (as sodium) + Lamivudine + Tenofovir disoproxil fumarate
+Esomeprazole (as magnesium trihydrate)
+Esomeprazole (as magnesium trihydrate)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Ethyl Alcohol
+Mycophenolate Mofetil
+Ferrous sulfate + Folic Acid + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Rivaroxaban
+Rivaroxaban
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ketoconazole
+Rivaroxaban
+Rivaroxaban
+Ambroxol Hydrochloride
+Paracetamol
+Rivaroxaban
+Mupirocin
+Mupirocin
+Rivaroxaban
+Rivaroxaban
+Paracetamol
+Paracetamol
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Norepinephrine (as bitartrate)
+Norepinephrine (As Bitartrate)
+Clopidogrel
+Norepinephrine (as Bitartrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Nicardipine Hydrochloride
+Etoricoxib
+Ampicillin (as Sodium)
+Ampicillin (as sodium)
+Omeprazole Sodium
+Omeprazole Sodium
+Ampicillin (as sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Amlodipine (as besilate)
+Telmisartan
+Telmisartan
+Telmisartan
+Bisacodyl
+Ferrous Sulfate + Folic Acid
+d-Alpha Tocopherol (Vitamin E)
+Loratadine
+Multivitamins + Iron + Buclizine Hydrochloride + Lysine Hydrochloride
+Irbesartan
+Pregabalin
+Loperamide hydrochloride
+Irbesartan
+Ascorbic Acid
+Hydrogen Peroxide
+Methyldopa (as Sesquihydrate)
+Febuxostat
+Aluminum Hydroxide + Magnesium Hydroxide
+Ceftazidime
+Cetirizine (as Dihydrochloride) + Phenylephrine. Hydrochloride
+Paracetamol + Phenylephrine hydrochloride + Chlorphenamine maleate
+Docetaxel trihydrate
+Ibrutinib
+Ibrutinib
+Menthol + Camphor + Borneol + Eucalyptus Oil
+Tadalafil
+Tadalafil
+Tadalafil
+Meropenem
+Metformin Hydrochloride
+Itraconazole
+Itraconazole
+Isotretinoin
+Isotretinoin
+Losartan Potassium + Hydrochlorothiazide
+Ibandronic Acid (as sodium monohydrate)
+Clarithromycin
+Mometasone furoate (as monohydrate)
+Carnitine Orotate + Liver Extract + Riboflavin (Vitamin B2) Adenine hydrochloride (Vitamin B4) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Metoclopramide Hydrochloride
+Acetated Ringer's Solution
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Clobetasol propionate
+Clobetasol propionate
+Thymalfasin
+Cefepime (as hydrochloride) (with L-Arginine)
+Acetylcysteine
+Candesartan cilexetil
+Dolutegravir (as sodium)
+Oxaliplatin
+Ascorbic Acid + Zinc
+Phospholipids
+Ascorbic Acid + Colecalciferol (Vitamin D,) + Zinc
+Oxaliplatin
+Sodium Bicarbonate
+Clove Oil
+Ferrous fumarate + Folic Acid (Vitamin B9)
+Ferrous sulfate + Folic Acid (Vitamin B9)
+Folic Acid (Vitamin B9)
+Ferrous fumarate+ Folic Acid (Vitamin B9)
+Ferrous fumarate+ Folic Acid (Vitamin B9)
+Paracetamol
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Methylergometrine maleate
+Methyldopa
+Co-Amoxiclav
+Bevacizumab
+Bevacizumab
+Rosuvastatin (as calcium)
+Peppermint Oil+ Eucalyptus Oil+ Methyl Salicylate + Camphor
+Peppermint Oil+ Eucalyptus Oil+ Methyl Salicylate + Camphor
+Peppermint Oil + Methyl Salicylate + Camphor
+Peppermint Oil + Methyl Salicylate + Camphor
+Rivaroxaban
+Propofol
+Rivaroxaban
+Irbesartan
+Bacitracin + Polymyxin B Sulfate + Neomycin
+Multivitamins + Minerals
+Colecalciferol (Vitamin D3)
+Mupirocin
+Calcium (as Carbonate)
+Calcium (as Carbonate)
+Calcium + Colecalciferol (Vitamin D3)
+Clobetasol Propionate
+Colecalciferol (Vitamin D3)
+Lisinopril (as dihydrate)
+Bisoprolol fumarate
+Bisoprolol fumarate
+Bisoprolol fumarate
+Gabapentin
+Apixaban
+Apixaban
+Amikacin (as sulfate)
+Cetirizine Dihydrochloride
+Oral Rehydration Salts
+Guaifenesin Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Ascorbic Acid + Zinc
+Valacyclovir (as hydrochloride)
+Atropine sulfate
+Medical Grade Oxygen
+Herpes Zoster Vaccine (recombinant, adjuvanted)
+Metformin Hydrochloride
+Gemcitabine (as hydrochloride)
+Losartan Potassium + Hydrochlorothiazide
+Fenofibrate
+Metformin Hydrochloride
+Midazolam
+Clobetasol propionate
+Omeprazole (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Pantoprazole (as sodium)
+Metformin Hydrochloride
+Etoricoxib
+Etoricoxib
+Hydrocortisone Acetate
+Citicoline (as Sodium)
+Ofloxacin
+Rabeprazole sodium
+Azithromycin (as dihydrate)
+Pregabalin
+Dacomitinib (as monohydrate)
+Dacomitinib (as monohydrate)
+Dacomitinib (as monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Dorzolamide (as hydrochloride)
+Memantine Hydrochloride
+Dexamethasone + Neomycin (as sulfate) + Polymyxin B Sulfate
+Sevelamer Carbonate
+Fluorouracil
+Salbutamol (as sulfate) + Bromhexine Hydrochloride + Guaifenesin
+Clarithromycin
+Glutathione (reduced)
+Doxorubicin hydrochloride
+Doxofylline
+0.9% Sodium Chloride
+Furosemide
+Brexpiprazole
+Brexpiprazole
+Brexpiprazole
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Prednicarbate
+Medical Grade Oxygen
+Sitagliptin (as phosphate monohydrate)
+Oral Rehydration Salts
+Multivitamins + Minerals
+Ethambutol Hydrochloride
+Ethambutol Hydrochloride
+Ethambutol hydrochloride
+Ethambutol Hydrochloride
+Colecalciferol (Vitamin D3) + Minerals
+Apixaban
+Apixaban
+Brexpiprazole
+Vildagliptin
+Dextromethorphan Hydrobromide
+Povidone-Iodine
+Mupirocin
+Paracetamol
+Oral Rehydration Salts
+Oral Rehydration Salts
+Oral Rehydration Salts
+Ascorbic Acid + Zinc
+Oral Rehydration Salts
+Oral Rehydration Salts
+Oral Rehydration Salts
+Paracetamol
+Ascorbic Acid + Zinc
+Chlorhexidine (as gluconate)
+Loratadine + Betamethasone
+Methyldopa
+Miconazole (as nitrate)
+Ferrous Sulfate + Folic Acid
+Povidone Iodine
+Teneligliptin (as hydrobromide hydrate)
+Ethyl Alcohol
+Zinc
+Medical Grade Oxygen
+Cetrorelix (as acetate)
+Ofloxacin
+Cetrorelix (as acetate)
+Cetrorelix (as acetate)
+Metoclopramide
+Alglucosidase alfa
+Menthol + Methyl Salicylate + Eucalyptus Oil + Camphor
+Sugammadex (as sodium)
+Sugammadex (as sodium)
+Vincristine Sulfate
+Ascorbic Acid + Zinc
+Isopropyl Alcohol
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Letrozole
+Mometasone Furoate
+Cetirizine
+Multivitamins + Minerals
+Leflunomide
+Clopidogrel Bisulfate
+Ibuprofen + Paracetamol
+Omeprazole
+Zinc
+D-Alpha Tocopheryl Acid Succinate
+Thiamine (Vitamin B1)+ Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12) + Iron
+Multivitamins + Minerals
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Tranexamic Acid
+Atracurium Besilate
+Cholecalciferol (Vitamin D3)
+Amlodipine (as besylate)
+Fluconazole
+Ampicillin (as sodium)
+Sitagliptin (as phosphate monohydrate)
+Etoricoxib
+Docetaxel
+Salbutamol (as sulfate)
+Paracetamol
+0.9% Sodium Chloride
+Thiamine (Vitamin B1)+ Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Metformin Hydrochloride
+Amoxicillin (as trihydrate)
+Sildenafil (as citrate)
+Sitagliptin (as phosphate)
+Azacitidine
+Empagliflozin
+Empagliflozin
+Miconazole (as nitrate)
+Levetiracetam
+Citicoline (as sodium)
+Dexketoprofen (as Trometamol)
+Ascorbic Acid + Zinc
+Gadoteric Acid
+Ascorbic Acid + Zinc
+Sulfur
+Diphenhydramine Hydrochloride
+Metformin Hydrochloride
+Ibrutinib
+Cetrorelix (as acetate)
+Chlorhexidine Gluconate
+Ascorbic Acid + Zinc
+Phenylpropanolamine + Paracetamol
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Methyl Salicylate + Menthol + Camphor
+Multivitamins+ Iron + L-Lysine
+Vildagliptin
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Dopamine Hydrochloride
+Co-Amoxiclav
+Doxorubicin Hydrochloride
+Ethyl Alcohol
+Petroleum Jelly
+Petroleum Jelly
+Petroleum Jelly
+Ethyl Alcohol
+Gliclazide
+Gliclazide
+Isopropyl Alcohol
+Ethyl Alcohol
+Glimepiride
+0.9% Sodium Chloride
+0.9% Sodium Chloride
+Epoetin Beta
+Hedera helix (Ivy Leaf Powder Extract) + Glycyrrhiza glabra (Licorice Powder Extract) + Thymus vulgaris (Thyme Powder Extract)
+Gabapentin
+Acetylcysteine
+Rosuvastatin (as calcium)
+Paracetamol
+Linezolid
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Gabapentin
+Febuxostat
+Febuxostat
+Esomeprazole (as magnesium trihydrate)
+Clobetasol propionate
+Ezetimibe + Simvastatin
+Bortezomib
+Amino acids + Electrolytes + Glucose
+Co-Amoxiclav
+Iron (as Iron Sucrose)
+Salbutamol (as sulafte) + Ipratropium Bromide
+Ascorbic Acid + Zinc+ d-alpha Tocopheryl succinate (Vitamin E)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Citicoline (as sodium)
+Irbesartan
+Citicoline
+Sodium Bicarbonate
+Rasagiline (as tartrate)
+Vancomycin Hydrochloride
+Vancomycin Hydrochloride
+Azithromycin (as dihydrate)
+Cefixime (As Trihydrate)
+Gemcitabine (as Hydrochloride)
+Triamcinolone Acetonide + Neomycin (As Sulfate) + Gramicidin + Nystatin
+Multivitamins + Iron
+Doxorubicin Hydrochloride
+Cisplatin
+Losartan Potassium + Hydrochlorothiazide
+Tozinameran/Famtozinameran
+Isopropyl Alcohol
+Isopropyl Alcohol
+Cefoxitin (as sodium)
+Pantoprazole (As Sodium Sesquihydrate) + Domperidone
+Colistimethate Sodium
+Citicoline Sodium
+5% Dextrose in 0.9% Sodium Chloride
+Oral Poliomyelitis Vaccine (Types 1 and 3)[ Live, Attenuated]
+Donepezil hydrochloride
+Atorvastatin Calcium
+Ampicillin (as sodium)
+Ceftriaxone (as sodium)
+Cefixime (as trihydrate)
+Roflumilast
+AMlodipine (as besilate)
+Budesonide
+Budesonide
+Ketoanalogues + Essential Amino Acids
+Propanolol Hydrochloride
+Pregabalin
+Rifampicin + Isoniazid
+Rosuvastatin (As Calcium)
+Methylprednisolone (as sodium succinate)
+Leuprolide Acetate
+Mupirocin
+Mupirocin
+Methyl Salicylate + Camphor + Menthol
+Pomalidomide
+Pomalidomide
+Pomalidomide
+Pomalidomide
+Ascorbic Acid
+Methyl Salicylate + Camphor + Menthol
+Olanzapine
+Florfenicol (Vet.)
+Petroleum Jelly
+Petroleum Jelly
+Petroleum Jelly
+Cholecalciferol (Vitamin D3)+ Minerals
+Colistimethate Sodium
+Dexmedetomidine (as hydrochloride)
+Mefenamic Acid
+Ethyl Alcohol
+Rivaroxaban
+Tenofovir disoproxil fumarate + Lamivudine Efavirenz
+Olanzapine
+Tranexamic Acid
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Mometasone Furoate
+Mupirocin
+Ascorbic Acid + Zinc
+Vildagliptin
+Amoxicillin (as trihydrate)
+Sodium Valproate
+Ampicillin (as sodium)
+Pregabalin
+Apixaban
+Apixaban
+Apixaban
+Donepezil Hydrochloride
+Cilostazol
+Gemcitabine (As Hydrochloride)
+Gemcitabine (As Hydrochloride)
+Clobetasol Propionate
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Telmisartan
+Febuxostat
+Ceftriaxone (as sodium)
+Telmisartan
+Vancomycin (as hydrochloride)
+Cefoxitin (as sodium)
+Cefuroxime ( as sodium )
+Cisplatin
+Ceftriaxone Sodium + Sulbactam Sodium
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Lacosamide
+Lacosamide
+Lacosamide
+Febuxostat
+Meropenem (as trihydrate)
+Febuxostat
+Cefixime (as trihydrate)
+Bosentan (As Monohydrate)
+Bosentan (as monohydrate)
+Desvenlafaxine (as succinate monohydrate)
+Desvenlafaxine (As succinate monohydrate)
+Febuxostat
+Paracetamol
+Paracetamol
+Propranolol Hydrochloride
+Propranolol Hydrochloride
+Potassium Citrate
+Ascorbic Acid + Zinc
+Etoricoxib
+Fluconazole
+Amlodipine ( as besilate)
+Dapagliflozin
+Citicoline Sodium
+Citicoline (as sodium)
+Hypromellose
+Losartan Potassium + Hydrochlorothiazide
+Paclitaxel
+Enalapril Maleate
+Levocetirizine Dihydrochloride
+Betamethasone ( as dipropionate)
+Tioconazole + Tinidazole
+Anastrozole
+Ketoanalogues + Essential Amino Acids
+Omeprazole
+Norepinephrine
+Clotimazole
+Tranexamic Acid
+Olmesartan Medoxomil
+Olmesartan Medoxomil
+Tramadol Hydrochloride + Paracetamol
+Tranexamic Acid
+Co-Amoxiclav
+Atracurium Besylate
+Dopamine Hydrochloride
+Atorvastatin (as calcium trihydrate)
+Atorvastatin (as calcium trihydrate)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Ketoanalogues and Essential Amino Acids
+Cisatracurium ( As Besilate)
+Sorafenib Tosylate
+Salbutamol (as sulfate) + Guaifenesin
+Cetirizine (as hydrochloride)
+Voriconazole
+Cilostazol
+Mupirocin
+Aciclovir
+Clonidine hydrochloride
+Pantoprazole (as sodium sesquihydrate) + Domperidone (as maleate)
+Apixaban
+Apixaban
+Glucose (as monohydrate)
+Chamomile Oil (Aceite Manzanilla)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan + Amlodipine (As Besilate)
+Ifosfamide
+Oxymetazoline Hydrochloride
+Oxymetazoline Hydrochloride
+Dutasteride
+Rivaroxaban
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Apixaban
+Glimepiride
+Glimepiride
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Sorafenib (as tosilate)
+Factor VIII Inhibitor Bypassing Activity
+Powder for Solution for Infusion (IV)
+Acetylcysteine
+Lisinopril (as dihydrate)
+Lisinopril (as dihydrate)
+Lisinopril (as dihydrate)
+Betamethasone (as valerate)
+Lidocaine Hydrochloride
+Rifampicin + Isoniazid + Ethambutol Hydrochloride + Isoniazid
+soniazid + Pyridoxine Hydrochloride
+Atorvastatin (as calcium trihydrate)
+Amlodipine (as besylate) + Valsartan
+Topotecan (as hydrochloride)
+Levothyroxine sodium
+Ceftriaxone (As Sodium)
+Vildagliptin
+Co-Amoxiclav
+Methyl Salicylate Menthol + Camphor
+Febuxostat
+Paracetamol
+Xylometazoline hydrochloride
+Xylometazoline hydrochloride
+Silodosin
+Bimatoprost + Timolol Maleate
+Bimatoprost
+Apixaban
+Apixaban
+Vildagliptin
+Imatinib (as mesylate)
+Clindamycin (as phosphate)
+Potassium Chloride
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Imatinib (as mesylate)
+Tranexamic Acid
+Metformin Hydrochloride
+Ciprofloxacin (as hydrochloride)
+Metformin hydrochloride
+Sitagliptin
+Pantoprazole (As Sodium)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Ceftriaxone (As Sodium)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Glimepiride
+Glibenclamide
+Olanzapine
+Omeprazole (as sodium monohydrate).
+Budesonide
+Sitagliptin
+Sitagliptin
+Vancomycin (as hydrochloride)
+Cefixime (as trihydrate)
+Capecitabine
+Valacyclovir (As Hydrochloride)
+Etoricoxib
+Cilostazol
+Paclitaxel
+Cefepime (as hydrochloride)
+Rivaroxaban
+Gefitinib
+Linezolid
+Rifampicin + Isoniazid
+Gadobutrol
+Quetiapine (as fumarate)
+Betamethasone (as valerate)
+Betamethasone (as valerate)
+Quetiapine Fumarate
+Quetiapine (as fumarate)
+Dexmedetomidine (as hydrochloride) in 0.9% Sodium Chloride
+Quetiapine Fumarate
+Iron (as Ferrous Sulfate Heptahydrate)
+Iron (as Ferrous Sulfate Heptahydrate) + Folic Acid
+Ascorbic Acid
+Clarithromycin
+Clindamycin (as phophate)
+Multivitamins Minerals
+dl-alpha Tocopheryl Acetate (Vitamin E).
+Co-Amoxiclav
+Co-Amoxiclav
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Irinotecan Hydrochloride
+Clarithromycin
+Glimepiride
+Glimepiride
+Losartan Potassium + Hydrochlorothiazide
+Cefixime (as trihydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Lidocaine Hydrochloride
+Empagliflozin + Metformin hydrochloride
+Mupirocin
+Amlodipine (as besilate) + Valsartan
+Acetylcysteine
+Bortezomib
+Pantoprazole (as sodium sesquihydrate)
+Citicoline (as sodium)
+Gadodiamide
+Cefpodoxime (as proxetil)
+Metformin hydrochloride
+Pregabalin
+Clopidogrel (as bisulfate)
+Prednisolone
+Finasteride
+Piperacillin as (sodium) + Tazobactam (as sodium)
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Retinol (as palmitate) (Vitamin A)
+Isopropyl Alcohol
+Ibuprofen
+Pregabalin
+Clobetasol (as propionate)
+Clotrimazole
+Pomalidomide
+Pomalidomide
+Pomalidomide
+Pomalidomide
+Ceftriaxone (as sodium)
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Fusidic Acid
+Paracetamol + Phenylpropanolamine HC1 Chlorphenamine maleate
+Zinc
+Paracetamol
+Nicardipine Hydrochloride
+Paracetamol
+Gabapentin
+Loratadine
+Atorvastatin (as calcium)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as Phosphate monohydrate)
+Sitagliptin (as Phosphate monohydrate)
+Salbutamol(as sulfate) + Ipratropium Bromide
+Carbocisteine
+Dobutel
+Gefitinib
+Telmisartan + Amlodipine (as besilate)
+Cinnarizine
+Co-Amoxiclav
+Cefepime (as hydrochloride)
+Benzoic Acid + Salicyclic Acid
+Pregabalin
+Povidone - Iodine
+Calcium Folinate
+Propofol
+Citicoline (As Sodium)
+Amlodipine (as besilate)
+Ceftriaxone (as sodium)
+Cefuroxime (as sodium)
+Amphotericin-B
+Hydroxychloroquine Sulfate
+Hydroxychloroquine Sulfate
+Hydorxychloroquine Sulfate
+Methylprednisolone (as sodium succinate)
+Remimazolam
+Cefazolin (as Sodium)
+Montelukast (as Sodium)
+Irbesartan + Hydrochlorothiazide
+Cefuroxim (as sodium)
+Gabapentin
+Carmellose sodium
+Gliclazide
+Diazepam
+Telmisartan + Hydrochlorothiazide
+Racecadotril
+Co - Amoxiclav
+Clonidine Hydrochloride
+Gliclazide
+Fluticasone Furoate
+Rivaroxaban
+Racecadotril
+Valaciclovir (As Hydrochloride)
+Pantoprazole as Sodium)
+Risperidone
+Pantoprazole (as sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Dapagliflozin
+Ursodeoxycholic Acid
+Candesartan Cilexetil
+Rituximab
+Losartan Potassium
+Topiramate
+Topiramate
+Cetrorelix (as acetate)
+Fenofibrate
+Azithromycin (as dihydrate)
+Metformin Hydrchloride
+Fulvestrant
+Ketoanalogues + Essential Amino Acids
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Clotrimazole
+Rituximab
+Topiramate
+Candesartan cilexetil
+Esomeprazole (as magnesium trihydrate)
+Fluconazole
+Fluconazole
+Menthol + Peppermint Oil
+Solifenacin succinate
+Budesonide
+Escitalopram (As Oxalate)
+Sertraline (As Hydrochloride)
+Ciprofloxacin
+Diosmin + Hesperidin
+Ketoanalogues + Essential Amino Acids
+Apixaban
+Apixaban
+Zoledronic Acid (as monohydrate)
+Citicoline (As Sodium)
+Clindamycin (as phosphate)
+Clindamycin (as phosphate)
+Ranitidine (As Hydrochloride)
+Cefotaxime (As Sodium)
+Losartan Potassium + Amlodipine (As Besilate)
+Ethambutol Hydrochloride
+Ranitidine (As Hydrochloride)
+Methylcobalamin (Vitamin B12)
+Carbocisteine
+Simvastatin
+Celecoxib
+Losartan Potassium
+Losartan Potassium
+Oxytocin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Mupirocin
+Vildagliptin + Metformin Hydrochloride
+Digoxin
+Lurasidone Hydrochloride
+Cefepime (as hydrochloride)
+Dexketoprofen (As Trometamol)
+Xylometazoline (as Hydrochloride)
+Xylometazoline (as Hydrochloride)
+Diosmin + Hesperidin
+Calamine + Zinc Oxide
+Calamine + Zinc Oxide
+Calamine + Zinc Oxide
+Paracetamol + Caffeine Anhydrous + Phenylephrine Hcl + Chlorphenamine Maleate
+Linagliptin
+Pantoprazole (As Sodium)
+Calamine + Zinc Oxide
+Irbesartan
+Gabapentin
+Etoricoxib
+Sugammadex (as sodium)
+Pregabalin
+Pregabalin
+IVERMECTIN 10 MG/ML
+Cefalexin (as Monohydrate) (Vet.)
+Frunevetmab (Vet.)
+Vaccination Device (Vet.)
+Vitamin B-Complex
+Marbofloxacin (Vet.)
+Spironolactone
+Sodium Bicarbonate
+Sodium Bicarbonate
+Propofol
+Propofol
+Etoricoxib
+Enoxaparin sodium
+Cetirizine Dihydrochloride
+Epinephrine
+Betahistine Dihydrochloride
+Co-Amoxiclav
+Betahistine Dihydrochloride
+Quetiapine (as fumarate)
+Lactulose
+Memantine Hydrochloride
+Cefuroxime (as axetil)
+Nystatin
+L-Asparaginase
+Cabotegravir
+Cabotegravir (as sodium)
+Mometasone Furoate
+Ceftriaxone (as sodium)
+Levetiracetam
+Linezolid
+Adapalene
+Ethyl Alcohol
+Isopropyl Alcohol
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Calcium Carbonate
+Calcium Carbonate
+Calcium + Cholecalciferol
+Guaifenesin + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Ceftazidime (As Sodium)
+Cetirizine Dihydrochloride Hydrochloride
+Levetiracetam
+Levetiracetam
+Enzalutamide
+Iohexol
+Iohexol
+Clotimazole
+Caspofungin (as acetate)
+Telmisartan + Hydrochlorothiazide
+Clindamycin (as hydrochloride)
+Amlodipine (as Besilate + Olmesartan Medoxomil
+Amlodipine (as Besilate) + Olmesartan Medoxomil
+Dutasteride
+Meropenem (as trihydrate)
+Vitex Negundo L. Lagundi Leaf
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Paracetamol + Guaifenesin + Phenylpropanolamine (as hydrochloride) + Dextromethorphan hydrobromide + Chlorpheniramine maleate
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Pioglitazone (as hydrochloride)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Menthol + Eucalyptus Oil + Camphor
+Terbinafine (as hydrochloride)
+Chlorhexidine (as gluconate)
+Chlorhexidine (AS Gluconate)
+Ferrous Sulfate
+Paracetamol
+Gliclazide
+Pioglitazone (as hydrochloride)
+Isopropyl Alcohol
+Paracetamol + Chlorpheniramine Maleate + Phenylephrine Hcl + Caffeine
+Levothyroxine Sodium (as hydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Pantoprazole (as sodium sesquihydrate)
+Pantoprazole (As Sodium)
+Levonorgestrel
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Methyldopa
+Ivabradine (as hydrochloride)
+Dapagliflozin
+Chloramphenicol
+Aripiprazole
+Gabapentin
+Montelukast (as sodium)+ Levocetirizine Hydrochloride
+Mupirocin
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Clopidogrel (as bisulfate)
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Gliclazide
+Gliclazide
+Mupirocin
+Cefotaxime (as sodium)
+Ceftriaxone Sodium
+Ciprofloxacin (as Lactate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Levofloxacin (as hemihydrate)
+Omeprazole (as sodium)
+Ceftazidime (as pentahydrate)
+Piperacillin (as Sodium) / Tazobactam (as Sodium)
+Piperacillin (as Sodium) / Tazobactam (as Sodium)
+Paracetamol
+Levetiracetam
+Hydroxycarbamide
+Isopropyl Alcohol
+Cetirizine Hydrochloride
+Ascorbic Acid
+Bisacodyl
+Hyoscine N- Butylbromide
+Ascorbic Acid + Zinc
+5% Dextrose in 0.3% Sodium Chloride
+5% Dextrose in 0.9% Sodium Chloride.
+5% Dextrose in Water
+5% Dextrose in Lactated Ringer's Solution
+Ethyl Alcohol
+Isopropyl Alcohol
+Carbocisteine + Zinc
+Tadalafil
+Trimetazidine Dihydrochloride
+Dexamethasone phosphate (as sodium)
+Losartan Potassium + Hydrochlorothiazide
+Bisoprolol fumarate
+Bisoprolol Fumarate
+Bisoprolol fumarate
+Bisoprolol fumarate
+Sildenafil (as citrate)
+Paracetamol
+Salicylic Acid + Benzoic Acid
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Cefuroxime (as sodium) with Sterile Water for Injection
+Cefuroxime (as Sodium)
+Ceftazidime (as pentahydrate) with sodium carbonate
+Ceftazidime (as pentahydrate with sodium carbonate) with Sterile Water for Injection
+Paracetamol + Caffeine + Phenylephrine hydrochloride + Chlorphenamine maleate
+Paracetamol + Caffeine + Phenylephrine hydrochloride + Chlorphenamine maleate
+Paracetamol + Caffeine + Phenylephrine hydrochloride + Chlorphenamine maleate
+Levodropropizine
+Levodropropizine
+Silver Sulfadiazine
+Trimetazidine hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Valsartan
+Valsartan
+Medroxyprogesterone acetate
+Telmisartan
+Rizatriptan (as Benzoate)
+Haloperidol
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Rotavirus Vaccine (Live, Attenuated)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Trimetazidine Hydrochloride
+Montelukast (as sodium)+Levocetirizine dihydrochloride
+Doxofylline
+Celecoxib
+Celecoxib
+Rosuvastatin (as Calcium)
+Metformin Hydrochloride + Sitagliptin (as phosphate monohydrate)
+Metformin Hydrochloride + Sitagliptin (as phosphate monohydrate)
+Telmisartan
+Tacrolimus
+Tacrolimus
+Telmisartan + Amlodipine (As Besilate)
+Telmisartan
+Telmisartan + Amlodipine(as besilate)
+Budesonide/Glycopyrronium (as bromide)/ Formoterol fumarate (as dihydrate)
+Omeprazole (as sodium)
+Ampicillin (as sodium)
+Rabeprazole Sodium
+Clopidogrel (as bisulfate)
+Colistimethate sodium
+Omeprazole
+Omeprazole
+Levetiracetam
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Irbesartan + Hydrochlorothiazide
+Levetiracetam
+Lactulose
+Salicylic Acid
+Clindamycin (as phosphate)
+Nystatin
+Edoxaban (as tosilate)
+Edoxaban (as tosilate)
+Edoxaban (as tosilate)
+Hyoscine N-Butylbromide
+Multivitamin + Mineral + Lecithin + Korean Ginseng + Aloe Extract
+Rebamipide
+Hyoscine-N-Butylbromide
+Cetirizine Dihydrochloride
+Mefenamic Acid
+Multivitamins
+Methylprednisolone (as sodium succinate)
+Paracetamol
+Dutasteride + Tamsulosin hydrochloride
+Hydroxychloroquine sulfate
+Quetiapine (as fumarate)
+Cholecalciferol (Vitamin D3)
+Medical Grade Oxygen
+Sulfur
+Iopamidol
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Ethyl Alcohol
+Calcium Colecalciferol (Vitamins D3) + Minerals (Vitamins D3) + Minerals
+Clobetasol Propionate
+D-Alpha Tocopherol (Vitamin E)
+Cefuroxime (as sodium)
+Tenofovir Disoproxil Fumarate
+Colecalciferol
+Chlorhexidine Gluconate + Ethyl Alcohol
+Cetirizine Hydrochloride
+Diltiazem hydrochloride
+Cinnarizine
+Diosmin Hesperidin
+Potassium citrate
+Irbesartan + Hydrochlorothiazide
+Ascorbic Acid + d-Alpha Tocopherol (Vitamin E) + Zinc
+Ascorbic Acid + d-Alpha Tocopherol (Vitamin E) + Zinc
+Amikacin (as sulfate)
+Fosfomycin (as trometamol)
+Bortezomib
+Dabigatran Etexilate (as mesilate)
+Dabigatran Etexilate (as mesilate)
+Dabigatran Etexilate (as mesilate)
+Amikacin (as sulfate)
+Ertapenem (as sodium)
+Ampicillin (as sodium)
+Atropine (as sulfate)
+Paracetamol
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Cefixime (as trihydrate)
+Propofo
+Ketoanalogues+ Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Atenolol
+Cefixime (as trihydrate)
+Propofol
+Methyl Salicylate + Camphor
+Hydroquinone + Tretinoin
+Doxofylline
+Cisplatin
+Ascorbic acid + Cholecalciferol (Vitamin D3) + Zinc
+Caspofungin (as acetate)
+Metronidazole
+Metronidazole
+Metronidazole
+Metronidazole
+Cetirizine
+Ferrous Sulfate + Folic Acid
+Ferrous Sulfate + Folic Acid
+Ferrous Fumarate + Folic Acid
+Ferrous Fumarate + Folic Acid
+Cetirizine
+Captopril
+Ascorbic Acid + Zinc
+Methylprednisolone
+Methylprednisolone
+Ascorbic Acid + Zinc
+Netarsudil (as mesylate) + Latanoprost
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Fenofibrate
+Irbesartan + Hydrochlorothiazide
+Co-Amoxiclav
+Cefixime (as trihydrate)
+Menthol + Peppermint Oil
+Multivitamins + Mineral
+Ascorbic Acid + Zinc+ Cholecalciferol (Vitamin D3)
+Tobramycin
+Mefenamic Acid
+Mefenamic Acid.
+Mefenamic Acid
+Iopamidol
+Iopamidol
+Atenolol
+Atenolol
+Atenolol
+Atenolol
+Iopamidol l
+Telmisartan
+Irbesartan + Hydrochlorothiazide
+Iopamidol
+Iopamidol
+Iopamidol
+Iopamidol
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate).
+Telmisartan + Amlodipine (as besilate)
+20% Lipids Emulsion + 13% Glucose + 10% Amino Acids with Electrolytes
+42% Glucose + 20% Lipids Emulsion + 10% Amino Acids with Electrolytes.
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Iron Sucrose (as Ferric Hydroxide Sucrose Complex)
+Ketorolac Tromethamine
+Tacrolimus
+Tacrolimus
+Ledipasvir + Sofosbuvir
+Paracetamol + Guaifenesin Phenylpropanolamine HCI + Dextromethorphan HBr + + Chlorphenamine. Holate
+Ascorbic Acid + Zinc
+Febuxostat
+Chlorphenamine maleate
+Ascorbic Acid + Zinc
+Colecalciferol (Vitamin D3)
+Isopropyl Alcohol
+Losartan Potassium
+Ciprofloxacin (as hydrochloride)
+Cefuroxime (as sodium)
+Ceftriaxone (as sodium)
+Methylprednisolone
+Methylprednisolone
+Cefazolin (as sodium)
+Methyl Salicylate + Camphor + Menthol
+Cefepime (as hydrochloride) + Tazobactam (as sodium)
+Aceite Alcamporado
+Celecoxib
+Paracetamol + Phenylpropanolamine (as) hydrochloride) + Chlorphenamine maleate
+Paracetamol + Phenylpropanolamine (as hydrochloride) + Chlorphenamine maleate
+Colchicine
+Pemetrexed (as disodium)
+Morphine Sulfate
+Chlorphenamine maleate
+Chlorphenamine maleate
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Celecoxib
+Clarithromycin
+Clarithromycin
+Cloxacillin
+Tamsulosin Hydrochloride
+Salbutamol (as sulfate)
+Gemcitabine (as hydrochloride)
+Ephedrine hydrochloride
+Apixaban
+Apixaban
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Clopidogrel (as bisulfate)
+Clindamycin(as phosphate)
+Bayopet Herbal Hair Grower Shampoo
+Cyclophosphamide
+Propofol
+Norepinephrine (as bitartrate)
+Cyclophosphamide
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Risperidone
+Rosuvastatin (as calcium)
+Tobramycin
+Trimetazidine Hydrochloride
+Trimetazidine Hydrochloride
+Ceftriaxone (as sodium)
+Ascorbic Acid + Cholecalciferol (Vitamin D3) + Zinc
+Miconazole
+Meropenem (as trihydrate)
+Losartan Potassium
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Salbutamol (as sulfate)
+Ketoanalogues + Essential Amino Acids
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Zoledronic Acid (as monohydrate)
+Levetiracetam
+Co-Amoxiclav
+Co-Amoxiclav
+Etoricoxib
+Ipratropium (as bromide) + Salbutamol (as sulfate)
+Budesonide
+Oxaliplatin
+Oxaliplatin
+Pregabalin
+Hydrocortisone acetate
+Hydrocortisone (as Acetate)
+Ascorbic Acid
+Ascorbic Acid
+Cefalexin
+Paclitaxel
+Methotrexate
+Methotrexate
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Dobutamine (as hydrochloride)
+Ampicillin (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Amoxicillin (as Trihydrate)
+Loperamide
+Risperidone
+Fluconazole
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Metformin hydrochloride + Sitagliptin (as phosphate)
+Finasteride
+Quetiapine (as fumarate)
+Clonidine hydrochloride
+Clonidine hydrochloride
+Cefalexin (as Monohydrate)
+Ursodeoxycholic Acid
+Cefuroxime (as axetil)
+Ketorolac trometamol
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Glimepiride
+Gliclazide
+Losartan Potassium + Amlodipine (as besilate)
+Mupirocin
+Cefalexin (As Monohydrate)
+Telmisartan + Amlodipine (as besilate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Omeprazole (as sodium)
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Hydrocortisone (as sodium succinate)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Etoricoxib
+Amlodipine (as besilate)
+Etoricoxib
+Doxorubicin Hydrochloride
+Tamsulosin Hydrochloride
+Cefixime (as trihydrate)
+Levocetirizine Dihydrochloride
+Cefixime (as Trihydrate)
+Levofloxacin (as hemihydrate)
+Ursodeoxycholic Acid
+Losartan Potassium
+Losartan Potassium
+Sugammadex (as Sodium)
+Sugammadex (as Sodium)
+Cefotaxime (as sodium)
+Mupirocin
+Febuxostat
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Metformin Hydrochloride
+Rosuvastatin (as Calcium)
+Omeprazole
+Metoclopramide Hydrochloride
+Amoxicillin (as Trihydrate)
+Cefalexin (as Monohydrate)
+Amoxicillin (as trihydrate)
+Ascorbic Acid
+Ascorbic Acid
+Nicardipine Hydrochloride
+Diphenhydramine Hydrochloride
+Folic Acid
+Multivitamins
+Dydrogesterone
+CLOPIDOGREL
+Losartan Potassium
+Clopidogrel (as bisulfate)
+Salbutamol + Guaifenesin
+Co-Amoxiclav
+Omeprazole
+Cefuroxime (as Axetil)
+Hydrocortisone (as sodium succinate)
+Hyoscine-N-Butylbromide
+Hydroxyzine Hydrochloride
+Telmisartan
+Telmisartan
+Cefuroxime (as Sodium)
+Betamethasone + Dexchlorpheniramine Maleate
+Atorvastatin (as calcium)
+Cefixime (as trihydrate)
+Atorvastatin (as calcium)
+CETIRIZINE (as Dihydrochloride )
+CETIRIZINE (as dihydrochloride)
+Ceftriaxone (as sodium)
+Cefpodoxime (as proxetil)
+Gliclazide
+Pantoprazole (as sodium sesquihydrate)
+Cefixime (as Trihydrate)
+Omeprazole Sodium
+Cefuroxime (as sodium)
+Albendazole
+Omeprazole (as Sodium)
+Metronidazole
+Dibencozide
+DIBENCOZIDE
+DIBENCOZIDE
+Dibencozide
+Fenofibrate
+Paracetamol + Vitamin B-Complex
+Neostigmine (as Methylsulfate)
+Neostigmine (as methylsulfate)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Vitamin B1 + B6 + B12
+Vitamin B1 + B6 + B12
+Cefalexin (as Monohydrate)
+Pantoprazole (as sodium sesquihydrate)
+Vancomycin (as Hydrochloride)
+Ceftriaxone (as sodium)
+CEFUROXIME (AS AXETIL)
+CEFUROXIME (AS AXETIL)
+Atracurium besilate
+Multivitamins + Iron + Folic Acid
+Paracetamol
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Prednisone
+Amoxicillin (as Trihydrate)
+Amoxicillin (as trihydrate)
+Amoxicillin (as trihydrate)
+Hyoscine N-Butylbromide
+Ibuprofen
+Paracetamol
+Ranitidine (as Hydrochloride)
+Cefuroxime (as sodium)
+Salbutamol (as Sulfate)
+Doxorubicin Hydrochloride
+Pramipexole dihydrochloride monohydrate
+Losartan Potassium
+Clonazepam
+Lactulose
+Clopidogrel
+Paracetamol + Guaifenesin + Phenylpropanolamine HCl + Dextromethorphan HBr + Chlorphenamine maleate
+Lactulose
+Ibuprofen
+Ceftriaxone (as sodium)
+Sevoflurane
+Amoxicillin (as Trihydrate)
+Tretinoin + Hydroquinone
+Heparin Sodium
+Human Albumin
+Salbutamol (As Sulfate)
+Losartan Potassium + Hydrochlorothiazide
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Ciprofloxacin (as hydrochloride)
+Ceftriaxone (as sodium)
+Azithromycin (As Dihydrate)
+Omeprazole
+Levetiracetam
+Clopidogrel
+Salbutamol (as sulfate)
+Levetiracetam
+Rocuronium Bromide
+Salbutamol (as sulfate)+ Ipratropium (as bromide)
+Meropenem
+Febuxostat
+Meropenem (as trihydrate)
+Metformin hydrochloride
+Omeprazole (as sodium)
+Cefixime (as trihydrate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Ascorbic Acid + Zinc
+Bleomycin (as sulfate)
+Ciprofloxacin (as Lactate)
+Omeprazole (as sodium)
+Piperacillin (as Sodium) / Tazobactam (as sodium)
+Ceftriaxone Sodium
+Glimepiride
+Glimepiride
+Cetirizine (as hydrochloride)
+Menthol
+Montelukast (as sodium)
+Docetaxel
+Rosuvastatin (as calcium)
+Glimepiride
+Glimepiride
+FOLIC ACID
+Ambroxol hydrochloride
+Multivitamins + Iron (see reverse)
+Simvastatin
+Ambroxol Hydrochloride
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cefuroxime (as Sodium)
+Metformin Hydrochloride
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-BSulfate
+Tobramycin
+Cefuroxime (as Sodium)
+Losartan potassium
+Cloxacillin (as sodium)
+Clopidogrel
+Citicoline (as Sodium)
+Carbocisteine
+POVIDONE-IODINE
+POVIDONE-IODINE
+Meropenem (As Trihydrate)
+Meropenem (As Trihydrate)
+Febuxostat
+Romosozumab
+Human Placental Extract
+Telmisartan/Hydrochlorothiazide
+Telmisartan/Hydrochlorothiazide
+Dopamine Hydrochloride
+Telmisartan+Hydrochlorothiazide
+Ethyl Alcohol
+Medical Grade Oxygen
+Mupirocin
+Ascorbic Acid
+Ascorbic Acid
+Cefixime
+Paracetamol
+Rabeprazole Sodium
+Sonidegib (as phosphate)
+Co Amoxiclav
+Co-Amoxiclav
+Mupirocin
+Cloxacillin (as sodium)
+Miconazole
+Methyl Salicylate + Menthol + Camphor
+Mupirocin
+Miconazole
+Mupirocin
+Nystatin
+Isopropyl Alcohol
+Fulvestrant
+Febuxostat
+Febuxostat
+Irbesartan
+Levosalbutamol (as tartrate)
+Irbesartan + Hydrochlorothiazide
+Furosemide
+Fusidic Acid
+Hyoscine-N-Butylbromide
+Fluticasone Propionate
+Ascorbic acid
+Co-Amoxiclav
+Multivitamins + Buclizine Hydrochloride
+Tramadol Hydrochloride + Paracetamol
+Pemetrexed (as disodium heptahydrate)
+Ursodeoxycholic Acid
+Losartan potassium
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Iohexol
+Paracetamol
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Dicycloverine (as Hydrochloride)
+Ketorolac Trometamol
+Ascorbic Acid + Zinc
+Azithromycin (as dihydrate)
+Telmisartan + Amlodipine (as besilate)
+Atorvastatin (as Calcium Trihydrate)
+Cefixime (as trihydrate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Pregabalin + Methylcobalamin
+Quetiapine (as fumarate)
+Azithromycin (as dihydrate)
+Losartan Potassium
+Levofloxacin (as hemihydrate)
+Cefuroxime (as axetil)
+Cefuroxime (as sodium)
+Rosuvastatin (as calcium)
+Pemetrexed (as disodium heptahydrate)
+Omeprazole (as sodium)
+Camphor + Menthol + Eucalyptus Oil
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Multivitamins + Minerals + DHA + EPA
+Trimetazidine hydrochloride
+Levothyroxine (as sodium)
+Trimetazidine hydrochloride
+Trimetazidine hydrochloride
+Vildagliptin + Metformin Hydrochloride.
+Fusidic acid + Betamethasone (as valerate)
+Cefotaxime (as sodium)
+Cefotaxime (as sodium)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Vitex negundo L. (Lagundi Leaf)
+Cefotaxime (as sodium)
+Vitex negundo L. (Lagundi Leaf)
+Methyl Salicylate + Menthol
+Colecalciferol
+Colecalciferol
+Metoprolol tartrate
+Centaurium erythea Rafn s.1. (Centaury herb)/ Levistivum officinale Koch., radix (Lovage root)/ Rosmarinus officinalis L., folium (Rosemary leaf)
+Ferrous Fumarate+ Folic Acid
+L-Asparaginase
+L-Asparaginase
+Gliclazide
+Diosmin + Hesperidin
+Paracetamol + Caffeine + Phenylephrine (as hydrochloride) + Chlorphenamine maleate
+Potassium Chloride
+Potassium Chloride
+Pemetrexed (as disodium heptahydrate)
+Etoricoxib
+Etoricoxib
+Rosuvastatin (as Calcium)
+Miconazole Nitrate
+Propofol
+Telmisartan
+Vitamin B1 + B6 + B12
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Atorvastatin (as calcium)
+Sevelamer carbonate
+Sevelamer carbonate
+Sevelamer carbonate
+Sevelamer carbonate
+Ondansetron (as Hydrochloride)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Cefpodoxime (as proxetil)
+Cefuroxime (as axetil)
+Bisoprolol fumarate
+Ethyl Alcohol
+Acetylcysteine
+Hypromellose
+Paracetamol
+Ethyl Alcohol
+Citicoline (as sodium)
+Allopurinol
+Moxifloxacin (as hydrochloride)
+Tramadol Hydrochloride
+Ticagrelor
+Medical Grade Oxygen
+Pneumococcal Polysaccharide Vaccine, 23-Valent
+Pneumococcal Polysaccharide Conjugate Vaccine, 13- Valent (Adsorbed)
+Pneumococcal Polysaccharide Conjugate Vaccine, 13- Valent (Adsorbed)
+Cefuroxime (as axetil)
+Apixaban
+Apixaban
+Nebivolol (as hydrochloride)
+Nebivolol (as hydrochloride)
+Aztreonam
+Captopril
+Isopropyl Alcohol
+Vancomycin (as hydrochloride)
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine citrate
+Apixaban
+Ticagrelor
+Gliclazide
+Gliclazide
+Gliclazide
+Gliclazide
+Aciclovir
+Hydralazine hydrochloride
+Apixaban
+Asciminib (as hydrochloride)
+Asciminib (as hydrochloride)
+Amlodipine (as besilate)
+Ranitidine (as hydrochloride)
+Apixaban
+Sildenafil (as citrate)
+Tranexamic Acid
+Tamsulosin hydrochloride
+Palbociclib
+Palbociclib
+Palbociclib
+Clotrimazole
+Diosmin Hesperidin
+Diosmin Hesperidin
+Terbinafine (as hydrochloride)
+Dapsone
+Fexofenadine hydrochloride
+Fexofenadine hydrochloride
+Apixaban
+Apixaban
+Rivaroxaban
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Esmolol hydrochloride
+Telmisartan
+Azithromycin (as dihydrate)
+Propranolol hydrochloride
+Petroleum Jelly
+Doxorubicin Hydrochloride
+Mometasone furoate (as monohydrate)
+Mirtazapine
+Tamsulosin
+Ursodeoxycholic Acid
+Potassium Citrate
+Potassium Citrate
+Ceftriaxone (as sodium)
+Losartan Potassium + Hydrochlorothiazide
+Losartan Potassium + Hydrochlorothiazide
+Pantoprazole (as sodium sesquihydrate)
+Spironolactone
+Spironolactone
+Spironolactone
+Tramadol Hydrochloride
+Tramadol Hydrochloride
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Amlodipine (as besilate)
+Methylprednisolone
+Bortezomib
+Etoricoxib
+Calcipotriol (as monohydrate) + Betamethasone (as dipropionate)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Ceftriaxone (as sodium)
+Etanercept
+Etanercept
+Amlodipine (as Besilate)
+Losartan Potassium
+Losartan Potassium
+Linezolid
+Budesonide
+Budesonide
+Levofloxacin
+Finerenone
+Finerenone
+Cefepime (as hydrochloride)
+Cloxacillin (as sodium)
+Butamirate Citrate
+Paracetamol + Hyoscine N-Butylbromide
+Fusidic Acid
+Montelukast (as sodium)
+Montelukast (as sodium)
+Telmisartan + Amlodipine
+Phenytoin sodium
+Folic Acid
+Cholecalciferol (Vit. D3)
+Tadalafil
+Tadalafil
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Montelukast (As Sodium)
+Isavuconazonium Sulfate
+Cefepime (hydrochloride)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Celecoxib
+Dapagliflozin
+Cefuroxime (as sodium)
+Atorvastatin (as Calcium Trihydrate)
+Metoclopramide (as Hydrochloride)
+Atorvastatin (as Calcium Trihydrate)
+Lactulose
+Meropenem (as trihydrate)
+Cefixime (as trihydrate)
+Rosuvastatin (as Calcium)
+Prednisolone (as Sodium Phosphate)
+Telmisartan + Amlodipine (as besilate)
+Ranitidine (as hydrochloride)
+Co-Amoxiclav
+Ciprofloxacin (as lactate)
+Acetylcysteine
+Cefalexin (As Monohydrate)
+Vildagliptin
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Hydrocortisone (as sodium succinate)
+Levothyroxine sodium
+Levetiracetam
+Tamsulosin Hydrochloride
+Lapatinib (as ditosylate monohydrate)
+Paracetamol + Orphenadrine Citrate
+Oxytocin
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Losartan Potassium
+Losartan Potassium
+Tranexamic Acid
+Cefepime (as hydrochloride)
+Clonidine Hydrochloride
+Ambroxol Hydrochloride
+Colchicine
+Telmisartan + Hydrochlorothiazide
+Citicoline (as sodium)
+Azithromycin (as dihydrate)
+Cefixime (as trihydrate)
+CEFIXIME
+Lactulose
+Cefuroxime (as Sodium)
+Cefixime (as Trihydrate)
+Meropenem (as trihydrate)
+Salbutamol (as sulfate) + Guaifenesin
+Cefalexin (as Monohydrate)
+Meropenem (as trihydrate)
+Prednisolone Acetate
+Cefuroxime (as sodium)
+Lactulose
+Lactulose
+Cefuroxime (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ascorbic Acid + Zinc
+Olanzapine
+Dextromethorphan Hydrobromide + Guaifenesin
+Oxytocin
+Iodixanol
+Hyoscine Butylbromide
+Hyoscine Butylbromide
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Miconazole nitrate
+Ethyl Alcohol
+Benzydamine Hydrochloride + Chlorhexidine Digluconate
+Benzydamine Digluconate Hydrochloride + Chlorhexidine
+Benzydamine Hydrochloride + Digluconate
+Ethyl Alcohol
+Dexketoprofen (as trometamol)
+Paracetamol + Orphenadrine Citrate
+Cilostazol
+Aripiprazole
+Entrectinib
+Entrectinib nib
+Aciclovir
+Sorafenib (as tosylate)
+Ketamine (as hydrochloride)
+Cefixime (as trihydrate)
+Mupirocin
+Paclitaxel
+Zoledronic Acid (as monohydrate)
+Meropenem
+Epoetin Alfa
+Cloxacillin (as sodium)
+Betamethasone (as dipropionate)
+Ceftriaxone (as sodium)
+Sitagliptin (as phosphate)
+Vancomycin (as hydrochloride)
+Gliclazide
+Clopidogrel (As bisuIfate)
+Ceftriaxone (Sodium)
+Ipratropium (as bromide) + Salbutamol (as sulfate)
+Co-Amoxiclav
+Montelukast (as sodium)
+Montelukast (as sodium)
+Telmisartan + Amlodipine
+Ciprofloxacin
+Dapagliflozin
+Co-Amoxiclav
+Co-Amoxiclav
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Meropenem
+Nebivolol (as hydrochloride)
+Dexamethasone Phosphate (as sodium)
+Atorvastatin (as Calcium Trihydrate)
+Potassium Iodide + Sodium Iodide
+DL-Alpha-Tocopherol (Vitamin E)
+Carboplatin
+Losartan Potassium
+Celecoxib
+Dobutamine (as hydrochloride)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Carbocisteine + Zinc
+Febuxostat
+Febuxostat
+Ketorolac trometamol
+Telmisartan + Amlodipine (as besilate)
+Cefuroxime (as axetil)
+Ketoanalogues + Essential Amino Acids
+Co-Amoxiclav
+Ciprofloxacin (as lactate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Norepinephrine (as bitartrate)
+Hydrocortisone (as sodium succinate)
+Pioglitazone (as hydrochloride)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Hydrocortisone (as sodium succinate)
+Imatinib (as mesylate)
+Moxifloxacin (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Thiamine Nitrate (Vitamins B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Rivaroxaban
+Losartan potassium + Amlodipine (as besilate)
+Moxifloxacin (as hydrochloride) + Dexamethasone Phosphate (as sodium)
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Losartan Potassium
+Leuprorelin Acetate
+Cefepime (as hydrochloride)
+Vildagliptin
+Cilostazol
+Dutasteride + Tamsulosin hydrochloride
+Folic Acid
+Levofloxacin (as hemihydrate)
+Iron (as fumarate) + Folic Acid + Cyanocobalamin (Vitamin B12)
+Clopidogrel (as bisulfate)
+Ambroxol hydrochloride
+Phenylpropanolamine Hydrochloride
+Ascorbic Acid + Zinc
+Ambroxol Hydrochloride
+Ceftazidime (as Pentahydrate)
+Co-Amoxiclav
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cetirizine Hydrochloride
+Tobramycin + Dexamethasone
+Metronidazole
+Salbutamol (as sulfate) + Guaifenesin
+Etoricoxib
+Sertraline (as hydrochloride)
+Amlodipine (as besilate)
+Guaifenesin + Salbutamol (as sulfate)
+Dicycloverine Hydrochloride
+Etoricoxib
+Tamsulosin Hydrochloride
+Iron Sucrose
+Ondansetron (as Hydrochloride)
+Bisacodyl
+Pantoprazole (as sodium sesquihydrate)
+Cefixime (as Trihydrate)
+Cefixime (as Trihydrate)
+Clarithromycin
+Domperidone
+Cetirizine Hydrochloride
+Pantoprazole (as sodium)
+Ondansetron (as hydrochloride dihydrate)
+Alendronic acid (as Alendronate Sodium Trihydrate) + Cholecalciferol (Vitamin D3)
+Cefuroxime (as sodium)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Rosuvastatin (as Calcium)
+Etoricoxib
+Ursodeoxycholic Acid
+Vancomycin (as Hydrochloride)
+Sodium Hyaluronate
+Levofloxacin
+Omeprazole
+Butamirate Citrate
+Paracetamol + Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Telmisartan
+Sitagliptin (as phosphate monohydrate)
+Propofol
+Telmisartan + Hydrochlorothiazide
+Folic Acid
+Ceftazidime (as Pentahydrate)
+Oxytocin
+Paracetamol
+Cefuroxime (as sodium)
+Clindamycin (as phosphate)
+Cefuroxime (as Sodium)
+Mometasone Furoate
+Norepinephrine
+Carboplatin
+Meropenem (as trihydrate)
+Lactulose
+Zinc
+Zinc
+Phytomenadione
+Multivitamins + Minerals + Ginseng + Amino Acids
+Budesonide
+Cefuroxime (as axetil)
+Carbocisteine
+Salicylic Acid
+Calamine + Zinc Oxide
+Furosemide
+Telmisartan
+Dapagliflozin
+Propofol
+Aripiprazole
+Aripiprazole
+Aripiprazole
+Clopidogrel (as bisulfate)
+Tremelimumab
+Tremelimumab
+Gliclazide
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Norepinephrine (as bitartrate)
+Folic Acid
+Addaven
+Omeprazole (as Sodium)
+Paracetamol
+Paracetamol
+Clindamycin (as Phosphate)
+Clindamycin (as phosphate)
+Ceftriaxone (as sodium)
+Ceftriaxone (as Sodium)
+Ceftriaxone (as sodium)
+Ampicillin (as sodium)
+Cefuroxime (as Sodium)
+Ondansetron (as hydrochloride dihydrate)
+Betahistine dihydrochloride
+Nicardipine hydrochloride
+Budesonide
+Budesonide
+Omeprazole
+Omeprazole
+Pantoprazole
+Omeprazole Sodium
+Omeprazole Sodium
+Citicoline (as sodium)
+Tranexamic Acid
+Acetylcysteine
+Telmisartan
+Telmisartan
+Paracetamol
+Clarithromycin
+Azithromycin (as dihydrate)
+Folic Acid
+Aripiprazole
+Co-Amoxiclav
+Levodropropizine
+Ketorolac Trometamol
+Irbesartan + Amlodipine (as Besilate)
+Gliclazide
+Azithromycin (as dihydrate)
+Gentamicin
+Domperidone Maleate
+Clotrimazole + Hydrocortisone Acetate
+Diclofenac Diethylamine
+Ethyl Alcohol
+Ferrous Sulfate
+Ibuprofen
+Diosmin + Hesperidin
+Hexetidine
+Ketoconazole
+Olmesartan medoxomil
+Olmesartan Medoxomil
+Ethyl Alcohol
+Sebo De Macho
+Sodium Hyaluronate
+Sodium Hyaluronate
+Sodium Hyaluronate
+Dextromethorphan hydrobromide + Guaifenesin + Phenylephrine hydrochloride
+Mupirocin
+Multivitamins+ Iron
+Clotrimazole
+Ocrelizumab
+Ocrelizumab
+Infliximab
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Amlodipine (as besilate)
+Paracetamol
+Eslicarbazepine (as acetate)
+Eslicarbazepine (as acetate)
+Eslicarbazepine (as acetate)
+Eslicarbazepine (as acetate)
+Doxylamine Succinate + Pyridoxine Hydrochloride
+Multivitamins + Iron
+Nifedipine
+Enalapril maleate
+Metformin hydrochloride
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin. (Vitamin B12)
+Quetiapine (as fumarate)
+Linezolid
+Esomeprazole (as sodium)
+Memantine Hydrochloride
+Donepezil hydrochloride (as monohydrate)
+Donepezil Hydrochloride
+Dapagliflozin
+Methyl Salicylate + Camphor + Menthol
+Quetiapine (as fumarate)
+CLONIDINE Hydrocloride
+Pemetrexed (as disodium hemipentahydrate)
+Cefuroxime (as sodium)
+Ceftazidime
+Ceftriaxone (as sodium)
+Sitagliptin (as phosphate monohydrate)
+Cefuroxime (as sodium)
+Cefoxitin (as sodium)
+Decitabine
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Ceftriaxone (as sodium)
+Benzydamine hydrochloride + Cetylpyridinium chloride
+Cabazitaxel
+Digoxin
+Docetaxel With Solvent
+Ceftriaxone (as sodium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Insulin Aspart
+Insulin Aspart
+Tegafur Gimeracil Oteracil potassium
+Ketoconazole
+Cloxacillin (as sodium)
+Doripenem (as monohydrate)
+Phenytoin Sodium
+Tegafur Gimeracil + Oteracil potassium
+Ascorbic Acid
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol
+Iron Sucrose (as Ferric Hydroxide Sucrose Complex)
+Bromhexine hydrochloride.
+Benzydamine (as hydrochloride)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Paracetamol + Phenylephrine hydrochloride + Chlorphenamine maleate
+Ascorbic Acid + Zinc
+Cetirizine dihydrochloride
+Gemcitabine (as hydrochloride)
+Bromhexine hydrochloride
+Gemcitabine (as hydrochloride)
+Zinc Oxide
+Zinc Oxide
+Zinc Oxide
+Carboplatin
+Multivitamins + Minerals
+Carboplatin
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Gliclazide
+Fosfomycin (as trometamol)
+Voriconazole
+Paracetamol
+Gemcitabine (as hydrochloride)
+Esomeprazole (As Magnesium Trihydrate)
+Rivaroxaban
+Gemcitabine (as hydrochloride)
+Furosemide
+Isopropyl Alcohol
+Polymyxin B (as sulfate)
+Paracetamol + Ibuprofen
+Thiamine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) + Iron + Folic acid
+Etoricoxib
+Cefotaxime (as sodium)
+Cefotaxime (as sodium)
+Multivitamins + Minerals
+Multivitamins + Minerals
+Multivitamins + Minerals
+Fulvestrant
+Diosmin Hesperidin
+Co-Amoxiclav
+Pregabalin + Mecobalamin
+Isopropyl Alcohol
+Ascorbic Acid
+Pemetrexed (as disodium hemipentahydrate)
+Povidone-Iodine
+Cyanocobalamin (Vitamin B12)
+Multivitamins.
+Mometasone furoate (as monohydrate)
+Azithromycin (as dihydrate)
+Ferrous Sulfate + Folic Acid
+Sodium Chloride
+Sodium Bicarbonate
+Sodium Chloride
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Lactulose
+Sodium Hyaluronate
+Nebivolol (as hydrochloride)
+Fluticasone Propionate
+Alpha Ketoanalogues + Essential Amino Acids
+Abiraterone Acetate
+Lidocaine Hydrochloride + Epinephrine
+Zinc Oxide + Calamine
+Vildagliptin
+Cariprazine (as hydrochloride)
+Tranexamic Acid
+Cariprazine (as hydrochloride)
+Cariprazine (as hydrochloride)
+Cariprazine (as hydrochloride)
+Ascorbic Acid + Zinc+ Cholecalciferol (Vitamiu D3)
+Iron Zinc+ Folic acid
+Solifenacin succinate
+Irbesartan
+Clostridium botulinum Toxin Type A
+Donepezil hydrochloride
+Rivaroxaban
+Mucopolysaccharide polysulfate
+Solifenacin succinate
+Camphor + Menthol
+Levetiracetam
+Ethyl Alcohol
+Rosuvastatin
+Clindamycin (as phosphate)
+Iron (as Iron Sucrose)
+Cholecalciferol (Vitamin D3)
+Ibuprofen
+Cetirizine Hydrochloride
+Cilostazol
+Ascorbic Acid + Calcium + Colecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Buclizine Hydrochloride + Multivitamins + Minerals
+Dabigatran Etexilate (as mesylate)
+Dabigatran Etexilate (as mesylate)
+Cholecalciferol
+Rosuvastatin (as calcium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Bisoprolol Fumarate
+Novazapine-30
+Solifenacin Succinate
+Solifenacin Succinate
+Clindamycin (as hydrochloride)
+Solifenacin succinate
+Ascorbic Acid + d-Alpha Tocopherol (Vitamin E) + Zinc
+Gemcitabine (as hydrochloride)
+Azathioprine
+Acetylcysteine
+Ampicillin (as sodium)
+Acetylcysteine
+Glimepiride + Metformin Hydrochloride
+Ketoconazole
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Respiratory Syncytial Virus Vaccine (Recombinant, Adjuvanted)
+Diosmin + Hesperidin
+Ascorbic Acid + Zinc
+Pentosan Polysulfate Sodium
+Dexketoprofen Trometamol
+Ipratropium Bromide + Salbutamol (as sulfate)
+Ipratropium Bromide + Salbutamol (as sulfate)
+Omeprazole (as sodium)
+Erythromycin (as Ethylsuccinate)
+Gemfibrozil
+Methotrexate
+Ascorbic Acid
+Meropenem (as trihydrate)
+Salbutamol
+Vancomycin (as hydrochloride)
+Vitamin B-Complex + Iron + Lysine + Buclizine HCl
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Gentamicin (as sulfate)
+Progesterone
+Co-Amoxiclav
+Nebivolol (as hydrochloride)
+Salbutamol (as sulfate) + Ipratropium bromide
+Decitabine
+Potassium Iodide + Sodium Iodide
+Celecoxib
+Metformin Hydrochloride
+Cefixime (as trihydrate)
+Palonosetron Hydrochloride
+Febuxostat
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Sitagliptin (as phosphate monohydrate)
+Co-Amoxiclav
+Hydrocortisone (as sodium succinate)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Omeprazole (as sodium)
+Rivaroxaban
+Rivaroxaban
+Ampicillin (as sodium)
+Co-amoxiclav
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Acetylcysteine
+Iron (as Iron Sucrose)
+Iron (As Iron Sucrose)
+Iron (as Iron Sucrose)
+Cefoxitin (as sodium)
+Co-Amoxiclav
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Clindamycin (as phosphate)
+Cilostazol
+Dabigatran Etexilate (as mesilate)
+Dabigatran Etexilate (as mesilate)
+Dabigatran Etexilate (as mesilate)
+Potassium citrate
+Paracetamol
+Multivitamins + Iron
+Irinotecan Hydrochloride
+Etoricoxib
+Omeprazole
+Azithromycin (as dihydrate)
+Losartan Potassium + Hydrochlorothiazide
+Albendazole
+Etoricoxib
+Clarithromycin
+Nystatin
+Ciprofloxacin (as hydrochloride)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Metformin Hydrochloride
+Levetiracetam
+Zoledronic Acid
+Ascorbic Acid
+Paracetamol + Guaifenesin + Phenylpropanolamine HCl + Dextromethorphan HBr + Chlorphenamine Maleate
+Ketoanalogues + Essential Amino Acids
+Ibuprofen
+Loratadine
+Ibuprofen
+Co-Amoxiclav
+Iohexol
+Mefenamic Acid
+Ibuprofen
+Rosuvastatin (as calcium)
+Paracetamol
+Paracetamol
+Paracetamol
+Telmisartan
+Telmisartan + Hydrochlorothiazide
+Paracetamol + Ibuprofen (as sodium dihydrate)
+Ferrous Sulfate + Folic Acid
+Ferrous Sulfate + Folic Acid
+Paracetamol + Phenylephrine hydrochloride
+Acetylcysteine
+Tranexamic Acid
+Ondansetron (as hydrochloride dihydrate)
+Sevoflurane
+Aciclovir
+Ipratropium bromide + Salbutamol (as sulfate)
+Multivitamins + Iron
+Cetirizine (as hydrochloride)
+Hydroxyethyl Starch 130/0.4
+Paracetamol + Phenylephrine hydrochloride + Zinc
+Ascorbic Acid + Zinc
+Mycophenolate Mofetil
+Metoclopramide (as hydrochloride)
+Sitagliptin (as phosphate monohydrate)
+Miconazole
+Ampicillin (as sodium)
+Olanzapine
+Insulin Glargine
+Ceftriaxone (as sodium)
+Dapagliflozin
+Potassium Citrate
+Dapagliflozin
+Omeprazole (as sodium)
+Ipratropium bromide + Salbutamol (as sulfate)
+Atracurium Besilate
+Salbutamol (as sulfate)
+Iron (as Iron Sucrose)
+Apixaban
+Apixaban
+Paracetamol + Tramadol Hydrochloride
+Dabigatran Etexilate (as mesilate)
+Dabigatran Etexilate (as mesilate)
+Dabigatran Etexilate (as mesilate)
+Fosfomycin (as trometamol)
+Potassium Citrate
+Paracetamol
+Paracetamol
+Buclizine Hydrohloride + Vitamin B-Complex + Iron
+Glimepiride
+Cefuroxime (as Axetil)
+Guaifenesin + Salbutamol (as sulfate)
+Amino acids + Sorbitol
+Etoricoxib
+Carboplatin
+Cinnarizine
+Timolol (as Maleate)
+Cefuroxime (as axetil)
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Amoxicillin (as trihydrate)
+Etoricoxib
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-B-Sulfate
+Metronidazole + Miconazole nitrate
+Losartan Potassium
+Salbutamol (as sulfate)
+Ambroxol Hydrochloride
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ambroxol Hydrochloride
+Ambroxol Hydrochloride
+Carbocisteine
+Cetirizine hydrochloride
+Paracetamol
+Paracetamol
+Paracetamol
+Carbocisteine
+Cetirizine hydrochloride
+Fluocinolone Acetonide + Polymyxin B Sulfate + Neomycin (as sulfate)
+Phyllanthus niruri L.
+Vancomycin (as hydrochloride)
+Trastuzumab
+Trimetazidine hydrochloride
+Carboplatin
+Carboplatin
+Norepinephrine (as bitartrate)
+Norepinephrine (as bitartrate)
+Olopatadine (as hydrochloride)
+Carboplatin
+Carboplatin
+Carboplatin
+Phytomenadione
+Ivabradine (as hydrochloride)
+Ivabradine (as hydrochloride)
+Tadalafil
+Tadalafil
+Tadalafil
+Isopropyl Alcohol
+Co-Amoxiclav
+Co-Amoxiclav
+Meclizine hydrochloride
+0.9% Sodium Chloride
+Guaifenesin + Salbutamol (as sulfate)
+Guaifenesin + Bromhexine Hydrochloride + Salbutamol (as sulfate)
+Multivitamins + Minerals
+Benzydamine (as hydrochloride)
+Paracetamol
+Paracetamol
+Ascorbic Acid + Zinc + Cholecalciferol
+Olmesartan Medoxomil + Amlodipine (as besilate)
+Olmesartan Medoxomil + Amlodipine (as besilate)
+Moxifloxacin (as Hydrochloride)
+Olmesartan Medoxomil + Amlodipine (as besilate)
+Dexamethasone Phosphate (As Sodium)
+Multivitamins
+Multivitamins + Minerals
+Rasagiline (as mesilate)
+Dolutegravir (as sodium) + Lamivudine + Tenofovir Disoproxil (as fumarate)
+Roflumilast
+Ondansetron (as hydrochloride dihydrate)
+Rosuvastatin (as calcium)
+Ferrous sulfate + Folic acid
+Ketoconazole
+Irinotecan Hydrochloride (as trihydrate)
+Racecadotril
+Racecadotril
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Ciprofloxacin
+Cefuroxime (as sodium)
+Chloramphenicol (as sodium succinate)
+Ceftriaxone (as sodium)
+Methyl Salicylate + Camphor + Menthol
+Trastuzumab deruxtecan
+Telmisartan + Amlodipine (as besilate)
+Furosemide
+Betahistine hydrochloride
+Labetalol Hydrochloride
+Morphine Sulfate
+Dutasteride + Tamsulosin Hydrochloride
+Apixaban
+Meclizine hydrochloride
+Erlotinib (as hydrochloride)
+Hyoscine butylbromide + Paracetamol
+Methyl salicylate + Menthol + Camphor
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine. (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Sodium Bicarbonate
+Sodium Bicarbonate
+Paracetamol + Phenylephrine hydrochloride + Chlorphenamine maleate + Zinc
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Multivitamins + Minerals
+Fusidic Acid
+Multivitamins + Minerals
+Zinc
+L-Alanyl-L-Glutamine
+Levocetirizine hydrochloride.
+Zinc Sulfate (as monohydrate)
+Zinc
+Levothyroxine Sodium (as hydrate)
+Levothyroxine Sodium (as hydrate)
+Voriconazole
+Cloxacillin (as sodium)
+Ibuprofen
+Telmisartan
+Meropenem (as trihydrate)
+Febuxostat
+Febuxostat
+Omeprazole (as sodium)
+Co-Amoxiclav
+Isopropyl Alcohol
+Isopropyl Alcohol
+Paracetamol
+Clopidogrel (as bisulfate)
+Eicosapentaenoic Acid (Epa) Ethyl Ester + Docosahexaenoic Acid (Dha) Ethyl Ester
+Ascorbic Acid + Cholecalciferol + Zinc
+Lidocaine Hydrochloride (as monohydrate)
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Linagliptin + Metformin Hydrochloride
+Linagliptin + Metformin Hydrochloride
+Linagliptin + Metformin Hydrochloride
+Retinol Palmitate (Vitamin A) + Ascorbic (Vitamin C) + dl-a-Tocopheryl acetate (Vitamin E) + Pyridoxine (Vitamin B6) + Zinc
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Pemetrexed (as disodium)
+Vancomycin hydrochloride
+Simethicone
+Metronidazole
+Omeprazole (as sodium)
+Omeprazole (as sodium)
+Trastuzumab
+Trastuzumab
+Remdesivir
+Trastuzumab
+Cefixime (as trihydrate)
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Ibuprofen
+Ketoconazole
+Ketoconazole
+Ketoconazole
+Isopropyl Alcohol
+Salbutamol (as sulfate)
+Salbutamol (as sulfate) + Ipratropium bromide.
+0.9% Sodium Chloride
+Rasagiline (as mesilate)
+Tranexamic Acid
+Oxaliplatin
+Clindamycin (as phosphate)
+Trastuzumab
+Diltiazem Hydrochloride
+Diltiazem Hydrochloride
+Isosorbide mononitrate
+Cisplatin
+0.9% Sodium Chloride
+Norepinephrine (as bitartrate monohydrate)
+Oseltamivir (as phosphate)
+Nepafenac
+Pantoprazole (as sodium sesquihydrate)
+Ascorbic Acid + Zinc
+Brompheniramine Maleate + Phenylephrine Hydrochloride
+Acalabrutinib
+DILOXANIDE FUROATE
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Co-Amoxiclav
+Co-Amoxiclav
+Omeprazole (as sodium)
+Gentamicin (as sulfate)
+Guaifenesin + Bromhexine Hydrochloride
+Cefepime (As Hydrochloride)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Irbesartan
+Abemaciclib
+ASCORBIC ACID
+Isopropyl Alcohol
+Sevelamer Carbonate
+Sevelamer Carbonate
+Aluminum hydroxide + Magnesium hydroxide + Simethicone
+Clobetasol Propionate
+Bilastine
+Metformin hydrochloride
+Moxifloxacin (as hydrochloride)
+Sevoflurane
+Ofloxacin
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Escitalopram (as oxalate)
+Escitalopram (as oxalate)
+Oxymetazoline hydrochloride.
+Multivitamins + Minerals.
+Levocetirizine Hydrochloride
+Levocetirizine Hydrochloride
+Moxifloxacin (as hydrochloride)
+Acetylcysteine
+Rosuvastatin (as calcium)
+Fulvestrant
+Methyl Salicylate + Camphor +Menthol
+Isopropyl Alcohol
+Tobramycin + Dexamethasone
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Levetiracetam
+Ketamine (as hydrochloride)
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Isopropyl Alcohol
+Voriconazole
+Rifampicin + Isoniazid + Pyrazinamide + Ethambutol hydrochloride
+Rifampicin + Isoniazid
+Oxaliplatin
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Clindamycin (as hydrochloride)
+Eucalyptus Oil
+Sulfur
+Petroleum Jelly
+Ascorbic Acid + Zinc
+Diosmin + Hesperidin
+Mupirocin
+Ferrous Sulfate
+Ferrous Sulfate
+Propofol
+Febuxostat
+Febuxostat
+Ethyl Alcohol
+Japanese Encephalitis Vaccine (Inactivated, Adsorbed)
+Diosmin + Hesperidin
+Isopropyl Alcohol
+Colecalciferol (Vitamin D3)
+Isopropyl Alcohol
+Paracetamol + Phenylephrine HCl + Chlorpheniramine Maleate
+Paracetamol + Phenylephrine HCI
+Symclosene (Trichloroisocyanuric Acid)
+Metformin Hydrochloride
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Rosuvastatin (As Zinc) + Ezetimibe
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Ascorbic Acid + Zinc
+Ceftazidime (as Pentahydrate)
+Ceftriaxone Sodium
+Acetylcysteine
+Clindamycin (as phosphate)
+Clindamycin (as phosphate)
+Furosemide
+Hydrocortisone (as sodium succinate)
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Norepinephrine (as bitartrate)
+Paracetamol
+Paracetamol
+Parecoxib (as sodium)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Heparin sodium
+Heparin sodium
+Heparin sodium
+Heparin sodium
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Sildenafil (as Citrate)
+Regorafenib
+Cetirizine (as hydrochloride)
+Trimetazidine hydrochloride
+Trimetazidine hydrochloride
+Heparin Sodium
+Ceftriaxone (as sodium)
+Ascorbic Acid
+Paracetamol
+Metformin hydrochloride + Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Telmisartan
+Cefixime (as trihydrate)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Salbutamol (as sulfate)
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Cefuroxime (as Sodium)
+Zoledronic Acid (As Monohydrate)
+Levetiracetam
+Ceftriaxone (as sodium)
+Azithromycin (as dihydrate)
+Prednisolone (as Sodium Phosphate)
+Acetylcysteine
+Acetylcysteine
+Potassium Citrate
+Telmisartan
+Clopidogrel
+Clopidogrel
+Co-Amoxiclav
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Mupirocin
+Isoflurane
+Capecitabine
+Loratadine
+Doxycycline (as hyclate)
+Montelukast (as sodium)
+Gliclazide
+Candesartan cilexetil
+Ofloxacin
+Ofloxacin
+Amlodipine (as besilate)
+Paracetamol
+Paracetamol
+Propofol
+Ascorbic acid (as Sodium Ascorbate)
+Ascorbic acid (as Sodium Ascorbate)
+Cefuroxime (as sodium)
+Mesna
+Ascorbic Acid + Zinc
+Methotrexate
+Dutasteride + Tamsulosin Hydrochloride
+Cefuroxime (as axetil)
+Salbutamol (as sulfate) + Ipratropium (as bromide)
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Oxaliplatin
+Sitagliptin (as Phosphate Monohydrate) - Metformin Hydrochloride
+Co-Amoxiclav
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Rosuvastatin (as calcium)
+Acetylcysteine
+Acetylcysteine
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Fenofibrate
+Potassium Chloride
+Febuxostat
+Febuxostat
+Atorvastatin (as calcium)
+Benzydamine Hydrochloride
+Benzydamine (as Hydrochloride)
+Losartan Potassium
+Palonosetron (as hydrochloride)
+Febuxostat
+Vildagliptin
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Ibuprofen + Paracetamol
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Sitagliptin + Metformin Hydrochloride
+Cetirizine Hydrochloride
+Lidocaine Hydrochloride
+Bisacodyl
+Zinc
+Letrozole
+Zinc
+Hexetidine
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Carboprost (as tromethamine)
+Mycophenolic acid (as Mycophenolate sodium)
+Cilostazol
+Dapagliflozin
+Dapagliflozin
+Aspirin
+Ascorbic Acid + Zinc
+Acetylcysteine
+Montelukast (as sodium)
+Metformin Hydrochloride + Sitagliptin (as phosphate. monohydrate)
+Metformin Hydrochloride + Sitagliptin (as phosphate. monohydrate)
+Avelumab
+Enalapril maleate
+Enalapril maleate
+Vortioxetine (as hydrobromide)
+Omeprazole
+Nirmatrelvir + Ritonavir
+Montelukast (as sodium)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochlorid
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Anastrozole
+Losartan Potassium + Amlodipine (as besilate)
+Telmisartan
+Mefenamic Acid
+Salbutamol (as sulfate) + Ipratropium bromide
+Ursodeoxycholic Acid
+Ketoanalogues + Essential Amino Acids
+Pregabalin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Rabeprazole sodium + Itopride hydrochloride
+Paracetamol
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Ursodeoxycholic Acid
+Colecalciferol (Vitamin D3)
+Vildagliptin + Metformin Hydrochloride
+Imatinib (as mesylate)
+Bleomycin (as Sulfate)
+Bleomycin (as sulfate)
+Ipratropium Bromide + Salbutamol (as Sulfate)
+Lapatinib (as ditosylate monohydrate)
+Moxifloxacin (as Hydrochloride) + Dexamethasone Phosphate (as Sodium)
+Moxifloxacin (as Hydrochloride)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Betahistine hydrochloride
+Betahistine hydrochloride
+Betahistine hydrochloride
+Lactitol monohydrate
+Rosuvastatin (as calcium)
+Losartan Potassium
+Salbutamol (as sulfate)
+Apixaban
+Gliclazide
+Bisacodyl
+Apixaban
+Apixaban
+Apixaban
+Apixaban
+Apixaban
+Cefixime (as trihydrate)
+Atorvastatin (As Calcium)
+Atorvastatin (as Calcium)
+Atorvastatin (As Calcium)
+Salbutamol (as sulfate) + Guaifenesin
+Co-Amoxiclav
+Apixaban
+Ceftriaxone (as sodium)
+Polymyxin B (as sulfate)
+Enzalutamide
+Clindamycin (as phosphate)
+Mupirocin
+Salbutamol (as sulfate)
+Cilostazol
+Dutasteride + Tamsulosin Hydrochloride
+Telmisartan
+Telmisartan
+Multivitamins + Lysine + Buclizine
+Nebivolol (as hydrochloride)
+Zinc Oxide + Calamine
+Azithromycin (as dihydrate)
+Paracetamol
+Zinc
+Loratadine
+Fusidic Acid
+Multivitamins
+Zinc
+Amoxicillin (as trihydrate)
+Citicoline (as sodium)
+Clobetasol propionate
+Ethyl Alcohol
+Valsartan
+Valsartan
+ultivitamins + Minerals
+Abiraterone Acetate
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Colecalciferol (Vitamin D3)
+Medical Grade Oxygen
+Amiodarone hydrochloride
+Colecalciferol (Vitamin D3)
+Colecalciferol (Vitamin D3)
+Colecalciferol (Vitamin D3)
+Zinc
+Bortezomib
+Omeprazole (as sodium)
+Anifrolumab
+Ciprofloxacin (as hydrochloride)
+Quetiapine (as fumarate)
+Paracetamol + Phenylephrine Hydrochloride
+Metformin Hydrochloride
+Mefenamic Acid
+Furazolidone
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Folic Acid
+Atorvastatin (as Calcium)
+Folic Acid
+Ketorolac trometamol
+Cefuroxime (as axetil)
+Co-Amoxiclav
+Atorvastatin (as Calcium)
+Sildenafil (as citrate)
+Azithromycin (as Monohydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Omeprazole (as Sodium)
+Omeprazole (as Sodium)
+Irinotecan hydrochloride
+Carbocisteine
+Guaifenesin + Salbutamol (as sulfate)
+Atorvastatin (as Calcium Trihydrate)
+Clindamycin (as phosphate)
+Clindamycin (as phosphate)
+Telmisartan
+Co-Amoxiclav
+Clarithromycin
+Clarithromycin
+Fenofibrate
+Fenofibrate
+Naproxen Sodium
+Vitamin B1 + Vitamin B6 + Vitamin B12
+Ceftriaxone (as sodium)
+Ciprofloxacin (as hydrochloride)
+Ciprofloxacin
+Acetylcysteine
+Omeprazole (as sodium)
+Fenofibrate
+Clarithromycin
+Cefixime (as Trihydrate)
+Cefixime (as trihydrate)
+Zoledronic Acid (as monohydrate)
+Esomeprazole (as sodium)
+Paracetamol + Tramadol Hydrochloride
+Cinnarizine
+Co-Amoxiclav
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Telmisartan
+Olanzapine
+Olanzapine
+Cefixime
+Cefixime
+Cefixime
+CEFIXIME
+Amlodipine (as Besilate)/ Losartan Potassium
+Irbesartan
+Irbesartan
+Pantoprazole (as sodium)
+Ceftriaxone (as sodium)
+Pantoprazole
+Domperidone
+Pantoprazole (as sodium)
+Co-Amoxiclav
+Ofloxacin + Dexamethasone
+Omeprazole
+Paracetamol + Vitamin B-Complex
+Isotretinoin
+Pantoprazole (as Sodium)
+Nystatin
+Olanzapine
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Salbutamol (as sulfate) + Guaifenesin
+Meropenem (as trihydrate)
+Clozapine
+Cefuroxime (as Axetil)
+Alpha Ketoanalogues + Essential Amino Acids
+Multivitamins + Minerals + Panax ginseng C.A. Meyer (Korean Ginseng) + Royal Jelly
+Levothyroxine (as sodium)
+Metformin Hydrochloride
+Paracetamol
+Azithromycin (as monohydrate)
+Valproic Acid
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-BSulfate
+Cefuroxime (as Sodium)
+Cefuroxime (as Sodium)
+Omeprazole (as Sodium)
+Telmisartan
+Azithromycin (as Dihydrate)
+Docetaxel
+Co-Amoxiclav
+Oxytocin
+Cefuroxime (as Sodium)
+Paclitaxel
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Cefuroxime (as sodium)
+dl-Alpha Tocopherol Acetate (Vitamin E)
+Gliclazide
+Losartan Potassium
+Citicoline (as sodium)
+Clopidogrel (as bisulfate)
+Ascorbic Acid + Zinc
+Paracetamol
+Iohexol
+Telmisartan
+Telmisartan
+Telmisartan
+Paracetamol + Ascorbic Acid
+Iohexol
+Ceftriaxone (as sodium)
+Levocetirizine Dihydrochloride
+Carvedilol
+Cefuroxime (as axetil)
+Telmisartan + Hydrochlorothiazide
+Ascorbic Acid + Zinc
+Povidone-Iodine
+Esomeprazole (as sodium)
+Gliclazide
+Flunarizine (as dihydrochloride)
+Thiamine (Vitamin B1)+ Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Mupirocin
+Cefixime (as trihydrate)
+Furosemide
+Paracetamol
+Famciclovir
+Docetaxel (as Trihydrate)
+Docetaxel (as Trihydrate)
+Rituximab
+Bevacizumab
+Doxofylline
+Semaglutide
+Semaglutide
+Semaglutide
+Semaglutide
+Semaglutide
+Etoricoxib
+Doxofylline
+Miconazole
+Iron Folic Acid + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Zinc
+Ciprofloxacin (As Hydrochloride)
+Deferasirox
+Irinotecan Hydrochloride Trihydrate
+Deferasirox
+Diosmin Hesperidin
+Fusidic Acid
+Levocetirizine dihydrochloride
+Silver Sulfadiazone
+Silver Sulfadiazine
+Ketoconazole
+Paracetamol
+Paracetamol
+Paracetamol
+Paracetamol
+Mupirocin
+Etoricoxib
+Etoricoxib
+Diphenhydramine Hydrochloride
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Phytomenadione
+Phytomenadione
+Phytomenadione
+Phytomenadione
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Ceftazidime (as Pentahydrate)
+Glutathione
+Telmisartan
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Bupivacaine hydrochloride in Dextrose
+Isoxsuprine hydrochloride.
+Cefuroxime (as axetil)
+Losartan Potassium
+Losartan Potassium
+Ciprofloxacin (as hydrochloride)
+Bupivacaine hydrochloride
+Irinotecan Hydrochloride Trihydrate
+Bupivacaine hydrochloride
+Sunitinib (as malate)
+Sunitinib (as malate)
+Amiodarone hydrochloride
+Bupivacaine hydrochloride
+Bupivacaine hydrochloride
+Bupivacaine hydrochloride
+Prasugrel (as Hydrochloride)
+Mesna
+Mesna
+Enoxaparin Sodium
+Meropenem (as trihydrate)
+Levocarnitine
+Co-Amoxiclav
+Valganciclovir (as hydrochloride)
+Ascorbic Acid + dl-Alpha Tocopheryl Acetate pha Tocopheryl Acetate (Vitamin E)
+Paracetamol + Guaifenesin Phenylephrine. hydrochloride + Dextromethorphan hydrobromide + Chlorpheniramine maleate
+Methyl Salicylate + Camphor + Menthol
+Ascorbic Acid + Zinc
+Cetrorelix (as acetate)
+Amoxicillin (as trihydrate)
+Multivitamins + Iron
+Rivaroxaban
+Rivaroxaban
+Rivaroxaban
+Metfromin Hydrochloride
+Sodium Alginate Sodium Bicarbonate + Calcium Carbonate
+Lamotrigine
+Lamotrigine
+Lamotrigine
+Povidone-Iodine
+Povidone-Iodine
+Benzalkonium Chloride
+Sevoflurane
+Benzylpenicillin (as sodium)
+Vecuronium bromide
+FURAZOLIDONE
+Fluticasone
+Bupivacaine hydrochloride
+Bupivacaine hydrochloride
+Paracetamol + Phenylphrine HCI + Chlorpheniramine Maleate
+Retinol Palmitate (Vitamin A)
+Teicoplanin
+Co-Amoxiclav
+Multivitamins + Minerals
+Adenosine
+Tranexamic acid
+Topotecan (as hydrochloride)
+Ethyl Alcohol
+Docetaxel (as trihydrate)
+Ciprofloxacin (as Hydrochloride)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Heparin Sodium
+Equine Anti-rabies Immunoglobulin
+Valsartan
+Ethyl Alcohol
+Lansoprazole
+Paracetamol + Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Linezolid
+Vancomycin (as hydrochloride)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Sevelamer Carbonate
+Clopidogrel (as bisulfate)
+Clopidogrel (as bisulfate)
+Gentamicin (as sulfate)
+Ceftriaxone (as sodium)
+Etoricoxib
+Etoricoxib
+Omeprazole (as sodium)
+Potassium Citrate
+Paracetamol
+Telmisartan + Amlodipine (as besilate)
+Omeprazole (as sodium)
+Amlodipine (as besilate)
+Paracetamol
+Dapagliflozin
+Cefuroxime (as sodium)
+Co - Amoxiclav
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Atorvastatin (as calcium)
+Candesartan Cilexetil
+Nebivolol (as hydrochloride)
+Pantoprazole (as sodium)
+Loperamide Hydrochloride
+Co-Amoxiclav
+Fenofibrate
+Ursodeoxycholic Acid
+Esomeprazole (as magnesium trihydrate)
+Febuxostat
+Febuxostat
+Gabapentin
+Gabapentin
+Gemcitabine Hydrochloride
+Irinotecan hydrochloride (as trihydrate)
+Irbesartan + Amlodipine (as Besilate)
+Irbesartan + Amlodipine (as Besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Febuxostat
+Oral Rehydration Salts
+Oral Rehydration Salts
+Oral Rehydration Salts
+Rivaroxaban
+Rosuvastatin (as calcium)
+Febuxostat
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Norepinephrine (as bitartrate monohydrate)
+Fosfomycin (as trometamol)
+Sterile Water for Injection.
+Ascorbic Acid
+Omeprazole (as sodium monohydrate)
+Omeprazole (as sodium monohydrate)
+Hydrocortisone (as sodium succinate)
+Omeprazole
+Glimepiride
+Glimepiride
+Ketoanalogues + Essential Amino Acids
+Dapagliflozin
+Ciprofloxacin (as lactate)
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Losartan Potassium + Amlodipine (as besilate)
+Multivitamins + Minerals
+Pregabalin
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Cefuroxime (as sodium)
+Aluminum Hydroxide + Magnesium Hydroxide + Oxetacaine
+Vildagliptin + Metformin Hydrochloride
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Doxorubicin Hydrochloride
+Tobramycin (as sulfate)
+Levetiracetam
+Levetiracetam
+Cefixime (as trihydrate)
+Moxifloxacin (as hydrochloride)
+Levetiracetam
+Levetiracetam
+Propofol
+Ampicillin (as sodium)
+Ampicillin (as sodium)
+Losartan Potassium
+Losartan Potassium
+Losartan Potassium
+Ceftazidime (as pentahydrate)
+Apixaban
+Metformin Hydrochloride
+Vildagliptin
+Iron (as Iron Sucrose)
+Iron (as Iron Sucrose)
+Acetylcysteine
+Apixaban
+Apixaban
+Co - Amoxiclav
+Ketoanalogues and Essential Amino Acids
+Levothyroxine Sodium
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Metformin Hydrochloride
+Capecitabine
+Enzalutamide
+Clindamycin (as phosphate)
+Iron (as Iron Sucrose)
+Dutasteride + Tamsulosin Hydrochloride
+Co-Amoxiclav
+Potassium citrate
+Apixaban
+Azithromycin (as dihydrate)
+Dabigatran Etexilate (as mesylate)
+Dabigatran Etexilate (as mesylate)
+Dabigatran Etexilate (as mesylate)
+Clarithromycin
+Sertraline
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Norepinephrine (as bitartrate)
+Polyethylene Glycol + Glycerin + Hypromellose
+Paracetamol
+Ampicillin (as sodium)
+Salbutamol (as sulfate) + Guaifenesin
+FOLIC ACID
+Atorvastatin
+Ampicillin (as sodium)
+Multivitamins + Iron
+Sugammadex (as sodium)
+Enalapril Maleate
+Atorvastatin (as Calcium)
+Clopidogrel (as bisulfate)
+Amoxicillin (as Trihydrate)
+Clopidogrel Bisulfate
+Co-Amoxiclav
+Azithromycin (as Dihydrate)
+Azithromycin (as Dihydrate)
+Guaifenesin + Phenylpropanolamine Hydrochloride + Chlorphenamine maleate
+Cefuroxime (as sodium)
+Salmeterol (as xinafoate) + Fluticasone Propionate
+Lactulose
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Rabeprazole sodium
+Ceftriaxone (as sodium)
+Nicardipine hydrochloride
+Levonorgestrel
+Hydrocortisone (as sodium succinate)
+Tobramycin
+Cefixime (as trihydrate)
+Tacrolimus (as monohydrate)
+Cefixime (as trihydrate)
+Terlipressin (as acetate)
+Methyl Salicylate + Menthol + Camphor
+0.9% Sodium Chloride
+0.9% Sodium Chloride
+Hydroxychloroquine Sulfate
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Levetiracetam
+Levetiracetam
+Rivaroxaban
+Rivaroxaban
+Tobramycin (as sulfate) + Dexamethasone
+Spesolimab
+Mupirocin
+Hydroxychoroquine Sulfate
+Levodropropizine
+Levodropropizine
+Levodropropizine
+Levodropropizine
+Ofloxacin
+Norepinephrine (as bitartrate)
+Methotrexate
+Pantoprazole (as sodium)
+Domperidone
+Sitagliptin (as phosphate) + Metformin Hydrochloride.
+Hydrocortisone + Bacitracin + Polymyxin B Sulfate + Neomycin
+Hydroxyethyl Starch 200/0.5 Sodium Chloride.
+Hydroxyethyl Starch 130/0.4+ Sodium Chloride
+Hydroxyethyl Starch 130/0.4+ Sodium Chloride
+Valsartan + Amlodipine (as besylate) + Hydrochlorothiazide
+Valsartan + Amlodipine (as besylate) + Hydrochlorothiazide
+Valsartan Amlodipine (as besylate) + Hydrochlorothiazide
+Valsartan Amlodipine (as besylate) + Hydrochlorothiazide
+Valsartan + Amlodipine (as besylate) + Hydrochlorothiazide
+Tramadol Hydrochloride + Paracetamol
+Tramadol Hydrochloride + Paracetamol
+Glucose + Amino Acids + Electrolytes + Lipids.
+Cefuroxime (as sodium)
+Cefixime (As Trihydrate)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Co-Amoxiclav
+Quetiapine (as Fumarate)
+Olanzapine
+Albendazole
+Esomeprazole (as sodium)
+Etoricoxib
+Amlodipine (as Besilate)
+Amlodipine (as Besilate)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole (as Sodium)
+Pantoprazole
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Co-Amoxiclav
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Ketoanalogues + Essential Amino Acids
+Telmisartan
+Atorvastatin (as Calcium)
+Paracetamol + Orphenadrine citrate
+Co-Amoxiclav
+Paracetamol + Vitamin B-Complex
+Multivitamins + Dextrose
+Levothyroxine (as Sodium)
+Levothyroxine (as Sodium)
+Pregabalin
+Tobramycin
+Omeprazole (as Sodium)
+Olanzapine
+Olanzapine
+Olanzapine
+Docetaxel
+Paclitaxel
+Trimetazidine dihydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Levocetirizine hydrochloride
+Buclizine HCl + Multivitamin + Iron
+Losartan Potassium
+Lactulose
+Salbutamol (as sulfate)
+Betahistine dihydrochloride
+Omeprazole
+Sterile Water For Injection
+Budesonide
+Cefuroxime (as axetil)
+Methyl Salicylate
+Eucalyptus Oil
+Eucalyptus Oil
+Cebo de Macho
+Cebo de Macho
+Clopidogrel
+Hyoscine-N-Butylbromide
+Cetirizine Hydrochloride
+Carvedilol
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Paclitaxel
+Medical Grade Oxygen
+Gliclazide
+Sitagliptin (as hydrochloride) + Metformin Hydrochloride
+Ganciclovir
+Topiramate
+Topiramate
+Sterile Water for Irrigation.
+Vildagliptin + Metformin Hydrochloride.
+Rosuvastatin (as calcium) + Fenofibrate
+Rosuvastatin (as calcium) + Fenofibrate
+Rosuvastatin (as calcium) + Fenofibrate
+Cisplatin
+Aciclovir
+Dexamethasone + Tobramycin
+Medical Grade Oxygen
+Ticagrelor
+Captopril
+Lisinopril (as dihydrate)
+Lisinopril (as dihydrate)
+Amlodipine (as besilate) + Olmesartan medoxomil
+Medical Grade Oxygen
+Medical Grade Oxygen
+Lisinopril (as dihydrate)
+Topiramate
+Varenicline (as tartrate)
+Varenicline (as tartrate)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Sitagliptin (as phosphate) + Metformin Hydrochloride.
+Rabeprazole sodium
+Moxifloxacin (as hydrochloride)
+Cloxacillin (as Sodium)
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Human Fibrinogen + Human Thrombin
+Insulin Human (rDNA)
+Sevoflurane
+Methotrexate
+Co-Amoxiclav
+Ceftriaxone (as sodium)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Linezolid
+Azithromycin (as dihydrate)
+Clopidogrel (as bisuIfate)
+Clopidogrel (as bisulfate)
+Zoledronic acid (as monohydrate)
+Levetiracetam
+Ketoanalogues + Essential Amino Acids
+Etoricoxib
+Omeprazole (as sodium)
+Telmisartan
+Butamirate Citrate
+Cefuroxime (as axetil)
+Octreotide (as acetate)
+Paracetamol
+Paracetamol + Ibuprofen
+Dapagliflozin
+Dapagliflozin
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Atorvastatin (as calcium )
+Salbutamol (as sulfate) + Ipratropium (as bromide)
+Meropenem
+Meropenem
+Meclizine Hydrochloride
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Anastrozole
+Atorvastatin (as Calcium Trihydrate)
+Olmesartan medoxomil
+Montelukast (as sodium) + Levocetirizine hydrochloride
+Sevelamer carbonate
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Carbocisteine + Zinc
+Paclitaxel
+Iron Sucrose
+Telmisartan + Amlodipine (as besilate)
+Amlodipine (as Besilate) + Hydrochlorothiazide
+Amlodipine (as Besilate) + Hydrochlorothiazide
+Cefuroxime (as axetil)
+Telmisartan + Amlodipine (as besilate)
+Ketoanalogues + Essential Amino Acids
+Levothyroxine sodium
+Cisplatin
+Amlodipine (as besilate)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Cefuroxime (as sodium)
+Epinephrine
+Dobutamine (as hydrochloride)
+Cefuroxime (as sodium)
+Mupirocin
+Mupirocin
+Moxifloxacin (as hydrochloride)
+Paracetamol + Caffeine
+Levetiracetam
+Sitagliptin (as phosphate)
+Sitagliptin (as phosphate)
+Ceftriaxone (as sodium)
+Losartan Potassium
+Gabapentin
+Ceftriaxone (as sodium)
+Apixaban
+Apixaban
+Ceftriaxone (as sodium)
+Pantoprazole (as sodium sesquihydrate) + Domperidone (as maleate)
+Cetirizine (as hydrochloride)
+Co-Amoxiclav
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Clindamycin (as Phosphate)
+Azithromycin (as dihydrate)
+Febuxostat
+Clindamycin (as phosphate)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Levodropropizine
+Tacrolimus
+Fusidic Acid
+Salbutamol (as sulfate)
+Potassium citrate
+Celecoxib
+Co-Amoxiclav
+Hypromellose
+Apixaban
+Dexamethasone phosphate (as sodium)
+Quetiapine (as fumarate)
+Tranexamic Acid
+Cilostazol
+Norepinephrine (as bitartrate)
+Isoflurane
+Diphenhydramine Hydrochloride
+Phenylephrine Hydrochloride + Chlorpheniramine Maleate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Atorvastatin (as Calcium)
+Cefuroxime (as Axetil)
+Cefuroxime (as sodium)
+Simvastatin
+Ceftriaxone (as sodium)
+Multivitamins + Dextrose
+Cotrimoxazole
+Ursodeoxycholic Acid
+Salbutamol (as Sulfate) + Ipratropium Bromide
+Fenofibrate
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Ferrous Sulfate
+Tamsulosin Hydrochloride
+Azithromycin(As Dihydrate)
+Cefuroxime (as Axetil)
+Cefuroxime (as Axetil)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Cefoxitin (as Sodium)
+Amlodipine (as Besilate) + Losartan Potassium
+Cetirizine Dihydrochloride
+Ceftriaxone (as sodium)
+Cefixime (as Trihydrate)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as Calcium)
+Ceftriaxone (as Sodium)
+Multivitamins + Dextrose
+Atorvastatin (as Calcium)
+Sitagliptin (as phosphate monohydrate)
+Risperidone
+Levothyroxine (as sodium)
+Cefuroxime (as Axetil)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Zinc
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-B-Sulfate
+Ketorolac trometamol
+Tobramycin
+Tobramycin
+Mupirocin
+Ceftazidime (as Pentahydrate)
+Norepinephrine (as bitartrate)
+Salbutamol (as sulfate)
+Rosuvastatin (as calcium)
+Tropisetron Hydrochloride
+Iohexol
+Iohexol
+Iohexol
+Budesonide
+Sevoflurane
+Sevoflurane
+Cefuroxime (as axetil)
+Vitex negundo L. (Lagundi Leaf)
+Petroleum Jelly
+Petroleum Jelly
+Medical Grade Oxygen
+Medical Grade Oxygen
+Vildagliptin + Metformin hydrochloride
+Rosuvastatin (as Calcium)
+Norepinephrine
+Pregabalin
+Pregabalin
+Metformin hydrochloride
+Metformin hydrochloride
+Milrinone (as lactate)
+Co-Amoxiclav
+Fusidic Acid
+Magnesium Sulfate
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Omeprazole Sodium
+Co-Amoxiclav
+Co-Amoxiclav
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Metformin Hydrochloride
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Trimetazidine Dihydrochloride
+Citicoline (as sodium)
+Clotrimazole
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Linezolid
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Ampicillin (as Sodium) + Sulbactam (as sodium)
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Heparin Sodium
+Levofloxacin (as hemihydrate)
+Ethyl Alcohol
+Pravastatin (as Sodium)
+Celecoxib
+Azithromycin (as dihydrate)
+Epinephrine
+Gentamicin (as sulfate)
+Enzalutamide
+Cefuroxime (as sodium)
+Gabapentin
+Ceftriaxone (as sodium)
+Aceclofenac
+Loratadine
+Diosmin+ Hesperidin
+Celecoxib
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Ursodeoxycholic Acid
+Febuxostat
+Citicoline (as sodium)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Pregabalin + Methylcobalamin
+Zoledronic acid (as monohydrate)
+Bupivacaine hydrochloride
+Ketoanalogues + Essential Amino Acids
+Octreotide (as acetate)
+Meclizine Hydrochloride
+Losartan potassium + Amlodipine (as besilate)
+Losartan potassium + Amlodipine (as besilate)
+Pregabalin
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Meropenem
+Salbutamol (as Sulfate)
+Pregabalin
+Levetiracetam
+Acetylcysteine
+Bortezomib
+Vildagliptin
+Azithromycin (as dihydrate)
+Pantoprazole (as sodium)
+Metformin Hydrochloride
+Tacrolimus
+Cilostazol
+Dutasteride + Tamsulosin Hydrochloride
+Pregabalin + Mecobalamin
+Sodium Hyaluronate
+Norepinephrine (as bitartrate)
+Pemetrexed (as disodium)
+Co-Amoxiclav
+Cetirizine Hydrochloride
+Tranexamic Acid
+Ascorbic acid (as Sodium ascorbate)
+Fenofibrate
+Fenofibrate
+Fenofibrate
+Oxytocin
+Fenofibrate
+Ambroxol Hydrochloride
+Bortezomib
+Co-Amoxiclav
+Ciprofloxacin (as Hydrochloride)
+Levofloxacin (as hemihydrates)
+Multivitamins + Dextrose
+Co-Amoxiclav
+Vitamin B1 + B6 + B12
+Ascorbic Acid + Zinc
+Paracetamol
+Oxaliplatin
+Diosmin+Hesperidin
+Etoricoxib
+Etoricoxib
+Nitrous Oxide
+Mometasone
+Loratadine
+Tadalafil
+Multivitamins + Minerals
+Tadalafil
+Ascorbic acid + Zinc
+Valproic Acid
+Levodropropizine
+Vildagliptin
+Co-Amoxiclav
+Sitagliptin (as hydrochloride monohydrate)
+Sitagliptin (as hydrochloride monohydrate)
+Ivabradine (as hydrochloride)
+Ivabradine (as hydrochloride)
+Acetylcysteine
+Sitagliptin (as hydrochloride monohydrate)
+Cinacalcet (as hydrochloride)
+Cinacalcet (as hydrochloride)
+Hydrocortisone (as sodium succinate)
+Hydrocortisone (as sodium succinate)
+Salmeterol (as Xinafoate) + Fluticasone Propionate
+Co-Amoxiclav
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Ampicillin (as Sodium) + Sulbactam (as sodium)
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Bupivacaine hydrochloride in Dextrose
+Paracetamol
+Paracetamol
+Meropenem (as trihydrate)
+Azithromycin (as dihydrate)
+Sodium bicarbonate
+Tadalafil
+Salbutamol (as sulfate)
+Trimetazidine Hydrochloride
+Citicoline (As Sodium)
+Salbutamol (As Sulfate)
+Neostigmine (as Methylsulfate)
+Medical Grade Oxygen
+Medical Grade Oxygen
+Olanzapine
+Citicoline (as sodium)
+Cinacalcet (as hydrochloride)
+Ascorbic Acid
+Paracetamol
+Ethyl Alcohol
+Paracetamol
+Losartan Potassium
+Losartan Potassium
+Tranexamic Acid.
+Carboplatin
+Carboplatin
+Divalproex sodium (equivalent to Valproic Acid)
+Povidone-Iodine
+Diphenhydramine
+Acetylcysteine
+Acetylcysteine
+Omidenepag isopropyl
+Cytarabine
+Cytarabine
+Bisoprolol fumarate
+Cefotaxime (as sodium) + Sulbactam (as sodium)
+Clindamycin (as phosphate) + Adapalene
+Tretinoin
+Hydroquinone + Tretinoin
+Hydroquinone + Tretinoin
+Tretinoin
+Febuxostat
+Remifentanil (as hydrochloride)
+Remifentanil (as hydrochloride)
+0.9% Sodium Chloride
+Dienogest
+Bosentan (as monohydrate)
+Trimetazidine Hydrochloride
+Ceftriaxone (as sodium)
+Levofloxacin (as hemihydrate)
+Irbesartan
+Metformin hydrochloride
+Paracetamol
+Paracetamol
+Meropenem (as trihydrate)
+Losartan Potassium
+Azithromycin (as dihydrate)
+Febuxostat
+Febuxostat
+Cefuroxime (as axetil)
+Levetiracetam
+Apixaban
+Apixaban
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Clindamycin (as phosphate)
+Iron (as Iron sucrose)
+Acetylcysteine
+Norepinephrine (as bitartrate)
+Tobramycin + Dexamethasone
+Glimepiride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Cefixime (as trihydrate)
+Fenofibrate
+Epirubicin hydrochloride
+Irbesartan
+Omeprazole (as Sodium)
+Ampicillin (as sodium)
+Nimesulide
+Cetirizine Hydrochloride
+Dorzolamide (as hydrochloride) + Timolol (as maleate)
+Sevoflurane
+Omeprazole (as sodium monohydrate)
+Omeprazole (as sodium monohydrate)
+Ceftriaxone (as sodium)
+Nicardipine Hydrochloride
+Cefuroxime (as sodium)
+Beclometasone diproprionate + dihydrate Glycopyrronium bromide.
+Testosterone
+Olanzapine
+Atogepant
+Atogepant
+Cefoxitin (as sodium)
+Rosuvastatin (as calcium) + Fenofibrate
+Ceftazidime (as pentahydrate) with sodium carbonate
+Fluconazole
+Cefoperazone (as sodium) + Sulbactam (as sodium)
+Esomeprazole (as sodium)
+Febuxostat
+Levofloxacin (as hemihydrate)
+Levofloxacin (as hemihydrate)
+Cefepime (as hydrochloride)
+Ceftriaxone (as sodium)
+Losartan potassium
+Bromocriptine (as mesilate)
+Monobasic Sodium Phosphate + Dibasic Sodium Phosphate
+Paracetamol
+Lidocaine hydrochloride + Epinephrine.
+Ascorbic Acid + Zinc
+Levothyroxine Sodium
+Levocarnitine
+Ceftriaxone (as sodium)
+Ursodeoxycholic Acid
+Caspofungin (as acetate)
+Cefuroxime (as sodium)
+Dutasteride
+Co-amoxiclav
+Co-Amoxiclav
+Sterile Water for Injection
+Fenofibrate
+Ivabradine (as hydrochloride)
+Amlodipine (as besylate) + Atorvastatin (as calcium)
+Amlodipine (as besylate) + Atorvastatin (as calcium)
+Amlodipine (as besylate) + Atorvastatin (as calcium)
+Cefepime (as hydrochloride) + Tazobactam (as sodium)
+Rabeprazole Sodium
+Meningococcal group B Vaccine (rDNA, component, adsorbed)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Amlodipine (as besilate)
+Anastrozole
+Amlodipine (as besilate)
+Co-Amoxiclav
+Febuxostat
+Montelukast (as sodium)+ Levocetirizine Hydrochloride
+Ketoanalogues + Essential Amino Acids
+Ascorbic Acid + Zinc
+Pregabalin
+Ursodeoxycholic Acid
+Bleomycin (as Sulfate)
+Omeprazole (as sodium)
+Multivitamins + Minerals
+Pantoprazole (as sodium sesquihydrate) + Domperidone (as maleate)
+Sugammadex (as sodium)
+Pantoprazole (as sodium)
+Amoxicillin (as Trihydrate)
+Dutasteride + Tamsulosin Hydrochloride
+Ertapenem (as sodium)
+Losartan Potassium
+Losartan Potassium + Amlodipine (as besilate)
+Norepinephrine (as bitartrate)
+Norepinephrine (as bitartrate)
+Omeprazole
+Folic Acid
+Atorvastatin (as calcium)
+Oxaliplatin
+Montelukast (as sodium)
+Azithromycin (as dihydrate)
+Candesartan Cilexetil
+Candesartan Cilexetil
+Simvastatin
+Ursodeoxycholic acid
+Betamethasone (as valerate)
+Finasteride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Omeprazole (as sodium)
+Azithromycin (as dihydrate)
+Glimepiride
+Iron (as Ferrous Sulfate) + Folic Acid
+Telmisartan
+Clindamycin (as phosphate)
+Pantoprazole (as sodium sesquihydrate)
+Rabeprazole Sodium
+Tigecycline
+Ketoprofen
+Cetirizine Hydrochloride
+Vitamin B1 + B6 + B12
+Atorvastatin (as calcium)
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-B-Sulfate
+Zinc (as Zinc sulfate monohydrate)
+Diclofenac Sodium
+Methotrexate
+Mupirocin
+Mupirocin
+Furosemide
+Ampicillin (as sodium)
+dl-Alpha Tocopherol Acetate (Vitamin E)
+Losartan Potassium
+Nicardipine Hydrochloride
+Paracetamol
+Fluocinolone Acetonide + Polymyxin B Sulfate + Neomycin (as Sulfate)
+Cefuroxime (as axetil)
+Cefuroxime (as axetil)
+Omeprazole (as sodium)
+Cefepime (as hydrochloride)
+Cefuroxime (As sodium)
+Cefuroxime (as Sodium)
+Heparin Sodium
+Dapagliflozin
+Co-Amoxiclav
+DILOXANIDE FUROATE
+Omeprazole (as sodium monohydrate)
+Febuxostat
+Febuxostat
+Gliclazide
+Gliclazide
+Losartan Potassium + Amlodipine (as besilate)
+Ipratropium bromide + Salbutamol (as sulfate)
+Lapatinib (as ditosylate monohydrate)
+Amlodipine (as besilate)
+Metformin Hydrochloride
+Cefalexin (as Monohydrate)
+Acetylcysteine
+Norepinephrine (as bitartrate)
+Clindamycin (as Phosphate)
+Aciclovir
+Aminophylline
+Dopamine hydrochloride
+Clopidogrel (as bisulfate)
+Paracetamol/ Vitamin B1/ Vitamin B6/ Vitamin B12
+Paracetamol/ Vitamin B1/ Vitamin B6/ Vitamin B12
+Fenofibrate
+Ceftriaxone (as sodium)
+Fluticasone Propionate
+Albendazole
+Cefixime
+Rosuvastatin (as Calcium)
+Risperidone
+Omeprazole (as sodium)
+Irinotecan Hydrochloride
+Ampicillin (as Sodium) + Sulbactam (as Sodium)
+Iopamidol
+Ceftazidime (as pentahydrate) with sodium carbonate
+Ceftriaxone (as sodium)
+Allopurinol
+Apixaban
+Trimetazidine dihydrochloride
+Rabeprazole sodium
+Enalapril maleate
+Enalapril maleate
+Carbamazepine
+Ticagrelor
+Ceftriaxone (as sodium)
+Tranexamic Acid
+Bupivacaine hydrochloride
+Duloxetine (as hydrochloride)
+Cefazolin (as sodium)
+Duloxetine (as hydrochloride)
+Ceftriaxone (as sodium)
+Semaglutide
+Semaglutide
+Semaglutide
+Semaglutide
+Semaglutide
+Diosmin Hesperidin
+Clopidogrel (as bisulfate)
+Paracetamol
+Rivaroxaban
+Methyl Salicylate + Menthol + Eucalyptus Oil + Camphor/ Menthol + Camphor
+Cefixime (as trihydrate)
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Diphtheria and Tetanus Vaccine (Adsorbed)
+Vancomycin (as Hydrochloride)
+Vancomycin (as Hydrochloride)
+Ceftriaxone (as sodium)
+Ceftriaxone
+Paracetamol
+Pelargonium sidoides DC. Root
+Lysozyme Hydrochloride
+Paracetamol
+Chlorhexidine Gluconate
+Loperamide + Simethicone
+Medical Grade Oxygen
+Letrozole
+Co-Amoxiclav
+Co-Amoxiclav
+Febuxostat
+Capecitabine
+Oxaliplatin
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Etoricoxib
+Hydroxyethyl Starch + Sodium Chloride
+Co-Amoxiclav
+Co-Amoxiclav
+Lactulose
+Vildagliptin
+Amlodipine (as besilate)
+Clarithromycin
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)
+Cefuroxime (as sodium)                     
+Sitagliptin (as hydrochloride monohydrate)
+Diphtheria and Tetanus Vaccine (Adsorbed)
+Cefoperazone (as sodium)
+Tramadol Hydrochloride
+Tramadol Hydrochloride.
+Iron (as Iron Sucrose)
+Dacarbazine
+Fluconazole
+Oseltamivir (as phosphate)
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Cetirizine hydrochloride
+Cetirizine hydrochloride
+Bicalutamide
+Lidocaine Hydrochloride
+Co-Amoxiclav
+Gliclazide
+Tramadol Hydrochloride
+Vildagliptin
+Losartan Potassium + Hydrochlorothiazide
+Gabapentin
+Flucloxacillin
+Furosemide
+Azithromycin (as dihydrate)
+Mycophenolic Acid
+Benzylpenicillin sodium.
+Atracurium besilate
+Povidone Iodine
+Solifenacin (as succinate)
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride.
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Silver Sulfadiazine
+Silver Sulfadiazine
+Capecitabine
+Isopropyl Alcohol
+Paclitaxel
+Paclitaxel
+Paclitaxel
+Vildagliptin + Metformin HCI
+Vildagliptin + Metformin HCI
+Metformin Hydrochloride
+Azithromycin (as dihydrate)
+Vitamin B-Complex + Iron + Lysine + Buclizine HCl
+Dapagliflozin
+Docetaxel
+Docetaxel
+Linezolid
+Linezolid
+Zoledronic Acid (As Monohydrate)
+Sitagliptin (as phophate) + Metformin Hydrochloride
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Tadalafil
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Isopropyl Alcohol + Chlorhexidine Gluconate (Vet.)
+Isopropyl Alcohol
+Ascorbic Acid
+Paracetamol
+Tenofovir Disoproxil Fumarate
+Vildagliptin
+Hydrocortisone (as sodium succinate)
+Esomeprazole (as sodium)
+Levodropropizine.
+Docetaxel (as trihydrate)
+Docetaxel (as trihydrate)
+Propofol
+Rosuvastatin (as calcium)
+Clobetasol propionate
+Docetaxel
+Docetaxel
+Pravastatin Sodium
+Sterile Water For Injection
+Sterile Water for Injection.
+Clobetasol Propionate.
+Irbesartan Hydrochlorothiazide
+Levetiracetam
+Valsartan Amlodipine (as besilate)
+Valsartan + Amlodipine (as besilate)
+Isopropyl Alcohol
+Methyl Salicylate + Menthol + Camphor
+Isopropyl Alcohol
+Ketoconazole
+Isopropyl Alcohol
+Isopropyl Alcohol
+Tranexamic acid.
+Furosemide
+Hydrocortisone (as sodium succinate)
+Vildagliptin Metformin HCI
+Vildagliptin + Metformin HCI
+Menthol Camphor
+Menthol Camphor
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Vildagliptin
+Telmisartan
+Cefazolin (as sodium)
+Cefazolin (as sodium)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Clopidogrel
+Povidone-Iodine
+Benzoic Acid + Salicylic Acid
+Bortezomib
+Ciprofloxacin (as hydrochloride)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Multivitamins + Buclizine Hydrochloride + Lysine Hydrochloride + Ferrous Sulfate
+Vildagliptin
+Esomeprazole (as sodium)
+Linagliptin
+Rosuvastatin (as calcium)
+Oral Rehydration Salts
+Oral Rehydration Salts
+Cetirizine hydrochloride
+Iron Folic Acid (Vitamin B9)
+Loratadine + Phenylephrine
+Phenylephrine hydrochloride + Chlorpheniamine maleate
+Paracetamol + Phenylephrine hydrochloride
+Aluminum hydroxide + Magnesium hydroxide + Oxetacaine
+Losartan Potassium + Amlodipine (as besilate)
+Losartan Potassium + Amlodipine (as besilate)
+Paracetamol
+Ascorbic Acid
+Dapagliflozin
+Gentamicin (as sulfate)
+Progesterone
+Potassium Citrate
+Palonosetron (as hydrochloride)
+Febuxostat
+Amlodipine (as besilate)
+Propofol
+Paracetamol + Orphenadrine Citrate
+Co-Amoxiclav
+Sitagliptin (as Phosphate Monohydrate) + Metformin Hydrochloride
+Potassium Chloride
+Co-Amoxiclav
+Sitagliptin (as phosphate) + Metformin HCl
+Telmisartan
+Telmisartan
+Telmisartan + Hydrochlorothiazide
+Mupirocin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Pantoprazole (as sodium)
+Tranexamic Acid
+Tranexamic Acid.
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Menthol Eucalyptus Oil + Camphor
+Carvedilol
+Carvedilol
+Montelukast (as sodium)
+Tranexamic Acid
+Cefixime (as trihydrate)
+Esomeprazole (as sodium)
+Telmisartan + Hydrochlorothiazide
+Telmisartan+Hydrochlorothiazide
+Mesalazine
+Adenosine
+Thiamine Hydrochloride (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Ethyl Alcohol
+Isopropyl Alcohol
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine Besilate
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Esomeprazole (as sodium)
+Vancomycin Hydrochloride
+Vancomycin (as hydrochloride)
+Methimazole
+Diosmin Hesperidin.
+Diosmin + Hesperidin
+Iron Folic Acid (Vitamin B9)
+Diosmin+Hesperidin
+Celecoxib
+Azithromycin (as dihydrate)
+Metformin Hydrochloride
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Telmisartan + Amlodipine (as besilate)
+Omeprazole
+Cefuroxime (as axetil)
+Gliclazide
+Gliclazide
+Celecoxib
+Co-Amoxiclav
+Cetirizine (as Dihydrochloride)
+Losartan Potassium
+Celecoxib
+Pregabalin
+Levothyroxine sodium
+Cetirizine Dihydrochloride
+Pregabalin
+Pregabalin
+Ursodeoxycholic Acid
+DYDROGESTERONE
+Acetylcysteine
+Duloxetine (as hydrochloride)
+Omeprazole (as sodium)
+Ketoconazole + Clobetasol (as propionate)
+Ampicillin (as sodium)
+Losartan Potassium
+Losartan Potassium
+Betahistine hydrochloride
+Apixaban
+Apixaban
+Ceftriaxone Sodium
+Acetylcysteine
+Atorvastatin (As Calcium)
+Apixaban
+Clobetasol propionate
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Levothyroxine sodium
+Febuxostat
+Sugammadex (as sodium)
+Metoclopramide Hydrochloride
+Montelukast (as sodium) + Levocetirizine Dihydrochloride
+Doxofylline
+Docetaxel
+Docetaxel
+Dutasteride + Tamsulosin Hydrochloride
+Losartan Potassium
+Nebivolol (as hydrochloride)
+Solifenacin Succinate
+Aripiprazole
+Losartan Potassium + Amlodipine (as besilate)
+Nicardipine Hydrochloride
+Norepinephrine (as bitartrate)
+Carboplatin
+Docusate Sodium
+Paclitaxel
+Paclitaxel
+Oxaliplatin
+Olanzapine
+Methylprednisolone (as sodium succinate)
+Co-Amoxiclav
+Capecitabine
+Carboplatin
+Azithromycin (as dihydrate)
+Montelukast (as sodium)
+Clarithromycin
+Hydrochlorothiazide
+Cefuroxime (as Axetil)
+LETROZOLE
+Clindamycin (as phosphate)
+Cefixime
+Cefixime
+Tramadol Hydrochloride
+Pantoprazole (as sodium sesquihydrate)
+Fluorouracil
+Amino Acids
+Vincristine sulfate
+Rabeprazole Sodium
+Omeprazole
+Docetaxel (as trihydrate)
+Hydrocortisone (as sodium succinate)
+Pantoprazole (as sodium sesquihydrate)
+Omeprazole (as sodium)
+Hyoscine-N-Butylbromide
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-B-Sulfate
+Multivitamins + Minerals + Buclizine
+Bisoprolol Fumarate
+Methotrexate
+FOLIC ACID
+Azithromycin (as Dihydrate)
+Losartan Potassium
+Donepezil hydrochloride
+Water for Injection
+Paracetamol
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Gliclazide
+Lactulose
+Calcium
+Diosmin + Hesperidin
+Multivitamins
+Ascorbic acid (as Sodium ascorbate)
+Ascorbic Acid + Zinc
+Celecoxib
+Methyl Salicylate
+Norepinephrine (as bitartrate)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Amikacin (as sulfate)
+Epinephrine
+Hydrocortisone (As Sodium Succinate)
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Ampicillin (as Sodium)
+Bisoprolol fumarate
+Bisoprolol fumarate
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Heparin (as sodium)
+Cefalexin (as monohydrate)
+Cefixime (as trihydrate)
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Dapagliflozin
+Dapagliflozin
+Dapagliflozin
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Ketoanalogues + Essential Amino Acids
+Ceftriaxone (as sodium)
+Co-Amoxiclav
+Amlodipine (as besilate)
+Dapagliflozin
+Co-Amoxiclav
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Dobutamine (as hydrochloride)
+Trimetazidine Dihydrochloride
+Co-Amoxiclav
+Rosuvastatin (as calcium)
+Risperidone
+Losartan Potassium
+Anagrelide (as hydrochloride)
+Palonosetron (as hydrochloride)
+Rosuvastatin (as Calcium)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Tranexamic acid
+Amlodipine (as besilate)
+Febuxostat
+Febuxostat
+Ketoanalogues + Essential Amino Acids
+Ondansetron (as hydrochloride dihydrate)
+Losartan Potassium + Amlodipine (as besilate)
+Pregabalin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Citicoline
+Duloxetine (as hydrochloride)
+Levetiracetam
+Moxifloxacin (as hydrochloride)
+Tobramycin (as sulfate)
+Ceftriaxone (as sodium)
+Rosuvastatin (as calcium)
+Co-Amoxiclav
+Apixaban
+Clopidogrel (as bisulfate)
+Atorvastatin (As Calcium)
+Co-Amoxiclav
+Dexketoprofen (as trometamol)
+Hydroxycarbamide
+Cilostazol
+Celecoxib
+Methyldopa
+Acetylcysteine
+Acetylcysteine
+Solifenacin Succinate
+Carboplatin
+Hydrocortisone (as sodium succinate)
+Multivitamins
+Glutathione
+Vancomycin (as hydrochloride)
+Paracetamol
+Paracetamol
+Paracetamol
+Vancomycin (as hydrochloride)
+Eptacog alfa (activated)
+Irbesartan
+Irbesartan
+Rosuvastatin (as Calcium)
+dl-alpha Tocopheryl Acetate (Vitamin E)
+Furosemide
+Enzalutamide
+Levetiracetam
+Cloxacillin (as sodium)
+Metformin Hydrochloride
+Gliclazide
+Acetylcysteine
+Docusate Sodium
+Paclitaxel
+Ambroxol Hydrochloride
+Trimetazidine Hydrochloride
+Omeprazole (as Sodium)
+Clarithromycin
+Mefenamic Acid
+Glimepiride
+Montelukast (as Sodium)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Azithromycin (as dihydrate)
+Atorvastatin (as calcium)
+Acetylcysteine
+Ambroxol Hydrochloride
+Gliclazide
+Amlodipine (as Besilate)
+Cefixime (as Trihydrate)
+Rabeprazole Sodium
+Pantoprazole (as sodium)
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Glimepiride + Metformin hydrochloride
+Co-Amoxiclav
+Prednisolone Sodium Phosphate
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Neomycin sulfate + Polymyxin B sulfate + Fluocinolone acetonide
+Tobramycin
+Telmisartan
+Omeprazole (as Sodium)
+Paracetamol
+Hyoscine-N-Butylbromide
+Losartan Potassium
+Polymyxin B Sulfate + Neomycin Sulfate + Dexamethasone (as Sodium Phosphate)
+Carvedilol
+Ketorolac Trometamol
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Buclizine HCl + Multivitamin + Iron
+Cetirizine dihydrochloride
+Lactulose
+Trimetazidine dihydrochloride
+Salbutamol (as sulfate)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Atorvastatin (as calcium)
+Iron + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
+Rosuvastatin (as calcium)
+Zinc oxide + Calamine
+Hydralazine Hydrochloride
+Glimepiride
+Ketorolac Trometamol
+Hyoscine-N-Butylbromide
+Hydrocortisone (as sodium succinate)
+Fluocinolone Acetonide + Polymyxin B Sulfate + Neomycin Sulfate
+Amoxicillin (As Trihydrate)
+Co-Amoxiclav
+Losartan Potassium
+Mometasone Furoate (As Monohydrate)
+Carbocisteine + Zinc
+Paracetamol + Tramadol Hydrochloride
+Glycerin
+Trastuzumab
+Trastuzumab
+Multivitamins + Minerals
+Ceftriaxone (as sodium)
+Ascorbic Acid + Zinc
+Gliclazide
+Dapagliflozin
+Co-Amoxiclav
+Co-Amoxiclav
+Ascorbic Acid + Zinc
+Omeprazole (as sodium)
+Ceftriaxone (as sodium)
+Paracetamol + Orphenadrine Citrate
+Cefuroxime (as sodium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Nebivolol (as hydrochloride)
+Loperamide Hydrochloride
+Rosuvastatin(as calcium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride (as sodium)
+Fenofibrate
+DL-Alpha-Tocopherol (Vitamin E)
+Sodium Bicarbonate
+Vitamin B1 +B6 +B12
+Omeprazole (as sodium)
+Clindamycin (as phosphate)
+Salbutamol (as sulfate) + Ipratropium bromide
+Ketoanalogues + Essential Amino Acids
+Nicardipine Hydrochloride
+Methylprednisolone (as sodium succinate)
+Ketorolac Trometamol
+Cefpodoxime (as proxetil)
+Cefpodoxime (as proxetil)
+Ipratropium bromide + Salbutamol (as sulfate)
+Betahistine hydrochloride
+Acetylcysteine
+Apixaban
+Atorvastatin (As Calcium)
+Docetaxel
+Docetaxel
+Dutasteride + Tamsulosin Hydrochloride
+Dutasteride + Tamsulosin Hydrochloride
+Dutasteride + Tamsulosin Hydrochloride
+Febuxostat
+Acetylcysteine
+Acetylcysteine
+Multivitamins + Iron
+Acetylcysteine
+Sevelamer Carbonate
+Abiraterone acetate
+Amiodarone hydrochloride
+Hydroxychloroquine Sulfate
+Aceclofenac + Paracetamol
+Co-Amoxiclav
+Diphenhydramine Hydrochloride
+Multivitamins
+Multivitamins + Iron
+Fluconazole
+Mefenamic Acid
+Omeprazole
+Cetirizine Hydrochloride
+Celecoxib
+Telmisartan
+Telmisartan
+Co-Amoxiclav
+Amlodipine (as besilate)
+Cefuroxime (as Axetil)
+Racecadotril
+Hydrochlorothiazide
+Acetylcysteine
+Telmisartan
+Amlodipine (as Besilate)
+Ketoanalogues + Essential Amino Acids
+Omeprazole + Sodium bicarbonate
+Omeprazole (as Sodium)
+Pantoprazole (as sodium)
+Rosuvastatin (as calcium)
+Prednisolone Sodium Phosphate
+Levofloxacin (as Hemihydrate)
+Levodopa + Carbidopa
+Rocuronium bromide
+Budesonide
+Omeprazole
+Metronidazole
+Levofloxacin (as hemihydrate)
+Tramadol Hydrochloride
+Clobetasol Propionate
+Cilostazol
+Cilostazol
+Carvedilol
+Clarithromycin
+Ethyl Alcohol
+Cholecalciferol (Vitamin D3)
+Tramadol Hydrochloride + Paracetamol
+Cytarabine
+Dexmedetomidine
+Telmisartan
+Telmisartan
+Clindamycin (as phosphate)
+Telmisartan + Amlodipine (as Besilate)
+Clobetasol propionate
+Clindamycin (as phosphate)
+Ketoconazole + Clobetasol Propionate
+Vildagliptin + Metformin HCI
+Vildagliptin + Metformin HCI
+Thiamazole
+Lactated Ringer's Solution
+Amlodipine (as besilate) + Valsartan
+Amlodipine (as besilate) + Valsartan
+Linagliptin
+Tranexamic Acid
+Cefepime (as hydrochloride)
+Esomeprazole (as magnesium trihydrate)
+Moxifloxacin (as hydrochloride)
+Montelukast (as sodium) + Levocetirizine Dihydrochloride
+Dapagliflozin (as propanediol monohydrate)
+Oxaliplatin
+Betamethasone
+Lactated Ringer's Solution
+Tranexamic Acid
+Moxifloxacin (as Hydrochloride)
+Atorvastatin (as calcium trihydrate)
+Amlodipine (as besilate) + Valsartan
+Iron Sucrose (as Ferric Hydroxide Sucrose Complex)
+Sorafenib (as tosylate)
+Amiodarone Hydrochloride
+Multivitamins + Minerals + Amino Acids.
+Iron + Folic Acid + Pyridoxine hydrochloride (Vitamin B6) Cyanocobalamin (Vitamin B12)
+5% Dextrose in Lactated Ringer's Solution
+Amlodipine (as besilate)
+Paracetamol + Ibuprofen (as sodium dihydrate)
+Multivitamins
+Diclofenac Diethylamine + Methyl Salicylate + Levomenthol Linum usitatissimum (Linseed) Seed
+Vildagliptin + Metformin Hydrochloride
+Mometasone furoate
+Multivitamins + Iron
+Paracetamol
+Paracetamol
+Cefuroxime (as sodium)
+FOLIC ACID
+Co-Amoxiclav
+Amlodipine (as besilate)
+Atorvastatin (as Calcium Trihydrate)
+Diosmin + Hesperidin
+Ketorolac Trometamol
+Paracetamol
+Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
+Montelukast (as sodium) + Levocetirizine dihydrochloride
+Ketoconazole
+Epoetin Alfa
+Ambroxol Hydrochloride
+Folic Acid
+Zoledronic Acid (as zoledronic anhydrous)
+Acetylcysteine
+Multivitamins + Mineral + Buclizine
+Febuxostat
+Levodropropizine
+Levofloxacin
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Vildagliptin
+Salbutamol (as sulfate) + Ipratropium bromide
+Betahistine hydrochloride
+Betahistine hydrochloride
+Furosemide
+Febuxostat
+Letrozole
+Gliclazide
+0.9% Sodium Chloride
+Multivitamins + Dextrose
+Cefuroxime (as axetil)
+Diosmin + Hesperidin
+Ezetimibe
+Escitalopram (as oxalate)
+Pantoprazole
+Pantoprazole
+Aminophylline
+Clopidogrel (as bisulfate)
+Amiodarone Hydrochloride
+Amiodarone Hydrochloride
+Losartan Potassium
+Gabapentin
+Gemcitabine (as hydrochloride)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Colchicine
+Desloratadine
+Cefazolin (as sodium)
+Cefoxitin (as sodium)
+Gliclazide
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Cefazolin (as sodium)
+Vildagliptin Metformin Hydrochloride
+Tobramycin
+Amiodarone Hydrochloride
+Pregabalin
+Pregabalin
+Pregabalin
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Tenofovir Disoproxil Fumarate
+Ticagrelor
+Dapagliflozin (as propanediol monohydrate)
+Amiodarone Hydrochloride
+Vancomycin (as Hydrochloride)
+Vancomycin
+Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
+Sitagliptin (as phosphate)
+Cefaclor (as monohydrate)
+Linagliptin + Metformin Hydrochloride
+Metronidazole
+Levofloxacin
+Indacaterol (as acetate) + Mometasone furoate
+Somatropin (rbe)
+Cetirizine Hydrochloride
+Cefepime (as hydrochloride)
+Vitamin B-Complex (see reverse)
+Ascorbic Acid
+Propranolol Hydrochloride
+Phytomenadione
+Infliximab
+Co-Amoxiclav
+Terazosin (as hydrochloride)
+Phenylephrine Hydrochloride
+Metronidazole
+Isoniazid
+Sodium Bicarbonate
+Budenoside
+Paracetamol
+Carbocisteine
+Raloxifene (As Hydrochloride)
+Travoprost
+Ketoanalogues + Essential Amino Acids
+Orlistat
+di-Alpha Tocopherol Acetate (Vitamin E)
+Naproxen Sodium
+Vitamin E
+Bupivacaine Hydrochloride In 8% Dextrose
+Bupivacaine Hydrochloride In 8 % Dextrose
+Trimetazidine Hydrochloride
+Betamethasone + Dexchlorpheniramine Maleate
+Ascorbic Acid
+Dextromethorphan Hydrobromide
+Nitrofurantoin
+Allopurinol
+Lansoprazole
+Lansoprazole
+Aspirin
+Multivitamins + Minerals
+Thiamine mononitrate (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) + Lysine hydrochloride + Iron
+Quetiapine (As Fumarate)
+Dutasteride
+Cefalexin (As Monohydrate)
+Folic Acid
+Clonazepam
+Paracetamol
+Ascorbic Acid
+Memantine Hydrochloride
+Metoprolol Tartrate
+Trimetazidine Hydrochloride
+Mefenamic Acid
+Lactulose
+Ascorbic Acid + Zinc
+Levobupivacaine (As Hydrochloride)
+Mometasone Furoate
+Ascorbic Acid + Zinc
+Sevoflurane
+Ascorbic Acid + Zinc
+Gliclazide
+Sodium Ascorbate
+Clopidogrel (as Bisulfate)
+Paracetamol + Phenylpropanolamine Chlorphenamine Maleate
+Clindamycin (As Phosphate)
+Nitroglycerin
+Gliclazide
+Co-Amoxiclav
+Temozolomide
+Rosuvastation (as calcium)
+Cefdinir
+Quetiapine (As Hemifumarate)
+Ascorbic Acid
+Thiamine Mononitrate (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Paracetamol
+Bromhexine Hydrochloride
+Amlodipine besilate
+Ascorbic Acid
+Ascorbic Acid
+Paracetamol + Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Atenolol
+Paracetamol + Orphenadrine Citrate
+Paracetamol + Orphenadrine Citrate
+Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Ambroxol Hydrochloride
+Loratadine
+Ibuprofen
+Ibuprofen
+Ibuprofen
+Ibuprofen
+Isopropyl Alcohol
+Zingiber Officinale (Ginger Rhizome) + Camphor + Menthol + Methyl Salicylate
+Carbocisteine + Zinc
+Carbocisteine + Zinc
+Ascorbic Acid
+Spironolactone
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc + Cholecalciferol (Vitamin D3)
+Ciprofloxacin
+Ciprofloxacin (As Hydrochloride)
+Silver Sulfadiazine
+Amoxicillin (as trihydrate)
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Multivitamins + Phosphatidylcholine
+Multivitamins + Iron
+Ascorbic Acid + Zinc
+Menthol Eucalyptus Oil
+Zinc
+Paracetamol + Guaifenesin + Phenylpropanolamine Hydrochloride + Dextromethorphan Hydrobromide + Chlorphenamine Maleate
+Povidone-Iodine
+Phenylpropanolamine Hydrochloride + Chlorphenamine Maleate
+Multivitamins + Iron
+Carbocisteine
+Zinc
+Tretinoin + Hydroquinone
+Tretinoin + Hydroquinone
+Tretinoin + Hydroquinone
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Telmisartan
+Telmisartan
+Povidone-Iodine
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Isopropyl Alcohol
+Paracetamol
+Carbocisteine
+Carbocisteine
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Clobetasol Propionate
+Lidocaine Hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic acid + Zinc + Panax ginseng L. (Korean Ginseng Root)
+Ascorbic Acid + Zinc
+Zinc
+Cefuroxime (As Sodium)
+Bosentan (As Monohydrate)
+Hexetidine
+Ascorbic Acid
+Azithromycin (As Dihydrate)
+Ascorbic Acid + Zinc
+Sevalamer Carbonate
+Sevalamer Carbonate
+Calcium + Cholecalciferol (Vitamin D3)
+Calcium
+Gemcitabine (as Hydrochloride)
+Rosuvastatin (As Calcium)
+Salbutamol (as sulfate) + Guaifenesin + Bromhexine Hydrochloride
+Co-Trimoxazole
+Moxifloxacin (as hydrochloride)
+Gentamicin (as Sulfate)
+Ascorbic Acid + Zinc
+Betamethasone Dipropionate
+Lamivudine
+Nifedipine
+Rosuvastatin (As Calcium)
+Omeprazole
+Omeprazole
+Omeprazole
+Clonidine Hydrochloride
+Zoledronic Acid
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Olanzapine
+Ceftriaxone (As Sodium)
+Cholecalciferol (Vitamin D3) + Minerals
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Hydroquinone
+Hydroquinone
+Cholecalciferol (Vitamin D3)
+Valsartan
+Valsartan
+Betahistine Hydrochloride
+Calcium + Cholecalciferol (Vitamin D3)
+Calcium + Cholecalciferol (Vitamin D3)
+Cetirizine Hydrochloride + Phenylephrine Hydrochloride
+Moxifloxacin (as hydrochloride)
+Fusidic acid + Betamethasone (as valerate)
+Loratadine
+Loratadine
+Cetirizine Hydrochloride + Phenylephrine Hydrochloride
+Loratadine
+Carbocisteine
+Carbocisteine
+Carbocisteine + Zinc
+Erlotinib (as hydrochloride)
+Erlotinib (as hydrochloride)
+Erlotinib (as hydrochloride)
+Ascorbic Acid
+Salicylic Acid
+Carbocisteine
+Bosentan (As Monohydrate)
+Lysine + Multivitamins + Iron
+Diosmin + Hesperidin
+Loperamide
+Multivitamins + Minerals
+Ascorbic Acid
+Cholecalciferol (Vitamin D3)
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Zinc
+Zinc
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Paracetamol
+Trimetazidine hydrochloride
+Ascorbic Acid+ Zinc
+Febuxostat
+Lidocaine Hydrochloride
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid
+Silver Sulfadiazine
+Iodine (as Iohexol)
+Ascorbic Acid
+Ascorbic Acid
+Zinc Oxide
+Nicardipine Hydrochloride
+Nicardipine Hydrochloride
+Hydrogen Peroxide (Agua Oxigenada)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Povidone-Iodine
+Povidone-Iodine
+Ascorbic Acid
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxide + Magnesium Hydroxide + Simethicone
+Aluminum Hydroxide + Magnesium Hydroxide
+Hydrotalcite + Dicycloverine Hydrochloride + Simethicone
+Multivitamins + Zinc + Copper
+Calcium Lactate
+Multivitamins + Iron
+Streptomycin (As Sulfate)
+Ascorbic Acid
+Ascorbic Acid
+Bisacodyl
+Povidone Iodine
+Povidone Iodine
+Methyl Salicylate+Menthol+Camphor+Vanillyl Nonylamide
+Methly Salicylate+Menthol+Camphor+Mentha Oil+Thymol
+Ascorbic Acid
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Cassia angustifolia Vahl (Senna Leaves and Pods)
+Cefuroxime (As Axetil)
+Cefuroxime (As Axetil)
+Atorvastatin (As Calcium)
+Atorvastatin (As Calcium)
+Multivitamins + Minerals
+Aspirin
+Ascorbic Acid + Zinc
+Bifonazole
+Ibuprofen + Paracetamol
+Pregabalin
+Paracetamol + Orphenadrine Citrate
+Acalabrutinib
+Amlodipine (as Besilate) + Valsartan
+Amlodipine (as Besilate) + Valsartan
+Fulvestrant
+Carboplatin
+Candesartan Cilexetil
+Rivaroxaban
+Rivaroxaban
+Cefuroxime (as axetil)
+Cefuroxime (As Sodium)
+Ceftriaxone (As Sodium)
+Methylprednisolone Sodium Succinate
+Paclitaxel
+Doxofylline
+Doxofylline
+Amoxicillin (As Trihydrate)
+Clotrimazole
+Colecalciferol
+Docetaxel
+Sildenafil Citrate
+Colecalciferol
+Clonidine Hydrochloride
+Clotrimazole
+Fusidic Acid
+Clotrimazole
+Citicoline
+Citicoline
+Dopamine Hydrochloride
+Acetylcysteine
+Ethyl Alcohol
+Ketoconazole + Clobetasol Propionatee
+Diltiazem
+Salbutamol (as sulfate)
+Doxofylline
+Doxofylline
+Atenolol
+Atenolol
+Atenolol
+Captopril
+Captopril
+Captopril
+Adapalene
+Adapalene
+Dexamethasone Sodium Phosphate
+Mineral Oil
+Co-Amoxiclav
+Glycerin
+Levodropropizine
+Moxifloxacin (as hydrochloride)
+Meropenem (as trihydrate)
+Telmisartan
+Sultamicillin tosilate
+Sultamicillin tosilate
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Telmisartan
+Cefotaxime (as sodium)
+Cefotaxime (as sodium)
+Cefotaxime (as sodium)
+Medical Grade Oxygen
+Valproic Acid
+Vildagliptin
+Valproic Acid
+Clarithromycin
+Trastuzumab
+Trastuzumab
+Methyl Salicylate + Menthol + Camphor
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Methyl Salicylate + Camphor + Menthol
+Phenylephrine Hydrochloride + Chlorphenamine Maleate + Paracetamol
+Levothyroxine (As Sodium)
+Clobetasol Propionate.
+Isopropyl Alcohol
+Oxytocin
+Enoxaparin sodium
+Enoxaparin sodium
+Enoxaparin sodium
+Enoxaparin sodium
+Apixaban
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Acetylcysteine
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Ampicillin (as sodium)
+Celecoxib
+Etoricoxib
+Etoricoxib
+Co-Amoxiclav
+Hydrocortisone (as acetate)
+Carvedilol
+Co-Amoxiclav
+Levofloxacin (As Hemihydrate)
+Trastuzumab
+Methyl Salicylate + Camphor + Menthol
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Co-Amoxiclav
+Levofloxacin
+Levodropropizine
+Amlodipine (as besilate)
+Propofol
+Dapagliflozin
+Betahistine Hydrochloride
+Cefuroxime (as sodium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Metformin hydrochloride
+Loperamide Hydrochloride
+Atorvastatin (as Calcium Trihydrate)
+Metformin hydrochloride + Sitagliptin (as phosphate)
+Citicoline (as sodium)
+Febuxostat
+Trimetazidine Hydrochloride
+Multivitamins + Minerals
+Glimepiride
+Mupirocin
+Losartan Potassium
+Clotrimazole
+Pregabalin
+Cefepime (as hydrochloride)
+Ipratropium bromide + Salbutamol (as sulfate)
+Moxifloxacin (as hydrochloride)
+Ursodeoxycholic Acid
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Co-Amoxiclav
+Pantoprazole (as sodium sesquihydrate) + Domperidone (as maleate)
+Omeprazole
+Ketoanalogues and Essential Amino Acids
+Iron (as Iron sucrose)
+Pantoprazole (as sodium sesquihydrate)
+Febuxostat
+Febuxostat
+Febuxostat
+Febuxostat
+Fusidic acid + Betamethasone (as valerate)
+Apixaban
+Apixaban
+Captopril
+Multivitamins
+Norepinephrine (as bitartrate)
+Paracetamol
+Methotrexate
+Rosuvastatin (as Calcium)
+Rosuvastatin (as Calcium)
+Terazosin (as Hydrochloride)
+Co-Amoxiclav
+Valsartan + Amlodipine (as besilate)
+Multivitamins + Iron
+Atorvastatin (as calcium)
+Buclizine Hydrochloride + Vitamin B Complex + Iron
+Mometasone Furoate
+Ceftriaxone (as Sodium)
+Azithromycin (as dihydrate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Phenylpropanolamine Hydrochloride + Chlorpheniramine Maleate
+Aluminum Hydroxide + Magnesium Hydroxide
+Aluminum Hydroxide + Magnesium Hydroxide
+FERROUS SULFATE+FOLIC ACID+VIT B COMPLEX
+Fluconazole
+Amlodipine (as besilate)
+Cefuroxime (as axetil)
+Celecoxib
+Cefixime (As Trihydrate)
+Racecadotril
+Telmisartan
+Telmisartan
+Cefixime
+Amlodipine (as Besilate)
+Clarithromycin
+Ketoanalogues + Essential Amino Acids
+Omeprazole (as sodium)
+Omeprazole (as sodium)
+Omeprazole (as sodium)
+Amlodipine (as Besylate) + Valsartan ++ Hydrochlorothiazide
+Dapagliflozin
+Pemetrexed (as disodium hemipentahydrate)
+Pemetrexed (as disodium hemipentahydrate)
+Oxaliplatin
+Oxaliplatin
+Tramadol hydrochloride + Paracetamol
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Amlodipine (as besilate) + Atorvastatin
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Amlodipine (as besilate) + Atorvastatin
+Amorolfine (as hydrochloride)
+Betamethasone (as valerate)
+Betamethasone (as valerate)
+Atorvastatin (as calcium trihydrate)
+: Atorvastatin (as calcium trihydrate)
+Atorvastatin (as calcium trihydrate)
+Atorvastatin (as calcium trihydrate)
+Valsartan
+Cefazolin (as sodium)
+Cefoxitin (as sodium)
+Carboplatin
+Carboplatin
+Febuxostat
+Febuxostat
+Albendazole
+Cefaclor (as monohydrate)
+Cefaclor (as monohydrate)
+Clopidogrel (as bisulfate)
+Paclitaxel
+Paclitaxel
+Pregabalin
+Levofloxacin (as hemihydrate)
+Losartan Potassium
+Losartan Potassium
+Bendamustine Hydrochloride
+Azithromycin (as dihydrate)
+Tranexamic acid
+Acyclovir (as sodium)
+Azithromycin (as dihydrate)
+Atorvastatin (as calcium trihydrate)
+Atorvastatin (as calcium trihydrate)
+Atorvastatin (as calcium trihydrate)
+Atorvastatin (as calcium trihydrate)
+Azithromycin (as dihydrate)
+Lidocaine (as hydrochloride)
+Mecobalamin
+Lidocaine Hydrochloride
+Metformin (as hydrochloride) + Glibenclamide
+Metformin Hydrochloride
+Tacrolimus
+Glutathione (as sodium)
+Luspatercept
+Luspatercept
+Tacrolimus
+Enoxaparin sodium
+Moxifloxacin (as hydrochloride) + Dexamethasone phosphate (as sodium)
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+CO-AMOXICLAV
+Gemcitabine (As hydrochloride)
+Guaifenesin + Salbutamol (as sulfate)
+Irinotecan (as hydrochloride)
+Ambroxol Hydrochloride
+Meropenem (as trihydrate)
+CEFUROXIME (AS AXETIL)
+Sodium Hyaluronate
+Amlodipine (as besilate) + Losartan Potassium
+Cloxacillin (as Sodium)
+Tobramycin
+Propofol
+Ciprofloxacin (as hydrochloride)
+Diosmin + Hesperidin
+Paracetamol+Multivitamins
+Norepinephrine (as bitartrate)
+Ceftriaxone (as Sodium)
+Multivitamins + Phospholipids
+Etoricoxib
+Lidocaine Hydrochloride + Epinephrine (as Bitartrate)
+Atracurium Besilate
+Losartan potassium + Amlodipine (as besilate)
+Trastuzumab
+Clopidogrel
+Ramipril
+Co-Amoxiclav
+Zoledronic acid (as monohydrate)
+Co-Amoxiclav
+Vancomycin
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Rosuvastatin (as calcium)
+Omeprazole (as sodium monohydrate)
+Paracetamol + Phenylephrine Hydrochloride + Dextromethorphan Hydrobromide
+Trimetazidine Hydrochloride
+Trimetazidine Hydrochloride
+Amlodipine (as Besilate) + Hydrochlorothiazide
+Guaifenesin + Bromhexine Hydrochloride + Salbutamol (as Sulfate)
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Parecoxib (as sodium)
+Levetiracetam
+Losartan Potassium
+Ceftazidime (as pentahydrate)
+Co-Amoxiclav
+Telmisartan + Amlodipine (as besilate)
+Levodropropizine
+Febuxostat
+Aripiprazole
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Rosuvastatin (as Calcium)
+Olanzapine
+Diphenhydramine Hydrochloride
+Ethyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Isopropyl Alcohol
+Levetiracetam
+Levetiracetam
+Betamethasone (as dipropionate) + Clotrimazole Gentamicin (as sulfate).
+Amphotericin B
+Febuxostat
+Betamethasone Dipropionate
+Ceftriaxone (as sodium)
+Cefotaxime (as sodium)
+Cefotaxime (as sodium)
+Rivaroxaban
+Metformin Hydrochloride
+Moxifloxacin (as Hydrochloride)
+Citicoline
+Clindamycin (as phosphate)
+Clindamycin (as phosphate)
+Linezolid
+Cefotaxime (as sodium)
+Hedera helix L. (Dried Ivy Leaf Extract)
+Diosmin Hesperidin
+Levofloxacin (as hemihydrate)
+Atropine (as sulfate)
+Mupirocin
+Ketoconazole
+Metformin (as hydrochloride) + Glibenclamide
+Cyclophosphamide
+Clotrimazole + Gentamicin + Betamethasone
+Citicoline
+Doripenem monohydrate
+Zolpidem Tartrate
+Silver Sulfadiazine
+Rivaroxaban
+Rivaroxaban
+Rivaroxaban
+Isopropyl Alcohol
+Rocuronium bromide.
+Piracetam
+Nystatin
+Cetirizine
+Multivitamins
+Finasteride
+Terazosin (as hydrochloride)
+Celecoxib
+Omeprazole (as sodium)
+Cefuroxime (as axetil)
+Lactated Ringer'S Solution
+Ursodeoxycholic acid
+Atorvastatin (as calcium)
+Ceftriaxone (as sodium)
+Pregabalin
+Pregabalin
+Pregabalin
+Valsartan
+Valsartan
+Desloratadine
+Trimetazidine hydrochloride
+Multivitamins
+Multivitamins
+Co-Amoxiclav
+Clobetasol propionate
+Valsartan + Amlodipine (as besilate)
+Salbutamol (as Sulfate) + Guaifenesin
+Atorvastatin (as calcium)
+Phenylephrine Hydrochloride + Brompheniramine Maleate
+Telmisartan
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Carbamazepine
+Bicalutamide
+Omeprazole (as sodium)
+Amlodipine (as Besilate)
+Ketoanalogues + Essential Amino Acids
+Esomeprazole (as magnesium trihydrate)
+Tramadol Hydrochloride + Paracetamol
+Dexamethasone + Neomycin (as sulfate) + Polymyxin-B-Sulfate
+Tobramycin
+Tobramycin
+Omeprazole (as Sodium)
+Sitagliptin (as phosphate)
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Cetirizine
+Cetirizine
+Ascorbic Acid + Zinc
+Lansoprazole
+Lansoprazole
+Isotretinoin
+Dexketoprofen (as trometamol)
+Aztreonam
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine citrate
+Paracetamol + Orphenadrine citrate
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Vancomycin (as hydrochloride)
+Lamotrigine
+Tadalafil
+Palonosetron (as hydrochloride)
+Docetaxel
+Hydrocortisone (as sodium succinate)
+Tranexamic Acid
+Amikacin (as sulfate)
+Pyrazinamide + Ethambutol Hydrochloride + Rifampicin + Isoniazid
+Finasteride
+Pregabalin
+Duloxetine (as hydrochloride)
+Amlodipine (as besilate) + Valsartan
+Amlodipine (as besilate) + Valsartan
+Ampicillin (as sodium)
+Pregabalin
+Ampicillin (as sodium)
+Pregabalin
+Pregabalin
+Amlodipine (as besilate) + Valsartan
+Ursodeoxycholic Acid
+Ursodeoxycholic Acid
+Isosorbide Dinitrate
+Cefalexin
+Ceftriaxone (as sodium)
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Dextromethorphan Hydrobromide
+Chloramphenicol (as Palmitate)
+Ascorbic Acid + Zinc
+Moxifloxacin (as Hydrochloride).
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Levodopa + Carbidopa (as monohydrate)
+Sodium Bicarbonate
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Paracetamol
+Paracetamol + Tramadol Hydrochloride
+Prednisolone (as sodium phosphate)
+Pantoprazole (as sodium)
+Piperacillin (as (as sodium) + Tazobactam (as sodium)
+Ascorbic Acid
+Cefepime (as hydrochloride)
+Dacarbazine
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Piracetam
+Isoniazid
+Meropenem
+Meropenem
+Zoledronic Acid (as monohydrate)
+Mometasone Furoate (as monohydrate)
+Solifenacin Succinate
+Solifenacin Succinate
+Paracetamol
+Ketoanalogues + Essential Amino Acids.
+Ketoanalogues + Essential Amino Acids
+Miconazole
+Paracetamol + Caffeine
+Docetaxel
+Allopurinol
+Allopurinol
+Fenofibrate
+Ceftazidime (as pentahydrate with sodium carbonate)
+Sugammadex
+Pregabalin
+Epinephrine
+Ceftazidime (as pentahydrate) with sodium carbonate
+Diclofenac (as sodium)
+Imipenem (as monohydrate) + Cilastatin (as sodium)
+Pantoprazol
+Losartan Potassium
+Amphotericin B
+Oral Rehydration Salts (ORS)
+Paracetamol + Dextromethorphan HBr + Phenylephrine HCI
+Tranexamic Acid
+Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Suxamethonium Chloride.
+Calcium Sennosides
+Fosfomycin (as trometamol)
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Pneumococcal Conjugate Vaccine, 20-Valent (Adsorbed)
+Tramadol Hydrochloride
+Ethambutol Hydrochloride
+Iron (as iron sucrose)
+Bortezomib
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Vildagliptin + Metformin HC1
+Propranolol hydrochloride
+Metoclopramide (as hydrochloride)
+Acetylcysteine
+Fluticasone propionate + Salmeterol (as xinafoate)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Vildagliptin + Metformin HCI
+Dorzolamide (as hydrochloride) + Timolol (as maleate)
+Dopamine hydrochloride
+Sodium valproate
+Epoetin Alfa
+Epoetin Alfa
+Epoetin Alfa
+Tetanus Toxoid Adsorbed
+Ascorbic Acid
+Cisplatin
+Doxorubicin Hydrochloride
+Doxorubicin Hydrochloride
+Ceftriaxone (as sodium)
+Sevelamer Carbonate
+Clopidogrel (as bisulfate)
+Potassium Citrate
+Biperiden hydrochloride
+Biperiden hydrochloride
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Febuxostat
+Meclizine Hydrochloride
+Cefalexin (as Monohydrate)
+Ursodeoxycholic Acid
+Febuxostat
+Pregabalin + Mecobalamin
+Diosmin + Hesperidin
+Losartan Potassium
+Ketorolac Trometamol
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Amlodipine (as Besilate) + Hydrochlorothiazide
+Ketoanalogues + Essential Amino Acids
+Ascorbic Acid + Zinc
+Lapatinib (as ditosylate monohydrate)
+Cefixime (as trihydrate)
+Ceftriaxone (as sodium)
+Losartan Potassium
+Losartan Potassium
+Paracetamol
+Atorvastatin (as calcium)
+Apixaban
+Apixaban
+Glimepiride
+Dutasteride + Tamsulosin Hydrochloride
+Ciprofloxacin Hydrochloride
+Ibuprofen + Paracetamol
+Fosfomycin (as trometamol)
+Febuxostat
+Letrozole
+Amoxicillin (as trihydrate)
+Hydroxychloroquine Sulfate
+Gliclazide
+Clobetasol Propionate
+Paracetamol
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ketorolac trometamol
+Sildenafil (as citrate)
+Piperacillin (as sodium)/ Tazobactam (as sodium)
+Candesartan Cilexetil
+Candesartan Cilexetil
+Carbamazepine
+Ceftriaxone (as sodium)
+Calcium (as Carbonate)
+Cyclophosphamide
+Cetirizine Hydrochloride
+Cetirizine Hydrochloride
+Etoricoxib
+Dobutamine (as Hydrochloride)
+Albendazole
+Clarithromycin
+Acetylcysteine
+Telmisartan
+Atorvastatin (as Calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as Calcium)
+Telmisartan
+Omeprazole
+Ascorbic Acid + Zinc
+Fenofibrate
+Risperidone
+Risperidone
+Betamethasone (as Valerate) + Gentamicin (as Sulfate) + Tolnaftate + Clioquinol
+Propofol
+Oxytocin
+Clozapine
+Etoposide
+Cefuroxime (as sodium)
+Paclitaxel
+Sitagliptin (as phosphate)
+Sevelamer Carbonate
+Hydroquinone + Tretinoin
+Cefuroxime (as Sodium)
+Losartan Potassium
+Rosuvastatin (as calcium)
+Cefixime (as trihydrate)
+Cefixime (as trihydrate)
+Iron (as Ferrous fumarate) + Vitamin B-complex
+Dapagliflozin
+Dapagliflozin
+Atorvastatin (as calcium)
+Co-Amoxiclav
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Clopidogrel (as bisulfate)
+Potassium Citrate
+Potassium Citrate
+Cefoxitin (as sodium)
+Gabapentin
+Levofloxacin
+Cefuroxime (as sodium)
+Montelukast (as sodium) + Levocetirizine Hydrochloride
+Salbutamol (as Sulfate)
+Atenolol
+Atenolol
+Cefixime (as trihydrate)
+Trimetazidine Hydrochloride
+Sevelamer carbonate
+Acetylcysteine
+Vildagliptin
+Hydrocortisone (as sodium succinate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Sugammadex (as sodium)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Co-Amoxiclav
+Mupirocin
+Salbutamol (as sulfate) + Ipratropium bromide
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Ascorbic Acid + Zinc + Cholecalciferol
+Vildagliptin
+Ursodeoxycholic Acid
+Telmisartan
+Pioglitazone (as hydrochloride)
+Paracetamol
+Ursodeoxycholic Acid
+Cefuroxime (as Sodium)
+Ticagrelor
+Aluminum Hydroxide + Magnesium Hydroxide + Oxetacaine
+Ipratropium bromide + Salbutamol (as sulfate)
+Omeprazole (as sodium)
+Cefixime (as trihydrate)
+Losartan Potassium
+Alfuzosin hydrochloride
+Losartan Potassium
+Losartan Potassium
+Ceftriaxone (as sodium)
+Cefixime (as trihydrate)
+Sorafenib (as Tosylate)
+Ceftriaxone (as sodium)
+Letrozole
+Fluconazole
+Bilastine
+Dutasteride + Tamsulosin Hydrochloride
+Pantoprazole (as sodium sesquihydrate)
+Telmisartan + Amlodipine (as besilate)
+Metformin Hydrochloride
+Enzalutamide
+Letrozole
+Aripiprazole
+Ascorbic Acid + Zinc
+Mupirocin
+Trimetazidine Hydrochloride
+Co-Amoxiclav
+Cefixime (as trihydrate)
+Trimetazidine Hydrochloride
+Enalapril maleate
+Co-Amoxiclav
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Pantoprazole (as sodium sesquihydrate) + Domperidone
+Dapagliflozin (as propanediol monohydrate)
+Gliclazide
+Dapagliflozin
+Docetaxel
+Docetaxel
+Eperisone hydrochloride
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Aripiprazole
+Aripiprazole
+Cefuroxime (as sodium)
+Pregabalin
+Pregabalin
+Linagliptin
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Metoprolol tartrate + Ivabradine (s hydrochloride)
+Metoprolol tartrate + Ivabradine (s hydrochloride)
+Clindamycin (as phosphate)
+Clopidogrel (as bisulfate)
+Citicoline (as sodium)
+Empagliflozin
+Itraconazole
+Furosemide (as sodium)
+Atorvastatin (as calcium trihydrate)
+Multivitamins
+Atorvastatin (as calcium trihydrate)
+Betahistine (as hydrochloride)
+Adapalene + Benzoyl Peroxide
+Betamethasone (as diproprionate) + Clotrimazole + Gentamicin (as sulfate)
+Gemigliptin (as tartrate sesquihydrate) + Metformin hydrochloride
+Sterile Water For Injection
+Apixaban
+Esomeprazole (as sodium)
+Sevelamer carbonate
+Capecitabine
+Letrozole
+Temozolomide
+Docetaxel (as trihydrate)
+Bendamustine (as hydrochloride)
+Docetaxel (as trihydrate)
+Meropenem (as trihydrate)
+Paracetamol + Orphenadrine Citrate
+Letrozole
+Rosuvastatin (as calcium)
+Docetaxel
+Co-Amoxiclav
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Clopidogrel (as bisulfate)
+Bortezomib
+Dutasteride + Tamsulosin hydrochloride
+Doxorubicin hydrochloride
+Aripiprazole
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Atosiban (as acetate)
+Azithromycin (as dihydrate)
+Diclofenac (as Sodium)
+Nitroglycerine
+Pioglitazone (as hydrochloride) + Glimepiride
+Pioglitazone (as hydrochloride) + Glimepiride
+Telmisartan
+Diosmin + Hesperidin
+Diosmin + Hesperidin
+Ascorbic Acid + Zinc+ Cholecalciferol (Vitamin D3)
+Donepezil hydrochloride
+Respiratory Syncytial Virus Vaccine (bivalent, recombinant)
+Linagliptin
+Lacosamide
+Betahistine Hydrochloride
+Cefalexin (as monohydrate)
+Dexketoprofen (as Trometamol)
+Dexketoprofen (as Trometamol)
+Amlodipine (as besilate) + Hydrochlorothiazide + Valsartan te) + Hydrochlorothiazide + Valsartan
+Respiratory Syncytial Virus Vaccine (Bivalent, Recombinant)
+Pantoprazole (as sodium)
+Etoricoxib
+Vinorelbine (as tartrate)
+Meropenem (as trihydrate)
+Metformin Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Betamethasone (as dipropionate) + Betamethasone (as) sodium phosphate)
+Betahistine Hydrochloride
+Betahistine Hydrochloride
+Metformin Hydrochloride
+Metformin Hydrochloride
+Rivaroxaban
+Rivaroxaban
+Rivaroxaban
+Norepinephrine (as bitartrate)
+Itraconazole
+Cefpodoxime (as Proxetil)
+Gemcitabine (as hydrochloride)
+Co-Amoxiclav
+Tamsulosin Hydrochloride
+Metronidazole
+Cetirizine Dihydrochloride
+Capecitabine
+Hydrocortisone (as sodium succinate)
+Epirubicin Hydrochloride
+Cefixime (as trihydrate)
+Cefuroxime (As Axetil)
+Erythromycin (as ethylsuccinate)
+Betamethasone (as valerate)
+Methotrexate
+Albendazole
+Celecoxib
+Montelukast (as sodium)
+Albendazole
+Telmisartan + Hydrochlorothiazide
+Ciprofloxacin (as Lactate)
+Betahistine Hydrochloride
+Methotrexate
+Etoricoxib
+Dapagliflozin (as propanediol monohydrate)
+Atorvastatin (as calcium trihydrate)
+Dapagliflozin (as propanediol monohydrate)
+Dapagliflozin (as propanediol monohydrate)
+Dapagliflozin (as propanediol monohydrate)
+Nystatin
+Losartan Potassium
+Atorvastatin (as calcium trihydrate)
+Nystatin
+Clopidogrel (as bisulfate)
+Atorvastatin (as calcium trihydrate)
+Losartan Potassium
+Salbutamol (as Sulfate) + Guaifenesin
+Clopidogrel (as Bisulfate)
+Metformin Hydrochloride
+Iron
+Epirubicin hydrochloride
+Neostigmine (as Methylsulfate)
+Ivabradine (as hydrochloride)
+Folic Acid
+Cefuroxime (as Sodium)
+Capecitabine
+Multivitamins + Mineral + Buclizine
+Gliclazide
+Ceftriaxone (as sodium)
+Norepinephrine (as bitartrate)
+Quetiapine (as fumarate)
+Oxaliplatin
+Cefixime (as trihydrate)
+Gliclazide
+Vancomycin (as hydrochloride)
+Atorvastatin (as calcium)
+Calcitriol
+Atorvastatin (as calcium)
+Methyl Salicylate + Camphor + Menthol
+Isopropyl Alcohol
+Cefuroxime (as axetil)
+Tretinoin + Hydroquinone
+Ascorbic Acid + Zinc
+Budesonide
+Isopropyl Alcohol
+Ascorbic Acid + Zinc
+Bisacodyl
+Ketoconazole + Clobetasol propionate + Neomycin
+Vildagliptin
+Atorvastatin (as calcium)
+Gliclazide
+Gliclazide
+Gliclazide
+Levodopa + Carbidopa (as monohydrate) + Entacapone
+Azithromycin (as dihydrate)
+Apixaban
+Potassium Citrate
+Ampicillin (as sodium) + Sulbactam (as sodium) + Sulbactam (as sodium)
+Quetiapine (as fumarate)
+Quetiapine (as fumarate)
+Risperidone
+Mesalazine
+Menthol
+Menthol
+Amitriptyline hydrochloride
+Menthol
+Ascorbic Acid
+Meropenem (as trihydrate)
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Atorvastatin (as calcium) + Amlodipine (as besilate)
+Calcium
+Telmisartan
+Amlodipine (as besilate) + Valsartan + Rosuvastatin (as calcium)
+Amlodipine (as besilate) + Valsartan + Rosuvastatin (as calcium)
+Amlodipine (as besilate) + Valsartan + Rosuvastatin (as calcium)
+Amlodipine (as besilate) + Valsartan + Rosuvastatin (as calcium)
+Levofloxacin (as hemihydrate)
+Tobramycin (as sulfate) + Dexamethasone sodium phosphate
+Tobramycin (as sulfate)
+Losartan Potassium + Hydrochlorothiazide
+Alpha Keto analogues + Essential Amino Acids
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Paliperidone (as palmitate)
+Paliperidone (as palmitate)
+Cefepime (as hydrochloride)
+Metoclopramide (as hydrochloride)
+Pregabalin
+Oxaliplatin
+Oxaliplatin
+Doxorubicin hydrochloride
+Calcipotriol (as monohydrate) + Betamethasone (as dipropionate)
+Pantoprazole (as sodium)
+Febuxostat
+Vildagliptin
+Vildagliptin
+Vildagliptin
+Vildagliptin + Metformin HC1
+Vildagliptin + Metformin HCl
+Vildagliptin
+Zoledronic Acid
+Olanzapine
+Dolutegravir (as sodium)
+Pantoprazole (as sodium)
+Mycophenolate Mofetil
+Fluconazole
+Cefepime (as hydrochloride)
+Enzalutamide
+Pantoprazole (as sodium)
+Pantoprazole (as sodium)
+Paclitaxel
+Ondansetron hydrochloride
+Pemetrexed (as disodium hemipentahydrate)
+Ethyl Alcohol
+Betahistine (as hydrochloride)
+Ascorbic Acid + Zinc
+Ascorbic Acid + Zinc
+Ketoconazole
+Ticagrelor
+Ethyl Alcohol
+Tranexamic Acid
+Montelukast (as dihydrochloride as sodium)
+Rosuvastatin (as Calcium)
+Esomeprazole (as sodium)
+Esomeprazole (as sodium)
+Sodium Chloride
+Ethyl Alcohol
+Ethyl Alcohol
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Telmisartan + Hydrochlorothiazide
+Moxifloxacin (as hydrochloride)
+Telmisartan
+Levodopa + Carbidopa (as monohydrate) + Entacapone
+Levodopa + Carbidopa (as monohydrate) + Entacapone
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Ampicillin (as sodium) + Sulbactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Piperacillin (as sodium) + Tazobactam (as sodium)
+Oxacillin (as sodium)
+Cetirizine (as Hydrochloride)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Telmisartan + Amlodipine (as besilate)
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Insulin Human (rDNA)
+Insulin Human (rDNA)
+Febuxostat
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Losartan Potassium
+Sevoflurane
+Co-Amoxiclav
+Vancomycin (as Hydrochloride)
+Meropenem
+Dobutamine (as hydrochloride)
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Co-Amoxiclav
+CO-AMOXICLAV
+Iodine (as Iohexol)
+Iodine (as Iohexol)
+Ivabradine (as hydrochloride)
+Irbesartan
+Irbesartan
+Methylprednisolone (as sodium succinate)
+Methylprednisolone (as sodium succinate)
+Betahistine hydrochloride
+Ascorbic Acid + Zinc
+Levodropropizine
+Ketoconazole + Clobetasol Propionate
+Telmisartan + Amlodipine (as besilate)
+Cefixime (as trihydrate)
+Clindamycin phosphate
+Mupirocin
+Gliclazide
+Iron + Folic Acid (Vitamin B9)
+Erythromycin
+Losartan Potassium
+Iron + Folic Acid (Vitamin B9)
+Diosmin + Hesperidin
+Co-Amoxiclav
+Diosmin + Hesperidin
+Clindamycin (as Hydrochloride)
+Silver Sulfadiazine
+Silver Sulfadiazine
+Diclofenac diethylamine
+Allopurinol
+Cefixime (as Trihydrate)
+Ketorolac Trometamol
+Losartan Potassium
+Gatifloxacin
+Pioglitazone (as hydrochloride)
+Pioglitazone (as hydrochloride)
+Atorvastatin (as calcium)
+Ibuprofen + Paracetamol
+Pantoprazole (as sodium sesquihydrate)
+Cetirizine Hydrochloride
+Guaifenesin + Phenylpropanolamine HCl + Chlorphenamine Maleate + Ammonium Chloride + Sodium Citrate
+Linezolid
+Permethrin
+Pioglitazone (as hydrochloride)
+Methylprednisolone
+Teneligliptin (as hydrobromide hydrate)
+Gemcitabine
+Telmisartan
+Fenofibrate
+Vildagliptin
+Prednisone
+Prednisone
+Levodopa +Carbidopa
+Vildagliptin+ Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Vildagliptin + Metformin Hydrochloride
+Beclomethasone Dipropionate
+Linagliptin + Metformin Hydrochloride
+Linagliptin + Metformin Hydrochloride
+Iron (III) Hydroxide Polymaltose Complex
+Iron (III) Hydroxide Polymaltose Complex
+Dutasteride
+Linagliptin + Metformin Hydrochloride
+Clindamycin (as phosphate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as Besilate)
+Ondansetron (as Hydrochloride)
+Citicoline (as sodium)
+Salbutamol (as sulfate)
+Citicoline (as sodium)
+Polymyxin B sulfate Bacitracin zinc
+Ceftriaxone (as sodium)+ Sulbactam (as sodium)
+Budesonide
+Caspofungin (as acetate)
+Clotrimazole + Gentamicin (as sulfate) + Betamethasone (as dipropionate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Propranolol hydrochloride
+Atosiban (as acetate)
+Pantoprazole (as sodium)
+Eperisone hydrochloride
+Tramadol hydrochloride
+Methotrexate
+Pregabalin
+Mesalazine
+Dapagliflozin (as propanediol)
+Lactulose
+Paclitaxel
+Gliclazide
+Etoricoxib
+Doxofylline
+Etoricoxib
+Irbesartan + Hydrochlorothiazide
+Irbesartan + Hydrochlorothiazide
+Lactulose
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Etoricoxib
+Fusidic Acid
+Fluconazole
+Clotrimazole + Beclomethasone Dipropionate
+Sultamicillin (as Tosilate dihydrate)
+Betahistine dihydrochloride
+Betahistine dihydrochloride
+0.9% Sodium Chloride
+Allopurinol
+Ceftriaxone (as sodium) + Sulbactam (as sodium)
+Vortioxetine
+Vortioxetine
+Cefepime (as hydrochloride)
+Lenvatinib (as mesylate)
+Lenvatinib (as mesylate)
+Zinc Oxide + Calamine
+Travoprost
+Sitagliptin (as Phosphate) + Metformin Hydrochloride
+Apixaban
+Apixaban
+Finasteride
+Sitagliptin (as Phosphate) + Metformin Hydrochloride
+Isopropyl Alcohol
+Camphor + Menthol
+Valproic Acid
+Fentanyl (as citrate)
+Fentanyl (as citrate)
+Fentanyl (as citrate)
+Fentanyl (as citrate)
+Tamoxifen (as Citrate)
+Glycerin
+Salbutamol (as sulfate) + Ipratropium bromide
+Salbutamol (as sulfate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Telmisartan + Amlodipine (as besilate)
+Linezolid
+Doxofylline
+Doxofylline
+Methyl Salicylate
+Articaine hydrochloride + Epinephrine (as bitartrate)
+Articaine hydrochloride + Epinephrine (as bitartrate) (FOR EXPORT USE ONLY)
+Ondansetron (as hydrochloride)
+Ticagrelor
+Ascorbic Acid (as Sodium Ascorbate)
+Clotrimazole + Beclometasone Dipropionate
+Meloxicam
+Meloxicam
+Iron (as Iron Sucrose)
+Methyl Salicylate + Camphor
+Methyl Salicylate + Camphor
+Clotrimazole + Beclometasone dipropionate + Gentamicin (as sulfate)
+Betamethasone (as Dipropionate) + Gentamicin (as Sulfate)
+Pramipexole (as hydrochloride)
+Pramipexole (as hydrochloride)
+Pramipexole (as hydrochloride)
+Multivitamins + Iron Lysine Hydrochloride + Buclizine Hydrochloride
+Peritoneal Dialysis Solution with 2.5% Dextrose
+Betahistine hydrochloride
+Losartan Potassium
+Losartan Potassium
+Mefenamic Acid
+Mefenamic Acid
+Losartan Potassium
+Omepprazole
+Losartan potassium + Rosuvastatin (as calcium) + Amlodipine (as camsilate)
+Losartan potassium + Rosuvastatin (as calcium) + Amlodipine (as camsilate)
+Losartan potassium + Rosuvastatin (as calcium) + Amlodipine (as camsilate)
+Losartan potassium + Rosuvastatin (as calcium) Amlodipine (as camsilate)
+Hydrocortisone (as sodium succinate)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Mupirocin
+Gentamicin (as sulfate)
+Empagliflozin
+Empagliflozin
+Sodium Bicarbonate
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Ascorbic Acid (as Sodium Ascorbate)
+Fulvestrant
+ASCORBIC ACID + ZINC
+Etoricoxib
+Etoricoxib
+Ketoanalogues + Essential Amino Acids
+Tranexamic Acid
+Venlafaxine (as hydrochloride)
+Diphenhydramine
+Clonidine hydrochloride
+Clonidine hydrochloride
+Clonidine hydrochloride
+Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
+Naproxen sodium
+Venlafaxine (as hydrochloride)
+Clindamycin (as phosphate)
+Risperidone
+Clonidine hydrochloride
+Telmisartan
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Sitagliptin (as phosphate monohydrate)
+Vitex negundo L. (Lagundi Leaf)
+Clarithromycin
+Linagliptin
+Acetylcysteine
+Acetylcysteine
+Acetylcysteine
+Bortezomib
+Carbetocin
+Acetylcysteine
+Edaravone
+Enzalutamide
+Etoricoxib
+Paracetamol
+Paracetamol
+Fluorouracil
+Lenalidomide.
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Lenalidomide
+Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate
+Ursodeoxycholic Acid
+Irbesartan
+Irbesartan
+Deoxycholic acid
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Simeticone
+Simeticone
+Simeticone
+Travoprost
+Lenalidomide
+Lenalidomide
+Lenalidomide.
+Paracetamol
+Pantoprazole (as sodium)
+dl-Alpha Tocopheryl Acetate (Vitamin E)
+Levetiracetam
+Losartan Potassium
+Cefazolin (as sodium)
+Ceftazidime (as Pentahydrate)
+Hydrocortisone (as sodium succinate)
+Furosemide
+Tamsulosin Hydrochloride
+Paclitaxel
+Sevoflurane
+Pregabalin
+Haloperidol
+Azithromycin (as dihydrate)
+Etoricoxib
+Somatostatin (as acetate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Azithromycin (as dihydrate)
+Febuxostat
+Febuxostat
+Febuxostat
+Ketoanalogues + Essential Amino Acids
+Ketoanalogues + Essential Amino Acids
+Paclitaxel
+Paclitaxel
+Apixaban
+Febuxostat
+Bedaquiline (as fumarate)
+Loxoprofen (as sodium dihydrate)
+Fluphenazine Decanoate
+Clobetasol Propionate
+Ceftriaxone (as sodium)
+Pantoprazole (as sodium sesquihydrate)
+Mupirocin
+Mupirocin
+Telmisartan + Amlodipine (as besilate)
+Atorvastatin (as calcium)
+Co-Amoxiclav
+Atorvastatin (as calcium)
+Trimetazidine hydrochloride
+Clopidogrel (as bisulfate)
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Co-Amoxiclav
+Atorvastatin (as calcium)
+Atorvastatin (as calcium)
+Celecoxib
+Pimecrolimus
+Lidocaine hydrochloride + Epinephrine (as bitartrate)
+Rosuvastatin (as calcium)
+Naproxen sodium
+Tobramycin (as sulfate) + Dexamethasone (as sodium. phosphate)
+Sitagliptin (as phosphate) + Metformin hydrochloride
+Lidocaine hydrochloride + Epinephrine (as bitartrate)
+Risperidone
+Oseltamivir (as phosphate)
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Ethyl Alcohol
+Cefepime (as hydrochloride)
+Ibrutinib
+Salbutamol (as sulfate) + Ipratropium bromide
+Dapagliflozin (as propanediol monohydrate) Metformin hydrochloride (in extended-release form)
+Rifampicin + Isoniazid
+Isoniazid
+Meropenem (as trihydrate)
+Lidocaine hydrochloride
+Aciclovir
+Azithromycin (as dihydrate)
+Cilostazol
+Influenza Vaccine (Split Virion, Inactivated) [2024 Southern Hemisphere Strain]
+Ivabradine (as hydrochloride)
+Ivabradine (as hydrochloride)
+Acetylcysteine
+Gliclazide
+Aciclovir
+Atorvastatin (as calcium)
+Azithromycin (as dihydrate)
+5% Dextrose in Water
+Amoxicillin (as trihydrate)
+Aciclovir
+Lamotrigine
+Lamotrigine
+Dorzolamide + Timolol
+Betahistine Dihydrochloride
+Cefixime (as trihydrate)
+Allopurinol
+Rosuvastatin (as calcium) + Ezetimibe
+Meropenem (as trihydrate)
+Meropenem (as trihydrate)
+Mometasone Furoate
+Eplerenone
+Eplerenone
+Mupirocin
+Simeticone
+Mupirocin
+Simeticone
+Calcium Sennosides
+Paracetamol
+Sultamicillin (as tosylate)
+Sultamicillin (as tosylate)
+Furosemide
+Rocuronium Bromide
+Sugammadex
+Apixaban
+Apixaban
+Vildagliptin
+Vancomycin (as hydrochloride)
+Vancomycin (as hydrochloride)
+Celecoxib
+Celecoxib
+Silver Sulfadiazine
+Bicalutamide
+Ondansetron (as hydrochloride)
+Ascorbic Acid
+Glutathione (as reduced Glutathione)
+Betahistine Dihydrochloride
+Sertaconazole nitrate
+Vitex negundo L. (Lagundi Leaf)
+Citicoline (as sodium)
+Amlodipine (as besilate)
+Amlodipine (as besilate)
+Sitagliptin (as phosphate) + Metformin Hydrochloride
+Inactivated Infectious Bronchitis (IB) Virus + Avian Rhinotracheitis (ART) Virus + Infectious Bursal Disease (IBD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Piperazine Citrate + Phenothiazine + Niclosamide (Vet.)
+TYLOSIN TARTRATE (VET.)
+None
+Peni-DHS 20+25
+Oxytetracycline (As Dihydrate) (Vet.)
+Cyanocobalamin (Vet.)
+Tylosin (As Tartrate) (Vet.)
+Ivermectin (Vet)
+Amitraz (Vet.)
+Retinol Palmitate + Cholecalciferol + dl-Alpha Tocopheryl (Vet)
+Enrofloxacin 50Mg/Ml Solution For Injection
+Iron Dextran
+Oxytocin (Vet.)
+Benzylpenicillin (As Sodium) (Vet.)
+Dexamethasone
+Danofloxacin Mesylate
+Amoxicillin (Vet.)
+Levamisole (as hydrochloride)
+Enrofloxacin
+Amoxicillin (as trihydrate) + Gentamicin (as sulfate) (Vet.)
+Ampicillin trihydrate + Colistin Sulfate + Dexamethasone Acetate
+Iron Dextran + Cyanocobalamin
+Calcium Borogluconate (Vet.)
+Propoxur (Vet.)
+Trimethoprim + Sulfamethoxypyridazine
+Melarsomine (as Dihydrochloride)
+Fipronil (Vet.)
+Oxytetracycline (As Dihydrate) (Vet.)
+Benzylpenicillin Sodium (Vet.)
+Vitamin B Complex, Electrolytes, Amino Acids + Dextrose
+Cotrimazine (Vet.)
+Vitamin B-Complex + Liver Extract (Vet.) (see reverse page)
+Multivitamins (Vet.)
+Oxytocin (Synthetic) (Vet.)
+Retinol Palmitate (Vitamin A) + Cholecalciferol (Vitamin D3) + Alpha Tocopherol Acetate (Vitamin E)
+Lincomycin + Spectinomycin (Vet.)
+Tylosin Tartrate (Vet.)
+Gentamicin (as Sulfate)
+Serum Gonadotrophin + Chorionic Gonadotrophin (Vet.)
+Retinol Palmitate (Vit.A) Cholecalciferol (Vit.D3),A-Tocopheryl Acetate (Vit.E) (Vit.)
+Oxytetracycline
+Aluspray
+Dexamethasone (Vet.)
+Amoxicillin (as Trihydrate) (Vet.)
+Chlortetracycline Hydrochloride (Vet.)
+Gentamicin (as sulfate) + Amoxicillin (as trihydrate)
+Paracetamol
+Marbofloxacin (Vet.)
+Ivermectin (Vet.)
+Amoxicillin (As Trihydrate) (Vet.)
+Marbofloxacin
+Oxytetracycline (As Dihydrate) (Vet.)
+Amoxicillin + Gentamicin
+Florfenicol (Vet.)
+Ivermectin (vet.)
+Norfloxacin (as Hydrochloride) (Vet.)
+Marbofloxacin
+Vitamin B Complex + Iron Dextran (Vet.)
+CALCIUM LACTATE + CHOLECALCIFEROL (Vit. D3) (VET.)
+Liver and Yeast hydrolysate, Nicotinamide (Vitamin B3), Pantothenic Acid (Vitamin B5), Riboflavin (Vitamin B2), Thiamine (Vitamin B1), Pyridoxine HCl (Vitamin B6), Cyanocobalamin (Vitamin B12)
+Dexamethasone (Vet.)
+Clotimazole + Marbofloxacin + Dexamethasone (as acetate) (Vet.)
+TOLFENAMIC ACID (VET.)
+Multivitamins + Liver Extract (Vet.)
+Flunixin Meglumine (Vet.)
+Vetoxin
+Ivermectin (Vet.)
+Gentamicin ( as sulfate) (vet.)
+Gentamicin (as Sulfate) (Vet.)
+Procaine Benzylpenicillin + Dihydrostreptomycin (Vet.)
+Iron Dextran 10%
+Benzylpenicillin Sodium
+Enrofloxacin
+Bromhexine Hydrochloride
+SULFAMETHAZINE/ SULFADIAZINE/ SULFAMERAZINE (VET.)
+Iron (as Iron Dextran Complex) + Cyanocobalamin (Vitamin B12) + Cobalt Chloride + Zinc Chloride (Vet.)
+Procaine Benzylpenicillin + Benzylpenicillin Sodium + Streptomycin Sulfate
+PHENOXYMETHYL PENICILLIN POTASSIUM / SULFAMETHAZINE / SULFADIAZINE/ SULFAMERAZINE
+OXYTOCIN (SYNTHETIC) (VET.)
+MULTIVITAMINS + MINERALS (Vet.)
+MULTIVITAMINS + GINSENG (VET.)
+RETINOL PALMITATE + CHOLECALCIFEROL + ALPHA TOCOPHEROL ACETATE (VET.)
+Ceftiofur (as hydrochloride)
+PIPERAZINE CITRATE + PHENOTHIAZINE + NICLOSAMIDE (VET.)
+HEXACHLOROPHENE + SULFANILAMIDE (VET.)
+HEXACHLOROPHENE + UREA + SULFANILAMIDE (VET.)
+Sulfadoxine + Trimethoprim (Vet.)
+Tulathromycin (Vet.)
+GUAIACOL + EUCALYPTOL + CAMPHOR (VET.)
+CLOSPROSTENOL SODIUM
+Calcium Lactate + Cholecalciferol (Vitamin D3) (Vet.)
+Cyanocobalamin (Vet.)
+CYANOCOBALAMIN
+Povidone-Iodine (Vet.)
+Oxytetracycline (Vet.)
+Moxidectin (Vet.)
+Ivermectin
+Thiamine Hydrochloride (Vit. B1) + Riboflavin Phosphate (Vit. B2) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12) + Nicotinamide + D- Panthenol (Vet.)
+Toltrazuril
+Lincomycin (as Hydrochloride)
+Enrofloxacin
+Propoxur + Flumethrin
+Equine Serum Gonadotrophin + Chorionic Gonadotrophin (Vet)
+Oxytetracycline (As Dihydrate)
+Fipronil + (S) Methoprene
+FIPRONIL + (S) METHOPRENE (Vet.)
+Butaphosphan + Cyanocobalamin (Vet.)
+Phoxime
+Acepromazine (as Maleate) (Vet.)
+Ceftiofur (Vet.)
+Enrofloxacin
+Imidacloprid + Permethrin
+Imidacloprid + Permethrin
+Imidacloprid + Permethrin (Vet.)
+Amoxicillin (as Trihydrate)
+Amoxicillin (Vet)
+Doxycycline (as Monohydrate)
+Selamectin (Vet.)
+Selamectin (Vet.)
+Selamectin (Vet.)
+Selamectin (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+FENBENDAZOLE+PYRANTEL EMBONATE+PRAZIQUANTEL
+Procaine Benzylpenicillin + Benzylpenicillin Potassium + Streptomycin (As Sulfate)
+Imidacloprid +Permethrin (Vet.)
+Amoxicillin + Tylosin (Vet.)
+Amoxycillin
+Pyrantel Embonate + Oxantel Embonate +  Praziquantel
+Ivermectin (Vet.)
+Dexamethasone Sodium Phosphate
+Iron Dextran (Vet)
+Imidacloprid + Moxidectin (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+Tylosin (As Tartrate)
+Tiletamine (as Hydrochloride) + Zolazepam (as Hydrochloride)
+PYRANTEL PAMOATE + OXANTEL PAMOATE
+Trimethoprim, Sulfadiazine,Tiamulin Hydrogen Fumarate
+AMBROXOL HYDROCHLORIDE
+Ivermectin + Pyrantel (As Pamoate) (Vet.)
+Ivermectin + Pyrantel (As Pamoate) (Vet.)
+Ivermectin + Pyrantel (As Pamoate) (Vet.)
+CYPERMETHRIN + PIPERONYL BUTOXIDE (VET.)
+Iron Dextran + Cyanocobalamin (Vet.)
+Gentamicin (as sulfate) (Vet.)
+Tiamulin (as Hydrogen Fumarate) (Vet.)
+Lincomycin (as hydrochloride) + Spectinomycin (as hydrochloride) (Vet.)
+MULTIVITAMINS + MINERALS (VET.)
+Niclosamide + Levamisole Hydrochloride
+Enrofloxacin
+Miconazole Nitrate + Chlorhexidine Gluconate
+Enrofloxacin (Vet.)
+Oxibendazole + Praziquantel
+Amoxicillin + Enrofloxacin (Vet.)
+Praziquantel + Levamisole Hydrochloride
+Oxytocin (Vet.)
+Retinol Palmitate (Vit.A) Cholecalciferol (Vit.D3) Alpha-Tocopherol Acetate (Vitamin E)
+Sulfamethazine
+Bee Pollen
+Cefquinome sulfate (Vet.)
+Coumaphos (Vet.)
+Fish Oil + Evening Primrose Oil (Vet.)
+Iron + Thiamine Hydrochloride (Vit. B) + Pyridoxine (Vit B) + Cyanocobalamin (Vit. B12) (Vet.)
+PIROCTONE OLAMINE
+Multivitamins + Minerals + Amino Acid
+Sulfaquinoxaline Sodium + Pyrimethamine Hydrochloride + Menadione
+Albendazole
+Vitamin B Complex + Minerals
+Cefovocin sodium (Vet)
+Mebendazole + Levamizole + Praziquantel (Vet.)
+Multivitamins + Minerals + Porcine Immunoglobulins Concentrate (Vet.)
+Amikacin (as Sulfate) (Vet.)
+Ivermectin (Vet.)
+Multivitamins + Adenosine Triphosphate (ATP) (Vet.)
+Rafoxanide (Vet.)
+Ivermectin (Vet.)
+Cyanocobalamin (Vitamin B12) (Vet.)
+Toltrazuril
+Ceftiofur
+Multivitamins (Vet.)
+PYRIMETHAMINE + SODIUM SULFAQUINOXALINE + MENADIONE (VITAMIN K3) (VET)
+Amoxicillin + Tylosin (Vet.)
+Oxantel Embonate + Pyrantel Embonate + Praziquantel
+AMOXICILLIN TRIHYDRATE
+Florfenicol
+Vitamin B Complex + Liver Extract (Vet.)
+Enrofloxacin (Vet.)
+Florfenicol (Vet.)
+Neomycin Sulfate + Kaolin + Pectin (Vet.)
+Carbetocin (Vet.)
+Sulfamethaziane/ Sulfadiazine/ Penicillin V Potassium
+Carazolol (Vet.)
+Imidocarb Dipropionate (Vet.)
+DOXYCYCLINE (AS HYCLATE ) + TIAMULIN HYDROGEN FUMARATE (VET)
+d-Cloprostenol (as sodium)
+Albendazole (Vet.)
+Albendazole
+NICLOSAMIDE + LEVAMISOLE (as Hydrochloride) + ALBENDAZOLE  (VET)
+PYRANTEL EMBONATE (VET)
+Marbofloxacin
+Ceftiofur
+Amoxicillin (as trihydrate) (Vet.)
+Sulfamethazine + Sulfadiazine + Penicillin V Potassium
+Altrenogest (Vet.)
+Procaine Benzylpenicillin + Benzathine Benzylpenicillin (Vet.)
+Hydrocortisone Aceponate
+Albendazole (Vet.)
+Tylosin Tartrate
+Florfenicol / Spiramycin / Lidocaine Hydrochloride / Prednisolone
+Albendazole
+Ivermectin
+Albendazole
+Niclosamide + Levamizole
+Fowl-Poxvet
+Fenbendazole+Pyrantel Embonate+Praziquantel
+IRON DEXTRAN + TYLOSIN TARTRATE (VET.)
+Toltrazuril (Vet.)
+Praziquantel + Abamectin (Vet.)
+Calcium Lactate + Cholecalciferol (Vet.)
+Praziquantel (Vet.)
+TYLOSIN (AS TARTRATE) (VET.)
+Niclosamide + Levamisole (Vet.)
+Amprolium Hydrochloride (Vet.)
+TYLOSIN TARTRATE (VET.)
+Praziquantel + Albendazole (Vet.)
+D-Cloprostenol (Vet.)
+Co-Amoxiclav (Vet.)
+Vitamins + Minerals + Amino Acid (Vet.)
+Dimetridazole (Vet.)
+Amoxicillin (As Trihydrate) (vet.)
+Folic Acid + Cyanocobalamin (Vit. B12) (Vet)
+Dexamethasone + Tylosin + Colistin Sulfate
+Enrofloxacin
+Meloxicam (Vet)
+Fenbendazole
+Vitamin B-Complex + Liver Extract (Vet.)
+Amoxicillin (As Trihydrate)
+Hydrocorisone Aceponate + Miconazole (as Nitrate) + Gentamicin (as Sulphate)
+Ketoprofen (Vet.)
+Oxytocin (Vet.)
+Oxytetracycline (as dihydrate)
+Xylazine (Vet.)
+Albendazole (Vet.)
+Albendazole (Vet.)
+Procaine Benzylpenicillin + Dihydrostreptomycin ( As Sulphate) (Vet.)
+Vitamin A + Vitamin D3 + Vitamin E ( Vet.)
+Vitamin B-Complex (Vet.)
+Tiletamine (as Hydrochloride) + Zolazepam (as Hydrochloride)
+Albendazole (Vet.)
+Cloprostenol Sodium (Vet.)
+Fipronil (Vet.)
+Vitamin B-Complex
+Equine Serum Gonadotrophin + Chorionic Gonadotrophin
+Ivermectin (Vet.)
+Cyanocobalamin (Vet.)
+Tylosin Tartrate
+Pyrantel Embonate/ Febantel (Vet.)
+Lincomycin (as Hydrochloride) + Gentamicin (as Sulfate)
+Iron Dextran / Cyanocobalamin (Vet.)
+Tylosin + Amoxicillin Trihydrate
+Sterile Water For Injection (Vet.)
+Vitamin B1 + B6 + B12
+Cypermethrin (Vet.)
+Carbaril (Vet.)
+Amoxicillin (as trihydrate) + Colistin (as sulfate) (Vet.)
+Thiamine Hydrochloride + Riboflavin Sodium Phosphate+ Pyridoxine Hydrochloride +Cyanocobalamin+Nicotinamide + D-Panthenol
+DOXYCYCLINE (AS HYDROCHLORIDE)
+Calcium lactate + Retinol acetate (Vitamin A) + Cholecalciferol (Vitamin D3) + Alpha tocopherol (Vitamin E)
+Calcium Lactate + Retinol Acetate (Vit. A) + Cholecalciferol (Vit D3) + Alpha Tocopherol (Vit. E)
+Sulfadiazine + Trimethoprim+ Tylosin
+Permethrin + Piperonyl Butoxide
+Sulfaquinoxaline Sodium + Pyrimethamine Hydrochloride + Menadione
+IRON DEXTRAN (VET.)
+Dinoprost (as trometamol) (Vet.)
+Vitamin B-Complex
+Retinol Palmitate + Cholecalciferol + d1-a-Tocopherol
+Doxycycline Hydrochloride
+PROCAINE PENICILLIN G, STREPTOMYCIN SULFATE, DEXAMETHASONE (VET.)
+TIAMULIN HYDROGEN FUMARATE (VET)
+Amitraz
+Co-Trimazine
+Tylosin Tartrate + Spectinomycin Sulfate (Vet.)
+CYPERMETHRIN (VET.)
+PERMETHRIN + PIPERONYL BUTOXIDE + D-PANTHENOL (VET)
+Bee Pollen
+Firocoxib (Vet.)
+Propoxur (Vet.)
+Permethrin (Vet.)
+Permethrin (Vet.)
+Carbaryl (Vet.)
+Tildipirosin (Vet.)
+Propoxur (Vet.)
+Albendazole (Vet.)
+Azadirachta indica (Neem Seed Oil)
+Albendazole (Vet.)
+Procaine Benzylpenicillin + Benzylpenicillin Sodium + Streptomycin Sulfate
+Foilic Acid + Cyanocobalamin (Vet.)
+Enrofloxacin
+Retinol Propionate (Vitamin A) + Cholecalciferol (Vitamin D3) + Alpha-Tocopherol Acetate (Vitamin E) (Vet.)
+Cyanocobalamin (Vitamin B12) + Hydroxocobalamin + Sodium Pangamate (Vitamin B15) + Biotin
+MICONAZOLE NITRATE (VET)
+Norfloxacin (Vet.)
+Deltamethrin (Vet.)
+Altrenogest (Vet.)
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Florfenicol + Tylosin Tartrate + Dexamethasone Disodium Phosphate (Vet.)
+Povidone Iodine (Vet.)
+Cefquinome Sulfate (Vet.)
+Tolfenamic Acid (Vet.)
+LAKING V-22 SAKIT BUSTER
+Origanum Vulgare (Oregano Oil) (Vet.)
+Gamithromycin (Vet.)
+Cyanocobalamin (Vet.)
+Multivitamins (Vet.)
+Iron Dextran+ Cynocobalamin (Vet.)
+Flunixin Meglumine (Vet.)
+Ampicillin
+Amoxicillin + Tylosin (Vet.)
+Ocimum Sanctum (Basil oil-sanctum) [Whole plant] + Acorus calamus (Calamus oil-natural) [Rhizome] + Eucalyptus globulus (Eucalyptus oil) [Leaf] + Linum usitatissimum (Linseed oil) [Seed] + Cinnamomum camphora (Camphor oil) [Leaf and woods] + Yashad bhasma (Vet.)
+SODIUM CARBOXYMETHYL BETAGLUCAN
+Parmelia Perlata (Shilapusha thallus) + Saxifraga Ligulata (Pasanabheda root) + Rubia Cordifolia (Manjishtha root) + Cyperus Scariosus (Nagaramusta rhizome) + Achyranthes Aspera (Apamarga seed) + Onosma Bracteatum (Gojihvs aerial part) + Vermonia Cinerea (Sahadevi whole plant) (Vet.)
+Cichorium Intybus (Kasani Seed) + Terminalia Arjuna (Arjuna Stem bark) + Achillea Millifolium (Biranjasipha aerial part) + Capparis Spinosa (Himsra root) + Cassia Occidentalis (Kasamarda Seed) + Tamarix Galliea (Jhavuka whole plant) + Solanum Nigrum (Kakamachi whole plant) (Vet.)
+Tinospora Cordifolia (Guduchi stem) / Withania Somnifera(Ashvahgandha root ) / Boerhaavia Diffusa (Punarnava roots) / Terminalia Chebula (Haritaki fruit rind) / ( / Asparagus Racemosus (Shatavari root)
+Retinyl Palmitate (Vit.A) + Cholecalciferol (Vit. D3) + Alpha-Tocopherol Acetate (Vit. E) (Vet.)
+Altrenogest (Vet.)
+Multivitamins + Liver and Yeast Hydrosylates (Vet.)
+Multivitamins + Liver and Yeast Hydrosylates (Vet.)
+Ascorbic Acid (Vet.)
+Toltrazuril (Vet.)
+Amoxicillin (as trihydrate) (Vet.)
+Ketamine (As Hydrochloride) (Vet.)
+Trimethroprim+Sodium Sulfamonomethoxine (Vet.)
+Florfenicol (Vet.)
+Ivermectin (Vet.)
+Ceftiofur (Vet.)
+Multivitamins/Minerals
+Afoxolaner (Vet.)
+Afoxolaner (Vet.)
+Afoxolaner (Vet.)
+foxolaner (Vet.)
+Ampicillin + Colistin + Dexamethasone (Vet.)
+Niclosamide + Levamisole (Vet.)
+Marbofloxacin (Vet.)
+Ciclosporin (Vet.)
+CYANOCOBALAMIN (VITAMIN B12) VET.
+Tylosin Tartrate + Amoxicillin Trihydrate (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Bravecto for Very Large Dogs (>40 Kg - 56 Kg)
+Multivitamins + Liver Extract + Iron (Vet.)
+Amoxicillin Trihydrate (Vet.)
+Creatine + Levocarnitine + Alpha tocopheryl acetate (Vit. E) + Thiamine HCl (Vit. B1) (Vet.)
+Febantel+Pyrantel Pamoate+Praziquantel (Vet.)
+Praziquantel + Levamisole (Vet.)
+Praziquantel + Levamisole (Vet.)
+Praziquantel + Milbemycin Oxime (vet.)
+Praziquantel + Milbemycin Oxime (Vet.)
+Multivitamins (Vet.)
+Niclosamide+Levamisole (Vet.)
+Multivitamins+Minerals+Lysine (Vet.)
+Pyrantel Embonate + Praziquantel (Vet.)
+Marbofloxacin (Vet.)
+Calcium Gluconate/Magnesium (Vet.)
+Oxytetracycline (Vet.)
+Azadirachta Indica (Neem Seed Oil)
+Multivitamins (Vet.)
+(S)-Methoprene + Fipronil + Eprinomectin + Praziquantel (Vet.)
+(S)-Methoprene + Fipronil + Eprinomectin + Praziquantel (Vet.)
+Gentamicin Sulfate
+Doxycycline + Lincomycin
+Metronidazole
+Amitraz + Ketoconazole (Vet.)
+Azadirachta Indica (Neem Seed Oil)
+Multivitamins (Vet.)
+Benzylpenicillin Procaine+ Benzylpenicillin Benzathine + Dihydrostreptomycin Sulfate (Vet.)
+Gentamicin Sulfate (Vet)
+Gentamicin Sulfate(Vet.)
+Albendazole (Vet.)
+Tiamulin (Vet.)
+Ciprofloxacin + Tylosin Tartrate + Bromhexine Hydrochloride (Vet.)
+Insulin (Vet.)
+Povidone-Iodine (Vet)
+Ceftiofur (Vet.)
+Sterile Water for Injection
+Water for Injection
+Ciprofloxacin Hydrochloride (Vet.)
+Permethrin (Vet.)
+Praziquantel + Levamisole Hydrochloride (Vet.)
+Multivitamins (see formulation on reverse side)
+Prac-Tic For Medium Dog (11Kg-22Kg)
+Levamisole Hydrochloride + Praziquantel (Vet.)
+Pyriprole (Vet.)
+Florfenicol
+Ramipril (Vet.)
+Ramipril (Vet.)
+Dermgard
+Ramipril (Vet.)
+Ramipril (Vet.)
+Buserelin (Vet.)
+Fipronil (Vet.)
+Polymyxin B Sulfate + Nitrofurazone + Neomycin Sulfate + Lidocaine hydrochloride + Pyrethrins (Vet.)
+Kabezen
+Ciprotyl Forte
+Paracetamol (Vet.)
+Cyanocobalamin (Vitamin B12)
+Fenbendazole (Vet.)
+Tylosin Tartrate + Amoxicillin Trihydrate + Bromhexine HCl
+Oxytetracycline Hydrochloride + Gentian Violet
+Niclosamide + Levamisole + Albendazole + Praziquantel
+Zingiber officinalis (Ginger Rhizome) + Gliricidia sepium (Madre de Cacao Leaves) + Momordica charantia (Ampalaya Fruit) + Sulfur (Vet.)
+Ferric Ammonium Citrate, Cyanocobalamin (Vit. B12), Nicotinamide (Vit. PP), Cobalt gluconate (Vet.)
+PERMETHRIN
+Fenbendazole + Pyrantel embonate + Praziquantel (Vet.)
+Fipronil + S-Methoprene
+Fipronil + S-Methoprene
+Fipronil + S-Methoprene
+Fipronil + S-Methoprene
+Marbofloxacin (Vet.)
+Miconazole Nitrate (Vet.)
+Glucosamine Hydrochloride + Chondroitin + Ascorbic Acid + Manganese (Vet.)
+Febantel+Pyrantel Pamoate+Praziquantel (Vet.)
+Fipronil (Vet.)
+Fipronil (Vet.)
+Vitamins + Mineral + Lysine + Taurine + Chlorella Growth Factor (Cgf)
+Vitamins + Lysine + Chlorella Growth Factor (Cgf)
+Amoxicillin Trihydrate + Sulfadiazine + Trimethoprim
+Sodium Carboxymethyl Betaglucan
+Imidacloprid + Flumethrin
+Imidacloprid + Flumethrin (Vet.)
+Doxycycline Hyclate (Vet)
+Febantel + Pyrantel Embonate + Praziquantel (Vet.)
+Sodium Bicarbonate (Vet.)
+Sulfamethazine + Sulfadiazine + Sulfamethoxazole 9 Vet.)
+Sulfadiazine + Trimethoprim
+Mega B-12
+Mutivitamins + Feed Additives
+Oxytetracycline
+Amoxicillin Trihydrate + Colistin Sulfate (Vet.)
+Praziquantel + Levamisole Hydrochloride
+Afoxolaner + Milbemycin Oxime (Vet.)
+Afoxolaner + Milbemycin Oxime (Vet.)
+Afoxolaner + Milbemycin Oxime (Vet.)
+Afoxolaner + Milbemycin Oxime (Vet.)
+Afoxolaner + Milbemycin Oxime (Vet.)
+Buserelin (Vet.)
+Ginseng + B-Complex Vitamins + Minerals
+Gentamicin Sulfate (Vet.)
+Albendazole (Vet.)
+Vitamins + Minerals+Amino Acids
+Procaine Benzylpenicillin+Benzathine Benzylpenicillin+Dihydrostreptomycin (Vet.)
+Sorbitol + Arginine (as hydrochloride) + Ornithine (as hydrochloride) + Citrulline-L + Betaine (Vet.)
+Tulathromycin
+Lincomycin + Gentamicin (Vet.)
+Sulfadiazine Sodium, Sulfamethazhine Sodium, Sulfamerazine Sodium (Vet.)
+Doxycycline (as hyclate) + Tiamulin (as hydrogen fumarate) (Vet.)
+Cypermethrin + Piperonyl Butoxide + Tea Tree Oil (Vet.)
+Praziquantel + Pyrantel Embonate + Febantel
+Dinoprost Tromethamine
+Multivitamins + Liver Extract (Vet.)
+Evening Primrose Oil + Fish Oil (Vet.)
+Ceftiofur (as Hydrochloride) (Vet.)
+Enrofloxacin (Vet.)
+Sulfadiazine, Sulfamethazine, Sulfamerazine (Vet.)
+Doxycycline Hyclate (Vet.)
+Toltrazuril
+Sarolaner (Vet)
+Sarolaner (Vet)
+Sarolaner (Vet)
+Sarolaner (Vet)
+Marbofloxacin (Vet.)
+Mebendazole + Niclosamide + Levamisole Hydrochloride (Vet.)
+Cypermethrin + Tea Tree Oil (Vet.)
+Levamisole Hydrochloride + Albendazole
+Fipronil + (S) Methoprene
+Fipronil + (S) Methoprene
+Ceftiofur hydrochloride (Vet.)
+Cypermethrin + Piperonyl Butoxide
+Calcium Lactate + Retinyl Acetate + Cholecalciferol + Alpha Tocopheryl Acetate
+Metronidazole
+Sulfamonomethoxine+Pyrimethamine+Ferrous Sulfate+Vit. K3+Copper Sulfate+Folic Acid+Vit. B12
+Fipronil
+20% Iron Dextran
+Gamecock
+Alpha Tocopheryl Acetate (Vit E) + Sodium Selenite
+Toltrazuril
+Oxytetracycline (As Dihydrate)
+Permethrine / Neomycin (As Sulphate) / Nystatin / Triamcinolone (As Acetonide)
+Buserelin (as Acetate)
+Benazepril hydrochloride (Vet)
+Benazepril hydrochloride (Vet)
+Vitamins + Mineral + Lysine + Taurine + Chlorella Growth Factor (CGF)
+Colistin Sulfate + Doxycycline + Carbocisteine
+Sulfur + Psidium guajava (Guava) Fruit Extract + Gliricidia sepium (Madre de Cacao) Leaf Extract
+MARBOFLOXACIN (Vet.)
+MARBOFLOXACIN (Vet.)
+Iron (as glepto ferron) (Vet.)
+Ciprofloxacin + Cefalexin + Dexamethasone
+Retinol Palmitate (Vitamin A) + Cholecalciferol (Vitamin D3) + alpha-Tocopherol Acetate (Vitamin E)
+Amoxicillin (as trihydrate) + Gentamicin (as sulfate)
+Amoxicillin (as Trihydrate) + Gentamicin (as Sulfate)
+Pyrantel Pamoate
+Spectinomycin Hydrochloride + Lincomycin Hydrochloride
+Creatine Monohydrate + Levocarnitine + Thiamine Hydrochloride + Ubidecarenone
+Glucosamine Hydrochloride + Chondroitin Sulfate Sodium + Turmeric Powder Extract + Calcium Lactate + Cholecalciferol (Vitamin D3)
+Pyrantel Pamoate + Ivermectin
+Robenacoxib (Vet.)
+Robenacoxib (Vet.)
+Robenacoxib (Vet.)
+Robenacoxib (Vet.)
+NEOMYCIN (AS SULFATE) + GENTIAN VIOLET (VET)
+Praziquantel (Vet.)
+OXYTETRACYCLINE (AS DIHYDRATE) (VET)
+Cassia alata (ACAPULCO LEAVES EXTRACT) (VET)
+NEOMYCIN (as SULFATE) + GENTIAN VIOLET (VET)
+Tocopheryl Acetate + Ginseng + Methyltestosterone + Zinc Sulfate + Retinol Palmitate (Vet)
+Povidone Iodine (Vet.)
+Povidone-Iodine (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Mebendazole + Praziquantel + Levamisole (Vet.)
+Doxycycline (as Hydrochloride) [Vet.]
+Amoxicillin (as trihydrate) (Vet.)
+Florfenicol (Vet.)
+Florfenicol (Vet.)
+Tylosin (as phosphate) (Vet.)
+Calcium Gluconate + Di-Calcium Phosphate (Vet)
+Multivitamins + Minerals (Vet)
+Butafosfan + Cyanocobalamin (Vet.)
+Amoxicillin (as trihydrate) + Gentamicin (as sulfate) (Vet.)
+Amoxicillin (As Trihydrate) (Vet.)
+Oxytocin (Vet.)
+OXYTOCIN (VET.)
+Maropitant Citrate
+Alpha-Tocopherol Acetate (Vitamin E) + Sodium Selenite Anhydrous (as Selenium) (Vet.)
+Florfenicol
+Florfenicol (Vet.)
+Oxytetracycline (as dihydrate) (Vet.)
+Marbofloxacin (Vet.)
+Amoxicillin (as Trihydrate) + Gentamycin Sulfate (Vet.)
+Dipyrone + Hyoscine Butyl Bromide (Vet.)
+Tranexamic Acid (Vet.)
+Oxytetraxycline (Vet.)
+Cassia alata (ACAPULCO LEAVES EXTRACT (VET)
+Tulathromycin (Vet.)
+Ceftiofur Sodium (Vet.)
+Penicillin G Procaine + Dihydrostreptomycin Sulfate (Vet.)
+Amoxicillin Trihydrate + Colistin Sulfate (Vet.)
+Amoxicillin (as Trihydrate) (Vet.)
+Enrofloxacin (Vet.)
+Tiamulin Hydrogen Fumarate (vet.)
+Gentamicin (as Sulphate) (Vet.)
+Lincomycin (as Hydrochloride )+ Spectinomycin (as Sulphate) (Vet.)
+Marbofloxacin (Vet.)
+Marbofloxacin (Vet.)
+Dexamethasone (as Sodium phosphate) (Vet.)
+Danofloxacin (as mesylate) (Vet.)
+Metamizole sodium (Vet.)
+Florfenicol (Vet.)
+Tiamulin Hydrogen Fumarate (vet.)
+Ceftiofur (as hydrochloride) (Vet.)
+Multivitamins + Liver Extract (Vet.)
+Ivermectin (vet.)
+Retinol Palmitate (Vitamin A) + Cholecalciferol (Vitamin D3)+q-Tocopherol (Vitamin E) (Vet.)
+Marbofloxacin (Vet.)
+Tulathromycin (Vet.)
+Ceftiofur (as hydrochloride) (Vet.)
+Iron Dextran + Cyanocobalamin (Vitamin B12) (Vet.)
+Florfenicol (Vet.)
+Oxytetracycline (as dihydrate) (Vet.)
+Marbofloxacin (Vet.)
+Trimethoprim + Sulfadiazine (Vet.)
+Florfenicol + Sulfadiazine (Vet.)
+Amoxicillin (as Trihydrate) + Gentamicin sulfate (Vet.)
+Pyriprole (Vet.)
+Pyriprole (Vet.)
+Ivermectin (Vet.)
+Ceftiofur sodium+ Enrofloxacin HCl (Vet.)
+Lincomycin HC1 + Spectinomycin HC1 + Bromhexine HC1 (Vet.)
+Multivitamins + Liver Extract (Vet.)
+Amoxicillin (as trihydrate) + Colistin (as sulfate) (Vet.)
+Toltrazuril + Iron (as Gleptoferron) (Vet.)
+Oxytetracycline + Gentian Violet (Vet.)
+Tilmicosin + Bromhexine Hydrochloride (Vet.)
+Bismuth (as Subcarbonate) (VeT.)
+Doxycycline (as Hyclate) (Vet.)
+Enalapril Maleate (Vet.)
+Ambroxol Hydrochloride (Vet.)
+Ascorbic Acid (Vet.)
+Enrofloxacin (Vet.)
+Metronidazole (Vet.)
+Meloxicam (Vet.)
+Methylsulfonymethane (MSM) + Glucosamine Hydrochlride + Sodium Chondroitin Sulfate (Vet.)
+Itraconazole (Vet.)
+Amoxicillin( As Trihydrate) (Vet.)
+Praziquantel + Milbemycin oxime (Vet.)
+Cotrimoxazole (Vet.)
+Multivitamins + Liver Extract (Vet.)
+Calcium Gluconate (Vet.)
+Cyanocobalamin (Vitamin B12) + Folic acid (Vitamin B) (Vet.)
+Fenobucarb (Vet.)
+Fenobucarb (Vet.)
+Doggies' Choice Tick & Flea Powder
+Meloxicam (Vet.)
+Cephalexin + Enrofloxacin (Vet.)
+Tilmicosin + Bromhexine Hydrochloride (Vet.)
+Ivermectin (Vet.)
+Enrofloxacin (Vet.)
+Fipronil (Vet.)
+Fluralaner + Moxidectin (Vet.)
+Fluralaner + Moxidectin (Vet.)
+Selamectin (Vet.)
+Cotrimoxazole (Vet.)
+Multivitamins+Lysine (vet.)
+Gentamicin (Vet.)
+Gentamicin (Vet.)
+Cyclosporine (Vet.)
+Fenobucarb (Vet.)
+Cyanocobalamin (Vitamin B12) + Hydroxocobalamin (Vet.)
+Cefalonium (Vet.)
+Enrofloxacin (as hydrochloride) (Vet.)
+Cefapirin Prednisolone (Vet.)
+Bromhexine Hydrochloride (Vet.)
+Lincomycin (as hydrochloride) (Vet.)
+Lincomycin + Gentamicin (Vet)
+Oclacitinib (as maleate) (Vet.)
+Oclacitinib (as maleate) (Vet.)
+Oclacitinib (as maleate) (Vet.)
+Sterile Phosphate Buffer Saline Solution (Vet.)
+Vaccine Against Canine Distemper (Cdv), Infectious Laryngotracheitis (Cav-2), Infectious Hepatitis (Cav-1), Parvoviral Infection (Cpv-2), Parainfluenza (Cpiv-2) Vivid & Leptospirosis (L. Icterohaemorrhagiae Inact., L. Canicola Inact., L. Grippotyphosa Inact.)
+Toltrazuril (Vet.)
+Enrofloxacin (Vet.)
+Inactivated Actinobacillus pleuropneumoniae + Glaesserella parasuis + Pasteurella multocida Bacterin
+Live Newcastle Disease Virus (VG/GA Avinew Strain) Vaccine
+Follicle Stimulating Hormone + Luteinizing Hormone (Vet.)
+Florfenicol [Vet.]
+Modified Live Pseudorabies Virus Vaccine
+Cefalexin (Vet.)
+Inactivated Mycoplasma hyopneumoniae Bacterin
+Paracetamol (Vet.)
+Multivitamins + Lysine (Vet.)
+dl-a-Tocopherol Acetate (Vet.)
+Butaphosphan + Cyanocobalamin (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus + Infectious Bursal Disease (IBD) Virus-Specific Antibody Complexed Vaccine (Vet.)
+Inactivated Porcine Parvovirus + Erysipelothrix rhusiopathiae + Leptospira interrogans serovar icterohaemorrhagiae + Leptospira interrogans serovar canicola + Leptospira interrogans serovar pomona + Leptospira interrogans serovar hardjo + Leptospira interrogans serovar grippotyphosa + Leptospira interrogans serovar bratislava Vaccine (Vet.)
+Inactivated Porcine Parvovirus + Erysipelothrix rhusiopathiae Vaccine (Vet.)
+Inactivated Porcine Parvovirus + Erysipelothrix rhusiopathiae + Leptospira interrogans serovar icterohaemorrhagiae + Leptospira interrogans serovar canicola + Leptospira interrogans serovar pomona + Leptospira interrogans serovar hardjo + Leptospira interrogans serovar grippotyphosa + Leptospira interrogans serovar bratislava Vaccine (Vet.)
+Amoxicillin +Tilmicosin + Bromhexine (Vet.)
+Cefalexin + Tylvalosin + Paracetamol + Bromhexine (Vet.)
+Tilmicosin + Bromhexine + Prednisone (Vet.)
+Strile Blue Dye Solution
+Aqueous Sterile Glycerin Solution (Red)
+Live Newcastle Disease Virus (B1 Type, La Sota Strain) Vaccin
+Live Attenuated Eimeria acervulina+ Eimeria mitis + Eimeria praecox + Eimeria tenella + Eimeria maxima Vaccine (Vet.)
+Live attenuated Eimeria necatrix + Eimeria acervulina + Eimeria tenella + Eimeria brunetti + Eimeria maxima Vaccine (Vet.)
+Omega-3 Fatty Acid + Multivitamins +Minerals
+Omega-3 Fatty Acid + Multivitamins + Minerals
+Cephalexin + Enrofloxacin HCl (Vet.)
+Sterile Phosphate Buffer Solution
+Sterile Blue Diluent
+Inactivated Avian Rhinotracheitis (AR) Virus Vaccine (Vet.)
+Enramycin (Vet.)
+Enramycin (Vet.)
+Piperazine + Niclosamide (Vet.)
+Tiamulin (Vet.)
+Tylosin (Vet.)
+Live Attenuated Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Vaccine (Vet.)
+Inactivated Avian Infectious Bronchitis (IB) Virus + Avian Rhinotracheitis (AR) Virus + Egg Drop Syndrome (EDS) Virus + Newcastle Disease (NCD) Virus Vaccine (Vet.)
+Sulfadoxine + Trimethoprim (Vet)
+Nandrolone (Vet.)
+Iron Dextran + Cyanocobalamin (Vitamin B12) (Vet.)
+Modified Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parainfluenza Virus (CPIV) + Canine Parvovirus (CPV) + Inactivated Leptospira interrogans serovar canicola + Leptospira interrogans ser. grippotyphosa + Leptospira interrogans ser. icterohaemorrhagiae + Leptospira interrogans ser. pomona Vaccine (Vet.)
+Inactivated Recombinant Escherichia coli Verotoxin Vaccine (Vet.)
+Escherichia coli Fimbrial Adhesins + E. coli LT Enterotoxoid + Clostridium perfringens B-toxoid + C. novyi Type B a-toxoid Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) + Newcastle Disease (NCD) Virus Vaccine (Vet.)
+Inactivated Porcine Parvovirus (PPV) Vaccine (Vet.)
+Amoxicillin + Tylvalosin + Bromhexine (Vet.)
+Amoxicillin + Tylvalosin + Bromhexine (Vet.)
+Sterile Phosphate Buffered Saline (Vet.)
+Sterile Sucrose Phosphate Buffer Solution (Vet.)
+Aqueous Glycerin Solution
+Paracoccus pantatrophus + Bacillus megatorium (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Live Attenuated Newcastle Disease Virus (NDV) Vaccine (Vet.)
+Inactivated Newcastle Disease Virus (NDV) + Infectious Bronchitis (IB) Virus + Egg Drop Syndrome (EDS) Virus Vacciné (Vet.)
+Recombinant Live Fowl Laryngotracheitis (ILT)-Marek's Disease Virus (MDV) Vaccine (Vet.)
+Inactivated Mycoplasma Gallisepticum Vaccine (Vet.)
+Live Attenuated Chicken Anemia Virus (CAV) Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Live Marek's Disease (MD) Virus Vaccine (Vet.)
+Live Attenuated Mycoplasma synoviae Vaccine (Vet.) Nobilis MS Live
+Folic Acid + Cyanocobalamin (Vit. B12) (Vet)
+Live Attenuated Fowl Laryngotracheitis (LT) Virus Vaccine (Vet.)
+Modified Live Classical Swine Fever (CSF) Virus Vaccine (Vet.)
+Modified Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parainfluenza Virus (CPI) + Canine Parvovirus (CPV) + Inactivated Leptospira interrogans ser. Canicola + Leptospira interrogans ser. Icterohaemorrhagiae + Coronavirus Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus + Infectious Bursal Disease (IBD) Virus + Reovirus Vaccine (Vet.)
+Magnesium (as Sulfate) (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus + Infectious Bursal Disease (IBD) Virus + Turkey Rhinotracheitis (TRT) Virus Vaccine (Vet.)
+Live Attenuated Salmonella Gallinarum Vaccine (Vet.)
+Inactivated Porcine Parvovirus (PPV) Vaccine (Vet.)
+Inactivated Salmonella Enteritidis + Salmonella Typhimurium Vaccine (Vet.)
+Inactivated Clostridium perfringens B and E + Clostridium novyi a + Clostridium septicum a + Clostridium chauvoei + Clostridium tetani Vaccine (Vet.)
+Doxycycline (as hydrochloride) (Vet.)
+Multivitamins + Minerals + Amino Acid + Nucleotides + Yeast Extract + Evening Primrose Oil (Vet.)
+Multivitamins + Minerals + Amino Acid + Nucleotides + Yeast Extract + Evening Primrose Oil (Vet.)
+Glutaraldehyde + Benzalkonium Chloride (Vet.)
+Benzalkonium Chloride (Vet.)
+Thiamphenicol + Kitasamycin (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Bacillus subtilis + Bacillus licheniformis + Yucca schidigera (Mojave yucca) Stem (Vet.)
+Inactivated Glaesserella parasuis Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.) : Nobilis Gumboro 228E
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Turkey Rhinotracheitis Virus Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) Virus + Avian Rhinotracheitis (ART) Virus + Infectious Bursal Disease (IBD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Pasteurella multocida + Actinobacillus pleuropneumoniae Vaccine (Vet.)
+Modified Live Recombinant Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) + Canine Coronavirus Vaccine (CCV) (Vet.)
+Modified Live Recombinant Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) Vaccine + Inactivated Leptospira interrogans ser. Canicola + Leptospira interrogans ser. Icterohaemorrhagiae Vaccine (Vet.)
+Modified Live Recombinant Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) + Canine Coronavirus (CCV) + Inactivated Leptospira interrogans ser. Canicola + Leptospira interrogans ser. Icterohaemorrhagiae Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) + Newcastle Disease (ND) Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Calcium Carbonate + Phosphorus + Cholecalciferol (Vitamin D3) (Vet.)
+Phosphate Buffer Saline Solution (Vet.)
+Inactivated Porcine Circovirus (PCV) + Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Live Recombinant Marek's Disease Virus (MDV) + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) Virus + Egg Drop Syndrome (EDS) Virus + Newcastle Disease (NCD) Virus Vaccine (Vet.)
+Escherichia coli Live Culture Vaccine (Vet.)
+Chlortetracycline + Tylvalosin + Multivitamins (Vet.)
+Killed Mycoplasmoides gallisepticum Vaccine (Vet.)
+Killed Equine Herpesvirus + Equine Influenza Virus Vaccine (Vet.)
+Minerals (Vet.)
+Multivitamins+ Electrolytes + Calcium Formate
+Pyrantel + Praziquantel (Vet.)
+Praziquantel + Albendazole [Vet.]
+Fluralaner (Vet.)
+Ascorbic Acid + Potassium Chloride + Sodium Chloride (Vet.)
+Decoquinate (Vet.)
+Multivitamins + Zinc + Lysine (Vet.)
+Tiamulin (as hydrogen fumarate) (Vet.)
+Ractopamine Hydrochloride
+Tiamulin (as hydrogen fumarate) (Vet.)
+Praziquantel/Pyrantel/Febantel (Vet.)
+Minerals + Amino Acids (Vet.)
+Organic Acids (Vet.)
+Amoxicillin (Vet.)
+Inactivated Swine Influenza Virus (SIV) Vaccine (Vet.)
+Inactivated Infectious Bursal Disease (IBD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Amitraz
+Live Turkey Rhinotracheitis (TRT) Virus Vaccine (Vet.)
+Retinol (Vitamin A) + Cholecalciferol (Vitamin D3) + Sodium Chloride + Magnesium Oxide + Phytase (Optiphos) + Zinc Oxide Ferrous Sulfate + a Tocopherol Acetate (Vitamin E) + Manganese Oxide + Copper Sulfate + Cobalt Sulfate + Potassium Iodide Sodium Selenite (Vet.)
+Inactivated Salmonella enteritidis + Salmonella enterica Vaccince (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.
+Cyanocobalamin + Butaphosphan (Vet)
+Phenylbutazone (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus+ Infectious Bursal Disease Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Mesomycoplasma Vaccine (Vet.)
+Live Attenuated Canine Parvovirus (CPV) Vaccine (Vet.)
+Inactivated Porcine Circovirus (PCV) Vaccine (Vet.)
+Inactivated Egg Drop Syndrome (EDS) '76 Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Multivitamins + Minerals (Vet.)
+Inactivated Swine Influenza Virus (SIV) Vaccine (Vet)
+Live Attenuated Pseudorabies (Aujeszky's Disease) Virus Vaccine (Vet.)
+Bronchitis (IB) Virus Vaccine (Vet.)
+Live Attenuated Hog Cholera Virus (HCV) Vaccine (Vet.)
+Inactivated Leptospira interrogans (ser. Canicola, Icterohaemorrhagiae, Australis) + L. kirschneri ser. Grippotyphosa Vaccine (Vet.)
+Fluralaner (Vet.)
+Live Fowl Pox (FP) Virus Vaccine (Vet.)
+Live Bordetella bronchiseptica + Canine Parainfluenza Virus (CPIV) Vaccine (Vet.)
+Inactivated Clostridium perfringens B and € + Clostridium novyi a + Clostridium septicum a + Clostridium chauvoei + Clostridium tetani Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae + Pasteurella multocida Vaccine (Vet.)
+Live Recombinant Turkey Herpesvirus (HVT) + Infectious Bursal Disease (IBD) Virus + Infectious Laryngotracheitis (ILT) Virus Vaccine (Vet.)
+Inactivated Bordetella bronchiseptica + Pasteurella multocida + Actinobacillus pleuropneumoniae + Mycoplasma hyopneumoniae + Streptococcus suis + Haemophilus parasuis Vaccine (Vet.)
+Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) Vaccine (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesins Vaccine (Vet.)
+Tilmicosin (Vet.)
+Vitamins + Minerals (Vet.)
+Vitamins + Minerals + Moringa oleifera L. (Malunggay Leaf) (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesin (F4ab, F4ac, F5 and F6) + Heat Labile (LT) Enterotoxoid + Clotridium perfringens (Type C) B Toxoid + Clostridium novyi (Type B) a Toxoid Vaccine (Vet.)
+Inactivated Bordetella bronchiseptica + Pasteurella multocida Toxin Vaccine (Vet.)
+Live Avirulent Lawsonia intracellularis Vaccine (Vet.)
+Inactivated Recombinant Porcine Circovirus Type 2 (PCV2) Vaccine (Vet.)
+Live Reovirus Vaccine (Vet.)
+Inactivated Reovirus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Avian Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Inactivated Avian Adenovirus Vaccine (Vet.)
+Multivitamins + Iron + Lysine (Vet.)
+L-Carnitine + Silymarin + Docosahexaenoic Acid (DHA) (Vet.)
+Potassium Citrate + Blumea balsamifera L. (Sambong Leaf) + Docosahexaenoic Acid (DHA) (Vet.)
+Inactivated Porcine Parvovirus (PPV) Vaccine (Vet.)
+Modified Live Recombinant Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) Vaccine + Inactivated Leptospira interrogans ser. Canicola + L. interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Grippotyphosa + L. interrogans ser. Pomona Vaccine (Vet.)
+Live Avirulent Pasteurella multocida Vaccine (Vet.)
+Live Avian Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Multivitamins + Minerals (Vet.)
+Live Marek's Disease Virus (MDV) Chimera Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum + Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus + Egg Drop Syndrome '76 (EDS) Virus Vaccine (Vet)
+Live Avian Encephalomyelitis (AE) Virus + Fowl Pox (PF) Virus Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Infectious Laryngotracheitis (ILT) Virus Vaccine (Vet.)
+Live Attenuated Canine Parvovirus (CPV) + Canine Distemper Virus (CDV) Vaccine (Vet.)
+Live Attenuated Canine Parvovirus (CPV) + Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV 2) Vaccine + Inactivated Leptospira interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Canicola Vaccine (Vet.)
+Modified Live Avian Reovirus Vaccine (Vet.)
+Modified Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parainfluenza Virus (CPIV) + Canine Parvovirus (CPV) + Inactivated Leptospira interrogans ser. Canicola + L. interrogans ser. Icterohaemorrhagiae Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine : (Vet.)
+Live Infectious Bursal Disease (IIBD) Virus Vaccine (Vet.)
+Narasin (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Swine Parvovirus + Erysipelothrix rhusiopathiae + Leptospira interrogans ser. Canicola + L. interrogans ser. Grippotyphosa + L. interrogans ser. Hardjo + L. interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Pomona Vaccine (Vet.)
+Sulfonamides + Kaolin + Glycine + Pectin + Hyoscine + Minerals (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Avian Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Inactivated Porcine Respiratory and Reproductive Syndrome (PRRS) Virus Vaccine (Vet.)
+Live Attenuated Canine Parvovirus (CPV) + Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV 2) + Canine Parainfluenza (CPIV) Vaccine + Leptospira interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Canicola Vaccine (Vet.)
+Inactivated Pigeon Paramyxovirus (PPMV) Vaccine (Vet.)
+Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) Vaccine (Vet.)
+Blumea balsamifera (Sambong) Leaf + Camellia sinensis O. Ktze. (Green Tea) Leaf + Zinc (Vet.)
+Multivitamins + Lysine (Vet.)
+Avilamycin (Vet.)
+Live Pseudorabies (Aujeszky's) Disease Virus Vaccine (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesin + Heat Labile Toxoid (LT) Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus + Egg Drop Syndrome-76 (EDS-76) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Magnesium (as Sulfate) (Vet.)
+Inactivated Pseudorabies (Aujesky's Disease) Virus (ADV) Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) + Newcastle Disease (ND) + Egg Drop Syndrome-76 (EDS-76) Virus + Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Porcine Parvovirus (PPV) + Erysiphelothrix rhusiopathiae Vaccine (Vet.)
+Inactivated Glaesserella parasuis Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Pasteurella multocida + Actinobacillus pleuropneumoniae Toxoid Vaccine (Vet.)
+Modified Live Porcine Respiratory and Reproductive Syndrome (PRRS) Virus Vaccine (Vet.)
+Inactivated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) + Newcastle Disease (ND) + Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) + Infectious Bursal Disease (IBD) + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Attenuated Salmonella enterica subsp. enterica serovar Enteritidis Virus Vaccine (Vet.)
+Live Mycoplasmoides gallisepticum Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus + Infectious Bursal Disease (IBD) + Avian Reovirus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) + Newcastle Disease (ND) + Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) + Infectious Bronchitis (IB) + Egg Drop Syndrome (EDS76) Virus + Avibacterium paragallinarum Vaccine (Vet.)
+Florfenicol (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Newcastle Disease (ND) Virus + Infectious Laryngotracheitis (ILT) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Eimeria acervulina + E. maxima + E. mivati + E. tenella Oocyst Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Attenuated Pseudorabies (Aujeszky's Disease) Virus Vaccine (Vet.)
+Live Turkey Rhinotracheitis (TRT) Virus Vaccine (Vet.)
+Inactivated Parainfluenza Virus Type 2 Virus + Bordetella bronchiseptica Vaccine (Vet.)
+Ascorbic Acid (Vet.)
+Pyrantel Pamoate + Praziquantel (Vet.)
+Docycycline (Vet.)
+Co-trimoxazole (Vet.)
+Ascorbic Acid + Zinc (Vet.)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Reovirus Vaccine (Vet.)
+Live Fowl Pox (FP) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Amitraz
+Modified Live Feline Rhinotracheitis Virus (FVR) + Feline Calicivirus (FCV) + Feline Panleukopenia (FPL) Virus + Chlamydia psittaci Vaccine (Vet.)
+Inactivated Porcine Parvovirus (PPV) + Erysipelothrix rhusiopathiae + Leptospira interrogans ser. Bratislava + L. interrogans ser. Canicola + L. interrogans ser. Grippotyphosa + L. interrogans ser. Hardjo + L. interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Pomona Vaccine (Vet.)
+Inactivated Glaesserella Parasuis Bacterin
+Bacillus Subtilis
+Bordetella bronchiseptica Vaccine (Vet.)
+Butaphosphan + Cyanocobalamin (Vitamin B12) (Vet.)
+Bacillus Subtilis
+Bacillus Subtilis
+Bacillus Subtilis
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Enramycin (Vet.)
+Bordetella bronchiseptica, + Pasteurella multocida + Actinobacillus pleuropneumoniae + Mycoplasma hyopneumoniae + Streptococcus suis + Glaesserella parasuis Vaccine (Vet.)
+Live Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Inactivated Porcine Respiratory and Reproductive Syndrome (PRRS) Virus Vaccine (Vet.)
+Inactivated Rabies Vaccine (Vet.)
+Live Attenuated Mycoplasmoides gallisepticum Vaccine (Vet.)
+Live Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Florfenicol (Vet.)
+Florfenicol (Vet.)
+Ivermectin + Pyrantel (Vet.)
+Ivermectin + Pyrantel (Vet)
+Ketoprofen (vet.)
+Live Mycoplasmoides gallisepticum Vaccine (Vet.)
+Live Attenuated Porcine Epidemic Diarrhea (PED) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Ivermectin (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Inactivated Vaccine Against Porcine Atrophic Rhinitis
+Inactivated Porcine Circovirus (PCV) Virus Vaccine (Vet.)
+Live Attenuated Classical Swine Fever (CSF) Virus Vaccine (Vet.)
+Live Marek's Disease (MD) Virus Vaccine (Vet.)
+Live Marek's Disease (MD) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Newcastle Disease (Killed)
+Inactivated Infectious Bronchitis (IB) Virus + Infectious Bursal Disease (IBD) + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Praziquantel + Pyrantel (Vet)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Feline Leukemia Of Felv Recombinant Canarypox Virus Vaccine (Vcp97)
+Inactivated Newcastle Disease + Infectious Bronchitis + Infectious Bursal Disease + Reovirus Vaccine Killed
+Attenuated Feline Rhinotracheitis Herpesvirus (Fhv F2 Strain), Panleucopenia Virus (Pli Iv) And Inactivated Calicivirus (Fcv 431) And (Fcv G1 Strains)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Live Attenuated Fowl Pox (FP) Virus Vaccine (Vet.)
+Live Attenuated Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Infectious Bursal Disease (IBD) Virus + Reovirus Virus Vaccine (Vet.)
+Inactivated Salmonella Enteritidis + Salmonella Typhimurium Vaccine (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Lincomycin + Spectinomycin + Bromhexine (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Ivermectin (Vet.)
+Kitasamycin + Thiamphenicol (Vet.)
+Doxycycline (Vet.)
+Pyrantel Pamoate + Praziquantel (Vet.)
+Live Newcastle Disease (ND) + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Tylosin + Ciprofloxacin + Bromhexine (Vet.)
+Xylazine (Vet.)
+Niclosamide + Levamisole (Vet.)
+Inactivated Mycoplasma gallisepticum Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus+ Infectious Bronchitis (IB) Virus+ Egg Drop Syndrome (EDS) Virus Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Live Attenuated Salmonella Enteritidis Vaccine (Vet.)
+Inactivated Swine Influenza Virus (SIV) Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Infectious Bursal Disease (IBD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Attenuated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Pasteurella multocida Vaccine (Vet.)
+Bacillus subtilis (Vet.)
+Sterile Blue Dye (Vet.)
+Bacillus Subtillis (Vet.)
+Live Marek's Disease (MD) Virus Chimera Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Infectious Bursal Disease (IBD) Virus Chimeric Vaccine (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Sarolaner (Vet.)
+Live Recombinant Rabies Virus Vaccine (Vet.)
+Live Attenuated Salmonella Enteritidis + Salmonella Typhimurium Vaccine (Vet.)
+Inactivated Glaesserella parasuis Vaccine (Vet.)
+Live Chicken Anemia Virus (CAV) Vaccine (Vet.)
+Ivermectin (Vet.)
+Sarolaner (Vet.)
+Sarolaner (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesins + Clostridium perfringens B-Toxoid Vaccine (Vet.)
+Inactivated Erysipelotrix rhusiopathiae + Porcine parvovirus (PPV) + Leptospira interrogans ser. Canicola + Leptospira interrogans ser. Icterohaemorrhagiae + Leptospira interrogans ser. Australis + Leptospira interrogans ser. Grippotyphosa + Leptospira interrogans ser. Pomona + Leptospira interrogans ser. Tarassovi Vaccine (Vet.)
+Sterile Phosphate Buffered Saline (Vet.)
+dl-a-Tocopherol Acetate (Vet.)
+Inactivated Newcastle Disease (ND) + Infectious Bronchitis (IB) + Egg Drop Syndrome (EDS76) Virus Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Calcium + Phosphorus + Organic Acids (Vet.)
+Live Canine Distemper Virus (CDV) + Canine Parvovirus (CPV) Vaccine (Vet.)
+Multivitamins + Magnesium + Manganese (Vet.)
+Modified Live Recombinant Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus + Egg Drop Syndrome (EDS) Virus Vaccine (Vet.)
+Modified Live Pseudorabies (Aujeszky's Disease) Virus Vaccine (Vet.).
+Tiamulin (Vet.)
+Live Attenuated Feline Calicivirus (FCV) + Feline Herpesvirus (FHV) + Feline Panleukopenia Virus (FPV) Vaccine (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) + Inactivated Leptospira interrogans var. Canicola + L. interrogans var. Icterohaemorrhagiae Vaccine (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Vitamins + Minerals (Vet.)
+Sarolaner (Vet.)
+Inactivated Glaesserella parasuis Vaccine (Vet.)
+Inactivated Clostridium perfringens + Escherichia coli Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) + Infectious Bronchitis (IB) + Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Multivitamins + Minerals + Amino Acids (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) + Infectious Bronchitis (IB) + Egg Drop Syndrome (EDS76) + Avian Rhinotracheitis Virus Vaccine (Vet.)
+Escherichia coli Fimbrial Adhesins + Clostridium perfringens Vaccine (Vet.)
+Bacitracin (Vet.)
+Sterile Blue Phosphate Buffered Saline (Vet.)
+Lokivetmab (Vet.)
+Inactivated Porcine Circovirus (PCV) + Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Tulathromycin (Vet.)
+Inactivated Porcine Circovirus Type 2 (PCV2) Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Infectious Bursal Disease (IBD) + Newcastle Disease (ND) + Infectious Bronchitis (IB) + Reovirus Virus Vaccine (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesins + Clostridium perfringens Vaccine (Vet.)
+Modified Live Porcine Respiratory and Reproductive Syndrome (PRRS) Virus + Inactivated Porcine Circovirus Type 2 (PCV2) + Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Modified Live Tenosynovitis Virus Vaccine (Vet.) :
+Live Avian Encephalomyelitis (AE) + Fowl Pox (FP) Virus Vaccine (Vet.)
+Tulathromycin (Vet.)
+Live Attenuated Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Vaccine (Vet.)
+Inactivated Lawsonia intracellularis Vaccine (Vet.)
+Aluminum Hydroxide + Mineral Oil in 0.9% Sodium Chloride (Vet.)
+Live Attenuated Newcastle Disease Virus (NDV) Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Inactivated Glaesserella parasuis Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae + Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Oxytetracycline (Vet.)
+Florfenicol (Vet.)
+Live Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+dl-a-Tocopherol Acetate (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Bordetella bronchiseptica Vaccine (Vet.)
+Pimobendan (Vet.)
+Pimobendan (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Marek's Disease (MD) Virus Vaccine (Vet.)
+Live Marek's Disease (MD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Inactivated Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae Vaccine (Vet.)
+Live Attenuated Classical Swine Fever (CSF) Virus Vaccine (Vet.)
+Cephalexin (Vet.)
+Live Attenuated Mycoplasma gallisepticum Vaccine (Vet.)
+Live Attenuated Mycoplasma synoviae Vaccine (Vet.)
+Cypermethrin + Piperonyl Butoxide (Vet.)
+Modified Live Porcine Respiratory and Reproductive Syndrome (PRRS) Virus Vaccine (Vet.)
+Enrofloxacin (Vet.)
+Praziquantel + Esafoxolaner + Eprinomectin (Vet.)
+Inactivated Newcastle Disease (ND) + Infectious Bronchitis (IB) + Egg Drop Syndrome (EDS76) Virus + Avibacterium paragallinarum Vaccine (Vet.)
+Modified Live Porcine Rotavirus + Clostridium Modified Live Porcine Rotavirus + Clostridium perfringens + Escherichia coli Vaccine (Vet.)
+Praziquantel + Esafoxolaner + Eprinomectin (Vet.)
+Ivermectin (Vet.)
+Multivitamins + Hydrolyzed Yeast (Vet.)
+Inactivated Propionibacterium acnes + Escherichia coli Lipopolysaccharide (Vet.)
+Modified Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Leptospira interrogans ser. Canicola + L. interrogans ser. Grippotyphosa + L. interrogans ser. Hardjo + L. interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Pomona Vaccine (Vet.)
+Cotrimazine (Vet.)
+Sodium Bicarbonate + Sodium Thiosulfate (Vet.)
+Florfenicol (Vet.)
+Florfenicol (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Lokivetmab (Vet.)
+Live Attenuated Feline Calicivirus (FCV) + Feline Viral Rhinotracheitis Virus (FVR) + Feline Panleukopenia Virus (FPL) Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae Vaccine (Vet.)
+Modified Live Virus Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parainfluenza Virus (CPIV) + Canine Parvovirus (CPV) + Inactivated Leptospira interrogans ser. Canicola + L. interrogans ser. Icterohaemorrhagiae Vaccine (Vet.)
+Lokivetmab (Vet.)
+Lokivetmab (Vet.)
+Modified Live Classical Swine Fever (CSF) Virus Vaccine (Vet.)
+Florfenicol (Vet.)
+Chlortetracycline (as Hydrochloride) (Vet.)
+Chlortetracycline (as Hydrochloride) (Vet.)
+Chlortetracycline (as Hydrochloride) (Vet.)
+Chlortetracycline (as Hydrochloride) + Tiamulin (Vet.)
+Chlortetracycline (as Hydrochloride) + Tiamulin (Vet.)
+Multivitamins (Vet.)
+Colistin + Enrofloxacin (Vet.)
+Multivitamins + Minerals (Vet.)
+Live Eimeria tenella + E. acervulina + E. maxima + E. brunetti + E. necatrix + E. mitis + E. praecox Oocyst Vaccine (Vet.)
+Sorbitol + Choline Chloride + D1-Methionine (Vet.)
+Ivermectin (vet.)
+Tilmicosin (Vet.)
+Tilmicosin (Vet.)
+Lasalocid (Vet.)
+Maduramicin (Vet.)
+Ivermectin (Vet.)
+Inactivated Lawsonia intracellularis Vaccine (Vet.)
+Enrofloxacin (Vet.)
+Povidone Iodine (vet.)
+Neomycin (Vet.)
+Inactivated Bordetella bronchiseptica + Pasteurella multocidạ Vaccine (Vet.)
+Gonadotropin Releasing Factor (GnRF) Analogue Protein Conjugate (Vet.)
+Porcine Circovirus (PCV) Chimera Vaccine (Vet.)
+Multivitamins + Amino Acids (Vet.)
+Sterile Phosphate Buffered Saline (Vet.)
+Modified Live Feline Rhinotracheitis Virus (FRV) + Feline Cálicivirus (FCV) + Feline Panleukopenia Virus (FPLV) + Chlamydia psittaci Vaccine (Vet.)
+Sterile Phosphate Buffer Saline (Vet.)
+Modified Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parainfluenza Virus (CPIV) + Canine Parvovirus (CPV) + Inactivated Canine Coronavirus (CCV) + Leptospira interrogans var. Canicola + L. interrogans var. Icterohaemorrhagiae Vaccine (Vet.)
+Oxibendazole (Vet.)
+Nicarbazin + Maduramicin (Vet.)
+Valnemulin (Vet.)
+Live Swollen Head Syndrome (SHS) Virus Vaccine (Vet.)
+Toltrazuril (Vet.)
+Tiamulin (as hydrogen fumarate) (Vet.)
+Enrofloxacin (Vet.)
+Flubendazole (Vet.)
+Live Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Inactivated Canine Adenovirus Type 1 (CAV-1) + Leptospira interrogans ser. Canicola + L. interrogans ser. Ictero haemorrhagiae Vaccine (Vet.)
+Live Eimeria acervulina + E. necatrix + E. mivati + mun E. maxima + E. brunetti + E. tenella Vaccine (Vet.)
+Toltrazuril (Vet.)
+Bacillus subtilis (Vet.)
+Tiamulin (as hydrogen fumarate) (Vet.)
+Inactivated Newcastle Disease Virus (NDV) Vaccine (Vet.)
+Inactivated Feline Panleukopenia Virus (FPV) + Feline Calicivirus (FCV) + Feline Herpesvirus (FHV) Vaccine (Vet.)
+Inactivated Feline Panleukopenia Virus (FPV) + Feline Calicivirus (FCV) + Feline Herpesvirus (FHV) + Rabies Virus (RV) Vaccine (Vet.)
+Florfenicol (Vet.)
+Live Turkey Herpes Virus (THV) + Chicken Herpes Virus (CHV) Vaccine (Vet.)
+Inactivated Porcine Circovirus (PCV) Vaccine (Vet.)
+Neomycin (vet.)
+Ivermectin
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) + Inactivated Leptospira interrogans var. Icterohaemorrhagiae + Leptospira interrogans var. Grippotyphosa + Leptospira interrogans var. Canicola + Rabies Virus (RV) Vaccine (Vet.)
+Live Attenuated Canine Parainfluenza Virus (CPIV) + Inactivated Leptospira interrogans var. Icterohaemorrhagiae + Leptospira interrogans var. Canicola + Leptospira interrogans var. Bratislava + Leptospira kirschneri var. Grippotyphosa Vaccine (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Adenovirus Type 1 (CAV-1) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) + Inactivated Leptospira interrogans var. Icterohaemorrhagiae + Leptospira interrogans var. Grippotyphosa + Leptospira interrogans var. Sejroe + Rabies Virus (RV) Vaccine (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Adenovirus Type 1 (CAV-1) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus (CPV) + Canine Parainfluenza Virus (CPIV) + Inactivated Leptospira interrogans var. Icterohaemorrhagiae + Leptospira interrogans var. Grippotyphosa + Leptospira interrogans var. Sejroe Vaccine (Vet.)
+Inactivated Porcine Parvovirus (PPV) Vaccine (Vet.)
+Enrofloxacin + Bromhexine (Vet.)
+Bacillus subtilis (Vet.)
+Albendazole (Vet.)
+Inactivated Porcine Circovirus Type 2 (PCV2) Killed Baculovirus Vector Vaccine (Vet.)
+Inactivated Bordetella bronchiseptica + Pasteurella multocida Vaccine (Vet.) :
+Inactivated Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus + Egg Drop Syndrome 76 (EDS) Virus Vaccine (Vet.)
+Inactivated Canine Distemper Virus (CDV) + Canine Parvovirus (CPV) Vaccine (Vet.)
+Inactivated Microsporum Canis Vaccine (Vet.)
+Tylosin (as phosphate) (Vet.)
+Multivitamins (Vet.)
+Multivitamins + Amino Acids (Vet.)
+Multivitamins + Betaine Hydrochloride + Choline (Vet.)
+a-Tocopherol Acetate (Vitamin E) + Sodium Selenite (Vet.)
+a-Tocopherol Acetate (Vitamin E) + Sodium Selenite (Vet.)
+Ascorbic Acid (Vet.)
+Canine Parvovirus (CPV) Immunoglobulins (Vet.)
+Canine Distemper Virus Immunoglobulins (Vet.)
+Albendazole (Vet.)
+Tylosin (as phosphate) (Vet.)
+Tiamulin (as hydrogen fumarate) (Vet.)
+Tiamulin (as hydrogen fumarate) (Vet.)
+Fosfomycin (Vet.)
+Doxycyline (As Hyclate) (Vet.)
+Inactivated Lawsonia intracellularis Vaccine (Vet.)
+Porcine Epidemic Diarrhea Virus (PEDV) Vaccine (Vet.)
+Inactivated Leptospira interrogans ser Canicola + Leptospira interrogans ser Icterohaemorrhagiae Vaccine (Vet.)
+Modified Live Pseudorabies Virus (PRV) Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Fenbendazole (Vet.)
+Live Reovirus Vaccine (Vet.)
+Inactivated Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Parvovirus (CPV) Vaccine (Vet.)
+Phenothiazine + Piperazine + Niclosamide (Vet.)
+Inactivated Rabies Virus Vaccine (Vet.)
+Amoxicillin (as trihydrate) (Vet.)
+Inactivated Rabies Virus + Leptospira interrogans ser. Canicola + Leptospira interrogans ser. Icterohaemorrhagiae Vaccine (Vet.)
+Vaccinium macrocarpon Aiton L. (Cranberry fruit extract) + D-Mannose (Vet.)
+Pyrantel + Praziquantel (Vet.)
+Lincomycin + Spectinomycin (Vet.)
+Lincomycin + Spectinomycin (Vet.)
+Lincomycin + Spectinomycin (Vet.)
+Minerals + Dextrose (Vet.)
+Neomycin + Kaolin + Pectin (Vet.)
+Multivitamins + Minerals + Amino Acids + Glucose (Vet.)
+Multivitamins + Calcium + Thyroprotein (Vet.) :
+Multivitamins (Vet.)
+Fenbendazole + Praziquantel + Ivermectin (Vet.)
+Multivitamins + Diisopropylamine Dichloroacetate + Methyltestosterone (Vet.)
+Multivitamins + Minerals + Amino Acids + Glucose (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Parainfluenza Virus Type 2 (CPIV) + Canine Adenovirus Type 2 (CAV-2) + Canine Parvovirus Type 2b (CPV) Vaccine (Vet.)
+Inactivated Glaesserella parasuis + Mycoplasma hyopneumoniae Vaccine (Vet.)
+Multivitamins + Minerals + Amino Acid (Vet.)
+Live Attenuated Infectious Bronchitis (IB) Virus. Vaccine (Vet.)
+Live Avirulent Bordetella bronchiseptica Vaccine (Vet.)
+Inactivated Pasteurella multocida + Bordetella bronchiseptica Toxoid Vaccine (Vet.)
+Organic Acids + Oxine Copper + Mannan Oligosaccharide (MOS) + Hydrated Sodium Calcium Alumino Silicate (HSCAS) (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Niclosamide + Levamisole + Albendazole (Vet.)
+Sterile Phosphate Buffer Saline (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Parainfluenza Virus + Canine Adenovirus (CAV) + Canine Parvovirus + Inactivated Leptospira interrogans ser. Icterohaemorrhagiae + L. interrogans ser. Canicola + L. kirschneri ser. Grippotyphosa + L. interrogans ser. Bratislava + Rabies Virus Vaccine (Vet.)
+Doramectin (Vet.)
+Doxycycline (Vet.)
+Oral Rehydration Salts + Ascorbic Acid (Vitamin C) (Vet.)
+Sterile Phosphate Buffered Saline (Vet.)
+Calcium (as dihydrate) + Colecalciferol (Vitamin D3) (Vet.)
+dl-a-Tocopherol Acetate + Phosphate Buffered Saline (Vet.)
+Live Avirulent Vaccine (Vet.) Bordetella bronchiseptica Culture
+Gentamicin + Amoxicillin (Vet.)
+Multivitamins + Minerals (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae + Porcine Circovirus Vaccine (Vet.)
+Bacillus subtilis + Bacillus licheniformis + Bacillus amyloliquefaciens + Bacillus megaterium + Bacillus pumilus
+Modified Live Feline Rhinotracheitis Virus (FVR) + Feline Calicivirus (FCV) + Feline Panleukopenia (FPL) + Killed Feline Leukemia Virus (FeLV) Vaccine (Vet.)
+Amoxicillin (as Trihydrate) (Vet.)
+Metronidazole (Vet)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Pyrantel + Ivermectin (Vet.)
+Sterile Water For Injection (Vet.)
+Sterile Phosphate Buffered Saline (Vet.
+Florfenicol+ Terbinafine + Mometasone (Vet.)
+Ascorbic Acid + Electrolytes + Blue Dye (Vet.)
+Methionine (Vet.)
+Paracetamol + Riboflavin (Vit B2) (Vet.)
+Permethrin + Piperonyl Butoxide (Vet)
+Pyrantel (Vet.)
+Albendazole (Vet)
+Sterile Phosphate Buffered Saline (Vet.)
+Procaine Benzylpenicillin (Vet.)
+Amoxicillin (Vet.)
+Inactivated Parvovirus Vaccine (Vet.)
+Ivermectin (Vet.)
+Meloxicam (vet.)
+Live Escherichia coli (E. coli) Vaccine (Vet.)
+Tylosin (as tartrate) (Vet.)
+Iron (as Iron Dextran) + Cyanocobalamin (Vitamin B12) (Vet.)
+Modified Live Porcine Reproductive and Respiratory Syndrome (PRRS) Vaccine (Vet.)
+Live Avian Encephalomyelitis Virus (AEV) + Fowl Pox Virus (FPV) Vaccine (Vet.)
+Cloprostenol (Vet.)
+Inactivated Actinobacillus pleuropneumoniae + Bordetella bronchiseptica + Pasteurella multocida + Actinobacillus pleuropneumoniae Toxoid Vaccine (Vet.)
+Ivermectin (Vet.)
+Levofloxacin (As Hemihydrate) (Vet.)
+Selamectin (vet.)
+Selamectin (vet.)
+Live Newcastle Disease Virus (NDV) Vaccine (Vet.) :
+Moxifloxacin (Vet.)
+Metronidazole (vet.)
+Water for Injection (Vet.)
+Minerals + Folic Aicd (Vet.)
+Tulathromycin (Vet.)
+Sterile Phosphate Buffer Solution (Vet.)
+Inactivated Newcastle Disease Virus (NDV) Vaccine (Vet.)
+Doxycycline (Vet.)
+Acepromazine (Vet.)
+Iron Dextran + Cyanocobalamin (Vitamin B12) (Vet.)
+dl-a-Tocopherol (Vitamin E) + Selenium (Vet.)
+Meloxicam (Vet.)
+Benazepril (as Hydrochloride) (Vet.)
+Multivitamins + Minerals (Vet.)
+Inactivated Bovine Mastitis Vaccine (Vet.)
+Inactivated Bovine Mastitis Vaccine (Vet.)
+Florfenicol (Vet.)
+Ivermectin (Vet.)
+Green Dye (Vet.)
+Live Attenuated Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Praziquantel + Ivermectin (Vet.)
+Enrofloxacin (Vet.)
+Lincomycin + Spectinomycin (Vet.)
+Tiamulin (as Hydrogen Fumarate) (Vet.)
+Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin (Vitamin B12) (Vet.)
+Fipronil + (S)-Methoprene (Vet.)
+Ivermectin (Vet.)
+Inactivated Salmonella enteritidis + Salmonell typhimurium + Salmonella infantis Vaccine (Vet.)
+Retinol (Vitamin A) + Cholecalciferol (Vitamin D3) + Tocopherol (Vitamin E) (Vet.)
+Retinol (Vitamin A) + Cholecalciferol (Vitamin D3) + Tocopherol (Vitamin E) (Vet.)
+Dexamethasone (Vet.)
+Dexamethasone (Vet.)
+Florfenicol (Vet.)
+Tulathromycin (Vet.)
+Live Attenuated Fowl Pox (FP) Virus Vaccine (Vet.)
+Ascorbic Acid + Zinc (Vet.)
+Febantel + Pyrantel + Praziquantel (Vet.)
+Bedinvetmab (Vet.)
+Bedinvetmab (Vet.)
+Bedinvetmab (Vet.)
+Bedinvetmab
+Bedinvetmab
+Enrofloxacin (Vet.)
+Enterococcus faecium+ L-Glutamine oligosaccharides (Vet.)
+Enterococcus faecium+ L-Glutamine oligosaccharides (Vet.)
+Enterococcus faecium + L-Glutamine + Mannanoligosaccharides (vet.)
+Live Attenuated Attenuated Eimeria Eimeria acervulina + Eimeria maxima + Eimeria praecox + Eimeria tenella Oocyst Vaccine (Vet.)
+Live Attenuated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Sterile Phosphate Buffered Saline (Vet.)
+Multivitamins (Vet.)
+Amino Acids + Multivitamins (Vet.)
+Meloxicam (Vet.)
+Frunevetmab (Vet.)
+Colistin (Vet.)
+Selamectin
+Multivitamins (Vet.)
+Modified Live Infectious Laryngotracheitis (ILT) Virus Vaccine (Vet.)
+Spectinomycin + Lincomycin (Vet.)
+Essential Amino Fatty Acids (EFA) + Multivitamins (Vet.)
+Lasalocid (as Sodium) + Nicarbazin (Vet.)
+Ivermectin (Vet.)
+Live Attenuated Avian Infectious Bronchitis (IB) Virus
+Lincomycin + Spectinomycin + Bromhexine (Vet.)
+Oclacitinib (as maleate) (Vet.)
+Oclacitinib (as maleate) (Vet.)
+Oclacitinib (as maleate) (Vet.)
+Chlorhexidine (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Enrofloxacin (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Econazole Nitrate Sulphur Sodium Salicyate + Chloroxylenol (Vet.)
+Retinol Palmitate (Vitamin A) + Cholecalciferol (Vitamin D3) + DL-alpha Tocopherol (Vitamin E)
+Live Attenuated Salmonella enterica Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Cypermethrin (Vet)
+Cypermethrin (Vet)
+Cypermethrin (Vet)
+Cypermethrin (Vet)
+Cypermethrin (Vet)
+Cypermethrin (Vet)
+Live Marek'S Disease (Md)+ Infectious Bursal Disease (Ibd) Virus + Infectious Laryngotracheitis (Ilt) Virus Vaccine
+Carbaryl (Vet.)
+Cypermethrin + Piperonyl Butoxide
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus+ Infectious. Bronchitis (IB) Virus + Egg Drop Syndrome Virus + Avian Metapneumovirus (aMPV) Vaccine (Vet.)
+Amoxicillin (Vet.)
+Tulathromycin (Vet.)
+Marbofloxacin (Vet.)
+Meloxicam (Vet.)
+Salicylic Acid + Zinc Gluconate + Pyridoxine (Vitamin B6) (Vet.)
+Miconazole + Chlorhexidine (Vet.)
+Inactivated Streptococcus agalactiae Fish Vaccine (Vet.)
+Live Attenuated Canine Distemper Virus (CDV) + Canine Parainfluenza Virus (CPIV) + Canine Adenovirus (CAV) + Canine Parvovirus (CPV) + Inactivated Leptospira interrogans icterohaemorrhagiae + Leptospira interrogans canicola + Leptospira Vaccine (Vet.)
+Inactivated Streptococcus agalactiae Ser. Ia, Ib, III Fish Vaccine (Vet.)
+Spectinomycin + Lincomycin + Bromhexine (Vet.)
+Fenbendazole + Pyrantel (as Embonate) + Praziquantel (Vet.)
+Procaine Benzylpenicillin + Dihydrostreptomycin (Vet.)
+Ketoconazole + Chlorhexidine + Cetrimide (Vet.)
+Fipronil (S)-Methoprene (Vet.)
+Fipronil (S)-Methoprene (Vet.)
+Sterile Sucrose Phosphate Buffer Solution (Vet.)
+Inactivated Erysipelothrix rhusiopathiae Vaccine (Vet.)
+Gentamicin (as sulfate) (Vet.)
+Gentamicin (as sulfate) (Vet.)
+Live Attenuated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Doxycycline (Vet.)
+Cotrimazine (Vet.)
+Fipronil (S)-Methoprene (Vet.)
+Ceftiofur (Vet.)
+Ceftiofur (Vet.)
+Sterile Glucose Phosphate Buffer Solution (Vet.)
+Inactivated Porcine Circovirus Type 2b (PCV-2b) Vaccine (Vet.)
+Inactivated Escherichia coli Fimbrial Adhesins Vaccine
+Selamectin (Vet.)
+Inactivated Fowl Adenovirus (FAdV) Vaccine (Vet.)
+Iodine
+Live Attenuated. Vaccine (Vet.)
+Ciclosporin (Vet.)
+Tiamulin (Vet.)
+Tiamulin (Vet.)
+Paracetamol (Vet.)
+Cefquinome (as Sulfate) (Vet.)
+Tylosin (Vet.)
+Florfenicol (Vet.).
+Cotrimoxazole (Vet.)
+Norfloxacin (Vet.)
+Ceftiofur (Vet.)
+Inactivated Erysipelothrix rhusiopathiae Vaccine (Vet.)
+Cyanocobalamin (Vitamin B12) (Vet.)
+Ivermectin (Vet.)
+Fluralaner (Vet.)
+Fluralaner (Vet.)
+Inactivated Avian Metapneumovirus (AMPV) Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus + Infectious Bursal Disease (IBD) Virus + Avian Reovirus (AR) + Egg Drop Syndrome (EDS) '76 Virus Vaccine (Vet.)
+Paracetamol (Vet.)
+Inactivated Porcine Circovirus Type-2 (PCV-2) Recombinant Subunit Vaccine (Vet.)
+Ivermectin (Vet.)
+Tylvalosin (Vet.)
+Gentamicin + Posaconazole + Mometasone (Vet.)
+Lotilaner Milbemycin Oxime (Vet.)
+Tylvalosin (Vet.)
+Lotilaner + Milbemycin Oxime (Vet.)
+Lotilaner + Milbemycin Oxime (Vet.)
+Lotilaner Milbemycin Oxime (Vet.)
+Lotilaner Milbemycin Oxime (Vet.)
+Live Attenuated Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Vaccine (Vet.
+Xylazine (Vet.)
+Modified Live Canine Parvovirus (CPV) Vaccine (Vet.)
+Lactic Acid + Salicylic Acid (Vet.)
+Levocarnitine + Dexpanthenol (Vet.)
+Live Avirulent Escherichia coli Vaccine (Vet.)
+Multivitamins (Vet.)
+Folic Acid Cyanocobalamin (Vet.)
+Chlorhexidine (Vet.)
+Multivitamins (Vet.)
+Multivitamins + Amino Acids (Vet.)
+Each dose (In-Ovo/SC) contains: Recombinant Turkey Herpesvirus (Serotype 3, FC-126 Strain) Newcastle Disease Virus (F gene, D-26 Lentogenic Strain) Infectious Bursal Disease Virus (VP2 gene, Standard Strain) PFU-Plaque Forming Unit
+Gamithromycin (Vet.)
+Multivitamins + Lysine + Taurine (Vet.)
+Neomycin (Vet.)
+Dl-a-Tocopheryl Acetate (Vitamin E) + Levocarnitine + Taurine+Ubidecarenone (Coenzyme Q10) (Vet.)
+Cholecalciferol (Vitamin D3)+ Calcium + Chitosan (Vet.)
+Lecithin+ L-Aspartic Acid + Glycine max (L.) Merr. (Soybean) Oil+ Beeswax (Vet.)
+Riboflavin (Vitamin B2) + Pyridoxine (Vitamin B6) + Choline Chloride + Levocarnitine + Betaine (Vet.)
+Riboflavin (Vitamin B2)+ Thiamine (Vitamin B1) + Pyridoxine (Vitamin B6) + Cyanocobalamin. (Vitamin B12) + Zinc+ Borago officinalis (Borage Seed) Oil+ Fish Oil (Vet.)
+Ketoprofen (Vet.)
+Inactivated Avian Infectious Bronchitis (IB) Virus + Newcastle Disease (ND) Virus+ Egg Drop Syndrome (EDS) Virus Vaccine (Vet.)
+Oxytetracycline Dihydrate (Vet.)
+SULFADIAZINE SODIUM + SULFAMETHAZINE SODIUM + SULFAMERAZINE SODIUM (VET.)
+PYRANTEL PAMOATE (Vet)
+Calcium Borogluconate (Vet.)
+Multivitamins (Vet.)
+Calcium Borogluconate + Magnesium Gluconate + Dextrose (Vet.)
+Tiamulin Hydrogen Fumarate (Vet.)
+Chicken Anemia Virus (CLI Strain) Antibody Test Kit
+Avian Encephalomyelitis (Van Roekel Strain) Antibody Test Kit
+Mycoplasma Synoviae Antibody Test Kit
+African Swine Fever (ASF) Polymerase Chain Reaction (PCR) Detection Kit
+Infectious Bursal Disease (IBD) Virus Antibody Test Kit
+Avian Influenza Virus (AIV) Type A Antigen Test Kit
+Newcastle Disease (ND) Virus Antibody Test Kit
+Avian Influenza Virus (AIV) Antibody Test Kit
+Rapid Canine Corona Virus (CCV) Ab + Canine Parvovirus (CPV) Ab + Giardia Ab Combined Test Kit (Vet.)
+Rapid Heartworm + Ehrlichia Ag + Babesia Ag + Anaplasma Ag Combined Test Kit (Vet.)
+Rapid Feline Immunodeficiency Virus (FIV) Ag + Feline Leukemia Virus (Felv) Ag Combined Test Kit (Vet.)
+Fowl Laryngotracheitis (LT) Virus Antibody Test Kit
+Mycoplasmoides gallisepticum (MG) Antibody Test Kit
+Infectious Bronchitis (IB) Virus Antibody Test Kit
+Rapid Fpv Ag Test Kit
+Rapid Leptospira IgM Antibody Test Kit (Vet.)
+Rapid Giardia Antibody Test Kit (Vet.)
+Rapid Canine Distemper Virus (CDV) Antigen + Canine Adenovirus (CAV) Antigen Test Kit (Vet.)
+Mesomycoplasma hyopneumoniae (M.hyo) Antibody Test Kit (Vet.)
+Infectious Bronchitis Virus (IBV) Antibody Test Kit (Vet.)
+Avian Influenza (AI) Virus Antibody Test Kit (Vet.)
+Classical Swine Fever (CSF) Virus Antibody Test Kit (Vet.)
+Chicken Anemia Virus (CAV) Antibody Test Kit (Vet.)
+Newcastle Disease Virus (NDV) Antibody Test Kit
+Infectious Bursal Disease (IBD) Antibody Test Kit
+Avian Reovirus (ARV) Antibody Test Kit
+Pseudorabies Virus (PRV) Antigen Test Kit (Vet.)
+Classical Swine Fever (CSF) Virus Antigen Test Kit (Vet.)
+Actinobacillus pleuropneumoniae Antibody Test Kit (Vet.)
+Infectious Bursal Disease (IBD) Virus Antibody Test Kit (Vet.)
+Avian Encephalomyelitis (AE) Virus Antibody Test Kit (Vet.)
+Avian Reovirus (REO) Antibody Test Kit (Vet.)
+Newcastle Disease (ND) Virus Antibody Test Kit (Vet.)
+Mycoplasmopsis synoviae (Ms) Antibody Test Kit (Vet.)
+IDEXX Herdcheck Pseudorabies Virus Gb Test
+Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Antibody Test Kit (Vet.)
+Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Antibody Test Kit (Vet.)
+Infectious Bronchitis (IB) Virus Antibody Test Kit
+Infectious Bursal Disease (IBD) Virus Antibody Test Kit
+African Swine Fever (ASF) Virus DNA Mix Test Kit (Vet.)
+Mycoplasmoides gallisepticum (Mg) Antibody Test Kit (Vet.)
+Turkey Rhinotracheitis (TRT) Virus Antibody Test Kit
+Egg Drop Syndrome (EDS-76) Virus Antibody Test Kit
+Ehrlichia canis Antibody Test Kit
+Toxoplasma gondii Antibody Test Kit
+Canine Heartworm (Dirofilaria immitis) Antigen Test Kit
+Rapid Canine Distemper Virus (CDV) Antigen Test Kit
+Canine Parvovirus (CPV) Antigen Test Kit
+Rapid Feline Coronavirus (FCV) Antigen Test Kit
+Bluetongue Virus Antibody Test Kit
+Small Ruminant Lentivirus Antibody Test Kit
+Equine Infectious Anemia (EIA) Virus Immunodiffusion Test
+Rapid Canine Corona Virus (CCV) and Canine Parvovirus (CPV) Antigen Test Kit
+Rapid Canine Parvovirus (CPV) Rapid Antigen Test Kit
+Rapid Ehrlichia canis Antibody Test Kit
+Rapid Canine Distemper Virus (CDV) Antigen Test Kit
+N/A
+Rapid Feline Leukemia Virus (FeLV) Antigen and Feline Immunodeficiency Virus (FIV) Antibody Test Kit
+Rapid African Swine Fever Virus (ASFV) Antigen Kit
+African Swine Fever Virus (ASFV) Polymerase Chain Reaction Detection Kit
+Rapid Avian Influenza Virus (AIV) Antigen Test Kit
+African Swine Fever Virus (ASFV) Polymerase Chain Reaction (PCR) Detection Kit
+Canine Immunoglobulin E (IgE) Detection Kit
+Needle-free Injector and Spare Parts Kit (Vet.)
+Subcutaneous Vaccination Device (Vet.)
+N/A
+N/A
+None
+Leptospira sp. Premix Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Nucleic Acid Extraction and Amplification Kit (Vet.)
+Canine Distemper Virus (CDV) Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Babesia canis + Babesia gibsoni Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+N/A
+Needle Free Intradermal Vaccination Device (Vet.)
+Id Screen® Mvv / Caev Indirect
+African Swine Fever Virus (ASFV) Antigen Detection Kit (Vet.)
+None
+None
+None
+Mycobacterium avium subsp. Paratuberculosis (MAP)
+Id Screen® Influenza H5 Antibody Competition
+None
+None
+N/A
+None
+None
+Avian Influenza (AI) Virus Antigen Test Kit (Vet.)
+Classical Swine Fever (CSF) Virus Antibody Test Kit (Vet.)
+Canine Distemper Virus (CDV) Antigen Detection Kit (Vet.)
+None
+None
+None
+Infectious s Bronchitis (IB) Virus Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Fowl Adenovirus (FAdV) Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Newcastle Disease (ND) Virus Antigen Detection Kit (Vet.)
+Porcine Reproductive Reproductive and Respiratory Syndrome. (PRRS) Virus Antibody Test Kit (Vet.)
+Pneumatic Vaccinator Device and Spare Parts (Vet.)
+Vaccine Sprayer Cabinet Machine (Vet.)
+Battery Operated Backpack Vaccine Sprayer (Vet.)
+Vaccine Sprayer Cabinet Machine (Vet.)
+Disposable Syringe (Luer Lock) with Needle (Vet.)
+Aerosol Vaccination Device (Vet.)
+Automatic Vaccination Device (Vet.)
+Ultra-Low Volume (ULV) Fogging Machine (Vet.)
+Subcutaneous/Intraocular/Oral Vaccination Device (Vet.)
+Subcutaneous/Intraocular/Oral Vaccination Device (Vet.)
+African Swine Fever (ASF) Virus Antibody Test Kit (Vet.)
+Newcastle Disease (ND) Virus Antibody Test Kit (Vet.)
+Aujeszky Disease Virus Antibody Test Kit (Vet.)
+Actinobacillus pleuropneumoniae (APP) Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Foot and Mouth Disease (FMD) Virus Antibody Detection Kit (Vet.)
+African Swine Fever (ASF) Virus Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Avian Influenza (AI) Type A Virus Subtypes H5, H7 and H9 Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+African Swine Fever (ASF) Virus Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Canine Parvovirus (CPV) Antigen Detection Kit (Vet.)
+Canine Heartworm (CHW) Antigen Detection Kit (Vet.)
+African Swine Fever (ASF) Virus Polymerase Chain Reaction. (PCR) Detection Kit (Vet.)
+Porcine Circovirus (PCV) Genotype 2a, 2b and 2d Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Salmonella spp Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Mycoplasma_gallisepticum and Mycoplasma synoviae Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Classical Swine Fever (CSF) Virus Polymerase Chain Reaction (PCR) Detection Kit
+African Swine Fever (ASF) Virus Polymerase Chain Reaction (PCR) Detection Kit (Vet.)
+Coxiella burnetii Polymerase Chain Reaction (PCR) Diagnostic Kit (Vet.)
+African Swine Fever Virus Antigen Rapid Test Kit
+N/A
+N/A
+Feline Pancreatic Lipase Detection Kit (Vet.) [Vet Chroma fPL]
+N/A
+N/A
+Coxiella burnetii Phase I and II Antibody Detection Kit (Vet:)
+None
+African Swine Fever (ASF) Virus Polymerase Chain Reaction (PCR) Test Kit (Vet.)
+Grooming Soap
+Grooming Shampoo
+Grooming Shampoo
+Grooming Shampoo
+Bayopet Herbal Hair Grower Shampoo
+Grooming Shampoo
+Grooming Shampoo
+Grooming Soap
+None
+None
+None
+N /A
+None
+(Shampoo for Dogs) (Vet.)
+None
+None
+None
+None
+NA
+None
+NA
+NA
+N/A
+N/A
+N/A
+N/A
+N/A
+None
+None
+None
+None
+Sea Breeze Scent (Vet.)
+N/A
+Not Applicable
+Not Applicable
+N/A
+Not Applicable
+N/A
+N/A
+None
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+None
+N/A
+None
+N/A
+N/A
+N/A
+N/A
+None
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+Not Applicable
+Not Applicable
+Not Applicable
+Not Applicable
+Organic Shampoo with Conditioner (Vet.)
+Frenzy Shampoo
+None
+Shampoo ( Tommy Girl Scent ) (Vet.)
+Pet Deodorizing Spray
+Pet Shower Gel
+None
+None
+Natural Flick Grooming Shampoo Lavender Scent
+None
+None
+N/A
+Not Applicable
+None
+N/A
+N/A
+N/A
+Tender Cleansing Conditioning Shampoo (White Floral Scent)
+Garden-Fresh And Clean Moisturizing Shampoo (Summer Scent)
+None
+None
+None
+None
+None
+N/A
+N/A
+None
+Swine Pheromones: Boar Saliva Analog (BSA) Quinoline + Androstenone + Androstenol (Vet.
+Tulathromycin (Vet.)
+AMOXICILLIN (AS TRIHYDRATE) (Vet.)
+Amoxicillin (As Trihydrate) (Vet.)
+Iron Dextran
+PRAZIQUANTEL + LEVAMISOLE HYDROCHLORIDE (VET)
+Bromhexine Hydrochloride
+Bromhexine Hydrochloride (Vet.)
+DEXAMETHASONE
+Dexamethasone (Vet.)
+IVERMECTIN
+Ivermectin (Vet.)
+Iron Dextran
+Iron Dextran
+Tiamulin Hydrogen Fumarate
+Tiamulin Hydrogen Fumarate
+Vitamin B Complex
+Vitamin B Complex
+Vitamin B-Complex (Vet.)
+Enrofloxacin (as hydrochloride)
+Lincomycin + Spectinomycin (Vet.)
+Gentamicin (as sulfate)
+Paracetamol + Riboflavin (Vitamin B2) (Vet.)
+Paracetamol + Riboflavin (Vitamin B2) (Vet.)
+Paracetamol + Riboflavin (Vitamin B2) (Vet.)
+Tylosin (as tartrate) + Gentamicin (as sulfate) Vet.
+Retinol Propionate (Vit. A) + Cholecalciferol (Vit. D3) + Tocopherol Acetate (Vit. E) (Vet.)
+Thiamphenicol + Oxytetracycline + Dexamethasone (Vet.)
+Thiamphenicol + Oxytetracycline + Dexamethasone (Vet.)
+Oxytetracycline (Vet.)
+Calcium Gluconate + Dibasic Calcium Phosphate Dihydrate
+Febantel + Pyrantel Pamoate + Praziquantel
+Oxytocin (Vet.)
+Trimethoprim + Sulfamethoxypyridazine (Vet.)
+Trisuldine
+Tylosin (as tartrate)
+Tylosin (as tartrate)
+Tylosin + Gentamicin (Vet.)
+Multivitamins (Vet.)
+Calcium Chloride Dihydrate + Calcium Glubionate
+Florfenicol
+Ampicillin + Colistin + Dexamethasone
+Gentamicin (As Sulfate) + Tylosin (As Tartrate)
+Oxytetracycline (as dihydrate) (Vet.)
+Oxytetracycline (as dihydrate)
+Norfloxacin (as Nicotinate)
+Paracetamol
+Dl-Alpha Tocopherol Acetate (Vitamin E)/ Sodium Selenite
+Enrofloxacin (Vet.)
+Thiamphenicol + Oxytetracycline + Dexamethasone + Bromhexine Hydrochloride
+Tiamulin Hydrogen Fumarate
+Thiamine Hydrochloride (Vitamin B1) + Riboflavin (Vitamin B2) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) + Nicotinamide (Vitamin B3) + D-Panthenol
+Ivermectin (Vet.)
+Trimethoprim + Sulfamethoxypyridazine
+Norfloxacin (as Hydrochloride)
+Toltrazuril (Vet.)
+Lincomycin (as Hydrochloride) + Gentamicin (as Sulfate) (Vet.)
+Calcium Borogluconate (Vet.)
+Calcium Borogluconate (Vet.)
+Multivitamins
+Butafosfan + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12) + Adenosine Triphosphate (Vet.)
+Butafostan + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) + Adenosine Triphosphate (Vet.)
+Tylosin (As Tartrate) (Vet.)
+Thiamphenicol+ Tylosin Tartrate+ Dexamethasone + Bromhexine Hydrochloride (Vet.)
+Enrofloxacin (Vet.)
+Enrofloxacin (Vet.)
+Florfenicol + Tylosin + Dexamethasone 100 Mg/50 Mg/1 Mg Per Ml
+Florfenicol + Tylosin Tartrate + Dexamethasone (Vet)
+Florfenicol
+Glutaraldehyde + Benzalkonium Chloride
+Gentamicin (as sulfate)
+Florfenicol + Dexamethasone (Vet.)
+Florfenicol + Dexamethasone (Vet.)
+Gentamicin + Dexamethasone (Vet.)
+Ascorbic Acid (Vitamin C) (Vet.)
+Amitraz + Ketoconazole (Vet.)
+Enrofloxacin (Vet.)
+Iron Cyanocobalamin (Vitamin B12) (Vet.)
+Iron + Cyanocobalamin (Vitamin B12) (Vet.)
+None
+Iron + Cyanocobalamin (Vitamin B12) (Vet.)
+ELEMENTAL IRON (AS IRON DEXTRAN) + CYANOCOBALAMIN (VIT.B12) (Vet.)
+Multivitamins +Butafosfan + Adenosine (Vet.)
+Jickzuril
+Toltrazuril (Vet.)
+Norfloxacin Nicotinate
+LINCOMYCIN Hydrochloride + GENTAMICIN SULFATE + BROMHEXINE Hydrochloride
+Spectinomycin HCl + Lincomycin HCl + Bromhexine HCl (Vet.)
+Spectinomycin Hydrochloride + Lincomycin Hydrochloride + Bromhexine Hydrochloride (Vet.)
+Spectinomycin HCl + Lincomycin HCl + Bromhexine (Vet.)
+Amoxicillin Trihydrate + Gentamicin Sulfate (Vet.)
+Amoxicillin (as trihydrate) + Gentamicin (as sulfate)
+Amoxicillin Trihydrate + Gentamicin Sulfate (Vet.)
+Oxytetracycline hydrochloride (Vet.)
+Oxytetracycline Hydrochloride (Vet.)
+Tylosin (Vet.)
+Oxytocin (Vet.)
+Oxytocin (Vet.)
+Vitamin B-Complex (Vet.) (see reverse page)
+Cefalexin ( as monohydrate) (Vet.)
+Cefalexin (as monohydrate)
+Iron (Vet.)
+Iron Dextran (eq. to 200mg elemental iron) (Vet.)
+Tiamulin HF / Colistin sulfate
+Retinol (Vit.A)/Cholecalciferol (Vit.D3)/Dl-Alphtocopheryl tocopherol Acetate (Vit.E)/Thiamine Hydrochloride (Vit.B1)/Riboflavin (Vit.B2)/Pyridoxine Hydrochloride (Vit.B6)/Niacinamide (Vit.PP) (Vet.)
+Enrofloxacin (Vet.)
+Ivermectin (Vet.)
+Ivermectin (Vet.)
+Enrofloxacin (Vet.)
+Enrofloxacin (Vet.)
+Multivitamins (Vet.)
+Multivitamins (Vet.)
+Chlortetracycline hydrochloride ( Vet)
+VITAMIN B-COMPLEX + LIVER EXTRACT
+Vitamin B-Complex With Vitamin E + Amino Acids + L-Carnitine + Dextrose (Vet.)
+Paracetamol (Vet.)
+Paracetamol (Vet.)
+Cloprostenol (Vet.)
+Cloprostenol
+Thiamine Hydrochloride (Vit.B1)/ Riboflavin (Vit.B2)/ Pyridoxine Hydrochloride (Vit.B6)/ Niacinamide (Vit.PP)/ Cyanocobalamin (Vit.B12)/ Dexpanthenol (D-Panthenol)/ Inositol (Vet.)
+Benzylpenicillin Sodium (Vet.)
+Benzylpenicillin Sodium (Vet.)
+Ivermectin
+Retinol Palmitate (Vitamin A) + Cholecalciferol (Vitamin D3) + dl-Alpha Tocopherol Acetate (Vitamin E) (Vet.)
+Vitamin B-Complex + Liver Extract (Vet.)
+Tylosin Tartrate + Streptomycin Sulfate (as Sulfate) (Vet.)
+Doxycycline Hydrochloride (Vet)
+Doxycycline Hydrochloride (Vet)
+DL-Methionine (Vet)
+Sodium Sulfaquinoxaline + Pyrimethamine Hcl + Menadione (Vitamin K3) (Vet.)
+Calcium Glubionate + Calcium Lactate + Cholecalciferol (Vitamin D3) (Vet)
+Febantel + Pyrantel Embonate + Praziquantel (Vet)
+Florfenicol / Doxycycline / Prednisolone / Lidocaine HCl
+Ceftiofur hydrochloride (Vet.)
+Ceftiofur Hydrochloride (Vet.)
+Multivitamins + Minerals + Taurine + Lysine HC1+ CGF (Vet.)
+Multivitamins + Minerals + Amino Acids (Vet.)
+Multivitamins + Minerals + Taurine + Lysine HCI + CGF (Vet.)
+Methylene Blue + Oxytetracycline HCI (Vet.)
+Butaphosphan+ Cyanocobalamin (Vitamin B12) (Vet.)
+Ceftiofur sodium
+Magnesium aspartate/ Potassium aspartate/ Sodium selenite/ Adenosine triphosphate (ATP)/ Cyanocobalamin (Vit. B12)
+Co-Amoxiclav
+Multivitamins
+Ivermectin
+Febantel + Praziquantel + Fenbandazole (Vet.)
+Sterile Water for Injection (Vet.)
+Fosfomycin sodium
+Dexamethasone (Vet.)
+Iron + Folic Acid + Cyanocobalamin (Vitamin B12) (Vet.)
+Cyanocobalamin (Vitamin B12) + Folic Acid (Vitamin B9) + Iron (Vet.)
+Doxycycline (as Hyclate) (Vet.)
+Oxytetracycline (as Dihydrate) (Vet.)
+Ketoprofen (Vet.)
+Oxytetracycline HCl (Vet.)
+Tolfenamic Acid (Vet.)
+Iron (Vet.)
+Febantel + Pyrantel + Praziquantel
+Praziquantel + Albendazole (Vet.)
+Multivitamins +Lysine (Vet.)
+Ascorbic Acid (Vet.)
+Multivitamins + Minerals (Vet.)
+Paracetamol (Vet.)
+Ambroxol Hydrochloride (Vet.)
+Amoxicillin + Colistin (Vet.)
+Amoxicillin + Colistin (Vet.)
+Florfenicol + Tylosin + Dexamethaso
+Metamizole Sodium (Vet.)
+Amoxicillin (As Trihydrate) (Vet.)
+Live Fowl Pox Virus Vaccine
+Marbofloxacin (Vet.)
+Multivitamins + Iron (Vet.)
+Amoxicillin (as trihydrate) (Vet.)
+Inactivated Reovirus Vaccine (Vet.)
+Inactivated Newcastle Disease Virus (NDV) Vaccine (Vet.)
+Bromhexine (Vet.)
+Bromhexine
+Live Mycoplasma gallisepticum Vaccine (Vet.)
+Live Eimeria acervulina + Eimeria brunetti + Eimeria maxima + Eimeria necatrix + Eimeria tenella Oocyst Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum + Salmonella Enteritidis Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Avian Infectious Bronchitis (IB) Virus + Egg Drop Syndrome (EDS) Virus + Avibacterium paragallinarum + Salmonella Enteritidis Vaccine (Vet.)
+Amoxicillin (as trihydrate) + Colistin (as sulfate) (Vet.)
+Live Marek's Disease (MD) Virus Vaccine (Vet.)
+Inactivated Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus + Avian Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Chicken Anemia Virus (CAV) Vaccine (Vet.)
+Live Salmonella Gallinarum Vaccine (Vet.)
+Recombinant Live Fowl Pox (FP) Virus + Infectious Laryngotracheitis (ILT) Virus Vaccine (Vet.)
+Rispens Cvi988 Strain
+Sodium Chloride + Sodium Thiosulfate + Sodium Bicarbonate (Vet.)
+Phosphatidylcholine + Lysophosphatidylcholine + Polyethyleneglycol Ricinoleate (Vet.)
+Cyanocobalamin + Vitis vinifera (Grape) Seed
+Inactivated Porcine Parvovirus (Vet.)
+Inactivated Infectious Bursal Disease (IBD) Virus + Reovirus Vaccine (Vet.)
+Live Recombinant Fowl Pox Virus + Mycoplasmoides gallisepticum Vaccine (Vet.)
+Benzalkonium Chloride (Vet.)
+Glutaraldehyde + Benzalkonium Chloride (Vet.)
+Calcium Carbonate + Phosphorus + Cholecalciferol (Vitamin D3) (Vet.)
+Calcium Carbonate + Phosphorus + Cholecalciferol (Vitamin D3) (Vet.)
+Multivitamins + Liver Extract (Vet.)
+Tulathromycin (Vet.)
+Ivermectin (Vet.)
+Thiamphenicol + Oxytetracycline HCl + Dexamethasone + Bromhexine HCl (Vet.)
+Tylosin + Gentamicin (Vet.)
+Butaphosphan + Cyanocobalamin (Vitamin B12) (Vet.)
+Oxytetracycline (as dihydrate) (Vet.)
+Iron Dextran + Cyanocobalamin (Vitamin B12) (Vet.)
+Live Eimeria acervulina + Eimeria maxima + Eimeria tenella Oocyst Vaccine (Vet.)
+Multivitamins + Amino Acids + Milk (Vet.)
+Oxytetracycline (as hydrochloride) + Gentian Violet
+Oxytetracycline (as hydrochloride) + Gentian Violet (Vet.)
+Ascorbic Acid + Zinc (Vet.)
+Fipronil + S-Methoprene (Vet.)
+Fipronil + S-Methoprene (Vet.)
+Live Avian Metapnuemovirus Vaccine (Vet.)
+Live Avian Encephalomyetis (AE) Virus + Fowl Pox (FP) Virus Vaccine (Vet.)
+Live Classical Swine Fever (CSF) Virus Vaccine (Vet.)
+Inactivated Egg Drop Syndrome (EDS '76) Vaccine (Vet.)
+Live Attenuated Avian Infectious Bronchitis (IB) Vaccine (Vet.)
+Live Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+L-Carnitine (Vet.)
+Inactivated Mycoplasma hyopneumoniae Vaccine (Vet.)
+Phosphatidylcholine + Lysophosphatidylcholine (Vet.)
+Colistin (Vet.)
+Inactivated Porcine Reproductive and Respiratory Syndrome (PRRS) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Recombinant Marek's Disease (MD) Virus + Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Porcine Parvovirus
+Inactivated Newcastle Disease (ND) Virus + Avian Infectious Bronchitis (IB) Virus + Egg Drop Syndrome (EDS) Virus + Avibacterium paragallinarum Vaccine (Vet.)
+Inactivated Actinobacillus pleuropneumoniae Vaccine (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Newcastle Disease (NCD) Vaccine (Vet.)
+Inactivated Newcastle Disease (NCD) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Minerals + Amino Acids (Vet.)
+Inactivated Porcine Circovirus (PCV) Vaccine (Vet.)
+Inactivated Porcine Circovirus (PCV) Vaccine (Vet.)
+Inactivated Recombinant Porcine Circovirus (PCV) Vaccine (Vet.)
+Amoxicillin (as Trihydrate) + Gentamicin sulfate (Vet.)
+Live Pseudorabies (Aujeszky's Disease) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus + Infectious Bursal Disease (IBD) Virus + Egg Drop Syndrome (EDS) Virus Vaccine (Vet.)
+Tiamulin (Vet.)
+Paracetamol (Vet.)
+Amoxicillin (As Trihydrate)
+Dextrose + Glucose + Maltodextrin (Vet.)
+Calcium + Colecalciferol (Vitamin D3) (Vet.)
+Sodium Thiosulfate (Vet.)
+Inactivated Porcine Respiratory & Reproductive (PRRS) Virus Vaccine (Vet.)
+Calcium + Colecalciferol (Vitamin D3) (Vet.)
+Florfenicol (Vet.)
+Multivitamins
+Pyrantel (Vet.)
+Febantel + Pyrantel + Praziquantel (Vet.)
+Marbofloxacin (Vet.)
+Live Newcastle Disease (ND) Virus Vaccine (Vet.)
+Luteinizing Hormone-Releasing Hormone (LHRH) based Synthetic Peptides (Vet.)
+Bacitracin (Vet.)
+Salinomycin (Vet.)
+Salinomycin (Vet.)
+Niacin (Vitamin B3) + Minerals + Amino Acids + Herbs (Vet.)
+Multivitamins + Minerals + Amino Acids (Vet.)
+Tocopherol + Selenium (Vet.)
+Multivitamins + Levocarnitine + Lysine + Choline Chloride (Vet.)
+Recombinant Omega Interferon (Vet.)
+Amoxicillin (Vet.)
+Colistin + Kaolin (Vet.)
+Florfenicol (Vet.)
+Florfenicol (Vet.)
+Florfenicol (Vet.)
+Spectinomycin + Lincomycin (Vet.)
+Norfloxacin (Vet.)
+Florfenicol (Vet.)
+Enramycin (Vet.)
+Norfloxacin + Kaolin (Vet.)
+Tilmicosin (Vet.)
+Lincomycin (Vet.)
+Salinomycin + Diclazuril (Vet.)
+Florfenicol (Vet.)
+Doxycycline + Kaolin (Vet.)
+Sulfachlorpyridazine + Trimethoprim (Vet.)
+Bacitracin (Vet.)
+Robenidine (Vet.)
+Clopidol (Vet.)
+Enramycin (Vet.)
+Bacitracin (as Zinc Bacitracin) (Vet.)
+Bacillus subtilis + Bacillus licheniformis (Vet.)
+Bacitracin (as methylene disalicylate) (Vet.)
+Bacillus subtilis + Bacillus licheniformis + Lactobacillus plantarum (Vet.)
+Zamuril 5
+Decoquinate (Vet.)
+Inactivated Bordetella bronchiseptica + Pasteurella multocida + Actinobacillus pleuropneumoniae + Glaesserella parasuis + Mesomycoplasma hyopneumoniae Vaccine (Vet.)
+Bacitracin (as Zinc Bacitracin) (Vet.)
+Enramycin (Vet.)
+Live Classical Swine Fever (CSF) Virus Vaccine (Vet.)
+Inactivated Porcine Circovirus (PCV) Vaccine (Vet.)
+Marbofloxacin (Vet.)
+Multivitamins + Zinc + Amino Acids + Chlorella Growth Factor (CGF) (Vet.)
+Sodium + Potassium + Dextrose + Betaine + Citric Acid (Vet.)
+Povidone-Iodine (vet.)
+Multivitamins + Amino Acids (Vet.)
+Multivitamins + Amino Acids (Vet.)
+Enrofloxacin (Vet.)
+Sulphadiazine + Trimethoprim (Vet)
+Colistin + Amoxicillin + Attapulgite + Neomycin + Electroytes
+Praziquantel + Albendazole (Vet.)
+Enrofloxacin + Ceftiofur (Vet.)
+Tiamulin (Vet.)
+Ascorbic Acid (Vet.)
+Multivitamins + Lysine + Taurine (Vet.)
+Enrofloxacin (Vet.)
+Iron + Folic Acid + Cyanocobalamin (Vitamin B12) (Vet.)
+Spectinomycin + Lincomycin (Vet.)
+Kaolin + Neomycin + Pectin (Vet.)
+Pyrantel (Vet.)
+Multivitamins + Zinc+ L-Lysine + Taurine Chlorella Growth Factor (CGF) (Vet.)
+Multivitamins + Lysine (Vet.)
+Enrofloxacin (Vet.)
+Multivitamins (Vet.)
+Dexamethasone (Vet.)
+Tilmicosin (Vet.)
+Porcine Circovirus (PCV) Inactivated Chimera Vaccine (Vet.)
+Enramycin (Vet.)
+Enramycin (Vet.)
+Multivitamins (Vet.)
+Doxycycline (Vet.)
+Inactivated Porcine Parvovirus (PPV) Vaccine (Vet.)
+Marbofloxacin (Vet.)
+Metronidazole (Vet.)
+Oxytocin (Vet.)
+Miconazole (Vet.)
+Multivitamins + Omega Fatty Acids (Vet.)
+Modified Live Feline Rhinotracheitis Virus (FVR) + Feline Calicivirus (FCV) + Feline Panleukopenia Virus (FPV) + Feline Leukemia Virus (FeLV) Antigen. Vaccine (Vet.)
+Multivitamins + Minerals (vet.)
+Permethrin (Vet.)
+Multivitamins Phosphorus + Amino Acids + Bacillus coagulans (Vet.)
+Metamizole Sodium (Vet.)
+Tiamulin (Vet.)
+Tiamulin (Vet.)
+Milbemycin oxime + Praziquantel (Vet.)
+Milbemycin oxime + Praziquantel (Vet.)
+Milbemycin oxime + Praziquantel (Vet.)
+Multivitamins (Vet.)
+Inactivated Newcastle Disease (ND) Virus+ Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Multivitamins + Liver Extract (Vet.)
+Milbemycin Oxime + Praziquantel (Vet.)
+Multivitamins + Minerals (Vet.)
+Cholecalciferol (Vitamin D3) + Minerals (Vet.)
+Live Attenuated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Inactivated Pasteurella multocida Vaccine (Vet.)
+Inactivated Avibacterium Paragallinarum Vaccine (Vet.)
+Live Attenuated Newcastle Disease (ND) Virus Vaccine (Vet.)
+Glutaraldehyde + Benzalkonium Chloride (Vet.)
+Live Attenuated Infectious Bursal Disease (IBD) Virus Vaccine (Vet.)
+Live Newcastle Disease (ND) Virus Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Attenuated Newcastle Disease (ND) Virus + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Inactivated Newcastle Disease (ND) Virus+ Egg Drop Syndrome (EDS 76) + Infectious Bronchitis (IB) Virus Vaccine (Vet.)
+Live Attenuated Newcastle Disease Vaccine (Vet.)
+Inactivated Mycoplasmoides gallisepticum Vaccine (Vet.)
+Cotrimazine (Vet.)
+Multivitamins (Vet.)
+Meloxicam (Vet.)
+Ivermectin (Vet.)
+Benzalkonium Chloride + Glutaraldehyde (Vet.)
+Nicotinamide (Vitamin B3) + Thiamine (as Hydrochloride) (Vitamin B1)+ Riboflavin (Vitamin B2) + Pyridoxine (as Hydrochloride) (Vitamin B6) + D- Panthenol (Vitamin B5) (Vet.)
+Retinol Palmitate (Vitamin A) (Vet.)
+Ascorbic Acid (Vitamin C) + Cyanocobalamin (Vitamin B12) Minerals + Amino Acids + Tricholine Citrate (Vet.)
+Multivitamins + Lysine (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+Cyanocobalamin (Vitamin B12) (Vet.)
+Iron Dextran + Cyanocobalamin (Vitamin B12) + Minerals
+Minerals Amino Acids (Vet.)
+Imidacloprid + Moxidectin (Vet.)
+Folic Acid (Vitamin B9) + Cyanocobalamin (Vitamin B12) Iron (Vet.)
+Miconazole + Chlorhexidine (Vet.)
+`;
