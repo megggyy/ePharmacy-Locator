@@ -89,7 +89,7 @@ export default function ViewProfile() {
         <TextInput style={styles.input} value={userData.contactNumber} editable={false} />
        {/* Single Address Field */}
         <Text style={styles.label}>Address</Text>
-        <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
+        <TextInput style={styles.input} value={userData.address || 'N/A'} editable={false} />
 
       </View>
       </>

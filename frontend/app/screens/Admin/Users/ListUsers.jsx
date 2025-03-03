@@ -131,7 +131,7 @@ const UserTableScreen = () => {
                     </DataTable.Cell>
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>
-                        {`${item.street}, ${item.barangay}, ${item.city}`}
+                        {`${item.address}`}
                       </Text>
                     </DataTable.Cell>
                   </DataTable.Row>

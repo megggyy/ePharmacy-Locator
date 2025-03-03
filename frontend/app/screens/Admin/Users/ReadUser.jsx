@@ -110,7 +110,7 @@ export default function ReadUserScreen() {
             <Text style={styles.label}>Address</Text>
             <TextInput
               style={styles.input}
-              value={`${user.street}, ${user.barangay}, ${user.city}` || 'N/A'}
+              value={`${user.address}` || 'N/A'}
               editable={false}
             />
           </View>

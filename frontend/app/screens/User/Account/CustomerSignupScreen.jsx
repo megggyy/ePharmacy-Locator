@@ -45,6 +45,7 @@ const CustomerSignup = () => {
     longitudeDelta: 0.0421,
   });
   const [images, setImages] = useState([]);
+  const [address, setAddress] = useState("");
   const [barangays, setBarangays] = useState([]);
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility
@@ -109,12 +110,24 @@ const CustomerSignup = () => {
         Alert.alert("Permission denied", "You need to grant location permission to use this feature.");
         return;
       }
-
+  
       const location = await Location.getCurrentPositionAsync({});
       setLatitude(location.coords.latitude);
       setLongitude(location.coords.longitude);
-
-      // Set the region to the current location
+  
+      // Reverse Geocode to get Address
+      const geocode = await Location.reverseGeocodeAsync({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude
+      });
+  
+      if (geocode.length > 0) {
+        const { name, district, city } = geocode[0];
+        const fullAddress = `${name || ''} ${district || ''}, ${city || ''}`;
+        setAddress(fullAddress);
+      }
+  
+      // Update map region
       setRegion({
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,
@@ -126,12 +139,28 @@ const CustomerSignup = () => {
       Alert.alert("Error", "Unable to fetch current location. Please try again.");
     }
   };
+  
+  
 
-  const handleMapPress = (event) => {
+  const handleMapPress = async (event) => {
     const { latitude, longitude } = event.nativeEvent.coordinate;
+  
     setLatitude(latitude);
     setLongitude(longitude);
-
+  
+    // Reverse Geocode to get address
+    try {
+      const geocode = await Location.reverseGeocodeAsync({ latitude, longitude });
+  
+      if (geocode.length > 0) {
+        const { street, district, city, region } = geocode[0];
+        const fullAddress = `${street || ''}, ${district || ''}, ${city || ''}, ${region || ''}`;
+        setAddress(fullAddress.trim().replace(/^,|,$/g, "")); // Remove leading/trailing commas
+      }
+    } catch (error) {
+      console.error("Error fetching address:", error);
+    }
+  
     // Update the region when the map is pressed
     setRegion({
       latitude,
@@ -140,6 +169,8 @@ const CustomerSignup = () => {
       longitudeDelta: 0.0421,
     });
   };
+  
+  
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -173,8 +204,8 @@ const CustomerSignup = () => {
       errorMessages.password = "PASSWORD IS REQUIRED";
     } else if (password.length < 8) {
       errorMessages.password = "PASSWORD MUST BE AT LEAST 8 CHARACTERS";
-    }    if (!street) errorMessages.street = "STREET IS REQUIRED";
-    if (!barangay) errorMessages.barangay = "PLEASE SELECT YOUR BARANGAY";
+    }  
+    if (!address) errorMessages.address = "ADDRESS IS REQUIRED";  
     if (images.length === 0) errorMessages.images = "PLEASE UPLOAD AT LEAST ONE IMAGE";
     if (!agreedToTerms) errorMessages.terms = 'YOU MUST AGREE TO THE TERMS AND CONDITIONS';
     return errorMessages;
@@ -194,9 +225,10 @@ const CustomerSignup = () => {
     formData.append('email', email);
     formData.append('contactNumber', contactNumber);
     formData.append('password', password);
-    formData.append('street', street);
-    formData.append('barangay', barangay);
-    formData.append('city', city);
+    formData.append('address', address);
+    // formData.append('street', street);
+    // formData.append('barangay', barangay);
+    // formData.append('city', city);
     formData.append("latitude", latitude);
     formData.append("longitude", longitude);
     formData.append('isAdmin', 'false');
@@ -314,24 +346,14 @@ const CustomerSignup = () => {
         </View>
         {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
 
-        <TextInput style={styles.input} placeholder="Street" placeholderTextColor="#AAB4C1" value={street} onChangeText={setStreet} />
-        {errors.street && <Text style={styles.errorText}>{errors.street}</Text>}
-
-        <RNPickerSelect
-          onValueChange={(value) => setBarangay(value)}
-          items={barangays} // Use fetched barangays here
-          style={pickerSelectStyles}
-          placeholder={{
-            label: 'Select your barangay',
-            value: null,
-            color: '#AAB4C1',
-          }}
-          value={barangay}
-        />
-        {errors.barangay && <Text style={styles.errorText}>{errors.barangay}</Text>}
-
-        <TextInput style={styles.input} placeholder="City" placeholderTextColor="#AAB4C1" value={city} editable={false} />
-
+        <TextInput
+        style={styles.input}
+        placeholder="Address"
+        placeholderTextColor="#AAB4C1"
+        value={address}
+        onChangeText={setAddress}
+      />
+      {errors.address && <Text style={styles.errorText}>{errors.address}</Text>}
 
         <Text style={styles.uploadLabel}>Pin Exact Location</Text>
         <MapView

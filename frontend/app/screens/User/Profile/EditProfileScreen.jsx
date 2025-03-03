@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import MapView, { Marker } from 'react-native-maps';
+import * as Location from 'expo-location';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { jwtDecode } from 'jwt-decode';
@@ -17,12 +19,21 @@ export default function EditProfile() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
-  const [street, setStreet] = useState('');
-  const [barangay, setBarangay] = useState('');
-  const [city, setCity] = useState('');
-  const [barangays, setBarangays] = useState([]); // State for barangays
+  // const [street, setStreet] = useState('');
+  // const [barangay, setBarangay] = useState('');
+  // const [city, setCity] = useState('');
+  // const [barangays, setBarangays] = useState([]); // State for barangays
   const [images, setImages] = useState([]); // State for selected images
   const [loading, setLoading] = useState(true);
+  const [address, setAddress] = useState('');
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [region, setRegion] = useState({
+    latitude: 14.520445,
+    longitude: 121.053886,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421,
+  });
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -41,15 +52,20 @@ export default function EditProfile() {
           },
         });
 
-        const { name, email, contactNumber, street, barangay, city, customerDetails } = response.data;
+        const { name, email, contactNumber, address, customerDetails } = response.data;
         setUserId(userId);
         setName(name);
         setEmail(email);
         setMobile(contactNumber);
-        setStreet(street || '');
-        setBarangay(barangay || '');
-        setCity(city || '');
+        setAddress(address || '');
 
+        // Extract latitude and longitude from customerDetails, fallback to default values if not available
+        const latitude = customerDetails?.latitude || 14.5995;
+        const longitude = customerDetails?.longitude || 120.9842;
+        
+        setLatitude(latitude);
+        setLongitude(longitude);
+        
         // Fetch images
         const fetchedImages = customerDetails?.images || [];
         setImages(fetchedImages);
@@ -60,24 +76,7 @@ export default function EditProfile() {
       }
     };
 
-    const fetchBarangays = async () => {
-      try {
-        const response = await axios.get(`${baseURL}barangays`);
-        const result = response.data;
-
-        // Format barangay data for RNPickerSelect
-        const formattedBarangays = result.map((item) => ({
-          label: item.name,
-          value: item.name,
-        }));
-        setBarangays(formattedBarangays);
-      } catch (error) {
-        console.error('Error fetching barangays:', error);
-      }
-    };
-
     fetchUserData();
-    fetchBarangays();
   }, []);
 
   const selectImages = async () => {
@@ -108,9 +107,7 @@ export default function EditProfile() {
       formData.append('name', name);
       formData.append('email', email);
       formData.append('contactNumber', mobile);
-      formData.append('street', street);
-      formData.append('barangay', barangay);
-      formData.append('city', city);
+      formData.append('address', address);
 
       // Iterate over images to prepare them for upload
       images.forEach((uri) => {
@@ -135,6 +132,63 @@ export default function EditProfile() {
     } catch (error) {
       console.error('Error updating profile:', error);
       Alert.alert('Error', 'There was an issue updating your profile.');
+    }
+  };
+
+  const handleMapPress = async (event) => {
+    const { latitude, longitude } = event.nativeEvent.coordinate;
+        
+    setLatitude(latitude);
+    setLongitude(longitude);
+  
+    await fetchAddressFromCoords(latitude, longitude);
+
+    setRegion({
+      latitude,
+      longitude,
+      latitudeDelta: 0.0922,
+      longitudeDelta: 0.0421,
+    });
+  };
+  
+  const fetchAddressFromCoords = async (lat, lon) => {
+    try {
+      let locationResponse = await Location.reverseGeocodeAsync({ latitude: lat, longitude: lon });
+      if (locationResponse.length > 0) {
+        const { name, district, city } = locationResponse[0];
+        const formattedAddress = `${name || ''} ${district || ''}, ${city || ''}`;
+        setAddress(formattedAddress);
+      }
+    } catch (error) {
+      console.error('Error getting address:', error);
+    }
+  };
+
+  const getCurrentLocation = async () => {
+    try {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission Denied', 'Location permission is required to fetch current location.');
+        return;
+      }
+  
+      let location = await Location.getCurrentPositionAsync({});
+      
+      setLatitude(location.coords.latitude);
+      setLongitude(location.coords.longitude);
+  
+      await fetchAddressFromCoords(location.coords.latitude, location.coords.longitude);
+        
+      // Update map region
+        setRegion({
+          latitude: location.coords.latitude,
+          longitude: location.coords.longitude,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        });
+    } catch (error) {
+      console.error('Error fetching current location:', error);
+      Alert.alert('Error', 'Unable to fetch current location.');
     }
   };
 
@@ -192,35 +246,43 @@ export default function EditProfile() {
               onChangeText={setMobile}
             />
 
-            <Text style={styles.label}>Street</Text>
-            <TextInput
-              style={styles.input}
-              value={street}
-              onChangeText={setStreet}
-            />
+        <Text style={styles.label}>Address</Text>
+        <TextInput style={styles.input} value={address} onChangeText={setAddress} />
+        
+        <Text style={styles.label}>Update Location</Text>
+          <MapView
+          style={styles.map}
+          region={region} // Dynamically update the region
+          onPress={handleMapPress}
+          showsUserLocation={true} // Show user's current location on the map
+        >
+          {latitude && longitude && (
+           <Marker
+           coordinate={{ latitude, longitude }}
+           draggable={true}
+           onDragEnd={(e) => {
+             const { latitude, longitude } = e.nativeEvent.coordinate;
+             setLatitude(latitude);
+             setLongitude(longitude);
+     
+             // Update the region when the marker is dragged
+             setRegion({
+               latitude,
+               longitude,
+               latitudeDelta: 0.0922,
+               longitudeDelta: 0.0421,
+             });
+           }}
+         />
+          )}
+        </MapView>
 
-            <Text style={styles.label}>Barangay</Text>
-            <RNPickerSelect
-              onValueChange={(value) => setBarangay(value)}
-              items={barangays} // Use fetched barangays here
-              style={pickerSelectStyles}
-              placeholder={{
-                label: 'Select your barangay',
-                value: null,
-                color: '#AAB4C1',
-              }}
-              Icon={() => {
-                return <Ionicons name="chevron-down" size={24} color="#AAB4C1" />;
-              }}
-              value={barangay}
-            />
 
-            <Text style={styles.label}>City</Text>
-            <TextInput
-              style={styles.input}
-              value={city}
-              onChangeText={setCity}
-            />
+          <TouchableOpacity style={styles.locationButton} onPress={getCurrentLocation}>
+            <Text style={styles.locationButtonText}>Get Current Location</Text>
+          </TouchableOpacity>
+
+            
           </View>
 
           {/* Change Password Option */}
@@ -371,4 +433,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
   },
+  // location
+  map: { width: '90%', height: 200, alignSelf: 'center', borderRadius: 10, marginBottom: 20 },
+  locationButton: { backgroundColor: '#0B607E', paddingVertical: 10, marginHorizontal: 20, borderRadius: 10, marginBottom: 10 },
+  locationButtonText: { color: 'white', textAlign: 'center', fontSize: 16 },
+  confirmButton: { backgroundColor: '#0B607E', paddingVertical: 15, marginHorizontal: 20, borderRadius: 10 },
+  confirmButtonText: { color: 'white', textAlign: 'center', fontSize: 16 },
 });

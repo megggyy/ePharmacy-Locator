@@ -53,7 +53,7 @@ const AdminDashboard = () => {
     // Set up polling with a 5-second interval
     const intervalId = setInterval(() => {
       fetchData(); // Re-fetch the data every 5 seconds
-    }, 1000); // 5-second interval
+    }, 500000); // 5-second interval
   
     // Cleanup function to clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 100,
+    paddingVertical: 10,
     backgroundColor: '#005b7f',
   },
   menuIcon: {

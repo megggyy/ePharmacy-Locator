@@ -16,6 +16,7 @@ const HomeScreen = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  // Fetch data on component mount
   useFocusEffect(
     React.useCallback(() => {
       // Fetch categories
@@ -27,7 +28,7 @@ const HomeScreen = () => {
       axios.get(`${baseURL}pharmacies`)
         .then(response => setPharmacies(response.data))
         .catch(error => console.error('Error fetching pharmacies:', error));
-
+        
       // Fetch medications
       axios.get(`${baseURL}medicine`)
         .then(response => setMedications(response.data))
