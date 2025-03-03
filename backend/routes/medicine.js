@@ -39,6 +39,7 @@ router.get('/medicinesPerCategory', async (req, res) => {
     }
 });
 
+
 // JSON MEDICINES
 router.get('/json', (req, res) => {
     const filePath = path.join(__dirname, '../utils/medicines.json');
@@ -113,8 +114,6 @@ router.delete('/admin/delete/:id', async (req, res) => {
         res.status(500).json({ success: false, error: err.message });
     }
 });
-
-module.exports = router;
 
 
 // PHARMACY
@@ -408,7 +407,71 @@ router.delete('/delete/:id', async (req, res) => {
     }
 });
 
-// Get Available Pharmacy Medicine
+// Get pharmacies that stock specific medicines
+router.post('/with-medicines', async (req, res) => {
+    try {
+        console.log("Incoming request body:", req.body); // Debugging log
+
+        const { medicineNames } = req.body;
+        if (!medicineNames || !Array.isArray(medicineNames) || medicineNames.length === 0) {
+            return res.status(400).json({ success: false, message: 'Invalid medicine list' });
+        }
+
+        // Find medicines by generic name
+        const medicines = await Medicine.find({
+            genericName: { $in: medicineNames.map(name => new RegExp(`^${name}$`, 'i')) }
+        });
+
+        if (!medicines.length) {
+            return res.status(404).json({ success: false, message: 'No medicines found' });
+        }
+
+        // Extract medicine IDs
+        const medicineIds = medicines.map(med => med._id);
+
+        // Find pharmacy stocks that have these medicines
+        const pharmacyStocks = await PharmacyStock.find({ medicine: { $in: medicineIds } })
+            .populate({
+                path: 'pharmacy',
+                populate: { path: 'userInfo', select: 'name street barangay city contactNumber' }
+            })
+            .populate({
+                path: 'medicine',
+                select: 'genericName brandName dosageStrength dosageForm classification'
+            });
+
+        if (!pharmacyStocks.length) {
+            return res.status(404).json({ success: false, message: 'No pharmacies found with the requested medicines' });
+        }
+
+        // Group by pharmacy
+        const pharmaciesMap = new Map();
+        pharmacyStocks.forEach((stock) => {
+            if (stock.pharmacy) {
+                const pharmacyId = stock.pharmacy._id.toString();
+                if (!pharmaciesMap.has(pharmacyId)) {
+                    pharmaciesMap.set(pharmacyId, {
+                        pharmacy: stock.pharmacy,
+                        medicines: [],
+                    });
+                }
+                pharmaciesMap.get(pharmacyId).medicines.push({
+                    genericName: stock.medicine.genericName,
+                    brandName: stock.medicine.brandName,
+                    stock: stock.expirationPerStock.reduce((total, entry) => total + entry.stock, 0),
+                    expirationPerStock: stock.expirationPerStock,
+                });
+            }
+        });
+
+        res.status(200).json({ success: true, data: Array.from(pharmaciesMap.values()) });
+    } catch (error) {
+        console.error("Backend error:", error);
+        res.status(500).json({ success: false, message: 'Error fetching pharmacies with medicines', error: error.message });
+    }
+});
+
+//Get Available Pharmacy Medicine
 router.get('/available/:name', async (req, res) => {
     try {
         const { name } = req.params;
@@ -501,7 +564,6 @@ router.get('/available/:name', async (req, res) => {
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 });
-
 
 
 // Available Different brands and dosages based on the generic name

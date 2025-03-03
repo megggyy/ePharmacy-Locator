@@ -57,78 +57,81 @@ router.get('/', async (req, res) => {
 
 // pharmacies per month na chart
 router.get('/pharmaciesPerMonth', async (req, res) => {
-  try {
-    const getUsersPerMonth = await User.aggregate([
-      {
-        $match: {
-          role: "PharmacyOwner", 
-        },
-      },
-      {
-        $group: {
-          _id: {
-            year: { $year: "$createdAt" },
-            month: { $month: "$createdAt" },
+    try {
+        const getUsersPerMonth = await User.aggregate([
+          {
+            $match: {
+              role: "PharmacyOwner", 
+            },
           },
-          total: { $sum: 1 }, // Count the number of pharmacies
-        },
-      },
-      {
-        $addFields: {
-          month: {
-            $let: {
-              vars: {
-                monthsInString: [
-                  null,
-                  "Jan",
-                  "Feb",
-                  "Mar",
-                  "Apr",
-                  "May",
-                  "Jun",
-                  "Jul",
-                  "Aug",
-                  "Sept",
-                  "Oct",
-                  "Nov",
-                  "Dec",
-                ],
+          {
+            $group: {
+              _id: {
+                year: { $year: "$createdAt" },
+                month: { $month: "$createdAt" },
               },
-              in: {
-                $arrayElemAt: ["$$monthsInString", "$_id.month"],
+              total: { $sum: 1 }, // Count the number of pharmacies
+            },
+          },
+          {
+            $addFields: {
+              month: {
+                $let: {
+                  vars: {
+                    monthsInString: [
+                      null,
+                      "Jan",
+                      "Feb",
+                      "Mar",
+                      "Apr",
+                      "May",
+                      "Jun",
+                      "Jul",
+                      "Aug",
+                      "Sept",
+                      "Oct",
+                      "Nov",
+                      "Dec",
+                    ],
+                  },
+                  in: {
+                    $arrayElemAt: ["$$monthsInString", "$_id.month"],
+                  },
+                },
               },
             },
           },
-        },
-      },
-      { $sort: { "_id.month": 1 } },
-      {
-        $project: {
-          _id: 0,
-          month: 1,
-          total: 1,
-        },
-      },
-    ]);
-
-    console.log(getUsersPerMonth);
-
-    if (!getUsersPerMonth || getUsersPerMonth.length === 0) {
-      return res.status(404).json({
-        message: "No pharmacy registrations found for the requested period.",
-      });
-    }
-
-    res.status(200).json({
-      success: true,
-      getUsersPerMonth,
-    });
-  } catch (error) {
-    console.error("Error fetching pharmacy registrations per month:", error);
-    res.status(500).json({
-      message: "An error occurred while fetching data.",
-    });
-  }
+          { 
+            $sort: { "_id.year": 1, "_id.month": 1 } // Sort by year first, then by month 
+          },
+          {
+            $project: {
+              _id: 0,
+              year: "$_id.year",
+              month: 1,
+              total: 1,
+            },
+          },
+        ]);
+    
+        console.log(getUsersPerMonth);
+    
+        if (!getUsersPerMonth || getUsersPerMonth.length === 0) {
+          return res.status(404).json({
+            message: "No pharmacy registrations found for the requested period.",
+          });
+        }
+    
+        res.status(200).json({
+          success: true,
+          getUsersPerMonth,
+        });
+      } catch (error) {
+        console.error("Error fetching pharmacy registrations per month:", error);
+        res.status(500).json({
+          message: "An error occurred while fetching data.",
+        });
+      }
 });
 
 // customers per month na chart
@@ -246,12 +249,18 @@ router.get('/customersPerMonth', async (req, res) => {
                 isAdmin: req.body.isAdmin,
                 name: req.body.name,
                 contactNumber: req.body.contactNumber,
-                street: req.body.street,
-                barangay: req.body.barangay,
-                city: req.body.city,
                 role: req.body.role,
                 verified: false,
             });
+
+            // Assign address fields based on role
+            if (req.body.role === 'Customer') {
+                user.address = req.body.address;
+            } else if (req.body.role === 'PharmacyOwner') {
+                user.street = req.body.street;
+                user.barangay = req.body.barangay;
+                user.city = req.body.city;
+            }
 
             user = await user.save();
             if (!user) {
@@ -759,7 +768,7 @@ router.put('/resetPassword', async (req, res) => {
 // Edit Profile Route
 router.put('/:id', uploadOptions.array('images'), async (req, res) => {
     const { id } = req.params;
-    const { name, contactNumber, street, barangay, city } = req.body;
+    const { name, contactNumber, street, barangay, city, address } = req.body;
 
     try {
         // Check if the user is an Admin
@@ -811,13 +820,17 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
             return res.status(200).json({ message: 'Pharmacy updated successfully', pharmacy });
         }
 
+        // Update Customer profile (Only address, name, and contactNumber)
         if (customer.userInfo) {
             const user = customer.userInfo;
             user.name = name || user.name;
             user.contactNumber = contactNumber || user.contactNumber;
-            user.street = street || user.street;
-            user.barangay = barangay || user.barangay;
-            user.city = city || user.city;
+
+            // Only update address field for customers
+            if (address) {
+                user.address = address;
+            }
+
             await user.save();
         }
 
