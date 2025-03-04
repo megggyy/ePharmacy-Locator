@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   header: {
-    backgroundColor: '#005b7f',
-    paddingTop: 60, // Status bar height
+    backgroundColor: '#0B607E',
+    paddingTop: 10, // Status bar height
     paddingBottom: 20,
     paddingHorizontal: 15,
     flexDirection: 'row',

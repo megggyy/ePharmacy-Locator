@@ -458,44 +458,54 @@ export default function MapsScreen() {
         ))}
       </MapView>
 
-      {/* Popup Modal */}
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={isModalVisible}
-        onRequestClose={closeModal}
-      >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            {selectedPharmacy && (
-              <>
-                <Image
-                  source={{ uri: selectedPharmacy.images[0] }}
-                  style={styles.pharmacyImage}
-                />
-                <Text style={styles.pharmacyName}>{selectedPharmacy.userInfo.name}</Text>
-                <Text style={styles.pharmacyDetails}>
-                  Location: {`${selectedPharmacy.userInfo.street}, ${selectedPharmacy.userInfo.barangay}, ${selectedPharmacy.userInfo.city}`}
-                </Text>
-                <Text style={styles.pharmacyDetails}>
-                  Contact: {selectedPharmacy.userInfo.contactNumber}
-                </Text>
-                <Text style={styles.pharmacyDetails}>
-                  Business Days: {selectedPharmacy.businessDays}
-                </Text>
-                <Text style={styles.pharmacyDetails}>
-                  Store Hours: {`${selectedPharmacy.openingHour || 'N/A'} - ${selectedPharmacy.closingHour || 'N/A'}`}
-                </Text>
-              </>
-            )}
-            <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
-              <Text style={styles.closeButtonText}>Close</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
+    {/* Popup Modal */}
+    <Modal
+      animationType="slide"
+      transparent={true}
+      visible={isModalVisible}
+      onRequestClose={closeModal}
+    >
+      <View style={styles.modalContainer}>
+        <View style={styles.modalContent}>
+          {selectedPharmacy && (
+            <>
+              <Image
+                source={{ uri: selectedPharmacy.images[0] }}
+                style={styles.pharmacyImage}
+              />
+              <Text style={styles.pharmacyName}>{selectedPharmacy.userInfo.name}</Text>
+              <Text style={styles.pharmacyDetails}>
+                Location: {`${selectedPharmacy.userInfo.street}, ${selectedPharmacy.userInfo.barangay}, ${selectedPharmacy.userInfo.city}`}
+              </Text>
+              <Text style={styles.pharmacyDetails}>
+                Contact: {selectedPharmacy.userInfo.contactNumber}
+              </Text>
+              <Text style={styles.pharmacyDetails}>
+                Business Days: {selectedPharmacy.businessDays}
+              </Text>
+              <Text style={styles.pharmacyDetails}>
+                Store Hours: {`${selectedPharmacy.openingHour || 'N/A'} - ${selectedPharmacy.closingHour || 'N/A'}`}
+              </Text>
 
-      
+              {/* View Pharmacy Button */}
+              <TouchableOpacity 
+                style={styles.viewPharmacyButton} 
+                onPress={() => {
+                  closeModal(); // Close modal before navigation
+                  router.push(`/screens/User/Features/PharmacyDetails?id=${selectedPharmacy._id}`);
+                }}
+              >
+                <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
+              </TouchableOpacity>
+            </>
+          )}
+          <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
+            <Text style={styles.closeButtonText}>Close</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </Modal>
+   
       {/* Toggle Button */}
         {isLoggedIn && ( // Conditionally render toggle button based on login status
             <TouchableOpacity 
@@ -662,4 +672,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  viewPharmacyButton: {
+    backgroundColor: "#007bff",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    alignItems: "center",
+    marginTop: 10,
+  },
+  
+  viewPharmacyButtonText: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  
 });

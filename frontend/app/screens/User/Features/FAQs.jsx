@@ -5,13 +5,41 @@ import { useRouter } from 'expo-router';
 
 const FAQScreen = () => {
   const router = useRouter();
-  
-  // Sample FAQ data
+
+  // Updated FAQ data
   const faqData = [
-    { question: 'What is this app about?', answer: 'This app is designed to help users easily locate pharmacies, view available medications, and scan prescriptions for better convenience.' },
-    { question: 'How do I use the app?', answer: 'You can search for pharmacies by location, scan your prescription to find matching pharmacies, and directly contact or visit them.' },
-    { question: 'Is my data safe?', answer: 'Yes, we take your privacy and data security very seriously. All personal information is encrypted and protected.' },
-    { question: 'How can I contact support?', answer: 'You can reach out to our support team via the contact form on the app or through our customer support email provided in the app.' }
+    { 
+      question: 'What is the ePharmacy Locator app?', 
+      answer: 'The ePharmacy Locator app helps users find pharmacies near them, check medication availability, and scan prescriptions for better accessibility.' 
+    },
+    { 
+      question: 'How does the prescription scanning feature work?', 
+      answer: 'You can take a photo of your prescription, and our system will extract the text and identify the medicines listed. You can then check which pharmacies have them in stock.' 
+    },
+    { 
+      question: 'How are pharmacies verified?', 
+      answer: 'Pharmacies listed in the app go through an approval process. The admin validates if the pharmacy is registered with the FDA before it appears in search results.' 
+    },
+    { 
+      question: 'Is my personal information secure?', 
+      answer: 'Yes, your personal data and prescription scans are encrypted and stored securely. We follow strict data privacy policies to protect your information.' 
+    },
+    { 
+      question: 'Can I search for medicines by name?', 
+      answer: 'Yes! You can enter a medicine name in the search bar to check which pharmacies near you have it in stock.' 
+    },
+    { 
+      question: 'Can I buy medicines directly through the app?', 
+      answer: 'No, the app only helps you locate pharmacies that have the medicine you need. You will need to visit the pharmacy to purchase medications.' 
+    },
+    { 
+      question: 'Does the app work on all devices?', 
+      answer: 'The ePharmacy Locator is optimized for smartphones, laptops, and computers. However, some older devices may experience minor compatibility issues.' 
+    },
+    { 
+      question: 'How can I contact support?', 
+      answer: 'You can reach our support team through the contact form in the app or via email provided in the settings section.' 
+    }
   ];
 
   // State to handle expanded answers
@@ -65,19 +93,19 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#005b7f',
-    height: 100,
+    backgroundColor: '#0B607E',
+    height: 75,
     paddingHorizontal: 15,
   },
   backButton: {
     paddingRight: 10,
-    marginTop: 30,
+    marginTop: 0,
   },
   title: {
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
-    marginTop: 30,
+    marginTop: 0,
   },
   contentContainer: {
     padding: 16,

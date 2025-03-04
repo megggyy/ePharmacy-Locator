@@ -20,15 +20,39 @@ const PrivacyPolicyScreen = () => {
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <View style={styles.textContainer}>
           <Text style={styles.contentText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab veniam dolores minus
-            voluptas dolorem ipsam omnis unde rem, fugiat perferendis voluptates nulla odio
-            consequuntur, ullam qui recusandae porro quisquam! Optio amet obcaecati minima velit
-            ipsum labore, aspernatur ratione sed aliquid officiis voluptas quis quod numquam id
-            harum voluptate quia consequuntur eos error illo sequi. Ullam quae in reprehenderit
-            quas consequuntur recusandae quasi velit libero saepe! Voluptate magni quas laborum
-            aspernatur a officiis. Tempore ab nesciunt esse cupiditate repellat soluta quasi
-            dolorum velit dolores explicabo facilis nihil enim impedit doloremque voluptas sapiente
-            fuga, aliquam ullam a repudiandae est quas aperiam.
+            <Text style={styles.sectionTitle}>1. Introduction</Text>{'\n'}
+            Welcome to the ePharmacy Locator System. Your privacy is important to us. This policy outlines how we collect, store, and protect your information, including prescription data.{"\n\n"}
+            
+            <Text style={styles.sectionTitle}>2. Information We Collect</Text>{'\n'}
+            We collect the following types of information when you use our service:{"\n"}
+            - Personal Information (e.g., name, email, contact details){"\n"}
+            - Location data to find nearby pharmacies (only with your permission){"\n"}
+            - Uploaded prescriptions, including images and scanned text {"\n"}
+            {/* - Pharmacy searches and interactions within the system{"\n\n"} */}
+            
+            <Text style={styles.sectionTitle}>3. How We Use Your Information</Text>{'\n'}
+            Your data is used to:{"\n"}
+            - Provide accurate pharmacy and medication availability information.{"\n"}
+            - Store and retrieve uploaded prescriptions for easy access.{"\n"}
+            - Improve user experience and system functionality.{"\n"}
+            {/* - Ensure security and compliance with medical data protection laws.{"\n\n"} */}
+            
+            <Text style={styles.sectionTitle}>4. Prescription Storage and Security</Text>{'\n'}
+            - Uploaded prescriptions are securely stored in an encrypted database.{"\n"}
+            {/* - Only authorized users (you and verified pharmacies) can access your prescription data.{"\n"} */}
+            - We do not share prescription data with third parties without user consent.{"\n\n"}
+            
+            <Text style={styles.sectionTitle}>5. Data Retention</Text>{'\n'}
+            - Prescription records are stored only as long as necessary for service fulfillment.{"\n"}
+            - Users can request deletion of their data at any time.{"\n\n"}
+            
+            <Text style={styles.sectionTitle}>6. Your Rights and Choices</Text>{'\n'}
+            - You have the right to access, or modify your personal information.{"\n"}
+            - You can manage location permissions in your device settings.{"\n"}
+            - If you have concerns about your privacy, contact our support team.{"\n\n"}
+            
+            <Text style={styles.sectionTitle}>7. Contact Information</Text>{'\n'}
+            For any privacy-related questions or requests, please contact us at: epharmacylocator4@gmail.com{"\n\n"}
           </Text>
         </View>
       </ScrollView>
@@ -44,19 +68,19 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#005b7f',
-    height: 100,
+    backgroundColor: '#0B607E',
+    height: 75,
     paddingHorizontal: 15,
   },
   backButton: {
     paddingRight: 10,
-    marginTop:30,
+    marginTop: 0,
   },
   title: {
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
-    marginTop:30,
+    marginTop: 0,
   },
   contentContainer: {
     padding: 16,
@@ -74,6 +98,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#333',
     lineHeight: 20,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 10,
   },
 });
 

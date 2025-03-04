@@ -57,48 +57,56 @@ const PrescriptionResultsScreen = () => {
             pharmacies.map((item, index) => {
               const isExpanded = expandedMap === index;
               return (
-                <View key={item.pharmacy._id || index} style={[styles.pharmacyCard, isExpanded && styles.expandedCard]}>
-                  <View style={styles.pharmacyInfo}>
-                    <Text style={styles.pharmacyName}>{item.pharmacy.userInfo.name}</Text>
-                    <Text style={styles.pharmacyDetails}>{item.pharmacy.userInfo.street}, {item.pharmacy.userInfo.barangay}, {item.pharmacy.userInfo.city}</Text>
-                    <Text style={styles.pharmacyDetails}>📞 {item.pharmacy.userInfo.contactNumber}</Text>
-                    <Text style={styles.pharmacyDetails}>🕒 {item.pharmacy.businessDays} ({item.pharmacy.openingHour} - {item.pharmacy.closingHour})</Text>
-                    <Text style={styles.medicineTitle}>Available Medicines:</Text>
-                    {item.medicines.map((med, medIndex) => (
-                      <Text key={`${item.pharmacy._id}-${medIndex}`} style={styles.medicineText}>
-                        {med.genericName}: {med.stock} in stock
-                      </Text>
-                    ))}
-                  </View>
-  
-                  <View style={isExpanded ? styles.fullScreenMapContainer : styles.mapContainer}>
-                    <MapView
-                      style={isExpanded ? styles.fullScreenMap : styles.map}
-                      initialRegion={{
+              <View key={item.pharmacy._id || index} style={[styles.pharmacyCard, isExpanded && styles.expandedCard]}>
+                <View style={styles.pharmacyInfo}>
+                  <Text style={styles.pharmacyName}>{item.pharmacy.userInfo.name}</Text>
+                  <Text style={styles.pharmacyDetails}>{item.pharmacy.userInfo.street}, {item.pharmacy.userInfo.barangay}, {item.pharmacy.userInfo.city}</Text>
+                  <Text style={styles.pharmacyDetails}>📞 {item.pharmacy.userInfo.contactNumber}</Text>
+                  <Text style={styles.pharmacyDetails}>🕒 {item.pharmacy.businessDays} ({item.pharmacy.openingHour} - {item.pharmacy.closingHour})</Text>
+                  <Text style={styles.medicineTitle}>Available Medicines:</Text>
+                  {item.medicines.map((med, medIndex) => (
+                    <Text key={`${item.pharmacy._id}-${medIndex}`} style={styles.medicineText}>
+                      {med.genericName}: {med.stock} in stock
+                    </Text>
+                  ))}
+                  
+                  {/* View Pharmacy Button */}
+                  <TouchableOpacity
+                    style={styles.viewPharmacyButton}
+                    onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${item.pharmacy._id}`)}
+                  >
+                    <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
+                  </TouchableOpacity>
+                </View>
+
+                <View style={isExpanded ? styles.fullScreenMapContainer : styles.mapContainer}>
+                  <MapView
+                    style={isExpanded ? styles.fullScreenMap : styles.map}
+                    initialRegion={{
+                      latitude: parseFloat(item.pharmacy.location.latitude),
+                      longitude: parseFloat(item.pharmacy.location.longitude),
+                      latitudeDelta: 0.01,
+                      longitudeDelta: 0.01,
+                    }}
+                  >
+                    <Marker
+                      coordinate={{
                         latitude: parseFloat(item.pharmacy.location.latitude),
                         longitude: parseFloat(item.pharmacy.location.longitude),
-                        latitudeDelta: 0.01,
-                        longitudeDelta: 0.01,
                       }}
-                    >
-                      <Marker
-                        coordinate={{
-                          latitude: parseFloat(item.pharmacy.location.latitude),
-                          longitude: parseFloat(item.pharmacy.location.longitude),
-                        }}
-                        title={item.pharmacy.userInfo.name}
-                        description={`${item.pharmacy.userInfo.street}, ${item.pharmacy.userInfo.barangay}`}
-                      />
-                    </MapView>
-  
-                    <TouchableOpacity
-                      style={styles.zoomButton}
-                      onPress={() => setExpandedMap(isExpanded ? null : index)}
-                    >
-                      <Ionicons name={isExpanded ? "remove-circle-outline" : "add-circle-outline"} size={16} color="#007BFF" />
-                    </TouchableOpacity>
-                  </View>
+                      title={item.pharmacy.userInfo.name}
+                      description={`${item.pharmacy.userInfo.street}, ${item.pharmacy.userInfo.barangay}`}
+                    />
+                  </MapView>
+
+                  <TouchableOpacity
+                    style={styles.zoomButton}
+                    onPress={() => setExpandedMap(isExpanded ? null : index)}
+                  >
+                    <Ionicons name={isExpanded ? "remove-circle-outline" : "add-circle-outline"} size={16} color="#007BFF" />
+                  </TouchableOpacity>
                 </View>
+              </View>
               );
             })
           ) : (
@@ -181,6 +189,19 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   noResults: { textAlign: 'center', marginTop: 20, fontSize: 16, color: '#888' },
+  viewPharmacyButton: {
+    marginTop: 10,
+    backgroundColor: '#007BFF',
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  viewPharmacyButtonText: {
+    color: 'white',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },  
 });
 
 export default PrescriptionResultsScreen;

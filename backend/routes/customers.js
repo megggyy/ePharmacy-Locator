@@ -133,5 +133,32 @@ router.post("/upload-prescription", async (req, res) => {
   }
 });
 
+router.get("/mostScannedMedicines", async (req, res) => {
+  try {
+    const medicineCounts = await Prescription.aggregate([
+      { $unwind: "$matchedMedicines" }, // Split matchedMedicines array
+      {
+        $group: {
+          _id: "$matchedMedicines",
+          count: { $sum: 1 }, // Count occurrences
+        },
+      },
+      { $sort: { count: -1 } }, // Sort by highest count
+      { $limit: 10 }, // Limit to top 10 medicines
+    ]);
+
+    if (!medicineCounts || medicineCounts.length === 0) {
+      return res.status(404).json({ message: "No scanned medicines found." });
+    }
+
+    res.status(200).json({
+      success: true,
+      mostScannedMedicines: medicineCounts,
+    });
+  } catch (error) {
+    console.error("Error fetching most scanned medicines:", error);
+    res.status(500).json({ message: "An error occurred while fetching data." });
+  }
+});
 
 module.exports = router;

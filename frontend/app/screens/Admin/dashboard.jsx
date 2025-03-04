@@ -24,6 +24,7 @@ const AdminDashboard = () => {
     medicines: 0,
   });
   const [loading, setLoading] = useState(true);  // Add loading state
+  const [scannedMedicinesData, setScannedMedicinesData] = useState({ labels: [], data: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,6 +48,7 @@ const AdminDashboard = () => {
       }
     };
   
+
     // Initial fetch
     fetchData();
   
@@ -81,6 +83,26 @@ const AdminDashboard = () => {
     fetchCustomersData();
   }, []);
 
+  useEffect(() => {
+    const fetchScannedMedicines = async () => {
+      try {
+        const response = await axios.get(`${baseURL}customers/mostScannedMedicines`);
+        const result = response.data;
+  
+        if (result.success) {
+          const labels = result.mostScannedMedicines.map((item) => item._id);
+          const data = result.mostScannedMedicines.map((item) => item.count);
+  
+          setScannedMedicinesData({ labels, data });
+        }
+      } catch (error) {
+        console.error("Error fetching most scanned medicines:", error);
+      }
+    };
+  
+    fetchScannedMedicines();
+  }, []);
+  
   useFocusEffect(
     useCallback(() => {
         if (state.isAuthenticated === false || state.isAuthenticated === null) {
@@ -173,16 +195,11 @@ const AdminDashboard = () => {
             }}
             style={styles.chart}
           />
-
-          <Text style={styles.chartTitle}>Most Scanned Prescription</Text>
+          <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
           <BarChart
             data={{
-              labels: ['Prescription A', 'Prescription B', 'Prescription C', 'Prescription D'], // Update with real data
-              datasets: [
-                {
-                  data: [100, 80, 45, 60].map(item => (isNaN(item) || item === Infinity ? 0 : item)), // Sanitize data
-                },
-              ],
+              labels: scannedMedicinesData.labels,
+              datasets: [{ data: scannedMedicinesData.data.map(item => isNaN(item) ? 0 : item) }],
             }}
             width={screenWidth - 30}
             height={220}

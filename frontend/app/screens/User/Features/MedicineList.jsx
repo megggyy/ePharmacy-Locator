@@ -192,15 +192,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 40,
+    backgroundColor: '#005b7f',
+    paddingTop: 15,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 15,
     left: 20,
   },
   headerText: {
@@ -262,9 +262,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   safeArea: { flex: 1, backgroundColor: '#F4F4F4' },
-  header: { backgroundColor: '#0B607E', paddingTop: 40, paddingBottom: 20, alignItems: 'center' },
-  backButton: { position: 'absolute', top: 50, left: 20 },
-  headerText: { color: 'white', fontSize: 20, fontWeight: 'bold' },
   container: { padding: 16 },
   scrollViewContent: { paddingBottom: 100 },
   pharmacyName: {

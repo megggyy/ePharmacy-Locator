@@ -50,7 +50,6 @@ export default function RootLayout() {
             <Stack.Screen name="screens/User/Profile/EditProfileScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Profile/ViewProfileScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/SuggestedMedicine" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/User/Features/Maps" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/Settings" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/ViewAllPharmacies" options={{ headerShown: false }} />
             <Stack.Screen name="screens/User/Features/PharmacyDetails" options={{ headerShown: false }} />
