@@ -17,20 +17,20 @@ import baseURL from '@/assets/common/baseurl';
 const MedicationDetails = () => {
   const router = useRouter();
   const { name } = useLocalSearchParams();
+  const decodedName = name ? decodeURIComponent(name) : "";
   const [medications, setMedications] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (name) {
+    if (decodedName) {
       const fetchData = () => {
-        console.log("Fetching for name:", name); // Debugging
-        console.log("API URL:", `${baseURL}medicine/available/${name}`);
+        console.log("Fetching for name:", decodedName); // Debugging
 
         axios
-          .get(`${baseURL}medicine/available/${name}`)
+          .get(`${baseURL}medicine/available/${decodedName}`)
           .then((response) => {
             console.log("API Response:", response.data); // Debugging
-            setMedications(response.data.data); 
+            setMedications(response.data.data);
             setLoading(false);
           })
           .catch((error) => {
@@ -44,7 +44,7 @@ const MedicationDetails = () => {
 
       return () => clearInterval(interval);
     }
-  }, [name]);
+  }, [decodedName]);
 
   const formatDateTime = (date) => {
     const day = String(date.getDate()).padStart(2, '0');
@@ -104,7 +104,8 @@ const MedicationDetails = () => {
               <TouchableOpacity
                 onPress={() => {
                   if (pharmacyStock > 0) {
-                    router.push(`/screens/User/Features/MedicineList?pharmacyId=${pharmacy._id}&genericName=${medicine.genericName}`);
+                    const encodedName = encodeURIComponent(medicine.genericName);
+                    router.push(`/screens/User/Features/MedicineList?pharmacyId=${pharmacy._id}&genericName=${encodedName}`);
                   }
                 }}
                 disabled={pharmacyStock === 0}

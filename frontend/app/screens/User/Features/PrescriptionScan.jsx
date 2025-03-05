@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, Alert, ScrollView, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import medicines from '../../../../assets/medicines';
 import { affContent, dicContent } from '@/assets/dictionary/medicinesDictionary';
 import stringSimilarity from 'string-similarity';
 import nspell from 'nspell';

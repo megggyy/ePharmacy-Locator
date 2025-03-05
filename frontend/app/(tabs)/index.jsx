@@ -209,8 +209,13 @@ const HomeScreen = () => {
             <TouchableOpacity
               key={medication._id}
               style={styles.medicationCard}
-              onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.genericName}`)}
-            >
+              onPress={() => {
+                const encodedName = encodeURIComponent(medication.genericName);
+                console.log("Encoded Name:", encodedName); // Debugging
+                router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
+              }}
+              
+                          >
               <View style={styles.medicationInfo}>
                 <Text style={styles.medicationName}>{medication.genericName}</Text>
               </View>

@@ -18,10 +18,8 @@ const CategoryFilterMedications = () => {
         setIsLoading(true);
         setError(null); // Reset error state
         const response = await axios.get(`${baseURL}medicine/category/${id}`);
-        
-        // Filter unique genericName values
-       
-  
+
+
         setMedications(response.data);
       } catch (err) {
         setError('Failed to load medications. Please try again.');
@@ -29,11 +27,12 @@ const CategoryFilterMedications = () => {
         setIsLoading(false);
       }
     };
-  
+
+    
     fetchMedications();
   }, [id]);
-  
-  
+
+
 
   return (
     <View style={styles.topContainer}>
@@ -43,7 +42,7 @@ const CategoryFilterMedications = () => {
         </TouchableOpacity>
         <Text style={styles.headerText}>{name}</Text>
       </View>
-      
+
       <ScrollView style={styles.container}>
         {/* Display Loading State */}
         {isLoading ? (
@@ -52,7 +51,7 @@ const CategoryFilterMedications = () => {
           // Display Error and Retry Button
           <View style={styles.errorContainer}>
             <Text style={styles.noText}>There are no medicines in this category.</Text>
-    
+
           </View>
         ) : (
           // Display Medications or "No Medications" Message
@@ -62,11 +61,13 @@ const CategoryFilterMedications = () => {
                 <TouchableOpacity
                   key={medication._id}
                   style={styles.medicationCard}
-                  onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.genericName}`)}
-                >
+                  onPress={() => {
+                    const encodedName = encodeURIComponent(medication.genericName);
+                    console.log("Encoded Name:", encodedName); // Debugging
+                    router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
+                  }}                >
                   <View style={styles.medicationInfo}>
-                    <Text style={styles.medicationName}>{medication.brandName}</Text>
-                    <Text style={styles.genericName}>{medication.genericName}</Text>
+                    <Text style={styles.medicationName}>{medication.genericName}</Text>
 
                   </View>
                 </TouchableOpacity>

@@ -52,7 +52,6 @@ const CreateMedicines = () => {
         try {
             const response = await axios.get(`${baseURL}medicine/json`);
 
-            console.log(response.data)
             const uniqueCompositionsMap = new Map();
 
             response.data.forEach(item => {
@@ -85,7 +84,8 @@ const CreateMedicines = () => {
     const handleGenericSelect = async (generic) => {
         setSelectedGeneric(generic);
         setGenericModalVisible(false);
-    
+
+        console.log('generic: ', generic)
         try {
             const response = await axios.get(`${baseURL}medicine/json`);
     
@@ -107,9 +107,6 @@ const CreateMedicines = () => {
                 description: item.description || '',
             })).filter(item => item.brandName); // Ensure no empty brand names
     
-            console.log(generic)
-            console.log(filteredMedicinesDetails)
-
             // Fetch existing medicines and filter out those already in stock
             fetchExistingMedicines(generic, filteredMedicinesDetails);
     
@@ -121,8 +118,6 @@ const CreateMedicines = () => {
     // Fetch existing medicines from the pharmacy stock
     const fetchExistingMedicines = async (generic, genericMedicines) => {
         setSearchGeneric('');
-
-        console.log(state.user.userId);
     
         try {
             const response = await axios.get(`${baseURL}medicine/existing/${state.user.userId}/${generic}`);
@@ -203,7 +198,6 @@ const CreateMedicines = () => {
     const handleStockChange = (index, text) => {
         setStockInputs((prevState) => {
             const updatedState = { ...prevState, [index]: text };
-            console.log("✅ Updated Stock Inputs:", updatedState); // Log the new state
             return updatedState;
         });
     };
@@ -231,7 +225,6 @@ const CreateMedicines = () => {
     };
 
     const handleSubmit = async (index) => {
-        console.log("🚀 handleSubmit called for index:", index);
     
         if (!medicines || medicines.length === 0) {
             console.error("Medicines array is empty or undefined.");
@@ -245,7 +238,6 @@ const CreateMedicines = () => {
             return;
         }
     
-        console.log("✅ Selected Medicine:", selectedMedicine);
     
         // Gather all stock and expiration date entries for the selected medicine
         const stockEntries = [];
@@ -281,7 +273,6 @@ const CreateMedicines = () => {
             return;
         }
     
-        console.log("Stock Entries:", stockEntries);
     
         try {
             const response = await axios.post(`${baseURL}medicine/create`, {
@@ -296,7 +287,6 @@ const CreateMedicines = () => {
                 pharmacy: state.user.userId,
             });
     
-            console.log(response.data); // Log server response
     
             // Remove the added medicine from the list
             setMedicines((prevMedicines) => prevMedicines.filter((_, i) => i !== index));
@@ -347,7 +337,6 @@ const CreateMedicines = () => {
 
 
 
-    console.log(state);
 
     return (
         <View style={styles.container}>

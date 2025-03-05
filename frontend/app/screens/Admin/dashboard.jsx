@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 10,
+    paddingVertical: 50,
     backgroundColor: '#005b7f',
   },
   menuIcon: {

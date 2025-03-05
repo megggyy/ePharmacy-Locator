@@ -10,7 +10,7 @@ import baseURL from '@/assets/common/baseurl';
 const MedicineList = () => {
   const router = useRouter();
   const { pharmacyId, genericName } = useLocalSearchParams();
-  const [medicine, setMedicine] = useState([]);
+  const decodedGenericName = genericName ? decodeURIComponent(genericName) : "";  const [medicine, setMedicine] = useState([]);
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState('');
   const [isCategory, setIsCategory] = useState({});
@@ -18,7 +18,7 @@ const MedicineList = () => {
   useEffect(() => {
     const fetchMedicineStocks = async () => {
       try {
-        const response = await axios.get(`${baseURL}medicine/list/${pharmacyId}/${genericName}`);
+        const response = await axios.get(`${baseURL}medicine/list/${pharmacyId}/${decodedGenericName}`);
         console.log('Fetched medicine data:', response.data.data); // Logging fetched data
         setMedicine(response.data.data);
       } catch (error) {
@@ -29,7 +29,7 @@ const MedicineList = () => {
     };
 
     fetchMedicineStocks();
-  }, [pharmacyId, genericName]);
+  }, [pharmacyId, decodedGenericName]);
 
   useEffect(() => {
     if (medicine.length > 0) {

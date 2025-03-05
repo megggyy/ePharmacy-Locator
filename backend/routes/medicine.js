@@ -479,7 +479,7 @@ router.get('/available/:name', async (req, res) => {
 
         // Find all medicines that match the generic name (case-insensitive)
         const medicines = await Medicine.find({
-            genericName: { $regex: new RegExp(`^${name}$`, 'i') }
+            genericName: name 
         });
 
         if (medicines.length === 0) {
@@ -574,7 +574,7 @@ router.get('/list/:pharmacyId/:genericName', async (req, res) => {
 
         // Find all medicines that match the generic name (case-insensitive)
         const medicines = await Medicine.find({
-            genericName: { $regex: new RegExp(`^${genericName}$`, 'i') }
+            genericName: genericName
         });
 
         if (medicines.length === 0) {
