@@ -1,18 +1,95 @@
-import React, { useState, useEffect, useRef } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Alert, ActivityIndicator, Animated } from "react-native";
+import React, { useState, useEffect, useRef, useContext } from "react";
+import { View, Text, Image, TouchableOpacity, StyleSheet, Alert, ActivityIndicator, Animated, FlatList, Modal } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import * as ImagePicker from "expo-image-picker";
 import axios from "axios";
 import baseURL from "@/assets/common/baseurl";
+import AuthGlobal from "@/context/AuthGlobal";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ImageEditor } from "expo-crop-image";
 
+
 const PrescriptionUploadScreen = () => {
+  const [prescriptions, setPrescriptions] = useState([]);
+  const [customerId, setCustomerId] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [imageUri, setImageUri] = useState(null);
   const [isCropping, setIsCropping] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showCropNote, setShowCropNote] = useState(true);
+  const { state } = useContext(AuthGlobal); 
+  const [isDrawerVisible, setIsDrawerVisible] = useState(false);
   const router = useRouter();
+  
+  // Get userId from authentication state
+  const userId = state?.user?.userId; 
+
+  useEffect(() => {
+    fetchCustomerId();
+  }, [userId]);
+
+  const fetchCustomerId = async () => {
+    if (!userId) {
+      console.error("User ID is missing");
+      return;
+    }
+    
+    try {
+      const token = await AsyncStorage.getItem("jwt");
+      const response = await axios.get(`${baseURL}customers/user/${userId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setCustomerId(response.data.customerId);
+    } catch (error) {
+      console.error("Error fetching customer ID:", error.response?.data || error.message);
+    }
+  };
+
+  const fetchPrescriptions = async () => {
+    if (!customerId) return;
+  
+    try {
+      setLoading(true);
+      const response = await axios.get(`${baseURL}customers/${customerId}/prescriptions`);
+      
+      // Filter unique prescriptions based on image URL
+      const uniquePrescriptions = [];
+      const seenUrls = new Set();
+  
+      response.data.prescriptions.forEach((prescription) => {
+        if (!seenUrls.has(prescription.originalImageUrl)) {
+          seenUrls.add(prescription.originalImageUrl);
+          uniquePrescriptions.push(prescription);
+        }
+      });
+  
+      setPrescriptions(uniquePrescriptions);
+    } catch (error) {
+      console.error("Error fetching prescriptions:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+
+  useEffect(() => {
+    if (customerId) fetchPrescriptions();
+  }, [customerId]);
+
+  const handleReuse = (prescription) => {
+    setIsDrawerVisible(false); // Close the modal first
+    router.push({
+      pathname: "/screens/User/Features/PrescriptionScan",
+      params: {
+        originalImageUrl: prescription.originalImageUrl,
+        processedImageUrl: prescription.processedImageUrl,
+        ocrText: prescription.ocrText,
+        customerId: prescription.customerId,
+      },
+    });
+  };
+  
 
   // Animation reference
   const slideAnim = useRef(new Animated.Value(-100)).current; // Start off-screen
@@ -61,24 +138,34 @@ const PrescriptionUploadScreen = () => {
         name: "prescription.jpg",
         type: "image/jpeg",
       });
-
+  
       const response = await axios.post(`${baseURL}customers/scan-prescription`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-
+  
+      if (!response.data) {
+        throw new Error("Empty response from server");
+      }
+  
       const { ocrText, processedImageUrl, originalImageUrl } = response.data;
-
-      router.push({
-        pathname: "/screens/User/Features/PrescriptionScan",
-        params: { originalImageUrl, processedImageUrl, ocrText },
-      });
+  
+      // Ensure all params are ready before navigating
+      if (ocrText && processedImageUrl && originalImageUrl && customerId) {
+        router.push({
+          pathname: "/screens/User/Features/PrescriptionScan",
+          params: { originalImageUrl, processedImageUrl, ocrText, customerId },
+        });
+      } else {
+        Alert.alert("Processing Error", "Some required data is missing from the response.");
+      }
     } catch (error) {
       console.error("Error processing OCR:", error);
-      Alert.alert("OCR Error", "Failed to process the image.");
+      Alert.alert("OCR Error", "Failed to process the image. Please try again.");
     } finally {
       setIsLoading(false);
     }
   };
+  
 
   const handleImageSelection = async (source) => {
     if (isLoading) return;
@@ -161,8 +248,56 @@ const PrescriptionUploadScreen = () => {
             <TouchableOpacity style={styles.button} onPress={() => handleImageSelection("gallery")}>
               <Ionicons name="cloud-upload-outline" size={60} color="white" />
             </TouchableOpacity>
+             {/* Open Drawer Button */}
+            <TouchableOpacity
+              style={styles.drawerButton}
+              onPress={() => setIsDrawerVisible(true)}
+            >
+              <Ionicons name="folder-open" size={24} color="white" />
+              <Text style={styles.drawerButtonText}>View Previous Prescriptions</Text>
+            </TouchableOpacity>
           </View>
-        </>
+        {/* Prescription Drawer */}
+        <Modal
+          visible={isDrawerVisible}
+          transparent={true}
+          animationType="slide"
+          onRequestClose={() => setIsDrawerVisible(false)}
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.drawer}>
+              {/* Close Button */}
+              <TouchableOpacity style={styles.closeDrawerButton} onPress={() => setIsDrawerVisible(false)}>
+                <Ionicons name="close" size={24} color="#333" />
+              </TouchableOpacity>
+
+              <Text style={styles.drawerTitle}>Previous Prescriptions</Text>
+
+              {loading ? (
+                <ActivityIndicator size="large" color="#005b7f" />
+              ) : prescriptions.length > 0 ? (
+                <FlatList
+                  data={prescriptions}
+                  keyExtractor={(item) => item._id}
+                  numColumns={2}
+                  contentContainerStyle={styles.listContainer}
+                  renderItem={({ item }) => (
+                    <TouchableOpacity
+                      style={styles.prescriptionCard}
+                      onPress={() => handleReuse(item)}
+                    >
+                      <Image source={{ uri: item.originalImageUrl }} style={styles.prescriptionImage} />
+                      <Text style={styles.prescriptionText}>Tap to reuse</Text>
+                    </TouchableOpacity>
+                  )}
+                />
+              ) : (
+                <Text style={styles.noPrescriptionsText}>No previous prescriptions found.</Text>
+              )}
+            </View>
+          </View>
+        </Modal>
+        </>      
       )}
     </View>
   );
@@ -249,6 +384,83 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     padding: 5,
+  },
+  // prescription drawer
+  drawerButton: {
+    flexDirection: "row",
+    backgroundColor: "#005b7f",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    alignItems: "center",
+    marginTop: 20,
+  },
+  drawerButtonText: {
+    color: "white",
+    fontSize: 16,
+    marginLeft: 10,
+  },
+  modal: {
+    justifyContent: "flex-end",
+    margin: 0,
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: "flex-end",  // Pushes the modal to the bottom
+    backgroundColor: "rgba(0, 0, 0, 0.5)",  // Semi-transparent background
+  },
+  drawer: {
+    backgroundColor: "white",
+    width: "100%",
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    padding: 20,
+    alignItems: "center",
+  },
+  closeDrawerButton: {
+    position: "absolute",
+    right: 20,
+    top: 15,
+    zIndex: 10,
+  },  
+  drawerHandle: {
+    width: 50,
+    height: 5,
+    backgroundColor: "#ccc",
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  drawerTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 15,
+  },
+  listContainer: {
+    alignItems: "center",
+  },
+  prescriptionCard: {
+    width: 140,
+    height: 160,
+    backgroundColor: "#f8f8f8",
+    borderRadius: 10,
+    margin: 8,
+    alignItems: "center",
+    padding: 10,
+  },
+  prescriptionImage: {
+    width: 120,
+    height: 120,
+    borderRadius: 8,
+  },
+  prescriptionText: {
+    marginTop: 5,
+    fontSize: 12,
+    color: "#005b7f",
+  },
+  noPrescriptionsText: {
+    marginTop: 20,
+    fontSize: 16,
+    color: "#999",
   },
 });
 

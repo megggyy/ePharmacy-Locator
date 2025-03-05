@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, Alert, ScrollView, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -12,11 +12,11 @@ let spell;
 
 const PrescriptionScreen = () => {
   const router = useRouter();
-  const { processedImageUrl, ocrText, originalImageUrl } = useLocalSearchParams();
+  const { processedImageUrl, ocrText, originalImageUrl, customerId } = useLocalSearchParams();
   const [medicinesList, setMedicinesList] = useState([]);
   const [matchedMedicines, setMatchedMedicines] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
@@ -109,31 +109,36 @@ const PrescriptionScreen = () => {
   };
 
   const uploadPrescription = async () => {
-    try {
-      const validMedicines = matchedMedicines
-        .filter(m => m?.genericName)  // Remove null or undefined values
-        .map(m => m.genericName); // Extract names
-  
-      const response = await axios.post(`${baseURL}customers/upload-prescription`, {
-        originalImageUrl,
-        processedImageUrl,
-        ocrText,
-        matchedMedicines: validMedicines, // Send only valid medicines
-      }, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-  
-      console.log("Prescription saved:", response.data);
-      //Alert.alert("Success", "Prescription uploaded successfully!");
-    } catch (error) {
-      console.error("Error uploading prescription:", error);
-      //Alert.alert("Error", "Failed to upload prescription.");
+    if (!customerId) {
+        console.error("Customer ID is missing.");
+        Alert.alert("Error", "Customer ID is required to upload the prescription.");
+        return;
     }
-  };
-  
-  
+
+    try {
+        const validMedicines = matchedMedicines
+            .filter(m => m?.genericName)
+            .map(m => m.genericName);
+
+        const response = await axios.post(`${baseURL}customers/upload-prescription`, {
+            customerId,  
+            originalImageUrl,
+            processedImageUrl,
+            ocrText,
+            matchedMedicines: validMedicines,
+        }, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+
+        console.log("Prescription saved:", response.data);
+        //Alert.alert("Success", "Prescription uploaded successfully!");
+    } catch (error) {
+        console.error("Error uploading prescription:", error.response?.data || error.message);
+        //Alert.alert("Error", "Failed to upload prescription.");
+    }
+};
 
   const handleFindPharmacies = async () => {
     try {

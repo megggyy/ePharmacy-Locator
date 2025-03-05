@@ -53,6 +53,7 @@
     "react-native-image-zoom-viewer": "^3.0.1",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-maps": "^1.18.0",
+    "react-native-modal": "^13.0.1",
     "react-native-modal-datetime-picker": "^18.0.0",
     "react-native-paper": "^5.12.5",
     "react-native-permissions": "^5.1.0",

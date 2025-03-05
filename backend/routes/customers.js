@@ -105,13 +105,16 @@ router.post(
 
 router.post("/upload-prescription", async (req, res) => {
   try {
-    let { originalImageUrl, processedImageUrl, ocrText, matchedMedicines } = req.body;
+    let { originalImageUrl, processedImageUrl, ocrText, matchedMedicines, customerId } = req.body;
 
-    // Ensure matchedMedicines is an array & filter null values
+    if (!customerId) {
+      return res.status(400).json({ error: "Customer ID is required." });
+    }
+
     if (!Array.isArray(matchedMedicines)) {
       matchedMedicines = [];
     } else {
-      matchedMedicines = matchedMedicines.filter(med => med); // Remove null values
+      matchedMedicines = matchedMedicines.filter(med => med);
     }
 
     const newPrescription = new Prescription({
@@ -119,6 +122,7 @@ router.post("/upload-prescription", async (req, res) => {
       processedImageUrl,
       ocrText,
       matchedMedicines,
+      customerId,
     });
 
     await newPrescription.save();
@@ -130,6 +134,23 @@ router.post("/upload-prescription", async (req, res) => {
   } catch (error) {
     console.error("Error uploading prescription:", error);
     res.status(500).json({ error: "Failed to upload prescription" });
+  }
+});
+
+
+router.get("/:customerId/prescriptions", async (req, res) => {
+  try {
+    const { customerId } = req.params;
+    const prescriptions = await Prescription.find({ customerId }).sort({ createdAt: -1 });
+
+    if (!prescriptions.length) {
+      return res.status(404).json({ message: "No prescriptions found." });
+    }
+
+    res.json({ prescriptions });
+  } catch (error) {
+    console.error("Error fetching prescriptions:", error);
+    res.status(500).json({ error: "Failed to fetch prescriptions." });
   }
 });
 
@@ -158,6 +179,17 @@ router.get("/mostScannedMedicines", async (req, res) => {
   } catch (error) {
     console.error("Error fetching most scanned medicines:", error);
     res.status(500).json({ message: "An error occurred while fetching data." });
+  }
+});
+
+router.get('/user/:userId', async (req, res) => {
+  try {
+      const customer = await Customer.findOne({ userInfo: req.params.userId });
+      if (!customer) return res.status(404).json({ message: 'Customer not found' });
+
+      res.json({ customerId: customer._id });
+  } catch (error) {
+      res.status(500).json({ message: 'Error fetching customer ID', error });
   }
 });
 

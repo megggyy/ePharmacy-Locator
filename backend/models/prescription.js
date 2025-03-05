@@ -3,27 +3,31 @@ const mongoose = require("mongoose");
 const prescriptionSchema = new mongoose.Schema({
   originalImageUrl: {
     type: String,
-    //required: true,
   },
   processedImageUrl: {
     type: String,
-    //required: true,
   },
-  matchedMedicines: [{ 
-    type: String 
-  }],
+  matchedMedicines: [{ type: String }],
+  ocrText: {
+    type: String,
+  },
+  customerId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Customer",
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-prescriptionSchema.virtual('id').get(function () {
-    return this._id.toHexString();
+prescriptionSchema.virtual("id").get(function () {
+  return this._id.toHexString();
 });
 
-prescriptionSchema.set('toJSON', {
-    virtuals: true,
+prescriptionSchema.set("toJSON", {
+  virtuals: true,
 });
 
-exports.Prescription = mongoose.model('Prescription', prescriptionSchema);
+exports.Prescription = mongoose.model("Prescription", prescriptionSchema);
