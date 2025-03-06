@@ -34,6 +34,10 @@ function authJwt() {
                     methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'DELETE']
                 },
                 {
+                    url: /\/api\/v1\/feedbacks(.*)/,
+                    methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'DELETE']
+                },
+                {
                     url: /\/public\/uploads(.*)/,
                     methods: ['GET', 'OPTIONS', 'POST']
                 },

@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ActivityIndicator, TextInput } from 'react-native';
+import React, { useEffect, useState, useContext } from 'react';
+import { Switch, View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ActivityIndicator, TextInput } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import axios from 'axios';
+import AuthGlobal from '@/context/AuthGlobal';
 import baseURL from '@/assets/common/baseurl';
 import { LinearGradient } from 'expo-linear-gradient';
+import StarRating from "@/assets/common/starRating";
+import Spinner from "@/assets/common/spinner";
+import Toast from 'react-native-toast-message';
 
 const PharmacyDetails = () => {
   const router = useRouter();
@@ -14,6 +19,11 @@ const PharmacyDetails = () => {
   const [medicationData, setMedicationData] = useState([]);
   const [category, setCategory] = useState('');
   const [isCategory, setIsCategory] = useState({});
+  const [feedbacks, setFeedbacks] = useState([]);
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState('');
+  const [showReviewForm, setShowReviewForm] = useState(true);
+  const [shareCustomerInfo, setShareCustomerInfo] = useState(true);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('shop');
   const [search, setSearch] = useState('');
@@ -21,6 +31,10 @@ const PharmacyDetails = () => {
   const [filteredMedicines, setFilteredMedicines] = useState([]);
   const [categories, setCategories] = useState([]);
 
+  const [error, setError] = useState('');
+  const { state } = useContext(AuthGlobal);
+
+  console.log(state)
   useEffect(() => {
     console.log("Fetching pharmacy with ID:", id);
     const fetchPharmacyDetails = async () => {
@@ -46,7 +60,7 @@ const PharmacyDetails = () => {
         const response = await axios.get(`${baseURL}medicine/features/${id}`);
         const stockData = response.data || [];
         const categoryMap = {};
-    
+
         stockData.forEach((stockItem) => {
           const medicine = stockItem.medicine;
           if (medicine && Array.isArray(medicine.category)) {
@@ -57,12 +71,12 @@ const PharmacyDetails = () => {
             });
           }
         });
-    
+
         const categoryList = Object.keys(categoryMap).map((categoryName) => ({
           name: categoryName,
           count: categoryMap[categoryName],
         }));
-    
+
         setCategories(categoryList);
         console.log("Stock data:", stockData);
         console.log("Extracted categories:", categoryList);
@@ -70,17 +84,32 @@ const PharmacyDetails = () => {
         console.error('Error fetching medicine categories:', error);
       }
     };
-    
+
+    const fetchFeedbacks = async () => {
+      try {
+        const response = await axios.get(`${baseURL}feedbacks/${id}`);
+        setFeedbacks(response.data);
+      } catch (error) {
+        console.error("Error fetching pharmacy details:", error);
+      }
+    };
+
+
 
     const fetchData = () => {
       Promise.all([
         fetchPharmacyDetails(),
         fetchMedicineStocks(),
-        fetchCategoriesWithMedicines(), // Include this function here
+        fetchCategoriesWithMedicines(),
+        fetchFeedbacks(),
+
       ]).finally(() => setLoading(false));
     };
-    
-    fetchData(); // Fetch immediately when component mounts
+    fetchData();
+
+    const intervalId = setInterval(fetchData, 5000); // 30,000 ms = 30 seconds
+
+    return () => clearInterval(intervalId);
   }, [id]);
 
   useEffect(() => {
@@ -97,21 +126,21 @@ const PharmacyDetails = () => {
   }, [medicationData]);
 
 
-const handleCategoryClick = (category) => {
-  if (!id) {
-    console.error("Pharmacy ID is missing!");
-    return;
-  }
+  const handleCategoryClick = (category) => {
+    if (!id) {
+      console.error("Pharmacy ID is missing!");
+      return;
+    }
 
-  if (!category?.name) {
-    console.error("Category name is missing!");
-    return;
-  }
+    if (!category?.name) {
+      console.error("Category name is missing!");
+      return;
+    }
 
-  const route = `/screens/User/Features/FilterMedicinesByCategoryPerPharmacy?category=${encodeURIComponent(category.name)}&pharmacyId=${id}`;
-  console.log("Navigating to:", route);
-  router.push(route);
-};
+    const route = `/screens/User/Features/FilterMedicinesByCategoryPerPharmacy?category=${encodeURIComponent(category.name)}&pharmacyId=${id}`;
+    console.log("Navigating to:", route);
+    router.push(route);
+  };
 
   // Filter medicines based on search input
   useEffect(() => {
@@ -125,8 +154,78 @@ const handleCategoryClick = (category) => {
       setFilteredMedicines(filtered);
     }
   }, [search, medicationData]);
-  
 
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <Ionicons
+          key={i}
+          name={i <= rating ? 'star' : 'star-outline'}
+          size={20}
+          color={i <= rating ? 'black' : 'darkgray'}
+        />
+      );
+    }
+    return stars;
+  };
+
+  const addReview = (pharmacyId) => {
+    const reviewData = {
+      customer: state.user && shareCustomerInfo ? state.user.userId : null, // Only send user ID if authenticated & sharing is enabled
+      comment: comment,
+      rating: rating,
+      pharmacy: pharmacyId,
+    };
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      }
+    };
+
+    axios.post(`${baseURL}feedbacks/create`, reviewData, config)
+      .then((res) => {
+        Toast.show({
+          type: 'success',
+          position: 'top',
+          text1: 'Review Added',
+          visibilityTime: 4000,
+          autoHide: true,
+        });
+
+        setRating(0);      // Reset rating
+        setComment('');    // Reset comment
+        setShowReviewForm(false); // Hide the review form
+      })
+      .catch((error) => {
+        Toast.show({
+          type: "error",
+          text1: "ERROR!",
+          text2: "PLEASE TRY AGAIN"
+        });
+      });
+  };
+
+  const calculateAverageRating = () => {
+    if (feedbacks.length === 0) return 0;
+    const total = feedbacks.reduce((sum, feedback) => sum + feedback.rating, 0);
+    return (total / feedbacks.length).toFixed(1); // Keep 1 decimal place
+  };
+
+  if (loading) {
+    return (
+      <Spinner />
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={styles.container}>
+        <Text>Error: {error}</Text>
+      </View>
+    );
+  }
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
@@ -147,7 +246,7 @@ const handleCategoryClick = (category) => {
             (sum, stockItem) => sum + stockItem.stock,
             0
           ) || 0;
-  
+
           return (
             <TouchableOpacity
               key={index}
@@ -165,10 +264,10 @@ const handleCategoryClick = (category) => {
                   {totalStock > 0 ? `${totalStock} in stock` : 'Out of Stock'}
                 </Text>
               </View>
-  
+
               {/* Generic Name */}
               <Text style={styles.genericName}>{medDetails.genericName || 'Unknown'}</Text>
-  
+
               {/* Medicine Details */}
               <View style={styles.medicineDetails}>
                 <Text style={styles.detailText}>💊 Dosage: {medDetails.dosageStrength || 'N/A'}</Text>
@@ -176,7 +275,7 @@ const handleCategoryClick = (category) => {
                 <Text style={styles.detailText}>📂 Classification: {medDetails.classification || 'N/A'}</Text>
                 <Text style={styles.detailText}>📋 Category: {categoryNames}</Text>
               </View>
-  
+
               {/* Last Updated */}
               <Text style={styles.lastUpdated}>
                 (Stock updated on {medication.timeStamps ? new Date(medication.timeStamps).toLocaleString() : 'No Date'})
@@ -189,31 +288,112 @@ const handleCategoryClick = (category) => {
       )}
     </View>
   );
-  
-  
-  
+
+
+
   const renderCategories = () => (
     <View style={styles.categoryContainer}>
       {categories.length > 0 ? (
         categories.map((category, index) => (
           <TouchableOpacity
-          key={index}
-          style={styles.categoryCard}
-          onPress={() => handleCategoryClick(category)}
-        >
-          <Text style={styles.categoryName}>{category.name}</Text>
-          <Text style={styles.categoryCount}>{category.count}</Text>
-        </TouchableOpacity>
-        
+            key={index}
+            style={styles.categoryCard}
+            onPress={() => handleCategoryClick(category)}
+          >
+            <Text style={styles.categoryName}>{category.name}</Text>
+            <Text style={styles.categoryCount}>{category.count}</Text>
+          </TouchableOpacity>
+
         ))
       ) : (
         <Text style={styles.noCategoriesText}>No categories available.</Text>
       )}
     </View>
   );
-  
-  
-  
+
+  const renderReviews = () => (
+    <KeyboardAwareScrollView
+      contentContainerStyle={{ flexGrow: 1 }}
+      enableOnAndroid={true}
+      extraScrollHeight={100} // Adjust scrolling when keyboard is open
+      keyboardShouldPersistTaps="handled"
+    >
+      <View style={styles.reviewContainer}>
+        <View>
+          {feedbacks.length > 0 ? (
+            feedbacks.map((feedback, index) => (
+              <View key={feedback._id} style={styles.reviewCard}>
+                {/* Customer Name and Rating in the Same Row */}
+                <View style={styles.userInfo}>
+                  <Text style={styles.userName}>
+                    {feedback.customer ? feedback.customer.name : "Anonymous"}
+                  </Text>
+                  <View style={styles.starsContainer}>
+                    {renderStars(feedback.rating)}
+                  </View>
+                </View>
+
+                {/* Show comment only if it's not empty */}
+                {feedback.comment && (
+                  <>
+                    <Text style={styles.value}>{feedback.comment}</Text>
+                  </>
+                )}
+              </View>
+            ))
+          ) : (
+            <Text />
+          )}
+        </View>
+
+
+        {showReviewForm && (
+          <>
+            <Text style={styles.headerText}>RATE THIS PHARMACY</Text>
+            <View style={styles.addReview}>
+              <View style={styles.ratingContainer}>
+                <Text style={styles.ratingLabel}>RATING:</Text>
+                <StarRating
+                  maxStars={5}
+                  rating={parseInt(rating) || 0}
+                  onChangeRating={newRating => setRating(newRating.toString())}
+                />
+              </View>
+              <Text style={styles.ratingLabel}>COMMENT:</Text>
+              <TextInput
+                value={comment}
+                onChangeText={text => setComment(text)}
+                style={styles.input}
+              />
+
+              {/* Show the switch only if user is authenticated */}
+              {state.isAuthenticated && Object.keys(state.user).length > 0 && (
+                <View style={styles.switchContainer}>
+                  <Text style={styles.ratingLabel}>SHARE MY INFO</Text>
+                  <Switch
+                    value={shareCustomerInfo}
+                    onValueChange={setShareCustomerInfo}
+                    trackColor={{ false: "#ccc", true: "#000" }} // Change track color
+                    thumbColor={shareCustomerInfo ? "#fff" : "#888"}  // Change thumb color
+                  />
+                </View>
+              )}
+
+
+              <TouchableOpacity
+                onPress={() => addReview(pharmacy._id)}
+                style={styles.confirmButton}
+              >
+                <Text style={{ color: 'white', textAlign: 'center', fontSize: 20 }}>ADD REVIEW</Text>
+              </TouchableOpacity>
+            </View>
+          </>
+        )}
+      </View >
+    </KeyboardAwareScrollView>
+
+  );
+
   const renderContent = () => {
     if (activeTab === 'shop') {
       return (
@@ -255,71 +435,84 @@ const handleCategoryClick = (category) => {
               />
             </MapView>
           </View>
+
         </View>
+
+
       );
     } else if (activeTab === 'products') {
       return renderMedicines();
-    } else {
+    } else if (activeTab === 'categories') {
       return renderCategories();
+    } else {
+      return renderReviews();
     }
   };
 
+
+
   return (
     <View style={styles.container}>
-    <LinearGradient
-      colors={['#005b7f', '#14967f']} // Adjust colors if needed
-      start={{ x: 0, y: 0 }} // Top
-      end={{ x: 0, y: 1 }} // Bottom
-      style={styles.topSection}
-    >
-      <View style={styles.topBar}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <View style={styles.searchContainer}>
-          <Ionicons name="search" size={20} color="#555" style={styles.searchIcon} />
-          <TextInput
-            placeholder="Search in pharmacy"
-            value={search}
-            onChangeText={setSearch}
-            style={styles.searchInput}
+      <LinearGradient
+        colors={['#005b7f', '#14967f']} // Adjust colors if needed
+        start={{ x: 0, y: 0 }} // Top
+        end={{ x: 0, y: 1 }} // Bottom
+        style={styles.topSection}
+      >
+        <View style={styles.topBar}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <Ionicons name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+          <View style={styles.searchContainer}>
+            <Ionicons name="search" size={20} color="#555" style={styles.searchIcon} />
+            <TextInput
+              placeholder="Search in pharmacy"
+              value={search}
+              onChangeText={setSearch}
+              style={styles.searchInput}
+            />
+          </View>
+        </View>
+
+        <View style={styles.pharmacyHeader}>
+          <Image
+            style={styles.pharmacyImage}
+            source={
+              pharmacy?.images?.[0]
+                ? { uri: pharmacy.images[0] }
+                : require('@/assets/images/sample.jpg')
+            }
           />
+          <View style={styles.pharmacyInfo}>
+            <Text style={styles.pharmacyName}>
+              {pharmacy.userInfo.name}
+              {feedbacks.length > 0 ? ` (${calculateAverageRating()} ★)` : " (No Rating)"}
+            </Text>
+            <Text style={styles.businessHours}>📅 {pharmacy.businessDays || 'Not Available'}</Text>
+            <Text style={styles.businessHours}>⏰ {pharmacy.openingHour} - {pharmacy.closingHour}</Text>
+          </View>
         </View>
+      </LinearGradient>
+
+      {/* Tabs Section */}
+      <View style={styles.tabs}>
+        <TouchableOpacity onPress={() => setActiveTab('shop')} style={[styles.tab, activeTab === 'shop' && styles.activeTab]}>
+          <Text style={styles.tabText}>Shop</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setActiveTab('products')} style={[styles.tab, activeTab === 'products' && styles.activeTab]}>
+          <Text style={styles.tabText}>Products</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setActiveTab('categories')} style={[styles.tab, activeTab === 'categories' && styles.activeTab]}>
+          <Text style={styles.tabText}>Categories</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setActiveTab('feedbacks')} style={[styles.tab, activeTab === 'feedbacks' && styles.activeTab]}>
+          <Text style={styles.tabText}>Reviews</Text>
+        </TouchableOpacity>
       </View>
-  
-      <View style={styles.pharmacyHeader}>
-        <Image
-          style={styles.pharmacyImage}
-          source={
-            pharmacy?.images?.[0]
-              ? { uri: pharmacy.images[0] }
-              : require('@/assets/images/sample.jpg')
-          }
-        />
-        <View style={styles.pharmacyInfo}>
-          <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
-          <Text style={styles.businessHours}>📅 {pharmacy.businessDays || 'Not Available'}</Text>
-          <Text style={styles.businessHours}>⏰ {pharmacy.openingHour} - {pharmacy.closingHour}</Text>
-        </View>
-      </View>
-    </LinearGradient>
-  
-    {/* Tabs Section */}
-    <View style={styles.tabs}>
-      <TouchableOpacity onPress={() => setActiveTab('shop')} style={[styles.tab, activeTab === 'shop' && styles.activeTab]}>
-        <Text style={styles.tabText}>Shop</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setActiveTab('products')} style={[styles.tab, activeTab === 'products' && styles.activeTab]}>
-        <Text style={styles.tabText}>Products</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setActiveTab('categories')} style={[styles.tab, activeTab === 'categories' && styles.activeTab]}>
-        <Text style={styles.tabText}>Categories</Text>
-      </TouchableOpacity>
+
+      <ScrollView>{renderContent()}</ScrollView>
     </View>
-  
-    <ScrollView>{renderContent()}</ScrollView>
-  </View>
-  
+
   );
 };
 
@@ -330,7 +523,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingHorizontal: 16,
     height: '29%',
-  },  
+  },
   topBar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -419,7 +612,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     flexWrap: 'wrap', // Allow content to be displayed properly
-  },  
+  },
   pharmacyInfo: { flex: 1 },
   pharmacyName: {
     fontSize: 20,
@@ -430,7 +623,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'white',
     marginTop: 4,
-  },  
+  },
   infoText: { fontSize: 14, color: 'white' },
   tabs: {
     flexDirection: 'row',
@@ -482,7 +675,105 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     fontSize: 12
   },
-  
+  reviewCard: {
+    padding: 20,
+    backgroundColor: '#4A8691',
+    borderRadius: 10,
+    marginBottom: 20
+  },
+  headerText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: 'black',
+    justifyContent: 'center',
+    textAlign: 'center',
+    marginVertical: 15
+  },
+  reviewCard: {
+    backgroundColor: "#f9f9f9",
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  userInfo: {
+    flexDirection: "row", // Aligns items in a row
+    alignItems: "center", // Aligns vertically
+    justifyContent: "space-between", // Spaces name and rating evenly
+  },
+  userName: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  starsContainer: {
+    flexDirection: "row",
+    marginLeft: 10, // Space between name and rating
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: "bold",
+    marginTop: 5,
+  },
+  value: {
+    fontSize: 15,
+    color: "#555",
+    marginTop: 5,
+    fontStyle: "italic",
+  },
+  reviewContainer: {
+    padding: 20
+  },
+  addReview: {
+    padding: 20,
+    backgroundColor: '#4A8691',
+    borderRadius: 10
+  },
+  reviewSection: {
+    marginBottom: 20,
+  },
+  ratingContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 15
+  },
+  ratingLabel: {
+    marginRight: 10,
+    fontSize: 16,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: 'black',
+    padding: 12,
+    borderRadius: 10,
+    marginVertical: 10,
+    fontSize: 16,
+  },
+  switchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginVertical: 10,
+  },
+  switchLabel: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  confirmButton: {
+    backgroundColor: 'black',
+    paddingVertical: 12,
+    paddingHorizontal: 100,
+    borderRadius: 8,
+    marginVertical: 10,
+    marginBottom: 5,
+
+    alignItems: 'center',
+  },
 });
 
 export default PharmacyDetails;
