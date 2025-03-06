@@ -94,6 +94,23 @@ const PharmacyDetails = () => {
       }
     };
 
+    const fetchCustomerFeedbacks = async () => {
+      if (!state.user) return; // Exit if user is not authenticated
+    
+      try {
+        const response = await axios.get(`${baseURL}feedbacks/customer/${state.user.userId}`);
+    
+        if (response.data.exists) {
+          setShowReviewForm(false); 
+        } else {
+          setShowReviewForm(true);
+        }
+      } catch (error) {
+        console.error("Error fetching customer feedback:", error);
+      }
+    };
+    
+
 
 
     const fetchData = () => {
@@ -102,6 +119,7 @@ const PharmacyDetails = () => {
         fetchMedicineStocks(),
         fetchCategoriesWithMedicines(),
         fetchFeedbacks(),
+        fetchCustomerFeedbacks()
 
       ]).finally(() => setLoading(false));
     };
@@ -112,6 +130,7 @@ const PharmacyDetails = () => {
     return () => clearInterval(intervalId);
   }, [id]);
 
+  
   useEffect(() => {
     if (medicationData.length > 0) {
       const firstMedicine = medicationData[0].medicine;

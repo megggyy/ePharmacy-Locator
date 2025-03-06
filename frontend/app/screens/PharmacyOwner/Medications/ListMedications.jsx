@@ -42,7 +42,7 @@ const MedicationScreen = () => {
       );
     }
   };
-  
+
 
   useFocusEffect(
     React.useCallback(() => {
@@ -50,33 +50,62 @@ const MedicationScreen = () => {
         axios
           .get(`${baseURL}medicine/${state.user.userId}`)
           .then((res) => {
-            setMedicationsList(res.data);
-            setMedicationsFilter(res.data);
-            console.log(res.data);
+            const medications = res.data;
+            setMedicationsList(medications);
+            setMedicationsFilter(medications);
             setLoading(false);
+
+            // Check for expiring medications (within 30 days)
+            const today = new Date();
+    
+            const expiringSoon = medications
+              .map(med => ({
+                name: med.medicine.brandName,
+                expiringStocks: med.expirationPerStock
+                  .filter(exp => {
+                    const expiryDate = new Date(exp.expirationDate);
+                    const daysLeft = Math.ceil((expiryDate - today) / (1000 * 60 * 60 * 24)); // Round up to avoid decimals
+                    console.log('formattedToday:', today)
+                    console.log('expiryDate:', expiryDate)
+
+                    console.log('expired:', daysLeft)
+
+                    return daysLeft > 0 && daysLeft <= 30;
+
+                  })
+                  .map(exp => new Date(exp.expirationDate).toLocaleDateString())
+              }))
+              .filter(med => med.expiringStocks.length > 0); // Keep only medicines with expiring stocks
+
+            console.log('expired:', expiringSoon)
+            // Show alert if there are expiring medications
+            if (expiringSoon.length > 0) {
+              const message = expiringSoon
+                .map(med => `${med.name} - Exp: ${med.expiringStocks.join(', ')}`) // Fix: Use `med.name`
+                .join('\n');
+            
+              console.log('expired:', expiringSoon);
+            
+              Alert.alert(
+                "Expiring Medications",
+                `The following medicines are expiring soon:\n\n${message}`,
+                [{ text: "OK", onPress: () => console.log("Alert acknowledged") }]
+              );
+            }
+            
+
           })
           .catch((err) => {
             setLoading(false);
           });
       };
-  
-      fetchMedications(); // Initial fetch
-  
-      // Set up polling with a 5-second interval
-      const intervalId = setInterval(() => {
-        fetchMedications();
-      }, 5000);
-  
-      // Cleanup function to clear interval & reset state on unmount
-      return () => {
-        clearInterval(intervalId);
-        setMedicationsList([]);
-        setMedicationsFilter([]);
-        setLoading(true);
-      };
-    }, [state.user.userId]) // Dependency array ensures re-run when userId changes
+
+
+      fetchMedications();
+    }, [state.user.userId])
   );
-  
+
+
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
@@ -179,7 +208,7 @@ const MedicationScreen = () => {
 
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>
-                      {item.expirationPerStock.reduce((sum, exp) => sum + exp.stock, 0)} units
+                        {item.expirationPerStock.reduce((sum, exp) => sum + exp.stock, 0)} units
                       </Text>
                     </DataTable.Cell>
 

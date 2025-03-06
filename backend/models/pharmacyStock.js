@@ -13,7 +13,7 @@ const pharmacyStockSchema = mongoose.Schema({
                 required: true,
             },
             expirationDate: {
-                type: String,
+                type: Date,
             },
         }
     ],

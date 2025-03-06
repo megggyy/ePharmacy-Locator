@@ -50,4 +50,38 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.get('/customer/:id', async (req, res) => {
+    try {
+        const feedbacks = await Feedback.find({ customer: req.params.id });
+
+        if (feedbacks.length > 0) {
+            return res.status(200).json({ exists: true, feedbacks });
+        } else {
+            return res.status(200).json({ exists: false, message: "No feedback found for this customer." });
+        }
+    } catch (error) {
+        console.error("Error fetching feedback:", error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+router.get('/pharmacy/:id', async (req, res) => {
+    try {
+        // Find the pharmacy by its ID and include the userInfo field
+        const pharmacy = await Pharmacy.findOne({ userInfo: req.params.id });
+
+        if (!pharmacy) {
+            return res.status(400).json({ success: false, message: "Pharmacy not found" });
+        }
+
+        const feedbacks = await Feedback.find({ pharmacy: pharmacy._id })
+            .populate('customer', null, { strictPopulate: false })
+            .lean();
+
+        res.status(200).json(feedbacks);
+    } catch (error) {
+        console.error("Error fetching medicine:", error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
 module.exports = router;

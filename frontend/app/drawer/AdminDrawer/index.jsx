@@ -95,7 +95,7 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Manage Barangays</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/LicensedPharmacies/ListLicensedPharmacies')}>
-          <FontAwesome5 name="stamp" size={25} color="#5A5A5A" />
+          <FontAwesome5 name="stamp" size={30} color="#5A5A5A" />
           <Text style={styles.menuText}>Licensed Pharmacies</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Pharmacies/ListPharmacies')}>

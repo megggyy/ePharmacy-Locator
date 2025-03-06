@@ -96,8 +96,17 @@ export default function ReadMedicationScreen() {
             return (
               <View key={index} style={styles.expirationStock}>
                 <View style={styles.expirationDate}>
-                  <Text style={styles.value}>{exp.expirationDate}</Text>
+                  <Text style={styles.value}>
+                    {exp?.expirationDate
+                      ? new Date(exp.expirationDate).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })
+                      : "No Expiration Date"}
+                  </Text>
                 </View>
+
                 <View style={styles.stock}>
                   <Text style={styles.value}>{exp.stock}</Text>
                 </View>

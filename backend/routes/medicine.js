@@ -183,7 +183,7 @@ router.post('/create', async (req, res) => {
         // Ensure expirationDate remains in "YYYY-MM-DD" format
         const formattedExpirationPerStock = expirationPerStock.map(item => ({
             stock: Number(item.stock), // Convert stock to number
-            expirationDate: item.expirationDate // Keep it as a string
+            expirationDate: new Date(item.expirationDate) // Keep it as a string
         }));
 
 
