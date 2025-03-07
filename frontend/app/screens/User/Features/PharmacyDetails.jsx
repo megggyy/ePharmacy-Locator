@@ -20,8 +20,11 @@ const PharmacyDetails = () => {
   const [category, setCategory] = useState('');
   const [isCategory, setIsCategory] = useState({});
   const [feedbacks, setFeedbacks] = useState([]);
+  const [updateFeedback, setUpdateFeedback] = useState([]);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
+  const [name, setName] = useState('false');
+  const [editingReview, setEditingReview] = useState(null);
   const [showReviewForm, setShowReviewForm] = useState(true);
   const [shareCustomerInfo, setShareCustomerInfo] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -90,47 +93,27 @@ const PharmacyDetails = () => {
         const response = await axios.get(`${baseURL}feedbacks/${id}`);
         setFeedbacks(response.data);
       } catch (error) {
-        console.error("Error fetching pharmacy details:", error);
+        // console.error("Error fetching pharmacy details:", error);
       }
     };
 
-    const fetchCustomerFeedbacks = async () => {
-      if (!state.user) return; // Exit if user is not authenticated
-    
-      try {
-        const response = await axios.get(`${baseURL}feedbacks/customer/${state.user.userId}`);
-    
-        if (response.data.exists) {
-          setShowReviewForm(false); 
-        } else {
-          setShowReviewForm(true);
-        }
-      } catch (error) {
-        console.error("Error fetching customer feedback:", error);
-      }
-    };
-    
-
-
-
+  
     const fetchData = () => {
       Promise.all([
         fetchPharmacyDetails(),
         fetchMedicineStocks(),
         fetchCategoriesWithMedicines(),
         fetchFeedbacks(),
-        fetchCustomerFeedbacks()
 
       ]).finally(() => setLoading(false));
     };
     fetchData();
 
-    const intervalId = setInterval(fetchData, 5000); // 30,000 ms = 30 seconds
+    const interval = setInterval(fetchData, 5000);
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, [id]);
 
-  
   useEffect(() => {
     if (medicationData.length > 0) {
       const firstMedicine = medicationData[0].medicine;
@@ -144,6 +127,28 @@ const PharmacyDetails = () => {
     }
   }, [medicationData]);
 
+  useEffect(() => {
+    const fetchCustomerFeedbacks = async () => {
+      if (!state.user?.userId) {
+        setShowReviewForm(false); // Hide the review form
+        return;
+      }
+
+      try {
+        const response = await axios.get(`${baseURL}feedbacks/customer/${state.user.userId}`);
+
+        if (response.data?.exists) {
+          setShowReviewForm(false);
+        } else {
+          setShowReviewForm(true);
+        }
+      } catch (error) {
+        console.error("Error fetching customer feedback:", error?.response?.data || error.message);
+      }
+    };
+    fetchCustomerFeedbacks()
+
+  }, []);
 
   const handleCategoryClick = (category) => {
     if (!id) {
@@ -191,10 +196,11 @@ const PharmacyDetails = () => {
 
   const addReview = (pharmacyId) => {
     const reviewData = {
-      customer: state.user && shareCustomerInfo ? state.user.userId : null, // Only send user ID if authenticated & sharing is enabled
+      customer: state.user.userId,
       comment: comment,
       rating: rating,
       pharmacy: pharmacyId,
+      name: shareCustomerInfo,
     };
 
     const config = {
@@ -225,6 +231,58 @@ const PharmacyDetails = () => {
         });
       });
   };
+
+  const updateReviewForm = async (feedbackId) => {
+    try {
+      const response = await axios.get(`${baseURL}feedbacks/updateFetch/${feedbackId}`);
+      setUpdateFeedback(response.data); // Update state
+      setRating(response.data.rating); // Ensure rating is set
+      setComment(response.data.comment);
+      setShareCustomerInfo(response.data.name);
+      setEditingReview(true);// Set toggle based on name visibility
+      setShowReviewForm(true);
+    } catch (error) {
+      console.error("Error fetching review for update:", error);
+    }
+  };
+
+
+  const deleteReview = async (reviewId) => {
+    try {
+      const response = await axios.delete(`${baseURL}feedbacks/delete/${reviewId}`);
+      if (response.status === 200) {
+        Toast.show({ type: "success", text1: "REVIEW DELETED" });
+        setShowReviewForm(false);
+      }
+    } catch (error) {
+      console.error("Delete error:", error);
+      Toast.show({ type: "error", text1: "ERROR!", text2: "FAILED TO DELETE REVIEW" });
+    }
+  };
+
+  const updateReview = async () => {
+
+    const updatedData = {
+      rating: rating,
+      comment: comment,
+      name: shareCustomerInfo, // Ensure 'name' field is sent
+    };
+    try {
+      await axios.put(`${baseURL}feedbacks/update/${updateFeedback._id}`, updatedData);
+      Toast.show({ type: "success", text1: "Review Updated" });
+
+      // Reset form
+      setShowReviewForm(false);
+      setEditingReview(null);
+      setRating(0);
+      setComment("");
+
+    } catch (error) {
+      console.error("Error updating review:", error);
+      Toast.show({ type: "error", text1: "ERROR!", text2: "Failed to update review" });
+    }
+  };
+
 
   const calculateAverageRating = () => {
     if (feedbacks.length === 0) return 0;
@@ -345,7 +403,7 @@ const PharmacyDetails = () => {
                 {/* Customer Name and Rating in the Same Row */}
                 <View style={styles.userInfo}>
                   <Text style={styles.userName}>
-                    {feedback.customer ? feedback.customer.name : "Anonymous"}
+                    {feedback.name ? feedback.customer?.name : "Anonymous"}
                   </Text>
                   <View style={styles.starsContainer}>
                     {renderStars(feedback.rating)}
@@ -353,62 +411,73 @@ const PharmacyDetails = () => {
                 </View>
 
                 {/* Show comment only if it's not empty */}
-                {feedback.comment && (
-                  <>
-                    <Text style={styles.value}>{feedback.comment}</Text>
-                  </>
+                {feedback.comment && <Text style={styles.value}>{feedback.comment}</Text>}
+
+                {/* Show Edit & Delete buttons if the logged-in user is the feedback owner */}
+                {feedback.customer?._id === state.user?.userId && (
+                  <View style={styles.updateContainer}>
+                    <TouchableOpacity onPress={() => updateReviewForm(feedback._id)}>
+                      <Ionicons name="pencil" size={20} color="#4A8691" />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => deleteReview(feedback._id)}>
+                      <Ionicons name="trash" size={20} color="red" />
+                    </TouchableOpacity>
+                  </View>
                 )}
               </View>
             ))
           ) : (
-            <Text />
+            <Text></Text>
           )}
         </View>
 
-
         {showReviewForm && (
           <>
-            <Text style={styles.headerText}>RATE THIS PHARMACY</Text>
+            <Text style={styles.headerText}>
+              {editingReview ? "EDIT YOUR REVIEW" : "RATE THIS PHARMACY"}
+            </Text>
             <View style={styles.addReview}>
               <View style={styles.ratingContainer}>
                 <Text style={styles.ratingLabel}>RATING:</Text>
                 <StarRating
                   maxStars={5}
-                  rating={parseInt(rating) || 0}
-                  onChangeRating={newRating => setRating(newRating.toString())}
+                  rating={parseInt(rating) || 0} // Ensure rating is correctly set
+                  onChangeRating={(newRating) => setRating(newRating.toString())} // Keep rating updated
                 />
+
               </View>
               <Text style={styles.ratingLabel}>COMMENT:</Text>
               <TextInput
                 value={comment}
-                onChangeText={text => setComment(text)}
+                onChangeText={(text) => setComment(text)}
                 style={styles.input}
               />
 
-              {/* Show the switch only if user is authenticated */}
-              {state.isAuthenticated && Object.keys(state.user).length > 0 && (
-                <View style={styles.switchContainer}>
-                  <Text style={styles.ratingLabel}>SHARE MY INFO</Text>
-                  <Switch
-                    value={shareCustomerInfo}
-                    onValueChange={setShareCustomerInfo}
-                    trackColor={{ false: "#ccc", true: "#000" }} // Change track color
-                    thumbColor={shareCustomerInfo ? "#fff" : "#888"}  // Change thumb color
-                  />
-                </View>
-              )}
-
+              {/* ✅ Add back the toggle switch */}
+              <View style={styles.switchContainer}>
+                <Text style={styles.ratingLabel}>SHARE MY INFO</Text>
+                <Switch
+                  value={shareCustomerInfo}
+                  onValueChange={setShareCustomerInfo}
+                  trackColor={{ false: "#ccc", true: "#000" }} // Change track color
+                  thumbColor={shareCustomerInfo ? "#fff" : "#888"} // Change thumb color
+                />
+              </View>
 
               <TouchableOpacity
-                onPress={() => addReview(pharmacy._id)}
+                onPress={editingReview ? updateReview : () => addReview(pharmacy._id)}
                 style={styles.confirmButton}
               >
-                <Text style={{ color: 'white', textAlign: 'center', fontSize: 20 }}>ADD REVIEW</Text>
+                <Text style={{ color: "white", textAlign: "center", fontSize: 20 }}>
+                  {editingReview ? "UPDATE" : "ADD"}
+                </Text>
               </TouchableOpacity>
             </View>
           </>
         )}
-      </View >
+
+      </View>
+
     </KeyboardAwareScrollView>
 
   );
@@ -792,6 +861,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
 
     alignItems: 'center',
+  },
+  updateContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    gap: 5,
+    marginTop: 20
   },
 });
 

@@ -5,6 +5,10 @@ const feedbackSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
+    name: {
+        type: Boolean,
+        required: true,
+    },
     rating: {
         type: Number,
         required: true,

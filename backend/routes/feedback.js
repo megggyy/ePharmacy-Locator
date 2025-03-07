@@ -6,12 +6,13 @@ const { Customer } = require("../models/customer");
 const router = express.Router();
 
 router.post("/create", async (req, res) => {
-    const { customer, rating, comment, pharmacy } = req.body;
+    const { customer, rating, comment, pharmacy, name } = req.body;
     console.log("Received request body:", req.body);
 
     let feedback = new Feedback({
         customer: customer || null, // Ensures null if customer is missing
         rating: rating,
+        name: name,
         comment: comment,
         pharmacy: pharmacy
     });
@@ -40,7 +41,7 @@ router.get('/:id', async (req, res) => {
         }
 
         const feedbacks = await Feedback.find({ pharmacy: req.params.id })
-            .populate('customer', null, { strictPopulate: false })
+            .populate('customer')
             .lean();
 
         res.status(200).json(feedbacks);
@@ -52,7 +53,9 @@ router.get('/:id', async (req, res) => {
 
 router.get('/customer/:id', async (req, res) => {
     try {
-        const feedbacks = await Feedback.find({ customer: req.params.id });
+        const feedbacks = await Feedback.find({ customer: req.params.id })
+        .lean();
+
 
         if (feedbacks.length > 0) {
             return res.status(200).json({ exists: true, feedbacks });
@@ -65,17 +68,73 @@ router.get('/customer/:id', async (req, res) => {
     }
 });
 
+router.put('/update/:id', async (req, res) => {
+    try {
+
+        const { rating, comment, name } = req.body;
+   
+        const feedbacks = await Feedback.findByIdAndUpdate(
+            req.params.id,
+            {
+                rating: rating,
+                comment: comment,
+                name: name,
+            },
+            { new: true }
+        );
+
+        if (!feedbacks) {
+            return res.status(500).json({ message: "The feedback category cannot be updated." });
+        }
+    
+        res.send(feedbacks);
+    } catch (error) {
+        console.error("Error fetching feedback:", error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+router.delete('/delete/:id', async (req, res) => {
+    try {
+
+       const feedbacks = await Feedback.findByIdAndRemove(req.params.id);
+
+        if (!feedbacks) {
+            return res.status(500).json({ message: "The feedback cannot be deleted." });
+        }
+    
+        res.send(feedbacks);
+    } catch (error) {
+        console.error("Error fetching feedback:", error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
 router.get('/pharmacy/:id', async (req, res) => {
     try {
         // Find the pharmacy by its ID and include the userInfo field
-        const pharmacy = await Pharmacy.findOne({ userInfo: req.params.id });
+        const pharmacy = await Pharmacy.findOne({ userInfo: req.params.id })
+        .lean();
 
         if (!pharmacy) {
             return res.status(400).json({ success: false, message: "Pharmacy not found" });
         }
 
         const feedbacks = await Feedback.find({ pharmacy: pharmacy._id })
-            .populate('customer', null, { strictPopulate: false })
+            .populate('customer')
+            .lean();
+
+        res.status(200).json(feedbacks);
+    } catch (error) {
+        console.error("Error fetching medicine:", error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+router.get('/updateFetch/:id', async (req, res) => {
+    try {
+        const feedbacks = await Feedback.findById( req.params.id )
+            .populate('customer')
             .lean();
 
         res.status(200).json(feedbacks);
