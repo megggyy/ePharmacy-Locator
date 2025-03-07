@@ -15,7 +15,8 @@ const customerSchema = new mongoose.Schema({
         longitude: {
             type: String,
         },
-    }
+    },
+    consentGiven: { type: Boolean, default: null } 
 });
 
 customerSchema.virtual('id').get(function () {

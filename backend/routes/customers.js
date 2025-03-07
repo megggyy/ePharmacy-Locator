@@ -193,4 +193,41 @@ router.get('/user/:userId', async (req, res) => {
   }
 });
 
+router.get("/customers/:customerId", async (req, res) => {
+  try {
+    const customer = await Customer.findById(req.params.customerId);
+    if (!customer) {
+      return res.status(404).json({ message: "Customer not found" });
+    }
+
+    res.json({ consentGiven: customer.consentGiven });
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching consent", error });
+  }
+});
+
+// Update user consent
+router.post("/customers/consent", async (req, res) => {
+  try {
+    const { customerId, consentGiven } = req.body;
+
+    if (!customerId) {
+      return res.status(400).json({ message: "Customer ID is required" });
+    }
+
+    const customer = await Customer.findById(customerId);
+    if (!customer) {
+      return res.status(404).json({ message: "Customer not found" });
+    }
+
+    customer.consentGiven = consentGiven;
+    await customer.save();
+
+    res.status(200).json({ message: "Consent updated successfully", consentGiven });
+  } catch (error) {
+    res.status(500).json({ message: "Error updating consent", error });
+  }
+});
+
+
 module.exports = router;

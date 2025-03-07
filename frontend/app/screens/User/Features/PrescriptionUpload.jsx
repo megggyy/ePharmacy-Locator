@@ -21,6 +21,9 @@ const PrescriptionUploadScreen = () => {
   const { state } = useContext(AuthGlobal); 
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
   const router = useRouter();
+  const [showPrivacyNotice, setShowPrivacyNotice] = useState(false);
+  const [agreedToStore, setAgreedToStore] = useState(null);
+
   
   // Get userId from authentication state
   const userId = state?.user?.userId; 
@@ -46,6 +49,29 @@ const PrescriptionUploadScreen = () => {
     }
   };
 
+  useEffect(() => {
+    if (!customerId) return;
+  
+    const checkConsent = async () => {
+      try {
+        const response = await axios.get(`${baseURL}customers/customers/${customerId}`);
+        const consent = response.data?.consentGiven;
+  
+        if (consent === null || consent === undefined) {
+          setShowPrivacyNotice(true);
+        } else {
+          setAgreedToStore(consent);
+        }
+      } catch (error) {
+        console.error("Error fetching consent:", error.response?.data || error.message);
+      }
+    };
+  
+    checkConsent();
+  }, [customerId]);
+  
+  
+  
   const fetchPrescriptions = async () => {
     if (!customerId) return;
   
@@ -181,8 +207,58 @@ const PrescriptionUploadScreen = () => {
     }
   };
 
+  const handlePrivacyResponse = async (agree) => {
+    if (!customerId) {
+      Alert.alert("Error", "Customer ID is missing. Please try again.");
+      return;
+    }
+  
+    setShowPrivacyNotice(false);
+    setAgreedToStore(agree);
+  
+    try {
+      await axios.post(`${baseURL}customers/customers/consent`, { customerId, consentGiven: agree });
+      console.log("Consent updated:", agree);
+    } catch (error) {
+      console.error("Error updating consent:", error.message);
+      Alert.alert("Error", "Failed to update consent. Please try again.");
+    }
+  };
+  
+  
+
   return (
     <View style={styles.safeArea}>
+      {/* privacy notice modal */}
+      {showPrivacyNotice && (
+        <Modal visible={showPrivacyNotice} transparent animationType="fade">
+          <View style={styles.modalContainer}>
+            <View style={styles.privacyNotice}>
+              <Text style={styles.noticeText}>
+                To comply with the Data Privacy Act, do you agree to store your prescriptions?
+                Your data will only be used for your convenience.
+              </Text>
+
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity 
+                  style={[styles.privacyButton, { backgroundColor: "#005b7f" }]} 
+                  onPress={() => handlePrivacyResponse(true)}
+                >
+                  <Text style={styles.buttonText}>Agree</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity 
+                  style={[styles.privacyButton, { backgroundColor: "gray" }]} 
+                  onPress={() => handlePrivacyResponse(false)}
+                >
+                  <Text style={styles.buttonText}>Decline</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
+      )}
+
       {/* Animated Persistent Note */}
       {showCropNote && (
         <Animated.View style={[styles.noteContainer, { transform: [{ translateY: slideAnim }] }]}>
@@ -412,11 +488,14 @@ const styles = StyleSheet.create({
   drawer: {
     backgroundColor: "white",
     width: "100%",
+    height: "75%", // Makes the modal take up 3/4 of the screen
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
     padding: 20,
     alignItems: "center",
-  },
+    position: "absolute",
+    bottom: 0, // Ensures it starts from the bottom
+  },  
   closeDrawerButton: {
     position: "absolute",
     right: 20,
@@ -461,6 +540,48 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 16,
     color: "#999",
+  },
+  //  modal privacy
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent background
+  },
+  privacyNotice: {
+    width: "85%",
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    padding: 20,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 8, // Shadow for Android
+  },
+  noticeText: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#333",
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  privacyButton: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: "center",
+    marginHorizontal: 5, // Spacing between buttons
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
 

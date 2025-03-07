@@ -142,16 +142,29 @@ const PrescriptionScreen = () => {
 
   const handleFindPharmacies = async () => {
     try {
-      await uploadPrescription(); // Ensure prescription is saved before navigating
+      // Fetch customer's consent status
+      const response = await axios.get(`${baseURL}customers/customers/${customerId}`);
+      const { consentGiven } = response.data;
+  
+      console.log("Customer Consent:", consentGiven);
+  
+      if (consentGiven) {
+        await uploadPrescription(); // Only upload if consent is given
+      } else {
+        console.warn("Customer has not given consent. Prescription will not be uploaded.");
+      }
+  
+      // Proceed to find pharmacies regardless of consent
       router.push({
         pathname: "/screens/User/Features/PrescriptionResults",
         params: { matchedMedicines: JSON.stringify(matchedMedicines.map(m => m.genericName)) },
       });
     } catch (error) {
-      console.error("Error finding pharmacies:", error);
-      Alert.alert("Error", "Failed to upload prescription. Please try again.");
+      console.error("Error handling pharmacy search:", error);
+      Alert.alert("Error", "Failed to fetch customer consent or find pharmacies. Please try again.");
     }
   };
+  
   
   return (
     <View style={styles.safeArea}>
