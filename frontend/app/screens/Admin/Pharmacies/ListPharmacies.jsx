@@ -15,6 +15,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Toast from "react-native-toast-message";
 import { useRouter } from 'expo-router';
 import baseURL from "../../../../assets/common/baseurl";
 import Spinner from "../../../../assets/common/spinner";
@@ -26,6 +27,7 @@ const PharmacyTableScreen = () => {
   const [pharmaciesList, setPharmaciesList] = useState([]);
   const [pharmaciesFilter, setPharmaciesFilter] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [runningCheck, setRunningCheck] = useState(false); 
 
   const searchPharmacies = (text) => {
     if (text === "") {
@@ -69,6 +71,24 @@ const PharmacyTableScreen = () => {
     }, [])
   );
 
+  const handleRunExpiryCheck = async () => {
+    setRunningCheck(true);
+    try {
+      const response = await axios.post(`${baseURL}pharmacies/run-expiry-check`);
+        Toast.show({
+                topOffset: 60,
+                type: "success",
+                text1: "Expiry Notifications Sent",
+                text2: "Emails are sent to pharmacies.",
+        });
+    } catch (error) {
+      Alert.alert("Error", "Failed to send notifications.");
+      console.error("Error running expiry check:", error);
+    } finally {
+      setRunningCheck(false);
+    }
+  };
+
   return (
     <View style={styles.container}>
       {loading ? (
@@ -92,6 +112,15 @@ const PharmacyTableScreen = () => {
               onChangeText={(text) => searchPharmacies(text)}
               style={{ flex: 1 }}
             />
+            <TouchableOpacity
+              style={styles.expiryCheckButton}
+              onPress={handleRunExpiryCheck}
+              disabled={runningCheck}
+            >
+              <Text style={styles.buttonText}>
+                {runningCheck ? "Sending..." : "Send expiry alerts"}
+              </Text>
+            </TouchableOpacity>
           </View>
 
           <ScrollView>
@@ -218,6 +247,16 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: 'black',
     borderRadius: 20,
+  },
+  // expiry
+  expiryCheckButton: {
+    backgroundColor: "#0a5d7e",
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 5,
+    marginLeft: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

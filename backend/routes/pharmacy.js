@@ -4,6 +4,7 @@ const { Pharmacy } = require('../models/pharmacy');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const { PharmacyStock } = require('../models/pharmacyStock');
+const { checkExpiringStocks } =require('../utils/cronJobs')
 const fs = require('fs');
 const path = require('path');
 
@@ -159,5 +160,14 @@ router.put('/approved/:id', async (req, res) => {
   }
 });
 
+router.post("/run-expiry-check", async (req, res) => {
+  try {
+    await checkExpiringStocks();
+    res.status(200).json({ message: "Expiry check executed successfully" });
+  } catch (error) {
+    console.error("Error running expiry check:", error);
+    res.status(500).json({ message: "Error executing expiry check" });
+  }
+});
 
 module.exports = router;
