@@ -6,6 +6,8 @@ const cors = require("cors");
 const authJwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handler');
 require("dotenv/config");
+require("./utils/cronJobs");
+
 
 
 app.use(cors());
