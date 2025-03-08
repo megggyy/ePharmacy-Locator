@@ -1,5 +1,5 @@
 import React, { useContext,  useState, useCallback  } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 import { useFocusEffect} from "@react-navigation/native"
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -78,7 +78,7 @@ export default function Sidebar() {
       <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/Dashboard')} style={styles.backButton}>
         <Ionicons name="arrow-back" size={24} color="white" />
       </TouchableOpacity>
-
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         {/* Profile Section */}
         <View style={styles.profileSection}>
          <Image
@@ -114,11 +114,33 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Reviews</Text>
         </TouchableOpacity>
 
+            {/* View Charts Dropdown */}
+                <TouchableOpacity style={styles.menuItem} onPress={toggleDropdown}>
+                  <FontAwesome5 name="chart-bar" size={25} color="#5A5A5A" />
+                  <Text style={styles.menuText}>View Charts</Text>
+                  <Ionicons 
+                    name={isDropdownVisible ? "chevron-up-outline" : "chevron-down-outline"} 
+                    size={20} 
+                    color="#5A5A5A" 
+                    style={styles.dropdownIcon}
+                  />
+                </TouchableOpacity>
+        
+                {/* Dropdown Chart Options */}
+                {isDropdownVisible && (
+                  <View style={styles.dropdownContainer}>
+                    <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/PharmacyOwner/Charts/ExpiringStocksChart')}>
+                      <Text style={styles.dropdownText}>Expiring Stocks Overview</Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
+
         <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>
           <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>
       </View>
+      </ScrollView>
     </View>
   );
 }
@@ -167,6 +189,24 @@ const styles = StyleSheet.create({
   menuText: {
     fontSize: 18,
     marginLeft: 15,
+    color: '#5A5A5A',
+  },
+  // DROPDOWN
+  dropdownIcon: {
+    marginLeft: 'auto',
+  },
+  dropdownContainer: {
+    backgroundColor: '#f9f9f9',
+    paddingHorizontal: 15,
+    paddingTop: 5,
+  },
+  dropdownItem: {
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E0E0E0',
+  },
+  dropdownText: {
+    fontSize: 16,
     color: '#5A5A5A',
   },
 });

@@ -61,7 +61,7 @@ router.get('/', async (req, res) => {
     try {
         // Find all medicines where pharmacy.userInfo matches the id parameter
         const medicines = await Medicine.find()
-            .populate('category')
+            .populate('category', 'name')
             .lean();
 
         res.status(200).send(medicines);

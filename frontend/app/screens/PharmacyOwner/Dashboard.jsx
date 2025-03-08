@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { BarChart } from 'react-native-chart-kit';
+import { PieChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import axios from 'axios';
@@ -17,11 +17,10 @@ export default function PharmacyOwnerDashboard() {
   const { state } = useContext(AuthGlobal);
   const router = useRouter();
   
-  // Fetch user data and medications
   useEffect(() => {
     if (state.isAuthenticated) {
-      // Fetch user profile data
-      axios
+        // Fetch user profile data
+        axios
         .get(`${baseURL}users/${state.user.userId}`)
         .then((res) => {
           setUserProfile(res.data);
@@ -30,9 +29,7 @@ export default function PharmacyOwnerDashboard() {
           console.error("Error fetching user profile:", err);
         });
 
-      // Fetch medications data for the logged-in pharmacy
-      
-      axios
+        axios
         .get(`${baseURL}medicine/${state.user.userId}`) // Adjust this to your actual endpoint
         .then((res) => {
           const medications = res.data;
@@ -42,36 +39,46 @@ export default function PharmacyOwnerDashboard() {
         .catch((err) => {
           console.error("Error fetching medications:", err);
         });
+         
+      // Fetch the pharmacy associated with this user
+      axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
+        .then((res) => {
+          if (res.data) {
+            const pharmacyId = res.data.id; // Get the pharmacy ID
+            
+            // Fetch medication data using the pharmacy ID
+            axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
+              .then((medRes) => {
+                const categories = Object.keys(medRes.data);
+                const counts = Object.values(medRes.data);
+
+                // Transform data for PieChart
+                const pieData = categories.map((category, index) => ({
+                  name: category,
+                  population: counts[index],
+                  color: `hsl(${index * 60}, 70%, 50%)`, // Generates unique colors
+                  legendFontColor: "#333",
+                  legendFontSize: 11
+                }));
+
+                setMedicationData(pieData);
+              })
+              .catch((err) => console.error("Error fetching medication categories:", err));
+          } else {
+            console.error("No pharmacy found for this user.");
+          }
+        })
+        .catch((err) => console.error("Error fetching pharmacy details:", err));
     } else {
-      router.push('/login'); // Redirect if not authenticated
+      router.push('/login');
     }
   }, [state.isAuthenticated, state.user.userId]);
 
-  // Sample data for medication categories (you can replace this with your API data)
-  useEffect(() => {
-    const sampleData = [
-      { category: "Antibiotics", count: 40 },
-      { category: "Pain Relievers", count: 25 },
-      { category: "Vitamins", count: 30 },
-      { category: "Cough", count: 20 },
-      { category: "Allergy", count: 15 }
-    ];
-    setMedicationData(sampleData);
-  }, []);
-
-  // Prepare chart data
-  const chartData = {
-    labels: medicationData.map(item => item.category),
-    datasets: [
-      {
-        data: medicationData.map(item => item.count)
-      }
-    ]
-  };
 
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
+      <StatusBar backgroundColor="#005b7f" barStyle="light-content" />  
       <View style={styles.header}>
         <TouchableOpacity style={styles.menuIcon} onPress={() => router.push('/drawer/PharmacyOwnerDrawer')}>
           <Ionicons name="menu" size={30} color="white" />
@@ -90,33 +97,25 @@ export default function PharmacyOwnerDashboard() {
 
       {/* Medications per Category Chart */}
       <Text style={styles.chartTitle}>Medications per Category</Text>
-      <BarChart
-        data={chartData}
-        width={screenWidth - 40}
-        height={220}
-        yAxisLabel=""
-        chartConfig={{
-          backgroundColor: "#0B607E",
-          backgroundGradientFrom: "#0B607E",
-          backgroundGradientTo: "#0B607E",
-          decimalPlaces: 0,
-          color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          style: {
-            borderRadius: 16
-          },
-          propsForDots: {
-            r: "6",
-            strokeWidth: "2",
-            stroke: "#ffa726"
-          }
-        }}
-        style={{
-          marginVertical: 8,
-          borderRadius: 16,
-          marginHorizontal: 20,
-        }}
-      />
+      {medicationData.length > 0 ? (
+        <PieChart
+          data={medicationData}
+          width={screenWidth - 40}
+          height={220}
+          chartConfig={{
+            backgroundColor: "#0B607E",
+            backgroundGradientFrom: "#0B607E",
+            backgroundGradientTo: "#0B607E",
+            color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+          }}
+          accessor="population"
+          backgroundColor="transparent"
+          paddingLeft="15"
+          absolute
+        />
+      ) : (
+        <Text style={styles.noDataText}>No Data Available</Text>
+      )}
 
       {/* Manage Medications Button */}
       <TouchableOpacity style={styles.manageButton} onPress={() => router.push('/screens/PharmacyOwner/Medications/ListMedications')} >
@@ -185,6 +184,12 @@ const styles = StyleSheet.create({
     color: '#333',
     marginHorizontal: 20,
     marginTop: 20,
+  },
+  noDataText: {
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 16,
+    color: '#888',
   },
   manageButton: {
     flexDirection: 'row',

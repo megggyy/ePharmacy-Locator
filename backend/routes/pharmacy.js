@@ -7,6 +7,9 @@ const { PharmacyStock } = require('../models/pharmacyStock');
 const { checkExpiringStocks } =require('../utils/cronJobs')
 const fs = require('fs');
 const path = require('path');
+const moment = require('moment');
+const mongoose = require('mongoose');
+
 
 let transporter = nodemailer.createTransport({
   service: "gmail",
@@ -169,5 +172,135 @@ router.post("/run-expiry-check", async (req, res) => {
     res.status(500).json({ message: "Error executing expiry check" });
   }
 });
+
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const pharmacy = await Pharmacy.findOne({ userInfo: req.params.userId });
+
+    if (!pharmacy) {
+      return res.status(404).json({ message: "No pharmacy found for this user" });
+    }
+
+    res.json(pharmacy);
+  } catch (error) {
+    console.error("Error fetching pharmacy by user ID:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+//  CHARTS
+router.get('/medications-per-category/:pharmacyId', async (req, res) => {
+  try {
+      const { pharmacyId } = req.params;
+
+      // Find all pharmacy stocks for the given pharmacy
+      const pharmacyStocks = await PharmacyStock.find({ pharmacy: pharmacyId }).populate({
+          path: 'medicine',
+          populate: { path: 'category', select: 'name' }, // Populate medicine category
+      });
+
+      // Object to store unique medicines per category
+      const categoryCount = {};
+
+      pharmacyStocks.forEach(stock => {
+          if (stock.medicine && stock.medicine.category) {
+              stock.medicine.category.forEach(cat => {
+                  if (!categoryCount[cat.name]) {
+                      categoryCount[cat.name] = new Set();
+                  }
+                  // Add unique medicine ID to the set
+                  categoryCount[cat.name].add(stock.medicine.id);
+              });
+          }
+      });
+
+      // Convert sets to counts
+      Object.keys(categoryCount).forEach(category => {
+          categoryCount[category] = categoryCount[category].size;
+      });
+
+      res.json(categoryCount);
+  } catch (error) {
+      console.error('Error fetching medicines per category:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
+router.get('/expiringStock/:pharmacyId', async (req, res) => {
+  try {
+    const { pharmacyId } = req.params;
+
+    // Validate pharmacyId as a valid MongoDB ObjectId
+    if (!mongoose.Types.ObjectId.isValid(pharmacyId)) {
+        return res.status(400).json({ error: 'Invalid Pharmacy ID' });
+    }
+
+    console.log(`Fetching expiring stock for Pharmacy ID: ${pharmacyId}`);
+      const today = moment().startOf('day');
+
+      const expiringInWeek = await PharmacyStock.aggregate([
+          { $unwind: "$expirationPerStock" },
+          { 
+              $match: { 
+                  "expirationPerStock.expirationDate": { 
+                      $gte: today.toDate(), 
+                      $lt: moment(today).add(7, 'days').toDate() 
+                  } 
+              } 
+          },
+          { $group: { _id: null, totalStock: { $sum: "$expirationPerStock.stock" } } }
+      ]);
+
+      const expiringInMonth = await PharmacyStock.aggregate([
+          { $unwind: "$expirationPerStock" },
+          { 
+              $match: { 
+                  "expirationPerStock.expirationDate": { 
+                      $gte: today.toDate(), 
+                      $lt: moment(today).add(1, 'month').toDate() 
+                  } 
+              } 
+          },
+          { $group: { _id: null, totalStock: { $sum: "$expirationPerStock.stock" } } }
+      ]);
+
+      const expiringIn3Months = await PharmacyStock.aggregate([
+          { $unwind: "$expirationPerStock" },
+          { 
+              $match: { 
+                  "expirationPerStock.expirationDate": { 
+                      $gte: today.toDate(), 
+                      $lt: moment(today).add(3, 'months').toDate() 
+                  } 
+              } 
+          },
+          { $group: { _id: null, totalStock: { $sum: "$expirationPerStock.stock" } } }
+      ]);
+
+      const expiringIn6Months = await PharmacyStock.aggregate([
+          { $unwind: "$expirationPerStock" },
+          { 
+              $match: { 
+                  "expirationPerStock.expirationDate": { 
+                      $gte: today.toDate(), 
+                      $lt: moment(today).add(6, 'months').toDate() 
+                  } 
+              } 
+          },
+          { $group: { _id: null, totalStock: { $sum: "$expirationPerStock.stock" } } }
+      ]);
+
+      res.status(200).json({
+          expiringInWeek: expiringInWeek[0]?.totalStock || 0,
+          expiringInMonth: expiringInMonth[0]?.totalStock || 0,
+          expiringIn3Months: expiringIn3Months[0]?.totalStock || 0,
+          expiringIn6Months: expiringIn6Months[0]?.totalStock || 0
+      });
+  } catch (error) {
+      console.error('Error fetching expiring stock data:', error);
+      res.status(500).json({ error: 'Server error' });
+  }
+});
+
 
 module.exports = router;
