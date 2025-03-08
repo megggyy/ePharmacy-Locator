@@ -90,6 +90,10 @@ export default function Sidebar() {
           <FontAwesome5 name="users" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Manage Users</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Admins/ListAdmin')}>
+          <FontAwesome5 name="user-shield" size={25} color="#5A5A5A" />
+          <Text style={styles.menuText}>Manage Admins</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Barangay/ListBarangay')}>
           <FontAwesome5 name="city" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Manage Barangays</Text>

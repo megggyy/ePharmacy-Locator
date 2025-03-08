@@ -98,7 +98,11 @@ export default function RootLayout() {
             <Stack.Screen name="screens/Admin/Pharmacies/ReadPharmacy" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/Pharmacies/EditPharmacy" options={{ headerShown: false }} />
 
-            {/* PHARMACIES CRUD */}
+             {/* ADMINS CRUD */}
+             <Stack.Screen name="screens/Admin/Admins/ListAdmin" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Admins/ReadAdmin" options={{ headerShown: false }} />
+
+            {/* LICENSED PHARMACIES CRUD */}
             <Stack.Screen name="screens/Admin/LicensedPharmacies/ListLicensedPharmacies" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/LicensedPharmacies/ReadLicensedPharmacy" options={{ headerShown: false }} />
 

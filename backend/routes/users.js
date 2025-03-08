@@ -55,6 +55,66 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/admins', async (req, res) => {
+    try {
+        const fetchAdmins = await User.find({ role: 'Admin' }).lean();
+
+        if (!fetchAdmins.length) { // ✅ Check if the array is empty
+            return res.status(404).json({ success: false, message: 'No admins found' });
+        }
+
+        res.status(200).json(fetchAdmins);
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+router.put('/admins/updateRole/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Find user by ID
+        const user = await User.findById(id);
+
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        // Count the total number of Admins
+        const adminCount = await User.countDocuments({ role: 'Admin' });
+
+        // If there is only one Admin and this Admin is being changed, prevent the update
+        if (adminCount === 1 && user.role === 'Admin') {
+            return res.status(400).json({ 
+                success: false, 
+                message: 'MIN' 
+            });
+        }
+
+        // Toggle role between 'Admin' and 'Customer'
+        user.role = user.role === 'Admin' ? 'Customer' : 'Admin';
+        
+        await user.save();
+
+        return res.status(200).json({ 
+            success: true, 
+            message: `User role updated to ${user.role}`, 
+            user 
+        });
+
+    } catch (error) {
+        console.error('Error updating user role:', error);
+        return res.status(500).json({ 
+            success: false, 
+            message: 'Error updating user role', 
+            error: error.message 
+        });
+    }
+});
+
+
+
+
 // pharmacies per month na chart
 router.get('/pharmaciesPerMonth', async (req, res) => {
     try {
@@ -849,6 +909,9 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
         res.status(500).send('Error updating entity');
     }
 });
+
+
+
 
 
   

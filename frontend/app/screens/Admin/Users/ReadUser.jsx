@@ -5,6 +5,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
 import Spinner from "@/assets/common/spinner";
+import Toast from "react-native-toast-message";
 
 export default function ReadUserScreen() {
   const router = useRouter();
@@ -38,6 +39,25 @@ export default function ReadUserScreen() {
   const closeImageModal = () => {
     setIsModalVisible(false);
     setSelectedImage(null);
+  };
+
+  const updateRole = async (id) => {
+    setLoading(true);
+
+    try {
+      const res = await axios.put(`${baseURL}users/admins/updateRole/${id}`);
+
+      console.log('Role updated successfully:', res.data); // Debugging log
+      Toast.show({ type: "success", text1: "Success", text2: "USER ROLE UPDATED" });
+      router.push('/screens/Admin/Admins/ListAdmin')
+
+    } catch (err) {
+      console.error('Error updating role:', err.message);
+      Toast.show({ type: "error", text1: "Error", text2: "FAILED TO UPDATE USER ROLE" });
+
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (loading) {
@@ -113,6 +133,13 @@ export default function ReadUserScreen() {
               value={`${user.address}` || 'N/A'}
               editable={false}
             />
+
+            <TouchableOpacity
+              style={styles.confirmButton}
+              onPress={() => updateRole(user._id)}
+            >
+              <Text style={{ color: "white" }}>MAKE ADMIN</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -190,5 +217,12 @@ const styles = StyleSheet.create({
     color: 'red',
     textAlign: 'center',
     marginTop: 20,
+  },
+  confirmButton: {
+    marginTop: 5,
+    padding: 10,
+    backgroundColor: "#005b7f",
+    borderRadius: 5,
+    alignItems: 'center'
   },
 });
