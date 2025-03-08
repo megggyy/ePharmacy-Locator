@@ -71,6 +71,7 @@ export default function RootLayout() {
             <Stack.Screen name="screens/PharmacyOwner/Account/CheckLicense" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Dashboard" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/PharmacyOwner/Charts/ExpiringStocksChart" options={{ headerShown: false }} />
 
             {/* PROFILE */}
             <Stack.Screen name="screens/PharmacyOwner/Profile/ViewProfile" options={{ headerShown: false }} />
