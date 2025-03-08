@@ -31,29 +31,15 @@ const HomeScreen = () => {
         
       // Fetch medications
       axios.get(`${baseURL}medicine`)
-        .then(response => setMedications(response.data))
-        .catch(error => console.error('Error fetching medications:', error));
+      .then(response => {
+        const updatedMedicines = response.data.map((medicine) => ({
+          ...medicine,
+          categoryNames: medicine.category.map(cat => cat.name).join(' / '),
+        }));
+        setMedications(updatedMedicines);
+      })
+      .catch(error => console.error('Error fetching medications:', error));
 
-      // Set up the interval for periodic fetching every 5 seconds
-      const intervalId = setInterval(() => {
-        // Refetch categories
-        axios.get(`${baseURL}medication-category`)
-          .then(response => setCategories(response.data))
-          .catch(error => console.error('Error fetching categories:', error));
-
-        // Refetch medications
-        axios.get(`${baseURL}medicine`)
-          .then(response => setMedications(response.data))
-          .catch(error => console.error('Error fetching medications during polling:', error));
-
-        // Refetch pharmacies
-        axios.get(`${baseURL}pharmacies`)
-          .then(response => setPharmacies(response.data))
-          .catch(error => console.error('Error fetching pharmacies during polling:', error));
-      }, 1000); // 5-second interval
-
-      // Cleanup function to clear the interval when the screen is unfocused or unmounted
-      return () => clearInterval(intervalId);
     }, []) // Empty dependency array to ensure it runs once when the component mounts or refocuses
   );
 
@@ -102,8 +88,6 @@ const HomeScreen = () => {
       }, [])
   );
   
-
-
   const handleCategoryPress = (categoryId, categoryName) => {
     setSelectedCategory(categoryId);
     router.push(`/screens/User/Features/CategoryFilterMedications?id=${categoryId}&name=${categoryName}`);
@@ -199,35 +183,53 @@ const HomeScreen = () => {
           ))}
         </ScrollView>
 
-        {/* Medications Section */}
-        <View style={styles.sectionHeader}>
-          <Ionicons name="medkit-outline" style={styles.iconStyle} />
-          <Text style={styles.sectionTitle}>Medications</Text>
-        </View>
-        <View style={styles.medicationsContainer}>
-          {filteredMedications.map((medication) => (
-            <TouchableOpacity
-              key={medication._id}
-              style={styles.medicationCard}
-              onPress={() => {
-                const encodedName = encodeURIComponent(medication.genericName);
-                console.log("Encoded Name:", encodedName); // Debugging
-                router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
-              }}
-              
-                          >
-              <View style={styles.medicationInfo}>
-                <Text style={styles.medicationName}>{medication.genericName}</Text>
-              </View>
-            </TouchableOpacity>
-          ))}
-        </View>
+      {/* Medications Section */}
+      <View style={styles.sectionHeader}>
+        <Ionicons name="medkit-outline" style={styles.iconStyle} />
+        <Text style={styles.sectionTitle}>Medications</Text>
+      </View>
 
+      <View style={styles.medicationsContainer}>
+        {filteredMedications.map((medication) => (
+          <MedicationCard
+            key={medication._id}
+            brandName={medication.brandName}
+            genericName={medication.genericName}
+            dosageForm={medication.dosageForm}
+            dosageStrength={medication.dosageStrength}
+            classification={medication.classification}
+            categoryNames={medication.category.map(cat => cat.name).join(' / ')}
+            onPress={() => {
+              const encodedName = encodeURIComponent(medication.genericName);
+              console.log("Navigating to MedicationDetails with:", encodedName);
+              router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
+            }}
+          />
+        ))}
+      </View>
 
       </ScrollView>
     </SafeAreaView>
   );
 };
+
+const MedicationCard = ({ brandName, genericName, dosageForm, dosageStrength, classification, categoryNames, onPress }) => {
+  return (
+    <TouchableOpacity style={styles.medicationCard} onPress={onPress}>
+      <View style={styles.medicineHeader}>
+        <Text style={styles.medicineName}>{brandName || 'Unknown'}</Text>
+      </View>
+      <Text style={styles.genericName}>{genericName || 'Unknown'}</Text>
+      <View style={styles.medicineDetails}>
+        <Text style={styles.detailText}>💊 Dosage: {dosageStrength || 'N/A'}</Text>
+        <Text style={styles.detailText}>📌 Form: {dosageForm || 'N/A'}</Text>
+        <Text style={styles.detailText}>📂 Classification: {classification || 'N/A'}</Text>
+        <Text style={styles.detailText}>📋 Category: {categoryNames || 'No Category'}</Text> 
+      </View>
+    </TouchableOpacity>
+  );
+};
+
 
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#005b7f' },
@@ -347,10 +349,7 @@ const styles = StyleSheet.create({
 
 
   // Updated Medications Section Styles
-  medicationsContainer: {
-    flexDirection: 'column',
-    gap: 10,
-  },
+  medicationsContainer: { flexDirection: 'column', gap: 10 },
   medicationCard: {
     backgroundColor: '#ffffff',
     borderRadius: 10,
@@ -362,30 +361,11 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
-  medicationInfo: {
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  medicationName: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 5,
-  },
-  medicationCategory: {
-    fontSize: 14,
-    color: '#888',
-    marginBottom: 5,
-  },
-  medicationStock: {
-    fontSize: 14,
-    color: '#007AFF',
-    marginBottom: 5,
-  },
-  medicationPharmacy: {
-    fontSize: 12,
-    color: '#555',
-  },
+  medicineHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
+  medicineName: { fontSize: 18, fontWeight: 'bold', color: '#005b7f' },
+  genericName: { fontSize: 16, fontStyle: 'italic', color: '#333', marginBottom: 8 },
+  medicineDetails: { marginTop: 6 },
+  detailText: { fontSize: 14, color: '#555', marginBottom: 2 },
 
   pharmacyInfo: { fontSize: 14, color: '#666', marginTop: 5 },
 });

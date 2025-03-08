@@ -36,12 +36,13 @@ const MedicationScreen = () => {
     } else {
       setMedicationsFilter(
         medicationsList.filter((i) =>
-          [i.genericName, i.brandName]
+          [i.medicine?.genericName, i.medicine?.brandName] // Ensure you're accessing the correct structure
             .some((field) => field?.toLowerCase().includes(text.toLowerCase()))
         )
       );
     }
   };
+  
 
 
   useFocusEffect(
@@ -56,56 +57,52 @@ const MedicationScreen = () => {
             setLoading(false);
 
             // Check for expiring medications (within 30 days)
-            const today = new Date();
+            // const today = new Date();
     
-            const expiringSoon = medications
-              .map(med => ({
-                name: med.medicine.brandName,
-                expiringStocks: med.expirationPerStock
-                  .filter(exp => {
-                    const expiryDate = new Date(exp.expirationDate);
-                    const daysLeft = Math.ceil((expiryDate - today) / (1000 * 60 * 60 * 24)); // Round up to avoid decimals
-                    console.log('formattedToday:', today)
-                    console.log('expiryDate:', expiryDate)
+            // const expiringSoon = medications
+            //   .map(med => ({
+            //     name: med.medicine.brandName,
+            //     expiringStocks: med.expirationPerStock
+            //       .filter(exp => {
+            //         const expiryDate = new Date(exp.expirationDate);
+            //         const daysLeft = Math.ceil((expiryDate - today) / (1000 * 60 * 60 * 24)); // Round up to avoid decimals
+            //         console.log('formattedToday:', today)
+            //         console.log('expiryDate:', expiryDate)
 
-                    console.log('expired:', daysLeft)
+            //         console.log('expired:', daysLeft)
 
-                    return daysLeft > 0 && daysLeft <= 30;
+            //         return daysLeft > 0 && daysLeft <= 30;
 
-                  })
-                  .map(exp => new Date(exp.expirationDate).toLocaleDateString())
-              }))
-              .filter(med => med.expiringStocks.length > 0); // Keep only medicines with expiring stocks
+            //       })
+            //       .map(exp => new Date(exp.expirationDate).toLocaleDateString())
+            //   }))
+            //   .filter(med => med.expiringStocks.length > 0); // Keep only medicines with expiring stocks
 
-            console.log('expired:', expiringSoon)
-            // Show alert if there are expiring medications
-            if (expiringSoon.length > 0) {
-              const message = expiringSoon
-                .map(med => `${med.name} - Exp: ${med.expiringStocks.join(', ')}`) // Fix: Use `med.name`
-                .join('\n');
+            // console.log('expired:', expiringSoon)
+            // // Show alert if there are expiring medications
+            // if (expiringSoon.length > 0) {
+            //   const message = expiringSoon
+            //     .map(med => `${med.name} - Exp: ${med.expiringStocks.join(', ')}`) // Fix: Use `med.name`
+            //     .join('\n');
             
-              console.log('expired:', expiringSoon);
+            //   console.log('expired:', expiringSoon);
             
-              Alert.alert(
-                "Expiring Medications",
-                `The following medicines are expiring soon:\n\n${message}`,
-                [{ text: "OK", onPress: () => console.log("Alert acknowledged") }]
-              );
-            }
+            //   Alert.alert(
+            //     "Expiring Medications",
+            //     `The following medicines are expiring soon:\n\n${message}`,
+            //     [{ text: "OK", onPress: () => console.log("Alert acknowledged") }]
+            //   );
+            // }
             
-
           })
           .catch((err) => {
             setLoading(false);
           });
       };
 
-
       fetchMedications();
     }, [state.user.userId])
   );
-
-
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);

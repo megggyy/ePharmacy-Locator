@@ -29,23 +29,36 @@ export default function MedicationScreen() {
 
   useFocusEffect(
     React.useCallback(() => {
-      axios
-        .get(`${baseURL}medicine`)
-        .then((response) => {
-          setMedications(response.data);
-          setFilteredMedications(response.data);
+      let categoryMap = {}; // Lookup object for categories
+  
+      // 1️⃣ Fetch categories first
+      axios.get(`${baseURL}medication-category`)
+      .then((response) => {
+        setCategories(response.data); // ✅ Save categories in state
+        categoryMap = response.data.reduce((acc, cat) => {
+          acc[cat._id] = cat.name;  
+          return acc;
+        }, {});
+    
+  
+          // 2️⃣ Now fetch medicines with correct category mapping
+          return axios.get(`${baseURL}medicine`);
         })
-        .catch((error) => console.error('Error fetching medications:', error));
-
-      axios
-        .get(`${baseURL}medication-category`)
-        .then((response) => setCategories(response.data))
-        .catch((error) => console.error('Error fetching categories:', error));
-
+        .then((response) => {
+          const updatedMedicines = response.data.map((medicine) => ({
+            ...medicine,
+            categoryNames: medicine.category.map(cat => cat.name).join(' / '), // ✅ Extract category names properly
+          }));
+  
+          setMedications(updatedMedicines);
+          setFilteredMedications(updatedMedicines);
+        })
+        .catch((error) => console.error('Error fetching medicines:', error));
+  
       setSelectedCategory(null);
     }, [])
   );
-
+  
   const handleSearch = (query) => {
     setSearchQuery(query);
     filterMedications(query, selectedCategory);
@@ -108,17 +121,23 @@ export default function MedicationScreen() {
             <Text style={styles.filterText}>{selectedCategory || 'Select Category'}</Text>
           </TouchableOpacity>
         </View>
-
         <View style={styles.medicationsContainer}>
-          {filteredMedications.map((med) => (
-            <MedicationCard
-              key={med._id}
-              name={med.brandName}
-              genericName={med.genericName}
-              onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${med.genericName}`)}
-            />
-          ))}
+        {filteredMedications.map((medication) => (
+          <MedicationCard
+            key={medication._id?.$oid || medication._id} // Ensure key is a string
+            name={medication.brandName}
+            genericName={medication.genericName}
+            brandName={medication.brandName}
+            dosageForm={medication.dosageForm}
+            dosageStrength={medication.dosageStrength}
+            classification={medication.classification}
+            categoryNames={medication.categoryNames}
+            onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.genericName}`)}
+          />
+        ))}
+
         </View>
+
 
         <Modal visible={modalVisible} animationType="slide" transparent={true}>
           <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
@@ -156,14 +175,28 @@ export default function MedicationScreen() {
   );
 }
 
-function MedicationCard({ name, genericName, onPress }) {
+function MedicationCard({ name, genericName, onPress, brandName, dosageForm, dosageStrength, classification, categoryNames }) {
   return (
     <TouchableOpacity style={styles.medicationCard} onPress={onPress}>
-      <Text style={styles.medicationName}>{name}</Text>
-      <Text style={styles.genericName}>{genericName}</Text>
+      {/* Medicine Header */}
+      <View style={styles.medicineHeader}>
+        <Text style={styles.medicineName}>{brandName || 'Unknown'}</Text>
+      </View>
+
+      {/* Generic Name */}
+      <Text style={styles.genericName}>{genericName || 'Unknown'}</Text>
+
+      {/* Medicine Details */}
+      <View style={styles.medicineDetails}>
+        <Text style={styles.detailText}>💊 Dosage: {dosageStrength || 'N/A'}</Text>
+        <Text style={styles.detailText}>📌 Form: {dosageForm || 'N/A'}</Text>
+        <Text style={styles.detailText}>📂 Classification: {classification || 'N/A'}</Text>
+        <Text style={styles.detailText}>📋 Category: {categoryNames || 'No Category'}</Text> 
+      </View>
     </TouchableOpacity>
   );
 }
+
 
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#005b7f' },
@@ -194,9 +227,60 @@ const styles = StyleSheet.create({
   sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
   viewAll: { fontSize: 14, color: '#005b7f' },
   medicationsContainer: { paddingHorizontal: 15, marginBottom: 20, flexDirection: 'column' },
-  medicationCard: { backgroundColor: '#fff', borderRadius: 10, marginBottom: 15, elevation: 3, padding: 10 },
-  medicationInfo: { flex: 1, justifyContent: 'center' },
-  medicationName: { fontSize: 16, fontWeight: 'bold', color: '#333' },
+  medicationCard: {
+    width: '100%', // Full width for better readability
+    padding: 16,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    marginBottom: 12,
+    elevation: 4, // Subtle shadow
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  medicineHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  medicineName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#005b7f',
+  },
+  medicineStock: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#0B607E',
+  },
+  genericName: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color: '#333',
+    marginBottom: 8,
+  },
+  medicineDetails: {
+    marginTop: 6,
+  },
+  detailText: {
+    fontSize: 14,
+    color: '#555',
+    marginBottom: 2,
+  },
+  lastUpdated: {
+    fontSize: 12,
+    color: 'red',
+    marginTop: 10,
+    textAlign: 'right',
+  },
+  noMedicinesText: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#777',
+    marginTop: 20,
+  },
   descriptionText: { fontSize: 12, color: '#666', marginTop: 5 },
   topSection: {
     paddingHorizontal: 16,

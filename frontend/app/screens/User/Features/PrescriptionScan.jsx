@@ -195,12 +195,11 @@ const PrescriptionScreen = () => {
           <Text style={styles.noMedicineText}>No detected medicines</Text>
         )}
       </View>
-
-
-      <TouchableOpacity style={styles.findButton} onPress={handleFindPharmacies} disabled={isLoading}>
-  <Text style={styles.findButtonText}>{isLoading ? 'Processing...' : 'Find Pharmacies'}</Text>
-</TouchableOpacity>
-
+      {matchedMedicines.length > 0 && (
+          <TouchableOpacity style={styles.findButton} onPress={handleFindPharmacies} disabled={isLoading}>
+            <Text style={styles.findButtonText}>{isLoading ? 'Processing...' : 'Find Pharmacies'}</Text>
+          </TouchableOpacity>
+        )}
       </ScrollView>
     </View>
   );
