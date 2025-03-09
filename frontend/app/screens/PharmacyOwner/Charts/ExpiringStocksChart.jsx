@@ -1,21 +1,23 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { View, Text, Dimensions, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
-import AuthGlobal from '@/context/AuthGlobal'; 
+import AuthGlobal from '@/context/AuthGlobal';
+import * as Print from 'expo-print';
+import * as Sharing from 'expo-sharing';
+import * as FileSystem from 'expo-file-system';
+import * as XLSX from 'xlsx';
 
 export default function ExpiringStockScreen() {
   const router = useRouter();
   const screenWidth = Dimensions.get('window').width;
   const chartWidth = screenWidth * 0.9;
-  //const [userProfile, setUserProfile] = useState({});
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [pharmacyId, setPharmacyId] = useState(null);
-  
   const { state } = useContext(AuthGlobal);
 
   useEffect(() => {
@@ -25,8 +27,6 @@ export default function ExpiringStockScreen() {
           if (res.data) {
             const pharmacyId = res.data.id;
             setPharmacyId(pharmacyId);
-            
-            // Fetch expiring stock data
             fetchExpiringStock(pharmacyId);
           } else {
             console.error("No pharmacy found for this user.");
@@ -52,12 +52,6 @@ export default function ExpiringStockScreen() {
         datasets: [
           {
             data: [expiringInWeek, expiringInMonth, expiringIn3Months, expiringIn6Months],
-            colors: [
-              (opacity = 1) => `rgba(255, 99, 132, ${opacity})`,
-              (opacity = 1) => `rgba(54, 162, 235, ${opacity})`,
-              (opacity = 1) => `rgba(255, 206, 86, ${opacity})`,
-              (opacity = 1) => `rgba(75, 192, 192, ${opacity})`
-            ],
           },
         ],
       });
@@ -69,6 +63,77 @@ export default function ExpiringStockScreen() {
     }
   };
 
+  const generateExcel = async () => {
+    if (!chartData) {
+      Alert.alert('Error', 'No data available for export.');
+      return;
+    }
+
+    const data = [
+      ['Time Period', 'Expiring Stock'],
+      ['1 Week', chartData.datasets[0].data[0]],
+      ['1 Month', chartData.datasets[0].data[1]],
+      ['3 Months', chartData.datasets[0].data[2]],
+      ['6 Months', chartData.datasets[0].data[3]],
+    ];
+
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Expiring Stock');
+
+    const excelBuffer = XLSX.write(workbook, { type: 'base64', bookType: 'xlsx' });
+    const fileUri = FileSystem.documentDirectory + 'Expiring_Stock_Report.xlsx';
+    await FileSystem.writeAsStringAsync(fileUri, excelBuffer, { encoding: FileSystem.EncodingType.Base64 });
+
+    Sharing.shareAsync(fileUri);
+  };
+
+  const generatePDF = async () => {
+    if (!chartData) {
+      Alert.alert('Error', 'No data available for export.');
+      return;
+    }
+
+    const htmlContent = `
+      <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            h2 { text-align: center; color: #005b7f; }
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+            th, td { border: 1px solid black; padding: 10px; text-align: center; }
+            th { background-color: #005b7f; color: white; }
+          </style>
+        </head>
+        <body>
+          <h2>Expiring Medicines Report</h2>
+          <table>
+            <tr><th>Time Period</th><th>Expiring Stock</th></tr>
+            ${chartData.datasets[0].data.map((val, idx) => `<tr><td>${chartData.labels[idx]}</td><td>${val}</td></tr>`).join('')}
+          </table>
+        </body>
+      </html>`;
+
+    try {
+      const { uri } = await Print.printToFileAsync({ html: htmlContent });
+      Alert.alert('Success', 'PDF Generated Successfully!', [
+        { text: 'Open', onPress: () => openPDF(uri) },
+        { text: 'OK' },
+      ]);
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      Alert.alert('Error', 'Failed to generate PDF.');
+    }
+  };
+
+  const openPDF = async (uri) => {
+    if (await Sharing.isAvailableAsync()) {
+      await Sharing.shareAsync(uri);
+    } else {
+      Alert.alert('Error', 'Sharing is not available on this device.');
+    }
+  };
+
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
@@ -77,17 +142,8 @@ export default function ExpiringStockScreen() {
     );
   }
 
-  if (!chartData) {
-    return (
-      <View style={styles.errorContainer}>
-        <Text style={styles.errorText}>Failed to load chart data.</Text>
-      </View>
-    );
-  }
-
   return (
     <View style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -95,22 +151,29 @@ export default function ExpiringStockScreen() {
         <Text style={styles.title}>Expiring Medicines</Text>
       </View>
 
-      {/* Chart Title */}
       <Text style={styles.chartTitle}>Stock Expiration in Time Periods</Text>
 
-      {/* Bar Chart */}
       <View style={styles.chartContainer}>
-      <BarChart
-        data={chartData}
-        width={chartWidth}
-        height={350}
-        chartConfig={chartConfig}
-        fromZero
-        showBarTops
-        verticalLabelRotation={60}
-        style={styles.chartStyle}
-      />
+        <BarChart
+          data={chartData}
+          width={chartWidth}
+          height={350}
+          chartConfig={chartConfig}
+          fromZero
+          showBarTops
+          verticalLabelRotation={60}
+          style={styles.chartStyle}
+        />
       </View>
+
+      <TouchableOpacity style={styles.exportButton} onPress={generateExcel}>
+        <Text style={styles.exportButtonText}>Export to Excel</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.exportButton} onPress={generatePDF}>
+        <Text style={styles.exportButtonText}>Export to PDF</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }
@@ -125,30 +188,11 @@ const chartConfig = {
   decimalPlaces: 0,
 };
 
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F5F5',
-  },
-  header: {
-    backgroundColor: '#005b7f',
-    paddingTop: 60,
-    paddingBottom: 20,
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  backButton: {
-    position: 'absolute',
-    left: 20,
-    top: 55,
-  },
-  title: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
+  container: { flex: 1, backgroundColor: '#F5F5F5' },
+  header: { backgroundColor: '#005b7f', paddingTop: 60, paddingBottom: 20, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' },
+  backButton: { position: 'absolute', left: 20, top: 55 },
+  title: { color: 'white', fontSize: 24, fontWeight: 'bold' },
   chartTitle: {
     textAlign: 'center',
     fontSize: 20,
@@ -186,4 +230,6 @@ const styles = StyleSheet.create({
     color: 'red',
     fontSize: 16,
   },
+  exportButton: { backgroundColor: '#005b7f', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 20, marginHorizontal: 20 },
+  exportButtonText: { color: 'white', fontSize: 16, fontWeight: 'bold' },
 });

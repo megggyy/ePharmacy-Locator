@@ -86,7 +86,7 @@ const ListReviewsScreen = () => {
                       {/* Customer Name and Rating in the Same Row */}
                       <View style={styles.userInfo}>
                         <Text style={styles.userName}>
-                          {feedback.customer ? feedback.customer.name : "Anonymous"}
+                        {feedback.name ? feedback.customer?.name : "Anonymous"}
                         </Text>
                         <View style={styles.starsContainer}>
                           {renderStars(feedback.rating)}
