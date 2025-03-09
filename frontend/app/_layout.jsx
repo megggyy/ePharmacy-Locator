@@ -78,6 +78,7 @@ export default function RootLayout() {
             <Stack.Screen name="screens/PharmacyOwner/Profile/EditPharmacyProfileScreen" options={{ headerShown: false }} />
 
             {/* MEDICATIONS */}
+            <Stack.Screen name="screens/PharmacyOwner/Medications/ExpiringMedications" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Medications/ListMedications" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Medications/EditMedication" options={{ headerShown: false }} />
             <Stack.Screen name="screens/PharmacyOwner/Medications/ReadMedication" options={{ headerShown: false }} />

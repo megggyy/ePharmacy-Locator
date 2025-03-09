@@ -104,6 +104,11 @@ export default function Sidebar() {
           <Text style={styles.menuText}>Medication Categories</Text>
         </TouchableOpacity> */}
 
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/Medications/ExpiringMedications')}>
+          <FontAwesome5 name="hourglass-half" size={25} color="#5A5A5A" />
+          <Text style={styles.menuText}>Expiring Medications</Text>
+        </TouchableOpacity>
+
         <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/PharmacyOwner/Medications/ListMedications')}>
           <FontAwesome5 name="pills" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Medications</Text>

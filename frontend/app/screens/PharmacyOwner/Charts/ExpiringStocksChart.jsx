@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { View, Text, Dimensions, StyleSheet, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, TouchableOpacity, ActivityIndicator, Alert, ScrollView } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -10,6 +10,7 @@ import * as Print from 'expo-print';
 import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 import * as XLSX from 'xlsx';
+import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 
 export default function ExpiringStockScreen() {
   const router = useRouter();
@@ -143,12 +144,12 @@ export default function ExpiringStockScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.title}>Expiring Medicines</Text>
+        <Text style={styles.title}>Expiring medicine stocks</Text>
       </View>
 
       <Text style={styles.chartTitle}>Stock Expiration in Time Periods</Text>
@@ -173,8 +174,12 @@ export default function ExpiringStockScreen() {
       <TouchableOpacity style={styles.exportButton} onPress={generatePDF}>
         <Text style={styles.exportButtonText}>Export to PDF</Text>
       </TouchableOpacity>
-
-    </View>
+     
+        <TouchableOpacity style={styles.exportButton} onPress={() => router.push('/screens/PharmacyOwner/Medications/ExpiringMedications')}>
+          <Text style={styles.exportButtonText}>See Detailed Report</Text>
+        </TouchableOpacity>
+ 
+      </ScrollView>
   );
 }
 
@@ -189,9 +194,10 @@ const chartConfig = {
 };
 
 const styles = StyleSheet.create({
+  scrollContainer: { paddingBottom: 20 },
   container: { flex: 1, backgroundColor: '#F5F5F5' },
-  header: { backgroundColor: '#005b7f', paddingTop: 60, paddingBottom: 20, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' },
-  backButton: { position: 'absolute', left: 20, top: 55 },
+  header: { backgroundColor: '#005b7f', paddingTop: 10, paddingBottom: 20, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' },
+  backButton: { position: 'absolute', left: 10, top: 15 },
   title: { color: 'white', fontSize: 24, fontWeight: 'bold' },
   chartTitle: {
     textAlign: 'center',
