@@ -828,7 +828,7 @@ router.put('/resetPassword', async (req, res) => {
 // Edit Profile Route
 router.put('/:id', uploadOptions.array('images'), async (req, res) => {
     const { id } = req.params;
-    const { name, contactNumber, street, barangay, city, address } = req.body;
+    const { name, contactNumber, street, barangay, city, address, businessDays, openingHour, closingHour } = req.body;
 
     try {
         // Check if the user is an Admin
@@ -875,6 +875,10 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
                 }
             }
             
+             // **Update business hours and days**
+             pharmacy.businessDays = businessDays || pharmacy.businessDays;
+             pharmacy.openingHour = openingHour || pharmacy.openingHour;
+             pharmacy.closingHour = closingHour || pharmacy.closingHour;
 
             await pharmacy.save();
             return res.status(200).json({ message: 'Pharmacy updated successfully', pharmacy });

@@ -2,6 +2,8 @@ const express = require("express");
 const { Feedback } = require("../models/feedback");
 const { Pharmacy } = require("../models/pharmacy");
 const { Customer } = require("../models/customer");
+const mongoose = require('mongoose');
+
 
 const router = express.Router();
 
@@ -143,4 +145,27 @@ router.get('/updateFetch/:id', async (req, res) => {
         res.status(500).json({ success: false, message: error.message });
     }
 });
+
+router.get('/chart/:pharmacyId', async (req, res) => {
+    try {
+        const pharmacyId = req.params.pharmacyId;
+
+        // Aggregate feedback to count occurrences of each rating
+        const ratingsData = await Feedback.aggregate([
+            { $match: { pharmacy: new mongoose.Types.ObjectId(pharmacyId) } },
+            { $group: { _id: "$rating", count: { $sum: 1 } } }
+        ]);
+
+        // Prepare response with counts for ratings 1-5, defaulting to 0 if missing
+        const ratingsCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+        ratingsData.forEach(r => { ratingsCount[r._id] = r.count; });
+
+        res.status(200).json(ratingsCount);
+    } catch (error) {
+        console.error("Error fetching ratings data:", error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
+
 module.exports = router;

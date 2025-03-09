@@ -137,6 +137,9 @@ export default function Sidebar() {
                     <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/PharmacyOwner/Charts/ExpiringStocksChart')}>
                       <Text style={styles.dropdownText}>Expiring Stocks Overview</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/PharmacyOwner/Charts/ReviewsChart')}>
+                      <Text style={styles.dropdownText}>Reviews Chart</Text>
+                    </TouchableOpacity>
                   </View>
                 )}
 
