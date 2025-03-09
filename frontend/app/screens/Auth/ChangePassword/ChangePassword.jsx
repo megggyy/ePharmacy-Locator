@@ -9,6 +9,7 @@ import baseURL from "../../../../assets/common/baseurl";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from "axios";
 import Spinner from "../../../../assets/common/spinner";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const ChangePasswordScreen = () => {
   const { userId } = useLocalSearchParams();
@@ -65,7 +66,12 @@ const ChangePasswordScreen = () => {
 
       const data = await response.json();
       if (response.status === 200) {
-        alert('Password successfully updated. Please login.');
+        Toast.show({
+          type: 'success',
+          text1: 'Success',
+          text2: 'Password changed successfully.',
+        });
+        
         // await AsyncStorage.removeItem('jwt');
         // dispatch({ type: 'LOGOUT_USER' });
         router.push('/screens/Auth/LoginScreen');
@@ -114,7 +120,7 @@ const ChangePasswordScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView style={styles.container}>
       {loading ? (
         <Spinner /> // Show the custom spinner component when loading
       ) : (
@@ -202,7 +208,7 @@ const ChangePasswordScreen = () => {
           </TouchableOpacity>
         </>
       )}
-    </View>
+    </KeyboardAwareScrollView>
   );
 };
 
@@ -212,8 +218,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#0B607E',
-    paddingTop: 80,
+    backgroundColor: '#005b7f',
+    paddingTop: 15,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -221,7 +227,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 15,
     left: 20,
   },
   headerText: {
@@ -257,7 +263,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     borderWidth: 1,
     borderColor: '#E0E0E0',
-    width: 310,
+    width: 240,
   },
   errorText: {
     color: 'red',

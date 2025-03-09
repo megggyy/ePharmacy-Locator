@@ -10,6 +10,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import * as ImagePicker from 'expo-image-picker';
 import Spinner from "../../../../assets/common/spinner";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import Toast from 'react-native-toast-message';
 
 export default function EditProfile() {
   const router = useRouter();
@@ -66,7 +67,12 @@ export default function EditProfile() {
         const closingHours = pharmacyDetails?.closingHour || [];
         setClosingHour(closingHours);
       } catch (error) {
-        Alert.alert('Error', error.message);
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: error.message || 'Something went wrong.',
+        });
+        
       } finally {
         setLoading(false);
       }
@@ -130,6 +136,9 @@ export default function EditProfile() {
       formData.append('street', street);
       formData.append('barangay', barangay);
       formData.append('city', city);
+      formData.append('businessDays', businessDays);
+      formData.append('openingHour', openingHours);
+      formData.append('closingHour', closingHours);
 
       images.forEach((uri) => {
         const filename = uri.split('/').pop();
@@ -148,11 +157,20 @@ export default function EditProfile() {
         },
       });
 
-      Alert.alert('Success', 'Profile updated successfully.');
+      Toast.show({
+        type: 'success', 
+        text1: 'Success',
+        text2: 'Profile updated successfully.',
+      });      
       router.push('/drawer/PharmacyOwnerDrawer');
     } catch (error) {
       console.error('Error updating profile:', error);
-      Alert.alert('Error', 'Failed to update profile.');
+      Toast.show({
+        type: 'error',
+        text1: 'Error',
+        text2: 'Failed to update profile.',
+      });
+      
     }
   };
 
@@ -245,19 +263,25 @@ export default function EditProfile() {
 
             <Text style={styles.label}>Business Days</Text>
             <TextInput
-              style={styles.input}
-              value={businessDays}
-              editable={false}
-              selectTextOnFocus={false}
-            />
+            style={styles.input}
+            value={businessDays}
+            onChangeText={setBusinessDays}
+          />
+          
+        <Text style={styles.label}>Opening Hour</Text>
+        <TextInput
+          style={styles.input}
+          value={openingHours}
+          onChangeText={setOpeningHour}
+        />
 
-            <Text style={styles.label}>Store Hours</Text>
-            <TextInput
-              style={styles.input}
-              value={`${openingHours} - ${closingHours}`}
-              editable={false}
-              selectTextOnFocus={false}
-            />
+        <Text style={styles.label}>Closing Hour</Text>
+        <TextInput
+          style={styles.input}
+          value={closingHours}
+          onChangeText={setClosingHour}
+        />
+
 
           </View>
 
