@@ -214,7 +214,7 @@ const MedicationScreen = () => {
         <>
           {/* Header Section */}
           <View style={styles.header}>
-            <IconButton icon="arrow-left" onPress={() => router.back()} />
+            <IconButton icon="arrow-left" onPress={() => router.back()} color="white" />
             <Text style={styles.headerTitle}>Check Expiring Medicines</Text>
           </View>
         {/* Search Bar */}
