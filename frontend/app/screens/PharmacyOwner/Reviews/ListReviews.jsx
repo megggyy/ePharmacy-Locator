@@ -1,17 +1,12 @@
-import React, { useState, useCallback, useContext } from "react";
+import React, { useState, useCallback, useContext, useEffect } from "react";
 import {
   View,
   Text,
-  ActivityIndicator,
   StyleSheet,
-  Dimensions,
   Image,
   TouchableOpacity,
-  ScrollView,
-  Alert
+  ScrollView
 } from "react-native";
-import { DataTable, Searchbar } from "react-native-paper";
-import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
@@ -23,105 +18,135 @@ import AuthGlobal from '@/context/AuthGlobal';
 const ListReviewsScreen = () => {
   const router = useRouter();
   const [feedbacks, setFeedbacks] = useState([]);
+  const [filteredFeedbacks, setFilteredFeedbacks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
-  const { state, dispatch } = useContext(AuthGlobal);
+  const [selectedFilter, setSelectedFilter] = useState(null); // Stores selected rating filter
+  const [averageRating, setAverageRating] = useState(0);
+  const { state } = useContext(AuthGlobal);
 
   useFocusEffect(
-    React.useCallback(() => {
+    useCallback(() => {
       const fetchFeedbacks = async () => {
         try {
           const response = await axios.get(`${baseURL}feedbacks/pharmacy/${state.user.userId}`);
           setFeedbacks(response.data);
+          calculateAverageRating(response.data);
+          setFilteredFeedbacks(response.data); // Initially show all reviews
         } catch (error) {
           console.error("Error fetching feedback details:", error);
         } finally {
-          setLoading(false); // ✅ Ensure loading stops after fetch
+          setLoading(false);
         }
       };
 
       fetchFeedbacks();
-
       const interval = setInterval(fetchFeedbacks, 5000);
-  
+
       return () => {
-        clearInterval(interval); // Clear interval when screen loses focus
-        fetchFeedbacks()
+        clearInterval(interval);
+        fetchFeedbacks();
         setLoading(true);
       };
     }, [state.user.userId])
   );
 
-
-  const renderStars = (rating) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      stars.push(
-        <Ionicons
-          key={i}
-          name={i <= rating ? 'star' : 'star-outline'}
-          size={20}
-          color={i <= rating ? 'black' : 'darkgray'}
-        />
-      );
+  // Calculate average rating
+  const calculateAverageRating = (reviews) => {
+    if (reviews.length === 0) {
+      setAverageRating(0);
+      return;
     }
-    return stars;
+    const total = reviews.reduce((sum, review) => sum + review.rating, 0);
+    setAverageRating((total / reviews.length).toFixed(1)); // Round to 1 decimal place
   };
 
+  // Star rating filter
+  const filterByStars = (stars) => {
+    setSelectedFilter(stars);
+    if (stars === null) {
+      setFilteredFeedbacks(feedbacks);
+    } else {
+      setFilteredFeedbacks(feedbacks.filter(review => review.rating === stars));
+    }
+  };
+
+  const renderStars = (rating) => {
+    return [...Array(5)].map((_, i) => (
+      <Ionicons
+        key={i}
+        name={i < rating ? 'star' : 'star-outline'}
+        size={20}
+        color={i < rating ? 'black' : 'darkgray'}
+      />
+    ));
+  };
 
   return (
     <View style={styles.container}>
       {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
+        <Spinner />
       ) : (
         <>
+          {/* Header */}
           <View style={styles.header}>
             <TouchableOpacity onPress={() => router.push('/drawer/PharmacyOwnerDrawer')} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
-            <Image
-              source={require('@/assets/images/epharmacy-logo.png')}
-              style={styles.logo}
-            />
+            <Image source={require('@/assets/images/epharmacy-logo.png')} style={styles.logo} />
             <Text style={styles.title}>ePharmacy</Text>
           </View>
+
           <ScrollView>
             <View style={styles.reviewContainer}>
-              <View>
-                {feedbacks.length > 0 ? (
-                  feedbacks.map((feedback, index) => (
-                    <View key={feedback._id} style={styles.reviewCard}>
-                      {/* Customer Name and Rating in the Same Row */}
-                      <View style={styles.userInfo}>
-                        <Text style={styles.userName}>
-                        {feedback.name ? feedback.customer?.name : "Anonymous"}
-                        </Text>
-                        <View style={styles.starsContainer}>
-                          {renderStars(feedback.rating)}
-                        </View>
-                      </View>
 
-                      {/* Show comment only if it's not empty */}
-                      {feedback.comment && (
-                        <>
-                          <Text style={styles.value}>{feedback.comment}</Text>
-                        </>
-                      )}
-                    </View>
-                  ))
-                ) : (
-                  <Text />
-                )}
+              {/* Average Rating */}
+              <View style={styles.averageRatingContainer}>
+                <Text style={styles.averageText}>Average Rating: </Text>
+                <Text style={styles.averageScore}>{averageRating}</Text>
+                <View style={styles.starsContainer}>{renderStars(Math.round(averageRating))}</View>
               </View>
-            </View >
+
+              {/* Star Rating Filter */}
+              <View style={styles.filterContainer}>
+                {[5, 4, 3, 2, 1].map(star => (
+                  <TouchableOpacity
+                    key={star}
+                    style={[styles.filterButton, selectedFilter === star && styles.selectedFilter]}
+                    onPress={() => filterByStars(selectedFilter === star ? null : star)}
+                  >
+                    <Text style={styles.filterText}>{star} ⭐</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+
+              {/* Reviews List */}
+              {filteredFeedbacks.length > 0 ? (
+                filteredFeedbacks.map(feedback => (
+                  <View key={feedback._id} style={styles.reviewCard}>
+                    <View style={styles.userInfo}>
+                      <Text style={styles.userName}>
+                        {feedback.customer?.name || "Anonymous"}
+                      </Text>
+                      <View style={styles.starsContainer}>
+                        {renderStars(feedback.rating)}
+                      </View>
+                    </View>
+                    {feedback.comment && <Text style={styles.value}>{feedback.comment}</Text>}
+                  </View>
+                ))
+              ) : (
+                <Text style={styles.noReviewsText}>No reviews available</Text>
+              )}
+
+            </View>
           </ScrollView>
         </>
       )}
     </View>
-
   );
 };
 
+// Styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -151,25 +176,50 @@ const styles = StyleSheet.create({
   reviewContainer: {
     padding: 20
   },
-  reviewCard: {
-    padding: 20,
-    backgroundColor: '#4A8691',
-    borderRadius: 10,
-    marginBottom: 20
+  averageRatingContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 15,
   },
-  headerText: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: 'black',
-    justifyContent: 'center',
-    textAlign: 'center',
-    marginVertical: 15
+  averageText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  averageScore: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#005b7f",
+    marginHorizontal: 5,
+  },
+  starsContainer: {
+    flexDirection: "row",
+  },
+  filterContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 15,
+  },
+  filterButton: {
+    backgroundColor: "#D3D3D3",
+    padding: 8,
+    borderRadius: 8,
+    marginHorizontal: 5,
+  },
+  selectedFilter: {
+    backgroundColor: "#005b7f",
+  },
+  filterText: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "white",
   },
   reviewCard: {
     backgroundColor: "#f9f9f9",
-    padding: 10,
-    marginBottom: 10,
+    padding: 15,
     borderRadius: 8,
+    marginBottom: 10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -177,29 +227,26 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   userInfo: {
-    flexDirection: "row", // Aligns items in a row
-    alignItems: "center", // Aligns vertically
-    justifyContent: "space-between", // Spaces name and rating evenly
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   userName: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
     color: "#333",
-  },
-  starsContainer: {
-    flexDirection: "row",
-    marginLeft: 10, // Space between name and rating
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: "bold",
-    marginTop: 5,
   },
   value: {
     fontSize: 15,
     color: "#555",
     marginTop: 5,
     fontStyle: "italic",
+  },
+  noReviewsText: {
+    textAlign: "center",
+    fontSize: 16,
+    color: "#888",
+    marginTop: 20,
   },
 });
 
