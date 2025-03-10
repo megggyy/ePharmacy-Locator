@@ -302,6 +302,7 @@ router.get('/category/:id', async (req, res) => {
         }
 
         const medicine = await Medicine.find({ category: req.params.id })
+        .populate('category')
         .lean();
     
         res.status(200).json(medicine);

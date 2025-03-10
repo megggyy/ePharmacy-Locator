@@ -41,6 +41,14 @@ const ListReviewsScreen = () => {
       };
 
       fetchFeedbacks();
+
+      const interval = setInterval(fetchFeedbacks, 5000);
+  
+      return () => {
+        clearInterval(interval); // Clear interval when screen loses focus
+        fetchFeedbacks()
+        setLoading(true);
+      };
     }, [state.user.userId])
   );
 

@@ -48,37 +48,68 @@ const PrescriptionResultsScreen = () => {
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Pharmacy Results</Text>
       </View>
-  
-      {loading ? (   
-     <Spinner />
+
+      {loading ? (
+        <Spinner />
       ) : (
         <ScrollView contentContainerStyle={styles.content}>
-          {pharmacies.length > 0 ? (
-            pharmacies.map((item, index) => {
-              const isExpanded = expandedMap === index;
-              return (
+        {pharmacies.length > 0 ? (
+          pharmacies.map((item, index) => {
+            const isExpanded = expandedMap === index;
+      
+            // Summing stock of the same generic name while preserving the original case
+            const medicineStockMap = new Map();
+      
+            item.medicines.forEach((med) => {
+              const name = med.genericName.trim(); // Keep original case
+              if (medicineStockMap.has(name)) {
+                medicineStockMap.set(name, medicineStockMap.get(name) + (med.stock || 0));
+              } else {
+                medicineStockMap.set(name, med.stock || 0);
+              }
+            });
+      
+            // Convert back to an array of unique medicines with total stock
+            const uniqueMedicines = Array.from(medicineStockMap, ([genericName, totalStock]) => ({
+              genericName,
+              totalStock,
+            }));
+      
+            // Check if all medicines are out of stock
+            const allOutOfStock = uniqueMedicines.every(med => med.totalStock === 0);
+      
+            return (
               <View key={item.pharmacy._id || index} style={[styles.pharmacyCard, isExpanded && styles.expandedCard]}>
                 <View style={styles.pharmacyInfo}>
                   <Text style={styles.pharmacyName}>{item.pharmacy.userInfo.name}</Text>
-                  <Text style={styles.pharmacyDetails}>{item.pharmacy.userInfo.street}, {item.pharmacy.userInfo.barangay}, {item.pharmacy.userInfo.city}</Text>
+                  <Text style={styles.pharmacyDetails}>
+                    {item.pharmacy.userInfo.street}, {item.pharmacy.userInfo.barangay}, {item.pharmacy.userInfo.city}
+                  </Text>
                   <Text style={styles.pharmacyDetails}>📞 {item.pharmacy.userInfo.contactNumber}</Text>
-                  <Text style={styles.pharmacyDetails}>🕒 {item.pharmacy.businessDays} ({item.pharmacy.openingHour} - {item.pharmacy.closingHour})</Text>
+                  <Text style={styles.pharmacyDetails}>
+                    🕒 {item.pharmacy.businessDays} ({item.pharmacy.openingHour} - {item.pharmacy.closingHour})
+                  </Text>
                   <Text style={styles.medicineTitle}>Available Medicines:</Text>
-                  {item.medicines.map((med, medIndex) => (
+      
+                  {uniqueMedicines.map((med, medIndex) => (
                     <Text key={`${item.pharmacy._id}-${medIndex}`} style={styles.medicineText}>
-                      {med.genericName}: {med.stock} in stock
+                      {med.genericName}: {med.totalStock} in stock
                     </Text>
                   ))}
-                  
+      
                   {/* View Pharmacy Button */}
                   <TouchableOpacity
-                    style={styles.viewPharmacyButton}
+                    style={[
+                      styles.viewPharmacyButton,
+                      allOutOfStock ? styles.disabledButton : styles.enabledButton, // Apply different styles
+                    ]}
                     onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${item.pharmacy._id}`)}
+                    disabled={allOutOfStock} // Disable button if all stock is 0
                   >
                     <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
                   </TouchableOpacity>
                 </View>
-
+      
                 <View style={isExpanded ? styles.fullScreenMapContainer : styles.mapContainer}>
                   <MapView
                     style={isExpanded ? styles.fullScreenMap : styles.map}
@@ -98,7 +129,7 @@ const PrescriptionResultsScreen = () => {
                       description={`${item.pharmacy.userInfo.street}, ${item.pharmacy.userInfo.barangay}`}
                     />
                   </MapView>
-
+      
                   <TouchableOpacity
                     style={styles.zoomButton}
                     onPress={() => setExpandedMap(isExpanded ? null : index)}
@@ -107,30 +138,32 @@ const PrescriptionResultsScreen = () => {
                   </TouchableOpacity>
                 </View>
               </View>
-              );
-            })
-          ) : (
-            <Text style={styles.noResults}>No pharmacies found with the requested medications.</Text>
-          )}
-        </ScrollView>
+            );
+          })
+        ) : (
+          <Text style={styles.noResults}>No pharmacies found with the requested medications.</Text>
+        )}
+      </ScrollView>
+      
+
       )}
     </View>
   );
-  
+
 };
 
 const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: '#ffffff' 
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff'
   },
-  content: { 
-    flexGrow: 1, 
-    padding: 16 
+  content: {
+    flexGrow: 1,
+    padding: 16
   },
   header: { flexDirection: 'row', alignItems: 'center', padding: 16, backgroundColor: '#005b7f' },
   backButton: { marginRight: 10 },
-  headerTitle: { fontSize: 18, color: 'white', fontWeight: 'bold' }, 
+  headerTitle: { fontSize: 18, color: 'white', fontWeight: 'bold' },
   loadingText: { marginTop: 10, fontSize: 16, color: '#005b7f' },
   pharmacyCard: {
     flexDirection: 'row',
@@ -201,7 +234,14 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
     fontWeight: 'bold',
-  },  
+  },
+  enabledButton: {
+    backgroundColor: "#007BFF",
+  },
+  disabledButton: {
+    backgroundColor: "#ccc",
+    opacity: 0.6,
+  },
 });
 
 export default PrescriptionResultsScreen;

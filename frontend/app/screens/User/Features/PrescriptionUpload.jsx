@@ -8,6 +8,7 @@ import baseURL from "@/assets/common/baseurl";
 import AuthGlobal from "@/context/AuthGlobal";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ImageEditor } from "expo-crop-image";
+import Spinner from "@/assets/common/spinner";
 
 
 const PrescriptionUploadScreen = () => {
@@ -273,10 +274,7 @@ const PrescriptionUploadScreen = () => {
       )}
 
       {isLoading ? (
-        <View style={styles.loadingOverlay}>
-          <ActivityIndicator size="large" color="#ffffff" />
-          <Text style={styles.loadingText}>Processing Image...</Text>
-        </View>
+         <Spinner />
       ) : isCropping ? (
         <View style={styles.cropContainer}>
           <ImageEditor

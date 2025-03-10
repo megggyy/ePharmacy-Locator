@@ -132,7 +132,10 @@ export default function MedicationScreen() {
             dosageStrength={medication.dosageStrength}
             classification={medication.classification}
             categoryNames={medication.categoryNames}
-            onPress={() => router.push(`/screens/User/Features/MedicationDetails?name=${medication.genericName}`)}
+            onPress={() => {
+              const encodedName = encodeURIComponent(medication.genericName);
+              router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
+            }}
           />
         ))}
 

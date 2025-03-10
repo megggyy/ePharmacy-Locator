@@ -28,7 +28,7 @@ const CategoryFilterMedications = () => {
       }
     };
 
-    
+
     fetchMedications();
   }, [id]);
 
@@ -55,20 +55,26 @@ const CategoryFilterMedications = () => {
           </View>
         ) : (
           // Display Medications or "No Medications" Message
-          <View style={styles.medicationsGrid}>
+          <View style={styles.medicationContainer}>
             {medications.length > 0 ? (
               medications.map((medication) => (
                 <TouchableOpacity
                   key={medication._id}
-                  style={styles.medicationCard}
+                  style={styles.medicineHeader}
                   onPress={() => {
                     const encodedName = encodeURIComponent(medication.genericName);
                     console.log("Encoded Name:", encodedName); // Debugging
                     router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
                   }}                >
-                  <View style={styles.medicationInfo}>
-                    <Text style={styles.medicationName}>{medication.genericName}</Text>
-
+                  <View style={styles.medicationCard}>
+                    <Text style={styles.medicationName}>{medication.brandName}</Text>
+                    <Text style={styles.genericName}>{medication.genericName || 'Unknown'}</Text>
+                    <View style={styles.medicineDetails}>
+                      <Text style={styles.detailText}>💊 Dosage: {medication.dosageStrength || 'N/A'}</Text>
+                      <Text style={styles.detailText}>📌 Form: {medication.dosageForm || 'N/A'}</Text>
+                      <Text style={styles.detailText}>📂 Classification: {medication.classification || 'N/A'}</Text>
+                      <Text style={styles.detailText}>📋 Category: {medication.category.map(cat => cat.name).join(' / ')}</Text>
+                    </View>
                   </View>
                 </TouchableOpacity>
               ))
@@ -111,20 +117,17 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
   },
-  medicationsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
+  medicationContainer: { marginTop: 15 },
   medicationCard: {
-    width: '48%',
-    padding: 10,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    marginVertical: 10,
-    elevation: 4,
-    borderColor: '#B0BEC5',
-    borderWidth: 1,
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    padding: 15,
+    marginVertical: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
   },
   medicationImage: {
     width: '100%',
@@ -135,6 +138,7 @@ const styles = StyleSheet.create({
   medicationInfo: {
     flex: 1,
     justifyContent: 'center',
+    marginTop: 10
   },
   medicationName: {
     fontSize: 16,
@@ -151,6 +155,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#00796B',
   },
+  
+  medicineName: { fontSize: 18, fontWeight: 'bold', color: '#005b7f' },
+  genericName: { fontSize: 16, fontStyle: 'italic', color: '#333', marginBottom: 8 },
+  medicineDetails: { marginTop: 6 },
   noMedicationsText: {
     fontSize: 16,
     color: '#888',

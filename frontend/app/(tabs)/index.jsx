@@ -75,18 +75,18 @@ const HomeScreen = () => {
   };
 
   // Filter medications based on search query and remove duplicates by name
-  const filteredMedications = getUniqueMedications(
-    medications
-      .filter((medication) =>
-        medication.genericName.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-      .reduce((acc, med) => {
-        if (!acc.some((item) => item.genericName === med.genericName)) {
-          acc.push(med); // Add only if the genericName is not already included
-        }
-        return acc;
-      }, [])
-  );
+  // const filteredMedications = getUniqueMedications(
+  //   medications
+  //     .filter((medication) =>
+  //       medication.genericName.toLowerCase().includes(searchQuery.toLowerCase())
+  //     )
+  //     .reduce((acc, med) => {
+  //       if (!acc.some((item) => item.genericName === med.genericName)) {
+  //         acc.push(med); // Add only if the genericName is not already included
+  //       }
+  //       return acc;
+  //     }, [])
+  // );
   
   const handleCategoryPress = (categoryId, categoryName) => {
     setSelectedCategory(categoryId);
@@ -190,7 +190,7 @@ const HomeScreen = () => {
       </View>
 
       <View style={styles.medicationsContainer}>
-        {filteredMedications.map((medication) => (
+        {medications.map((medication) => (
           <MedicationCard
             key={medication._id}
             brandName={medication.brandName}
@@ -201,7 +201,6 @@ const HomeScreen = () => {
             categoryNames={medication.category.map(cat => cat.name).join(' / ')}
             onPress={() => {
               const encodedName = encodeURIComponent(medication.genericName);
-              console.log("Navigating to MedicationDetails with:", encodedName);
               router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
             }}
           />

@@ -8,7 +8,7 @@ import nspell from 'nspell';
 import baseURL from '@/assets/common/baseurl';
 import axios from 'axios';
 
-let spell; 
+let spell;
 
 const PrescriptionScreen = () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const PrescriptionScreen = () => {
   const [medicinesList, setMedicinesList] = useState([]);
   const [matchedMedicines, setMatchedMedicines] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
@@ -26,9 +26,9 @@ const PrescriptionScreen = () => {
         console.error("Error fetching medicines:", error);
       }
     };
-  
+
     fetchMedicines(); // Call the function to fetch medicines
-  
+
     try {
       if (!spell && affContent && dicContent) {
         spell = nspell(affContent, dicContent);
@@ -38,24 +38,24 @@ const PrescriptionScreen = () => {
       console.error('Error initializing nspell:', error);
     }
   }, []);
-  
+
 
   useEffect(() => {
     if (!ocrText || !spell || !dicContent || medicinesList.length === 0) return;
-  
+
     setIsLoading(true); // Ensure it starts loading
-  
+
     console.log('Original OCR Text:', ocrText);
-  
+
     const ocrWords = ocrText.split(/\s+|\n+/).filter(Boolean);
     if (ocrWords.length === 0) {
       console.warn('No words extracted from OCR text.');
       setIsLoading(false);
       return;
     }
-  
+
     const dictionaryWords = dicContent.split('\n').map(word => word.toLowerCase());
-  
+
     const correctedWords = ocrWords.map((word) => {
       let correctedWord = word.toLowerCase();
       if (!spell.correct(correctedWord)) {
@@ -63,7 +63,7 @@ const PrescriptionScreen = () => {
           let similarity = getSequenceSimilarity(correctedWord, dictWord);
           return similarity > best.similarity ? { name: dictWord, similarity } : best;
         }, { name: '', similarity: 0 });
-  
+
         if (bestMatch.similarity >= 0.5) {
           correctedWord = bestMatch.name;
           console.log(`Corrected "${word}" to "${correctedWord}" using dictionary`);
@@ -71,9 +71,9 @@ const PrescriptionScreen = () => {
       }
       return correctedWord;
     });
-  
+
     console.log('Corrected OCR Words:', correctedWords);
-  
+
     const matched = medicinesList
       .map((medicine) => {
         const medicineName = medicine.genericName.toLowerCase();
@@ -81,14 +81,23 @@ const PrescriptionScreen = () => {
         return { genericName: medicine.genericName, score: highestScore };
       })
       .filter(m => m.score >= 0.8)
-      .sort((a, b) => b.score - a.score);
-  
+      .sort((a, b) => b.score - a.score)
+      .reduce((acc, curr) => {
+        if (!acc.has(curr.genericName)) {
+          acc.set(curr.genericName, curr); // Store unique generic names
+        }
+        return acc;
+      }, new Map())
+      .values(); // Extract unique values
+
+    const uniqueMatched = Array.from(matched); // Convert Map values back to an array
+
     console.log('Matched Medicines:', matched);
-    setMatchedMedicines(matched);
+    setMatchedMedicines(uniqueMatched );
     setIsLoading(false); // Ensure it stops loading only after processing
-  
+
   }, [ocrText, spell, medicinesList]); // Ensure dependencies are all available
-  
+
 
   const getSequenceSimilarity = (word1, word2) => {
     const lcs = (a, b) => {
@@ -110,50 +119,50 @@ const PrescriptionScreen = () => {
 
   const uploadPrescription = async () => {
     if (!customerId) {
-        console.error("Customer ID is missing.");
-        Alert.alert("Error", "Customer ID is required to upload the prescription.");
-        return;
+      console.error("Customer ID is missing.");
+      Alert.alert("Error", "Customer ID is required to upload the prescription.");
+      return;
     }
 
     try {
-        const validMedicines = matchedMedicines
-            .filter(m => m?.genericName)
-            .map(m => m.genericName);
+      const validMedicines = matchedMedicines
+        .filter(m => m?.genericName)
+        .map(m => m.genericName);
 
-        const response = await axios.post(`${baseURL}customers/upload-prescription`, {
-            customerId,  
-            originalImageUrl,
-            processedImageUrl,
-            ocrText,
-            matchedMedicines: validMedicines,
-        }, {
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+      const response = await axios.post(`${baseURL}customers/upload-prescription`, {
+        customerId,
+        originalImageUrl,
+        processedImageUrl,
+        ocrText,
+        matchedMedicines: validMedicines,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-        console.log("Prescription saved:", response.data);
-        //Alert.alert("Success", "Prescription uploaded successfully!");
+      console.log("Prescription saved:", response.data);
+      //Alert.alert("Success", "Prescription uploaded successfully!");
     } catch (error) {
-        console.error("Error uploading prescription:", error.response?.data || error.message);
-        //Alert.alert("Error", "Failed to upload prescription.");
+      console.error("Error uploading prescription:", error.response?.data || error.message);
+      //Alert.alert("Error", "Failed to upload prescription.");
     }
-};
+  };
 
   const handleFindPharmacies = async () => {
     try {
       // Fetch customer's consent status
       const response = await axios.get(`${baseURL}customers/customers/${customerId}`);
       const { consentGiven } = response.data;
-  
+
       console.log("Customer Consent:", consentGiven);
-  
+
       if (consentGiven) {
         await uploadPrescription(); // Only upload if consent is given
       } else {
         console.warn("Customer has not given consent. Prescription will not be uploaded.");
       }
-  
+
       // Proceed to find pharmacies regardless of consent
       router.push({
         pathname: "/screens/User/Features/PrescriptionResults",
@@ -164,16 +173,16 @@ const PrescriptionScreen = () => {
       Alert.alert("Error", "Failed to fetch customer consent or find pharmacies. Please try again.");
     }
   };
-  
-  
+
+
   return (
     <View style={styles.safeArea}>
-    <View style={styles.header}>
-      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-        <Ionicons name="arrow-back" size={28} color="white" />
-      </TouchableOpacity>
-      <Text style={styles.headerTitle}>Uploaded Prescription</Text>
-    </View>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+          <Ionicons name="arrow-back" size={28} color="white" />
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>Uploaded Prescription</Text>
+      </View>
       <ScrollView contentContainerStyle={styles.content}>
         {processedImageUrl ? (
           <View style={styles.imageContainer}>
@@ -185,17 +194,17 @@ const PrescriptionScreen = () => {
 
         <Text style={styles.sectionTitle}>Matched Medicines</Text>
         <View style={styles.medicineContainer}>
-        {isLoading ? (
-          <ActivityIndicator size="large" color="#007acc" />
-        ) : matchedMedicines.length > 0 ? (
-          matchedMedicines.map((med, index) => (
-            <Text key={index} style={styles.medicineText}>{med.genericName}</Text>
-          ))
-        ) : (
-          <Text style={styles.noMedicineText}>No detected medicines</Text>
-        )}
-      </View>
-      {matchedMedicines.length > 0 && (
+          {isLoading ? (
+            <ActivityIndicator size="large" color="#007acc" />
+          ) : matchedMedicines.length > 0 ? (
+            matchedMedicines.map((med, index) => (
+              <Text key={index} style={styles.medicineText}>{med.genericName}</Text>
+            ))
+          ) : (
+            <Text style={styles.noMedicineText}>No detected medicines</Text>
+          )}
+        </View>
+        {matchedMedicines.length > 0 && (
           <TouchableOpacity style={styles.findButton} onPress={handleFindPharmacies} disabled={isLoading}>
             <Text style={styles.findButtonText}>{isLoading ? 'Processing...' : 'Find Pharmacies'}</Text>
           </TouchableOpacity>
@@ -220,7 +229,7 @@ const styles = StyleSheet.create({
   backButton: {
     padding: 8, // Increased padding for better touch response
     marginRight: 12,
-  },  
+  },
   headerTitle: {
     fontSize: 18,
     color: 'white',

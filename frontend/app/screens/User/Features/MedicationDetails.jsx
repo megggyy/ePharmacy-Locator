@@ -21,6 +21,7 @@ const MedicationDetails = () => {
   const [medications, setMedications] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  console.log(name)
   useEffect(() => {
     if (decodedName) {
       const fetchData = () => {
@@ -34,7 +35,7 @@ const MedicationDetails = () => {
             setLoading(false);
           })
           .catch((error) => {
-            console.error("Error fetching data:", error);
+            // console.error("Error fetching data:", error);
             setLoading(false);
           });
       };

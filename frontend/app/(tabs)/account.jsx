@@ -111,14 +111,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: '#4A8691', // Same color as the upper background
+    backgroundColor: '#005b7f', // Same color as the upper background
     paddingVertical: 12,
     paddingHorizontal: 100,
     borderRadius: 8,
     marginVertical: 10,
   },
   signupButton: {
-    backgroundColor: '#357B8E', 
+    backgroundColor: '#005b7f', 
     paddingVertical: 12,
     paddingHorizontal: 95,
     borderRadius: 8,

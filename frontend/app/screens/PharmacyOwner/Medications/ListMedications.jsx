@@ -101,6 +101,14 @@ const MedicationScreen = () => {
       };
 
       fetchMedications();
+
+      const interval = setInterval(fetchMedications, 5000);
+  
+      return () => {
+        clearInterval(interval); 
+        fetchMedications()
+        setLoading(true);
+      };
     }, [state.user.userId])
   );
 

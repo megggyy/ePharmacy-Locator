@@ -10,16 +10,17 @@ import baseURL from '@/assets/common/baseurl';
 const MedicineList = () => {
   const router = useRouter();
   const { pharmacyId, genericName } = useLocalSearchParams();
-  const decodedGenericName = genericName ? decodeURIComponent(genericName) : "";  const [medicine, setMedicine] = useState([]);
+  const decodedGenericName = genericName ? decodeURIComponent(genericName) : "";  
+  const [medicine, setMedicine] = useState([]);
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState('');
   const [isCategory, setIsCategory] = useState({});
 
+  console.log(genericName)
   useEffect(() => {
     const fetchMedicineStocks = async () => {
       try {
         const response = await axios.get(`${baseURL}medicine/list/${pharmacyId}/${decodedGenericName}`);
-        console.log('Fetched medicine data:', response.data.data); // Logging fetched data
         setMedicine(response.data.data);
       } catch (error) {
         console.error('Error fetching medicine details:', error);

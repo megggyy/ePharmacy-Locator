@@ -36,7 +36,7 @@ export default RoleSelectionScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F6580',
+    backgroundColor: '#005b7f',
     justifyContent: 'center',
   },
   upperSection: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     width: '70%',
   },
   buttonText: {
-    color: '#00A896',
+    color: '#005b7f',
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',

@@ -45,7 +45,7 @@ const PharmacyDetails = () => {
         const response = await axios.get(`${baseURL}pharmacies/${id}`);
         setPharmacy(response.data);
       } catch (error) {
-        console.error("Error fetching pharmacy details:", error);
+        // console.error("Error fetching pharmacy details:", error);
       }
     };
 
