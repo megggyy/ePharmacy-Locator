@@ -74,10 +74,12 @@ export default function Sidebar() {
     : require('@/assets/images/sample.jpg');
   return (
     <View style={styles.container}>
-      {/* Back Button */}
-      <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/Dashboard')} style={styles.backButton}>
-        <Ionicons name="arrow-back" size={24} color="white" />
-      </TouchableOpacity>
+
+     {/* Back Button */}
+          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <Ionicons name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+    
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         {/* Profile Section */}
         <View style={styles.profileSection}>
@@ -164,6 +166,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 50,
     left: 20,
+    zIndex: 10, // Ensure it’s above other elements
+    backgroundColor: 'rgba(0, 0, 0, 0.2)', // Optional: Add a slight background to make sure it's visible
+    padding: 10, 
+    borderRadius: 50,
   },
   container: {
     flex: 1,
