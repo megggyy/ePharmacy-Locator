@@ -20,6 +20,10 @@ export default function PharmacyOwnerDashboard() {
   const [userProfile, setUserProfile] = useState({});
   const { state } = useContext(AuthGlobal);
   const router = useRouter();
+  const colorPalette = [
+    "#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", 
+    "#FF9F40", "#8A2BE2", "#32CD32", "#DC143C", "#FFD700"
+  ];
   
   useEffect(() => {
     if (state.isAuthenticated) {
@@ -42,7 +46,7 @@ export default function PharmacyOwnerDashboard() {
                 const pieData = categories.map((category, index) => ({
                   name: category,
                   population: counts[index],
-                  color: `hsl(${index * 60}, 70%, 50%)`,
+                  color: colorPalette[index % colorPalette.length], // Cycle through colors
                   legendFontColor: "#333",
                   legendFontSize: 11
                 }));
