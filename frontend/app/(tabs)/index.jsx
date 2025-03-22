@@ -120,32 +120,34 @@ const HomeScreen = () => {
       <ScrollView style={styles.container}>
 
 
-        {/* Categories Section */}
-        <View style={styles.sectionHeader}>
-          <Ionicons name="apps-outline" style={styles.iconStyle} />
-          <Text style={styles.sectionTitle}>Categories</Text>
-        </View>
-        <View style={styles.categories}>
-          {filteredCategories.map((category) => (
-            <TouchableOpacity
-              key={category._id}
-              style={[
-                styles.categoryButton,
-                selectedCategory === category._id && styles.categoryButtonSelected,
-              ]}
-              onPress={() => handleCategoryPress(category._id, category.name)}
-            >
-              <Text
-                style={[
-                  styles.categoryButtonText,
-                  selectedCategory === category._id && styles.categoryButtonTextSelected,
-                ]}
-              >
-                {category.name}
-              </Text>
-            </TouchableOpacity>
-          ))}
-        </View>
+{/* Categories Section */}
+<View style={styles.sectionHeader}>
+  <Ionicons name="apps-outline" style={styles.iconStyle} />
+  <Text style={styles.sectionTitle}>Categories</Text>
+</View>
+
+<ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryContainer}>
+  {filteredCategories.map((category, index) => {
+    const medicalIcons = [
+      "medkit-outline", "bandage-outline", "thermometer-outline",
+      "flask-outline", "pulse-outline", "eyedrop-outline",
+      "heart-outline", "shield-checkmark-outline"
+    ];
+    const randomIcon = medicalIcons[index % medicalIcons.length];
+
+    return (
+      <TouchableOpacity key={category._id} style={styles.categoryCard} onPress={() => handleCategoryPress(category._id, category.name)}>
+        <Ionicons name={randomIcon} size={30} color="#005b7f" style={styles.categoryIcon} />
+        <Text style={styles.categoryText}>{category.name}</Text>
+      </TouchableOpacity>
+    );
+  })}
+</ScrollView>
+
+
+
+
+
 
         {/* Pharmacies Section */}
         <View style={styles.sectionHeader}>
@@ -282,21 +284,48 @@ const styles = StyleSheet.create({
   categoryButtonSelected: { backgroundColor: '#005b7f' },
   categoryButtonText: { fontSize: 14, color: '#333' },
   categoryButtonTextSelected: { color: '#fff' },
-  categoryCard: {
-    width: '22%',
-    marginVertical: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
+  categoryContainer: {
+    flexDirection: "row",
+    flexWrap: "nowrap", // Prevents wrapping
+    paddingVertical: 10,
+    alignItems: "center",
   },
-  categoryImage: {
-    width: 80,
-    height: 80,
-    borderRadius: 8
+  categoryCard: {
+    width: 100, // Set fixed width for uniform size
+    height: 100,
+    backgroundColor: "#f8f9fa",
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 10, // Adds space between cards
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  
+  
+  categoryIcon: {
+    marginBottom: 5,
   },
   categoryText: {
-    marginTop: 5,
-    fontSize: 12,
-    textAlign: 'center'
+    fontSize: 14,
+    fontWeight: "600",
+    textAlign: "center",
+    color: "#333",
+  },
+  
+  horizontalScroll: {
+    flexDirection: 'row',
+    paddingVertical: 10,
+  },
+  
+  categoryRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: 350, // Controls width for scrolling
+    marginRight: 10, // Space between rows
   },
   // Pharmacies Section Styles
   pharmaciesContainer: {

@@ -7,7 +7,10 @@ const prescriptionSchema = new mongoose.Schema({
   processedImageUrl: {
     type: String,
   },
-  matchedMedicines: [{ type: String }],
+  matchedMedicines: [{
+    genericName: String,
+    brandName: String
+  }],  
   ocrText: {
     type: String,
   },

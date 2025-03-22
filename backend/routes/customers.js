@@ -9,6 +9,8 @@ const Tesseract = require("tesseract.js");
 const Jimp = require("jimp").default;
 const tf = require("@tensorflow/tfjs-node");
 const fs = require("fs").promises;
+const cv = require("@u4/opencv4nodejs"); // OpenCV
+const sharp = require("sharp");
 const axios = require("axios");
 const { uploadOptions } = require('../utils/cloudinary');
 const cloudinary = require("cloudinary").v2;
@@ -54,45 +56,70 @@ router.post(
       const response = await axios.get(imageUrl, { responseType: "arraybuffer" });
       const imageBuffer = Buffer.from(response.data);
 
-      // **STEP 2: CONVERT IMAGE TO TENSOR**
-      let imageTensor = tf.node.decodeImage(imageBuffer, 3);
+      // =========================== 🟢 OPENCV STROKE ENHANCEMENT 🟢 ===========================
 
-      // **STEP 3: CONVERT TO GRAYSCALE FOR BETTER OCR**
+      // Convert Buffer to OpenCV Mat
+      let imgMat = cv.imdecode(imageBuffer);
+
+      // Convert to Grayscale
+      imgMat = imgMat.bgrToGray();
+
+      // Step 1: Invert the image (Black → White, White → Black)
+      imgMat = imgMat.bitwiseNot();
+
+      // Step 2: Apply Dilation
+      const kernel = cv.getStructuringElement(cv.MORPH_ELLIPSE, new cv.Size(2, 2));
+      imgMat = imgMat.dilate(kernel, new cv.Point(-1, -1), 1); // Increase iterations for more thickness
+
+      // Step 3: Invert the image back to original colors
+      imgMat = imgMat.bitwiseNot();
+
+      // Convert Back to Buffer for TensorFlow Processing
+      const processedBufferOpenCV = cv.imencode(".jpg", imgMat);
+
+      // =========================== 🔵 TENSORFLOW PREPROCESSING 🔵 ===========================
+      
+      // Convert OpenCV-processed image to Tensor
+      let imageTensor = tf.node.decodeImage(processedBufferOpenCV, 3);
+
+      // Convert to Grayscale for OCR Consistency
       imageTensor = imageTensor.mean(2).expandDims(-1);
 
-      // **STEP 4: NORMALIZE PIXEL VALUES (0 TO 1 RANGE)**
+      // Normalize Pixel Values (0 to 1)
       imageTensor = imageTensor.div(255.0);
 
-      // **STEP 5: APPLY THRESHOLDING FOR BETTER CONTRAST**
-      const threshold = 0.4; // Adjusted threshold for better contrast
+      // Apply Thresholding for Better OCR
+      const threshold = 0.5; // Adjusted threshold for better contrast
       let binarizedTensor = imageTensor.greater(tf.scalar(threshold)).toFloat();
 
-      // **STEP 6: RESTORE PIXEL VALUES (0-255 RANGE)**
+      // Restore Pixel Values (0-255)
       binarizedTensor = binarizedTensor.mul(255).cast("int32");
 
-      // **STEP 7: CONVERT BACK TO IMAGE FORMAT**
+      // Convert Back to Image Format
       const processedBuffer = await tf.node.encodeJpeg(binarizedTensor);
 
-      // **STEP 8: UPLOAD PROCESSED IMAGE DIRECTLY TO CLOUDINARY**
-      const uploadedResponse = await cloudinary.uploader.upload_stream({
-        folder: "processed_prescriptions",
-      }, async (error, result) => {
-        if (error) {
-          console.error("Error uploading processed image:", error);
-          return res.status(500).json({ error: "Failed to upload processed image" });
+      // =========================== 🔴 UPLOAD PROCESSED IMAGE TO CLOUDINARY 🔴 ===========================
+
+      const uploadedResponse = await cloudinary.uploader.upload_stream(
+        { folder: "processed_prescriptions" },
+        async (error, result) => {
+          if (error) {
+            console.error("Error uploading processed image:", error);
+            return res.status(500).json({ error: "Failed to upload processed image" });
+          }
+
+          // =========================== 🟠 OCR USING TESSERACT 🟠 ===========================
+          const { data: { text } } = await Tesseract.recognize(processedBuffer, "epharmacy_finetunedver2", { psm: 6 });
+          console.log("Extracted OCR Text:", text);
+
+          res.json({
+            message: "Image uploaded, processed, and saved successfully",
+            originalImageUrl: imageUrl,
+            processedImageUrl: result.secure_url, // Cloudinary URL of processed image
+            ocrText: text.trim() || "No text detected",
+          });
         }
-
-        // **STEP 9: PERFORM OCR USING TESSERACT**
-        const { data: { text } } = await Tesseract.recognize(processedBuffer, "epharmacy_finetuned", { psm: 6 });
-        console.log("Extracted OCR Text:", text);
-
-        res.json({
-          message: "Image uploaded, processed, and saved successfully",
-          originalImageUrl: imageUrl,
-          processedImageUrl: result.secure_url, // Cloudinary URL of processed image
-          ocrText: text.trim() || "No text detected",
-        });
-      });
+      );
 
       // Write processedBuffer to Cloudinary stream
       uploadedResponse.end(processedBuffer);

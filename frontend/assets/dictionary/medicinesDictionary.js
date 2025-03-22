@@ -997,6 +997,7 @@ Salbutamol (As Sulfate)
 Dexpanthenol
 Mycophenolate Mofetil
 Vitamin B Complex + Iron + Lysine Hydrochloride
+Vitamin B Complex
 Cefalexin (as Monohydrate)
 METRONIDAZOLE
 Phenobarbital
@@ -1072,10 +1073,10 @@ Imidapril Hydrochloride
 Folic Acid
 Magnesium Sulfate (as heptahydrate)
 Ioversol
-Clindamycin (As Hydrochloride)
+ 
 Amino Acids
 Carnitine Orotate + Pyridoxine Hydrochloride + Cyanocobalamin + Hepatic Extract Antitoxic Fraction + Adenine Hydrochloride + Riboflavin
-Amikacin (As Sulfate)
+Amikacin
 Cetirizine Dihydrochloride
 30% Dextrose In Water
 Paracetamol
@@ -1108,7 +1109,7 @@ Modified Fluid Gelatin
 Vitamin B-Complex + Iron + Lysine + Buclizine Hydrochloride
 Paracetamol + Ibuprofen
 Cotrimazine
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Multivitamins + Lysine
 Thiamine Hydrochloride (Vit. B1) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamine (Vit. B12)
 Co-Amoxiclav
@@ -1369,7 +1370,7 @@ Allopurinol
 Cefaclor (as Monohydrate)
 Paracetamol
 Salbutamol (as sulfate)
-Clindamycin Hydrochloride
+ Hydrochloride
 Mefenamic Acid
 Ceftazidime (As Pentahydrate)
 Ceftazidime (As Pentahydrate)
@@ -1462,7 +1463,7 @@ Diclofenac Sodium
 Pantoprazole
 Pantoprazole
 Polymyxin B Sulfate/ Neomycin Sulfate/ Dexamethasone
-Clindamycin (as Hydrochloride)
+ (as Hydrochloride)
 Etoposide
 Co-Amoxiclav
 Co-Amoxiclav
@@ -1726,7 +1727,7 @@ Iloprost (as trometamol)
 Doxofylline
 Multivitamins +Minerals
 Montelukast
-Clindamycin (As Phosphate) + Benzoyl Peroxide
+ (As Phosphate) + Benzoyl Peroxide
 Clarithromycin
 Prednisolone Phosphate (As Sodium)
 Cetirizine Dihydrochloride
@@ -1950,7 +1951,7 @@ Cefalexin (As Monohydrate)
 Salbutamol+Guaifenesin
 Clotrimazole + Beclometasone Dipropionate
 Levocetirizine
-Clindamycin (as phosphate)
+ (as phosphate)
 Cefalexin (as monohydrate)
 Ciprofloxacin (as hydrochloride)
 Ciprofloxacin Hydrochloride
@@ -1968,7 +1969,7 @@ Cefalexin (As Monohydrate)
 Cefaclor (as monohydrate)
 Losartan Potassium
 Multivitamins
-Clindamycin Phosphate + Tretinoin
+ Phosphate + Tretinoin
 Cefotaxime Sodium
 Cefotaxime Sodium
 Diphenhydramine Hydrochloride
@@ -1991,7 +1992,7 @@ Simvastatin
 Saccharomyces Boulardii
 Saccharomyces Boulardii
 Phenylephrine Hydrochloride + Chlorphenamine Maleate
-Clindamycin (as Hydrochloride)
+ (as Hydrochloride)
 Ceftriaxone (As Sodium)
 Ceftriaxone (As Sodium)
 Diclofenac (as Sodium)
@@ -2133,8 +2134,8 @@ Co-Amoxiclav
 Co-Amoxiclav
 Co-Amoxiclav
 Sevoflurane
-Clindamycin (As Hydrochloride)
-Clindamycin (as phosphate)
+ (As Hydrochloride)
+ (as phosphate)
 Quinapril Hydrochloride
 Cinnarizine
 Zinc (as Sulfate Monohydrate)
@@ -2171,7 +2172,7 @@ Sildenafil (as citrate)
 Doxycycline (as hyclate)
 Fluconazole
 CLOPIDOGREL (as bisulfate)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Simeticone
 Suxamethonium Chloride
 Pantoprazole Sodium Sesquihydrate
@@ -2370,7 +2371,7 @@ Multivitamins+ Minerals
 Multivitamins+ Minerals
 VANCOMYCIN (as hydrochloride)
 Ceftazidime (as Pentahydrate)
-Clindamycin (as Hydrochloride)
+ (as Hydrochloride)
 Multivitamins + Choline Bitartrate + Inositol
 PIPERACILLIN (AS SODIUM) + TAZOBACTAM ( AS SODIUM)
 Levofloxacin (as Hemihydrate)
@@ -3144,7 +3145,7 @@ Ascorbic Acid + Zinc
 Fluorouracil
 Mometasone Furoate
 Minocycline (As Hydrochloride)
-CLINDAMYCIN (AS HYDROCHLORIDE)
+ (AS HYDROCHLORIDE)
 Hyoscine N-Butylbromide
 Nalbuphine Hydrochloride
 Triamcinolone Acetonide
@@ -3332,7 +3333,7 @@ Colecalciferol
 Dacarbazine
 Salmeterol (As Xinafoate) + Fluticasone Propionate
 Vemurafenib
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Ascorbic Acid
 Rupatadine (As Fumarate)
 Sildenafil (As Citrate)
@@ -3381,7 +3382,7 @@ Valsartan
 Candesartan Cilexetil
 Candesartan Cilexetil
 Hyoscine N-Butylbromide
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Atorvastatin (as calcium)
 Ondansetron (as Hydrochloride Dihydrate)
 Isoxsuprine Hydrochloride
@@ -3460,8 +3461,8 @@ Clopidogrel (as Bisulfate)
 Carvedilol
 Amlodipine (as besilate)
 Losartan Potassium + Hydrochlorithiazide
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
 Tramadol Hydrochloride
 Benzoyl Peroxide
 Prednisone
@@ -3487,7 +3488,7 @@ Sodium Chloride
 Doxorubicin HCl
 Doxorubicin HCl
 Gabapentin
-Clindamycin Phosphate
+ Phosphate
 Azithromycin (As Dihydrate)
 Irbesartan + Hydrochlorothiazide
 Paracetamol
@@ -3691,7 +3692,7 @@ Celecoxib
 Multivitamins + Minerals
 Thiamine Hydrochloride + Pyridoxine Hydrochloride + Cyanocobalamin
 Nimodipine
-Clotrimazole + Clindamycin (as phosphate)
+Clotrimazole +  (as phosphate)
 Doxofylline
 Multivitamins + Lysine HCl + Buclizine HCl
 Pregabalin
@@ -3720,7 +3721,7 @@ Irbesartan
 Co-Amoxiclav
 Terlipressin acetate
 Losartan Potassium + Hydrochlorothiazide
-Clindamycin Phosphate
+ Phosphate
 Omeprazole (as Sodium)
 Paclitaxel
 Paclitaxel
@@ -3764,7 +3765,7 @@ Cefuroxime (as axetil)
 ETORICOXIB
 ETORICOXIB
 ETORICOXIB
-Clindamycin (as phosphate)
+ (as phosphate)
 Clobetasol Propionate
 Carboxymethylcellulose (As Sodium)
 Cefepime (as hydrochloride)
@@ -4268,7 +4269,7 @@ Each gram contains: Polymyxin B sulfate- eq. to 10000 units; Neomycin sulfate- e
 Natamycin
 Pantoprazole (as Sodium Sesquihydrate)
 Nicardipine hydrochloride
-Clindamycin (as phosphate)
+ (as phosphate)
 d-Alpha Tocopheryl Succinate + Ascorbic Acid + Zinc
 Pregabalin
 Pregabalin
@@ -4370,7 +4371,7 @@ Meropenem (as Trihydrate)
 Empagliflozin + Linagliptin
 Empagliflozin + Linagliptin
 Mefenamic Acid
-Adapalene + Clindamycin (as phosphate)
+Adapalene +  (as phosphate)
 Pantoprazole (as sodium sesquihydrate)
 Metformin hydrochloride
 Adapalene + Benzoyl Peroxide
@@ -5499,8 +5500,8 @@ Glimepiride
 Glimepiride
 Metronidazole
 Aluminum Hydroxide + Magnesium Hydroxide
-Clindamycin (As Hydrocholride)
-Clindamycin (As Hydrochloride)
+ (As Hydrocholride)
+ (As Hydrochloride)
 Vitamin B Complex + Iron + Buclizine Hydrochloride
 Vitamin B Complex + Iron + Buclizine Hydrochloride
 Vitamin B Complex + Iron + Buclizine Hydrochloride
@@ -5596,9 +5597,9 @@ Pantoprazole (As Sodium Sesquihydrate)
 Co-Amoxiclav
 Cefuroxime (As Sodium)
 Ciprofloxacin (As Hydrochloride)
-Clindamycin (As Phosphate)
-Clindamycin (As Phosphate)
-Clindamycin (As Phosphate)
+ (As Phosphate)
+ (As Phosphate)
+ (As Phosphate)
 Amikacin (As Sulfate)
 Amikacin (As Sulfate)
 Amikacin (As Sulfate)
@@ -5734,7 +5735,7 @@ Amiodarone hydrochloride
 Amiodarone hydrochloride
 AMIODARONE HYDROCHLORIDE
 Amlodipine Besilate
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Methylprednisolone
 Methylprednisolone
 Felodipine
@@ -5789,12 +5790,12 @@ Gliclazide
 Clarithromycin
 Ciprofloxacin (as hydrochloride)
 Ciprofloxacin (As Hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as Hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as Hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
+ (as Hydrochloride)
+ (as hydrochloride)
+ (as Hydrochloride)
 Cefixime (As Trihydrate)
 Cefixime (As Trihydrate)
 Hydrocortisone Sodium Succinate
@@ -5922,7 +5923,7 @@ Paracetamol
 Losartan Potassium
 Losartan Potassium
 Losartan Potassium
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Losartan Potassium
 Losartan Potassium
 Losartan Potassium
@@ -6283,12 +6284,12 @@ Multivitamins
 Ibuprofen
 Erythromycin (as Stearate)
 Tranexamic Acid
-Clindamycin (As Palmitate Hydrochloride)
-Clindamycin (as phosphate)
-Clindamycin (As Hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (As Hydrochloride)
+ (As Palmitate Hydrochloride)
+ (as phosphate)
+ (As Hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
+ (As Hydrochloride)
 CEFUROXIME (AS SODIUM)
 OXACILLIN (AS SODIUM)
 Levofloxacin Hemihydrate
@@ -6619,7 +6620,7 @@ Ketorolac Trometamol
 Ketorolac trometamol
 Ketorolac trometamol
 Ketorolac trometamol
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Terbutaline Sulfate
 Terbutaline Sulfate
 Terbutaline Sulfate
@@ -6658,9 +6659,9 @@ Salbutamol (As Sulfate)
 Salbutamol (As Sulfate)
 Salbutamol (As Sulfate)
 Salbutamol (as sulfate)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
 Iron Sucrose
 Iron Sucrose
 Mefenamic Acid
@@ -6922,7 +6923,7 @@ Clopidogrel (as bisulfate)
 Clopidogrel (as bisulfate)
 Cetirizine Dihydrochloride
 Cetirizine Dihydrochloride
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Thiamine Mononitrate (Vitamin B1) + Pyridoxine HCl (Vitamin B6) + Cyanocobalamin (Vitamin B12)
 Domperidone
 Hyoscine-N-Butylbromide
@@ -7349,7 +7350,7 @@ Amoxicillin (as trihydrate)
 Amoxicillin (as trihydrate)
 Atracurium Besilate
 Alprazolam
-Clindamycin (as phosphate)
+ (as phosphate)
 Levofloxacin (As Hemihydrate)
 Levofloxacin (As Hemihydrate)
 Omeprazole
@@ -7878,15 +7879,15 @@ Co-Amoxiclav
 Cetirizine Hydrochloride
 Cetirizine Hydrochloride
 Cetirizine Hydrochloride
-Clindamycin (As Hydrochloride)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
+ (As Hydrochloride)
 Valsartan + Hydrochlorothiazide
 Telmisartan
 Telmisartan
 Ciprofloxacin (As Hydrochloride)
 Ciprofloxacin (As Hydrochloride)
 Ciprofloxacin (As Hydrochloride)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Cefazolin (as Sodium)
 Salbutamol (as Sulfate)
 Tranexamic acid
@@ -8432,10 +8433,10 @@ Tacrolimus (as monohydrate)
 Citicoline
 Citicoline
 DEXAMETHASONE (AS SODIUM PHOSPHATE)
-Clindamycin (as phosphate)
-Clindamycin (as phosphate)
-Clindamycin (As Phosphate)
-Clindamycin(As Phosphate)
+ (as phosphate)
+ (as phosphate)
+ (As Phosphate)
+(As Phosphate)
 Ascorbic Acid
 Ascorbic Acid
 Ascorbic Acid
@@ -8477,10 +8478,10 @@ Azithromycin
 Azithromycin (As Dihydrate)
 Azithromycin (As Dihydrate)
 Azithromycin (As Dihydrate)
-Clindamycin (As Phosphate)
-Clindamycin (As Phosphate)
-Clindamycin (as phosphate)
-Clindamycin(As Phosphate)
+ (As Phosphate)
+ (As Phosphate)
+ (as phosphate)
+(As Phosphate)
 Mycophenolate Mofetil
 Loperamide Hydrochloride
 Cetirizine Dihydrochloride
@@ -9058,7 +9059,7 @@ Ambroxol Hydrochloride
 Ascorbic Acid
 Etoposide
 Ceftazidime (As Pentahydrate)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Sertraline (as hydrochloride)
 Sertraline (As Hydrochloride)
 Captopril
@@ -9690,10 +9691,10 @@ Irinotecan hydrochloride (as trihydrate)
 Tramadol (as hydrochloride)
 Tramadol (as hydrochloride)
 Tramadol (as hydrochloride)
-Clindamycin (As Hydrochloride)
-Clindamycin (As Hydrochloride)
-Clindamycin (As Hydrochloride)
-Clindamycin As Hydrochloride)
+ (As Hydrochloride)
+ (As Hydrochloride)
+ (As Hydrochloride)
+ As Hydrochloride)
 Metronidazole
 Metronidazole
 Metronidazole
@@ -9922,8 +9923,8 @@ Citicoline
 Valsartan + Hydrochlorothiazide
 Allopurinol
 Allopurinol
-Clindamycin (as Hydrochloride)
-Clindamycin (as hydrochloride)
+ (as Hydrochloride)
+ (as hydrochloride)
 CEFIXIME
 CEFIXIME
 CEFIXIME
@@ -10543,7 +10544,7 @@ Gemcitabine (as hydrochloride)
 Carbamazepine
 Azithromycin (As Dihydrate)
 Azithromycin (As Dihydrate)
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Calcitriol
 Calcitriol
 Esomeprazole (as magnesium)
@@ -10680,19 +10681,19 @@ Losartan potassium
 Losartan potassium
 Losartan potassium
 Bisacodyl
-Clindamycin (As Hydrochloride)
-Clindamycin (as hydrochloride)
+ (As Hydrochloride)
+ (as hydrochloride)
 Cefotaxime (As Sodium)
 Amoxicillin (as Trihydrate)
 Amoxicillin (As Trihydrate)
 Cetirizine Dihydrochloride
 Ofloxacin
 Ascorbic Acid
-Clindamycin (as phosphate)
-Clindamycin (as Phosphate)
+ (as phosphate)
+ (as Phosphate)
 Amiodarone Hydrochloride
-Clindamycin (As Hydrochloride)
-Clindamycin (as hydrochloride)
+ (As Hydrochloride)
+ (as hydrochloride)
 Co-Amoxiclav
 Levofloxacin (as hemihydrates)
 Multivitamins + Glucose
@@ -11155,15 +11156,15 @@ Multivitamins + Iron
 Phenylephrine Hydrochloride + Brompheniramine Maleate
 Phenylephrine Hydrochloride + Brompheniramine Maleate
 Phenylephrine Hydrochloride + Brompheniramine Maleate
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Omeprazole
 Nicarpine Hydrochloride
-Clindamycin (As Phosphate)
-Clindamycin As Phosphate
-Clindamycin (As Phosphate)
-Clindamycin (As Phosphate)
-Clindamycin (as phosphate)
-Clindamycin (as Phosphate)
+ (As Phosphate)
+ As Phosphate
+ (As Phosphate)
+ (As Phosphate)
+ (as phosphate)
+ (as Phosphate)
 Omeprazole
 Omeprazole
 Omeprazole
@@ -11542,7 +11543,7 @@ Ambroxol Hydrochloride
 Ambroxol Hydrochloride
 Multivitamins+Iron
 Ambroxol Hydrochloride
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Bupivacaine hydrochloride in 8% Dextrose
 Phenylpropanolamine Hydrochloride
 Grosartan
@@ -11795,7 +11796,7 @@ Valsartan
 Aspirin
 Clotrimazole
 Hydrocortisone (As Sodium Succinate)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Cefaclor (As Monohydrate)
 Telmisartan + Hydrochlorothiazide
 Telmisartan + Hydrochlorothiazide
@@ -11980,8 +11981,8 @@ Quetiapine (As Fumarate)
 Quetiapine (as Fumarate)
 Quetiapine (As Fumarate)
 Metoclopramide (as hydrochloride)
-Clindamycin (As Hydrochloride)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
+ (As Hydrochloride)
 Guaifenesin / Salbutamol (as Sulfate)
 Guaifenesin + Salbutamol (as sulfate)
 Simvastatin
@@ -12185,7 +12186,7 @@ Valproic Acid
 Valproic Acid
 Domperidone
 Diclofenac Sodium
-Adapalene + Clindamycin (as phosphate)
+Adapalene +  (as phosphate)
 Metformin Hydrochloride
 Metformin Hydrochloride
 Fluticasone propionate
@@ -12684,7 +12685,7 @@ Paracetamol
 Butamirate Citrate
 Butamirate Citrate
 Butamirate Citrate
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Butamirate Citrate
 Naproxen Sodium
 Ascorbic acid
@@ -12918,7 +12919,7 @@ Meropenem (as trihydrate)
 Meropenem (as trihydrate)
 Meropenem (as trihydrate)
 Cefoxitin (as Sodium)
-Adapalene + Clindamycin (as Phosphate)
+Adapalene +  (as Phosphate)
 Cetirizine dihydrochloride
 Esomeprazole (As Magnesium Trihydrate)
 Esomeprazole (As Magnesium Trihydrate)
@@ -13586,9 +13587,9 @@ Amiodarone hydrochloride
 Cefalexin (as Monohydrate)
 Simvastatin
 Simvastatin
-Clindamycin (As Hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
+ (As Hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
 Hydrocortisone (as Sodium Succinate)
 Hydrocortisone (as sodium succinate)
 Hydrocortisone (as Sodium Succinate)
@@ -13612,10 +13613,10 @@ Levofloxacin (As Hemihydrate)
 AMOXICILLIN (as trihydrate)
 Amoxicillin (as trihydrate)
 Cefalexin (as monohydrate)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
 Thiamine mononitrate (Vitamin B) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
 Cetirizine Hydrochloride
 Cetirizine Hydrochloride
@@ -14789,7 +14790,7 @@ Pregabalin
 Ampicillin (As Sodium) + Sulbactam (As Sodium)
 Ampicillin (As Sodium) + Sulbactam (As Sodium)
 Ampicillin + Sulbactam
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Meropenem (as Trihydrate)
 Clonidine (As Hydrochloride)
 Betahistine Hydrochloride
@@ -14956,7 +14957,7 @@ Co-Amoxiclav
 0.5% Bupivacaine (As Hydrochloride) In 8% Dextrose
 0.5% Bupivacaine (As Hydrochloride) In 8% Dextrose
 Omeprazole
-Clindamycin (as phosphate)
+ (as phosphate)
 dl-Alpha Tocopheryl Acetate
 Warfarin Sodium
 Amlodipine ( as Besilate )
@@ -15044,7 +15045,7 @@ Cefuroxime (as Sodium)
 Cefuroxime (as Sodium)
 Omeprazole (as Sodium)
 Oxytocin
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Pregabalin
 Adapalene
 Bromhexine Hydrochloride
@@ -15541,6 +15542,7 @@ Folic Acid
 Diclofenac Sodium (as diethylamine)
 Carvedilol
 Clindamycin (as phosphate)
+Clindamycin Phosphate
 Econazole Nitrate
 Ascorbic Acid + Rutoside
 Ascorbic Acid + Rutoside
@@ -15978,7 +15980,7 @@ Amlodipine (as besilate)
 Cefalexin (as monohydrate)
 Amoxicillin (As Trihydrate)
 Losartan Potassium
-Clindamycin (as hydrocloride)
+ (as hydrocloride)
 Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
 Cetirizine Hydrochloride
 Losartan Potassium
@@ -16397,7 +16399,7 @@ Gadopentetate Dimeglumine
 Silver Sulfadiazine
 Cefoxitin (As Sodium)
 Multivitamins + Minerals + Ginseng
-Clindamycin Hydrochloride
+ Hydrochloride
 Dolutegravir + Lamivudine + Tenofovir disoproxil fumarate
 Ascorbic Acid
 Ascorbic Acid + Zinc
@@ -16586,7 +16588,7 @@ Losartan Potassium + Hydrochlorothiazide
 Losartan Potassium + Hydrochlorothiazide
 Amlodipine (As Besilate)
 Amlodipine (As Besilate)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Diclofenac Sodium
 Losartan Potassium
 Losartan Potassium
@@ -16629,8 +16631,8 @@ Co-Amoxiclav
 CETIRIZINE DIHYDROCHLORIDE
 Betamethasone Dipropionate
 Dicycloverine Hydrochloride
-Clindamycin (as phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
+ (as phosphate)
 Pantoprazole (as sodium sesquihydrate)
 Pantoprazole (as sodium sesquihydrate)
 Cefuroxime (as axetil)
@@ -17086,7 +17088,7 @@ Entacapone
 Lysozyme Hydrochloride + Dequalinium Chloride
 Medroxyprogesterone Acetate
 Cefalexin (as monohydrate)
-Clotrimazole + Clindamycin (as phosphate)
+Clotrimazole +  (as phosphate)
 Perbactam
 Ainofil
 Multivitamins / Lecithin / Lysine / Minerals
@@ -17317,10 +17319,10 @@ Iodine (as Iohexol)
 Atorvastatin (as calcium) + Fenofibrate
 Povidone-Iodine
 Montelukast (as Sodium)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Amlodipine (as Besilate)
 Povidone-Iodine
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Allopurinol
 Isopropyl Alcohol
 Bupivacaine Hydrochloride in Dextrose Anhyrdous
@@ -17856,7 +17858,7 @@ Piperacillin (as sodium) + Tazobactam (as sodium)
 Levofloxacin (As Hemihydrate)
 Levofloxacin (As Hemihydrate)
 Halobetasol Propionate
-Clindamycin (as phosphate) + Adapalene
+ (as phosphate) + Adapalene
 Potassium Citrate
 Omeprazole (As Sodium)
 Sodium Valproate + Valproic Acid
@@ -18399,8 +18401,8 @@ Azithromycin (As Dihydrate)
 Povidone-Iodine
 Eucalyptus Oil
 Aspirin
-Clindamycin (As Phosphate)
-Clindamycin (As Phosphate)
+ (As Phosphate)
+ (As Phosphate)
 Telmisartan + Amlodipine (as besilate)
 Aspirin
 Aspirin
@@ -18440,7 +18442,7 @@ Atorvastatin (as calcium)
 Trimetazidine dihydrochloride
 ATORVASTATIN (AS CALCIUM)
 Rosuvastatin Calcium
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Mefenamic Acid
 Paracetamol + Phenylephrine Hydrochloride+ Chlorphenamine Maleate
 Guaifenesin + Salbutamol (As Sulfate)
@@ -19095,7 +19097,7 @@ Paracetamol+Hyoscine N-Butylromide
 Methyl Salicylate
 Dexchlorpheniramine Maleate + Betamethasone
 ESOMEPRAZOLE (as magnesium)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Mefenamic Acid
 Cholecalciferol (Vit.D3)
 Losartan Potassium + Hydrochlorothiazide
@@ -19298,7 +19300,7 @@ Amlodipine (As Besilate)
 Losartan Potassium
 Ampicillin (As Sodium)
 Cefoxitin (As Sodium)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Felodipine
 Cefepime (as Hydrochloride)
 Omeprazole (As Sodium)
@@ -19627,7 +19629,7 @@ Isosorbide mononitrate
 Azithromycin (as Dihydrate)
 Tacrolimus
 Tacrolimus
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Hedera helix L. (Ivy) Leaf
 Cholecalciferol (Vitamin D3)
 Pregabalin
@@ -20051,8 +20053,8 @@ Calfactant
 Amlodipine (as besilate) + Valsartan
 Dexamethasone phosphate (as sodium)
 Losartan (As Potassium)
-Clindamycin (as hydrochloride)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
+ (as hydrochloride)
 Filgrastim
 Montelukast
 Bortezomib
@@ -20167,7 +20169,7 @@ Ketoprofen
 Amlodipine (as Besilate)
 Amlodipine (as Besilate)
 Esomeprazole (as sodium)
-Clindamycin (as phosphate)
+ (as phosphate)
 Losartan Potassium + Hydrochlorothiazide
 Tirofiban (as hydrochloride monohydrate)
 Cefuroxime (As Sodium)
@@ -20227,7 +20229,7 @@ Co-Amoxiclav
 Co-Amoxiclav
 Ketoanalogues + Essential Amino Acids
 Ethyl Alcohol
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Atorvastatin (As Calcium)
 Atorvastatin (As Calcium)
 Ceftriaxone (As Sodium)
@@ -20408,7 +20410,7 @@ Losartan potassium + Hydrochlorothiazide
 Hydroxyethyl Starch + Sodium Chloride
 Vitex Negundo L. (Lagundi Leaf)
 Amlodipine (As Besilate)
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Domperidone
 Lactulose
 Epirubicin Hydrochloride
@@ -21036,7 +21038,7 @@ Valporic Acid
 Cefotaxime (As Sodium)
 Pantoprazole
 Omeprazole
-Adapalene + Clindamycin (as phosphate)
+Adapalene +  (as phosphate)
 Carboplatin
 Fondaparinux Sodium
 Cefixime (as trihydrate)
@@ -21171,7 +21173,7 @@ Dobutamine Hydrochloride
 Losartan Potassium + Hydrocholorothiazide
 Aciclovir
 Betamethasone + Dexchlorpheniramine Maleate
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Hydroquinone
 Hydroquinone + Tretinoin
 Hydroquinone + Tretinoin
@@ -21369,7 +21371,7 @@ Paracetamol
 Oxytocin
 Folic Acid
 Mupirocin (As Calcium Dihydrate)
-Clindamycin (as phosphate) + Clotrimazole + Metronidazole
+ (as phosphate) + Clotrimazole + Metronidazole
 Paclitaxel
 Paclitaxel
 Paclitaxel
@@ -21773,7 +21775,7 @@ Citicoline (as sodium)
 Empagliflozin + Metformin Hydrochloride
 Empagliflozin + Metformin Hydrochloride
 Cisplatin
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Diltiazem Hydrochloride
 Ceftazidime (As Pentahydrate)
 Linagliptin + Metformin Hyydrochloride
@@ -22124,7 +22126,7 @@ Clotrimazole
 Azacitidine
 Lisinopril (as dihydrate)
 Decitabine
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Tranexamic Acid
 Avanafil
 Avanafil
@@ -22412,7 +22414,7 @@ Folium Senna Leaves + Semen Cana Valiae
 Sitagliptin (as phosphate)
 Sitagliptin (as phosphate)
 Sitagliptin (As Phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
 Menthol + Eucalyptus Oil + Camphor
 Olanzapine
 Insulin Aspart
@@ -22457,7 +22459,7 @@ Cefotaxime (As Sodium)
 Olmesartan Medoxomil + Amlodipine + Hydrochlorothiazide
 Metformin Hydrochloride
 Atazanavir (as sulfate)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Amlodipine (As Besilate)
 Amlodipine (as besilate)
 Sevelamer Carbonate
@@ -22492,7 +22494,7 @@ Sitagliptin (as phosphate monohydrate) + Metformin Hydrochloride
 Ceftriaxone (As Sodium)
 Tigecycline
 Citicoline (as sodium)
-Clindamycin Hydrochloride
+ Hydrochloride
 Afatinib (as dim aleate)
 Tirofiban (as hydrochloride monohydrate)
 Apixaban
@@ -22603,7 +22605,7 @@ CEFTAZIDIME (AS PENTAHYDRATE)
 Salmeterol (as Xinafoate) + Fluticasone Propionate
 Sitagliptin (as phosphate)
 Febuxostat
-CLINDAMYCIN (as Phosphate)
+ (as Phosphate)
 Butamirate Citrate
 Carboprost (as trometamol)
 Telmisartan
@@ -22653,7 +22655,7 @@ Febuxostat
 ASCORBIC ACID + ZINC
 Mefenamic Acid
 Salmeterol (as Xinafoate) + Fluticasone Propionate
-CLINDAMYCIN (as Phosphate)
+ (as Phosphate)
 Fentanyl
 Tramadol Hydrochloride + Paracetamol
 Folic Acid
@@ -22663,7 +22665,7 @@ Losartan potassium
 Rosuvastatin (as calcium)
 Piperacillin (as sodium) + Tazobactam (as sodium)
 Potassium Citrate
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Paracetamol
 Ceftriaxone (as sodium)
 PARACETAMOL
@@ -22901,7 +22903,7 @@ Brompheniramine
 Astralagus membranaceus (Radix astragali)- 227.5mg Angelica sinensis (Chinese angelica)-162.5mg Herba solani lyrati (Lyrate nightshade)-130mg Herba solani nigra (Long kui cao)-130mg
 Benzydamine(As Hydrochloride)
 Benzydamine(As Hydrochloride)
-Clindamycin (as phosphate)
+ (as phosphate)
 Troclosene Sodium
 Troclosene Sodium
 Multivitamins
@@ -24456,7 +24458,7 @@ Pregabalin
 Oxycodone hydrochloride
 Acyclovir
 Aciclovir
-Clindamycin (As Hydrocholride)
+ (As Hydrocholride)
 Clobetasol Propionate
 Fusidic Acid
 Docetaxel
@@ -24570,7 +24572,7 @@ Meropenem (as trihydrate)
 Sevelamer Carbonate
 Nicardipine Hydrochloride
 Telmisartan
-Adapalene + Clindamycin (as phosphate)
+Adapalene +  (as phosphate)
 Iron + Riboflavin (Vitamin B2) + Cyanocobalamin (Vitamin B12) + Folic Acid
 Ascorbic Acid + Zinc
 Cefoperazone (as Sodium) + Sulbactam (as Sodium)
@@ -24812,7 +24814,7 @@ Cefixime (as trihydrate)
 Amoxicillin (as Trihydrate)
 Cloxacillin (as Sodium)
 Allopurinol
-Clindamycin (as Hydrochloride)
+ (as Hydrochloride)
 Prednisone
 Amlodipine (as Besilate)
 Omeprazole
@@ -25050,7 +25052,7 @@ Cetirizine Hydrochloride
 Omeprazole
 Acetylcysteine
 Lidocaine Hydrochloride
-Clindamycin (as phosphate)
+ (as phosphate)
 Tacrolimus
 Methotrexate
 Aminophylline
@@ -25078,7 +25080,7 @@ Etoricoxib
 Amlodipine (as besilate) + Losartan Potassium
 Clarithromycin
 Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
-Clindamycin (as Hydrochloride)
+ (as Hydrochloride)
 Hydrocortisone (as sodium succinate)
 Sodium Hyaluronate
 Polyethylene Glycol 4000 (PEG)
@@ -25219,7 +25221,7 @@ Telmisartan
 Etoricoxib
 Atorvastatin (as Calcium Trihydrate)
 Metformin hydrochloride + Sitagliptin (as phosphate)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Phenytoin Sodium
 Ceftriaxone (as sodium)
 Cefuroxime (as Sodium)
@@ -26042,7 +26044,7 @@ Empagliflozin + Linagliptin
 Empagliflozin + Linagliptin
 Tacrolimus
 Lurasidone Hydrochloride
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Teicoplanin
 Teicoplanin
 Simvastatin
@@ -26139,7 +26141,7 @@ Pregabalin
 Epirubicin Hydrochloride
 Epirubicin Hydrochloride
 Docetaxel (as trihydrate)
-Clindamycin (As Hydrochloride)
+ (As Hydrochloride)
 Etoricoxib
 Etoricoxib
 Gabapentin
@@ -26234,7 +26236,7 @@ Levocetirizine dihydrochloride
 Atenolol
 Metronidazole
 Bendamustine Hydrochloride
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Povidone-Iodine
 Pioglitazone (As Hydrochloride)
 Pioglitazone (As Hydrochloride)
@@ -26319,7 +26321,7 @@ Metformin hydrochloride + Glibenclamide
 Finasteride
 Betahistine hydrochloride
 Betahistine hydrochloride
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Betahistine hydrochloride
 Azithromycin (as dihydrate)
 Timolol (As Maleate)
@@ -26899,7 +26901,7 @@ Apixaban
 Apixaban
 Vildagliptin
 Imatinib (as mesylate)
-Clindamycin (as phosphate)
+ (as phosphate)
 Potassium Chloride
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
 Imatinib (as mesylate)
@@ -26943,7 +26945,7 @@ Iron (as Ferrous Sulfate Heptahydrate)
 Iron (as Ferrous Sulfate Heptahydrate) + Folic Acid
 Ascorbic Acid
 Clarithromycin
-Clindamycin (as phophate)
+ (as phophate)
 Multivitamins Minerals
 dl-alpha Tocopheryl Acetate (Vitamin E).
 Co-Amoxiclav
@@ -27081,8 +27083,8 @@ Apixaban
 Apixaban
 Zoledronic Acid (as monohydrate)
 Citicoline (As Sodium)
-Clindamycin (as phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
+ (as phosphate)
 Ranitidine (As Hydrochloride)
 Cefotaxime (As Sodium)
 Losartan Potassium + Amlodipine (As Besilate)
@@ -27167,7 +27169,7 @@ Iohexol
 Clotimazole
 Caspofungin (as acetate)
 Telmisartan + Hydrochlorothiazide
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Amlodipine (as Besilate + Olmesartan Medoxomil
 Amlodipine (as Besilate) + Olmesartan Medoxomil
 Dutasteride
@@ -27318,7 +27320,7 @@ Irbesartan + Hydrochlorothiazide
 Levetiracetam
 Lactulose
 Salicylic Acid
-Clindamycin (as phosphate)
+ (as phosphate)
 Nystatin
 Edoxaban (as tosilate)
 Edoxaban (as tosilate)
@@ -27493,7 +27495,7 @@ Etoricoxib
 Etoricoxib
 Etoricoxib
 Clopidogrel (as bisulfate)
-Clindamycin(as phosphate)
+(as phosphate)
 Bayopet Herbal Hair Grower Shampoo
 Cyclophosphamide
 Propofol
@@ -28192,7 +28194,7 @@ Ceftazidime (as Pentahydrate)
 Oxytocin
 Paracetamol
 Cefuroxime (as sodium)
-Clindamycin (as phosphate)
+ (as phosphate)
 Cefuroxime (as Sodium)
 Mometasone Furoate
 Norepinephrine
@@ -28227,8 +28229,8 @@ Addaven
 Omeprazole (as Sodium)
 Paracetamol
 Paracetamol
-Clindamycin (as Phosphate)
-Clindamycin (as phosphate)
+ (as Phosphate)
+ (as phosphate)
 Ceftriaxone (as sodium)
 Ceftriaxone (as Sodium)
 Ceftriaxone (as sodium)
@@ -28416,7 +28418,7 @@ Camphor + Menthol
 Levetiracetam
 Ethyl Alcohol
 Rosuvastatin
-Clindamycin (as phosphate)
+ (as phosphate)
 Iron (as Iron Sucrose)
 Cholecalciferol (Vitamin D3)
 Ibuprofen
@@ -28435,7 +28437,7 @@ Bisoprolol Fumarate
 Novazapine-30
 Solifenacin Succinate
 Solifenacin Succinate
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Solifenacin succinate
 Ascorbic Acid + d-Alpha Tocopherol (Vitamin E) + Zinc
 Gemcitabine (as hydrochloride)
@@ -28500,7 +28502,7 @@ Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
 Cilostazol
 Dabigatran Etexilate (as mesilate)
 Dabigatran Etexilate (as mesilate)
@@ -28744,7 +28746,7 @@ Salbutamol (as sulfate) + Ipratropium bromide.
 Rasagiline (as mesilate)
 Tranexamic Acid
 Oxaliplatin
-Clindamycin (as phosphate)
+ (as phosphate)
 Trastuzumab
 Diltiazem Hydrochloride
 Diltiazem Hydrochloride
@@ -28815,7 +28817,7 @@ Rifampicin + Isoniazid
 Oxaliplatin
 Meropenem (as trihydrate)
 Meropenem (as trihydrate)
-Clindamycin (as hydrochloride)
+ (as hydrochloride)
 Eucalyptus Oil
 Sulfur
 Petroleum Jelly
@@ -28847,8 +28849,8 @@ Ascorbic Acid + Zinc
 Ceftazidime (as Pentahydrate)
 Ceftriaxone Sodium
 Acetylcysteine
-Clindamycin (as phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
+ (as phosphate)
 Furosemide
 Hydrocortisone (as sodium succinate)
 Meropenem (as trihydrate)
@@ -29042,7 +29044,7 @@ Apixaban
 Ceftriaxone (as sodium)
 Polymyxin B (as sulfate)
 Enzalutamide
-Clindamycin (as phosphate)
+ (as phosphate)
 Mupirocin
 Salbutamol (as sulfate)
 Cilostazol
@@ -29103,8 +29105,8 @@ Irinotecan hydrochloride
 Carbocisteine
 Guaifenesin + Salbutamol (as sulfate)
 Atorvastatin (as Calcium Trihydrate)
-Clindamycin (as phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
+ (as phosphate)
 Telmisartan
 Co-Amoxiclav
 Clarithromycin
@@ -29427,7 +29429,7 @@ Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
 Metformin Hydrochloride
 Capecitabine
 Enzalutamide
-Clindamycin (as phosphate)
+ (as phosphate)
 Iron (as Iron Sucrose)
 Dutasteride + Tamsulosin Hydrochloride
 Co-Amoxiclav
@@ -29693,10 +29695,10 @@ Cetirizine (as hydrochloride)
 Co-Amoxiclav
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Azithromycin (as dihydrate)
 Febuxostat
-Clindamycin (as phosphate)
+ (as phosphate)
 Metformin Hydrochloride
 Metformin Hydrochloride
 Levodropropizine
@@ -29954,7 +29956,7 @@ Cytarabine
 Cytarabine
 Bisoprolol fumarate
 Cefotaxime (as sodium) + Sulbactam (as sodium)
-Clindamycin (as phosphate) + Adapalene
+ (as phosphate) + Adapalene
 Tretinoin
 Hydroquinone + Tretinoin
 Hydroquinone + Tretinoin
@@ -29982,7 +29984,7 @@ Levetiracetam
 Apixaban
 Apixaban
 Tobramycin (as sulfate) + Dexamethasone (as sodium phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
 Iron (as Iron sucrose)
 Acetylcysteine
 Norepinephrine (as bitartrate)
@@ -30086,7 +30088,7 @@ Azithromycin (as dihydrate)
 Glimepiride
 Iron (as Ferrous Sulfate) + Folic Acid
 Telmisartan
-Clindamycin (as phosphate)
+ (as phosphate)
 Pantoprazole (as sodium sesquihydrate)
 Rabeprazole Sodium
 Tigecycline
@@ -30130,7 +30132,7 @@ Metformin Hydrochloride
 Cefalexin (as Monohydrate)
 Acetylcysteine
 Norepinephrine (as bitartrate)
-Clindamycin (as Phosphate)
+ (as Phosphate)
 Aciclovir
 Aminophylline
 Dopamine hydrochloride
@@ -30458,7 +30460,7 @@ Clarithromycin
 Hydrochlorothiazide
 Cefuroxime (as Axetil)
 LETROZOLE
-Clindamycin (as phosphate)
+ (as phosphate)
 Cefixime
 Cefixime
 Tramadol Hydrochloride
@@ -30671,7 +30673,7 @@ DL-Alpha-Tocopherol (Vitamin E)
 Sodium Bicarbonate
 Vitamin B1 +B6 +B12
 Omeprazole (as sodium)
-Clindamycin (as phosphate)
+ (as phosphate)
 Salbutamol (as sulfate) + Ipratropium bromide
 Ketoanalogues + Essential Amino Acids
 Nicardipine Hydrochloride
@@ -30744,10 +30746,10 @@ Cytarabine
 Dexmedetomidine
 Telmisartan
 Telmisartan
-Clindamycin (as phosphate)
+ (as phosphate)
 Telmisartan + Amlodipine (as Besilate)
 Clobetasol propionate
-Clindamycin (as phosphate)
+ (as phosphate)
 Ketoconazole + Clobetasol Propionate
 Vildagliptin + Metformin HCI
 Vildagliptin + Metformin HCI
@@ -30920,7 +30922,7 @@ Gliclazide
 Sodium Ascorbate
 Clopidogrel (as Bisulfate)
 Paracetamol + Phenylpropanolamine Chlorphenamine Maleate
-Clindamycin (As Phosphate)
+ (As Phosphate)
 Nitroglycerin
 Gliclazide
 Co-Amoxiclav
@@ -31452,8 +31454,8 @@ Rivaroxaban
 Metformin Hydrochloride
 Moxifloxacin (as Hydrochloride)
 Citicoline
-Clindamycin (as phosphate)
-Clindamycin (as phosphate)
+ (as phosphate)
+ (as phosphate)
 Linezolid
 Cefotaxime (as sodium)
 Hedera helix L. (Dried Ivy Leaf Extract)
@@ -31812,7 +31814,7 @@ Linagliptin
 Piperacillin (as sodium) + Tazobactam (as sodium)
 Metoprolol tartrate + Ivabradine (s hydrochloride)
 Metoprolol tartrate + Ivabradine (s hydrochloride)
-Clindamycin (as phosphate)
+ (as phosphate)
 Clopidogrel (as bisulfate)
 Citicoline (as sodium)
 Empagliflozin
@@ -32081,7 +32083,7 @@ Levodropropizine
 Ketoconazole + Clobetasol Propionate
 Telmisartan + Amlodipine (as besilate)
 Cefixime (as trihydrate)
-Clindamycin phosphate
+ phosphate
 Mupirocin
 Gliclazide
 Iron + Folic Acid (Vitamin B9)
@@ -32091,7 +32093,7 @@ Iron + Folic Acid (Vitamin B9)
 Diosmin + Hesperidin
 Co-Amoxiclav
 Diosmin + Hesperidin
-Clindamycin (as Hydrochloride)
+ (as Hydrochloride)
 Silver Sulfadiazine
 Silver Sulfadiazine
 Diclofenac diethylamine
@@ -32129,7 +32131,7 @@ Iron (III) Hydroxide Polymaltose Complex
 Iron (III) Hydroxide Polymaltose Complex
 Dutasteride
 Linagliptin + Metformin Hydrochloride
-Clindamycin (as phosphate)
+ (as phosphate)
 Telmisartan + Amlodipine (as besilate)
 Telmisartan + Amlodipine (as besilate)
 Telmisartan + Amlodipine (as Besilate)
@@ -32261,7 +32263,7 @@ Clonidine hydrochloride
 Sitagliptin (as phosphate monohydrate) + Metformin hydrochloride
 Naproxen sodium
 Venlafaxine (as hydrochloride)
-Clindamycin (as phosphate)
+ (as phosphate)
 Risperidone
 Clonidine hydrochloride
 Telmisartan
@@ -33960,100 +33962,15 @@ Bayopet Herbal Hair Grower Shampoo
 Grooming Shampoo
 Grooming Shampoo
 Grooming Soap
-None
-None
-None
-N /A
-None
 (Shampoo for Dogs) (Vet.)
-None
-None
-None
-None
-NA
-None
-NA
-NA
-N/A
-N/A
-N/A
-N/A
-N/A
-None
-None
-None
-None
-Sea Breeze Scent (Vet.)
-N/A
-Not Applicable
-Not Applicable
-N/A
-Not Applicable
-N/A
-N/A
-None
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-None
-N/A
-None
-N/A
-N/A
-N/A
-N/A
-None
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-N/A
-Not Applicable
-Not Applicable
-Not Applicable
-Not Applicable
 Organic Shampoo with Conditioner (Vet.)
 Frenzy Shampoo
-None
 Shampoo ( Tommy Girl Scent ) (Vet.)
 Pet Deodorizing Spray
 Pet Shower Gel
-None
-None
 Natural Flick Grooming Shampoo Lavender Scent
-None
-None
-N/A
-Not Applicable
-None
-N/A
-N/A
-N/A
 Tender Cleansing Conditioning Shampoo (White Floral Scent)
 Garden-Fresh And Clean Moisturizing Shampoo (Summer Scent)
-None
-None
-None
-None
-None
-N/A
-N/A
-None
 Swine Pheromones: Boar Saliva Analog (BSA) Quinoline + Androstenone + Androstenol (Vet.
 Tulathromycin (Vet.)
 AMOXICILLIN (AS TRIHYDRATE) (Vet.)
@@ -34070,7 +33987,6 @@ Iron Dextran
 Iron Dextran
 Tiamulin Hydrogen Fumarate
 Tiamulin Hydrogen Fumarate
-Vitamin B Complex
 Vitamin B Complex
 Vitamin B-Complex (Vet.)
 Enrofloxacin (as hydrochloride)
@@ -34437,4 +34353,34438 @@ Minerals Amino Acids (Vet.)
 Imidacloprid + Moxidectin (Vet.)
 Folic Acid (Vitamin B9) + Cyanocobalamin (Vitamin B12) Iron (Vet.)
 Miconazole + Chlorhexidine (Vet.)
+Imojev
+Heparin Leo
+Heparin Leo
+Actrapid
+Insulatard Flexpen
+Insulatard
+Levemir FlexPen
+Mixtard 30 FlexPen
+Norditropin SimpleXx
+NovoMix 30 FlexPen
+NovoRapid Flexpen
+Victoza
+Aldurazyme
+Apidra
+Fabrazyme
+Fabrazyme
+Humalog Kwikpen
+Scitropin A
+Herceptin
+Lucentis
+Neubicyte
+Fluquadri
+Recormon
+Actilyse
+Actemra
+Herceptin
+Mabthera
+Gazyva
+Fluarix Tetra
+Cosentyx
+Scapho
+Scapho
+Prevenar 13
+Chorapur
+Keytruda
+Mabthera
+Boostrix
+Sylvant
+Sylvant
+Basagine
+Octagam 10%
+Octagam 5%
+Albunorm 25%
+Scilin M30
+Scilin N
+Scilin N
+Albunorm 20%
+Gardasil 9
+Albunorm 5%
+Albunorm 5%
+Topneutor
+Topneutor
+Ryzodeg FlexTouch
+Ecovag
+Macroleuco
+Macroleuco
+Aprinol 25000
+Aprinol 5000
+Pergoveris
+Octanate
+Octanate
+Actilyse
+NovoRapid Flex Touch
+Filgen
+Anaferon
+Menopur
+Zarzio
+Botox
+Entyvio
+Praxbind
+PEGNANO
+Gardasil 9
+DYPOTIN
+None
+Insulatard
+Actrapid
+Mixtard 30
+Humira
+Neulastim
+Neupogen
+Biofil
+Xultophy
+Levemir Penfill
+Xeomin
+Xeomin
+Xeomin
+Xeomin
+Jusline N
+Jusline R
+Jusline 30/70
+Hertraz
+Hertraz
+Privigen
+Privigen
+Follitrope
+Follitrope
+Follitrope
+Follitrope
+None
+TheraCIM
+Humog 150
+Humog 75
+Hucog-5,000 Hp
+Foliculin -75 HP
+Eupenta
+Eupenta
+Humira
+Repatha
+Repatha
+Fiasp Flextouch
+Fiasp
+Soliqua
+Soliqua
+Alburx
+Alburx
+Alburx
+Alburx
+Tecentriq
+NovoSeven RT
+Humulin N
+Poliovac
+Trulicity
+Trulicity
+Taltz
+Taltz
+Havrix 720
+Havrix 1440
+Prevenar 13
+Stelara
+Pneumovax 23
+Herzuma
+HERZUMA
+Pergoveris
+Pergoveris
+Pergoveris
+Nabota
+Humira
+Genotropin GoQuick
+Genotropin GoQuick
+Ozempic
+Ozempic
+Ozempic
+Verorab
+Typhim Vi
+Thymoglobuline
+Hepabig
+Perdinus
+Ditevac
+T-Vac
+Hepatitis B Immunoglobulin (Human)
+M-Vac
+Botox
+Profilnine SD
+Profilnine SD
+Priorix
+Tresivac
+T-Vac
+Human Albumin 20% Behring (Low Salt)
+Ditevac
+Albutein 25% Solution
+None
+None
+Zenalb-20
+Hepliv
+Hepliv
+Hepliv
+Avaxim 80
+Verorab
+Chirorab
+Vaxigrip Tetra
+Pentaxim
+Antitet 1500 Iu
+Antitet 5000 Iu
+Antitet 3000 Iu
+Albutein
+Emoclot
+Aimafix
+Dysport
+GENVAC-B
+Unbranded
+Genvac-B
+None
+None
+None
+Tetagam P
+Gardasil
+Gardasil
+Rotateq
+Cervarix
+IMATET
+Abhayrab
+Boostrix
+Epotin
+Epokine
+Mircera
+Mircera
+Epogen
+Mircera
+Ig Vena
+Priorix-Tetra
+Bio-TT
+OraVacs
+Speeda
+Gamma IV
+Tpiao
+Rotarix
+Equirab
+Unbranded
+Actemra
+Actemra
+Actemra
+Recombicyte
+Eprex
+Eprex
+Eprex
+Efotin
+Gamunex-C
+SII TD-VAC
+Genheal
+Engerix B
+Engerix B Junior
+Leucogen
+Albiomin
+Thyrogen
+Menactra
+Eposino
+Eposino
+Eposino
+Plasbumin - 25
+Shaferon
+Shaferon
+Shaferon
+Rebif
+Rebif
+Rotarix
+White-C
+Eposino
+Cervarix
+HyperHEP B S/D
+Cunox
+Clexane
+Clexane
+Clexane
+Koate DVI
+Ig Tetano
+Sharjvax
+Sharjvax
+Sharjvax
+Luveris
+Renogen
+Easyfive TT
+Typbar
+Typbar
+Gonal-F
+Follitropin Alfa
+Gonal-F
+Prolia
+SII MR VAC
+Betaferon
+SII-Onco-BCG
+Eposis
+Eposis
+Berirab P
+Gonal-F
+Shanchol
+Saizen
+Saizen
+Easyef
+None
+M-M-R II
+Vectibix
+I.V. - Globulin Sn Injection
+Prevenar 13
+Simponi
+Enoclex
+NONE
+Ovidrel
+M-M-R II
+HugelTox
+White-C
+H-Ryg
+H-Tyg
+Imojev
+Cervarix
+Hexaxim
+Imovax Polio
+Renogen
+Enoclex
+Renogen
+Humulin N Kwikpen
+Humulin 70/30 Kwikpen
+Kadcyla
+Kadcyla
+Varivax
+Humalog Mix25 Kwikpen
+Dysport
+Pegstim
+Insulin Human (rDNA)
+Espogen
+Espogen
+PUBERGEN
+Humulin 70/30
+Humulin R
+Stelara
+Gynogen HP
+Humalog Mix50 Kwikpen
+Endogen HP
+Menopur
+Mevac-A
+None
+None
+Hibor
+Hibor
+Lantus
+Podevta
+Insulin Glargine
+Podevta
+Insulet 30/70
+Insulet 50/50
+Insulet R
+Insulet N
+Apidra Solostar
+Wosulin-30/70
+Glysolin 30/70
+Choicesulin
+Wosulin-R
+Glysolin R
+Wosulin-N
+Glysolin N
+Glaritus
+Glysolin G
+Glarsulin
+Wosulin-N
+Glysolin N
+Nuparin
+Rifoxane
+Noxadium 4000
+Rifoxane
+Seroalbumin
+Religrast
+Grastigen
+Timgrastix
+Reliferon
+Immunorel
+Proivig
+Immubulin
+Normglubin
+Gamma-I.V.
+Wosulin-30/70
+Toujeo
+Lantus XR
+Humal
+Hulbumine
+Basaglar Kwikpen
+Enoxane
+Enoxane
+Bnoxaparin
+Goxaparin
+Biosulidd N
+Lupinsulin N
+Biosulidd R
+Lupinsulin R
+Pronivel
+Colstim
+Pegihep 80
+Nabota
+Lupinsulin 30:70
+Aropotin
+Epolitt
+Eprotex
+Eprosenz
+Ematep
+Truxima
+Recormon
+Bruhep
+Cenprahep
+Bioven Mono
+Vinrab
+Binocrit
+Binocrit
+Multisol-M In D5 Water
+Dermovate
+Dermovate
+Pred Forte
+Lasix
+Lasix
+FUCIDIN
+Fucidin
+Synalar
+Biogesic
+ILOSONE
+ILOSONE
+Xylocaine
+Demerol
+Histacort
+Aspilets
+Antamin
+Glutaphos
+Synalar 10
+Primolut N
+Oradexon
+Lanoxin
+Lanoxin
+Zyloprim
+Incremin
+Cefumax
+One-Six-Twelve
+Robitussin
+None
+Multisol-R in D5 Water
+Coumadin
+Coumadin
+Fucidin Intertulle
+Betnovate
+Buscopan
+Tempra
+Histacort
+Unbranded
+None
+None
+None
+None
+Benadryl
+Benadryl AH
+Benadryl AH
+None
+Hemostan
+Betnovate
+Albothyl
+Unbranded
+None
+None
+Unbranded
+Unbranded
+None
+None
+Cherryl Expectorant
+Senokot
+Nafarin-A
+FUCIDIN
+Hyper BH3
+Decilone
+Valium
+Decolsin
+Neomercazole
+Decolsin
+None
+None
+None
+Unbranded
+Drenex
+Mestinon
+Trimycin
+None
+None
+Neo-Synalar 10
+Quelicin®
+Ferlin
+Drenex
+Enervon
+Bricanyl
+Synalar Hp
+Llanol
+Combantrin
+Micropil
+Duspatalin
+Synalar 25
+Robitussin Dm
+Comprilex
+Fortifer-Fa
+Pediachlor
+Bunplex-C
+United Home Burn
+United Home Glydolax
+Lidex
+Canesten
+Amoxil
+Amoxil
+Flagyl
+Fortifer
+Betnovate
+Unbranded
+Unbranded
+Nozinan
+Nozinan
+Sumapen
+Burinex
+Diprosone
+Trimycin H Ointment
+Ceelin
+Fleet Enema
+Flammazine
+Eltroxin
+Eltroxin
+Tranxene
+Isoxilan
+Voltaren
+Betaloc®
+None
+Betaloc®
+Contylan
+Unbranded
+Unbranded
+LIDEX
+Trihemic
+Terraferron
+Combantrin
+Nubain
+Supraneuron
+Flumol
+Antiox
+Nootropil
+Cefalin
+Cefalin
+United Home Lormide
+Diamicron
+Pro-Iron
+Rogin-E
+Fluocinolone Acetonide
+Aplosyn-25
+Penachlor
+Aplosyn-25
+Timoptol
+Quantrel
+Aller CM
+Aplosyn-10
+Flanax
+Syntemax Sterile Eye Drops
+Lidemol
+Cynosal
+CLOCEPHEN
+Purinase
+Trivastal Retard 50
+DIPROSALIC
+Pediamox
+None
+Surmontil
+Ceclor
+Llanol
+Mucobron
+FRUSEMA
+None
+Pediamox
+Mucosform
+Teramoxyl
+Synalar 10
+None
+Multi-Ion Mb In D5W
+None
+Faktu
+Faktu
+None
+None
+Mefenax
+Zerrsox
+ILOSONE DS
+Lidex NGN Emollient Cream
+Rocephin
+None
+None
+Zerruphen
+Bioster
+Unbranded
+Teramol
+AC-Nex (Kola Flavor)
+Carbalor
+Traver
+Spasoma
+Regeron E Plus
+Teramol Forte
+Teramol Forte
+None
+None
+Isopto Carpine
+None
+None
+Unbranded
+None
+None
+None
+Ascopen
+Himox
+Himox
+Himox
+Maxirap
+H2Bloc
+Multivitamins + Minerals
+Betazok
+Daflon 500
+MST Continus
+None
+None
+Prozac
+Otosol
+None
+Muskelax
+Termox
+None
+Zofran
+None
+None
+Zofran
+None
+Tienam
+Maxitrol
+Flarex
+None
+Medgenol
+Ventolin Nebules
+Alcaine
+None
+None
+Molpar
+Maxidex
+Salinase
+Carnicor
+None
+Eurosol M in D5 Water
+Mydriacyl
+Vertilate
+Unbranded
+Budecort®
+None
+Europersol
+Eurosol-R In D5 Water
+Unbranded
+Tenormin®
+Nolvadex-D
+Inderal
+Inderal® 40 Mg Tablet
+Methycobal
+Haldol Decanoas
+Budecort Respules®
+None
+Cardepine
+Brisofer
+None
+Daktarin
+Daktarin
+Postop
+Diclowal 75
+Osmofundin
+Tobradex
+Xanor
+Betoptic S
+Unbranded
+Unbranded
+None
+None
+Unbranded
+Lupex
+Toradol
+Zestril®
+Zestril®
+Zestril
+Sangobion Forte
+Coumadin
+Driclor
+Unbranded
+Plasma-Lyte 56
+Unbranded
+Imodium
+None
+None
+Rielmox
+Clopixol- Acuphase
+Daivonex
+Tobradex
+Unbranded
+None
+Cotrazid
+PULMOXCEL
+Globifer Forte
+Mecovit
+None
+Sirdalud
+Termox
+Sensorcaine
+Broadmetz
+Xylocaine
+Zadec
+LOCETAR
+None
+Medgenol
+Myracof
+Expel
+Myracof
+Beractant
+Tergecef
+Neo-Bromexan Forte
+Zavedos
+Flixotide
+Respinal
+Teramol
+None
+Lamisil
+Stafloxin
+Stafloxin
+TDL
+Dynatussin
+Seroxat
+None
+Nervostamin
+None
+Zinacef
+Fortum
+Medvox
+Zovirax
+Medianon
+Fortum
+Laxatrol
+Tergecef
+Tergecef
+BENZAC SPOTS TREATMENT
+Virlix
+None
+Medvox
+Neurovit
+Roidrenal
+Infexin
+RESPINAL
+Selzef
+Cymevene
+Proscar
+Sodium Chloride + Potassium Chloride + Calcium Chloride + Magnesium Chloride
+VENTAR
+Selzef
+Cefax
+Voren
+Naprosyn LLE
+Decocon A
+Zoladex
+Xanor
+Pediafortan-C
+Bricanyl
+None
+Infexin
+Lacipil
+Lacipil
+Activent
+Tuseran Forte (Reformulated)
+Cosyr (For Export Only)
+Steerometz
+PROX-S
+Ciloxan
+None
+Lexibase
+Acumox
+Oprizole
+Salvex
+Abluent
+MYDFRIN
+Dramelin
+Lexibase
+Lexibase
+Zobrixol
+Neo-Bromexan
+Zobrixol DS
+None
+Metrophenicol
+Cidoxine
+Plasma-Lyte 148 With 5% Dextrose
+Essencia Maravillosa
+Isopto Atropine
+Broadmetz
+None
+Fendryl
+Zolmed
+Loricid
+PULMOXCEL
+Cotribase
+Salbutamol (As Sulfate) + Guaifenesin
+PANADENE
+None
+BENZAC SPOTS TREATMENT
+Z-Vita
+Medvox
+Evimox
+Panadene
+Broadmetz
+Nebrecon
+Bactille TS
+Steroderm
+Addamel N
+Cefalin
+Cefalin
+Lamictal
+Lamictal
+Kankunis
+Cozole
+Cidoxine
+Amikacide
+TDL
+None
+Plasma-Lyte P With 5% Dextrose
+HALCEPIN
+Ventar
+Mycin
+Airex
+Lexriel
+Oneflex
+None
+Dexamethasone
+Asvent
+Vistrep
+Vistrep
+Vistrep
+Desowen
+Exluton
+Vitalipid N Adult
+Ponser
+Ceclor
+Termox
+Vicephrin
+Losec
+C-Phenicol
+Famcin
+Anaseran
+Anaseran
+Dynatussin
+Zinnat
+Zinnat
+Lorlachlor
+Medvox
+Globapen
+Edexin
+Gentacid
+Medgyl
+None
+Com-Lidonde
+Salmogen
+Vesanoid
+Turbolax
+Flammazine
+Qinolon
+Hemadone
+Lexriel
+Termagen
+Rodazid
+Inoflox
+Nephrosteril
+Globapen
+HALCEPIN
+Dicymed
+Pseudo-Ambin
+Inoflox
+Corgic Plus
+Metmic
+Quadrotopic
+Orapred
+Isoprinosine
+Aluminum Hydroxide + Magnesium Hydroxide
+Salbumed
+Lexriel
+Betalbee
+None
+Primex
+Desowen
+Zaness MR
+Pedcee Syrup
+Sandimmun Neoral
+Trisulcom
+Trisulcom
+Aldricin
+Celer C
+Korgivit-E
+Assics
+Mulvitron
+Triphimox
+Zyclodex
+None
+Moniliasol
+None
+Dr. S. Wong's Bioderm
+Dr. S. Wong'S Bioderm
+Sandimmun Neoral
+Sandimmun Neoral
+Nootropil
+None
+Rocephin
+Zefral
+Heraclene
+Galcinar
+Falex
+Cendalex
+Algicap
+Metospec
+Primex
+Exbropin
+Lorecep
+Lorecep
+Febrinil
+Unbranded
+Icelax
+Salofalk
+Ulcerix
+Airex
+Elica
+Sustachlor
+Medgenol
+Cemetol
+Vibee
+None
+Bonamine
+Triconex
+Profurex
+Shinapen
+Intraplem
+Algezone
+None
+Unbranded
+Unbranded
+Mucover
+Gelminthic
+Kefox 750
+Plaquenil
+Termagen
+Zovirax
+Vitagen
+Valzimox
+Retacnyl
+Respinal
+Tridecon Drops
+Celoxone
+Zalpen
+Meganerv 300
+Valtrex
+Guiamed
+Cephoral
+Vicephrin
+Vamcloxil
+None
+None
+Adrenin
+Siverol
+Vi-Gel
+Nerfalex
+Furix
+Primecotrix
+Amoltex
+Mebendazole
+Acalka
+Desferal
+Cendalex
+Solaze
+Floxagen
+Medibron
+Vatacil
+Vatacil
+Monnax
+Primesal
+None
+Imigran
+None
+Salbuvan
+Salinase
+Lamictal
+Beisol
+Cendalex
+Trev-Iron
+Pediafortan Forte
+Zerrucee
+Biofitea
+Diplex
+Cloxacillin (As Sodium)
+Hepa-Merz
+Salofalk
+Rogin-E
+Lepravir
+Klorfen
+Sutrao
+Inoflox
+Cozole
+Drexifer
+Modilon
+Cetaxima
+Lacryvisc
+Supramox
+Xinflex
+Mercilon
+Meganerv E
+Zeporin
+B-Prime Complex
+Kindoplex
+Viartril-S
+Fleet Enema (For Children)
+Natrilix SR
+Falex
+Kefox 250
+Salbuvan
+Corneregel
+Cellcept
+Mediferron-Vita
+Xinflex
+Foramebex
+None
+Para-4 Kids
+SELVON CEE SR
+None
+Cotribase Forte
+Bonamine
+Medifortan Capsule
+Myonal
+None
+Rodazid
+Cefax
+Dilatrend
+Termagen
+Alpurin
+Zyclodex
+None
+Vessel Due F
+Differin
+Xinflex
+Dianeal PD-4 Low Calcium w/4.25% Peritoneal Dialysis Solution
+Efamed
+Dianeal Pd-4 Low Calcium with 1.5 % Dextrose
+Beefer Plus
+Celoxone
+Basen
+Basen
+Dianeal PD-4 Low Calcium w/2.5% Peritoneal Dialysis Solution
+Clonaren
+Loperamide (as Hydrochloride)
+NEKTOL
+REVITAPLEX
+Fluimucil
+Alcotri
+Romicef
+Cozole
+Innoxiderm 20G Cream
+Rowachol
+Asfrenon-Gf
+Lipigem
+Sterillium
+Zyprexa
+Zyprexa
+Dianeal PD-2
+Oneflex
+Foradil
+Heltine
+Fluimucil
+Fluimucil
+Marvelon 28
+Cethergo
+Fluimucil
+Isoptin
+Isoptin
+Anaseran
+Logimax
+Neurobexol
+Bambec®
+Colvan
+None
+Dianeal PD-2
+Dianeal PD-2
+Rowatinex
+Imdur Durules
+Colvan
+Jaga
+Anemicon Plus
+Natricin Forte
+Nordette
+Norten
+Norten
+Folart
+Unbranded
+Optiray 320
+Anerocin
+Aminosteril Infant
+Godex
+Ladkin
+Virlix
+None
+Panadene
+Pyridoxine Hydrochloride (Vitamin B6)
+Pred 10
+Mucosolin
+Mucosolin
+Mucosolin
+Levox
+None
+Shintamet
+Monurol
+Eleomox
+Xalatan
+Carnicor
+Rheuflam
+VASCOR
+Vascor
+Trusopt
+Drilozole DS
+Lorvazine
+Ultraxime
+Ultraxime
+Xyloper
+Cyclotrax
+Dolan FP
+Multigen
+Ventolin Inhaler
+Gelofusine
+Appebon With Iron
+Restolax
+Trizine Forte
+Clindal
+Dailymin-Vita Plus
+Meganerv-1000
+Augmentin
+Moniliasol
+None
+Belavit
+Ventryl
+Higesic
+Singulair
+Eldicet
+Dexton
+None
+Fimoplas
+None
+Gluconil
+Neovita-B
+Nasatapp
+Tempra Forte (Strawberry Flavor)
+Innodesone
+Zeditapp
+Zeditapp
+Triforam
+Lipiodol
+None
+Humamet
+Ponser
+Mefejal
+Topamax
+Topamax
+None
+Zeffix
+Luprolex
+Antamin
+Legalon
+None
+Nasatapp
+Centravim
+Blopress
+Anastrozole
+Medgyl
+None
+None
+Carminasen
+Voxoll
+Selxan
+Jesfer
+Dexatrin
+Hyzaar
+Siverol
+Siverol
+Prograf
+Risperdal
+Unbranded
+Unbranded
+Medryl
+Phenomed
+Nutroplex
+Neozep Cold Tablet
+Teramoxyl
+Unbranded
+Kytril
+Kwell
+Kwell
+Renzat
+Cytosplat
+Utoral
+Carbotinol
+Carbotinol
+Neuronerv
+Konakion MM
+Syntemax Otic Solution
+None
+Sorbifer Durules
+None
+Trental
+Solian
+Alegysal
+SINECOD FORTE
+Lorban
+Omacor
+Flulon
+Pariet
+Pariet
+None
+Mycee
+Propecia
+Krabinex
+Sanmyd-P
+Hialid
+Virgan
+Ebedoxo
+Ebedoxo
+Voxoll
+Zanidip
+Trepar
+Alcavixin
+Velbastine
+Seroquel® 200 mg Tablet
+Seroquel®
+Regroe Forte
+Cloxiña
+Polynerv
+Xanpurin
+Hidonac
+Fluimucil
+Voren
+Gyraxen
+Selvon-C
+Xelent
+Xelent
+Xelent
+Xelent
+Enervon
+Herpex
+Herpex
+Azopt
+Broxil-M
+Aggrastat
+Evatocin
+Valemine
+Seretide 100 Diskus
+Seretide 250 Diskus
+Seretide 500 Diskus
+PTERIN
+Globaxol Forte
+Broxil-M
+Unbranded
+Brighser
+Prednecort
+Dilatrend
+None
+Ziac
+Reparil-N-Gel
+None
+None
+Zoladex® LA
+Lobafen
+Cofalixir
+Fucidin H
+Almic
+Diumide-K
+Fluimucil
+Lipanthyl
+Liverine
+None
+Zinbee
+Medgenol
+None
+None
+Modilon
+Raxide
+Dotarem
+Vastarel 20
+Dianeal PD-2
+Gaspen
+Tempra (Orange Flavor) (Pediatric Drops)
+Dianeal PD-2
+None
+Vicolax
+Forzid
+Angiozem
+Dermese-A
+Intraocular Irrigating Solution
+Angiozem
+Pentasa
+Trosyd ™
+Estamin
+Fucicort
+Dipeptiven
+Meptin
+Meptin
+Doxylin
+Pred 10
+Dorner
+Melifrin DS
+None
+Enervon-C Filmcap (For Export Only)
+Actos
+Actos
+Termin-C
+Pantoloc
+Broxan
+United Home Calactate
+Broxan
+Monnax Plus
+Adalat Gits 30
+Crinone
+Duromine 15
+Duromine 30
+Salvex XP
+Differin
+Valemine
+Nostero
+Candid-V6
+Genteal
+Acular
+Nexium®
+Esvical Forte
+Pentox 400
+Zepdril
+Moks
+Hyzaar Ds
+Nostero
+Eldrex
+Keptrix
+Broxoflem
+Nasatapp
+Dexticort
+Adalat GITS 60
+F-ZOLIDONE
+Adlynx
+Aspec-EC
+Valzepam
+Skelan 550
+Skelan
+None
+Blopress Plus
+Afforvit
+Sedalin
+Ziac
+Ziac
+Roxon
+Roxon
+Ventar EXP
+Efamed Plus
+Symbicort Turbuhaler® 160 Mcg/4.5 Mcg Per Dose Powder For Inhalation
+Symbicort
+Cosopt
+None
+None
+Vastarel MR
+None
+None
+TRAVATAN
+Micron-C
+Rapamune
+Lorcef
+None
+None
+None
+None
+Zyvox
+None
+Ruxim
+None
+Neodex-V
+None
+Ery-V
+VISTACHLOR
+Neobloc
+Neobloc
+Vistacom
+Optiray 350
+Vistallerg
+Diprivan®
+Glumet
+Alunlan
+None
+Naprex 250
+None
+Zindal
+Vamgesic
+Zeptrigen
+Zeptrigen
+Advantan
+Vesilac
+Zcure
+Alaxan Fr "For Export Only"
+Sybron
+Dexticort
+Voltaren Forte
+Voltaren SR
+Voltaren Emulgel
+None
+None
+None
+Pred 30
+Kidz Kit 2
+None
+Flamorel
+None
+Neurolink Forte
+None
+Andrex
+Clariget
+Clariget
+Vistapred
+None
+Powervit
+Bronchoprime
+Senpivac 0,5% Plain
+Bidox
+Lomotil
+Floxel
+Levox
+Sifrol
+Sifrol
+MONOWEL
+Dynastat
+Concerta
+None
+Flixotide
+Spanil
+Tracutil
+Zyrcef
+Pyrazuer
+Clorgen
+Seredol
+Zinaplex
+Xyzal
+Senpivac 0.5% Heavy
+Littmox
+Pisamor
+Vasoclear-V
+Lestremor
+Naprex
+Claricort
+Unbranded
+Unbranded
+Unbranded
+Dexticort
+Co-Amoxiclav
+Clavoxel
+Yasmin
+Isoxilan
+None
+Unbranded
+Unbranded
+None
+None
+Vistasulf
+Natravox
+Natravox
+Sullivan
+Glucovance
+Qinolon
+Inoflox
+Unbranded
+Clomitene
+Solian
+None
+Hivent Ds
+Rimaped
+STERILID-V
+Glucovance
+None
+Siccafluid
+UNITAXEL
+Zalvos
+Voltaren
+Pantoloc
+Pantoloc
+Vistacom
+Clindal
+Ebeposid
+Sullivan
+Comox
+Clavoxel
+Riprocin
+Crestor
+None
+None
+Prolix
+Ritalin
+Denecort
+Travocort
+Dormicum
+Dormicum
+Dormicum
+Diprivan
+Lindell
+Elidel
+Bloicin-S
+Rocaltrol
+Unbranded
+None
+Clozil
+None
+Daivobet
+Terozid Forte
+None
+Virest
+Cirok
+Unbranded
+Valcyte
+Diuspec
+Claventin
+Prolix
+Lipway SR
+Unbranded
+LORATYNE
+Pentracin
+Oftaquix
+Venzadril
+Azimef
+Hypersalt
+Tritab
+Quadtab
+Bifix
+Pterin
+Iressa
+Embatrim
+Bronix
+Cinmik
+Advil
+Versant-XR
+None
+Funzela
+None
+Keppra
+Keppra
+Pred 50
+Flanax Forte
+Forcad
+REMEDRIL
+REMEDRIL
+Snif
+Sullivan
+Ephron
+Ulsek
+Soluvit N
+Voluven
+Muconase
+Cinmik
+Cinmik
+Nazaclir
+Bronchofen
+Lacipil
+Ventar
+NuDerm Dermage
+Nuderm Dermage
+Retrokor
+Unbranded
+No-Drowse Decolgen
+Livolin Forte
+Sybron
+Ferroplex OB
+Nutriflex Lipid Peri
+Nutriflex Lipid Special
+Depakote ER
+Forcad
+Bricalin
+Fastum
+Zyrrigin
+Decolgen
+Enhamox
+Avodart
+CIMULCER
+Optigorw Plus
+Optigrow Plus
+Purifol®
+Kremil- S
+Usosan
+Metrinox IV
+Vitacap
+Cortizan
+Neozep
+Neozep Forte
+Fremid
+Profalexin
+Nexium®
+Tetralysal
+Pengesic
+Moriavit
+Aluminum Hydroxide + Magnesium Hydroxide
+Pynocare 40 Actisome
+Omegaven
+Hypril
+Hypril
+Benedex
+Benedex
+Tuseran Forte
+Benedex
+Cloxin
+Triconex Forte
+Myra E
+Cepham
+Valproic Acid
+Anxiol
+None
+Emodan
+Guaifenesin + Terbutaline Sulfate
+Allerta Junior
+Congestap
+Neozep
+Cepham
+Allerta
+Tracrium
+Pylison
+Keppra
+Lotencin
+Disudrin
+Bactinil
+Mintribee
+Flexigesic MPR Capsule
+Meganerv FA
+None
+Myra 300-E
+BAXOLYN
+Clobenate
+Dactorubin
+Dactorubin
+Metformin Hydrochloride
+Zepax
+Norvasc Protect
+Norvasc Protect
+Lofenax
+Ranitidine (As Hydrochloride)
+Poro
+Ectrin
+Neoquabin
+Neoquabin
+VISTALENS
+Liothyl
+Crolameen
+Medichlor
+Crolameen
+Dostan
+Zometa
+MOMATE
+Benaxil
+ALPHACAINE
+Kalimate
+None
+None
+None
+Metorpim
+Polynerv
+Pred 20
+Silgram
+Silgram
+PK-Merz
+Methazol
+Mucosform
+Asmalin
+Sultacillin
+Sultacillin
+Benuvit-C
+Kidz Kit 3
+Expel
+Biotamol
+Zymar
+Klarid
+Solben
+Unbranded
+Eurocor
+Therabloc
+Clanza
+Finlax
+Virest
+Madexin
+Madexin
+Divalproex Sodium (Equivalent To Valproic Acid)
+Madexin
+Madexin
+Restasis
+Candibec Cream
+Concerta
+Nurocer
+None
+Herpex
+Rheuflex
+Ravenar
+Clamovid
+Clamovid
+FOLICARD
+Seroquel®
+Dolan FP Forte
+Congestap
+Rizin
+Ezmol
+Zanidip
+Trev-Iron Plus
+Ceelin Plus
+Parapain
+Samarial
+Tonnaxe
+None
+Tonnaxe
+Tonnaxe
+Lobrix
+Ocuvite Preservision
+None
+None
+None
+None
+None
+Bondronat
+Mytoxid
+Terclovir
+Terclovir
+Andros
+Unbranded
+Glipiren
+CONGESTAP
+Symbicort
+Hidrasec
+Levopront
+Normopres
+Heraclene Forte
+Axibin
+Propan
+Kiddigesic
+Claneksi
+Acnetrex 20
+HRZ Pedia Kit
+HR Pedia Kit
+Pecof Syrup
+Klavic
+Hidrasec
+Hidrasec
+Neurogen-E
+Regumet
+Ventavis
+Ansimar
+Vigor-Ace
+Kastair EZTab
+Duac
+Clariget
+Romamed
+Alnix
+Alnix
+Globaxol
+Crestor
+Vedecont
+Hovicor
+Natravox
+Unbranded
+Amgram
+Oframac
+Klavic
+Uriflow
+Tygacil
+Fenamil OB
+None
+Risek
+Alimta
+Flumig
+Extraneal
+Olmetec Plus
+Claneksi
+Vitares
+Chloro-V
+Iracet
+Flucoral
+Gadovist
+Cloran
+Pyped
+Anaseran
+None
+C-Tri T
+Stericort
+C-Tri-T
+Unbranded
+Cloran
+Beetab
+Allerkid
+None
+Multivitamins + Minerals
+Allerkid
+Simvastatin
+Vesicare
+Rhinodec
+Tramid
+Glimepiride
+Tarka
+Unbranded
+Zyrrigin
+Morvicor
+Vento-Broncho G
+Sevorane
+Neurobion
+Glevo
+Remopain
+Mefolex
+Soy Bean Oil + Medium Chain Triglyceride + Olive Oil + Purified Fish Oil
+Neurobion Forte 5000
+Vistatears
+Ciproflox
+Stavid
+Kiddigesic
+Coralan
+Coralan
+VAZAMIDE SR
+Vigocid
+Cynosal
+Angimax
+Lilonton
+Voker
+Asbunyl Plus
+Acotril
+Glimepiride
+Glimepiride
+Levox
+Celemin Nephro
+SITIFIX
+Dolo-Neurobion
+Erventril Forte
+Endrolin
+None
+Glipride
+Synmex
+Floxel
+Glimec
+Norplat
+Precedex
+Insomed
+Glimepiride
+Zoldem
+MUCUSURF
+Zoltax
+Thromboreductin
+Vigocid
+Hentaxel
+Augmentin Es
+Klornik
+Medilexin
+SENSOFLOX
+Cyscore
+Mintribee-1000
+Pneumosolv
+Lyceplix
+Zobrixol
+Kremil-S Advance
+FML
+Kalanit
+Zinmet
+Nexavar
+Exjade
+Exjade
+Lactul
+Opraz
+United Home Dizitab
+Gynoflor
+Ledecon
+Ketovid
+Lyrica
+None
+Sovlan
+Diuzid
+One-Six-Twelve Forte
+Vometa
+Vometa
+Aldic
+Paraflu
+Funzela
+Henplatin
+Alfoxin
+OTOFLOX
+Fluclox
+Lyceplix
+Reinin
+Piptaz
+Piptaz
+None
+None
+Stericort
+Montiget
+Montemax
+None
+Allerfen
+Clobex
+Clorcef
+Floxil
+Polynerv Forte
+Canesten
+Canesten
+Virtex
+Celcoxx
+Ganaton
+Diuspec
+Neoxicam
+Pneumosolv
+Bronchospec
+Mirtazapine
+Alerid
+Ketomed
+Ultimax
+Celcoxx
+Provestin
+Meloflam
+None
+None
+Legalon
+Anerobizol
+Vfend
+Suplenex
+AD Mycin
+Domper
+Coxafen
+Roxipan
+Seven Seas Multivitamin (Orange Juice Flavor)
+Clavmex
+Advil
+Sangobion Kids
+Inofib
+Cholefen
+Eloxatin
+Domperone
+Phenomed
+Mucobron Forte
+Montiget
+Tobra-V
+Brainact
+Harnal Ocas
+Medgyl
+Appetite OB
+Ferrovit
+Broxitrol
+Emplusal
+Theoryl
+H2Bloc
+Aclasta
+EP Mycin
+Reinin
+Lantidin
+Arya
+Arya
+Arya
+Zefei
+Zarnat
+Tramadin
+None
+ZINBEE
+Cortix
+Difenax (reformulated)
+Alpremin
+Simvoget
+Fenogal
+Loraped
+Lipanthyl Nt
+Furoxen
+Durogesic D-Trans
+Durogesic D-Trans
+Durogesic® D-Trans®
+Conzace
+Sobromer
+Lemaflex
+Brytolin
+Candibec Topical Solution
+Xyzal
+Clindal
+Lyceplix
+Vistaflox
+Cipro-V
+Totilac
+None
+Calci-Aid
+Unbranded
+Hydrax
+None
+Atopitar
+Cardioxin
+Champix
+Champix
+Medilexin
+Surecef
+Zarnat
+Energy-Max
+TMCI Medicated Astringent
+Haxim
+Haxim
+Synestamine
+Iomeron
+None
+Amphotret
+Cholinerv
+Broxitrol
+G-Koff
+Risek 40
+None
+FOLICARD B-PLUS
+Neo-Penotran Forte-L
+Neo-Penotran Forte
+Ampitrex
+Relenza
+Ampitrex
+Dayzinc
+Simvoget
+Floratil
+Floratil
+Disudrin
+None
+Haxon
+Haxon
+Rheudi
+DAYZINC
+Cholinerv
+Cholinerv
+Arpimune
+Arpimune
+Folicare
+Glumet
+Diuzid
+Vasalat
+Vasalat
+Calmpent
+Calmpent
+Gapaxin
+Fezilic
+Zolid
+Dazomet
+Folisure
+None
+Paliperidone
+Paliperidone
+Paliperidone
+Priska
+Priska
+Faslodex
+Aclor
+Folcid
+Novaflox
+Lipuro
+Pharmaton Kiddi
+Lipuro
+Atrosol
+Augmentin
+Gabix
+Gabix
+Fresofol Mct/Lct
+Fresofol Mct/Lct
+Medclof
+Hyzaar
+Appetite W/ Iron Syrup
+Obucort Swinghaler
+Maxifol 5000
+Folanerve
+Harbipen
+Oxaliplatin/ Oxaplat
+Adrecort
+Harnal D
+Obocil
+Hacef
+Iopamiro
+Depotrust
+Viartril-S 500
+Hapimax
+Harbipen
+Haxon
+Hacef
+Scanlux
+Scanlux
+Medsone
+Haxotin
+Motivest
+Inox
+Auroblue
+Pantoprix
+Meptin Swinghaler
+Tamiflu
+Zolicef
+Aforbes
+Cataflin
+Tasigna
+Haxon
+Urilzid
+Quetiapine (As Fumarate)
+Quetiapine (As Fumarate)
+Riampisul
+Coversyl
+Coversyl
+Combigan
+Glimaryl
+Omed 20
+Depakene
+Korgivit-E Forte
+Quinapro
+Acotril
+Tandol
+Salventin
+Iopamiro
+Hapimax
+Clarituss Plus
+Ulceptor
+Bioflu
+E-Zinc
+E-Zinc
+Fleozol
+Bromex
+Allerex
+Hacef
+Hacef
+Floxel
+Epival
+Ketodol
+Dormazine
+ARBLOC
+Arbloc
+Globazine-100
+Panfor SR-1000
+Levox
+Silvex
+Pataday
+Quetiapine (As Fumarate)
+Epitop
+Epitop
+Zotral
+Medicol Advance
+Trimostat
+Quetiapine (As Fumarate)
+Haxim
+Puroxan
+Lochol
+Sildegra
+None
+Clanza S
+Sterofundin ISO
+Keppra
+Neuroxel 500
+Medbufen
+Medbufen
+Folart
+Folart
+Gaviscon
+Erycar
+Zolicef
+Perigard-2
+Ferrofer
+Natravox
+Natravox
+Natravox
+Natravox
+None
+Indanox
+None
+Quinapro
+Stugeron
+Biozinc
+Vert
+Cavumox
+Cavumox
+Nasoflo
+Biozinc
+Epitop
+Zynapse
+Pharex B-Complex Forte
+Neurocetam
+Gaviscon
+Coxoral
+Aubrex
+Mucofalk (Orange Flavor)
+Exulten
+Yaz
+Primovist
+Tusedex
+Symdex-D Forte
+Nimotop
+Iselpin
+KXD
+Dolcet
+Rovista
+Rovista
+Rovista
+Azela
+Flemnil
+Doxar
+Neo-Up
+Neo-Up
+Doxtralin
+Fungicon
+PLATEXAN
+Clindaxin
+Restime
+Anektil
+Pantaz
+Renuvie
+Renuvie
+Penthal
+Ampholip
+B-Prime Plus
+Zepdril
+Zepdril
+Snaps
+Flemizyme
+Tobra-V
+Piracil
+Piracil
+Peridol-5
+Optimol
+Avamys
+Alimta
+ZYSTAL
+Carezee
+Aketon
+A.N.B.
+A.N.B. Sodium Chloride Normal Saline Solution
+A.N.B. Mannitol
+A.N.B.
+Lesofat
+Mintribee-100
+Mycamine
+Salacyn
+Trizef
+Paxel
+Salmeflo
+Piloptic-2
+Ceti-Med
+Fumerix-250
+Minirin Melt
+Zimerz
+Norspan
+Norspan
+Norspan
+Obsure
+Vasotec
+Venolex
+Prenarex Plus
+Aztrocin
+Flemex
+HAPIVIR
+Anzol
+Bioclocel
+Platin
+Piogen
+Fungican
+Tergecef OD
+Mediclav
+Platinox
+Pulmodual
+Glimarex
+Eye-Mo Moisturizing Formula
+Norifam
+Aspen
+FBN
+RL
+None
+Zovirax
+Zcure Forte
+Medzyme
+Medzyme
+Medzyme
+Neurocetam
+Excita
+Ambloc
+Revovir
+Symdex-D Syrup
+Symdex-D Syrup (Oral Drops)
+Skinoren
+Globantin
+Solvasc
+Naabak
+Nexium
+Aricept Evess
+Aricept Evess
+Tarnex
+Trenaxin
+DIPROSONE
+Difflam Forte
+Gaviscon
+Lixtress
+Unbranded
+Rythma
+Hypetor
+Ephron
+Myclav-375
+PRINOL
+Zefuxim
+Zepotin
+Clavimox
+Cartine
+CLORCEF
+Unbranded
+NEOSARTAN PLUS
+Calcimed
+Ceftrox
+Atopitar
+Clogel
+Ceftrox
+Ceftrox
+Lipidem
+Penthal
+Betavert
+Exigo
+Forgram
+Forgram
+Trilaxant
+Omebloc-20
+Analin
+Nirva
+Nirva
+Alnix Plus
+Tazopen
+Mintribee-300
+Globantin
+YK Antamin
+Pro-Ferr
+Gasmotin
+Unbranded
+Zefxon
+Methazol
+Nir-5D
+H-One
+Unbranded
+Tagraf
+Mycept
+Cynosal
+Dafenac
+Reventa
+CARDIVASC
+Neox 50
+Coveram
+Coveram
+Coveram
+Coveram
+Hensetron
+I-Visc
+Nasathera CPM
+Kidsolone
+DNS
+Bridion
+Clavoxel-BID
+Leukast
+Leukast
+Silgram
+Kidz Kit 3 Forte
+Soladin
+Tazopen
+Unbranded
+None
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+Neuronerv Forte
+Carvid
+Carvid
+Ganfort
+Altovox
+Cefazen
+Pristiq SR
+Uritracin
+Xypen
+Candez Plus
+Efamed Plus
+Kabiven Central
+Kabiven Peripheral
+Ketesse
+Ceprotron
+Asenza Plus
+Zealor
+Silvederma
+Polynerv 1000
+Lipisim
+Zarnat Max
+Zefadin
+Levoxin
+Zefadin
+Neomerdin
+Oxynorm
+Carvas
+Natravox
+Ceti-Med
+Ceti-Med
+Levores
+Unbranded
+Orich Plus
+Orich Plus
+VANCOLON
+Ceftibac
+Clindaxin
+Nat B
+TAZOVEX
+Levoflox
+Eodipine 10
+Pimax
+Zefuxim
+Celcoxx
+Ocin
+Alnix Plus
+Montra
+Montra
+Residon
+Residon
+Cikolin
+Keppra
+None
+Otowax
+Saridon Triple Action
+Optamol
+Flox
+Salnor
+Zepime
+Glypressin
+Voflox
+Airokast
+Amlocare
+Amlocare
+Levores
+Levflox
+Fluidex 10
+Dextrosol 5
+Norsalin-D
+Zytodex
+ROGIVENT
+Sulfin
+NIR-RL
+NIR-DNS
+Fazonil
+Hydrovex
+Fluidex 5
+None
+Neosartan
+Ural
+Hemaflow
+Jovia
+Nervron
+Cefotax
+Unbranded
+CEFUROX
+Neuromet
+Metromine
+Primax
+Xevolac
+Emla®
+Furcef
+Zystam
+Epiduo
+Allerzet
+Rivotril
+Loxeva
+Unbranded
+Wilopres
+Lovir
+Bp Norm
+Vidastat
+Nat-D
+Ropen
+Barole 20
+Mepenem
+Mepenem
+Risdin
+Unbranded
+LIQUISONE
+Airmaxx
+Tractocile
+Tractocile
+GLITAZ
+Soonmelt
+Furcef
+Alzor HCT
+Alzor HCT
+OVERT
+Lisnoxl
+OVERT
+Unbranded
+Timabak
+Besylon
+Vamox
+Unbranded
+Zilden
+Miracoline
+Visine
+Unbranded
+NEOSARTAN
+Azarga
+Aurocort
+Tna
+ANGIMAX MR
+Ceftibac
+Setrof
+Clopix
+Somex
+CEFUROX
+Unbranded
+Dizzinon Forte
+Triclav
+Unbranded
+Levocet-Natrapharm
+Cardiostat
+Bioflu
+Plavix
+Snaps
+HENTROZOLE
+Sullivan
+Razine
+Unbranded
+Atovas
+Provas
+Zoltax
+H-One
+Uromes
+Movelax
+Pentazol
+Lochol
+Pentazol
+Lavida
+Zepime
+Mebaal-500
+Isonate
+Glucart
+Eye Glo Relief
+Eye Glo Moist
+Eye Glo Regular
+None
+Lormal
+Mitonerb
+Soniphen
+Zarnat Plus
+Mucovis
+Essentiale Forte P
+Unbranded
+Nature-E
+Tocovid Suprabio
+Levocin
+Hisdec (Reformulated)
+Quetiapine (As Fumarate)
+Mitocore
+Inlex
+Tazocin
+Cefotax
+Cefotax
+Lipro
+Terozin
+Mezacar
+Valium
+Hinuron-E
+XAMIOL
+SANDOSTATIN LAR
+SANDOSTATIN LAR
+SANDOSTATIN LAR
+Primodil 10
+Femme
+Avarin
+Gyne-Tocin
+Hyos
+Pedcombi 2
+None
+Bee-All
+Diameride
+Diameride
+Osteomax
+Homatropine Methylbromide
+Ambloc
+Kedar
+Dimet-500
+Allerzet
+Urisol
+IOPROST
+Alaxan
+Alaxan FR
+Cefogram
+Elocon
+None
+Zolid Plus
+BONAZIL
+Ziprimox OD
+Saxagliptin (As Hydrochloride)
+Saxagliptin (As Hydrochloride)
+Reinin
+C-Tax P
+Betavert
+Spectra
+Amvasc Plus
+Amvasc Plus
+Retimax
+Montekast
+Andrecep
+Acnoin-T
+Trozet
+Sibelium
+Xeloda
+Piascledine
+Lefoxin
+Airmaxx
+Asadin
+Zanprex-10
+Kwell
+Bee-All
+Hemoxane
+Pediacef
+Inoxin
+Somex
+Leximed
+Levophed SF (Sulfite-Free)
+Rocuronium Bromide
+None
+NATA-4
+Cium-Cee
+Osporin
+Chiamin-S
+Sporanox
+Azo 500
+Osporin
+Coldenflu
+Protec
+PANTOPRAZ
+None
+Amo 10
+Mefenamic Acid
+Anidulafungin
+Carvedilol
+Trombix
+Dobunex
+Vasocar
+Clotfre
+Broxiphem
+Pentasa
+Harbimox
+Aprelax
+Clavmentin
+Silgram
+Amo 5
+None
+Qlaira
+None
+Ceftugen
+Atroptal
+Hypozam
+None
+None
+Coversyl Plus
+None
+None
+Fortum
+Aronamin-C Plus
+None
+Soniphen
+Glicla-Natrapharm
+Adivast
+Amlodia
+Amlodia
+None
+Diamicron MR
+Yokocip
+Nircip
+Losart
+Zefaxim
+Dermacaine Cream
+Cetirizine Hydrochloride
+None
+Zegen
+Zegen
+Prevacid IV
+SUGADROP
+I-Max
+Dl-Alpha Tocopherol (Vitamin E)
+Pamizep
+Myzar
+Myzar
+None
+Qxar
+None
+Avancur
+Lipivasc
+None
+Avator
+None
+Tacrocin
+Carbox
+Nahaltin
+Kremil-S (For Export Only)
+Gofen 400
+Dobulex
+Cleovate-G
+Trozin
+Unsin
+Indiurex
+Isonoin 20
+Foliage B-Plus
+CTZ
+Bavarian Brew
+None
+None
+Penam
+None
+United Home Allerest
+Vodefen
+Azomac
+Azomac
+Chloramp
+Norepin
+Calcinol-1000
+Tgp-Loper
+Aprelax
+Gadovist
+Kastel
+Tazovex
+Ciltamin 750
+Rocimus
+Dizoflox
+Avator
+Multivitamins + Minerals
+Glucotin
+Metoprim
+None
+None
+Nirfol
+Lacibloc
+Nirmet
+Zyvox
+Fluzep
+Flukid
+Vfend
+Nazaclir
+Nebiloc CCB
+Nebiloc CCB
+Mebaal-1500
+Neutroline
+Atovas
+Adivast
+Avator
+Atenurix
+Atenurix
+Atenurix
+Ferglobin FA
+Isoprinosine
+Zeferom
+Supercet
+S-Celepra
+Depo-gestin
+Bonviva
+Hemo Rid
+Eofen-120
+Ciltamin 1.5
+Kalbrain
+Isonoin 10
+Norplat-S
+Maxitron
+Kamillosan M
+None
+None
+None
+Fluorescite
+Wilomax
+Medi-Alpha 0.25
+Scorpion
+Tempra
+Calcimate
+Rotelol
+Rotelol
+Ceftazin
+Nirpid 10
+Nirpid 20
+Versol
+Feverfree
+Trichogen
+Ketofen Gel
+Ampicillin (As Sodium) + Sulbactam (As Sodium)
+Velcade
+Fenoti-200
+Eurofer-Iron
+Tofen
+Oxcarbazepine
+Unbranded
+Merozan
+Merozan
+Ferriprox
+INHIBITA
+Desloratadine
+Cardiosel-OD
+Selegos
+Zolpidem Tartrate
+Klaricid
+Healthcare Joint Pain
+Clopimed
+Vasolexin
+Platecil
+Platecil
+Loxaid
+Aldomet
+Euroferron
+Lamotrix
+Neurobe
+Salveo
+Clavmentin-625
+None
+None
+Raxidine
+Hansol
+Mintribee-100
+Metformin Hydrochloride
+Cefazex
+Tiflox
+Dermacare
+Montelukast (As Sodium)
+Unbranded
+Tobrex
+Healthcare Cold & Flu Tablets
+Healthcare Chloramphenicol
+Amlodipine (As Besilate)
+None
+Losartan Potassium
+None
+Neoform 500
+Tazocin
+None
+Fluanxol Depot
+Dermotrim
+Clovimax
+Warfarin (As Sodium)
+Warfarin (As Sodium)
+Myovasc
+Clopidogrel(As Bisulfate)
+Diacom
+Zinc
+Zinck
+Ulci-Bloc
+Cyline
+None
+Endusol-M
+Peritoneal Dialysis Solution With 1.5% Dextrose
+Endusol-R
+Solzinc
+S-Celepra
+Rosucol
+Atorvast-Natrapharm
+Pantazo
+Pantazo
+Healthcare Antibiotic Ointment (For Export Only)
+Stancef
+Neuropro
+None
+Stancef
+Tambocor
+Glucotin
+Biogesic
+Domne
+Ofex 400
+Endusol-IMB
+Zentro
+Sidrocine Plus
+Amlodipine (As Besilate) + Atorvastatin (As Calcium)
+Amlodine HD
+Combiz
+Sildora
+Big 50
+Memantine Hydrochloride
+None
+NEOMET
+Anin 50
+Biometrine
+Bactiv 1 g
+Bactiv 625
+Clorfil
+None
+None
+None
+None
+None
+None
+Metopra
+Trichogyl
+Pantozim
+Rovita
+None
+Betacin-N
+Clopivaz
+Moxiflax
+None
+Colchimed
+NIR-D5RL
+None
+Formetin
+XFEN Flashtab
+Ascorbic Acid + Zinc
+Foxitin
+Valtam
+Velodin
+Prometil
+Bricanyl®
+Omezol
+Geozit
+S-Celepra
+Andrecep
+Usana Proflavanol C 100
+Vamzar
+Tadah Forte
+Fevertab Plus+
+None
+Cebroline
+Netilmicin (As Sulfate)
+CAPD/DPCA 3
+CAPD/DPCA 4
+CAPD/DPCA 2
+CAPD/DPCA 19
+CAPD/DPCA 17
+MOMEGEN
+Clanza CR
+Ksart 50
+Metrosol
+Irbegen
+Cobalamin
+Omepron
+Clotrigen
+Uroxime-750
+Velodin
+Trizef
+Zelex
+Neuropse
+Glatimol
+Clovirex
+Vasotec
+Trivan Plus
+Broxifil
+Broxifil
+None
+None
+Scitrozole
+Ciclox
+None
+Ceclor
+None
+Solzinc
+Tri-Alzor
+Tri-Alzor
+Atorvast-Natrapharm
+Analin
+GASTROSIL
+Bexil
+Terclodine
+EUROCAINE
+None
+Esofag
+None
+Zoliget
+Paclib
+None
+Ketotif
+None
+Coldeze Infant Drops
+Aminoplasmal B. Braun 10% E
+Esem
+Esem
+Azibloc
+Theraplus
+Pantozol 40
+Docetax
+Docetax
+Strepsils Max
+Healthcare
+Restor Big
+RESTOR BIG
+Kadagra
+Tranmed
+Tral
+Rapamune
+Salinase Max
+IRBEGEN
+Cefalexin (As Monohydrate)
+Peoxa
+TOLNACTIN
+Coldezent Reformulated
+MACROBEE with Iron Forte
+Fulzimed
+Greatafil Max
+None
+Madopar HBS
+None
+Gascosin
+Xylonas
+Klaryz
+Citagem
+Citagem
+Tacros Forte
+Unbranded
+Megaflox
+AMINOPLASMAL B. BRAUN 5% E
+Oxalee
+Oxalee
+Drinex
+Carvida 6.25
+Trivasc
+Cortix
+Esoflux
+Marilact-D
+Neurolin
+Allercet -L
+Depofemme
+Idezar
+Idezar
+Pardopa
+Flexsa 1500
+Lexotan
+Vimetrol
+None
+None
+LS BL
+Ambitox
+Fucid
+Teravox
+None
+none
+None
+Adfer
+Atv 10
+Zolterol
+Triple C-1000
+Newtaxel-A
+Nukaine
+Merop
+Redulflam
+None
+Georoxime
+Sulbazon
+Georoxime
+Globazine-200
+Xenista
+Pryce-Cee
+None
+Olein 750
+Zyvox
+Biovid Forte
+Bicapros
+Imatim
+Madopar
+Guasal
+Betacard (reformulated)
+Ferovone
+Kanacin
+Tacromax
+Erceflora
+Tamiflu
+Zantol
+Dilabloc
+Aprezal
+Almycin
+Daxas
+Neox Er
+Omezid
+Xtenda
+Mazine
+Nutram
+Risperdal
+Risperdal
+Liosal
+Arnoplet
+Stadovas
+Frusema
+Normix
+Skizin
+Mycokem
+VEXICLAV
+Trivan
+Bactriderm
+Brilinta
+Betclogen
+Multisol-M In D5W
+ZYLOVIR
+Cortix
+Stugeron Forte
+Tacroz
+Anazole
+Antiox
+Asmalex
+None
+Fenofex
+Fenofex
+Isoptin SR
+Rinozine
+Erlotinib
+Tarceva
+Osteoflam
+Osteoflam
+Xarelto
+Xarelto
+Vamocef
+AUROHEX
+Jevtana
+Kefsyn
+Frezitron
+Philvita Alfa D
+Gesitram
+Difflam Mint
+Diphex
+Mizam
+Peoxa
+Neovite
+Dcal
+Revite
+Nutri-C
+Difflam Eucalyptus & Menthol
+Defnac
+Hi-Smart
+Ropine Er
+Esofag
+Klavic
+Laprost
+Emestane
+None
+Taxotere
+Taxotere
+Imvaco
+Roswin
+Imvaco
+None
+Glyformet
+Cefurex
+Meprazol
+Ventol
+Dolowin SR
+Zyltan 50
+Paclitex
+Aldocet
+Aminofer Fa
+ZYLOVIR
+Fedrin
+Septipan
+Simvastin
+Vexepam
+Vexepam
+Clavoxel-Bid
+Zefur
+None
+Azemax
+Kefsyn
+Tazidem
+Ziprox
+Aero-Care
+Combipul
+Tuseran Forte
+Neozep Forte
+Calciumade
+Vitabit
+None
+None
+Geworin
+Levocin
+Halovate
+Halovate
+Fendexi
+Cofnil
+Curosurf
+Nahaltin
+Nebil
+Lozaar Plus
+Lovorin
+Coldzep Gold
+Cofmed
+Dolfen
+Orazinc Plus
+Fucil
+Elicort
+Haicin
+TORODA
+Buscopan
+Nalbulin
+Trinolone
+Ketarol
+Funxion
+Funxion
+Amiabel
+ULTRA-RUB
+Amiabel
+Tasigna
+Slimbalance
+Aurinol
+Dominakrem
+Nexpro-40
+Endusol-Imb
+Gembio
+Gembio
+None
+Etamine
+Astenzyd
+None
+Mediaven Forte
+Difflam-C
+Nexpro-20
+None
+Bupitroy Heavy
+Pantokem
+Psycosin
+Equisine Moist
+Suprehem
+Sinuplus
+SITIvax
+Lipo-Dox
+None
+Firmagon
+Firmagon
+Unbranded
+Cortalgesic Xtra
+None
+None
+Sinedin
+Cardiosine
+None
+Fern D
+Umexim-200
+Angivent Od
+Omnihexol
+Omnihexol
+None
+Dilamine
+None
+None
+Coplavix
+Endusol-M
+Atra-Cure
+Polyderm 3
+Picoprep
+Phytostat
+Dolex
+Dolowin
+Acurium
+Hoftrex
+Fexil
+Endometrin
+Gazo
+Cholecalciferol
+Dexilant
+Dexilant
+D-Alpha Tocopheryl Acetate + Selenium
+Fgzole
+Flexgel
+None
+Amucsol
+Zepim
+Amucsol
+Esoflux
+Traman
+Netrozin
+Glyformet
+Clomate
+Clomate
+Dolex
+Microlit
+Metofar
+Paclitex
+LOMEANE
+Hex-Cee
+Dormizol
+Betacard
+Wingora 50
+Cosooth
+Hemostat
+Vancotan 1000
+Terbifin
+None
+Cofmed
+Medodarone
+Miazole-20
+Diflu-150
+Peprazom
+Peprazom
+Meromax Iv
+Phil Cefotam
+Staxim 500
+Cospan
+None
+Qual-Z
+Mucosolvan
+Calcaine
+Unisia
+Lilac
+Acifre
+Maxigen
+Melifirin
+Aspitor
+Nuelin SR 125
+Nuelin SR 250
+Unbranded
+Carin
+Tocovid Suprabio
+None
+None
+Dormicum
+Pacetamol
+Qualiprazole
+Milgesic Forte
+Ventolax
+Zytiga
+Iobrix 350
+Cristicol
+Biovinate
+Biovinate
+None
+Myzin
+Amfucin
+Mucosolvan 24Hrs
+Macromycin
+Hepa-Merz
+DAIVOBET
+Breathe Ezy
+Clopate
+Breathe Ezy
+Ventolax
+Medicol Advance 400
+Rejuvon Ob Forte
+Intaxel
+Irican
+Corncallus
+Afinitor
+Halaven
+None
+Speedgra
+Pyreset
+Qualicef
+Axera
+Axera
+Axera
+Clogrel
+Benerv-B
+Maxlen
+DUINUM
+Asfrenon
+Tocovid Suprabio
+Glutabion
+Korgivit- E
+Korgivit-E Forte
+None
+Lopicard
+Indelol
+Indelol
+Gatsromec
+Sinedin
+Zinlum
+Zinlum
+Glycovate
+None
+Medzart Plus
+Optagen
+Rosucol
+Temozol
+Maxigen
+Mobic
+Mobic
+Forti-D
+Arzi-200
+Salmetide
+Zelboraf
+Peldacyn
+Maximune
+Rupafin
+Kohagra
+Sevoflurane
+Urinorm
+Urinorm
+None
+Troypofol
+Purcet
+TELDAY-40
+Telday-80
+Nanoxel
+Repraz-20
+Hendronic
+Elemune
+Pregmax M-75
+Woods
+Avolac
+Protec
+Nasofix
+Almesar
+Glycemet
+Emicox
+Samsca
+Mucoprotec
+Zinetab
+FERLUM PLUS
+None
+Zenrosu
+None
+None
+Zenrosu
+Uroxime-500
+Neurocetam
+Tykerb
+Xylocare
+Aciprex
+Verapril
+Metoflex
+Bewell-C Plus
+Healthcare Tinea
+FAIRY-E
+Taflotan
+Valsajub
+Valsajub
+Atasart
+Atasart
+Hiospan
+Vagilin
+Onestatin
+Onsia
+Duvapar
+Acipredex
+Funxion
+FD
+Refix
+Kaltrol
+Unbranded
+Voker
+Askey Dt
+Cefevex
+Olazin
+Atropan
+IPRIN
+XYPEN
+Microlit
+Metris
+Acevon
+Unbranded
+Acevon
+Kary Uni
+Derox 10
+Elicort
+Pastrong-SF
+Salmetin
+Salmetin
+Salmetin
+Marolac
+Olazin
+Imsolone
+Mukex
+Diclotol
+None
+None
+Cmaxid 1.5
+Hydoc-500
+Fungsoft
+Levocin
+Ursultec
+Tramal
+Rhizinegone
+Nuvert
+Ergo
+Adrim
+Temolon 250
+Tramal
+Speedgra
+Neumeron
+Atornac K
+Diovac
+None
+Ceparin
+Maxcolin
+Cal-C
+Aricept
+Bisacodyl
+Doxonish-50
+Telday 40 H
+Telday 80 H
+ZOBONE 5
+Immunpro
+Onsia
+Claryn
+Sultagold
+Pocym 250
+Visanne
+Olmecor-40
+Olmecor-20
+Velcade
+Unbranded
+Medcit
+Lolip
+Lolip
+Klopi
+None
+None
+Medzart Plus
+Klindex
+Klindex
+Doltram
+Benzoper
+None
+Nuphos-500
+None
+Sinustan
+Terbifin
+Valianz HCT
+Innoxiderm
+Prozalac
+Unbranded
+Ketakin
+Koxib
+Dynapar-SR 100
+Clariwin DT
+Unbranded
+PZBACTAM
+Orazinc Plus
+Folistar
+EVITA 400
+Strepsils Chesty Cough
+None
+Rubicin
+Rubicin
+Muzzapen-300
+None
+Azilide Dt
+Irbemed Plus
+Meforagesic
+Beecom-C Ace
+FLUCONOBAS
+Mucinex
+Levoxac
+Polynerv 250
+Lora-D
+Targin
+Plazol
+Mucosolvan
+Mucosolvan
+None
+Q-Floxin
+Teradox
+Vagid
+Vagid
+NEOPLATIN
+Vagid
+Cloracef
+Agatiflox
+None
+Xeltabine
+SG-Glutergen
+Canesten
+Aminosol
+Levozyr
+Flumex
+Amoxiflox
+Deslogen
+Butacod Forte
+Alovell
+AC-NEX PH Forte
+Acifre
+Cesalin 50
+Cortizon 5
+Vite-E Plex
+Vexonib 4
+Ismodin
+Unbranded
+Lebroxol
+Dulxative
+Ferrim
+Ursolin
+Unbranded
+Lumigan
+Icool
+Efica-cee
+Ursomax
+Amcivir
+Cynosal
+None
+Monamox-CL 625
+MEDOFLUCON
+Risek Insta
+Risek Insta
+Kaltrol
+Paracetamol
+Catamed
+Nagelin (Reformulated)
+Trozin
+Dilatair
+Remasta
+No-Drowse Decolgen
+Medzyme
+Ampiral
+Cmaxid 750
+Bespirin
+Ketolac
+Alvozol
+Kusapin
+Oestrogel
+None
+Pantovaz
+Triobees
+Unbranded
+Iseron
+Erycortin
+NEUCIN
+Esobloc
+Usana Usanimals
+Polygras
+None
+None
+Glemont-IR 10
+Fersul-FS
+Memry
+Clotribex
+Klavic
+Neozep Non-Drowsy
+Geozit
+Sidrocine
+Sitiklor
+Epsium
+Sublimax
+Paragesic
+Medzart
+Medzart
+Utexyn
+Neopred
+Differin
+URSOFALK
+Euroxime
+Rynorex
+Lordam
+Salmetide
+Sanzox
+Melmet SR 1000
+MEDZOL
+Unbranded
+Vimpat
+Dimezine
+Alduet
+Lanvell
+Unbranded
+Levetra
+Epsytam
+Neopred
+Unbranded
+Unbranded
+Adeflo
+Lastacaft
+Xalvobin
+Bacxime
+Accemide
+Meromax 1000
+Splendamet
+Livamin
+Ismodin
+Heblopin
+Meromax 500
+Carvex
+Probloc
+BAROLE
+Unbranded
+Isonid
+Almopin
+Acuvail
+Mylan
+Oxalotin 50
+Neurocil
+Geopride
+Efamed
+None
+None
+Doxil
+Gastrim
+Nexavell
+Vimpat
+Lustatin-40
+Angicarv
+Neopred
+Locaine
+Amlodibloc
+Amlodibloc
+Atravell
+Atravell
+Bacxime
+Tramklor
+Glydem
+Hemanex
+IRBEZIL
+Naldec
+Artheogrel
+Euformin
+Cutasept F
+VASEREL
+Prime Kit Duo
+Nysotab
+Ketozol
+Larfen
+Clauden
+Levocer
+Unbranded
+Gaviscon Double Action
+Patadin
+Regain
+Ursogen
+Temovex 250
+Aloxi
+Optavir
+Myelax
+Orslim
+Servonex
+Fenofex
+Atstat AM
+Unbranded
+Unbranded
+Unbranded
+OMEGUT
+Vimonzil
+ORBITEX T
+Advagraf
+Advagraf
+Advagraf
+Epiven
+Occib
+Occib
+Coxcel
+Berocca Performance
+Unbranded
+Nimopin
+Vagclr-3
+Doxofix
+BUCLISYR
+Vexer 75
+Imatig
+Ofloxen
+Neuracet
+Vomidon
+Durazol
+Captoprix
+Atenurix
+UROXINE
+Unbranded
+Coufarin
+Adesan
+ARTINIBSA
+Uritos
+Enduprin
+Zoledra
+Bactreat
+None
+Nykob
+Nykob
+Levoride
+Mosvit Elite
+Unbranded
+Comolav
+Glypressin
+Vamzar Plus
+Clinmyn
+Ometor
+Vexel-30
+Vexel-100
+Ondavell
+Ondavell
+Centrum Silver Advance
+Centrum Advance
+Glycomet
+Glycomet Plus
+Opra-40
+Ultravist
+Trabutol
+Trabutol
+Nuelin
+Ultravist
+Zefix
+Supixime -400
+Femorum
+Nimopin
+Muzzapen-400
+Profogen
+Imlastin
+Merozil
+Finazyl
+CEFFIX
+Ondavell
+GAVISCON DOUBLE ACTION
+Artosar 50
+Tramklor
+Merozil
+Ezcef
+Unbranded
+Unbranded
+None
+Cefkizon
+Glitab
+Glucron
+Diozide
+Lecetzy
+Cefovex-250
+Ecoxib
+ECOXIB
+ECOXIB
+Akneclin
+None
+Optear
+Altamax
+Paragesic
+Unbranded
+Combiflex Lipid Central
+Combiflex Lipid Peri
+Natronem
+Natronem
+Inlyta
+Inlyta
+Auromitaz 1000
+CEFTAMED
+None
+None
+Aztrozin
+Giotrif
+Giotrif
+Giotrif
+Imatrop
+Hypetor
+Corvastin
+Azik
+Unbranded
+Anzenil
+FLO CRS
+Invokana
+Nasathera
+Invokana
+Enafril
+Xalkori
+Xalkori
+Doxestad
+Azik
+Cialis
+Ultibro Breezhaler
+Levoxol
+Lipirid
+Dobugen
+Pentasa
+Teicotan 200
+Paragesic
+None
+Caliptrol
+Caliptrol
+Vexel-300
+Unbranded
+Zecobal
+Vexfin 5
+Azilife 500
+Sullivan
+Motilia
+Vesogen
+Neurovell
+Actonate
+Noprenia
+Zonegran
+Dibizide - M
+Xtandi
+None
+Bexxam 15
+Otron
+Ciclodin
+Atoren
+Esomebloc
+Urief
+Liverhealth
+Unbranded
+Capetero 500
+AXAZOLID
+Momeflo
+Acnoin-10
+None
+Unbranded
+Tenol
+Tripmed
+Unbranded
+Allergon
+Unbranded
+SERVONEX
+Comolav
+Osteomet
+DUOVAL MAX
+VALSAR 80
+Zolesan
+Propan Fit
+None
+Provex
+Mupigen
+Unbranded
+Catafen
+Lipivast
+Meropevex
+Levoxac
+Unbranded
+Clonin
+Clopres
+Corvastin
+Unbranded
+Fludexin
+Bagotax
+Bagotax
+TRIZIN 5
+Odipine 10
+Synclav 625
+Synclav 1000
+Unbranded
+Unbranded
+Betavasc
+Meto-L
+None
+Montril-10
+Plexivit
+Miracoline
+Fusidane
+Vamocef
+Clonin
+Iflox
+Epix
+Unbranded
+IRBEZ 300
+Nitro
+MG TNA-PERI
+Rhinil
+Unbranded
+C-4 Kids
+Fycompa
+Fycompa
+Sulbacef
+Glibetic
+Eonex 100
+Korto-S
+Cefurone
+Olanza 5
+Tramadin Plus
+Naprilate
+Naprilate
+Regivell
+Ofloxen
+Rozitan
+Meto-L
+Dici-Gel
+Fycompa
+Evaban
+Alvoquel
+Alvoquel
+Unbranded
+Xafen 120
+Zelecta
+Avicon
+Zelecta
+Coxbitor 400
+Xafen 180
+Idelara
+Kastimon
+Kastimon
+Parkimet 125
+Ursotrol
+Alvoquel
+None
+Seroxyn
+Flutizal
+Threcef
+Flutizal
+Sorvaztin
+Nasathera CPM
+Rezpira
+None
+Mupicort
+Quetiamed
+Dermazil
+Citicoline (As Sodium)
+Provexel
+Lorades
+Big500 - C
+X-Plended
+None
+Dulcolax
+Seroxyn
+Seroxyn
+Eosteride
+Nidcor-850
+Unbranded
+Gencin
+Atomoxetine (As Hydrochloride)
+Difluvid
+Nervagest
+Nervagest
+Zyprox
+Renimax
+Tascit BIDA
+Denigma
+Mupigard
+Hyperzol
+Carbidel
+Telmisar Plus
+Bepsar
+Telmisar
+Prazee
+Unbranded
+Quetiamed
+Pospenem
+Cefuclav
+Unbranded
+Eso 40
+Pasbutyl
+Pyromed-C
+Felojub Er
+Felojub Er
+Ephedrix
+Luixol
+Strattera
+Atomoxetine (As Hydrochloride)
+Atomoxetine (As Hydrochloride)
+Borvex
+Axefen
+Afeclor
+Ajucolin
+Cobis
+None
+Nervimin
+Eversil
+Concore Am
+Concore Am
+Concore Am
+Concore Am
+Syproxen
+Prepenem
+Xiflox
+Orlis
+Hemo-Q Plus
+Topium
+Nutram I.V.
+None
+Zolemet
+Primigyn
+Vitagreen C
+Olmepas
+Olmepas
+Lecerin
+Bdgef
+Telkast 10
+Telkast 4
+Celtrix
+Ruvastin-5
+Bezam
+Adnerv
+Stresstabs
+Stresstabs
+ETOXIB 60
+Etoxib 90
+Torvatec
+Torvatec
+Torvatec
+Torvatec
+None
+Metfor Xr
+Alvoprel
+Flusort
+Myglobin Plus
+Montril-4
+None
+Levomont
+Bezam
+Revasc
+Esomeprazole (As Sodium)
+Valpros I-Iv
+Diprifol
+Roswin
+Roswin
+Pediafortan-AS Syrup
+None
+QUANTIA 100
+QUANTIA 25
+Quantia 200
+Ribomustin
+Ribomustin
+Lodivas
+Lipiduce 160
+Tripride-2
+Panadol
+LifeExtension
+Calpol Cold + Flu
+Parabufen
+Pregeb 75
+Pregeb 150
+None
+Clavopin
+Glicarex
+Ruvastin-10
+Salbutamol (As sulfate)
+Prednivex 16
+Prednivex 4
+Beclocort-100
+None
+
+Topvex 25
+Navelbine
+Navelbine
+Eodilol
+Ornilox
+Sucralfin
+Metrol
+Pulmodual
+Nexopraz 20
+Pletaal Sr
+None
+SIMBRINZA
+Kefpoxime
+Albezol
+Kefpoxime
+None
+Filrezin
+Revasc
+Iocast
+Urica
+Emend
+Emend
+Emend
+None
+Utrogestan
+Utrogestan
+Utrogestan
+Romapen
+Mephrin
+Ventizol
+M-Prib 3.5
+Flamar 400
+Eurogesic
+Glycoair Breezhaler
+Salbux Plus
+Dulcolax
+Eonex 300
+Clusivol Plus
+Gluta IV
+None
+Letvex
+Angioflux
+Nirixone
+Detoc
+Clusivol Plus
+Xigduo XR
+Xigduo XR
+Xigduo XR
+Xigduo XR
+Triplixam
+Triplixam
+Triplixam
+Centrum Silver Advance
+Cilostan CR
+Cialis
+Ansed
+Tafinlar
+Tafinlar
+Miracid
+Hepamed
+Essenphos
+Essenvit Forte
+Dosetil
+Urica
+Regain
+Hypermox
+Ligaba
+Ligaba
+Hovideuform Xr
+Zykadia
+None
+None
+Caltrate Advance
+Spitone-25
+Meroqure-5
+Irbez 150
+Valpros Pedia
+Furoxcel
+Entresto
+Entresto
+Entresto
+None
+Iliadin
+Iliadin
+Kedion
+Salbrosin
+Lactomax
+Caltrate Plus 500-D
+Celerplex
+Wolvit
+Met-One
+Panataxel
+Panataxel
+Panataxel
+Complevac
+None
+Ferbizin
+None
+Pravafen
+None
+Plazimide
+Thiamine Hydrochloride (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Ostonee
+Sanmol
+Wadine
+Fumicef
+Uruso
+ATONAMIS
+ATONAMIS
+Veztenor
+Odipin
+Azemax
+Gomol
+Mevex 500
+Zeftrax S
+Arpycom
+Aprevaz
+Rispegard
+Macrozole
+Vamzar
+Ponser
+Menoxem
+N/A
+Regabalin
+Unbranded
+Doxvex 50
+Abstral
+Abstral
+Abstral
+Abstral
+Exipenem
+Dibavit
+Prosmide
+None
+None
+Risperidone
+Brutio 200
+Brutio 400
+Doxid
+Lacorbil
+Para-IV
+Vexbo 450
+None
+None
+Cosatin Plus
+I-Breath Plus
+Omzep-DR
+Esbold
+None
+Rhyma
+Orovite-E
+Clipax
+None
+Cefoxitin (As Sodium)
+Zinc
+Cetraxal Plus
+Flagyzole
+None
+None
+Ramol
+Jardiance Duo
+Jardiance Duo
+Jardiance Duo
+Jardiance Duo
+Jardiance Duo
+Jardiance Duo
+Sambactam [for Export only]
+Klavic
+Viacoram Initio
+Coveram
+Creon 10000
+Nebra
+Cefuroxime (As Axetil)
+Aepanpraz
+Bicovit-Z
+Cipronat
+Erdon
+Nepanac
+Telsitan-40
+Bioton
+Unbranded
+Zeftrax S
+Metoclosil
+Azithrom
+ROYALE C PLUS
+Unacil
+Senzitene
+Dexasone
+Avsar
+Avsar
+Hypanto-20
+None
+Bepotas
+Fleozol
+Valstan HCT 80/25
+Doxycline
+MOMATE
+Ciprofloxacin (As Lactate)
+Oxytocin
+Aprovasc
+Aprovasc
+Aprovasc
+Myhep
+Tribac
+N-Mycin
+Unbranded
+Cardionid
+Dalamycin
+Fortima
+Preneurin
+Preneurin
+Cobis
+Citriol
+Koact 1.2
+Fluxar
+Ganfort PF
+None
+None
+Buclisyr
+Astimol
+Astapro
+Trivasc
+Catagen
+Flutiright S-250
+Flutiright S-500
+Flutiright S-100
+Opsumit
+Oxyla
+Mupiderm
+Domepa
+Maalox Plus
+Levonat
+Onzet
+Mezart Plus
+Azeemycin
+Thipen
+Abilify Discmelt
+Abilify Discmelt
+Conlax-10
+Conlax-5
+Rupafin
+Prostacap
+None
+Nasomate
+Cathejell
+Paracet-IV
+Rabegen
+Ofev
+Ofev
+Starhex- 240
+Synuz Cleanse
+Xifen
+Gomfenac
+Carac-H
+Scimox
+Nat C 1000
+Doxiclin
+Nicardin
+Ubit
+Biogesic
+Terrakast
+Benadryl Allergy
+Pentasa
+Foster Nexthaler
+Zerrutussin
+Zerrutussin
+Feburic
+Zinox
+Neuran
+Peprazom IV
+Monastar
+Finiod
+None
+None
+Economed AD-C
+Ascorbex
+None
+Param
+None
+Acetimax
+Taflotan-S
+None
+Spiolto Respimat
+Hydrocortisone
+Lenvima
+Folitan
+ZERRUVIT-C
+None
+None
+Bisolvon
+Lipivast
+Symbicort Rapihaler
+Symbicort Rapihaler
+Esmolife
+OxyContin Neo
+OxyContin Neo
+OxyContin Neo
+OxyContin Neo
+Cordex 5
+Zerbaxa
+Berocca Performance
+Decolgen Forte
+Daxotel
+Bagoxed
+Trilac
+Merogram 1000
+Glyxambi
+Glyxambi
+Fenaway
+Akneclin Plus
+Pantopraz IV
+None
+Epiduo
+Tenofo-B
+Glipten
+Medoflucon
+FRIAXXSO
+Ceelin Plus
+Xalanol
+DECAPEPTYL
+Flucopharm
+Duocetz
+None
+None
+Tears Naturale II
+Lysiron Plus Zinc
+Ethnomin
+ZinCee
+None
+Sovit-Max
+Sublifen
+Sublifen
+Rosugrel
+Rosugrel
+Ipralin
+Cimerex
+Merogram 500
+Halaven
+Comb flex MCT PERI
+Etostal-90
+Vimpat
+Meconeuro
+POLY-MXB
+Balsartec -160
+Balsartec - 80
+SN-Tialle
+Vagifem
+CELABIN
+Liver Gold-F
+URSOFALK
+OXEPTAL 600
+Thipen
+Imso
+Nevox XR
+Minophagen C
+Meroqure-10
+Alvotaz
+Alvotaz
+CEFSUL
+Metrex
+None
+Strepsils MaxPro
+Strepsils MaxPro
+Sanbe Hest 130
+Sanbe Hest 200
+Imbruvica
+Tempra Forte
+Jakavi
+Ceforin
+Onita
+Actiflor
+Trimic
+Nadixa
+Flusum
+Neurovell
+Neurovell
+Alvolaxus
+None
+Nebido
+Vitarex-C
+Lupieze
+None
+Tagrisso
+Tagrisso
+Tivortin
+Tivicav
+None
+none
+None
+Zidolam
+Ritocom
+Nevivir
+Fresanyl
+None
+None
+None
+Liverax
+Romepen
+None
+Abilify Maintena
+DERMAZOLE PLUS
+Gentop-100
+None
+Vomifree
+Sitiflox
+Stelix
+Velsta
+Molev
+Akynzeo
+XOVIRAL
+Ceelin Plus Chewables
+Norvasc
+Gropid
+Lorecare
+Atriax Plus
+Essentiale Max
+Cytonib 400
+Ledvir
+Ceplenext
+Ceplenext
+Ceplenext
+Nepalact
+None
+Renvela
+Brilinta
+Bridion
+Ostovel
+Cholib
+Cholib
+Prostanil MR
+Appetamine
+Appetamine
+None
+Isoxulide
+Meclop
+Tapcom
+Tapcom-S
+Ktabsr
+Pemcord 100
+Pemcord 500
+TRANSTEC
+Transtec
+None
+Cefarex
+Romepen
+Thiogamma 600 Oral
+Skinall
+Liverprime HD
+Kabiroxime
+REVICON XTR
+Mydekla 60
+NATRAGESIC
+Epiduo Forte
+Epiduo Forte
+Eurovox
+None
+None
+None
+Irino
+Transan
+Epicin
+Irinocan 40
+Oftaquix
+Ikervis
+Treatan-D
+Diquas
+Averkaz
+Purogen
+Imox
+Polynerv 250 + Zinc 20
+Mucosin
+Pemirex
+Ferinject
+None
+Indirin
+QUINOPLUS
+Duratocin Rts
+Unbranded
+Ceelin Chewables
+Vocinti
+Vocinti
+None
+None
+Duolin
+Folmaterna
+Zyloprim
+Alvolin
+Alvolin
+PICOLIGHT
+Fevercare
+Fleming
+OXALITIN
+MAXCEE
+Abilify
+
+Vitabolic
+Xeljanz
+Mega Men 50 Plus One Daily Tablet
+GNC Women's Ultra Mega One Daily Tablet
+Women's Ultra Mega 50 Plus One Daily Tablet
+REMOPAIN
+Folidyn
+Mighty Cee
+Painstop 250
+Intrafen
+Now Daily Vits
+Co-Alvoprel
+APCALVIT
+Sefepim
+Entraver
+Tazokab
+Tazokab
+Nat-C Ester
+Vitalyfe
+MULTIMIN
+Glicetile
+Duosol without Potassium Solution for haemofiltration
+Loperacap
+Acumen
+Ovestin
+Glicarex
+Vi-C
+Celecox
+VitaLakas
+Dextricyl
+Rexidol Forte
+None
+Usana Core Minerals
+MagneCal D
+Mupizee
+Disudrin
+Acnoin Gel
+Jadenu
+Jadenu
+Demetor
+None
+Kanarb
+Kanarb
+Tranexamin
+Sampine
+Sampine 2.5
+ZnCro
+GEN-CEE PLUS
+Fleming
+Tationil
+Immunped TF (Apple Banana Flavor)
+Ceelin Plus TF (Apple Banana Flavor)
+No-Drowse Decolgen
+No Drowse Decolgen 325
+Neozep Non-Drowsy 325
+Atrex
+None
+Silvertin
+None
+None
+Cefuclav
+Cortiment
+Vita-Antioxidant
+Poly C
+None
+Vymada
+Vymada
+Vymada
+None
+None
+None
+None
+Zemiglo
+AMSUL
+AMSUL
+Focale
+Focale
+Focale
+None
+Mebux
+Mebux
+Careprost
+L-Zinex
+Z-Xone Forte
+Stardol-370
+Ninlaro
+Ninlaro
+Hivent EM
+Ursoliv
+Infulgan
+Afebrin Tf
+Biogesic
+Rexulti
+Rexulti
+Rexulti
+Rexulti
+Rexulti
+Triveram Forte
+Triveram
+Triveram
+Triveram
+Triveram Initio
+Fretriaxone
+Acuflam
+Merovex 500
+Merovex 1000
+Immunosin
+VEXPINEM 500
+Famy-Depo
+Xeljanz XR
+CAPD/DPCA 18
+Levox
+Ajenafil
+Skudexa
+D-Cure
+Sertral 50
+Hivent Plus
+Unbranded
+Kryxana
+Baplatin
+Baplatin
+Ryvel
+None
+Duofilm
+Unbranded
+Calmate
+Saridon
+Tempracof Forte
+Tempracof
+Tempracof
+MultiBic Potassium-Free
+Oratane
+Oratane
+Oratane
+Keviran
+Metvit Forte
+Metvit
+Livovid
+Unbranded
+Immungold
+ImmunPro Gold
+Unbranded
+Vigor-Ace
+Unihexol 300
+Easy-Drop
+Nuropat
+Gentamin
+Zyclor
+Tempra Forte (Orange Flavor)
+Nasorinse
+Epclusa
+Unbranded
+Vemlidy
+Tebfin
+Obixine
+Bondex
+Unbranded
+Skelan Forte
+Vertinex
+Urecef
+Cefozol
+Unbranded
+Symeril
+Calsate
+Claritin
+Unbranded
+Hepavid
+Sterofundin ISO
+Ondavid
+Motiles
+None
+Novomit
+Alicet
+Nodia
+Difflam Honey and Lemon
+Difflam Raspberry
+Trexor
+Tricoxia
+Fasrel
+Sambactam
+Podoxred
+Podoxred
+Europersol
+Fluoroxil
+Cetamin
+Unbranded
+Colzap
+Zegen
+None
+Unbranded
+Unbranded
+Micavid 80
+Micavid 40
+Unbranded
+Pyrex
+Doxel
+Nicorette
+Flanax
+Flanax
+ALLISIN
+Ricam
+Drixine
+Paraver
+Aldatin
+Emestal
+Theopar
+Digestron
+Ultramol
+Bioflu Complete
+Tempra
+Tempra
+Dysmenos
+Navelin
+Rubisar
+Nicarpin
+None
+SITI-PNSS
+SITI-PNSS
+Aztram
+Conzace 2500
+Panvell
+Mistol
+Berocca Performance
+Fibrovas
+Bronchilax
+Nutrimax
+Invega Trinza
+Invega Trinza
+Kabimax
+Kabimax
+Valeri
+Hecoflu
+Gaviscon Infant
+Meera
+Bactidol Extra Soothing
+Bactidol Extra Soothing
+Neurolem
+Herixon
+Onefix
+Rafur
+Forcef
+Diabee
+Multiplex
+Diabee Forte
+Mecline
+Unbranded
+Sublimax
+Sublimax
+Zytiga
+Diane 35
+Ketofenax
+Dalyx
+Zicard
+Kolmarol
+RITOCOM
+Woods Peppermint Expectorant
+Zavicefta
+Iclusig
+Citrinex
+None
+None
+Ibusoft 400
+Ibusoft 200
+Eocet
+Cefucef
+None
+None
+ChloRelief
+Ibrance
+Ibrance
+Ibrance
+Mezart Plus
+Salbuden
+Fleming
+None
+Hypoact
+Agynapin
+Apexel
+Asthonide
+None
+None
+SITI-PLR
+Glux 1800
+None
+None
+Alltrex
+Caltrate Silver
+Caltrate Silver
+Gaviscon Double Action
+Cardionid
+Oppul
+Centrum Kids
+None
+None
+Uno Ultima-C
+Zypezil ODT 10
+Momecort
+Levit
+Epsytam
+None
+Parafusiv
+None
+E-Prime
+Tobraxa
+Budexa
+Zeenate
+Celetor-200
+Nobacrin
+Irinovid
+Vestflo-20
+None
+Europersol
+Unbranded
+None
+None
+None
+Irbejub H
+Tazef
+Tevolox
+Diclosafe
+Methimax
+Xofluza
+Xofluza
+Suprane
+Redtibin
+Urdecha
+None
+Vokanamet
+Vokanamet
+Vokanamet
+IV Busulfex
+Ceftaxil-S
+Sultrex
+Viacoram
+Atencion
+None
+Grabalin
+Tenelizone
+Vexdopa
+Medvox
+Broadmetz
+Rielmox
+Westfimox
+Eleomox
+Vistrep
+Altomox
+None
+Exbropin
+Celetor-100
+None
+Calbate-C
+Loperin
+Fastidine
+Levomac 500
+Depo-Provera
+Bacxitin
+Endo-Pro
+Tracemol
+Ophthamycin
+None
+Glucomin
+Prazimac
+Prazimac
+None
+None
+Win-Z Plus
+Troycurium
+Hydrilaxe
+BRTJ Formula Finest Choice C Plus
+Myra E
+Myra E
+None
+Clozol
+None
+Qtipine 100
+Rosukon-20
+Alzhemed 10
+Cixtor-Z
+Corbic-Z
+Ketotroy 50
+Meroz
+Isotab
+Cedinir
+Astrodal
+Astrodal
+Rhinomet
+Rhinomet
+Cefurex
+Myotram
+Trokendi XR
+Trokendi XR
+Trokendi XR
+Morvicor
+Moxivell
+T-xartan
+Nicorette
+Dologesic
+Pradol
+Trampa
+Queen C
+Rev-On Zee Plus
+Medifoxtin
+None
+None
+Opigesic
+Moxydril
+Triplec
+Nutraplus
+Naphcon-A
+Prepalert
+Fucithalmic
+Ciprobay
+Zobrixol
+Zobrixol
+Heltine 300 Plus
+Nielituss Syrup
+Chloralen
+Lumartuss
+Sodium Bicarbonate
+Glomicol
+Contractubex® Gel
+Isosorbide Dinitrate
+Solmux Broncho
+Isoket
+BETOPTIC
+None
+Sinecod Forte
+Higesic
+Unbranded
+Fucidin
+Regroe
+Regroe
+Benadryl Exp
+Obynal- M
+Doxium
+Parlodel
+Methycobal
+Calci-Aid
+AZI-200
+Nuron-E
+Neomercazole
+Inoflox
+Lorpican
+Leginsol-Vita
+Cycamil
+Miostat
+Usanatal
+Maxitrol
+Acetadol
+Lagaflex
+Zovirax
+Dermovate
+Synalar-25
+Maalox Plus
+Higestic
+Rosamine
+Inflastat
+Calcebone
+Mucobron-D
+Vicks Formula 44 Cough Control
+None
+Diprolene
+Acetadol
+Imuran
+Molvite Ob
+Macrobee With Lysine
+Natalbes
+Unbranded
+Macrobee with Iron (Reformulated)
+None
+None
+FERN-C
+Daycee
+Bactidol
+Omega Pain Killer Liniment Pro
+Citrus-C
+Dr. S. Wong'S Bioderm
+Robikids
+ELICOUGH
+Lemon-Cee
+DAILY - C
+Pediafortan-C
+IO-Cure
+Michael
+Dr. S. Wong's Sulfur Soap (Scented with Moisturizer)
+BACTICIDE
+GUARDIAN
+CALCIUM-CEE
+Biogenic
+Superscent Oil
+Aldrtz Pau
+Sodalite-75
+Disoflem
+BIOGENIC
+Unbranded
+Scorpion Fungal
+Gentle Care
+Pertussin
+Chlorhexidine Gluconate + Ethyl Alcohol
+Unbranded
+Katinko
+Muscle Aid
+None
+Kiddilets
+Biogesic
+Pyodine
+Cee-Protect
+Ultrasept
+Pertussin
+Nivicof
+None
+None
+Loviscol
+EFFICASCENT
+Naprex
+None
+Unbranded
+Tiger Balm Plaster
+Tiger Balm Plaster - Rd
+Tiger Balm Liniment
+Tiger Balm Neck & Shoulder Rub
+Efficascent Oil - Extreme
+Ultra-Cee
+Katinko
+Mucocilat
+Meforagesic
+Olrite
+None
+Licealiz Soothing Coolness
+Licealiz Soothing Coolness
+Remedine
+Ascor-cee Plus
+Sm Bonus Vapor Rub
+Salonpas Pain Relief Patch
+Bewell C
+Diacof
+Mucurt
+NIVICOF
+Vaporae
+None
+None
+Trimulex
+Neo-C
+Licealiz
+Fluifort-M
+Solmux (For Export Only)
+Calpol
+None
+None
+Tiger Balm Soft
+GUARDIAN ALCOHOL
+Pyodine
+Dermaidcal
+Dermaidpov
+Dermaidperox
+Dermaidsal
+Carbonax
+Carbonax
+Dermaid Menthol Rub
+Dichlorobenzyl Alcohol + Amylmetacresol
+Strepsils
+None
+Mulcorox
+Corcee
+Cyscore
+Corcee
+None
+None
+Strepsils
+Strepsils Orange w/ Vitamin C
+MON-G C
+TIGER BALM WHITE
+Flexicof
+Katinko Fragrant Oil
+Greenstone Medicated Oil
+Crown Dragon Medicated Oil
+Herbalaya
+Strepsils Soothing Honey And Lemon
+Vicks Inhaler
+Mucurt
+Healthcare Chest Rub
+None
+None
+LOVECTUS
+None
+ZOMETEX
+None
+Strepsils
+Strepsils Orange With Vitamin C
+Genecar
+Nivicof
+Mucover
+Pharmolytic
+KATINKO
+Xymerod
+Unbranded
+BACTICIDE
+Dermaidmanza
+Viscodec
+Pharmolytic
+Guardian Alcohol
+Cecon
+Resistancee +
+Unbranded
+None
+Dermaidcalm
+Unbranded
+Hyclens
+Dermazole
+Strepsils Dry Cough
+None
+Strepsils
+Unbranded
+Unbranded
+Melifrin
+Glucosol
+Unbranded
+Avance
+C-4 Kids
+Softa-Man
+Voncartin
+None
+Fern-C
+Megascent Oil
+Strepsils
+SANISCRUB-E
+Golden Cup Oil
+Golden Cup Balm
+Golden Cup Balm
+SM Bonus
+Povix
+Green Cross
+Carbobase
+None
+None
+None
+Green Cross
+Biogesic
+Betadine
+Medicross
+Dermaidperox
+None
+None
+None
+None
+None
+None
+AP-AP Solution
+Betadine
+Betadine
+Tempra (Orange Flavor)
+Strepsils
+Casino - Regular
+Carbosaph-C500
+Dequadin Lemon
+Dequadin Lemon
+Dequadin Orange
+Dequadin Orange
+Dequadin Citrus
+Dequadin Citrus
+Efficascent Oil Liniment Aerosol - Gold
+Surebuy
+Preclens
+Ketovid Shampoo
+Unbranded
+SHELOGEL
+Calazin
+IO-Cure
+Green Cross
+Green Cross
+Ultrascent Oil Liniment
+Zetadone
+CL
+Magic Savers
+YAKI EXTRA STRENGHT OIL LINIMENT
+CASINO - UNSCENTED
+Tegutect
+Hyclens OB
+Dequadin Citrus
+CASINO - MILD FRAGRANCE
+Dequadin Orange
+Dermoplex Cream
+Dermoplex Lotion
+Surebuy ETA
+Saver Select ETA
+Maridan
+None
+Solmux TF
+Solmux TF
+Dehidralyte
+Afebrin Tf
+Afebrin Tf
+Biogesic
+Afebrin TF
+Defensil
+Perskindol
+St. Michael
+Nathan
+St. Martin
+Cristin
+4RASH
+4RASH
+4RASH
+RITEMED COLD RUB
+HydroAid (Strawberry Flavor)
+HydroAid (Grape Flavor)
+HydroAid (Apple Flavor)
+Diclosil (Menthol Flavor)
+Diclosil (Orange Flavor)
+Rashfree Plus
+Rashfree Plus
+Cleene with Moisturizer
+Softasept Chg
+Cleene Pure and Unscented
+DB ZincO
+Cutagen
+GOLDEN CUP OIL
+GOLDEN CUP OIL
+DequadinAB (Honey Lemon)
+DequadinAB (Lemon)
+DequadinAB (Orange)
+United Home Menthopain
+Greatbuys
+Mentopas Hot
+Dequadin Lemon
+Dequadin Mint
+Zetadone Surgical Cleanser
+Omega Advance Spray
+Efficascent Relaxscent Oil
+None
+None
+Dequadin Oral Paint
+None
+WATSONAL CASTORIA
+Watsonal Castoria NF
+None
+Superscent Oil Sparomatic
+Alka-C
+Calamite
+Unbranded
+Unbranded
+Calmoseptine
+Tiger Balm Red
+Apzanil
+Tempra
+Tempra
+Saver Select
+None
+None
+Preclens Prep
+Efficascent Relaxscent Oil - Calm
+Calpol
+Solmux
+Rose Pharmacy
+Rose Pharmacy
+Doctor J
+Higene
+None
+Droossadin 0.1%
+Droossadin 0.2%
+Tegutect X
+Tegutect X
+Tegutect X
+None
+None
+None
+Efficascent Relaxscent Oil - Intense
+Betadine® ThroatAid
+Betadine® ThroatAid
+Betadine® ThroatAid
+Maridan
+Unbranded
+Unbranded
+Dermazole
+None
+None
+None
+None
+Cleene
+Cleene
+None
+Camphor
+None
+None
+None
+None
+None
+Pedialyte 45 (Fruit Flavor)
+Balsamo Carminativo
+None
+Pedialyte 45 Oral Solution (Bubblegum Flavor)
+Efficascent Oil – Extra Strength
+Perskindol Classic Gel
+Efficascent Oil
+None
+Ap-Ap Solution
+None
+Vicks Vaporub Ointment
+Family
+None
+Begesic
+Movapane
+White Flower Embrocation
+CASINO Variant/s: Mild Fragrance
+Vorwerk Chilli Porous Capsicum
+None
+Betadine
+Betadine
+Betadine
+Hygea
+United Home Sulfent
+Rashfree
+United Home Glydolax
+Vino De Quina
+United Home Whitfield'S
+Betadine
+Povidone-Iodine
+Cleene
+Betadine
+None
+None
+Mentopas
+Unbranded
+Salonsip
+Nizoral
+Eye-Mo Red Eyes Formula
+Casino Femme
+Betadine
+Betadine
+Tempra (Orange Flavor)
+None
+Calpol (Strawberry Flavor)
+None
+None
+None
+United Home Supracid
+Rhea Cold Rub
+Salonpas
+None
+Casino Femme With Dual Moisturizer
+None
+Toothache Drops
+Iodostrike
+Biogesic
+Biogesic
+None
+None
+Michael
+Unbranded
+Maalox No. 1
+Maalox
+Sanitary Balm
+Doctor J
+Ammeltz
+Ceelin
+Solmux
+None
+Solmux Forte
+Evergreen Oil
+Ceelin Chewables
+Aquatabs
+Kiddigesic
+Solmux
+MC Bride
+United Home Calactate
+Loviscol
+Solmux
+Solmux
+Dr. S. Wong's Sulfur Soap
+Salonpas
+Carbobase
+Phlegmol
+Tempra (Strawberry Flavor)
+PedCee
+Phlegmol
+Phlegmol
+None
+Loviscol
+Katialis Ointment
+Carezee
+Westcarbox
+Fluifort-M
+Phlegmol
+None
+Intraplem
+Casino-Regular
+Calpol
+Intraplem
+Opigesic
+Mucopharm
+Vital C
+Pharmolytic
+Mycee
+Sovit-Cee
+C-4 Kids
+ABLUENT
+Pertussin
+Mediplast 50% Corn Plaster
+Disoflem
+None
+None
+None
+None
+MEGASCO
+None
+None
+None
+None
+None
+None
+BQ Gases
+None
+Unbranded
+None
+Zagasco
+None
+Atgas
+Unbranded
+Unbranded
+None
+Unbranded
+None
+None
+Micagas
+Unbranded
+None
+None
+MIGCO
+None
+None
+Jms Oxygen & Acetylene Manufacturing
+Unbranded
+Diabeats
+Ampicelo 500
+Starpime
+Moxtar CV625
+Co-Aprovel
+Co-Aprovel
+Solosa
+Solosa
+Solosa
+Flagyl Forte
+Romalsion
+Clinda-S
+Clindagold
+Appetason
+Appetrex Capsule
+Propetason
+Ferosal
+Vitacor-C
+Pro-cee
+Symdex-D
+Cordarone
+None
+Nitromic
+NEUROBEXOL FORTE
+BIONERV
+SUPER-B
+NEURAL-B
+JAVANEX
+B-POTENT
+NEUROFORT
+DANAPLEX
+VITAGEN FORTE
+VYCLEX
+MORPA-B
+ALEVIO
+Capsuflex
+Nervicap
+Nervital
+None
+Bronco-S
+BRONCO-S
+Xatral OD
+XEZTRON
+CECROCEF
+CEFAR
+CLORMED
+SHEMICLOR
+SEFLOR
+XEZTRON
+CECROCEF
+CEFAR
+CLORMED
+Loxatrel
+Altoxime
+Ceft
+Cefurax
+Zefur
+Rovix
+Multilem
+None
+Hydrafen
+Kathrex
+None
+Jenetrol
+Trymerin
+Kathrex
+Trymerin
+Regizole
+Jenetrol
+Septrol
+Kathrex
+Regizole
+Trymerin
+Septrol-M
+Bactizole
+Unbranded
+Flagystatin
+Bertram
+Axmel
+Betamox
+Axmel
+None
+Semoxil 1-6
+Betamox
+Retamox
+Eppitrexil
+Axmel
+Semoxil 7-12
+Betamox
+Eppitrexil
+Exel
+Edixin
+Cefavit
+Flagex
+Amibazole
+Togesic
+Enhancin
+Levpbact
+Harox
+Prenat
+Albulem
+Fulvent
+Zenoxim
+Jyscef
+Pantocar-40
+Rafonex
+Harox
+Ciprolax
+Tidact
+Dynacin
+Dyclin
+Nica
+Amicyn
+Nica
+Amicyn
+Trenaxin
+Ranexid
+Lodistad Er
+Guaiflem
+Isowest
+Isoprim
+Motillex
+Unbranded
+Amoclav
+Amoclav
+Myremol
+Regimol
+Fevergan
+Parajen
+Afebral
+Biodol
+Klaz
+Orapred
+Sone-10
+Buztin
+Altovast
+Buztin
+Hypnal
+Metil
+Buztin
+Secocef
+None
+Comxicla
+Janclav
+Gravimox
+None
+Comoxbet
+Patryl
+Amizol
+Harox
+Bacipro
+Myremol
+Regimol
+Fevergan
+Afebral 1-5
+Parajen
+Biodol
+Asgard
+Corvi-Plus
+Clox
+Comxicla
+Gravimox
+Unbranded
+Comxicla
+Gravimox
+Unbranded
+None
+Myremol
+None
+Fevergan
+Afebral 6-12
+Parajen
+Dintamol
+Biodol
+Nobutol
+VAMOX
+Danitin
+Sipra
+None
+Qualizef
+Ziomet
+Craven
+Pediapetite
+Zephy
+Eliclor
+None
+GEL-MALICID
+Unbranded
+Isotron
+Wesproxen
+Napren
+Flametz
+COLDZEP
+Nasacol
+Xanazole
+Nocloxol
+Leela
+Levobet
+Lexzin
+Levotact
+Ami-Levo
+Floxanix
+Dilahex
+Lodine
+Unbranded
+Unbranded
+Dilahex
+Lodine
+Bactifree
+Mupicin
+Broxolvan
+Zerone
+Bettrix
+Robixone
+Melzin
+Cyclodine
+Blocapast Forte
+Medixon
+Mepresone
+Zolpra
+Antaxid
+Unbranded
+Glimesyn
+Sultamin
+Cefuroxime(as axetil)
+Cefuroxime (As Axetil)
+Maelenoxyl
+Altomox
+Fenahex
+Syfurox
+Ezaller
+Zetir
+Piotaz
+Actazone
+Piotaz
+Actazone
+Unbranded
+Mucolax
+Unbranded
+Rovix
+Medsef
+Prolohex
+Amio
+Rythma
+DARYTH
+AMVASC BE
+Dalaclin
+Medixon
+Mepresone
+Lodistad Er
+Felodipin-Natrapharm
+None
+Mucolax
+None
+Broxifil
+Broloxin
+Allase
+Unbranded
+None
+Tritace
+None
+None
+None
+Natragesic
+None
+Hypertan
+Cordizar
+Hovizol
+Lipanthyl Supra
+NUTRILENS
+None
+Unbranded
+Unbranded
+Unbranded
+Protemax
+Contracid
+Ranae
+None
+Simvas
+Vidastat
+None
+Simvas
+Vidastat
+None
+Unbranded
+Fibrafen 200M
+Trimotol
+Dextrocol
+Prophalan
+No Drowse Triplec
+Kanosole
+Cortigen
+None
+Hylodine
+Clizid
+Glazide
+Glubitor
+Unbranded
+None
+Cipfast-500
+Ciprodan-500
+Abanxl-300
+None
+Clindidam
+Zynamycin
+None
+Robecren
+None
+Fixx
+Hycort
+Hydrobet
+Cylocortix
+Corbal
+Geocortix-100
+Lormigin
+Sintos
+Cardiovasc
+None
+Ty-Oxone
+Unbranded
+Hyperthree
+Getzar
+Hartzar
+Zartan-S
+Arbloc
+Ty-Oxone
+Azyth
+Zenith
+None
+None
+Klaricid
+Bioclavid
+Aumox
+None
+Auget
+None
+Pravox
+Mel-Od
+Ty-Oxone
+Lonarel
+Cefatrene
+Aminogen-S
+Intercid
+Almefen
+Tazobak
+Tazobak
+Hycid-20
+Obax
+Histazine
+Cetizin
+Allermed
+Zetrine
+Allercef
+Zincet
+Mexin
+CEFEXIL
+Celtere
+Abrexin
+Unbranded
+Bilex
+Wilomax
+Vaselon
+Hartvasc
+Lodi
+Amlokard (Reformulated)
+None (Reformulated)
+Unbranded
+Unbranded
+Megavit
+Cholestrol (Reformulated)
+Unbranded
+None
+None
+Zefcid
+Mosegor Vita
+Fotaxin
+Zefotax
+Cefoxin
+Tacsenz
+Vaselon
+Hartvasc
+Unbranded
+LODI
+Cipromet
+Bromitapp
+Cold-Aid
+Sinulif
+Mosegor Vita
+Bioclavid
+Clariwi
+Cholestrol
+None
+Unbranded
+Gasmid
+Sorbisine
+Hazolin
+Fenoblast
+Nutrivita
+Unbranded
+Unbranded
+ZYNAPHAR
+UNIGESIC
+Angiovert
+None
+None
+Salresp-I
+Ambivent
+Aura Plus
+Brodix Plus
+Oustma Plus
+None
+Zosec
+None
+Sistat-20
+None
+Bactigent
+None
+None
+Cefatrene
+Cefamax
+Cefexil
+Locefa
+None
+Clavomax
+Fixcom 3
+Traloflam
+Qualiclav
+Fixcom 4
+Cholimed
+Cebroline
+Sintos
+Kardiostan
+Unbranded
+None
+Unbranded
+Kardiostan
+Unbranded
+Unbranded
+None
+BCOMFIRST
+Hybutin
+Meedplex
+Fenbussin
+Salbussin
+Ventoprex
+None
+Flacerant
+Semithine
+Cyntrex
+Aforvir
+None
+Dincet
+Zezine
+Temprazin
+Allerzone
+None
+None
+Axella (Reformulated)
+Benadryl One
+None
+None (Reformulated)
+Allermed
+Amoxipen
+Tyricid
+Monphevin
+Erysone
+Sulbanova
+Savine Heavy
+GI Norm
+Celtere
+Diacef
+Cezole
+Omroz
+Omera
+OMP
+Newpron
+Omez-40
+Omesan
+Propix
+Omed
+Medizol
+Diacef
+None
+Feveraide
+Diacef
+Ecolide
+Unbranded
+None
+Iprobac
+Klaz
+None
+Hendra
+Finox
+Bacimex
+None
+Locefa
+None
+Cefamax
+Meferr
+Parmecel
+Cefamed
+Vinlexin
+Urazole
+Cardiotab
+Idesor
+Angimet
+Metrolol
+Prolat
+Cardiotab
+Neo-Hart
+Angimet
+Probelin
+Sulbacin
+Burnsil
+Disurvan
+Somecid
+Omenole
+Omipra
+Acipraz
+Cylic
+Empraz
+Inoby
+Suprezol
+Promeprazole
+Acifre
+Omemac-Gerd
+Cleazole
+Altoprazole
+Omexac-40
+Omeproviv
+Zemomax
+Genzole
+None
+None
+Tobralcin
+Resdilsin
+Hydrospor
+Hemovit
+Estolax
+Megadol
+Paramax
+Unbranded
+Gasidone
+Diaglim
+Rimepril
+Unbranded
+Daiglim
+Rimepril
+Unbranded
+Zantricid
+Amkodine
+Ranipen
+Dekonrex
+Nasalgen
+CALCIUMATE
+Baclecin-500
+Clarithrophil
+Hemovit
+Enerzee
+Enerzinc
+Intelzinc
+Profaril
+Pioglon
+Syclovir
+Zestagesic
+Progesic
+Bioclavid
+Auget
+None
+Bioclavid
+Aumox
+Bioclavid Forte
+Aumox
+Auget
+Amoclav
+None
+Elcilin
+Bacterad-500
+Elcilin
+Ferosal
+Kathrex
+Dekonrex
+Nasalgen
+Bupican
+Ulzol
+Ferazol
+Omerilz
+Omesar
+Helizol
+Mepzol
+Promeprazole-20
+Genzole
+Asvent Plus
+Ambesyl
+None
+Prestan Plus
+Getzar Plus
+Zartan Plus
+Euchlor
+Proxim
+Zefcure 750
+Cefuring
+Cefufarm 750
+Cefiject
+None
+Secunda-750
+None
+Salbunex
+CARYL
+iCaf+
+GUAICARE
+Acecof
+Guiamox
+Drexabion
+Nervit
+RIMACLOR
+ZEFUXIM
+Woncare
+Sydenair Plus
+Clorifort
+Prestan
+Wilopres
+Getzar
+Zartan-S
+Clovir-800
+Diaciclo 800
+Hemovit
+Sylodipine
+None
+Folate
+Folimax
+Foladin
+Myotil
+NasoClear
+Amara-4
+None
+None
+Bromacef
+Broxin
+Pytogen
+Domelong P
+Prazole Plus
+None
+Sydencin
+Echavit
+Bestatin
+Redulip
+None
+None
+Levomax
+Subsyde-Cr
+AlfaCalcinol
+Zestagesic
+Pentowin
+Panlox
+Pantomax
+None
+Unipraz
+Biosone
+Berapred
+Cort
+Adresone
+Desotap
+Proxin
+Ciprosenz
+Rimstar 4
+Onecure
+Unbranded
+Cigla-Kas
+Viogex
+Panagon
+Ventuss
+SG Vent
+Myrevit-B
+Retabion
+Enerflow
+Metocard
+Metovin
+Loza 50
+Unbranded
+Unbranded
+Santon
+Xartan
+Suporin
+Rhinitrin
+Ferroplex
+Clopilar
+Foralgesia
+Foralgesia
+Calcigard-15
+Fedipin
+Hexin
+Neuro-Ace
+Butamol
+Solben
+Ventress
+Flagyl
+Co-Altria
+Zykast
+Karvidol
+Unbranded
+Karvidol
+Betadol
+None
+Protec-Cee
+Bromacef
+Flugard
+None
+None
+Pontein
+Mefein
+Flamic
+Nupain 500
+Mydoxy
+None
+Ranitein
+Zimvast
+Zimvast
+Zimvast
+Ranitein
+Prolol
+Calcigard-10
+Fedipin
+POLYPEN
+DIABETICare B+
+Nervite
+Nervit
+Sigma B
+NervAid
+Myclosil
+Alluprex
+Allujen
+Melmet-850
+Naxen
+Saridon Max
+Actidin Junior
+None
+None
+Zolphen
+Cetamid
+Azyth
+Zenith
+Natrasol
+Losark
+Natrasol
+Losark
+Clopida
+Diastop
+Lodipen
+Lodipen
+Geopride
+Cetirine
+Myvil
+Unasyn
+Cetil
+Cimex
+Unbranded
+Dermactin
+None
+Spasmoban
+None
+None
+Actidin
+None
+None
+Actidin Quik
+Lorexa QD
+None
+None
+Klaricid
+Unasyn
+Solvamin
+Combinase
+Sneez
+Unasyn
+Solvamin
+Congestapp
+Sneez
+Sqzole
+Trampa
+Dolcetal
+Providol
+Racedol
+Tracel
+Vintramol
+Asmaplex
+Prometasol Plus
+Aromasin
+Zoloft
+Alfadil XL
+Provera
+Biovit-Plus
+Rheuxan
+Tromxene
+None
+Dalacin-C
+Dalacin C
+Dalacin-C
+None
+Dalacin C
+None
+CEFUVEX 750MG
+CILVEX
+Santis
+Diflucan
+Diflucan
+Diflucan
+Diflucan
+Neurontin
+Liferzin
+Medox
+Doxyclen
+Ziflox
+EMPRO
+Frazole Forte
+Empro
+Methergin
+Syntocinon
+Urinox 400
+Mucolisin
+Ubotrol
+none
+Mucolisin
+Mucolisin
+Tempracof
+Neurontin
+Feldene Flash
+Pharmorubicin RD
+Neurontin
+Zefalex
+Unbranded
+Accuzide
+Vemetis-10
+Gi Norm
+Unbranded
+Diacef
+Dilzem SR
+Dilzem Sa
+Aldactone
+Aldactone
+Aldactone
+Ranitein
+Roxime
+Cef-U
+Liferzin
+Diacef
+Fulcef
+Biophen
+Boren
+Fusem
+Fazolin
+Meto
+United Home Dermatec
+Dilantin
+Dilantin
+Syloxicam
+Septin
+Xanor XR
+None
+Zynaphar
+Zinaprim
+United Home Dermatec
+Celebrex
+None
+Klarmyn
+Glucoform
+Celecoxib
+Celebrex 400
+None
+Amkoxone
+BROXILEX
+Charlize
+Rosucol
+Furosan
+Axmel
+None
+Benedex
+Semoxil
+Betamox
+Eppitrexil
+Viagra
+None
+Viagra
+None
+Ponstan® SF 250
+Unasyn
+Quinolev
+Daphne
+None
+ZOLESKIN
+BCOM-12
+Dalle B-Plex
+Ponstan
+Unbranded
+Sutent
+Sutent
+Sutent
+Xyfrox
+Altoxime
+Unbranded
+Zinaxime
+Zafex
+Lopid OD
+Telfast
+Telfast
+Amnique 5
+Eurovasc-5
+Amlopin
+None
+Cardogrel
+Angiogrel
+Rhinol
+None
+Pharmorubicin RD
+Hydrocortisone Sodium Succinate
+Solu-Medrol
+Solu-Cortef
+EPPI
+Irizine-10
+Cetizine 10
+None
+Unixone
+Triax-1
+Fenadef
+Triaxone
+Viatrex
+Tria-G
+None
+Flamdovix
+Quinocip
+Affopro
+Ferrate
+Cefuxim
+Solu-Cortef
+Xanor
+Bactaz
+Bactaz
+Racelax
+Piptadime
+Pipernix
+A.R.A. + H
+Combetzar
+Losacar H
+Synproxin
+Prozin
+Meriva
+Merop
+Hicaryl
+Salbunex
+I-Caf
+Fenolex
+Solu-Cortef
+Solu Medrol
+Methylprednisolone
+Vazortan-H
+None
+None
+Clavistan-625
+Lewiclav 625
+Carvecard
+Piostal-15
+None
+None
+Inflazon
+Unbranded
+Unbranded
+Myrevit-B Forte
+Plexonerve
+Maxifor
+Silvex
+Topisulfa
+Mytocin
+Vivasartan
+Ekosart
+Unbranded
+Lifezar
+Vivasartan
+Unbranded
+Lifezar
+Vivasartan Plus
+Combizar
+Losarite
+Vivasartan Plus
+Combizar
+Losarite
+Diclonac
+Bromacef
+Resdilsin
+Klaricid
+B3B
+Nizolex
+Provasc
+Kenzar Plus
+Amlosilate
+Duphaston
+Takol-CR
+Clovixa
+Provasc
+Kenzar
+Cefortan
+Swamlo 5
+Amlodipine (As Besilate)
+Duphalac
+Swamlo 10
+Lisinex
+Pime-Max
+Sumpilin
+Elcilin
+Naxen
+Unbranded
+None
+Saridon Max
+Epertocyn
+Almycin
+Xicam
+Dilavasc
+Alodine
+Dilavasc
+Allor-10
+Cardiotaz 20
+Unbranded
+Bestatin
+Atorbet
+Flamacid
+Vindiclo
+Myclosil
+Bromacef
+Histazyn
+None
+Unbranded
+Avamax
+Xantor
+Avamax
+Bioclavid
+Auget
+Bactiv
+Xantor
+Avamax
+Xantor
+Unbranded
+Avamax
+Bisosten
+Unbranded
+Unbranded
+Cholestol-40
+Ketero
+Ketlac
+Ketobet
+Alore
+Ketocare
+Sandine
+Parasan
+Primol
+Doxilyd 10
+Doxilyd 50
+Leukocel
+Zefitas
+Amlitor Forte
+Cordistat
+Loartin
+None
+Exel
+None
+Cefavit
+Mohsidex
+Ginsovit
+Ginsolife
+Beniforte
+Tazolife
+Nacoxib
+Argicox
+Haemorex
+Ocuper
+Clarimid
+None
+Clarimid
+None
+None
+PROFARIL
+Chlorphenamine Maleate
+None
+Flemgan
+Xoltrene
+Clistanex Forte
+Klarimed
+Maxeftin
+Medzyme
+Rovix
+Altoxime
+Zefur
+Felop
+Hemovin
+Fer-Vite
+Zydefer
+Ferus
+Coldrex-PPA
+Esonium
+Zuslon
+Coldrex-PPA
+Fludex
+Flotaz
+Celdach
+CELCARB
+CELDACH
+Bronco-S
+Axmel
+None
+Benedex
+OTICOM
+Itiflox
+Acernix
+Folicap
+LEEFLOX
+Unbranded
+Unbranded
+Alto Cee
+Neurocoline
+Neurothix
+Ceitifar
+Endanil
+Zirolac
+Ketogen
+Ketoran
+Pentolac
+Ketorolex
+Supredol
+KETOROBET
+Gorolac
+Korlac
+Ketosenz
+Torosenz
+Clindamit
+None
+Ventasma
+Broncodam
+Exbropin
+Vinmox
+Oximed
+Ceftin
+Xifox
+Doxalin
+Avadox
+None
+Fix-A
+Retracef
+Provizar
+Clarid
+Dinclar
+None
+Sulidin Thermo
+Tozam
+None
+Ivetra 250
+IVETRA 500
+IVETRA 1000
+Zestra
+Fildrocin
+Unbranded
+Jesic
+Mefevin
+Mefegen
+Digox
+Eufropin
+Myrefen
+Megalin
+Saltal-2
+None
+Saltal-4
+None
+Needair 4
+Clin-Gen
+Kylezine
+Clin-Gen
+Sucrofer
+Frida
+Myrefen
+None
+Megalin
+Patryl
+Aldazole
+Amizol
+Retasone
+Pharcin
+Betnasone
+FUSAMETH
+MEEDSONE
+Metta SR
+None
+Tizacure-150
+None
+None
+None
+None
+AMPIVEX
+AMPIVEX
+Sifubact
+Fucelcid
+Pizobac
+Hydrovex
+Pencla
+Unbranded
+none
+Cortis 100
+Aciherpin
+Zyvirax
+None
+Keto
+Dyrolac
+Trimezar
+Xanginart
+Trimedin
+None
+Fulmox
+Riphen
+Muxol
+Gobroxol
+Mucovita
+Mucolyx-75
+Eppi
+ESPAZOL
+TRIMECARD MR 35
+Cardiotaz
+None
+Trimex
+Gozedine
+Trigil
+Trimtazz
+Metavasc
+Westridine
+Diazitri 35
+Tazivex
+Kmoxilin
+Lox
+Moxiking
+Atorwin
+Ventrex-G
+Solvomax-G
+Alagesic
+Rilemol
+Diazole
+Fornidd XR
+Normax
+Proglutrol 500
+Gluzid
+Floxa-200
+Floxa-400
+None
+Vexon
+Metvex
+Tramxl
+Tramine
+None
+Stalip-A
+Cordistat
+Miravast
+None
+Unbranded
+None
+None
+None
+None
+Vitamax
+Newtone
+Krismin-M
+Veruzor
+Rotoket
+Ulcerex
+Ferolem
+Diacof Plus
+Flemsol Plus
+Mucorbex Plus
+Unbranded
+Meedzole
+Sefoxib
+Xibora-90
+Sefoxib
+Xibora-120
+Sefoxib
+Xibora-60
+None
+Ulfinaste
+Fisteride
+Prosta-One
+Zobex
+Eurovate
+Stalpril-10
+Zobex
+Eurovate
+Cifrem
+Ziomet
+Efrox
+Cefuwell
+Rexocare
+Amizef
+Salbutamol (As Sulfate)
+XEZTRON
+CLORMED
+ZIFCLOR
+ELCECLOR
+RINIAZID
+Dialox
+Fulclox
+Cefurox
+Sitiroxime
+Diosvein
+Rongesic
+Amsulvex
+Hyosan
+AMSULVEX
+BERNACIN
+None
+Multi-B
+None
+None
+Cobay-500
+Floxy-200
+Inno-Cee
+Rich-C
+None
+Fulvit
+Mysartan
+Verile
+Cefumax
+None
+Methylergometrine Maelate
+Methylergometrine Maelate
+Methylergometrine Maelate
+Phamsul
+Unathix
+Clestram
+Amiphil
+None
+Neo-Pyrazon
+None
+Cloderm
+None
+Visymplex Plus
+Go Active
+Pharmaton Essential
+Visymplex Plus
+Vita-1
+Ferium
+Polymax
+None
+H-One
+None
+Clovimax
+Clovimed
+Atopitar
+Restolax Forte
+Algesic Forte
+Baxiflox
+Unbranded
+Citroen
+Dayzinc
+Septipan
+Prend
+Angiolor
+Unbranded
+Bisco
+Unbranded
+Amlorex
+Norvac
+Nepidol
+Com-Lidonde
+SITIMAX
+Nahaltin
+Epazin
+Dexat
+Diclofam
+Mesofid
+None
+Appevit
+Appemin
+Appetanyx
+Cefisal-200
+Beraxime
+Triocef
+Fixupen
+Cefxihyd 200
+Celence-200
+Celcoxgen
+Coxsilv
+Celehan
+Neocoxib
+Vicoxiv
+Celecure
+None
+Execoxib
+Dancoxib
+Coxidia
+Goxib
+Geoxcib
+Provicoxib
+Celerich
+Diaxib 200
+Celevue
+C-Flam
+Dialexib
+Flamar
+Celejys
+Celecorvic
+None
+Coxapill
+Zemdil
+Ibetan
+Ibetan
+Pramiz
+Omefil
+Gasidone
+Gastroban
+Orimed
+Levoxl 750
+None
+None
+Prestan Plus
+Zartan Plus
+Cohart
+Getzar Plus
+None
+Class
+Zeroclot
+Gopid
+Dorell
+Tridogrel
+Clophil
+Skygrel
+Xerevo
+Clapidz
+Pharmagrel
+Castegrel
+Zandropil
+Alnix
+None
+None
+Ramavit
+Toridon
+Cospan
+Curecine
+Trucox
+Amectuss
+None
+Couxin
+MUCOSOLVE
+Ambrosel
+Ambrovit
+Fulmox
+Serenata
+KARVIL 12.5
+Couxin
+Mucosolve
+Broxinol
+Ambrosel
+Ambrovit
+KARVIL 6.25
+Aspidon
+Esoprazole-20
+Unbranded
+Peprazole
+Unbranded
+Couxin
+Mucosolve
+Broxinol
+Ambrosel
+Acernix
+Cisteen
+Adrosal
+Enerlax
+Zenobloc-100
+Atenol-100
+Zenobloc-50
+Atenol-50
+None
+Hycid-40
+Ome-40
+Omevaroz
+Mepazole
+Ome-Bop40
+Obax
+Geoprazole
+Diapraz 40
+Gezole 40
+None
+Amlocor
+Amclor
+MPL Cyta
+MEDXIME
+Ventorilz
+Naproplat
+Naproplat
+Trizid
+Onetazid
+Ceftamax
+Letoripe
+Atorwin
+Atorwin
+PANTOR-40
+Adrosal
+Salbu Plus
+Salbuvan Plus
+Ventilax
+Breasy
+PANTOR-20
+Glipitone-30
+Askey
+Aforvir
+Tekast
+None
+Nicardia
+Caldepine
+Gopress
+Angipine-5
+Unbranded
+Unbranded
+Lamitor-100
+Flosicron
+Profilox
+Ciflomed
+EPIMATE-50
+Normabrain-800
+VALPARIN XR 500
+Tidomet CR
+Rapidol
+TIDOMET
+Claribax
+Tazovit
+Ventrex
+None
+Vestar
+Tidomet
+Zemande
+Supmac
+Azemax
+Norvasc Protect
+Choltrol
+Farmavast 20
+Mezo
+Mometasone Furoate
+Mometasone Furoate
+None
+None
+None
+None
+Ximvast
+Piodart
+Glitaz
+Unbranded
+Clonotril-2
+Ecosta
+Ximvast
+Clonotril-0.5
+Sterocort-10
+Prednimed
+None
+Cort
+Alsone
+Biossone
+Corpred 10
+Pocit
+Potassium Citrate (as monohydrate)
+None
+None
+Veral
+Zurenix
+Eurimax
+Zovixol
+Brumox
+Brox-S
+Ambroset
+Ambrogen
+Omevex
+Frazone-40
+Next
+Nexonav
+Ezomephil
+Essof
+None
+Bioprene
+Swelcid
+Coxibet
+Coxzel
+Celenix
+Dimzef
+Predbiz
+Ventobrox
+Asmair
+Bronchosol
+Dreiflex Plus
+Nelgen
+Obimin Plus
+Mylan
+Torlos-50
+Besartan
+None
+Cardiosel
+Metadin
+Trimetazidine Hydrochloride
+Trimetazidine Hydrocloride
+Torval-80
+Torval-160
+Supragab
+Lorarex
+Curelergic
+Loragen
+Falteria 250
+Nzytop
+Falteria 500
+None
+Cardiosel
+Nazdrip
+Colds-Off
+Phenamine
+Phenamine-Pro
+Hepavite
+None
+TGP-Diuretab
+Frusema
+Unbranded
+Lipewin H Forte
+Unbranded
+Unbranded
+Arbloc Plus
+Diassium-H Forte
+Hiblock
+Sanoviz FA
+Aslic
+Folid
+None
+Aneftor
+Folineed
+OB Clear
+Fetanium
+None
+Parafolic
+Valcetrax
+Centrex
+Octagesic Forte
+Stalanza-10
+Xolvprex
+Zildox 50
+Amlon
+Remedlor
+Xeclocef
+Unbranded
+Jazcof
+Alsium
+Semithine
+Aldrox
+Eucet
+Cyclostad
+Cyclostad
+Enbid
+Unbranded
+Optryl
+Tekast
+Unbranded
+Naprocap
+Hydrotopic
+Elavil
+None
+4Nazal
+Ometrol
+Painaide
+Remux
+Ibugen Plus
+Unbranded
+Cafonate
+Augmin-250
+Altovox
+Clophen
+Neophen
+Zinphandel
+Dimerin
+Clophen
+Neophen
+Uprirro
+Nerviton
+Agoram
+Unbranded
+Glyper
+Lamitor 50
+Lycortis
+Myrecef
+Fungtopic
+None
+Kastair EZ Tab
+Kastair
+None
+Clovir-400
+Diaciclo-400
+Imefer Capsule
+Hemaplus
+Unbranded
+Lipivent
+Zymet
+DILOMIN
+Sinuzip
+Loniper
+None
+Unbranded
+Axmaxolv
+Axmaclear
+4Fever
+Biogic
+Gofepine
+Felo-5
+Felojen
+Zymet
+Anzal-500
+Berazith
+Cinazith
+Aziprime
+Zithmycin
+Troydopa
+Dopnax
+GOUTNIL
+GOUCINE
+Unbranded
+BERAGOUT
+Cortum
+Unbranded
+Atorvacor-10
+Guaifyn
+Guaifenesin
+Zefrax
+Teveten
+Dianapril-5
+Glimauno-2
+None
+Glimauno-3
+None
+Ambronx
+Nazdrip
+Phenylpropanolamine Hydrochloride
+Phenylpropanolamine Hydrochloride
+Phenamine-Pro
+Phenylpropanolamine Hydrochloride
+Ladazol 40
+Seaprazole 40
+Unbranded
+Glimryl-2
+Neoroxime
+Brecare
+None
+Klarmyn
+Buscopan Plus
+Buscopan Venus
+Ameciron
+TGP-Folicare
+None
+None
+United Home Fersulfate Plus
+UNIFLOX
+Salbusol
+Unbranded
+Somecid-20
+Cleazole
+Mepracid
+Omemac-Gerd
+Omexac-20
+Riomep
+Pibitor
+Aeprazole 20
+Celemin hepa
+Celemin 10 Plus
+Andros
+None
+Andros
+None
+Montecad-5
+Dialukast
+Aztmagrand
+Lukotrin 5
+Lezyncet
+Xylergic
+Ceframed
+Retento-400
+Nazalstap
+Asmamed
+Hargenan
+Hargenan
+Floxsafe
+Mepraz
+Zionel
+B-Bloc
+Zymax
+Azithromycin (As Dihydrate)
+Romzin
+Solvomox
+VN2
+Amlodipine (As Besilate)
+None
+Amlodipine (As Besilate)
+None
+Amoxicillin (As Trihydrate)
+Floximed-Od
+Stalmox-CL 625
+Cosmox
+Clanav 625
+Clovintin
+Clavifarm
+Ambiclav
+Gloclav
+Clavinyx
+Gomox
+Vispoclav
+Clavuclav
+Moxclatab
+Lezclav 625
+Duoclav
+Brompheniramine Maleate + Phenylephrine Hydrochloride
+Ceftisur
+Ceftrix
+Brompheniramine Maleate + Phenylephrine Hydrochloride
+Rabesta 10
+Emecin
+Cinnarigo
+Unbranded
+Biotuss
+Dextrogen
+Stafipime
+Cepefil
+Alcemax
+4-GEN 1000
+None
+Amlodipine (As Besilate)
+Stalip-40
+Technostat
+Atorphil
+Unbranded
+Florvast
+Cholduce
+Q-Tor
+Lodistad Er
+Tradomal
+Oxitone
+Roxiem
+Zyrex
+Elicef
+Trixime
+Jucef
+Celemin 5-S
+Hema-K
+Flamidryl
+Trulev
+Milgesic
+Stalip-10
+Unbranded
+Unbranded
+Endvastor
+Sylergy
+Clopidowel-75
+Navorel
+Unbranded
+Lifegrel
+Ascorbic Acid + Zinc Sulfate
+Sinumed
+Maelenoxyl
+Altomox
+Atracor
+Altrox 250
+None
+Agilevo 500
+None
+None
+Keroxim
+Alltrex
+Mpl Methoxil
+Tracen
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Piperacillin (As Sodium) + Tazobactam (As Sodium)
+Zopip
+Tazobet
+Tazobal
+Apcee
+Citruvit
+Ascorlex
+Norvasc Protect
+Appebon With Iron
+None
+Azepril
+Myrecef
+Unbranded
+None
+Robust S
+Robust S
+Floxiprime
+Celevo
+Vhellox 500
+Lexzin
+None
+Unbranded
+Sinuzip GT
+Vhellox 250
+Rispolux
+Octagesic
+Unbranded
+Dobucard
+Dubamol
+Dotilium
+Canison
+Trimacort
+Unbranded
+Zodiclo
+Altrox 500
+Medxil
+Apoxime
+Evoflox
+Lexin Od
+Zinett
+None
+Acrocef
+Sqcef
+P-Dol
+Paratam
+Misar-H
+Amlotraz
+Amlotraz
+Aciherpin
+Azeecor
+Gozimax
+Ezythromax
+Berzimax
+Aza 500
+Amac -CL
+Lexofol
+Tranzil
+Sinurex
+Diphenzar
+Azthrex
+Loragen Plus
+Sirbon
+Viteron
+Rolavit
+Danavit
+Staminal
+Suplevit
+Multibet Plus
+Prazitam-2.25
+Unbranded
+Pizotaz 2.25
+Tazoget
+Unbranded
+VIFE-Z
+HEME-UP FA
+ZINRON-F
+Zyndes
+Ironfer
+None
+ARNOPHERIN
+ARNOPHERIN
+Infamix
+Fenxid
+Mencid
+Mefecid
+Tempmed
+Acrocef
+SQcef
+None
+Sufice
+AVAX
+Salgee Plain
+Asmalox
+Butagen
+Exel
+Barcef
+Edixin
+Cefavit
+None
+New Ambiceph
+GASAIDE
+CYCLOMIN
+Dicyclogen
+Azitas
+Azythrex
+Anplat
+Throvix
+Linsul
+Actacil
+Ampix Plus
+Torpezil 5
+Torpezil 10
+NEUROCARE PLUS
+DOLO-JAGA
+NERVAMIN PLUS
+None
+Nervi-Metz
+Euronerv-Plus
+Com-B Forte
+Supime
+Bactrex
+Triaxole
+Cotrigen
+STALPRIL-20
+Ketofix
+Allecur
+Zydor
+Eurolac
+Clodrel
+Rhinofen
+Clarihist
+Motimov
+Motrigine 100
+Lamosyn 100
+EXTOPAX
+Emizid
+4Nazal
+Ziproc-100
+Coldzep
+Nazaclir
+Coldinex
+Nasacol
+Nax-D
+Ziproc-25
+Apcee Plus
+Zitrin Plus
+Perataz
+Meditaz
+Piptam
+Plepra-T 4.5
+Tazofar 4.5
+Torico
+Redoxib
+Torico
+Redoxib
+4Plem Expectorant
+Losmac
+Monphevin
+TGP-Erythro
+Calpine
+Lortan
+Suquin
+Suquin
+Wincocef-500
+Cefadrox-500
+Droxanil-500
+Anzal-DS
+Unbranded
+Cinazith-DS
+Urilev I.V.
+Jazflox
+Ferlum
+Flamilium
+Apcee Plus
+Ambicipro
+Episquit 50
+Orlislim
+Episquit 100
+Alendroxl
+None
+Bondros
+Dronixid
+Alendrifix
+Neuromed
+Trimep-2
+Aduscine
+Ampimar
+Aepisul 1.5
+ObyDose
+Bio-Fit OB
+Zovixol
+Ambroset
+Ambrogen
+Picinaf
+Rifampicin
+Nuevamoxil
+Dompenyl
+Domilium
+Lipitor
+Lipitor
+Lipitor
+Lipitor
+Tempaid
+Paraseth
+Paralex
+Paragen
+Tempaid
+Para250
+Aizet-S
+Paraseth
+Ranitemp
+Paralex
+Paragen
+Lady
+Evoflox
+Myclav-625
+Fusimex
+Rabaphen
+Minocin
+Patryl
+Aldazole
+None
+Zithromax
+Amacet
+Medracet
+Cetamadol
+TDL®Plus
+Turbidec
+Nasalif
+Rovatim
+Quinogen 500
+Cestazid 1000
+Taziluke
+Triodone
+Amiron
+Trigenna
+None
+Mediflu
+Raphzep
+Montesur-5
+Montesur-10
+Infacare
+Alsea-E
+Calpine
+Unbranded
+Adriblastina RD
+Phenzachlor
+Prazitam-4.5
+Aneptil
+Betranex
+Tranesalv
+Tranexid
+Hemocare
+Norvasc
+Minidiab OD
+Maxulid
+Clarithrocid
+Verzat
+Bercef
+Xelor
+Maxvit
+Enervon Activ
+None
+Norvasc
+Cefazone
+Azeecor 200
+Xitro
+Prozitro-DS
+Zapzoryx
+Ezythromax
+Viagra
+None
+Arcoxia
+Oxatalis
+Medrol
+None
+Medrol
+None
+Trigenna
+Cervin
+Dinfurox
+None
+Neoxime
+None
+Neurontin
+Olmetec
+Olmetec
+Olmetec
+Unasyn
+Azitas
+Mylevo
+None
+None
+Risdoplus
+Aeperidone
+Rispexolv
+Reone
+Osteofree
+SUPRA C PLUS
+Metogard
+Amlon
+Sultamin
+Sulmax
+Tosylam
+Multizine
+Buclivit
+Appetal
+Appebest
+Appecare
+Daily Plus
+Biopred
+Prednimed
+Predster
+Cort
+Cortico-20
+Orapred
+Corsone
+Amlotrene
+Carbet-25
+MOTIMOV
+SELANZ SR
+XENTOR
+Xentor
+Fornidd XR
+GLYFORMET
+Proglutrol 1000
+None
+Oralime
+None
+Allecur
+Cetriset
+Cetirigen
+Amena
+Hivent
+Asmalin
+None
+Unbranded
+OLIPHENICOL
+None
+Cospan
+Curecine
+Prodipine
+Amsive
+Amlosil
+Amlostan
+Feliz S 10
+FELIZ S 20
+Ketral
+Lanzomep
+Sopraz
+Oprazid
+Cox-2
+Allertrene
+Moscalair
+Xythro 500
+Ppi Max
+S-Gastriloc
+PHILVASC
+Philtam
+Unbranded
+Piptacare
+Piptazorixx
+Exel
+Ketobest
+Bionyst
+FASLAX
+Cloracef
+Xelor
+Bufen
+Astrofen
+Bufen
+Montelast
+Vitair
+Cipcor
+Goflox-V
+Unbranded
+Dynacipro
+Terramycin Plus
+Acefin
+Cizolin
+PHIZOLIN
+CEFAZODEN
+Verzat
+Xelor
+Bercef
+Floxacin
+Rezpazit
+JAZIT 500
+Ergotec
+Ergojen
+Ambrazole
+RANZOLE
+Omepram
+Oxydol
+Feverin
+Paravher
+Cetaject
+Cefaczamil
+Duvaprine
+Solvaprine
+OB Dilan
+Isoprine
+Suprivin
+NOXIFEN
+TURBIDEC
+Nasalif
+Aerox
+Eroxime
+Cefucy
+Amtrix
+Peftrin
+Fexone
+Vitaplex-B
+None
+Nervafil Forte
+Enhamox
+Lactamox
+Claxic
+Clavic
+Cefurox
+Nervcare
+Zynerva
+Z-Colin
+Nervcare
+Zynerva
+Z-Colin
+Acroxyn
+Macritin
+Clarid
+Clarithromax
+Danoxime
+Minidiab OD
+Ferlic
+ENERZEE
+Enerzinc
+Lifeozinc
+Intelzinc
+Cresart
+None
+Cresart
+Clarithrocid
+KLARYTH
+Safdicure
+Salbutamol (As Sulfate)
+None
+Thromaxin
+Zithromin
+Tenorvas
+Nuramine Forte
+Shervit-B
+Depo-Gestin
+Salbuhaler
+Asthmagen
+Ampimax
+Ampimax
+None
+Jectocef
+Dermifene
+None
+Unbranded
+Clarie Ds 250
+None
+Klaitrene
+None
+Itorvaz
+Methyldopa (As Sesquihydrate)
+Methyldopa (As Sesquihydrate)
+Dopalink
+Methyldopa (As Sesquihydrate)
+Methyldopa (As Sesquihydrate)
+None
+Pediatapp Neo
+Varodipine
+Ciprophil
+None
+Ciprophil
+Unbranded
+None
+Ziprocap
+Xithrom
+Spasmoline
+Spasmodryl
+Mupezin
+Rosen
+Hytrin
+Hytrin
+Hytrin
+Extocin
+Betamethasone (As Valerate)
+Ipratec
+Novovast
+Foskina
+Mupirina
+None
+Telmistal-40
+Telmiheart 40
+Telmidin
+Alercet-10
+None
+Axol-Xl
+Norphed
+Nahalgesic
+Amgesic
+Thromaxin
+Unbranded
+Pediatapp Neo
+Caxlem
+Moxen
+Silvex
+Burnzine
+Flovidiazine
+Ticosea
+Megaclav
+Roxiclav
+Clavinyx
+Clavwell
+Unbranded
+Unbranded
+Ziridim
+Clinda-S
+Clindagold
+Co-Diovan
+Telmiheart 80
+Telmidin
+Cipfast-750
+Ciprodan-750
+Ciflamax
+Unbranded
+Cefavex
+Ventolax
+Micranex
+Clovimax
+Motillex
+None
+Clovimax
+Clovimed
+Xadine
+Minipil
+None
+Bemefor
+Liza
+Dopamax
+Combizar
+Losarite
+COMBIZAR
+LOSARITE
+Rapiclav
+ASMAHIST
+Nasamed
+Bemefor
+Ambprazol
+Ambroxin
+Hartigard SR
+Nelapine
+Nifecar
+Cofressan
+Prometasol
+Clarbact
+Rapiclav
+None
+Rapiclav
+None
+None
+Maediclav
+Azukon Mr
+None
+Zerru B-Plex
+Remedlor
+Xeclocef
+Aspidon
+Presartan H 50
+Izon
+Izon Ds
+None
+None
+Vineuron
+Amino-Max
+Hemavit
+Betamin Forte
+Jagaplex
+Revitron
+Pharmaton Essential Kiddi
+Ciprosan
+Ciprofed
+Bioxal
+Zocet 5
+Gicetir
+None
+None
+Philcet
+Beenostel
+Nervaton
+Myrin P Forte
+Myreclox
+Loxeen
+Groxone
+Plaxone
+Triaxsea
+Xadine
+Funginil-K
+None
+None
+Diulactone
+Beralactone
+Fepim
+Frexim
+Supime
+Calan Sr
+Rabeloc 20
+Lorfast
+Unbranded
+Hyomed
+Antispaz
+Spamex
+Buscomed
+Ozin
+Hysin
+Buscozens
+None
+Betacert
+Medihistin
+None
+Lopimax
+Irvex
+None
+Bactrigon
+None
+Flovicide
+Dermpibac
+S-Troban
+Fortiflex
+Revitron
+None
+Clovimax
+Clovimed
+Moriamin
+Alesof-10
+Unbranded
+Aminotrene
+Arostanil
+Cofidec
+Cofidec
+None
+None
+Cardiovit
+Triocef
+Trihydcef
+Nutrimin
+Alamin
+Nutrilon
+Evamin
+Minomed
+Nakaron
+Truferacid
+Hemavin-OB
+Irvex
+None
+Irbepro
+None
+Ceclobid
+Rispen
+Suremine
+AMINOFAST
+Martham
+Hemacare
+Gutzid
+Hyospan
+Boren
+Ursa
+Gemison
+None
+Bactiv
+Tramafar
+Tramavic
+Udcacid 300
+Urilax
+Captopril
+TGP-Capto
+Bactiv
+Eurocoxin
+None
+Presartan-100
+None
+Besartan
+Babapress-8
+Babapress-16
+Zefsur 1500
+Levotab 500
+Ifimol Iv
+Dicey
+Unifix-200
+None
+Trimax
+Ociclox
+Zolnex
+Histalev
+Levozys
+Diafloxcin
+Floxlevo
+Oflotech
+Amso
+None
+Saphtram
+Tramseth
+Sidprazole
+Effepraz
+Aepisul 750
+Ampimar
+Effebactam
+Canison
+Clovacare
+Zafex
+Zinaxime
+Ridocof
+Caftop
+Rexilan
+Torval H 80/12.5
+Rovix
+Medsef
+Analem
+Xyclovirax
+Zycloran
+Zycloran
+Vigrasil
+Unbranded
+None
+Tricure
+None
+Geocoxib
+Oranol
+None
+Presartan-50
+Unbranded
+Besartan
+Parasaph 500 Tab
+Ketofix
+Tramkor
+Analgen
+Sigmadone
+2-Gen 750
+Goxime Iv
+Centroxime
+Cefell-Med
+Vispocef
+Alcefur
+Cimex Plus
+Ephalox
+Cefuget
+Titacef
+Cefueast
+Midrox
+Kairoxi
+Robecim
+Kefsyn 750
+Rezafil IV
+Liferox
+Ximgencef
+Viacef
+Cefusinai
+Neocefuxime
+Eurimax
+Nicocef
+Carbezin
+Dinemic-Sr
+Cardiophil-SR
+Pectovast MR
+Izon + B6
+Calan
+Janumet
+Velmetia
+Janumet
+Janumet
+Velmetia
+Unbranded
+Diamazepine
+Carbastal
+Carbazedin
+Zemacarm
+Zemep
+Aesopra
+Quadpraz
+Es-Oprazol
+Ezotanley
+Cataflam
+Hista-Bloc
+Tob-Dex
+Auromide Plus
+Karvil 25
+Panpraz
+Pantoprime
+Clovas
+Klopido
+Thrombicare
+None
+Klopide
+Clopivaz
+Evofix
+Polypen
+Triconex Forte
+Newmet
+Flagidin
+None
+Pravox
+Wydox
+Salmed
+Flusal 50
+Salmed
+Flusal 250
+Salmed
+Bumed
+Budesone
+None
+2-Gen
+None
+Saphenicol - C500
+Chlorseth
+Gastrosaph AB150
+Fimabute-Dt
+None
+None
+Arinib
+None
+Fimabute-200
+Typhofix
+Diaxime 200
+None
+Maedix 200
+Bac-10
+Deperin
+Panta
+Clessol
+None
+None
+Azost
+None
+Clottinex
+EMIZID PLUS
+Sitipraz
+Nahalpraz
+Sitirose
+Proheal IV
+BAROMINIC
+None
+Medrizine
+Zetrinx
+Cetirigen
+Amnoset
+Ppb
+Berafen
+Primenofast
+Viprax-200
+Fixcure
+None
+Dyruxim
+Farmclar
+Execlar
+Formet 500
+Diamet 500
+None
+Cidimus
+Arcoxia
+Arcoxia
+Arcoxia Ac
+Buscofar
+Hybrin
+Teraspass
+Cidimus
+Brumox-500
+Richmox
+Gorgonio
+Xillinbest
+Raniphar
+RANIVIC
+Vomino
+Biotuss Plain
+Dextrogen Plain
+Sofinox
+Amptrex
+Dobucard
+Fendermal
+Glimesaph T4
+Gliride 4
+Cimesaph
+Cimeth-200
+Medrizine
+Actibile
+Lupibile
+Fendermal
+Fentyn
+Fendermal
+Fentyn
+Ican
+Topoblock
+Pronex 40
+Peptrad
+Tramalin
+None
+Flazomel
+Trumeprazole
+Hyperzine
+Co-Amoxisaph-125
+Amocled
+Clavmoxwel
+Unbranded
+Comoxitab
+None
+None
+Gluconex MR
+None
+Mucuzid
+Carbogen
+Media Expectorant
+Verist-24
+Betatristin
+Vibert
+Reduhist
+Topmate
+Glimesaph T3
+Gliride 3
+Glimesaph T2
+Gliride
+Trance
+Evatran
+Tranix
+None
+Muculer
+Mucugen
+Metostad
+Avax
+VN2
+Butagen
+Raja
+Argixime
+None
+Cefxifix
+Aeruginox
+Rocef
+Cefupharm
+None
+Xefu 500
+Cef-U 500
+Cefuphil
+Zillian 500
+Robecim-500
+Eurimax
+Verile 500
+Diacefarm
+Titacef
+Irefur
+Geocef 500
+Secunda
+Ambifucef
+Ferlum
+Qpine-50
+Dicloran Gel
+Roxi-M
+Mioclof
+Dyflaren
+Extream
+Qpine 100
+Quetadin
+Zyclovir
+4Fever
+Paragen
+Cefixsaph-100
+Cefixed
+Ampimax
+Ceftibet
+Bactroban
+Sultam
+Proztab Forte
+Urimax 400
+URILAX
+Sitizine
+Izeen
+Ferroplex Forte
+Xiclav
+Jamoxi
+Onima
+Nutrilon Forte
+Nutrimin forte
+Alamin Forte
+Hemostap
+Tramacid
+Sintos Forte
+Mucuzid
+Caftein
+Carbotein
+Ondafran
+Paracough
+Tuzer
+Azitan
+Ergon
+Mergo
+Gasmodic
+HNBB
+Histaril
+Vicolax
+Salbuguai
+Unbranded
+Neurocare
+Nervamin
+Capsugen Forte
+Benerva Forte
+Nervia
+None
+KLONTAR
+Clavmoxwel
+Lezclav
+Gloclav
+None
+Esotaz-40
+Ramtrex
+Obrex
+Tazosar
+Siti-Cillin
+Verzat
+Eurolev
+Rabesta-20
+Doctra
+Gerdsol
+Dologesic
+RIFASOL
+RIFADRIL
+TRIFAM
+Hameron
+Glyper
+Avax
+VN2®
+Metrocor
+Promeddazole
+Metdazid
+Eastmezol
+Salbunox
+Para650
+Biogic
+Para500
+Akucoline-200
+None
+Fenastedin
+Hemostap
+Tranexagen
+Tempmed
+None
+Coxid
+Racep
+Cillox
+None
+Ventolin Expectorant
+Coxid
+Nutrimin Sn 5
+Nutrilon SN 5
+Alamin Sn 5
+Aminozyre
+Akuoflo
+Stalip 80
+Zanvator
+Avator
+Emthex
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Thiamine Mononitrate (Vit. B) + Pyridoxine Hydrochloride (Vit. B6) + Cyanocobalamin (Vit. B12)
+Thiamine Mononitrate (Vitamin B) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Mexiflam
+None
+Lorarex
+Curelergic
+Istan
+Cefopti
+MPSS 1000
+Tacrotec
+Somazine
+Zynapse
+DEXAVIT
+CLINTAM
+Corsin-300
+Clindarene
+Rouxindal-300
+Apcee
+Ascorgen
+Powerbos C
+Booster C
+Pak-C
+Rapid-C
+Spiagra-100
+Somazine 500
+Painaide
+Ibugen Plus
+Para Plus
+FARAZOLE
+Flux
+Fluzole-150
+Amefocin
+None
+None
+Geocoxib
+Somazine
+Zynapse
+Nahalgesic
+Aepara
+Cebarc
+Cimex
+Infekor
+Cefpuro
+Efrox - 750
+Furosenz
+Essefuroxime
+Ambrodil
+Brocof Sr
+Protam
+Ventolin
+Rucef
+Ziphanol
+Staldol
+Vancomet
+Gozimax
+Azithcor
+None
+Gozith Iv
+Clindatec
+Corsin-600
+Clindarene
+Rouxindal-600
+Myotec
+Datab
+Qualcet
+Diclogen
+None
+None
+Frepan
+Candegen
+Esozole
+Frepan
+Choltrol
+None
+None
+Amlodipine (As Besilate)
+Amlodipine (As Besilate)
+Norvatrol
+Taksorbet
+Tovit
+Multivita
+Imotab
+Lopegen
+Xanazole
+Oralime
+Gofixime
+Cimex
+Medoxal
+Koltin
+Goutless
+None
+None
+Goucitab
+Irbenox
+Irbenox
+Azcotil
+none
+Antilergic
+Azcotil
+None
+Zathrimycin
+Azithrogen
+Letrostad
+Montelast
+Vitair
+Unbranded
+Saphvas-10
+Vistatin 10
+Saphvas-20
+Vistatin 20
+Valsajub H
+Valsajub H
+Valsajub H
+Valsajub H
+Valsajub H
+Hyzonate
+Cortef-250
+Effecortison
+Hyzonate
+Stalpril-H
+Isore
+Icon
+Amadol
+Cortizol
+Pasglim 2
+Glimep
+Furoxide
+Euromide
+Myrentyl
+Cef-3
+None
+None
+Bicom
+None
+None
+Tambutol
+Hambutol
+None
+Manna
+None
+Cybelle
+None
+Megion
+Cimex
+Tazim
+Paizu
+Paizu
+Foralivit
+None
+None
+None
+Sinustap
+Xyclovirax
+Xtracee
+Besilopin
+None
+Neoflam
+Vedilcard
+Axemol IV
+Dipamol
+Trimitamol
+Traphen
+Aminolife
+Valmin
+Protemin
+Aminoden
+Amlin
+Flamitin
+Atorsaph
+Tored-10
+None
+Epichlor-50
+Ceftrifil
+Trixchel
+Ceftricare
+Solvomox
+Gastrosaph AF300
+Pirox
+Piroxigen
+Feverstop
+Kill-Ache
+Amkaright
+Amkalon
+E-Care 400
+None
+Ipstal
+Telmiheart Plus 52.5
+Telmidin Plus
+Telmistal H 92.5
+None
+Telmiheart Plus 92.5
+Dopabas
+Anemifer
+Alcera
+Infamix
+Stalevo-5
+Lupivent
+Multivent
+XELIC
+Icoxib
+Celemic
+Tramaze
+Dolright
+Dolpain
+Doltraven
+Alleright
+None
+Kezo
+None
+None
+Tovit
+Eurovita Plus
+Apcevit
+Regivit
+Infect-X
+Gasaide
+Dicyclogen
+Doxan
+Clopidogrel
+Tempaid600
+Tranext
+Medogrel
+Clogeovix
+None
+Isdin
+Klarithix
+Koltin
+Vincolin
+Cerebgo
+Citi-IV
+Zitcolyn
+Bactrex
+Cotrigen
+Cleocin
+Amkaright
+Amkalon
+Vaxol
+Closcizol
+Kefstar
+Enbid-10
+None
+T-Sartan
+Medamol
+Adamol
+Nervita
+Nutrimin FeZ
+Alamin Fez
+Nutrilon FEZ
+Evamin
+Groxime
+Seaxime
+Cefumin
+Appetason
+METOCARD
+Metovin
+Pirox
+Piroxigen
+Ob-Care
+Folera-OB
+Excillin
+Ampicin
+Ferlette
+TGPher
+Embatrim Forte
+Kepdin
+None
+Lepiva-500
+Leteram-500
+Levtrawell
+None
+Levtrawell
+Xolcetam
+Leteram-250
+Anexxx-50
+Pediaflex Forte
+Tapimycin
+KLARICID
+Geof-Cefixime
+Pidclin
+None
+Olmexl-40
+Ojos-40
+Olmexl
+Ojos-20
+Bruprim
+None
+Camperten 16
+Candelife
+None
+Camperten
+Unbranded
+Jictrimin-B
+Ultraplex
+Sb-Plex
+Cefmed
+Aclor
+Betaclor
+Emep
+Megaclav
+Clavinyx
+Roxiclav
+Clavwell
+Vidaxime
+Proroxime
+Retacef
+Cefruxima
+Ertapenem (as sodium)
+H-CINE
+Cosalon
+None
+Akubose-25
+Cofnil
+Flacoxto
+Celethix
+Icox
+None
+Recosan 200
+Erolak
+Xsom
+Onestatin
+Inofar
+Parten-50
+Varcelan-500
+Vancoshot
+Eurovan
+Affoline
+Citiright
+Sancit
+Neurothix
+Oxtimon
+Brelvastin
+Nervitron Max
+Cardiolyte K
+LUMARK-500
+Imiwel-C 250
+Urgal-300
+Zilatec
+Rabactam
+Piptabac 4.5
+Ketoright
+Ketolon
+Akudiva 500 Er
+Depamax
+Divalgen 500
+Convulzor
+None
+Emthex
+Tru-C
+Atagon
+None
+None
+Pantrozole
+Depanto
+Pantor IV
+Melox-15
+None
+None
+Resposal
+Efamed
+Asmagone
+Provexel NS
+Brodix
+Asmacaire
+Resposal-I
+Asmagone Plus
+AMBIVENT
+Aura Plus
+Brodix Plus
+Gouter
+Primegout
+Acf-100
+Fenaxin
+Acedocare
+Evazine
+Droxiem
+Uromid
+Prozart Plus
+Gosart Plus
+Ceftal Ds
+Quezar 100
+Moxifast
+Nipril-H
+Diapiptaz 4.5
+Tozarin-4.5
+Pitazolin 4.5
+Tazracil
+Piptazitam
+Tazpiracil
+Levepipe
+Lipotrim-40
+Metsobet
+None
+Uni-Cipro
+Rofcip
+Finaplasia-5
+Akudiva 250 Er
+Depamax
+Divalgen 250
+Convulzor
+Maczithro-Ds
+Lozak
+T-Sartan
+Spire
+Spioretic
+Hizid
+Doprina
+Dopine
+Dopacore
+Dopasenz
+Cardamin
+Cardiopamine
+Triagen
+Triazone
+Xiax
+Larzan
+Lariaxone
+Xibra-90
+Serc
+Kovent Sf
+Almetica
+AMTRAC-1
+Amlokard
+Lewidipine (Reformulated)
+None (Reformulated)
+None (Reformulated)
+Sinuzip Pe
+Serc
+Finapros
+Enaz-500
+Enaz-250
+Bixocot
+Tempmed
+Eurivit M
+Aurohex
+Trixsuer
+Melotab
+Mycefix
+Quix
+Fixin
+Pacitel-30
+Lexatax-30
+Pacli-One 30
+Pacitaxil
+Pacitel-100
+Lexatax-100
+Pacli-One 100
+Anxipram-10
+Morecett-10
+None
+Serentil
+Levobact
+Terlev
+Tesar
+Tesar
+Zolec 40
+Mep-40
+TEIKEDEN-500
+Zefcure-500
+Cefftabs
+Levexime-500
+Zolnex
+Raniclav
+Bravoks-625
+Medavox
+Vapclosiv
+Quadxiclav
+Merdifon
+Celginase
+Rojacef
+Vizef
+Eroxmit
+Largexime
+ANZAR
+Danlopin
+Sainyo
+Vesselcure
+Calcebis 5
+Unbranded
+Zaczin
+Zinlon
+Celginase
+Akucoline-100
+Sherzid
+Imilion-C Plus
+Sykoquit-100
+None
+Teli 40
+Teli 80
+Gabapex
+Ruxodox
+Dorugem
+Paxorubicin
+None
+Doxobicin
+Galvusmet
+Proglin Met
+Galvus
+Proglin
+None
+Viglucon
+Galvusmet
+Proglin Met
+Groviton
+Euromet
+Coxidia
+None
+Dialexib 400
+Pulmodual MDI
+Multilem
+None
+Enoxicam
+Rabocin-50
+Diabeats
+None
+Unbranded
+Klevra-500
+None
+Podoxi
+Raciwel
+SHINE-C Plus
+None
+None
+Citistal
+none
+Cloxceena
+None
+Diacil
+Xilinox
+Farmclox
+Cyclox
+Leiviclox
+Rahmacin
+Clarion
+Scitapram
+None
+FINFLOW-5
+Oranol
+Anxipram-20
+Flubit
+Losar-50
+Mdbrox
+Kaitrate
+Acitrate
+Unbranded
+Lithrocal
+Poscitcure
+K-XR
+Poscifix
+Positate
+Urecit
+Acaldin
+None
+Citrapos
+Unbranded
+None
+Aztrate XR
+Phrolets
+Tasiumate
+Cansure
+Renoguard
+Zuredel
+Lodibes
+None
+Multilem
+Megavit
+Spasdon
+None
+Reflate 500
+Mucobreak
+Unbranded
+None
+Unbranded
+AECYS
+Gocetyl-200
+Plenacyl-200
+C-Zett 200
+Rexeteine
+Sinaizole
+Zemep
+Nexpro IV
+None
+Nasonex
+Cefusaph
+Thiaxtan
+Exforge
+Valcamp
+Oldomil
+Oldomil
+None
+LupiSarT
+Triavex 1
+Exforge
+Valcamp
+Exforge
+Valcamp
+Betadex
+Unbranded
+Unbranded
+Bixocot 90
+Clopifar
+AMCITROL
+Bupiright
+Bupilon
+Affocaine
+Mitoban
+Lipend 20
+Unbranded
+Avator
+Lipiblac
+Cholduce
+No-sip
+Zullen
+Flextamol
+Caplopraz
+Genpramep
+Zertazole
+Kidifine
+Xelocel
+None
+Midazolex
+Galvusmet
+Proglin Met
+Coxet
+Etoridix
+Recox
+Fexitas
+Naprox
+Rednisol
+Better C
+HavC
+Lumark-250
+Stalip A-90
+Amoxsaph-250
+Moxeth-250
+Nerv300
+Ambronx
+Calvicee
+Etopa
+Cefwide
+Ambiclin
+Startline-100
+Startline-50
+Captor 25
+None
+Platicin
+Cisplaxon
+Cidiamine
+Pantomed-D
+Topradone
+Cocilone
+Medroxy
+Itrason
+Itranaz
+Gel-Malicid
+Neutracid
+Prostalife
+Sykoquit-50
+Praxid
+Praxid
+None
+Ketrom
+Evorox
+Alpurase
+Zylnol
+Fortrixone
+Kairoxon
+Cefftry
+Gotriaxone
+Lifetrixone
+Forneumo
+Rainoxone
+Ceftriaxcel
+Ketofix
+Xolnic
+Nitron
+Plone-5
+Pipercil-2.25
+Tazur
+Tazocure
+Vactazo
+Tazeast
+Tazonorth
+Pipzolen
+Medicip
+Sutid
+Medicip
+Altoflox
+Zemo 20
+Unbranded
+Xolfatrim
+Cotrigen
+Fixsil
+Zefixmed
+Dancef-Ds
+Amkofix
+Viprax-DS
+Vispoxime-Ds
+Gracefix
+Cefphil
+Bactixime
+Cefolin Ds
+Stalip A-50
+Novovast
+Calvicee Plus
+Akucoline
+Aerox
+Amkoxime
+Gavixime
+Njectxime
+Equirox
+Cefuni
+Fuschel
+Gixime
+None
+Ursa
+Destone
+Raproxyn
+Kepdin syrup
+Levtrawell
+Popicin
+Soloxine
+Unbranded
+Arkocin
+Ac-Lyte
+Acetylflux
+Soluflem
+Carceteine
+Exflem
+Bicom 300
+Bicom 1000
+Andrazole
+None
+Raphzep
+OLE
+Esomap-20
+Zolpran 20
+Mamofen-20
+Supzine 10
+Pyritas
+Aizet - S
+Lipend A-50
+Sensitrin
+Colb
+Xalipat
+Amsudime-750
+Ampinix-750
+Bactalev-750
+Amsutas
+Gravitam
+Geobactam-1.5
+Amsudime -1.5
+Amkoxime-500
+Medaxime 500
+Njectxime 500
+XELIC
+Bestamol
+Ranitemp
+Vignil
+Ome-M
+Gastrilife
+Geoprazole
+Goprazole
+Kairozol
+Gezole Iv
+Frazole Iv
+None
+Ezrazole
+Aeprazole
+Eastprazol
+Zolemep
+Omeline
+Ficuzole
+Omepfind
+Gomeprazole
+Omephar
+Cylic
+Marprazole
+Protonblock
+Zemomax
+Omemac-Gerd
+Omenole
+Omexac-40
+Omeproviv
+Omipra
+Promeprazole
+Altoprazole
+Asmamed
+Butagen Plus
+Beramet
+Glucostop
+Diabase
+Zincare
+Zinck
+Imatinate
+Imatinate
+Akupram-5
+Celdron
+Losastal-50
+Sartan
+Q-Pid
+Omep
+Ramezole
+Nahazole
+Amsomep
+Azimin
+Azythrex
+Suprazith
+Janzith
+Fenobrit
+Fenobrit
+Bioclavid
+Rahmacin
+Clarion
+Clarifix
+Acce-Mac
+Aztocin
+Azipak
+Ceftrimed
+Ximebac
+Cefitrene
+Tgxime
+Cefulax
+Omnixime
+Njectxime 125
+None
+Terazosin (As Hydrochloride Dihydrate)
+Terazosin (As Hydrochloride Dihydrate)
+None
+Danoxime
+Elbacef
+None
+None
+Tazosar
+Siti-Cillin
+Hydomet
+Thylomet
+Tomedyl
+Ascortain
+Hyperzol
+Omzek
+Norbit
+Northix
+Epinor
+Dopaqure
+Lozarsin Plus
+Unbranded
+Nerv1000
+Cetadol
+Geocet
+Broncolin
+Feloact 30
+Racecore
+Drasel 30
+Farmrace
+Diatril
+Cadotrol
+Radotrace
+Arvoxon
+Mdbrox
+Mdbrox
+Ambipen
+None
+None
+None
+ANZAPLUS
+None
+None
+None
+None
+None
+None
+None
+Rimactazid
+Ronpibac
+None
+Bactacare
+Sacriva-750
+Ampisuden
+Ampirixx
+Caxol
+Co-Tareg
+Hyzonate
+Cefichew 400
+Tareg
+Maxcolin
+Seretide
+Evoflo
+Seretide
+Appetason
+Appetrex
+Seretide
+Dixime-200
+Diovan
+Diovan
+Diovan
+COUGHDEC
+Olfacof
+Lifort
+Lifort
+Atorvas
+Vastacon
+Zoled
+Zolphonate
+Ostiozole
+Zoldromed
+Zolchoice
+Zoldrocid
+Wilovex
+Levolox
+Lopran
+Byerrhea
+Gopramide
+Sulbacin 0.75
+Unbranded
+Alzubac 0.75
+Zymax
+Biomac
+Zullen
+Lipend-40
+Unbranded
+Nysaph
+Santron
+Ventomax
+None
+Westfimox
+None
+Musital
+Deflemin
+GEEDEXIN
+Impho-B
+Plasil
+Zithrovic
+Zithroking
+Dystatin
+Saatin 20
+Atorcad
+Auropred
+Aurosol
+Multigo
+Nefidoxime
+Mdbrox
+Amlofar
+Podoxi
+Glotoxan-200
+Cyclophos
+Saphrin
+Diabeats
+Dolsaph
+Trifex
+Traxan
+Unbranded
+Traniject
+Tranexaprime
+Tranexell
+Saphzine
+Cetired
+Loxeva
+Ferosal
+Co-Tareg
+Duotram
+Cetradol
+Trapadix
+Losangio 50
+Vivax-100
+Unbranded
+None
+Pantec
+None
+Tramalion-P
+Altotram
+Trump Plus
+None
+None
+Allermax
+Unbranded
+Coldrex-G
+Kidicef
+None
+Zovixol
+Ambroset
+Ambrogen
+Etovex 90
+Etovex 60
+Foramefer
+Forvit-Plus
+FORVIT-PLUS
+Ferro-B
+Ferosian
+Relifer
+Geofer
+Fermed
+Feronerv-Fa
+Fericid
+Ironcare
+Atorsaph
+Tored-20
+Renvela
+Solosamet SR
+Glito 30
+None
+Ppar
+Glito 15
+Minzil
+Gluclamin
+Cefdotab
+Imuzen
+Sqfen
+Fenlex
+Nervex
+None
+Com-Femic
+Ferron
+Hemafer
+Bortether
+Anclotic
+Trinir
+Fregg
+Brisofer-OB
+Hemafer-F
+Njectxone
+Ceftinorth
+Viprax-100 DT
+Activo Gold
+Amorex
+None
+Flubrex
+Ventomax
+Salbutamol (As Sulfate)
+Amectuss
+None
+None
+MYLAN
+AMOREX
+None
+Amorex
+None
+Quomyl
+Totifen
+Cotrimaxol
+Cotrimaxol
+None
+Ventomax
+None
+Pramiz
+Omeptas
+Frazole
+Impodex
+None
+Mucomed
+Meto
+B-Lact
+Xenical
+Carbotin
+Carbplin
+Carbotin
+Carbplin
+Cidianum
+Carboplitin
+Unbranded
+Tamsudin
+Tamsulon-XL
+Gasaide
+Dicyclogen
+Daryl
+Ipravent
+Biovent
+Ipracare
+Ipraneb
+Aetropsal
+Meptin
+Brezu
+Lucazt
+Leuragen
+Dretacen
+None
+Leiproneuron
+Dolotral
+Sartan H-28.5
+Appezinc
+Linsul
+Bactropen Plus
+Dolotral
+Rahmacin
+Clarifix
+Pantonix
+Olanpresor
+Nicaright
+Cardilon
+Cardimed
+Cyphos-1
+Glotoxan-1
+Cytoace
+Cyclixine 1000
+Cyclophos
+Selecap 400
+Celbex 400
+Coxibwell
+Chlortazid
+Synthocin
+Choledeo
+Axialith
+Histamox
+Unbranded
+Cinnabloc
+Vercin
+Lipidace
+Lodibes
+Lodicor
+Amlo Med-5
+None
+None
+Ferosul
+Aluminox
+None
+None
+Aciflam
+None
+Trinir
+Cinnabloc
+Serlev
+Esozole-Inj
+Ketofix
+Cyphos-500
+Glotoxan-500
+Cytoace
+Mitoban
+Exigo
+Lipend 10
+Unbranded
+Moscalair
+Unbranded
+Eleventin 1000
+Moscalair
+Rafonex 625
+Finaplasia-1
+Disolv
+Amnotic
+Lefloxure
+Mitoban
+Triginal
+Trimebet
+BDCaspo-70
+BDCaspo-50
+Eleventin 625
+Clavtri 625
+Eleventin 375
+Janumet XR
+Nacetyl 600
+Ultreinac-600
+Plenacyl 600
+Mucotyl
+Amkoteine
+Soluflem
+Unbranded
+Paracystin
+Unbranded
+C-Zett
+Mucoprime
+Naxcil-600
+Altocetyl
+Mucobreak
+Flucysteine 600
+Aceget
+Gocetyl-600
+Mucosil
+Diacysteine 600
+Mucyphil
+Flemisten
+Sucrol
+Unbranded
+Unbranded
+Headcolin-500
+Unbranded
+Cefuxcure
+Eurimax
+Cefurex 250
+Zenxime
+Roxicef S125
+Dutasia 0.5
+Typheclor
+None
+None
+Oncomes
+Zunamyn
+Zunamyn
+Folex
+Bactacin
+Sulvacil
+KLIX
+CEFSTAL-500
+2-Gen SCP
+CEFUFARM
+Unbranded
+CEFZIME
+Dia-Bplex
+Trexyvit
+Unbranded
+Unbranded
+Zolbach
+Sorbance-10
+Infamix
+TamoxiIon
+Celobic 50
+Bicamid 50
+None
+Azimor
+Valzith
+Aezith
+Azicare
+Azilo
+Aziv-500
+Aziro-500
+Azithva
+Azmicin
+Rexithro
+Esorance-20
+Reax
+Lerif
+Lergic
+Lewizine
+Selergy
+Alerest
+Maxlavco
+Endclav-625
+Claverob
+Zelin
+Cetaz
+LEUCOWEL
+FOLCACIUM
+CA FOLIXIL
+Medpresin
+Medcortin
+Laxedil
+Consilose
+Levofar
+Lquin
+Medpresin
+Kardia
+Micor
+Zenxime
+Roxicef S250
+Dioxel
+Hemofar
+Cetirigen
+Zetrinx
+Unbranded
+Moxiflox
+Folium Fe
+Cloxid
+Unbranded
+Disolv
+Bactacin 750
+Sulvacil
+CELERMIN
+Aroflo-250
+AROFLO-125
+Fusedex
+Cotrimaxol
+Difenamin
+Oradol
+Ketadol
+Sorolac
+AROFLO-50
+Sensocain
+Sensocain Spinal 0.5% Heavy
+Bronchosar
+LOSA-AM
+Irnocel
+Ridil-50
+Dynatram
+Biopyrex-01
+Acresil 300
+Potecin
+Climaxin
+Dalamed
+Antizoal
+Mordole
+Dynazole
+CEFORE
+PNEUMOSOLV
+GENXONE
+Olanfar
+Olamedix
+Olanfar
+Olamedix
+Olandus ODT 5
+Doparine
+Dopamaine
+Metamet
+AMBIDAZOL
+None
+Hexin
+Xyclovirax Forte
+Siglaton 300 Plus
+Nyszac
+Prelat
+Corfex 125
+Roxime 500
+Unbranded
+Kogzib-90
+Kogzib-120
+Flamacox
+Vertrol
+Vertinon 16
+Bixocot 120
+Dylax
+Unbranded
+Siglaton
+Timostal
+Isupres
+Optaluz
+Unbranded
+Elevex
+None
+Celexib
+None
+Zefur
+Cefuget
+Rucef
+None
+None
+Reax
+Lergic
+Lerif
+Selergy
+Alerest
+Tumocin-15
+Zidaxim 300
+NEOMIB
+BETOZOMIB
+ZYOCADE
+BORTOZEB
+Tapipzo 2.25
+Akudiva-125 ER
+Zefifarm
+Cexime
+Argifix
+Beraxime-DS
+Asmamed Plus
+Selex
+None
+None
+None
+Chemoflura
+Fluorouxil
+Caboo 450
+Caboo 150
+Temsol 200
+Nacetyl 400
+Unbranded
+Aciflam
+Spegic Forte
+None
+None
+None
+Prednox-16
+Meno-Vita
+Medione
+Neo-Drin
+Pronas
+None
+Ifo-Cell
+Ifos
+Melanov MR 30
+Alergiquit
+Thiosol
+Siclav
+Unbranded
+None
+None
+None
+None
+None
+Metrovin
+NICOZOLE
+Clavoxel
+OCUDOR
+SANIROM 1000
+Cardoz
+Bloxid
+None
+Chlonicol
+Sriphen-100
+Sitiphen-100
+PERABACT 1000
+Ceftazid
+Amlogen
+Megapime
+N/A
+Lupilan
+Risperidone
+Risperidone
+Klix Teens
+Dystatin
+Saatin 10
+BEVON-C
+Vincee Plus
+Jinzole
+Ricozole
+Flagyl
+Pipzo
+Cloxid
+Axet
+Zengram
+Triaxin
+Cefosenz
+Foxsenz
+None
+Ferrofate
+None
+COSEC-40
+Aziagio 200
+ESOMEX
+Escore
+Ezor
+Bearse
+Essel Forte
+Phosvita Forte
+Diaphovin
+Prolipidz
+Lipidscure Forte
+Livertect
+Unbranded
+Phospovit Forte
+Phosmax
+Lipidphar
+Unbranded
+Phospomar
+Esselvex
+Altolipid
+Esselpids
+Biolipy
+Livertiale
+Lifurvent
+Fortetamin
+Unbranded
+Saphlocid
+Clofenad
+None
+Unbranded
+United Home Fevertab
+Ator-10
+Unbranded
+Taxim-O
+Metkem
+None
+None
+None
+Metkem
+Mycokem
+Amlogen
+Quinozole
+Protozole
+Aldezol
+Newmet
+Alevo
+Laberfen
+Alaxpro
+Kidicef
+None
+Proxen
+None
+None
+Plavix
+None
+Vertikind-24
+Vertistop
+Vomivert
+Vertikind-16
+Unbranded
+Vomivert 16
+Unbranded
+Verbeta 16
+Vertikind-8
+Vertistop
+Unbranded
+Vomivert
+Piozulin 30
+None
+Tricin
+Pencil 100
+Zatsol
+None
+Thromzol
+Cilostadin
+Hematozol 100
+Closcizol
+Pioglitazone (As Hydrochloride)
+Prosec
+Levocetirizine Dihydrochloride
+Aurocaine
+Siclav
+Histamox
+None
+Unbranded
+None
+Ometan
+None
+Cidine
+Citgo
+Valstad Plus
+Aluprin
+None
+Dalactin
+None
+XIMEBAC
+CEFITRENE
+RETAXIME
+CEFULAX
+OMNIXIME
+UCEFIX
+TRIOCEF
+Ascorb
+None
+Amlodine Plus
+Amzef
+Losacar Am 50
+Unbranded
+Vasotwin
+Unbranded
+Amlotitan
+Amazar
+Virbez
+Supixime -200
+Supixime -100
+Alclav
+Alclav
+None
+Diclogen
+Gofenac
+None
+None
+None
+Megapraz
+D-Tail
+AMPROX
+Unbranded
+Selex
+Tricor
+Nicardia
+None
+Cetagen 500
+Cetabine 500
+Aprovel
+Aprovel
+Co-Aprovel
+Prostacin
+None
+Cardob
+Dobumarc
+Dobumine
+Dobucare
+Dobusenz
+Gavamin
+Cardiotamine
+Nedzadin
+Alclav
+Alclav
+Canison B
+Canison Plus
+Bethamistine
+Itcure
+Abacid
+Breezol
+Needair
+Valstad Plus
+Carvedil
+None
+Carvedil
+Vedilcard
+Eraze
+Zeal
+Zocef
+Zocef
+Unbranded
+ETIRIZ
+ALLERCEF
+ALLERMED
+QUALCET
+Cetamol
+None
+Pyramin
+None
+Beta-D
+Bruprim Ds
+None
+Tanzase
+Diamir
+Aglic MR
+Galzid
+Glibey
+Pycip
+Xorutic-10
+Xorutic-50
+Epinotic-50
+Epinotic-10
+Activarol
+Nutravit C
+None
+Halcepin
+Cefakind-500
+Zocef
+Medzole
+Tribimin
+Olmexl-H
+Unbranded
+Exicof
+Doceted
+Kogzib-60
+Cefzox
+Cephin
+Dipexine 10
+Cefuroxime (As Axetil)
+Ramipex 1
+Ramipex 0.25
+TOLANZ 5
+TOLANZ 10
+Dipexine 5
+Predyl
+Qtipine 300
+Pneumonex
+H-ATOR 20
+NUTOR
+LIPINIL
+VAZEMIA
+CAVE – 3.125
+Ofpred
+Univan
+Vycocin
+None
+Dicyrine
+None
+Ulcep
+Acicare
+Unbranded
+Pantodium
+Pantowell
+Eloprix
+Propump
+Tamiga-Pan
+Preflux
+Preflux
+Zeprazole
+Nocid
+Unbranded
+Ivtrene
+Eftrix
+Ceftriasenz
+Platicin
+Cistiplax
+Lixiplacil
+Mefesaph
+Mef-Ac Tab
+Skythro-500
+S-Troz
+Unbranded
+Panwin
+Vuepan
+Rubilon 50
+Reliefsyc
+Flosarvasc
+Moferen
+None
+Tretinoin
+Tretinoin
+Unbranded
+None
+Gastrium
+Fosavance
+Clabiza
+Bizataz
+Bizafrox
+Telmicard-40
+Ampicelo 250
+Telmicard-20
+Afunginal
+Orastin
+Omephil-20
+Estafar
+Estafar
+Sepime
+None
+Ferglobin
+Brofesol
+Polypen
+Vazi2r
+Atorgen
+Esprocid
+Farmazole
+Emzol 40
+Omedime
+Omenix
+Prometin
+Proled
+Escinal
+Zuredel
+Amphostal
+Panto Plus
+Penstal
+Propump
+Bilax
+Sodampen
+Ketotialix
+Nephromin Alpha
+Ketomicore
+Ketorels
+S-Ket
+Alogil
+Ketosential
+Preveket
+Ketomitab
+Ketophil
+Ketacent
+Altologue
+Cisamin-450
+Apciron Plus
+Appebos Plus
+Colvit-S
+Nervitex
+Bucligen
+Enom
+Unbranded
+Praxejan
+Dylan
+HYPRO
+OPEROL
+MEDOFOL
+PRIVAN
+Crystacin
+Endovaz-10
+Unbranded
+Forcard
+Ceptrocin
+ACCETHROM
+Geocef
+Cefuvic
+Plaxime
+Unbranded
+Migapenstal
+Tranpozol
+Sitixon
+Gavixone
+Omcare
+Gemzole
+Omeprozone
+Kenzar
+Unbranded
+Unbranded
+None
+None
+Melmag
+Maxcid
+Januvia
+Xelevia
+JANUVIA
+Xelevia
+JANUVIA
+Xelevia
+Figna-5
+Perazovic
+Centraz
+Ceftravic
+Vicaxone
+Lidoright A
+none
+None
+None
+Mucoright
+Mucoright
+Mucoright
+Losakind-50
+Lodeesart
+Latamol
+A.R.A. + H
+Eleventin 457
+Cosmox 457
+Clavoxtin
+Amoxitrene
+Altocom
+Travoxclav-457
+Gomox 457
+Maxlavco 457
+Alclav DS 457
+Gloclav
+Coxxwell
+Moxgen-457
+Cassanoxiclav
+Clanav 457
+Cozeal 457
+Micoson
+Taxewell
+Doctaxel
+Edocexil
+Doxebest
+Taxewell
+Taxeria
+Doctaxel
+Edocexil
+Doxebest
+Taxewell
+Doctaxel
+Taxeria
+Doxebest
+Levotab 750
+Famicid-20
+Pancarzil
+None
+None
+Aloegin-V
+Ginking
+Ginsenz
+Exicof
+Exicof
+Imiwel-C 500
+Rosalta
+Unbranded
+Rosucare
+Rosuphil
+Rosvascal
+Aggravan
+Poweroxime
+Fosfa
+Ifosmide-1000
+Ifocare
+Ifosfaxil
+Akubose-50
+Omnicure-200
+Omnicure-1
+Unbranded
+CYCLOCEL
+CYCLOCEL
+Somazine 1000
+Cyclocel
+TEMOLON
+Safepim-1000
+XOPRAZOLE PLUS
+Haizole
+Aflacin
+Cool Eyes
+Giran-16
+Metodox 10
+Metodox 50
+Clopidrel
+Ciprodin-FC
+None
+RAYQUINCIP
+Raben
+Rapeed
+Ketostal 600
+Esselogue
+Stonekey
+Unbranded
+Kidneyfix
+Renalog
+Nephrophar
+Ketocitab
+Dialycare
+Ketoaminologue
+Ketogo
+Kadney
+Unbranded
+Amamcla
+METHOCEL
+Clariwell
+Dpmycin
+Fildox
+Doxyclir
+Sydogrel
+Levizine
+Panzole
+Cyzole
+Pancore
+Ambisol-150
+Lifezul
+Airflusal Forspiro
+Airflusal Forspiro
+Nervitz
+Cardipres
+Cardipres
+Crystacin
+Itorvaz
+Tenorvas
+Enhanzee
+Vitazee
+CORBIZEE PLUS
+Aezinc
+Enhanzee
+Vitazee
+Klomif
+Tobclovir
+Sucomox
+Clavonix
+Orcomox
+Dimeclav
+Carbitol-200 ER
+None
+Carbazedin ER
+Carbitol-400 ER
+Unbranded
+Pentoza
+Pantomerk
+Pratozol
+Feloence-5 Er
+Onsett 4
+Doxyperl
+Endtaz-2.25
+Piperbactam
+Methylpred
+Methyxicare
+Methyl-One
+Sanfur-500
+None
+EROXIME-500
+CEFGEN-500
+Vispoxetil
+QUADCEF 500
+ZEFCARE-500
+None
+Kardizar
+Unbranded
+Unbranded
+Lyrica
+None
+Lyrica
+None
+Lyrica
+None
+Kardizar
+Unbranded
+Eryzin
+Drafzin
+Astat
+Astat
+Lipewin H
+2Rvaz
+2Rvaz
+Cabumine
+Ampi-1
+Linzowel
+Zolidenol
+Linetab
+Ziproxyl
+Cipro-Base
+Mucoright
+Tigilyn
+Felostal Er-10
+Ivtig
+Ranitemp
+Miosil-5
+Miosil-10
+Claxic
+None
+Evacaine
+Cardoz
+Doxofar
+Doxonoline
+Doxfil
+Dixylline
+Doxoprim
+Xofilen
+Lunair
+Doxokem
+Tanop
+None
+Combipul
+Lotrilip
+Trichek
+Recita-5
+Eslopram 5
+Nefidoxime
+S-Foxime
+Endigly
+Memadem-10
+Xolvmantine
+Leimentab
+Ami-Levo
+Epilept
+None
+Benticet
+Unbranded
+WESTA
+ROXICLAV
+Capomed DS
+Oxan
+Beluxan
+Zeftacare
+Zonia-5
+Stafoban
+Moisol
+Clo-V6
+Thyrohold
+Akurit-Z Kid
+Ixime
+Tramic-500
+Microscot
+Mupirex
+MUPICORE
+Mopibac
+Citxl
+Gabi
+None
+Gablin
+Gabi
+None
+Gablin
+Endtaz-4.5
+None
+Zobacillin
+Reopiptaz
+PANTOVEX
+Cedin-300 Cap
+Womacarb
+Citifar
+Gociline
+Oxylize
+Neulon
+Teracit
+Cholidix
+Citicare
+Citico
+Exyt-400
+Glevate
+None
+Altacef
+Zoltar Insta
+Allercrom
+Otriright
+Otriright
+Corfex 500
+Unbranded
+Alletrin
+Irazol
+None
+Singulair
+Singulair
+Singulair
+Rovent
+IBROLEX
+Diprogenta
+DIPROGENTA
+Angistad
+Zocor
+Zocor Hp
+Triderm
+Esmeron
+Diprospan
+Exicof
+COZAAR
+Claryl
+Clabet
+Cozaar
+EZETROL
+Vytorin
+Vytorin
+Vytorin
+Hepnil
+Xibra-120
+Giran-8
+Pantrex
+Ceftripen
+Ulcen-20
+Ulcen-40
+Celzar
+Sydenmet
+CELZAR
+Vinlon
+Lipend A-Forte
+none
+UNOHIST
+Salbuvan Plus
+Visplegm
+Cefupen
+Aero-Vent
+Myremol
+Abilify
+None
+Abilify
+Unbranded
+None
+Aciflam
+Valianz
+Valianz
+Valazyd Am 5
+Cisamin-150
+Pletaal
+MUCOSTA
+Remedon
+Liferzin
+Dincilin
+Glivarid
+Lipend A-90
+Unbranded
+Vent
+Asmacaire
+Clonigen
+None
+None
+Primudine
+CLAVFIRST
+OMNIVOX
+Valianz
+None
+Done-10
+Alnepezil
+Amlodine
+Amlodine
+Clonigen
+Oxitin-10
+Lavoxin
+Ambitocyn
+Cleartocin
+Livesil
+Liverone
+Aefur
+Averkaz
+Averkaz
+Biped
+None
+Azmont
+Gemsafe
+Gecibixil
+Epihold
+Enaz DS
+Athrodim
+Clinbac
+Vitadol
+Caltri
+Esoget
+Apciron Plus
+Colvit-S
+Appebos Plus
+Apciron Forte
+Vazi2R
+Vazi2R
+Vazi2R
+Peptisur
+Zyclovir
+Zyclovir
+Analac
+Aerolac
+Synazin
+Ketosteril
+Sylergy
+Qutan
+Frexim
+Faxiclav
+Xovax
+Cozeal
+Mixclav
+Xovax
+Euroclav
+Azihold-250
+Azihold-500
+Azimac
+Telmignan-40
+Stalmino
+Unbranded
+Unbranded
+Unbranded
+Winmero-1000
+Ropenefix
+Mertripen
+Unbranded
+Entax-20
+Prozon Xl
+None
+Tamsia 0.4
+Unbranded
+Chlorolem
+Ritusin
+Cholorolem
+Puroxel
+Unbranded
+Mepzol
+Unbranded
+Vitacore
+Vitri-B
+Mylocure-2
+Mylocure-3.5
+SITAG-100
+Zytaglip
+SITAG-50
+Zytaglip
+Curafen
+None
+K-Lyte
+Unbranded
+Unbranded
+Betacrem
+None
+Topicrem
+None
+Unbranded
+Lungex
+Isonix
+Rosubolic-10
+Children's Clusivol
+FEROGEN
+Spiros
+Tritone
+Dixin
+Coxin
+Unbranded
+Terracef
+Unbranded
+Aekovan
+Cosec 40
+Omex
+Ezprazole
+Marzole
+Bosec
+Pralec
+Brizol
+Rezole
+Zomep
+Goproz
+Zole IV
+Q-Mep
+Cyfen
+ATAJEC
+Lifehistine
+Letram-1000
+Chiamin-S-2
+Celgro S-2
+Augmentin
+Unbranded
+Meromed
+Flucel
+Amint-10
+Celeright
+Axagyl
+Nidazoprime
+Delexigyl
+Zolegyl
+Onizole Vial
+Metroclear
+Trozodaz
+Neorobic
+Metrolev
+Godazole
+Losastal-A
+Quezar Plus
+Duocare
+Co-Dilavasc
+Diasarpine
+Gosartan Extra
+Lostar Xtra
+Lodizar
+Prozart Advance
+Losapine
+Artibloc
+Losadipine
+Unbranded
+Diablocker
+Mytensa
+Losawin-50
+Dylaran-50
+Quezar 50
+Curesartan
+Losarniel
+Wincolax
+CLINDARIGHT
+None
+Ximvex
+Amoxil
+None
+Welcet
+Lofection
+Azcor-C
+Rabamycin
+Clindason
+None
+CLINDARIGHT
+None
+Augmentin-DS
+Axa-Levo
+Bitagen
+Augmentin
+Augmentin
+Colchicine
+Medrone
+Predsenz
+Tamysin 0.4
+Glicamed
+Josilvite
+Turbovas -10
+Robestar
+None
+Roswin
+Rosalta
+Robestar
+None
+Propar Forte
+Parophen
+Guimgesic Forte
+Orphegesic Forte
+Cevertron
+None
+Vispogesic Forte
+Propar
+Orphegesic
+Philgesic
+Prasenz
+Reductazid
+Protoza 40
+Toprasenz
+AMMUNO-Z
+None
+Glucophage Xr
+Glucophage XR
+Glucophage XR
+Glucophage Forte
+None
+Glucophage
+Glucophage
+None
+Armida
+Monti Plus
+Aeknol
+None
+Syropen
+Merophem
+Merohil
+Merodime
+Meroxin
+Meroden
+Syropen
+Merowin
+Shepenem 500
+Meropenem (As Trihydrate)
+Meroden
+Nicardia-XL 30
+None
+None
+Ifosmide-2000
+Ifocare
+Ifosfaxil
+Cefovex
+Cefuvex
+Mycard-160
+Dystatin
+SAATIN 40
+Colistimethate Sodium
+Zinof
+None
+Contracid
+Goroxime
+Z-Nyst
+Geonyst
+Cefuvic 500
+Unbranded
+Unbranded
+Clopiwin-75
+Irnother
+Anastro-cell
+Ketoplast
+Treviso
+Zinacare
+Cefroxime
+Zufrexim
+Qualifur
+Glycinorm-80
+Unbranded
+Parafever
+None
+None
+Cebrofarm
+Diacoline
+None
+Fixcoline
+Tuseran Night
+Mucoright
+TORUS-10
+TORUS-20
+APZOLE
+Tamin
+Spectrax
+Locef
+Fazef
+Spiva with MCT-LCT
+Zyzyx
+Pregalin
+Neuroz
+None
+Lecoxigan-200
+Myrin I
+None
+Emistop
+LICACID
+FOLITRENE
+AMKOFOL
+FOLIMOM
+None
+Rabemed
+ENSET-8
+Ondatrix
+Piorance-30
+Piorance-15
+Unbranded
+Unbranded
+Trigel
+Alendronic Acid (As Alendronate Sodium Trihydrate) + Colecalciferol (Vitamin D3)
+Concore
+none
+Esitalo
+Pantomax 40
+Reprecid
+Tamiga-Pan
+Neo-Penotran
+Dizzex
+Rosuple 10
+None
+Rosuple 5
+None
+Thorexate
+Varolox
+Dixime-400
+Quix
+Tazim-O 400
+Jocefix
+Varolox
+None
+Feverflu
+Paracetamol + Phenylephrine Hydrochloride + Chlorphenamine Maleate
+Oxavin
+Oxanova
+Saphormin T500
+Medizole
+Diflosid
+Novamol
+Evirose S
+Extracare
+Harcee S.A
+Leal Vits
+Nosmok 2
+Nosmok 4
+Cigar-End 4
+Amaramet
+Acetylcysteine
+Goutab
+Amoxsaph-125
+Moxeth-125
+Novamol
+Amoxsaph-10
+Cecon Plus
+Seamoxiclav
+Moxsea
+Cefuroxime (As Sodium)
+Cefuroxime (As Sodium)
+Kefodox-100
+Dobumin
+Ingafol
+Glimryl-1
+STERIZOL
+Glimryl-3
+Racep
+Audra-160
+Fenodix
+TGCheck
+Excelfin
+Uniclox
+Orsa
+Varsa
+Korazon-L
+Acimed
+None
+Omevin, Omecid, Suprecid
+Levepraz
+Cabxol
+Relizol
+Westhromycin
+Pronerv
+Neuroprim
+Sterizol
+Temotero 20
+Temotero 100
+Aspirin
+Aspirin
+Unbranded
+Mefecod
+ZETICOF
+Bu-Ci
+Buticod
+Xycod
+Butametz
+Vitacod
+Anticof Sr
+ZEBET
+None
+None
+Valstan HCT 160/12.5
+Azisaph
+Azithromycin (As Monohydrate)
+Chlorsaph
+Phenmine
+Saphroxol C75
+Ambroxed
+Dutride
+Ertalym
+Omy 50
+Obyfarm
+Buston
+Buscomax
+Scolminn
+None
+Vispozinc
+None
+Maxizinc
+Zinex
+Unbranded
+None
+Unbranded
+Rospec
+Rovastin
+Unbranded
+Unbranded
+Catapin
+Merostar
+Zinacef
+Salvex XP
+B.N.P.
+Lubi-H
+Uniclox
+Welcard
+Valstan 160
+Abicof SG
+Catamed
+Inovox
+Clavmed
+Demiclav
+Clavin
+Aceclav
+J-Mox
+Pb Care
+Melodin Forte
+Curanerve Forte
+Nervin Plus
+NerveBon
+Nervace Plus
+Amlovin
+Amlovin
+Ultrazid
+None
+Rabesta
+Sensodex
+Fludalt Duo
+Biopime
+Terpime
+Coolex
+Flexicaz
+None
+Nuerotamol
+Lamotrigine
+Tamoxen
+Tamzenef
+Fludalt Duo
+None
+None
+Cefixon
+Jazeft
+B.N.P.
+Onecef DS
+Metacard MR
+Amzidine Mr
+Effezidine
+Unbranded
+Unbranded
+Cee-Protect
+Vert
+Vertegra
+Clodin
+None
+None
+None
+Clarithromed
+None
+Dextamin
+Amloval 80/5
+Amloval 160/5
+Inovox
+BROCURT
+Mucovin
+AMBROCARE
+BROXOLEX
+ALMODEX
+Salbugen
+Lamepil-50
+Lamotrigine
+Nahaltin
+Gabica
+Nahaltin
+Clavisar
+Lipimize-A 15
+Exforge HCT
+Exforge HCT
+Exforge HCT
+Exforge HCT
+Exforge Hct
+Mipride
+Referis
+Maxifer
+Axalav
+Haiclav
+Amoxivee
+Clavron
+Maxclav
+None
+None
+None
+None
+None
+Exxiv
+Exxiv Ac
+Exxiv
+Dystatin
+Unbranded
+Uniket
+Evaprine
+Suprinex
+Stigmithyl
+Vascolin
+Seatico
+Rancit
+Exemestan Stada
+Raroxime
+Buclicap
+Apps
+Irocap
+None
+Appimed
+Daily Plus
+Appebest
+Appecare
+None
+Novamol
+Ceft
+Cefuxil
+Duvamed
+Monobide-10
+Monobide-20
+Folaxin
+Alsium
+Aldrox
+Alumetz
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+None
+IV-Pro
+Zidicef
+Clopidra
+Docewish
+None
+Erecto
+Asvimol
+Erecto
+Profosol
+Profocare
+Prolide
+Endmet
+Bupain Heavy
+
+
+Moximac
+Menaright Forte
+Harvifer
+RH Com
+Forecox Trac
+None
+Budeson
+Breecort
+Budesonide
+Budesonide
+Lavtrim
+Maxoptic
+Sucranorm
+Grovipen
+Seapenem
+Euformin
+Cetirid
+Combiwave SF 50
+Combiwave Sf 125
+Adeflo MDi 125
+Combiwave Sf 250
+Adeflo Mdi 250
+Eslo 10
+Candiva V Gel
+Glencet
+Maclar
+Dipsotrex
+Losagen 50
+Monte H5
+Monte H4
+Moxetero
+C-PAC
+Bandax
+VALSAR PLUS
+Bacticef
+Vaptor 10
+Rinityn
+Montelair 5
+Iprocin
+Ricam
+Supenem
+Isordil
+Atorvastatin (As Calcium)
+Ibicar 50
+Ibicar 250
+Docemed
+None
+None
+Pregabur 150
+Unogab
+Prebawell-150
+Biodin
+Biocillin Plus 750
+Ampisultam
+Amsucillin
+Bicamcillin
+Amkotam
+Duobaclin
+Amsuduo
+Ampilev 750
+Amphot
+KlirNose
+Avatan
+Cortisol
+GUIACOF PLUS
+Guiacof Plus
+Nicardilex
+Rondcap
+I-Vit
+Neosan
+Neotapp
+Neogen Plus
+Andimycin
+Prazocap
+Nicarpine
+Euromycin
+Amkoclin
+Clindex
+Clindaman
+Clindalev
+Clindavest
+Ometift
+Elbazole
+Omecore
+Biozone 1.5
+Zynapse 500
+Zynapse 1000
+Micropost
+Meropenem (as Trihydrate)
+Goprenem
+Carmepem
+Grocef 750
+Cefumin
+Seaxime
+Ozepran
+Ammuno-Z
+None
+None
+None
+Octritide
+NEOSAN
+Neotapp
+None
+None
+Vert
+Eurozine
+Hapiozine
+Vescopolamine
+Gentrobex
+Entegard
+Esomep
+Esomep
+Salmeflo
+Gabatin
+Urlyx
+None
+Gabatin
+Sezolam
+FEMARA
+Dironest
+NEUROBOS-E
+NERVE2
+REXOFEN
+Iberet-Folic 500
+Diadipine
+Ritusin Plus
+Diadipine
+None
+Unbranded
+Optimox
+HovidEuform
+Metformin Hydrochloride
+Diohes
+Hemovein
+None
+Amloval 160/10
+None
+Enerstress
+Enerstress
+ANSIMAR
+None
+Irbenox Plus
+Arten Plus 300
+Irbenox Plus
+Ambrolem
+Gabavex 300
+Escivex 5
+Capvex 500
+CIMAG
+Irebevex 150
+Irebevex 300
+Valvex 160
+Vexprazole 40
+Olavex 5
+None
+Quadmax
+Diacef
+Oradol
+AFM
+ACYVIR
+Ovulant
+Fertyl
+Ovumed
+Biomef
+Rosadoc-10
+Rosvastium
+Pregabur-75
+Unogab
+Prebawell-75
+None
+None
+Duomax
+Sitapro
+Cloxacillin (As Sodium)
+None
+Neotear
+Axiclav
+Viamox
+Kaligen
+Ketro
+Inovox
+Aceclav
+Clavin
+Coxigen-90
+Sitimax
+Bizyx
+Akion
+Bipera
+Cloplife
+Duvagen
+Ator-40
+Coxigen-60
+Starcox
+Etoxi 120
+None
+DANOXIME
+ELBACEF
+None
+None
+CARDOWIN
+Nicardime
+Diaflu
+Metrozole
+Ceflor
+Dosanac
+Symeril
+UNICIL
+Unicil
+Merrox
+Shepenem - 1
+Merowin
+Procef, Prophem
+Ero-S
+SORBANCE-5
+CARBAMAL-400 CR
+Ezoprole
+Noveron
+None
+Vent-Aid
+Salbussin
+Gemtero
+None
+Multilem Plus
+Clavic
+Inovox
+Clavmetz
+Mediclav
+Altoclav
+Altovox
+Clavsef
+Proviclav DS
+Euroclav
+Guimox
+Vaclopsiv
+Augmin-457
+Remedia
+Levosheen 500
+None
+Maxcef
+Cizcan
+Oxapen
+None
+None
+None
+none
+BDLYPO
+Lypodoxo
+Doxrucin
+Ocudor-T
+URODIL 300
+Colimax
+Urcid
+Ferolem
+Nausil
+Ziprox
+Serc
+Symeril
+Salbutamol (As Sulfate)
+Metrozole
+Sitapro
+Zudem
+Bliron
+Feruvin
+Ferriscript
+Isufer
+Ironova
+Clfer
+Irofer
+None
+None
+Vitoplex
+Natrazol
+Natrazol
+Dialix
+Ator-20
+EUROCOF
+REMOP
+Sanopime
+Sanpime 1000
+Procefep
+Cepimed
+Novirox
+Shafurox
+Profure
+Cefuhil
+Biorox
+Roxicef
+Adivia
+Zita 25
+Adivia
+Zita 100
+Adivia
+Zita 50
+Breathy Nasal Spray
+Menthodex-DM
+Montair
+Montair
+Montair
+Whilst
+Menthodex-DM
+Novixon
+Shaltrax
+Azoni
+Ceftrihil
+Biotrix
+Geftri
+Tricexone
+Clarithromed
+Klaryz
+None
+Claxic
+ORASTAT
+Mucolem Plus
+Nidex
+Syden-C Pluz
+Zyde-Cee
+Ceezinc
+Arizopress
+Arizopress
+Moxylor
+TACROSTAL-1
+TACROSTAL-5
+Ceflor
+Dialox
+Zenxime
+Sylvite
+Dyna-K
+Kalyx
+Impresol
+Ambrolem
+Sinudrin
+Ambrolem
+Adigo
+Starclav
+Clavztar CV625
+Hyogen
+Nelstac
+Dialix
+Diatafen
+None
+None
+None
+None
+Bisoza 15
+Arigen
+Bisoza 10
+Arigen
+Hemotrex
+Hemoxid
+Hemotran
+Bisoza 5
+Arigen
+Dactive
+Tramazac
+None
+Tricoxia
+Tricoxia
+Clazol
+Meslatin
+Coloxatin
+Ciprobay
+Olan
+Oelanzapine
+Olan
+Oelanzapine
+Edroxid
+Q-Win
+Rispond
+Rispond
+Q-Win
+Oetiapine
+Clomi
+Soluvent
+Aero-Vent
+None
+none
+Unbranded
+None
+Angioten
+None
+None
+None
+Nexart
+Clottinex
+Clottam
+Tranex
+Traxan
+None
+Foliage
+None
+Dialomide
+Letov 2.5
+Castra
+ESOTEC
+Pantocin
+Aeruginox
+Cotenace
+Lemzinc
+Ferolem
+Excillin
+Misopt
+Rapidon
+Iotim
+Deprizac
+Serine 20
+Partners
+Diaciel
+Diahist
+PROLIDE
+Endmet
+Nictram
+Alprazolam
+Altovox
+Altoclav
+Mediclav
+Unbranded
+None
+Neurolev
+Lofibra
+Aleva
+Cloxane
+Cloxyl
+Twynsta
+Twynsta
+Twynsta
+Nervita 100
+Brimochek T
+Brilol Plus
+Redoxfatout
+Vita-E
+TieMac
+Vaneular
+Fortiplex
+Gentacare
+Mucolem
+Zaliana
+Zaliana
+Zaliana
+Moxylor
+So-Cee
+Zolerix
+Zolechem
+Zolerate
+Dotrex
+Tezoxil
+Folium OB
+GEOMIN
+Lopres
+Ezoprole
+MERONIX
+Meronix
+Kadagra
+Alprazolam
+Oxeptal 300
+Deslogen
+Mucolax
+None
+Multilem Plus
+Ambrolem
+SOS
+BECAINE HEAVY
+Sinudrin
+Losartan Potassium
+Grozaar
+Grosartan Plus
+Grozaar Plus
+Recita-10
+Tazol 100
+Valazyd 80
+Valazyd 40
+Valazyd 160
+None
+Tazosan
+TAZOSAN
+Silaptaen 50
+Silaptaen 100
+Zefumed
+Tgcef
+Koppel
+Diazolid
+Comoxi
+Co-Amoxiclav
+Irbezyd-H 150/12.5
+Forair 250
+Forair 125
+DERIHALER 100
+None
+Vancocy
+Vancoblis 1000
+Trustiva
+Tenof-EM
+Eltvir
+Tazacin
+JAPITAZ
+Pipcin
+Goutsaph
+Saphridone
+Losacar 100
+Irbezyd-H 300/12.5
+Meconeuro
+Hematron
+Risponz 2
+Risponz 3
+Spirofar
+Spirodix-25
+Spiroden
+Diurix-25
+SPIROFAR
+Spirodix-50
+Spiroden
+Diurix-50
+Revaiv
+Chlamadox
+Ulceburg-40
+Sucon RB
+BACTROFAR
+Abrexin
+Ciproted
+Ketoanalogues + Essential Amino Acids
+None
+Zyom
+Somezol 20
+Somezol 40
+AMLOPURE-10
+Amalvex
+Govasc-10
+ARTAL-H
+Losartan Potassium + Hydrochlorothiazide
+Mentra 10
+Xtracee Plus
+Pak-C Plus
+Unbranded
+None
+Saphlopid
+Phree
+Zopramep
+VAN-CP 500
+Vencusin
+Vancowell
+Vancoxyc
+VAN-CP 1 gm
+Vancoxyc
+Diafat
+Glumet
+MEMANTA
+Irinocan 100
+Mersa IV 1000
+Mersa IV 500
+Famcin
+Rifamox
+Zatfec
+Psyqure
+Alletrin
+Zericin
+None
+Psydin
+Oxyfar
+Ganavit
+None
+None
+Dobumine
+Abrexin
+POLIK
+Olik
+Afix
+Neovita
+Exelon Patch 10
+Tansinel
+Prosec
+Exelon Patch 5
+Exelon Patch 15
+Bizataz
+Bizazoline
+Bizazoline
+Zoletero 4
+Azalan
+Vita D-Max
+Pradaxa
+Pradaxa
+Pradaxa
+Tripgen
+Alonazole
+Noflu Non-Drowsy
+Noflu
+Twynsta
+Terexib
+Terexib
+MYMET
+Pampro
+Cirab
+Tegretol SR
+Tegretol
+Tegretol LA
+TRILEPTAL
+Appetens
+Suref
+Fluzol
+Orfen-Plus
+Orfemed
+Ascorb
+Loric-300
+Trileptal
+Appetens
+Loric-100
+Redoxfatout 60
+Renalog
+Ketorose
+None
+Azithromycin (As Dihydrate)
+ZITHRAN
+Claribid
+Jovan T 20
+None
+None
+Aeruginox
+Co-Amoxiclav
+F-Vita
+Pletaxol
+Pletaxol
+None
+none
+none
+Emitron
+Clariva-500
+Cefovex-500
+Sanix-200
+Leveram
+ZENCAINE HEAVY
+Sergivell
+Ulmitrip
+Unbranded
+None
+Atorpro
+Atorpro
+Plezol
+Movapane
+Gefonib
+Albroxol
+None
+Broxan PSF
+Ambroxyl
+LIPITROL/ VASTAT
+LIPITROL/ VASTAT
+Imiquad
+Geotrixx
+Alagesic
+Xet 20
+Citicore
+Gainmax
+Dobucin-50
+Clazol
+BIOLAC
+HAILAC
+Ezeequit 1
+None
+None
+Atorgard
+Atorgard
+Bisapro
+Carboguard
+Irbin
+Albestan
+Irbin
+NAPROMED
+Pregard
+Neurolit
+Propbloc
+Unbranded
+Ceflor
+Amlopure-5
+Amalvex
+Govasc-5
+Ceflor
+Hexol
+Montezyd 4
+Montezyd 5
+XYFROX
+Micardis Plus
+Altocid
+Zypezil 5
+Lamidus 100
+Exuber 10
+Unbranded
+Mediderm
+Fusidex
+Tegrepin
+Parasidon
+Gemtero 200
+Hicaire
+Clorfil
+Salflusol Mdi
+Salmed
+Salflusol Mdi
+Salmed
+Dozantel
+CALCIUMVIT
+Penegra 100
+Penegra 50
+Zypezil 10
+Proderm
+Mupiroseth
+Versubac
+None
+Mupirich
+Fulvast
+Fuliget
+Rosutin
+Versartan
+Versartan
+None
+Lozamex
+HYOCORT
+Anerocin
+Cefaclox
+Micardis Plus
+Micardis Plus
+Seregra
+Seregra
+None
+Clavobac
+Rosupro
+Gliclapro
+None
+Pregmed
+Irbecard
+Pronorm
+Ulcedrug
+None
+Sycor
+Leponex
+Atrium
+Tracubest
+Dotrex 2
+Aletagem-200
+None
+Leponex
+None
+Co-Diovan
+Co-Diovan
+Kingfloxin
+Cipulox
+Ezeequit 2
+None
+Syclop
+Athero
+Vitguard-C
+Tengard
+Quatroderm
+Calsup-C
+Calsup-L
+Unbranded
+None
+None
+Cekom
+Co-Diovan
+Leveram
+Leveram
+Hyasod
+LACRITIN
+Acuvis
+Maxef
+Amsoclar
+Cymycin
+Clarimac
+Cymicin
+Clarimac DS
+Clarithromycin
+Clarithromycin
+Zoplinova
+None
+None
+Cataflam
+Maxibrol
+Patricol
+MERROBE 500
+MERROBE 1000
+Mo-Floren
+Quinofta
+Suncetin Tab
+Piperax
+Propitaz IV
+Unbranded
+None
+Ursodox
+Morzinc
+Anatero
+Bezom
+None
+Valazyd H 160/25
+Levocarbdin
+Levocarbdin
+Drexabion Ob
+Jagaplex Ob
+Vitafer-Ob
+Acticare Ob
+Probionerv Plus
+Ferciplex
+Folace Ob
+Euronatal
+Unbranded
+Dothix
+Dobumean
+Dobuts
+Dobutam
+Spiros
+Akidin
+Rosutex-20
+Rosutex-10
+ACC
+Pneumotyl
+Aclir 400
+Aclir 800
+Telsitan-H
+Concore
+None
+Syclop
+Concore
+Unbranded
+Cefotiagen
+Mighty Cee
+T-Mycin
+Nuevamoxil-Ds
+Dexatrol
+Gludin
+Rubilon
+Trampro
+Blocapast
+Amlix
+Polyderm 4
+Appetan
+Anemifer
+Baracross
+Luprodex
+None
+None
+Neoflu
+Flustan
+Gardan
+Bicatero 50
+Bicam
+Bicatero 150
+Spiriva
+Moxydril
+Spiriva Respimat
+Geocobalamin
+Legreat
+Zudem
+Unbranded
+Unbranded
+None
+Lexdin
+Lexdin
+Atorzet
+None
+Fuximox
+Zexime-250
+Cefurax-ax
+Thydin
+Thydin
+Thydin
+Thydin
+Thydin
+Abdin
+Abdin
+Zolodin
+Albroxol
+Unbranded
+Ambroxyl
+Halopsych
+Jasocaine A-DC
+Epicraine
+Xylocare Plus
+Gocaine Plus
+Atocard
+None
+None
+None
+Globifer FA
+Medifortan Plus
+None
+Bisolem
+Riphen
+Rosuforte
+Alagesic
+Diabee Forte
+Moxylor
+Aldezol
+Retorvast
+Micardis
+Micardis
+Accephrine
+Ketromine
+Ligoxin
+Siquapine
+Siquapine
+Siquapine
+Liothyl
+Tidact
+Dynacin
+Histaril
+Unbranded
+Unbranded
+Astagen
+Tron
+Kenaxef
+Unbranded
+DUOVAL
+ACC
+Exflem
+BIOROSE
+Iroferose
+Fersucros
+Ferumcrose
+Ferriscript
+Kindoplex
+None
+Anemifer
+None
+Flocip
+Increbion Max
+Vitadex
+Haimax
+Rosuvastatin (As Calcium)
+Z-xone
+AcceColine
+Foskina
+Mepem
+Alagesic
+Vitacinc
+Multimin
+DoÃ±a Krels
+Unbranded
+Unbranded
+Unbranded
+Sultralin
+DOMPY
+Lexapro
+Lexapro
+Lexapro
+None
+None
+None
+Aremed I
+Anastragen
+Zenstra
+Strazol
+Ferolem
+Metrogil
+Alfaren
+Zolichek-T
+Alerchek
+Combivent Udv
+Berodual F UDV
+None
+Olmat
+Olmezar
+Aldren 70
+Olandus 5
+Levoday 750
+Etopain 30
+Etopain 60
+Etopain 90
+Etopain 120
+Zycel 200
+Gemibine-1000
+Gemibine-200
+Zycel 100
+Carvidon -20
+None
+Trileptal
+Lepticap
+Ambimax
+None
+None
+Gastrec 20
+Mepraz
+Macrodantin
+Macrodantin
+Levolife
+Ciplife
+Oflolife
+Flucolife
+Siclav
+None
+Droxyl
+Medofer
+Resflox
+Sinuzip Pe
+Zytra 50
+Solotrate 20
+Solotrate 40
+Sizonil 25
+Sizonil 100
+Xipro
+ESITA
+Inozar
+Amlosta
+Duoden
+Atorwin
+Atorwin
+Atorwin
+Nocloxol
+Valazyd H 320/12.5
+Proclav
+Augmin-625
+Comvita B Forte
+Medaclox
+Nepin
+Biopril
+REEVIVE FORTIFIED WITH GINSENG
+Olmat
+Philclox
+Derpson
+Glimide
+Sonap
+Philflam DR
+Pecof
+Appekids
+Diameride
+Zincavit
+Zincavit
+Amectuss
+Barominic
+Voncartin
+Hyoscipan
+Mocast-10
+Montizet
+Athero
+None
+Dopan
+Melanov MR 60
+Doxollin
+Betacor
+Carditec
+Unbranded
+Alkacel
+THEOROXIME-750
+THEOROXIME -1.5
+Cognizanz
+Cognizanz
+Pemehope
+Pemehope
+Arvast 10
+Arvast 20
+Edroxid
+Nircaru
+Entigard
+Nicargen
+Unicard
+Cardif
+Nicardo
+Cardizef
+Gocard
+Gocardipine
+Mardepine
+Nicarsin
+Nexium®
+None
+Crestor
+Crestor
+Rispond
+Oeperidone
+Ambifit-120
+Unbranded
+Unbranded
+Gablurica
+Gablurica
+Pantobiza
+Irbezyd 75
+Fluocine
+Sulidin
+Profenil
+Flemizyme
+Closderm
+Covelay
+Droxiderm
+Topibac
+None
+Ilocet
+Unbranded
+Klenzit-Ms
+Glemont-Ct 5
+Glemont-Ct 4
+Boricetam
+Fleridine
+Dermablend
+Dermablend
+Unbranded
+Unbranded
+Unbranded
+Glovedol
+Ampicare
+Artal
+Saztan
+Globastat-20
+Venalax
+Norvent
+Lepsio
+Encorate
+Convulzor
+Vometa FT
+Unbranded
+Klenzit-CMS
+Formex
+Reform
+Flutimate NS
+Unbranded
+None
+Scalpex
+Calcidin Plus
+None
+Unbranded
+Unbranded
+Fazlin
+BEZOLIN
+E-DOL
+Pregadex
+Pregadex
+Unbranded
+Unbranded
+Unbranded
+Micostat
+Gliformin
+Genavon-B
+Johnvasc
+Frusemide
+Gemhope
+Gemhope
+Oxuba
+Oxadexcel
+Oxuba
+None
+Aclav
+Ultracaine Heavy
+Globanac 50
+Lufenac
+Unbranded
+Liconor 300
+Rosuvaz
+Pharemin
+Ener-Forte
+Dexamax
+Silvedex
+Sildiaz
+Poten-Cee
+Gastrec 40
+Unbranded
+Unbranded
+VItagene
+E-Nova
+Iprofen
+Butam
+Unbranded
+Kidzinc
+Kindoplex
+Cycamil
+Ramitob
+Optob
+Unbranded
+AZIBIAL-500
+Multinova-G
+Letrocord 2.5
+Unbranded
+Fucon
+Euthyrox 100
+Euthyrox 50
+Euthyrox 25
+None
+Unbranded
+Unbranded
+Unbranded
+Dailyvasc
+Unbranded
+Unbranded
+Iron
+Sildafil 100
+Unbranded
+Zudem
+Candiva
+Candiva
+Canditral
+Tri-bee
+Esoz
+Tazret
+None
+Korgivit-E
+Diabee
+Zetifen
+Zetifen
+Zetifen
+Azilide-500
+Hypanto-40
+Stagalin
+Betzidine MR
+Ceft
+Supremus
+Mucopid
+Telcard 80
+Acc
+Xyntoc
+Gentocin
+Off-Colds Forte
+Symden Forte
+Off-Colds
+Symden
+Tempmed
+Iritero
+Iritero
+Varucefa F
+Neumotropio
+Amplacef
+Unbranded
+OXY-POL
+Esotan
+Meslatin
+Dictas
+Airmaxx
+Paracetamol + Guaifenesin + Phenylpropanolamine Hydrochloride + Dextromethorphan Hydrobromide + Chlorphenamine Maleate
+Mucotuss
+Paralife
+Arizil 10
+Arizil 5
+Tiboleen
+4Lergic
+C-4 Kids Plus
+Redugal
+Tamsulon-XL
+Unbranded
+Unbranded
+Methocel
+Unbranded
+Unbranded
+Methocel
+Methocel
+Unbranded
+CT-Comeed
+Metzole
+Cispa-50
+Accord Zoledronic 4
+Thermodol IV
+Paranova
+Gotamol IV
+Aizet-S Iv
+Histabloc
+Xaliptine
+Auxibrum
+Mucosul
+Hepatis-F
+Allecur
+Pamidol 370
+Murophar
+Alerchek
+Unbranded
+Unbranded
+Unbranded
+none
+Xolepreme
+Vitagain
+Painaide
+Zodox-10
+Cefuseth-250
+Azitobact 500
+Mixigil
+Cefuseth-125
+None
+None
+Ilozef
+Cloxasaph-125
+Cloxed-125
+Cloxasaph-250
+Cloxcillin
+Doxysaph
+Prednisaph
+Predcort
+Gostatin 20
+LORIV
+Amelor
+Brolex
+Fevercare
+Neurobase Forte
+Clavmed
+Metrogyl
+Levin 500
+Taxtas 80
+Taxtas 20
+ENDURPIN
+Dailyvasc
+Rocy Gen
+Zobid
+Hycronin
+Ciflotram
+Ameket
+None
+Picinaf
+Capecitabine
+Gacet-250
+Agycin-500
+Sitagpina
+Unbranded
+Mycartan-80
+Unbranded
+Penchlor
+Feno-Tg
+Atorgard
+K-Barin
+Stabeta-40
+Stabeta-10
+Cidroxal
+Lazicare
+Diasutin-50
+Kepreptol
+Dobstal
+Phytocare
+Dexeryl
+Amigard
+Vento-Broncho G
+Pleuraventin
+Gabalept
+GACET 125
+None
+Clorfil
+Penodex
+Atorlee
+Clabimen
+Glibemide
+NerveVital
+None
+Rexcodyl
+Xyfol
+Cyfepime
+Zodox-50
+Zincap
+Savecef
+Taxocef-O 200
+Immunocep
+Ornexin
+Saphetor 90
+Saphetor 120
+Saphlexin-250
+Cefled
+Saphmox 500
+Amoxicillin (As Trihydrate)
+Megyxan
+Mefed
+Savecef
+Erysaph T500
+Erythcin
+Combizole
+Trimoxed
+SERLATUSS
+Phenomed
+Yumepra
+Ambidol
+Co-Amoxisaph-250
+Co-Amoxed
+Xorimax
+Aluprin
+Yuferox
+Philosporin
+Cephaxime
+None
+Augmentin
+None
+None
+None
+Folvin
+Myotan
+Jensar
+Besartan
+None
+Droxyl
+Mulfesaph
+Optimin
+Klazide Mr-30
+None
+Mucomed
+Pregasafe
+Glonaz 150
+Westamol
+Drozid
+Foskina B
+Linelid
+Ergomet
+Doxonish-50
+Oxanish-100
+Voleca
+Trifixime
+Unbranded
+Mepzocap
+Unbranded
+Mepazole
+Cefux
+Cefux
+Neurica-75
+Gobalin
+Zefur
+Nasathera P
+NASATHERA
+Tramadex
+Renatrol
+Endovaz
+None
+Cardiosim
+Forcad
+Rybac
+Prend
+Milgesic
+Natripine
+Dixin
+Cixtor-Z
+Win-Z Plus
+Utrixone-1000
+Cosuvast
+SECUNDA
+Mine
+Erzol
+Axacip
+
+AMBTOCYN
+Faseth
+Folicaid
+Spastop
+Elcin
+BEZTIN
+RANICLAV
+Numaren
+Nurokind
+Unbranded
+AXAMET-IV
+CEVITA
+TROPICEE
+Lorid
+Immunix
+Allergix
+Unbranded
+Tramal
+Erlonib
+Clopidogrel (As Bisulfate)
+Ketozar
+Virbez 300
+Cilozol-100
+Cilozol-50
+None
+Lorid
+Godine
+Unbranded
+Axapor
+ARBISAR-50
+Losartrixx 50
+Arbisar-100
+Losartrixx 100
+Amlodine Plus
+Glivec
+None
+FEBUDAY
+Epinozal-OD 20
+Epinozal-OD 10
+Epinozal-OD 5
+Telsar-80
+Synigen
+EOZET
+Glevo I.V.
+Win-Z Plus
+Osteo-D
+Calciplus
+Calsimet
+Osteopro
+Catazol
+Unbranded
+Moxiflovic
+Docegen-80
+Docegen-20
+Gentaxel-30
+Gentaxel-100
+Clacure
+Anigex-35 MR
+Alzancer
+Alzancer
+None
+Ambilin 500
+Ambilin 1000
+Unbranded
+None
+None
+Unbranded
+Milflox
+Softview
+Winolap
+Winolap Ds
+Latoprost
+Latoprost RT
+Histamed
+Histamed
+PHILAMIN
+Neperlan
+Fonkopac
+Fonkopac
+Fonkopac
+KETOCID
+None
+Codsyne
+Imuzen
+Sanfur DS-125
+Sanfur DS-125
+Ranitemp
+Neocetamol
+Betzine
+Betzine
+Betzine
+Rani-C
+Diosmed
+Erzin
+Nysecod
+Pulmox
+Rapidax
+Irodex
+Tricomb
+Azcore
+Zolnex Plus
+Maskontrak
+Fluaid
+Ampicello
+Trifix 200
+San-Xitin
+Bewell-C Zinc Protect
+Losacraft-50
+Clofranil
+Dicorate ER 500
+Encorate
+Levipil 500
+Levipil 750
+Nexito 20
+Oleanz Odt-10
+Parkimet 275
+Topirol 25
+Nexito 10
+Oleanz ODT-5
+Serotia 100
+Parkimet CR
+Renocell
+Trifixime
+Rustor
+Strocit 2 mL
+Strocit 4 mL
+Serotia 300
+Vexil
+Solzid
+Formipro
+Cefolan
+Sefox
+Oxima
+Glotrek
+Anexa
+Aciloc
+Serotia 200
+Sizodon 2
+Loragy
+Luming-E 400
+Xiomic
+Prixanep-100
+Prixanep-500
+Oxanish-50
+Zinol
+Zithromax
+Zithromax
+Rosumax-20
+Rosumax-10
+Pregamax-75
+Esomax-40
+Corvizem
+Forzem
+Biprosolone - 125
+1000Vc
+Ascorb-C
+Carvas 25
+Sydenerv
+Fenal
+Noviral
+Metson
+None
+Momegard
+Etolon 100
+None
+Unbranded
+Amcetam
+Lordzolin
+Corbic-Z
+Ketopane
+Amlorcil
+EBERELBIN
+Lamotrin ODT-100
+Lamotrin ODT-50
+Lamotrin ODT -25
+None
+Cenzet
+Allunol
+Dolfenal
+Ambiretic
+Unbranded
+Rimecod Forte
+None
+Acresil 150
+Unbranded
+Golxen
+Bylo C 1000
+Bylo C 500
+DOPAGEN
+Paclinish-260
+Paclinish-100
+Plemerid
+Sitidol
+Bicorplex
+Ferrovin
+None
+None
+Noklot
+TRIOVIT-B
+Fave-E
+Tanya-E 400
+None
+Zetrinx Plus
+Cetirigen Plus
+Allecur Plus
+Iburaph
+None
+Ibugen
+Philpara
+Amcovit-B
+Amcovit-B Forte
+Pearly-C
+Nomoflem
+Pexitas 500
+Etoshine 60
+Serotia 25
+Octride 100
+Docxen 275
+Docxen 220
+Amisac-500
+Gefox
+Zuregem
+Stalevo
+Aknizol
+Cefugen
+Ciropred-40
+Citxl
+Poten-Cee N.A.
+NASCORB
+Ridop
+Medomox
+Unbranded
+Rispericare
+None
+Cletal
+Salbumax
+Amnol
+Kortisan
+Ketorzac
+Iritanz
+Iritanz
+Laradin
+Ceticit
+Bronium
+Multirich
+Multimeds
+Veinxell
+Vineuron Plus
+Gavindex Forte
+Nicoplex Forte
+Nervemax Forte
+Lexi-B Forte
+Neurotrene 300
+Etoshine 90
+Etoshine 120
+Zosert 50
+Bestamol
+Prostmax
+Sangesic
+Neurobexol Plus
+Laxanova
+Glucozide
+None
+Ascozinc
+Zytrex
+Augmeed 228.5 DS
+Cledomox 228.5 DS
+None
+Inflazon
+Staloxa-50
+Staloxa-100
+Stancee
+Vispovit-B
+Getabin-200
+Unbranded
+Getabin-1000
+Clarinova
+BELPHRINE
+Olodin
+Ferri-C
+Rovitale
+Unbranded
+Unbranded
+Norgesic
+None
+Vuznerv
+Nascorb
+Presone
+Unbranded
+Bortrac
+Y-Cef 750
+Sherpime-2000
+Hybip-170
+Hybip-165
+None
+Etrox
+Nasaid
+Revivn
+Tobaren
+Bdocin 150
+Vesifix
+Vesifix
+Metindaz Forte
+Metindaz
+Ifamso PE
+Ifamso
+Zicolin
+Quprin
+Carbopa-450
+Carbopa-150
+Enervon Activ
+Appetiz
+Philprin
+Mucolief
+Ascorsaph-Na
+Ecprin-80
+Latochek-T
+Repose
+Belivate
+Aerius
+Theopan-40
+Femaloc
+Norgesic Forte
+Metalo
+Yupitam
+None
+Momeflo
+Nifgard
+Nifgard
+Prevahist
+Carbonish-150
+Doxonish-10
+Ascorsaph-D
+Rhydformin 1000
+Curequet 300
+Clodiflox
+Aldromet
+Nadiquin
+Mucosul Advance
+Drexclo
+Pyromed-C
+Effer-C 500
+Effer-C Kids
+Moldrex
+Pexole 1
+None
+None
+None
+None
+None
+Trivan Plus
+Valianz
+Novasartan
+Acetafen
+Ambilyte
+Corbizee Plus
+Sydencee
+Sevotane
+Panum 40
+Gluclazide SR
+Zeltine-MR
+Zeltine-MR
+Rixanep-100
+Pemestal
+Bligem
+Bligem
+Gapcee
+Emetil-10
+Multilem
+None
+Sinucalm
+Tenafine
+UCAL
+Zinclamine
+Flexiron Plus
+Ambigen
+Mfsone
+Sudif
+Zycozole
+Siderfol
+Broncocil
+Broncocil
+Virilex
+Caltone
+Ambical-Plus
+Blanc White
+Sidik
+Rosufar-20
+Acunasyn
+Sitagli-50
+Klevra
+Lezure
+Unipime 1g
+Gemtex
+Myprol
+Cyclostad
+Laxin
+Klaz Od
+F-Diclo
+Noticanz
+Axacrome
+none
+Mupigard
+Diacure
+Ferolitab
+Delcon Forte
+Corzinc
+Foliz
+A.R.A
+Lostar
+Merosan
+None
+Merothix
+Meinem
+None
+None
+Xitin
+Zitol-CL
+Alfree
+Esometor 20
+Esometor 40
+MaXine
+Cytax 100
+Noticanz
+HYDROCORTIBAS
+Hemobas
+Tatio-Cee
+Dobubax
+Cloxil
+Encloxil
+Ponser
+Ebacee
+Azkortab
+Slim & Trim
+None
+None
+None
+Cilatin 50
+Carbol-450
+Unbranded
+Zincoral
+Oprex
+None
+Easelac
+Rociem
+Limcee-Z
+Calcie
+Ascorsaph-Zee
+Saphcee-1000
+Simsim-D
+Ambical
+Mountbion
+None
+None
+Clopinova
+Mucotil
+Mucotil
+Mucotil
+Buderite
+Ceftazim
+Paratuss
+Benzadiq
+Seconxime
+Biaxin
+Stal-lact
+Brexen
+Per C Plus
+Supra C
+Mucozinc
+Histazine
+Allermed
+Zincet
+None
+None
+Protecz
+Azcorbee Plus
+Unbranded
+None
+Laxobron
+None
+D3 Intense
+None
+Jabtol
+Cetodol
+Cetra
+Zecroxil
+Lexib
+Cox-2
+Bioxib
+Ricoxib
+Alcoxib
+None
+Sydenclox
+Flacidon
+Naflax
+Naplex
+Comox
+Clavic
+Lactamox
+Comox
+Solvamox
+Clavic
+Lactamox
+Claxic
+Wilom
+Wilom
+Mep-20
+Plagerine
+Vivelon
+Flazidem
+Unbranded
+Relaxan
+Mulax
+Apaxene
+Altolax
+Curelax
+Amlomed-5
+Zefsur-500
+Isorane
+Genom
+Tocinox
+Nolcif
+Aeflox
+Fazactin
+Amoxicillin (as trihydrate)
+Clofefar
+None
+None
+Cloxipen
+Cloxacin
+Cloxakid
+Pannox
+Oxeed
+MEDICLOX
+Leiviclox
+Cyclox
+Lozaar
+Carvidon Mr
+Pediaxil
+Flactamacin 500
+Kinogen
+Ciprogen
+Ziproxin
+Prixlae
+Celvit
+Neurovit Max
+Pro B-1000
+Aceflo
+None
+Amlothix
+Amlothix
+Hisdec (Reformulated)
+Berocca Performance
+Traumeel S
+ASFLEM
+Asflem
+Renaleaf
+RENALEAF
+ASFLEM
+Nature Check Robocough
+Lagundex
+Flumexal
+Agiolax
+Gastropan
+Disolf
+Mucilin SF
+Flumexal
+Negacof
+None
+None
+Sinupret Forte
+Sinupret For Kids
+Mia Forte
+None
+Ascof (Ponkan Flavor)
+Re-Leaf Forte
+Ascof
+Ascof Forte
+Herba VOMITZ
+RHENALAID
+Re-Leaf Forte
+Ascof
+Remifemin
+Re-Leaf
+Esberitox N
+Ascof Forte
+PLEMEX FOR KIDS
+PLEMEX FORTE
+Lagundex
+Plemex Forte (Lemon-Menthol Flavor)
+Plemex Forte (Banana Flavor)
+Uricare
+Lagundex
+Lagundex Forte
+Nocof
+Nocof
+Urisam
+Nocof
+Uricare
+Vitex Negundo L. (Lagundi Leaf)
+Ofplemed
+None
+PLEMEX FORTE
+None
+Ascof
+None
+Ofplemed
+Awanay Forte
+STIMUNO
+Inlacin
+Anerdic
+AWANAY
+Herbakid
+Kidneygen
+AWANAY FORTE
+Herbakid Forte
+Kidneygen Forte
+Awanay
+Baropyrine
+None
+Kiddilets
+Cysdexpel
+Bactillin
+Ameustyn
+United Home Broncho
+None
+Nomocof (Cherry Flavor)
+Nomocof
+Bonalet-Cee
+United Home Ceetab Daily
+None
+None
+Vitacor-C
+Alka-C
+Alka-Cee
+Optima-Cee
+Nutrawell
+Gluden-C
+Abluent
+Plemalis
+None
+Esboxyl
+Ticarbo
+Truvit-C
+Immucee
+Sigmadone
+Sigmadone
+Evergreen
+Novacee
+None
+United Home Ceetab
+Extra-Cee
+24 Alkaline-C
+Unbranded
+Zylotin
+Zylotin
+None
+Abluent
+ESBOXYL
+FLEMUX
+Zestagesic
+MaxC
+Pro-C 500
+Boie-C
+Efica-Cee 500
+Cistavent
+Lemon-Cee
+Ceascol
+Rizcof
+Cisflem
+None
+Cixtor
+Incee-Vit
+Fora-Cee
+Cixtor
+Estolax
+Cefortan
+Myrevit-C
+Regicee
+Lemon-Cee
+ASCOR-Kid
+Ceestan
+Myrevit-C
+RegiCee
+Carbumox
+Hi-C
+Melmag
+Maxcid
+Cevit
+None
+Marluxyn
+Cisflem
+None
+Marluxyn
+Flemyl
+Carbobet
+Cisflem
+REMUCOF
+Ceascol
+Rizcof
+Remucof
+Vitcee
+Benzyran
+Rapid-C
+Citruvit
+Ascorlex
+PURE-CEE
+Mucuxpel
+Castein
+Carbotein
+Pov-It
+Paracough
+AMEUSTYN
+Better-C
+Better-C
+Milgesic
+TGP-Cee
+Marluxyn
+Milgesic
+Paracough
+Milgesic
+Bio-Cee
+None
+None
+Vitcee
+Ceenergy
+Ascorbic Acid
+Bone Cee
+4Fever
+Mucuzid
+Castein
+Carbotein
+Carbogen
+Cerelyte
+Paracough
+Tempaid
+Biogic
+Para 125
+Paraseth
+Paralex
+Paragen
+Oral Rehydration Salts
+4COUGH
+4 COUGH
+Calcium Alka-Cee
+Diacof
+Supra C Plus
+Enocee
+Per C
+Maxicor
+Unbranded
+Alka-C
+Florvit-C
+Calcibate-C
+4Cough
+Unbranded
+ABSORBENT CEE
+United Home Ceetab Premium
+Better C
+Cysdexpel
+Nuplen
+Supra C
+Enocee
+Enocee
+Apcee
+Alka-C Mega
+Westcarbox
+None
+None
+Calcip
+None
+None
+None
+None
+Broncocil
+Neo Balm
+Muscle Mint
+Kidicef
+None
+Kidicef
+Broncocil
+None
+Cemetol
+Unbranded
+Ascorb
+None
+HIRUDOID
+Sm-Cee
+Cetrasol
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Maxi-Peel Solution No. 1
+Maxi-Peel Solution No. 2
+Maxi_Peel Solution No.3
+None
+None
+None
+Oramed
+Zelec
+Unbranded
+None
+None
+None
+None
+Bonalet-Cee
+None
+None
+Z-Cest
+Movapane Rub
+Unbranded
+Po Ho Ping
+Klenz
+BETASOL
+Havidone
+Zach
+Bodyguard
+St. Gabriel
+Riteguard
+Amiel
+None
+Vamcee
+Aguaper
+None
+Mucast
+None
+none
+Tai Chi
+BONALET-CEE
+Apcamphor
+Apsync
+Apsol
+Povidazin
+Salymint
+Tai Chi Chili Liniment
+Colds Off Premium
+Tinko
+Pain-Off Extreme Hot
+Whitee Angel
+Colds Off
+Apcee SF
+Ascorgen SF
+Scent Oil Regular
+Scent Oil Extra Strength
+Scent Oil Extreme
+Poten-Cee
+Quinie Balm
+Ger Balm
+Benzoderm
+Acura
+Unbranded
+Beryfresh
+Orangei
+Applause
+Trosoothe
+Trosoothe
+MEDALEM
+Vitcee
+MEDALEM
+DIACOF
+Alagesic
+Carbovan
+Saver Select
+C-4 Kids
+ALFADINE
+Lozemed Plain
+Lozemed Plain
+Hydroper
+Carbocyl
+Cal-Cee
+Alfa Gargle
+Alfa Fresh
+SA-CEE
+Carbovan
+Diclosil
+
+ALFADINE
+Balsamo Carminativo
+Krels
+KIDICEF
+Carbonoc
+None
+Alco-Aid
+Povistat
+Ruflus
+Ruflus
+LifeSquare
+Rhedin
+Acura Vaporizing Rub
+None
+Dr. Alvin Rejumax Plain
+ZOMETEX
+Zometex
+Carblax
+Carblax
+Carblax
+Rejumax Duo
+Nin Jiom Pei Pa Koa
+Tawa2 Plus
+Kidney Plus
+Woods ' Herbal Cough Medicine
+Lianhua Qingwen
+Slimpro
+Insuget-N
+Unbranded
+Recormon
+Unbranded
+Insuget 70/30
+Insuget-R
+Pneumovax 23
+Rotasiil
+SAXENDA
+Rituxikal (50)
+Rituxikal
+Varilrix
+Heprin
+Synflorix
+Aerinex
+Tremfya
+Imovax Polio
+Kedrialb
+Neocyte
+Amvax-B
+Amvax-B
+Synflorix
+Pneumovax 23
+Synflorix
+Scilocyte
+Humoglob
+Remsima
+Perjeta
+Epovax
+Plasbutein
+Repoitin 4000
+Xolair
+Ecosta
+Excel-Insu R
+Excel-Insu N
+Noxadium 6000
+Bnoxaparin 40
+Filgracent
+Mirel
+Glysolin 30/70
+Rescuerel
+Alburel
+Vaxirab N
+Biosulidd 30:70
+Hepaclex
+Eupenta
+Eupenta
+ALAXAN
+Lanoxin
+Unbranded
+Unbranded
+Isopavit Liquid
+Decilone Forte
+None
+Enervon C
+Duvadilan
+Cee-Protect
+Disoflem
+Tiger Balm White
+Tiger Balm Red
+Provit-Cee
+EZZ-C
+EZZ-C
+Carbobase
+None
+Unbranded
+Royale C
+Licealiz
+Healthcare Ascorbic Acid
+Healthcare Paracetamol (For Export Only)
+Flexicof
+Unbranded
+Strepsils
+Family
+Novacee
+Hyclens
+Skinidine
+Katinko White
+Katinko Soft White
+None
+Great Buy
+None
+Antiphlamine S
+MEDICROSS
+Unbranded
+Unbranded
+Green Cross
+STARDINE
+RHINOVELL
+Dequadin Orange
+Betadine
+TGP-ORS75
+DequadinAB (Black Currant)
+Maxidine
+Unbranded
+Tiger Balm Neck and Shoulder Rub
+Unbranded
+KATINKO
+Unbranded
+MAX STRENGTH ULTRASCENT OIL LINIMENT
+Perskindol Cool
+Perskindol Cool
+Unbranded
+Unbranded
+Doctor J
+Doctor J
+Brenal
+Savers Select
+Gen-Cee
+Green Cross
+Nizoral
+Unbranded
+Unbranded
+Unbranded
+ITCH-AWAY
+None
+Naprex
+Katialis
+Omega Pain Killer
+Cholyte Plus
+Povidine 10
+Povidine 7.5
+Doctor J
+Jimm's
+Rongesic
+None
+Unbranded
+None
+None
+None
+Feronerv
+Ferovit
+Cordarone
+None
+ZYKLOR
+Gesitram
+Gesidol
+Relidol
+Dolcap
+Exel
+Edixin
+Barcef
+Cefavit
+Bronelid
+None
+Myrecid
+Myreclox
+Cloxalin
+Loxeen
+Biosone
+Unicort
+Berapred
+Cort
+Lefesone
+Danasone
+Predex
+Prednimed
+Stero-Cort S
+Duoclav
+Hypertan
+Unbranded
+None
+Nax-D
+Cefogen
+Ambixime
+Axecrest 750
+Bermucef
+Diacefarm 750
+Amlix
+Abrexin
+Axet
+Cefudyne
+Unbranded
+Canelin
+None
+None
+Indimax
+Promeclin
+Clinmicap
+Cortiz-100
+Hycornate
+Levecortix-100
+Ca-Gluco
+PHARMINE
+Aminomyn
+Cefnaxl
+Allezal
+Lonarel
+Cefamax
+CEFA-RED
+Kaftax
+Robisef
+Betcef
+Moticon
+Buztin
+Misatin
+None
+Ganamin
+None
+AMOXIPEN
+Daisamox
+Thymexin
+Clindacin
+Dalamax
+Unbranded
+Clindagen
+Nervafil
+Zyriz
+Zyriz
+Bromitapp
+Cold-Aid
+Bromitapp
+Parastan
+Syfloxacin
+Cecoxia
+None
+Benadrex
+RHINIGY
+Unbranded
+Unbranded
+Omefree
+Raxem
+Qualran
+Lifeozinc
+Sumpilin
+Sumpilin
+Cardiovasc
+NERVX
+Syclovir
+Caxetil
+Hicaryl
+Folicron
+Foceron
+Unbranded
+Sytopril
+Dopirel
+Amlocure
+Syngly-4
+None
+Hemogen
+Unbranded
+Allerof
+Piozone
+Actimax
+Atorbet
+Atorbet
+Adep
+Nitrosan
+Cirpo Iv
+Versant-XR
+Cloheal
+Prolol
+Ketomed
+Kerolac
+Ketonor
+Toramed
+Betadol
+Rounox
+Ratidin
+Unbranded
+Ratidin
+Naprokin
+Unbranded
+None
+Nicocin
+Dox-Z
+Aldoxy
+Doximed
+Proxxen
+Amkoflox
+G-PRAZ
+Flornox
+None
+Feldene
+Myrevit
+Tromxene
+None
+Dincef
+Nicocin
+Dilantin
+Fluconaz
+Clarithro-Natrapharm
+Euroxone
+Arvexone
+Racef
+Xonocef
+Westriaxone
+Terramycin
+Unbranded
+Loxeva
+None
+Asmatrol
+Unbranded
+Cefuxal
+Drexabion Forte
+Nervin 300
+Melodin
+Neurorich
+Rejunerv
+Flexi-Nerv I
+Actinerve Forte
+Nervace Forte
+Nu-Ro 300
+Viacef
+Solu-Medrol
+Truclav
+Eczacort
+Unbranded
+Silfavex
+Diclox
+Syclopid
+Amnique-10
+None
+Emlip-5
+Emlip-10
+Unbranded
+Trifocid
+Cardiosim
+Clovir
+Miravast
+None
+Atorpine
+Nordin
+Coldrex-Pe
+Tazotaz
+Selecap-200
+Unbranded
+Celbex 200
+Renite XL
+Dianapril-10
+Azulix
+Ziflox
+Amkoflox-750
+Sulbacin
+Feofer
+Heralink
+Fer-Essence
+Dallefer-Fa
+Danafer
+Andiospec
+Pacetin
+Regimol
+Fevergan
+Alcid
+Mefe-Care
+Needair 2
+None
+Fuson
+Fuson
+None
+Flamifix 200
+Zemfix
+Penxime
+Isoothe
+Lycobrox
+Mucoxx-75
+Ambroday
+None
+Xinprotec
+fevral
+K-A Plus
+Alagesic
+None
+CEFAR
+CECROCEF
+Normanal
+Calubia
+Become-Plex
+Zarphil
+Zarpose
+Congezar
+Forosa
+None
+None
+None
+Clavisar
+Sitimax-250
+Unbranded
+Appetrix
+Celexocap
+Ulceze
+Tamzor
+Hanizyn
+Enercaps
+Magnafer
+Alivet Iron
+Obstress
+TGP 1-6-12
+DEPLATT
+Penxib
+None
+Ambrovit
+Renal-Vite Plus
+Omemac-Gerd
+Cancyt
+Butamol Plus
+Solben Plus
+Lorvent
+Airsal Expectorant
+Geo Vent
+Gavlin
+Provent
+Hikacure Plus
+Ezeebret
+Pantovic
+Prostera
+Atorvast 20
+None
+Astorv
+None
+Mometasone Furoate
+Ecosta
+Pioglifar 30
+Alkalinse
+Butagen Plus
+Hemostan
+Analmin
+Doxykam
+Analmin 500
+Femostal-20
+None
+Glix
+MENELAT 30
+Unbranded
+None
+Exzapine
+Olzamax
+Unbranded
+Clobe-Sky
+Unbranded
+Ciphonex
+Iruden
+Alumin
+None
+MPL Coverin
+Clavsin
+Clavexin
+Mediclav
+Inoclav
+Solclav
+Aviclav
+Clavorilz
+Clavsef
+Unbranded
+Citxl
+Felostal-5 ER
+Hypertex-ER
+Eliacare
+Glimauno-4
+Xinatrene 500
+Cefmehyd
+Zyfort
+Renite-5 XL
+Fornidd
+None
+Omprabest
+Ceeprazol
+Unbranded
+Retabloc
+Eurovasc-5
+Soprol-5
+Cozeal
+None
+Amlodipine (As Besilate)
+Astymin-3
+Aminosea-20
+Astymin-3
+Aminosea-200
+Tazonix
+Erecfil-100
+Erecfil-50
+Dobutrim
+Domphil
+None
+Clotrifix
+Altolevo
+Dracenax
+Cifrem
+Cifrem
+DREIFLEX
+Zentriaxone
+Coxidia
+Paintab
+Ciproflo
+Urobac
+Normbeat
+Celepid
+Tigerfil
+None
+Medtaz 4.5
+Pyredol
+Goracet
+Unbranded
+Dolceplus
+Vistramol
+Tramicet
+Fevcet
+Promadol
+Unbranded
+Dolcephil
+Unbranded
+Allergo
+Ciplon DS IV
+Motrigine
+Lamosyn 50
+Lamosiz 50
+Sedlor
+Ironfer
+Miasyn
+Amsolin
+Trust Pill
+None
+None
+None
+None
+Para100
+Rofunil
+Lyndavel
+Xalacom
+Noxifen
+Pelosta-5
+Premarin
+Neotalis
+AZELON
+Respixl
+Risdizol
+Pyromed
+Pyromed
+Ultrasyn
+Myrevit
+None
+Hugs
+Appe Grow
+Stero-cort 20
+Zecroxil
+None
+Kastair
+Aeromax
+Wiltrozin
+Azent
+Piperacillin (as Sodium) + Tazobactam (as Sodium)
+Nyst
+Zystin
+Adnyst
+Alfen
+Astrofen
+Fusem
+Fazorixx
+Ceftriden
+Ertraxone
+Spasmocin
+Amamcla
+Depotrust
+Georoxime
+Synthopen
+Synthopen
+Primycin
+Fevaxid DS 250
+Glucobay
+Glucobay
+Cerol
+Telmefixx
+Aletor
+Unbranded
+Qualcet
+Unbranded
+Telmistal-80
+Tesarmix
+Aero-Vent
+Calan
+Deslodine
+Aroled
+Stalmox-Cl-600
+Lizonya
+Genodes-5
+Combifen
+Zophizole
+Macproto
+Ambrotor
+Lortan Plus
+Provinerv
+None
+Diulactone
+Lorafix
+Buscobet
+Vertamin
+Irbepro
+None
+Mupiban
+Mupi-med
+None
+None
+Infrid
+Vefarol
+Tryme-MR
+Princicar
+Diclofen-50
+Molpraxx
+Floxzu
+Xenoflox
+Flevoxcin Iv
+Lexzin IV
+Tamzor
+Miasyn
+Clomacap
+Zafex
+Zinaxime
+None
+Torval H 160/12.5
+Torval H 160/25
+ROVIX
+MEDSEF
+Paramed
+Piracedin
+Quiroxef 750
+Cefuzel
+Diazitri 35
+Nexonav-40
+Imanto
+Protozole
+Strozole-500
+Metroneed
+Onizole
+None
+Lycobrox
+Xoltic
+None
+Apiden
+Vitadex
+Amsodex
+Respimax
+Dextro
+Fenofast
+Diafeno
+None
+Gofibra
+None
+Lipibrate
+Fenfifixx
+Q-Dipils
+Magnefix
+Cemop 200
+Cefixneed
+Fixutab
+Bruclar-500
+Lifemycin
+Quinlin
+Cefralon
+Altozef
+Cedine
+Neurobiz
+Calmsaph
+Lycobrox
+Xoltic
+Cillox
+Clavmoxwel-375
+Clamoxtab
+Vertasanz
+Bestine-24
+Vertiduce
+Gohistine
+Omipin
+Peptin
+Dinemic
+Unbranded
+Diazitri 20
+Fetnal
+Cefutex
+Caxetil-500
+Stamozef
+Qpine
+Quetadin
+Ambiceph
+Litcab
+Samjizon
+Medzef
+Tranexagen
+Iron B-Flex
+Dextrogen Plus
+Imaz
+Zionel
+B-Bloc
+Spasmoson
+Clamoxid
+Clavmoxwel-156.25
+Evecitam
+Eurolev
+None
+Nuflam
+Fitfree
+Fitfree
+Finstal-5
+Pediair
+Ampita
+Deslorastal
+Deslodine
+Aroled
+Verist-8
+Loragen
+Suncetin (IV)
+Recedol Plus
+Voxoll Sr
+Neutrotop
+Enaz
+Berzimax-500
+Edutrozin
+Dermobetasol
+Crolifarm
+Sanlevox
+None
+None
+Elixime
+None
+Co-Ivyzar
+Triolev
+Cocilone-0.5
+None
+Colchicare
+Nipril-HL
+None
+None
+Db-5
+Brulexin-500
+Eleobron GPC
+Medbron GPC
+Goutrelief
+PHENYLGEN PLUS
+Amlion-10
+Danlopin
+Sainyo
+Vesselcure
+Calcebis-10
+None
+Telvit-M
+Wellvit Plus
+Telvit-M
+None
+None
+Stalpara
+Cetavan
+Aljesik IV
+Stalmox CL-1.2
+Clavuclav
+None
+Airoclav 1.2
+Flumed
+Cetrilife
+E-Ceftri
+Primucef
+Medtri
+Enceftrixone
+Cefribusin
+None
+Prasiloc
+Curepraz
+Inflamgen
+Veltir
+Arthroxib
+Newmacdol
+Tramawise
+Vivax -50
+Silrec 50
+Regivit
+Couxin
+None
+Topmate-50
+Imugraft
+Imugraft
+Clopidogrel (As Bisulfate)
+Clotfixmed
+Klarilab
+Repairo
+Pencil 50
+None
+Zatsol
+None
+Cilostadin
+Thromzol
+Macroxime
+Excillin
+Ampicin
+Devetam
+Xolvecetam
+Akucetam-1000
+None
+Devetam 1000
+None
+Lepiva 250
+Desaren
+None
+None
+Xinatrene
+None
+Lizelle
+Ketolan
+Neurofax
+Brumox-250
+Affolac
+Lactone
+Corlactone
+Spinofar
+Golactone
+Pantro
+Prazole I.V.
+Pantokem Iv
+Berapraz
+Pantoxac
+Rumalox 15
+Lactone-100
+Finstal 1
+Lozarphil Plus
+Lozacom Plus
+Chlosart
+Losawin-100
+Dylaran-100
+Lostar-100
+None
+Clopend-75
+Platz
+Betnoderm
+Betapplied
+Ciptid
+Goflox-V
+Cefmetab
+Brucipro
+Unbranded
+Farmfloxin
+None
+None
+Topiclo
+Lozak
+Finasia
+Unbranded
+Cedix
+Brevixel
+Brevixel
+Pacitaxil
+Cefuplus
+Trixime-500
+S-Rox
+Emesidon
+Amlion 5
+Besilopin
+Quetafarm
+Funginil I.V.
+TAAX
+Gabalion-100
+Nervepentin-100
+None
+Doxoruba
+Bicindoxil
+Goxib 400
+Celence-400
+None
+Diaxib-400
+Brudome-10
+None
+None
+Accellac
+Claripak
+Conjupram
+Zytapram
+Escitadin
+CEZIM
+Calta
+Nacetyl 200
+NAXCIL
+ULTREINAC-200
+MUFRESIN
+Acteine
+Mucocetyl
+Fluimetrene
+Flucysteine 200
+Aceget
+Nophlegm
+S-Omipin
+Gozole
+Reopraz
+Acidstop
+Cefured
+LupiSarT
+Nosipon
+Startline-25
+Etopoject
+Xolvof
+Chemoject
+Unbranded
+Temsol
+Unbranded
+Prostazin
+Airefix
+Midtrix
+J-Trix
+Puxenon
+Fenadef
+Emaxxone
+Amtecxone
+Pipoz-2.25
+Pipoz-4.5
+Tazur
+Pipercil-4.5
+Dypita
+Clozid-12.5
+Cefolin Plus Ds
+Cefi-Sky
+None
+Exerta
+Astrozole
+Amsutas
+Gravitam
+Geobactam
+Ampinix -1.5
+Terxime
+Icoxib
+Diapraz
+Mepzopraz
+Omefil WFI
+Bestpromep
+Neoverzol
+Gopraz IV
+Gozol Iv
+Unbranded
+Zoleron 4
+Claripak
+Neofixime
+Cefimax
+Ceftri
+Froncef
+Cexim
+Tropsiv
+Triocef
+Accexime
+Evecitam
+Bioclavid
+Dynacof
+Rasec
+Zarten
+Zarten
+Rimactazid
+Calsan
+Ampitam
+Cortef-100
+Mexime
+Unbranded
+Winaflox
+Unbranded
+Diclosea
+Magniferron Fa
+Trane-West
+Rinella
+Reax
+Levefer
+Glocare Plus
+Ranvast
+Astorv
+Ionsil
+Trifar
+Trioxone
+Axtrin
+Ucef
+Equicef
+Ceftriamed
+Trizeto
+Gixone
+Ceflex
+Atrodix
+Atrodix
+Ipraden
+None
+IOBET
+Claripak
+Torotas
+Panziv
+Pantolev
+Angel-50
+Unbranded
+Capxibb-400
+Goxib
+Cholefen
+Gastrocin
+Cyclixine 500
+Cyphocare
+Cyclophos
+AEROKIDS
+Geoxiclav
+Duoxiclav
+Acetylseth
+Aecys 600
+Nophlegm
+Gomucil
+Tandumin
+Xinatrene 250
+Respimax
+Unbranded
+None
+Beclex-IV
+Bicarevitz
+Vitlex
+Trivitplex
+Ambinerv
+Nervicore
+Circom B-Plus IV
+Vibicomp
+Dyvit-B
+Go-Bplex
+Inflamgen
+CEFTAZIGEN
+Endclav-375
+Izzobrex
+Clavoxtin
+Infeclav
+Maxlavco 625
+Zads
+Teralev
+Tamoxilon
+Cefuvin
+J-Xime
+Esopragan-20
+Cigrel-75
+Sykoquit-25
+Sykoquit-200
+Unbranded
+Qvex
+Bronchoson
+Unbranded
+Dolright
+Losagan-50
+Acipro
+Aecipro
+Go-Flox
+Ciprovest
+GLYCINORM MR-30
+Cabxime T
+Zidaxim-150
+None
+None
+None
+Maedix
+Refixime-DS
+Trimax
+Elvofix
+Z-Fix
+Typhofix-Ds
+Acecef
+Soniceph
+Dyruxim-100
+Comfixime
+Fixxx
+Flexime
+Eriexef
+Rexmecef
+Trinifix
+Cefitrene 100
+Robetrix
+Renoket
+None
+Cetrigna
+Unbranded
+Glime-M4
+Fentin
+ZO
+Inten SEC
+Rapeed
+Coxtin
+Eliflox
+Celofem
+Cinazith-DS
+Esotid IV
+Esodime IV
+Beralipids
+BAROPYRINE
+Gabarance-300
+Sornitrat-10
+Lara
+G-Trozole
+Affozole
+Mycocid
+Alevo
+Vertistop
+Vaxol
+Myocard
+EMNORM ER 500
+None
+Nurocol
+Unbranded
+Groxitin
+Seaxitin
+Plaxitin
+CEFTRI
+CEFIWELL
+Arbloc CCB
+Respixl-4
+Cenact
+Dazol-200
+Doxophylline
+None
+Dilabloc
+Vedilcard
+None
+None
+ALLEZAL
+Fina-5
+Anaseran
+Apapol
+Cope
+2-King
+Melmet SR 500
+Lodipex
+Lodipex
+CTA-50
+Ulcep
+Clevan
+Unasenz
+Pantomerk
+Prasiloc IV
+Triasenz
+Aptradol
+Rumaflox
+Tramelax
+Dolright Plus
+Dolpain Plus
+FUNGYSTA
+Telmiphil
+Sodampen
+Onsett
+Eloprix
+Centrapraz
+RUBIFOL
+Tobyn-D
+Idexine
+Dexflocare
+Foxadex
+Ophthasone
+Prestan
+Accefixime
+Cefusea
+Enpen-40
+Unbranded
+Accefixime Ds
+Accethrom
+Acce-Lora
+Unbranded
+Esomap-40
+Unbranded
+Esmegerd
+Baczartan
+Novaxone
+Hycort
+Cylocortix-250
+Cortiz-250
+Hydrobet-250
+Geocortix-250
+Hycornate
+Levecortix-250
+Enpen
+Pancare-40
+Unbranded
+Accedome
+Rosuvin 10
+Rosett
+Unbranded
+Dutarid
+Gentapro
+Sanfur-750
+Cefrixx
+Rabicor
+Prazolife
+Ketoessen
+Nephromin
+Erazide
+Robedim
+Ambisol-300
+SCP Urso 300
+Ursula
+Udcafar
+Urmax
+Uritam
+Unbranded
+Dorzoplus
+Nudinir-125
+Rapiduce
+Essen Cee Plus
+Bewell-C Kids
+Onsett 8
+Sanoxetil-250
+Mosaspray
+Zymocort
+Ceftidin
+Tempaid
+Dreiflu
+Paraseth
+Paralex
+Terafylline
+Flevoxcin 750
+KLAMOX
+Unbranded
+Froxeta
+Zonia-10
+Alfree
+Pantid 40
+Unimox Plus
+Abilify
+Valazyd Am 10
+None
+Unbranded
+Unbranded
+Brodix
+Opel
+LEVEFLOX-500
+Genbitac
+Rentrol
+Aciclogen
+Aciclogen
+Euroclav
+Diazole
+Ferazol Forte
+Eslo 20
+Eslo 5
+Welcard 160
+Unbranded
+Irbexl
+Unbranded
+Unbranded
+Ribedim
+Unbranded
+Irbexl-300
+Provizar
+Colema
+None
+Unbranded
+Njectzole
+Vertigine
+Vertigine
+Imugraft 5
+Celeright
+Neomazole
+Zistam-A
+Warik
+Ceurox-500
+Warik
+Dextrovit
+Tamysin 0.2
+Inosert-100
+Roswin
+Orphecet Forte
+Orphen Plus
+Orphecet
+Orphenmol
+Cytalon
+Voriz
+Fung-End
+Axepron
+Pantohab
+Verzat-ER
+Cefoxid
+Amsowel
+Stadapram
+Neuviton
+Ivab
+Cititab
+None
+Tamprost 0.4
+None
+Fosfa
+Fosfamed
+Fatrim
+Lisofar
+Lisofar
+Unbranded
+Dotacel-20
+Angiostan-150
+Belloid
+Roxinova
+Cefuroxime (As Sodium)
+Sanaxone-1000
+Onvinc-2
+Anamotin
+Coxime
+IVPANT
+Esopragan 40
+Belfur
+Mamazol
+Myotan-H
+Supranx
+Repairo 500
+Feldona-5 ER
+Ironbuc
+Prosome
+Nexonav
+Enset-4
+Onstal Forte
+Amnor
+Resovon
+EURIVIT
+Reprecid
+Oxymet
+Oxymet Pediatric
+Axflam
+Celplat
+Ascorbic Acid
+Panwin Ect
+Depanto-40
+Praxol
+Praxol
+AMECTUSS
+Opunol-300
+Opunol-100
+Getabin-1000
+Furogem
+Methofast-50
+Cytaneon
+Ecopenem
+None
+Boricetam
+Imugraft 1.0
+Hyscopen
+Gastroprime
+Lykaspetin
+Cardiwon
+Mycefix
+Lipimize-A 20
+Kefodox-200
+Cenvert-16
+Acetylcysteine
+Hydrocortisone (As Sodium Succinate)
+Cortiright 250
+Metformin Hydrochloride
+None
+Cigar-End 2
+Grovixin 625
+Furexim
+Dobuvent
+Cidifoll
+N/A
+Cloxiem
+Eurozart-Plus
+Elbazol
+Omefree
+Afreezole
+Levenerv
+None
+Xydon
+Risperi
+Fertimax
+Wilovast
+None
+Mero-Health
+Drexabion Plus
+Nerve Care Plus
+Nu.Ro Plus
+Parajaz
+Drexamol
+Steroderm
+Boost
+Dexolife
+Abymin
+SPIRE
+Dinclav
+Acce-Clav
+Jazimox
+Flutiair
+Newflut
+None
+Flow
+Buclirich
+Buclivit
+Mucovin
+Uteprine
+Altoprin
+Oframac
+Clotiz
+None
+Sioflox
+Amero Iv
+Ilnor
+Preglibest
+Ampirilz
+Disulbac
+None
+Quadcyn
+Meropro
+None
+Vertegra
+Salmeflo
+Pain Gard
+Pain Gard
+Daibee
+Cefztar
+Valvex-A (160/10)
+Vexer 50
+Pregaphil
+Preglibest
+Avas
+Avas
+Coxigen-120
+Starcox
+K-Chlor
+Plemonem 1000
+Socorro-5
+Sedazine
+Claxic
+Solclav
+Clavolink
+Trizef
+G-Roxim
+Servcef
+Dinoxef
+Cefurife
+Cefulab
+Triserv
+Ceftrirife
+Dintri
+Cefont
+Kenzolin
+Levetaz
+Ascor-Z Plus
+Moxylor
+Puroxel
+Mazole
+Kalimex
+Hyostar
+K-A Plus
+Isupres Plus
+MYCONIL
+Leuzotex
+Tazoserv
+Xeptin 500
+Vancofree 1000
+PERZOTAM
+Aldactin 25
+Canelin
+Aldactin 50
+Amlodel 10
+BP Low
+Furomidex
+Furowell
+Labvacom
+Avancomycin 500
+Vacomyxib
+Vancowell
+Vencusin
+Avancomycin 1
+None
+None
+Apuldon
+Orphex
+Nalgesic
+Allerstop
+Napronax
+Procal
+Troperan Forte
+Planadol Ex
+Unbranded
+Nephrose
+Masvit
+Mediron
+Kankunis
+Anvil 400
+Anvil 200
+Cefudex
+Celexib
+None
+CEFUFIRST
+ProNorm
+Medifortan -C
+Amlodel 5
+ALTOXIME
+BUENAXIME
+Fuvixin
+Fusid
+Unbranded
+Diapid
+Fulvast
+None
+Clorfil
+Elceclor
+Vasitin
+None
+None
+Azimex-500
+Sinuphil
+Hairos
+Unbranded
+Xanthone Vit Cee
+Cefrone
+UNISYN
+Trodon
+Appevit
+Appexon
+Imanorm-400
+Teli H
+Flustan
+Neoflu
+Stangesic
+CALBON-D
+None
+Dilapro
+Sunvax
+Ceft-Ax
+Broxan 30
+None
+GEOCOBALAMIN
+Fumicrest
+Eufercros
+Meropro
+Goprenem
+Carbomux
+Catapres
+Catapres
+Catapres
+Atrovent
+None
+VALATAN PLUS
+Unbranded
+Mupiban
+Somaritin
+Nutrikids
+MIBOR
+Procardipine
+Amlat 20/10
+Amlat 20/5
+Amlat 10/5
+Xalatrex
+Strirab
+Velon
+Gentam
+GENTANEX
+Zusillin
+Losartel-50
+Bellustat
+CRAMIN FORTE
+Triozime
+Vitaxime-200
+Unbranded
+Unbranded
+Fixef-200
+None
+Metronova IV
+Gonidazole
+Goclav
+Klavel
+Bivucan
+Gopi Heavy
+Bupivaxine
+Bellucaine-H
+Mepraz
+Blinda
+Gloww-e
+Unbranded
+Calcivas
+Ursogard
+Fluoxedin
+Glenlipid
+PRADOL
+Unbranded
+Unbranded
+Telcard 20
+Pneumotyl
+Gentoxyn
+Pecof SF
+Haidol
+Akucoline-1000
+Glucosil
+Zetriz
+Unbranded
+Golxine
+Expell
+Fevral Forte
+D-Vit 800
+Vicephrin
+Roselion-20
+Nu. Ro Max
+Nasocare
+Calcivas
+Mycartan-40
+Sevixime-200
+Sevixime-400
+Congloxime-750
+Doxstar 50
+Oxa-Health 100
+EC-Vit
+Heart-B
+Unozoid
+Zetrimed
+Unbranded
+Bactrias
+Parastar 500
+Montas 10
+Micoshield
+StuffiNOse
+Disolvon
+Drexaral
+Bdocin 500
+Asiclav-625
+Unbranded
+Irbexcel-150
+Unbranded
+Glivec
+DocCee
+GolCee
+DocCinc
+GolCinc
+Dr. Trim
+Orlicin
+Dr. Trim 120
+Orlicin 120
+Metrogem
+Ferexime
+PARABUFEN
+Nysecod
+Ferrolic
+Rigor
+Lordine
+Vagison SG 100
+Ambidine
+Immutab
+Immutab
+Leklin
+Novataxel-80
+Novataxel-20
+Medtaxel-30
+Medtaxel-100
+Neotic
+Ambacil 1
+Broxamed-30
+Sizopin 100
+Hacidac
+Sevoxane
+Prednicort
+Pegilyx
+Execore
+Execore
+Hyzol
+Evexy
+Euromycin 600
+Convult
+Adrylex
+Bromucol
+Carantin
+None
+None
+Metrynal
+Biogesic 325
+Ceritec
+Bupsan
+Quantum-C
+JT-DAC
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+Planax
+Unbranded
+None
+Alcorvit Plus
+Alcorvit
+UNOCOLIN
+Asmanyl
+Salbutrene
+Asthmacure
+None
+Medaxone
+Carcirub-50
+Carcirub-10
+Deyixin
+Iso-Plus
+Feme
+Allecure
+Nipartan
+Anzar
+Rezebloc
+None
+Metloc
+None
+None
+Sulfrim
+Trisulcom Forte
+Triforam
+Llitoxeprim
+Unitiaxone
+Lizogold
+Flutel
+Hapi-C+Z
+None
+Ultramax
+Preven Max
+Calcisaph
+Minoxl
+Brexen
+Unbranded
+Bactafuz-B
+Doparine
+Dopalink
+Hymet
+Dopacare
+Tobladex
+Carbopa-50
+None
+None
+Maxzith Iv
+Sydepres
+Dopamet
+Belllaso
+Unbranded
+None
+None
+Glucosil
+Oxoru-10
+WAFRIN-5
+WAFRIN-2.5
+WAFRIN-1
+Tamilopin-40
+Tamilopin-80
+Kemizob
+Sancox
+Hav C Plus
+Budecton
+Etiriz
+None
+Thin-Belly
+Zetriz
+Oxoru-50
+Tachyban
+Ezmol
+Siftus 7.5
+Natdox-LP
+Natdox-LP
+Siftus 7.5
+Siftus 5
+Siftus 5
+Ferrisol
+Laxatea
+Sennagen
+Oppul
+Paraves
+Combimax-Cee
+Augmenz Plus
+Medomox
+None
+Etom
+Neuro-V+C
+Teagen
+Biotea
+Raphctea
+Noxifen
+Phenycol
+Celex
+Unbranded
+Unbranded
+None
+Pharlox
+Diclogen
+None
+Angisartan
+None
+Doxin
+Altussan
+Scabiol Lotion
+Tempra Forte
+None
+Hyper B12
+APTGESIC
+Lesopen Plain
+Lysiron
+Neo-Synalar 25
+Motilium
+None
+
+None
+ELEOMOX
+Teramoxyl
+None
+Voren
+Leginsol Vita
+None
+Himox
+Appetite Plus
+Virlix
+None
+None
+None
+Europersol
+None
+Resdil
+None
+Triphimox
+Luprolex
+Jestrim
+None
+Euro-Ion In D5 Water
+Asfrenon
+Infexin
+Unbranded
+Asfrenon
+Rielcetin
+Triphimox
+HALCEPIN
+Medifortan
+Butadil
+Zetifen
+Zolmed
+Adelanin
+Isodexid
+Mucolyptus
+Voren Forte
+Rielmox
+Acumox
+Panadene
+Selzef
+AMIKACIDE
+Sandostatin
+Sandostatin
+Vistrep
+Zamboprim
+Unbranded
+Dicymed
+Neuroforte - E
+Broncho-Vaxom
+Thordexin
+Analcid
+Primex
+Lorecep
+ELEOMOX
+Unbranded
+Unbranded
+Bisoxine
+Medvox
+None
+Cephoral
+Cephoral
+Procor
+Neurobase
+Luprolex
+Sherine
+LEWIMYCIN
+Arthran
+Lewimycin
+Lezpain
+Trizine
+Asmalin
+Purispec
+Vessel Due F
+Cutasept F (Colorless)
+None
+Defungin
+ELEOMOX
+Corstaph
+Floxel
+Patanol
+Relestal
+Relestal
+Sensorcaine 0.5% Heavy
+Oranerv Forte
+Tabine
+Duticin
+Diatabs
+Curazid Forte
+Latosil
+Lornasone
+Meliane
+Imdur Durules
+Ebeplatin
+Ebeplatin
+Sanomed
+Neurolink
+Parvid
+Avelox
+Motilium
+OVA-MIT
+Iohexol
+ASMACAIRE
+Unbranded
+EDEMANN
+VERTISIN
+Ezz-C
+Nutricee
+Fresofol 1%
+Xyclomed
+Simeco
+Bio-Termin AS
+Jagaplex
+Durabeta
+Cerazette
+None
+Budenofalk
+Zeditapp
+Casodex
+Senokot
+None
+Claventin
+Diuspec
+Concerta
+None
+Risek
+Humamet
+Risperdal Consta
+Risperdal Consta
+Risperdal Consta
+Cetrotide
+Myra E
+Profalexin
+Momate
+PRED 1
+Stericort
+Cepham
+Ephron
+Airex
+Ventomex
+Doltrahex
+Poro
+SALINASE
+Covelay
+AD-C Plus
+Herperax
+Fluraxid
+Fluraxid
+Sulbacin
+Snizee
+Sulfast 3
+Ferriprox
+Midol
+Capmerin
+Tropicee Plus
+Cloxin
+Tropicee Plus
+Hemarate FA
+None
+None
+Cymbalta
+DUOCOM
+Asplate
+Natravox
+Minidiab
+Tres
+Guaifenesin/Pseudoephedrine Hydrochloride
+Vesicare
+Roxithromycin
+Lemaflex
+Funzela
+Ramipro
+Auralgan (For Export Only)
+Hentaxel
+none
+Accomin Adult Mixture (For Export Only)
+None
+ASTHROMED
+Mebo Burn & Wound
+Montemax
+Montemax
+Zefei
+Diucare
+Pulvid
+None
+Lesofat
+Rhinol Plus
+Furoscan
+Fenolit
+Encifer
+Asomex
+Asomex
+Fixcef
+Gentaxin
+Pecof
+Gemtabin
+Micropil Plus
+Hemasol
+Hacef
+Eu-Ran
+Rispedin-2
+Prozelax
+Algesia
+Erefil-100
+KXD
+Actosmet
+Cromax-2
+Sevo
+Trofentyl
+A.N.B
+Fozal
+Taceedo 20
+Taceedo 80
+none
+Abingem
+5% Dextrose In 0.3% Sodium Chloride
+Levocin
+Momecort
+Gemtabin
+Orazinc
+Propan with Iron
+Supratab
+Decolgen Forte
+Benace
+None
+GEROZEF
+Spasmomen
+Fixcom 2
+Cloprimed
+Anekcin
+Fenitin
+Profen
+Profen
+Unbranded
+Airokast
+Unbranded
+Unbranded
+Unbranded
+Rosuvaz
+Anazo
+Zerodol-P
+Unbranded
+Vertegra
+Nasofree
+Eurocaine
+None
+Amlosyl
+Alendra
+Amlosyl
+Zynerva
+CLARIGET OD
+Tna-Peri
+Sernade
+Aminoleban
+Meropen
+Ulzim
+Moxicam
+Wilopres Plus
+Xyzal
+Isonex
+Magrilan
+Mivex
+Mofilet-500
+Rowatanal
+Unbranded
+Valium
+Zofex
+Myfetil
+Victus
+Victus
+Axetine
+Betac
+Adeflo
+Glipdin
+Tamsolin
+Ampic-500
+Aforbes
+Clavmentin
+Rispemed
+Gadomin
+Carvidol
+Axal
+Tamplus
+Tamplus
+Tri-Alzor
+Pred 20
+Multivitamins + Minerals
+Medispray
+Axal
+Axal
+Eroxmit 500
+Healthcare Cefalexin
+Amlodine HD
+ATV Plus
+Medbufen SR
+Emlopril
+Healthcare
+Diclon
+Zanitine
+Kilimpen Max (For Export Only)
+FUROMED
+Febrile Free
+Ofex
+Zerodol-CR
+Dimet-850
+Alixime
+Esoflux
+Unbranded
+Foligen
+None
+None
+Reducel
+Geokast
+Tamsumax
+Tamsumax
+LORAMED
+Clafax
+Kombiglyze XR
+Kombiglyze XR
+Kombiglyze XR
+Estrelle Plus
+Asmalex
+Ometpro-100
+Kefezy-125
+Difflam Orange
+Equisine Regular
+Decolgen
+Metorex
+Endusol-R
+Implanon NXT
+None
+Ecsapro
+Ecsapro
+Ecsapro
+Sitiflam
+Pop-Up
+Apuldon
+Iobrix 300
+Zelex
+RADISENSE 300
+Gemita
+Gemita
+Cymbalta
+Kohagra
+Kohagra
+Trajenta Duo
+Trajenta Duo
+Trajenta Duo
+Olmebaf-20
+Olmebaf-10
+Heblopin
+None
+Ceftrixone
+Ciproquin
+Levoriz
+Onsetron
+Ambimax OD
+Clavuxel
+Ciflo
+Arnil
+Angicarv
+Klinbac
+Ecodax
+Ascortin
+Ascortin
+Ceelin Plus Chewables
+Irbezil
+Anifer
+Combikane
+Unbranded
+Acetra
+Axefime
+One-Cet
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+Surestep 2
+Pranbeta
+Probloc
+Unbranded
+Ritalin LA
+Diameed
+Unbranded
+A.N.B
+Flo Sinus Care
+Dezlotin
+Isoking
+FeMax
+Bomozid
+Tropin
+Irbemed
+OXOZOLIN
+None
+AMINOSTERIL N-HEPA 8%
+Valvex-A (80/5)
+Langex
+Levocer
+Bactreat-B
+Comolav
+Trimexzole
+Valvex-A (160/5)
+Oncef
+Isorgin
+Vexagril 75
+Lactezin
+Ulcegard
+Zinvel
+Tripgard
+Levorin
+TRIAMED
+Cholestad
+Cholestad
+Cavumox
+Serendra
+Torros
+Torros
+Rosustat
+None
+Arovan-80
+Dormid
+Dormid
+SALBU-AIR
+Normipress
+Unbranded
+None
+None
+Levocit
+Zynazine 1000
+Lipway
+Roztat
+Duobloc
+Duobloc
+Pantec-Dsr
+None
+SITIvast-40
+Zolopat Forte
+Ocumox
+Flamizin
+Emacif
+Solunate
+Momepro
+None
+TERECEF-500
+Olanza 10
+Filrezin
+Cobis
+Kabiroc
+Alvoprel
+Heragest
+Nixacin-500
+Flenazine
+Prexx
+Gentamicin (As Sulfate)
+Mazipine
+Indometacine
+Stardol-300
+Q-Nine
+Besfluran
+None
+Telsitan-20
+Telsitan-80
+None
+Osartan-HZ
+Onestatin
+Clotrix
+Intervit
+Rovex 20
+Minosol-5%
+Lidocaine Hydrochloride + Epinephrine (As Bitartrate)
+Posicaine 200
+Isocaine 3%
+Posicaine 100
+Korab 20
+Epica-Cee
+Macxime
+Cycloxid
+Kabitran
+None
+Foliage Max
+Angirel MR
+Lanozol
+Ondavell
+None
+Hyclens
+Sedafin
+Mycon
+None
+Emakast
+Aero-vent
+Diclofed
+None
+Rosadoc-20
+Tramexol
+Imtec
+Urecef
+None
+Fixnar
+Zincomin
+None
+Cure DMZ
+Cure DMZ
+Cortizol
+Telmisar 80
+Snup
+Anarica
+Famoster
+Vamcetin
+Calcilyte
+Eurogyl
+Diflu
+Asterol
+Immunpro Teen
+Tachypress
+Aplofe
+Decolgen Sinus
+Clarithrocid
+Clarithrocid
+Esomexl
+None
+Polynerv 250 Plus Zinc 40
+Bioflu Non Drowsy
+Starhex-350
+Solnerv
+None
+Diphenhydramine (As Hydrochloride)
+Rosuvastatin (as calcium)
+Codyl-5
+Zithrocare 200
+Cotrimoxazole
+None
+Ezymuc
+Prasusafe
+Amdipine
+None
+None
+Amdipine
+Roztat
+Tramadol Hydrochloride
+Dextromik
+Atorvas 40
+Amivan
+Hyklor
+AVIDEN
+Stacef Plus
+Alrezin
+Stercia
+None
+None
+Risgen
+Kaptroban
+None
+Pulmocaz
+Sucralfin
+Luixol
+Telsartan
+GRIPGO
+Paclitero
+Ketesse
+Flucare
+None
+None
+Domped
+NUTRIFAT
+NUTRIFAT
+Ninlaro
+Daisy-30
+Dequadin Mint
+Trekal
+Navit-C
+Vicod
+Merodex 1
+UNACILYN
+Medicol Advance
+Medicol Advance 400
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+None
+4 Quin
+Daflon 1000
+FONKOPAC
+FONKOPAC
+FONKOPAC
+Joyloxin
+Unihexol 350
+Zoruxa
+None
+Gastrohex
+Fasgesic
+Voflox-750
+Unbranded
+Myborte
+Unbranded
+E-Zinc EZTab
+Antiox
+Atomix
+Brainergy
+Unigan
+Metromic
+Metromic Forte
+Sanfurox-750
+Truceevit
+Rapidon
+Torval H 320/25
+Torval H 320/12.5
+Valvir-450
+Unbranded
+Pulmonac
+Exflem
+Olumiant
+Olumiant
+Invega Trinza
+Invega Trinza
+Emizole
+Mevex 100
+Revicon (please see back of CPR for formulation)
+Cosopt-S
+Isoptin SR
+Isoptin SR
+None
+Tegrad
+None
+Fern-C
+Visine
+None
+Diclosafe Forte
+Capribuvir
+Abalam
+Diclosafe
+Allerteen
+Renal Vite Plus
+AC-NEX PH
+None
+Candina
+None
+None
+None
+Unbranded
+Asmalin
+Adrenapin
+Hemo Rid + Hesperidin
+ACT C PLUS ZINC
+Cozole
+Synermed
+Drilozole DS
+Betnochem
+None
+Wilovex
+ATENCION
+ATENCION
+ATENCION
+ATENCION
+Prosumin Nephro
+Parebrex
+VALSARAM
+VALSARAM
+VALSARAM
+Biscore 2.5
+Glice
+Tafixyl
+Orazinc Plus
+Enhancee
+Marphen-C
+None
+MDN
+SITI-D5WATER
+Flukid
+None
+Empowered-C
+Candina
+Teramoxyl
+Ebutol
+Medifortan-As
+Nutaphake
+Allurase
+Tobrex
+Acetadol
+Contylan W/ Simethicone Suspension
+Clocephen
+Suprazen Forte
+Polynerv 500
+Silybon
+Silybon
+Mia
+None
+None
+Sinupret
+Cafgard
+Cafgard
+Astrol
+Astrol
+Herbycin
+Ofplemed Forte
+Ofplemed Forte
+Sintos
+None
+None
+Remucof
+Unbranded
+Vitavit-500
+Redvit-C
+Ceascol
+None
+Cisflem
+Diacof
+Mucorbex
+Apcee
+Mucuzid
+None
+Cgen
+Unbranded
+Tru E
+None
+None
+Supra C
+Unbranded
+Roll-On Cold Rub Oil
+Vitcee (Lemon Flavor)
+Povidex
+None
+Trosoothe
+Trosoothe
+Ultrafast
+Unbranded
+Dermistat Forte
+Electral
+Zetadone
+Oilganics
+Oilganics
+None
+None
+None
+None
+Betasol
+Elaprase
+Plasil
+Stilnox
+Adacel
+Shan 5
+Vaxigrip Tetra
+Duotrav
+Vigamox
+Nevanac
+Vigadexa
+Afinitor
+Afinitor
+Jakavi
+Jakavi
+Jakavi
+Votrient
+Votrient
+Gilenya
+None
+None
+None
+None
+None
+Dianeal Pd-2
+Cecon Junior
+Depakote ER
+Duphalac Mom
+Influvac Tetra
+Transmetil
+Transmetil
+Gonal-F
+HISDEC (REFORMULATED)
+Unbranded
+Ibusaph-200
+Saphextorant-Plus
+Saphrofen-OD
+Dermclens
+Zen-Zee Plus
+Mvasi
+Hemlibra
+Hemlibra
+Hemlibra
+Hemlibra
+Neubicyte
+Rekovelle
+Rekovelle
+Rekovelle
+None
+Eylea
+Duosulin R
+Gepotin
+Megaplas Liniment Oil
+None
+Dewan
+None
+BSI Medicated Plaster
+None
+Unbranded
+None
+Unbranded
+Flaximed
+Voxil
+Unbranded
+Unbranded
+None
+Unbranded
+Arbloc
+Clopsil
+Fabrexin
+None
+Coxilecap
+none
+Triolev-200
+Clogretab
+None
+None
+Clindamycin (As Hydrochloride)
+Leveprazole-40
+Eurovasc-10
+Unbranded
+Ascorbic Acid + Zinc
+Dafzith
+OD-Quin
+Ascorgen Plus
+Azithwell
+Ecogesic
+Trishul
+None
+Prupricin
+Mutigocin
+Axemol Iv
+Bepsar-50
+Cefugo
+Irigen
+Carbogen
+Depen-C
+Corbimax
+United Home® Natafol
+Amgesic
+Triocef Pfos
+Akutim
+Thymedol
+Vitgen
+None
+None
+Kefsyn
+N-Blood 40
+N-Blood 80
+Geolac
+ZnC
+Nexonav IV
+Omprazomep
+Unbranded
+Bacticef
+Ferfumacid
+Zefo
+Acetyl-West
+Zenia-10
+Verbeta 24
+Pulmohex
+Amlopigen
+Amlopigen
+Centrapaz
+O-Gold 20
+Bactroxime Ds
+Georidome
+Hamacyn
+Unbranded
+Isolipid
+Isolipid
+CLAVWELL
+Unbranded
+Merpetri
+Urotosin
+Unbranded
+Prazole Forte
+None
+None
+Genzifen
+Muloxefen
+None
+Servalin
+Primo C Plus Zinc
+High Cee Plus Zinc
+Oeperidone
+TFour
+TFour
+Xtrem C Plus
+Nephroket
+Amero 500
+Amero IV
+Maxidin
+Altoxime
+Isolipid
+Dorzoladin Plus
+None
+Cefulus
+Pregabagen
+None
+Amucogen
+Ultinerv
+Hycortil
+None
+Cardiozidine
+Predu-XL
+HNBBGEN Plus
+Hemoglow
+Unbranded
+None
+Combenerv
+Antriaxone
+Nasative
+Rubilon 10
+Rubilon-10
+Neurovit Forte
+Roteqan
+Neuromate
+Ambiflex Plus
+Zdonate
+Epirol
+Dotamine
+Eronem-1000
+Eronem-500
+Toxim
+Xanem
+Glukex-50
+Glukex-100
+Ascorseth-Zinc
+Maxolin
+Zeptriagem
+Astholax
+Dh-Hemorix
+Buscozan
+Thermodol-150
+Ceetrux
+Ceetrux Plus
+Coughzinc
+Bicargen
+Bicargen
+Saphzine-Od
+Saphzine-5
+Saphroxol-30
+Saphroxol-Od
+Saphroxol-S15
+Saphcee-Od
+Saphcee-100
+Saphcorzee
+Multisaph-S
+Multisaph-Fe
+Multisaph-Od
+Levero
+Azovas
+Meqox
+Ketonate
+Medicoline
+Sipogen
+Preven-Z Gold
+Cetirigen Plus
+Ambrogold
+Cold'Stop No Drowse
+Nocolds
+Reax Plus
+Rani fit
+Chloramin
+Ranical
+Corezac
+None
+Unbranded
+Zryt® Forte
+Immuforte
+More Cee For Teens
+Pluz Cee For Teens
+Supra C For Teens
+Md-Cee For Teens
+Mucosaph-30
+Mucosaph-15
+Mucosaph-Od
+Saphceevit-100
+Saphcorzee-500
+Saphcorzee-1000
+Calcifesaph
+Saphcisin-250
+Rhinisaph-5
+Cetrisaph-OD
+Allersaph-5
+Mefesaph-50
+Nervesaph
+Alka-Zinc Plus
+Zyferol-D
+Hydomet
+Carbosaph-250
+Carbosaph-100
+Fucisaph
+Saphrofen-200
+Lorasaph-S5
+Megyxsan-50
+Vitrisaph-55
+Vitrisaph-Od
+Fludalt Duo
+Rosulip-10
+Rosulip-20
+ZEFUGEN
+Novapraz-40
+Syzine
+Efolate
+Ottoflox
+Azmasol
+Grakytil
+Episopt
+Unbranded
+Dizimarc
+Dizimarc
+Hyophil
+Exvul-600
+Exvul-300
+Muscoron
+Nervgen Forte
+Vita-B Forte
+Nerv Forte
+Ascorgen For Kids
+Ascorgen For Teens
+Saphfenesin-100
+Ibusaph-Od
+Fucisaph-Na
+Saphrofen-100
+Robisaph-Dm
+Hyosaph-S
+Saphgest-Od
+Saphgest
+Saphredyl
+Mometasaph
+Saphextorant
+Carbosaph-Od
+Saphzine-10
+Augmeed 457
+Cledomox 457 DS
+Nomoflem
+Calmatrix
+DNAC
+Brusco
+Hemobles
+Blifon
+Royalè-C
+ZNK+
+Loxx 30
+LOXX 60
+Eocet
+Ambrosyn
+Sybroxol
+Ambrosyn
+Jodascan
+Jodascan
+Trioxo Mr
+Immunosaph-55
+Immunosaph-Od
+Saphcisin-OD
+Rhinisaph-10
+Ibusaph-100
+Bronchosaph-100
+Saphnolamine-12.5
+Bronchosaph-DM
+Vitasaph
+Vitasaph-OD
+Vitronsaph-Fe
+Deconsaph-Plus
+Decosaph
+Saphdramine
+Saphnolamine-OD
+Saphyoscine
+Appesaph
+None
+None
+Anvil 400
+Anvil 200
+Citrusmax
+Gogout
+Gogout
+None
+None
+Psylloprim 100
+Psylloprim 300
+Docinol
+Docinol
+Cefac
+None
+None
+Hav C For Kids
+Hav C For Teens
+E-Lyte
+None
+Enlight
+Enlight
+Clavaxie 312.5 DT
+None
+Para-B
+Nervita Plus
+Paragen Plus
+Teluvis Plus
+Novafenac
+Zortomib
+Uniborte-3.5
+Hydrosone
+Clotizole
+Clobechem
+None
+Nasalmed
+Oflomil
+FIN-CEE
+Bicarnate
+Bicarnate
+Chewcy
+Vitasaph-Min
+Bupasaph-S
+Saphdex-10
+Calzeesaph
+Dextrosaph-10
+Enersaph
+Immunosaph-T30
+Saphyrefen
+Allergo
+Fusitas
+MULTIMAX
+Viscoqure
+None
+Arb Duo
+Omzol
+Cencane
+None
+Sonoxi
+Calcisaph-L325
+Calcisaph-L650
+None
+None
+Calzinc + D3
+Calci-Zee Plus
+SA-CEE With Zinc
+Veltezom
+Veltezom
+Biomib
+Eginib 150
+Eginib 100
+Eginib 25
+Axalid
+Roswin
+Roswin
+Elmox 500
+Morexen
+Morexen
+Vamcee Plus
+Calcitrupro Plus
+Cholecal D
+Exceed-C
+Suncet 35
+RAPHCTUSS
+None
+Gemcitrex-200
+Gemcitrex-1000
+Saphcisin 500
+Pyresaph-125
+Renabal
+Avodial
+Pyresaph-120
+Pyresaph-OD
+Pyresaph-250
+Calmsaph-S21
+Carbosaph-200
+Carbosaph-125
+Parasaph-125
+Parasaph-250
+Phenchlor
+Ekacin
+None
+Janumet XR
+Lecitram
+Lutimol
+Latochek
+Elite-CDZ
+Parsabiv
+Enervon-C
+Oxaclen
+None
+Ceftriax-1
+Redoxon
+Zegecef
+Foster
+Althea
+None
+Asthavert 125
+Asthavert 250
+Xalvos
+Diatabs Advance
+DOBURIS
+None
+None
+Sibelium
+Zolesar
+Zolesar
+ACT C PLUS ZINC
+Folifer
+Raxiten
+BEWELL C KIDS SYRUP
+Estrofem
+SupraMulti
+Sayana Press
+None
+Phorcal Plus
+None
+None
+Maura
+Farxim
+None
+Tuseran Night
+None
+None
+Protec-Zinc
+Betason
+Claritin
+Latrela
+Magnilek
+Sulfachem
+Acifox
+Betaton Gold
+None
+None
+Vion C
+Pharmaton Immunity
+Miczol
+None
+Carivalan
+Carivalan
+Carivalan
+Carivalan
+Carivalan
+Carivalan
+Foster
+Parsabiv
+Parsabiv
+Nupovel
+None
+Dermclens
+Jewel-Cee Premium
+None
+Doceaqualip 80
+Doceaqualip 20
+Sutrip
+Shield-C
+None
+Klin-C
+None
+Medgivit
+Difflam
+CTZ
+Caelyx
+Encorate Chrono 500
+Tricoxia
+Mega Veggie + Zinc
+Ascorb Z+
+Secnidazole
+Enervon-C Filmcap
+None
+None
+Bactopic
+None
+Poten-Cee + ZN
+Poten-Cee + ZN Advance
+Gowell-C Plus
+Calaman-Cee
+Immunosure
+HBS Immuno-C Plus
+Frezitron
+Cefuxan
+Cefxon-S
+Oxykab
+Natraboost
+Bactidol Itchy Cough Relief
+Ascorp-Cee
+None
+Lifecorb
+X-T-R-Z-C
+None
+None
+Herbavomitz
+None
+Povigen
+Parasaph-OD
+Apcee For Kids
+Azkortab For Kids
+Carblax
+Better C For Kids
+Enocee For Kids
+More Cee For Kids
+Pluz Cee For Kids
+Supra C For Kids
+Md-Cee For Kids
+Povigen
+Nascorb
+Azkortab For Teens
+Better C For Teens
+Apcee For Teens
+Enocee For Teens
+None
+Parasaph-120
+Powermint
+Simulect
+NovoRapid FlexPen
+NovoMix 30 Flexpen
+Herceptin
+Innohep
+Thromboflux
+Twinrix Adult
+I.V. - Globulin SN Injection
+Coagulation Factor IX (Human)
+Thymogam
+Gamma Iv
+Indirab
+Infanrix-IPV+Hib
+Revac B+
+Hemapo
+Hemapo
+Avastin
+Insulyf-R (Regular)
+Insulyf-N (Nph)
+Insulyf-30/70 (Biphasic)
+St-Pase
+SHARJVAX
+Bruhep 25000
+SAKARIN 25000
+Bomvital Forte
+Tamoxigen 10
+Amoxil Forte
+Ferlin
+None
+None
+None
+Ultrasept
+Lovectus
+None
+Cyscore
+Broxytone
+None
+None
+none
+Consac
+Godex DS
+ILUBE
+Espazol
+Pneumonex
+Mastic-5
+Raniphil
+Tamoxigen 20
+Neocon
+None
+None
+Adresone
+Pamisol
+Tosylam
+Sulmax
+Retagesic
+Parastan
+Lewimycin
+Lonarel
+Enhancin
+None
+Neurotrene
+Stravac
+Bcomstan
+Vaxman
+None
+Retadol
+Parmecel
+Cefamed
+RIMACLOR
+None
+Kapirox-20
+Unbranded
+Peruxy
+Sydenexin
+Britamox
+Carbinom-5
+Fungby
+Fluonazole
+MERAZOL 40
+Zyndes
+Carvecard
+Zit-Od
+Celtax
+CELTAX
+CELTAX
+Barcef
+Mervilar
+None
+None
+None
+Medifer
+Obimin Plus
+Truvast
+Atormax
+Trisulcom Forte
+JINZOLE
+Menizole
+PRINSON
+DUVATRENE
+Zescita
+Zemdil
+Myrevit-Fe Forte
+Ziomet
+Cefurox
+Coxart
+Sydentan Plus
+Amlorex
+Norvac
+None
+Fencid
+Lifezar
+Lifezar
+Gabapex
+Clofenex-50
+Unbranded
+Clofefar
+Bufenol
+Bufenol
+Dart
+Gastride
+Vinsef
+Vefarol
+Vinsef
+Floxacil
+Fensin
+Histapen
+Rucef
+Brelvastin
+Zurenix
+Clarifix
+Medixime
+Midazolex
+None
+Adiac
+Natavit
+Elifer
+Ferro-Care
+Medvit-OB
+Obycon
+None
+Olanzin
+Albez
+Nedzadin
+Unbranded
+None
+Unbranded
+Tizacure 100
+Alclav BID
+ZINTRENE
+None
+None
+Clinbac
+Clinsea-300
+Pantofar
+Pantodix
+Trigenna
+None
+Locetin
+Lezclav 457
+Olmexl-HF
+Clozid-25
+Rabecid
+Ocusyn
+Cilastasea-1000
+Metoclor
+Angiostan-300
+Xylone
+Kinoves
+Metorvast
+None
+Metorvast
+Vastator
+Lewistin
+None
+Atorphil
+Unbranded
+Arbloc Plus
+Duosar
+Zarnat Plus
+Diassium-H
+Unbranded
+Hiblock
+BLEOCEL
+Edecar
+Transic
+Azro
+Losargard
+Losargard
+Gizol
+Q-Zole
+Esotid 40
+Folijen
+Nurocol
+Ascync
+Sydenkast
+Byenol EFT
+Allerin Syrup (Reformulated)
+None
+Momeright
+Epilanz-10
+Bandax
+Salmeflo
+Escivex 10
+Ventpro
+Moxylor
+Unbranded
+None
+Unbranded
+Unbranded
+Hextan
+Bigsens XR500
+Neurolev
+Aleva
+Vomiz 8
+Olandus ODT 15
+Zydusatorva 20
+Atorpro
+Cilopro
+CEFUFIRST
+Lamidus 50
+Ascorcee
+Unbranded
+None
+None
+Rosumond
+TRIMETAB
+Gludin
+Docesanz-20
+Docesanz-80
+Clonigard
+VALATAN
+Raniphil
+Philstat
+None
+None
+Coldaser
+Unbranded
+Westfimox
+Xmet Er 500
+Trixophin
+Bandax
+Levit
+Corcebic-C
+Glo-V
+Coldenflu
+Logout
+Oframac
+Cefalin
+Alka-C
+Nutrawell
+Gluden-C
+Excel C
+Avas
+Arcalion
+Vexplatin 50
+None
+Allurase
+Therabloc
+Therabloc
+Diamintic
+Evimox
+Acumox
+Promox
+Anpheclor
+Nerfalex
+Lexriel
+Rowagel
+Drexclo
+Exbropin
+Parmecel
+Purispec
+Transderm-Nitro 5
+Hersolin
+Bisoxine
+Salofalk
+Falex
+Airex
+Meforagesic
+Minirin
+Miacalcic 200
+Nixolin
+Vamgesic
+Maxicap
+Decapeptyl Cr
+Viraxil
+Asaprim
+None
+Biogesic (Orange Flavor)
+Phytoral
+Omepron
+Mayell
+Raxide
+Ephron
+EZmol
+Sedoz
+Angeliq
+Isonid
+Zertin
+Bronchomed
+None
+None
+None
+None
+Muscortex
+Dormazine
+Voxamine
+Solphride
+Audra
+Neofex
+Diucare
+Lotase
+Amoclav
+Pediaclav
+Cholinerv
+None
+Sydentan
+Unbranded
+Wilopres Plus
+Bevitrin OB
+Kremezin
+Furcef
+Claryn
+Victus
+Ambroflam
+Lubrex
+Lordamin
+Healthcare Grille
+None
+Healthcare Antifungal Cream
+Resincal
+Healthcare Amoxicillin 500
+Zolgen
+Cataclon
+Alphapres
+Tigeron 750
+L-Aspase
+Cholesol
+Unbranded
+Unbranded
+Zynovate
+None
+None
+Princicar
+Caraten
+Cefixime
+Clavuxel
+Tricort
+Vexplatin-100
+None
+None
+None
+Rhyma
+Unbranded
+Atorvastasyn
+Unbranded
+Urzen
+Citrafleet
+Paragard
+Unbranded
+Celecore
+Sarbet
+Unbranded
+Hylazine
+Emepraz-40
+Cholinerv
+Pospenem
+Enafril
+None
+Brytim
+Flucoral
+Life C
+Seif
+Quadrotopic
+Gastropan
+Lagundex
+Lagundex
+Carbogen
+Mucast
+Thera-Care
+Unbranded
+Skinidine
+None
+Klemen-C
+Ascozin
+Quanil®
+Tigeron 500
+TRANSTAT 500
+Glucost R
+Salonpas Gel
+None
+Conamid
+Coxid
+Montekaz
+None
+Allecur P
+None
+Diatricef
+Sytriaxone
+Cefekixime
+Prevaclav 457
+Arksone 250
+Letram
+Unbranded
+Vitfolix
+None
+Rosadoc-20
+Depamax
+Controld 20
+Lupinazine
+Lupinazine
+Clinderm
+Rimonid
+None
+Tinaguard
+Cocine
+Cocine
+Cocine
+Morexen
+Hypace
+Hypace
+Hypace
+Bronelid Forte
+Surecef
+Gemvex-1000
+Gabavex 100
+Eodipine 10
+Eodipine 5
+Calvit-C
+Riedoc-C
+None
+Guard-C Plus
+Immutrax
+Zincor Plus
+Xcell-Cee
+EssenCee PLUS
+GUT-C PLUS
+STIMUNO
+Herbacold
+Femidine
+Skinidine
+Nicardipine Hydrochloride
+Dr. Alvin Rejumax 3
+Dr. Alvin Rejumax 2
+Fern-C Plus
+Xtrem C
+Himox
+None
+Cleene
+Kortos Cream
+Micotran
+Pregvit OB
+Unbranded
+Alprazitel
+Butasine Plus
+Controld 10
+Alphanate
+Healthy C-Plus
+Pedz-Link
+Zeenc
+Multironsaph
+Vitazin - C
+None
+Natra-C Forte
+PRYCE-CEE PLUS
+Defen-CZ N.A.
+None
+Keteen
+Healthcare Tinea
+Maalum-S CT
+Acycla
+CLAVICIN
+Maalum
+Syprolyd 2.25
+DELEXARD
+Parawell-250
+Welica
+Parawell-125
+Parawell-100
+Parawell-500
+Broloxin
+None
+Mirena
+Pusogard
+Drozid
+Diabemin XR
+Acnetrex 10
+Paclisanz
+Biprosolone-500
+Zingiber Officinale (Ginger Rhizome)
+Maxivent
+Xgeva
+Myrefen
+Alzor
+Alzor
+Alzor CCB
+DOCVATE PRONATAL
+Smofkabiven Peripheral
+Alzor Ccb
+Alzor CCB
+Alzor CCB
+Asenza Plus
+Fenostat
+Glyzeric
+Trampar
+Inoclav
+Gembio
+Gembio
+NONE
+Enoxbicare-40
+Lewinex
+Ascorbic Acid
+Ascorbic Acid + Zinc
+Ascorbic Acid
+Ascorbic Acid
+Diaciel
+Salbutamol (As Sulfate) + Guaifenesin
+Guaifenesin + Salbutamol
+Ibuprofen + Paracetamol
+Guaifenesin + Dextromethorpan Hydrobromide
+Hydrocortisone
+Multivitamins + Minerals
+Getryl
+Cefepime (As Hydrochloride) w/ L-Aginine
+Cefuroxime (As Axetil)
+Bicalutamide
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Atorvastatin (As Calcium)
+Chloramphenicol (As Palmitate)
+Betamethasone Diproprionate + Clotrimazole + Gentamicin Sulfate
+Novacee
+Tobramycin + Dexamethasone
+Tioconazole + Tinidazole
+Ciprofloxacin
+Co-Amoxiclav
+Piracetam
+Clobetasol Propionate
+Omeprazole (As Sodium)
+Ascorbic Acid
+Topvex 100
+Loperamide Hydrochloride
+Thiamine hydrochloride (Vitamin B1) + Pyridoxine hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12) + dl-Alpha Tocopheryl Acetate (Vitamin E)
+Clavsin
+Plasid
+Multidrop
+Levocetirizine Dihydrochloride
+Dutasteride
+Motirex
+Leukorex
+Leukorex
+Cardiomide
+Folic Acid
+Iron + Multivitamins
+Cefotiam (As Hydrochloride)
+Amoxicillin (As Trihydrate)
+Amlodipine (As Besilate)
+Gliclazide
+Maxidine
+Aplosyn Otic
+Albumax
+Tetanus Immune Globulin Human
+Human Normal Immunoglobulin (IGIV)
+Lofenin
+Sodium Chloride
+Sterile Water for Injection
+Solbropen
+Jazcof
+Noxprivex
+Telmisartan
+Valganrose
+Thiamine Mononitrate (Vitamin B1) + Pyridoxine Hydrochloride (Vitamin B6) + Cyanocobalamin (Vitamin B12)
+Levodopa + Carbidopa + Entacapone
+Stalev
+Gliotem 20
+Lewinamic
+Promox
+Zaran
+Nicardipine Hydrochloride
+Unbranded
+Z-Mycin
+Metovasc
+Forcad
+Pregard
+Ciphonex
+Fixime
+Iruden
+Phenylphrine Hydrochloride + Brompheniramine Maleate
+Guaifenesin + Sodium Citrate
+Aluminum Hydroxide+Magnesium Trisilicate+Calcium Carbonate
+Emdistat
+Ruchol
+None
+None
+Medilexin
+B-Plex
+Unbranded
+Butamol
+Solben
+Ciprofloxacin (As Hydrochloride)
+Orlifast
+Albutein 20%
+Blopress
+Tramadol Hydrochloride / Paracetamol
+Atorvastatin (as calcium)
+Ventrex
+Comtan
+Quadezyme
+Medrofix
+Nerfalex
+Easevag
+Piperacillin (As Sodium) + Tazobactam(As Sodium)
+Aminophylline
+Bio-termin Plus
+Zegecef
+Cefotiam (As Hydrochloride)
+Chlorphenamine Maleate
+Allermax
+Isoxuprine hydrochloride
+Nystatin
+Katinko Oil
+Hypermox
+Cilostazol
+Cefepime (as hydrochloride)
+Enat 400
+Panfor SR-500
+Residron
+Scancortin
+Covex
+Saphlizine - Fe
+Saphlive
+Saphmirate
+Enervon-C Filmcap
+Saphfen-400
+Cetrisaph - 5
+Mefesaph -C250
+Saphtinamine-6.25
+Saphlerine-2.5
+Saphendrine-2.5
+Saphcodyl
+Saphvidone
+Saphceevit-45
+Elica
+Elica
+Tinactin
+Cepiram
+Nomason
+Povodi
+Erge
+Vercore
+Vercore
+Vercore
+Aeruginox
+CORXICLAV
+Fenogen
+Perlicef
+Linmervast-40
+Thromic-500
+Omee
+MAX-CEE
+Niosol
+Meton
+Methyden
+Sybactam
+Ambikacin
+Leveprazole
+Hemotrex
+Broncolax
+Malcef DS
+Malcef
+None
+None
+None
+Floxulev
+Cognex-500
+None
+None
+Zolppi
+Trimbow
+Simponi Aria
+Simponi
+Levacetam
+Bagogem
+Fluororac
+Hybip-85
+Zolichek
+Sampaguita
+Zinnia P
+None
+Satcapto-25
+Solazol
+Lecit-E 200
+Stalev
+None
+None
+Revac-B Mcf
+Solbropen
+Dimide
+Alburel
+Heprin
+Corbistrep
+Unbranded
+None
+Levofin
+Histapen
+Benadrex
+Allermin
+Histazyn
+Strerasone
+Dexacort
+Medinerv Forte
+Lofenin
+None
+None
+Unbranded
+None
+Foscason
+CONSAC
+Gemzee
+Unbranded
+Preven-Z Gold Na
+Vicks Immune Defense
+CIUM-ZD3
+Hezgicef
+Susfixef
+Besartan
+Macrogef
+Asterol
+STOPCOLD
+Virex
+Virex
+Megescel
+Congest-0.625
+None
+B-Com
+Vital C Plus
+Pregavit
+Folacid
+None
+Foli-Aid
+Folitect
+Irovit
+Foremia
+Forilz
+Fola
+Focid
+Folicon
+Folazen
+None
+Apo-Tin
+Carezee
+Ciclodin IV
+Lewi Vits Forte
+None
+None
+Zn-S10
+Coldmedic
+Citrupro 1G
+None
+CalCitrupro
+CETALERT
+Fern-C® Gold
+Proscopan
+Brenal
+Alrif
+Qpine 200
+Fericap CR
+None
+None
+Vita-1
+Triphimox
+Momate Az
+Normbeat 10
+D-Hesper
+Diosid
+Ioper
+Spivar
+Venacure
+Nuevallin
+Logufen
+Hibor
+Euramox
+Euramox
+Euramox
+Cleovate
+Cetoz-L
+Brutaflam-90
+Brutaflam-60
+Brutaflam-120
+Syrelief
+Syrelief
+Diosper
+Menizole
+Ercef
+Bisolem
+None
+Aprezin
+Lorcef
+Adcetris
+MAX-CEE+
+Woods' Peppermint Cough Syrup (for Children)
+Woods' Peppermint Cough Syrup (Adult)
+Fromefen
+Immuzine
+Cardizar
+Cendalex
+Allupas
+Clocel
+Kian 500
+Tertia
+Silex
+Penfro
+Sqrax
+Milgamma N
+Urilzid
+Dostan
+Vinlexin
+Losabloc
+Meclitab
+Meclitab
+Jazcef
+Cepigram
+Hepuri
+Atroact-20
+Gofix
+Tazosur
+Tazidyn
+Quali-Cee
+Pitator
+Clarithro-Natrapharm
+Tri-V
+Cotamin
+Eroxime-500
+Ceefait
+Clirnaze
+Retacid
+Ashexol 350
+Ashexol-300
+Fenostat
+Skinidine
+Montiget
+Tidact
+Amlodac
+Zetadone
+None
+None
+None
+Rovacaine
+Amlovic-10
+Accepan
+Cefiem
+Nefrotein
+Plendil ER
+Budecort Respules
+Arimidex
+Forxiga
+Plendil ER
+Plendil ER
+Lupinsulin-R
+Lupinsulin-N
+Lupinsulin 30/70
+Nurocer
+Nurocer
+Olanzapro
+Quetiapro
+Maxitron
+Tobraxa
+Budexa
+Ceenergy
+Trombocil
+Trombocil
+Restime
+Apperon
+Appetanyx Kids
+Gemzee Plus
+Gastrigel
+Losacar
+Unbranded
+Cartin
+Kleer Pores
+Brilliant-C Pluz
+Eco-Cee
+Selcee
+Ascof Forte
+Poten-cee
+Preven-Z
+Symdemax
+Symdemax Forte
+Fitex
+Fit-Tea
+Slimex
+Apperon
+Ceemet Plus
+Unbranded
+Ofplemed
+Unbranded
+Unbranded
+None
+None
+None
+Unbranded
+NO BRAND
+None
+Citicure
+Murozine
+None
+None
+Ibusoft 400
+Ibusoft 200
+Ascorb Z+
+Mega Veggie + Zinc
+None
+Beterub
+Primerub
+Unbranded
+Unbranded
+None
+None
+Cixtor-Z
+Riber
+Riber
+Riber
+FARAZID
+Mperi
+Perdone
+Unbranded
+Neurocare
+None
+Appemin
+Nhance Boss-C
+Casino Femme with Dual Moisturizer
+None
+Venocare
+Respitapp
+Biogic
+Ecogesic
+None
+Ferrqure
+Elixime
+Stanxime
+Shincef
+Provixime
+Acrexon
+Numetrax
+Sef3Gen
+Napran
+FreeVer
+Solnerv
+Iodostrike
+Disern
+Hydr+
+Fern-C
+Paramolin
+Q-Lev
+Trean
+Pantin 20
+Pantin 40
+Vometa
+Vitagin
+Stei-24
+Stei-8
+Rhedin 7.5%
+Remopain
+Unbranded
+None
+Mucosform
+MPL Etopaxil
+Lorades
+Hematozol 50
+Execore
+Diastatin
+C-Zin
+Cencane 0.25
+Broadmetz
+Adcal
+Novasporin
+Golxine
+Irish
+Neo-Vita
+Zarocin
+None
+Probal 75
+Cixtor
+Womazol
+Venlator 150
+Clircaf Forte
+Clircaf Forte
+Clircaf
+Clircaf
+TRUE-CEE
+Hematrene
+Purinase
+Vital-Z
+BDIMI-C 500
+Unbranded
+Vancotan 500
+Penbrosol
+Penbrosol
+Topirol 50
+Topirol 100
+Neuropro
+Vexamet
+Vispoxetil
+Haelex
+Gemfon
+Forxiga®
+Cefulab
+Flucoral
+Almesar
+Unbranded
+None
+Dirocet
+Nitro
+Acevon
+None
+Aldrifen
+Zerodol
+Emicox
+Calmex PRO
+Encorate Chrono 500
+TGP Aces
+BDIMI-C 250
+Amapine V 5/160
+Amapine V 10/160
+Vitacal Plus
+None
+Nutri-Aid
+None
+Moxidin
+None
+H-PANTO 40
+Exflem
+Exflem
+Zanovic
+None
+Mecid
+Anoion
+Unbranded
+Calcipine
+Xarelto
+Unbranded
+AMLOSAR
+Rabe-20
+Ansimar
+Zornica - 4
+Dolfenal
+Aloxi
+Neubicyte
+Meropen
+Nalocure
+Naropin
+Edurant
+Avastin
+Bilaxten
+Avastin
+Amlozaar
+Debtan
+Onabet
+Forteo
+Clavox
+Dicofen
+Loxenil
+Appexon Plus
+El-Buctasine
+Sangobion Baby +
+None
+MARK-CEE
+None
+Immuzen-Cee
+None
+VG Pak-C Plus
+Zncal
+Nazogen
+Vita-Zace
+None
+None
+None
+None
+Unbranded
+Cervit-C
+Flexon
+Esberitox Compact
+Iberet Active
+Cgen Plus
+Vitagen
+Mupihab
+Vasocon
+Giozee Plus
+Enhanzee Plus
+Ascozin Max
+Enoznc
+Pharcee Plus
+Endurecee Plus
+Supraznc
+Znc4te
+1 Ceeplus
+Actcee Plus
+Strongcee Plus
+Alto-Zee Plus
+Bida-C
+Klaz
+Salacyn
+Metform
+Lecit-E 200
+Zegen
+Prostriaz
+Rostar
+Spirocare-50
+Neorobia
+Genstigmine
+Gensartan
+Genecef
+Spirocare-25
+Actranex
+Donepedin
+Donepedin
+Zithrophil
+Zercin
+Moxeth-100
+Unbranded
+Cetzy
+Eocet
+Hyopen
+Zinephen
+Docmide
+Elevate Pronatal
+Vitabolic Plus OB
+Mepresone 40
+None
+Telzyd H 40/12.5
+Clotritas
+None
+Novomit
+Femadol
+Ivetra Iv
+Karved
+Koltin-S
+Xtracee Plus Forte
+Dayvit
+Per C Plus D
+HighCee Plus D
+Gocetax
+Sanoxime
+Amlortaz
+Amsarte
+Unbranded
+Pregav
+Cardison
+Rosubet-10
+Rosubet-20
+None
+None
+Onegaba 100
+None
+None
+None
+None
+Nervesaph-Plus
+Saphcorzee-45
+Meclizsaph
+Saphclophenesin
+Multisaph-Fe
+Methycosaph
+Folisaph
+Saphcorzee-Forte
+Ascorsaph-Plus
+Saphceevit-40
+Saphcorzee-40
+Fevlon
+Caltab
+Immu-DB600
+None
+Unbranded
+None
+Enoxbasy 40
+Enoxbasy 60
+Silvex
+Vertisaph-8
+Vertisaph-16
+Vertisaph-24
+None
+None
+None
+GLIMPRO
+GLIMPRO
+Arbix
+Lavudine
+Rostan
+FISARTAN
+Glimpro
+Pediazith
+Cardiotaz
+Orafixe
+Oravast
+Gluclazz 30
+Vitagrow
+Brospec
+Unbranded
+None
+None
+None
+None
+Butamir
+Tamirit
+Fe2Hold
+None
+None
+Zocef
+Ajenacef
+Ajenacef
+Unbranded
+Unbranded
+Amnor
+Bida-C
+Salbuden
+None
+None
+Shelogel
+Sced
+Amlodine HD
+Amlodine HD
+None
+Ceeright
+Neuropse
+None
+Xenazole
+Catacibin
+Syproxen
+Coviprol
+Coviprol
+Unbranded
+Diacysteine 200
+Unbranded
+Clonesten
+Fresh Eyes
+Etoxi 60
+Folimed
+Zithmac
+None
+Throx500
+Dopamaine
+Tezobort
+Primucitam
+Unbranded
+Zamboprim
+Levaxa
+Bilaxten
+Decolgen Max
+Zyrova 20
+Zyrova 10
+Trimenova
+Thyvex-100
+Thyvex-50
+Superscent Oil Sparomatic
+Revitiz
+None
+None
+None
+Dizochem
+Immunosin
+None
+Evokof
+Cetraxal
+None
+None
+None
+Olxarin
+Olxarin
+Olxarin
+Olxarin
+Zolfree, Freecid
+None
+Olmepas
+None
+Teralin
+Terasart
+Sun D 1000
+Bactafuz
+Unbranded
+Dicarbo
+None
+None
+Bazicort
+Irofree
+Onitaz
+Levecef 1.5
+Levecef 750
+None
+Dobuzin
+None
+INFAVIT
+Ivcort
+Zionprazol
+Proxilev
+Murozine plus
+Etorikem
+None
+None
+Icumax
+Sudomas
+Tazadil
+Flucysteine 200
+Unogab
+Unogab
+Goclitax
+Goclitax
+Relifast
+Teniente
+Lieutenant
+Ventar
+Ceenovit Kids
+None
+Xitor
+Cantabin
+Furosetab
+Cantabin
+Trinsetron
+Bactier
+Apuldon
+Amoxipen
+Euthyrox
+Kurt
+Cinnarex
+Morcet
+Robitussin
+Cycomin
+Normetec
+Normetec
+Normetec
+Gascovid
+Terbivid
+Rofast 20
+Ricozole
+Agletrium
+Sanitary Green Balm
+Zyhex
+Cefilim
+Unbranded
+Unbranded
+Unbranded
+None
+None
+I-Zync
+None
+Misha-400
+Vaporin Aromatherapy Oil - Lavender
+Lecit-E 200
+Oniplex
+Leave-Pain
+Fam-C
+None
+Eco-Cee Pro
+Znate
+Lincogen
+None
+None
+Salmate
+Triophil
+Lamicdin
+Merit Plus
+FISARTAN
+Amkovit-C Plus
+Carlefer
+Raymax
+Immuntab
+Kalanit
+Excelox
+Phosphaxil
+Phosphaxil
+None
+Valcore
+Ceftriaxsur
+Aetricef
+Capnorm-500
+Tricor
+None
+Piperwell
+Floxanova-500
+Floxanova-750
+Hbsone
+Nioclean-AD
+Saphtrate
+Omefhalox
+Valpros
+Joy-Cee Plus
+Adretam
+Gavlin
+Catapin
+Metacort
+None
+None
+None
+Curadec
+Zopan DS
+Tazicon
+Govastin
+Racifluoro
+Kalem-C
+Atorschwartz
+Mergot
+Appelife
+Ranicort
+Zandropil
+AMS
+Ingesta
+None
+Unbranded
+Unbranded
+Thymedol
+Platisan
+Dactorubin
+Dactorubin
+Hydrophen
+Gempower
+Zemomax
+Cefurexel
+Nuvert
+Telmidec HCT
+Armapenem-500
+Unbranded
+Orxime
+Orxime
+Bezam-S
+Seroflo 250
+Asthalin
+Seroflo 125
+Aropen
+Aropen
+Pocym 250
+None
+Ascorboost
+Inno-D2000
+Unbranded
+Irbedenz
+Irbedenz
+None
+Cgen Plus D
+Pak-C Plus D
+Clamisyn
+Per C Plus Forte
+Cznc Plus D
+Zinconate
+Minox 2
+Kaicerine
+Lorine 5 Ct
+Clopicare
+Supermint
+Tripibra
+Tripibra
+Katniss
+Lopizar
+None
+None
+None
+Elson
+Medroxcure
+Sydenhex
+Sybromex
+None
+Sitrizine
+Cobax
+Unbranded
+Azcornate
+Zeecorb
+Vastoran-10
+Vastoran-20
+Ramipin
+Luzlax
+Zulose
+Amloserv
+Oramycin
+Oraved
+Gotrime
+Zelera
+Clopiron
+Oxadexcel
+Tylenol
+Dobutax
+Briaxone
+Lamicdin
+Merit
+Merit
+Merit Plus
+Welltrate
+V forci
+Benflam
+Ascortain
+None
+None
+Virusil
+Marlum-C Plus
+Healthlink Vitazncee
+None
+None
+None
+Slimtea
+None
+None
+Ascozin Max
+Azenc
+ImWell
+None
+Loxamol
+Ciproson
+Xygyn
+Loxart
+Vitacef
+None
+Powermint
+Rixanep-500
+Archifar
+Pioglifar 15
+None
+Vertid -D3
+Cutazole-B
+Ferromar
+Eugamma SN 10% Inj.
+Adosal
+Novomix 30 Flexpen
+Prazosave
+Jenogab
+Phosphaxil
+Erycol
+Dolvitab
+Bhetty
+Methyldex
+Altovox
+Mediclav
+Galexiclav
+Rhinol Plus
+Venrose
+Fenemik
+Clavorilz
+Clavasul
+Serixon
+None
+Liquisone
+NeuroAiD II MLC 901
+Twindopa
+Tramed
+TAD-600
+Syneuron
+None
+Oxehab
+Ofplemed Forte
+Nor-epix
+Lizolid
+None
+None
+Ketorz
+Ketorz
+Ketorz
+Izbrid
+Gabamex
+Amblomide
+Colbroxine
+Clonipress
+Bolburg
+Biemefrin
+Syzine
+Sybroxol
+Cefohab
+Vitgen
+Inflamgen
+Laboxtat 40
+Blisogout 40
+Uricobles 40
+Laboxtat 80
+Uricobles 80
+Blisogout 80
+Sydentuss
+Macrobex
+Saphlor Plus-125
+Saphlor Plus-62.5
+Hibor
+Hibor
+Claire DS 125
+Aluzet
+Unbranded
+Megalax
+Neurovein
+Provilac
+Alcostar
+Wilgiclav
+Katinko Oil
+Lossiutab
+Louise
+Saphcorbic-100
+Saphcorbic-OD
+UNIMOX
+Gorep
+Gophrine
+Pantokem-D
+Saphcorzee-OD
+Saphceevit-OD
+None
+Unbranded
+Africid
+Vitcee Plus
+None
+Unbranded
+None
+Unbranded
+Nicotrix
+None
+Unbranded
+Unbranded
+Coxapill 400
+Unbranded
+Konamed
+Noren
+Acifree
+Q-Retic
+Vancofree 500
+Mykmaxin
+Zefxime-500
+Hero-Z
+Unbranded
+Unbranded
+Godine
+Friend-C
+Vancocym
+None
+Valzimox
+Saphixime 200
+Saphixime 400
+Hemactiv
+Floxalev 500
+Floxalev 750
+Septahex-C
+Cgen Plus Forte
+Golcolax
+Laxease
+None
+Zinclamine
+Cardiozart-80
+Gozedine
+Sartan 100
+Diacin 500
+Glubitor-OD
+Q-Pid
+Rapid-B1000
+Betazok
+Nervimin
+Ener C Plus
+Ener C Plus
+Ener C Plus
+Danest
+Fungtopic
+Saphlyte
+Defnd 400 Plus
+D400 Plus
+Criza
+Dynatussin ES
+Calixarb
+Casino - Mild Fragrance
+Casino Mild Fragrance
+Ampriwest
+Saphdryte
+Pure-Cee'Z Capsule
+None
+Zeta-C
+None
+Civaz
+AsconvitaZin
+None
+Infamix®
+Inflamgen
+Mefecap
+Cgen
+Aliskati
+None
+None
+Rani-D Plus
+None
+Miconex
+Delcon Forte
+Acoreb
+Immuntab
+Sanovince
+Novaron-FA
+Alagesic
+Tecpro-Z
+Vamcee
+Slimtea Plus
+Dexasan
+Calcinol-1000
+Zeepro
+Zeefence
+New Neurogen-E (For Export Only)
+None
+Cilosol 50
+Anzonat
+Ciplume
+Teranac
+Trolip
+Lobrix
+Plerifor
+Gentagem
+Novorapid Flexpen
+None
+Surtazid
+Xpel
+Xpel
+Phenodex
+Perfosen
+None
+None
+None
+Golmide
+Fluomizin
+Aspen
+Aspifast
+Qinolon
+Cefmed
+Aclor
+Zeflor
+Celoxone
+Clonimed
+Urolosin
+Tamzu
+Ventek
+Ventek
+Zeffoxtab
+None
+Lewixin
+Abhay-TOX
+Lomoh - 40
+Goxaparin
+Ecori-120
+Ecori-90
+Ecori-60
+Flamaway-2
+Flamaway-4
+FUDION
+DAILY-C
+Prolostan
+Capomed
+None
+None
+Mustone
+Tazi
+Calpol
+Tazicef
+Losarcure
+Butasine
+Cenvert-8
+Neuroseth
+Urisol
+Calciumvit Plus
+ETOXIB 90
+LODIVAS
+Telmisar 80
+Met-A-Day
+Telmisar Plus
+TELMISAR
+Zinceevit-D
+Atorvas 40
+Ascozin
+Roswin
+Rizinc Plus
+Calpol
+Daily-C Plus
+Ecobrox
+None
+Flutiright S-100
+Flutiright S-250
+Flutiright S-500
+Relispray Plus
+Vinodine
+Encorate Chrono 500
+Corenerve Forte
+Extramint
+Off-Pain
+Pain-Stop
+Supramint
+Aliskati
+Onegaba 300
+Onegaba 400
+Symdenx
+Symdenx Forte
+Maxicor Plus
+None
+Vancochel
+Metanorm
+Unbranded
+Geoxime-500
+Ciproprime
+Unbranded
+None
+None
+Betava
+Alfree 30
+Alfree 60
+None
+Losacar
+Valazyd H
+Zarnat Max
+Divalpro 125 Sprinkles
+Kosimox-6
+Kosimox-1.2
+Green-VIII Inj.
+Green-VIII Inj.
+Losalbu
+Corlev
+Bet Cream
+Fencap-Fc
+Unbranded
+Twinact
+Twinact
+Twinact
+Novazide
+Neozep Non-Drowsy
+Medicol I-400
+Medicol
+Carboplitin
+Anzepin-200
+None
+None
+Gozart Plus
+Unbranded
+None
+Unbranded
+Unbranded
+Unbranded
+Dopezil
+Dopezil
+Geoxime DS
+Geoxime
+Verist-16
+Bestine
+Amsoclar
+Prosride
+Tritone
+Gosterid
+Sterica
+Jorvic- C
+Rizin
+Medmin
+Novoptin
+None
+Pediafortan-GE
+Lodibiz
+Lodibiz
+Finlax
+Trimulex Drops
+Acipraz
+None
+Oustma
+Dalafil
+Booster-Z
+Anema
+Benzide
+Unbranded
+Broncocent
+Gosartan-100 Extra
+Dilate
+Difflam Solution
+Bacterad 250
+Ursolec
+Luperidone
+CEENOVATE
+CEENOVIT
+Cefudec
+Kefsyn
+Vancokem
+Vancokem
+Xitor
+None
+None
+Topvex 50
+Gemvex-200
+Vexinib 100
+Vexer 150
+Cefusaph-250
+Cefusaph-125
+Ivabrox
+Ivabrox
+King Vita B
+Zolmed Forte
+Gascopan
+Neuropse
+None
+None
+None
+None
+None
+Fenamic 500
+Fenamic500
+Mefecap
+Mefetab
+4CHB
+Amexi
+CHBNXT
+Tobdex Free
+Armepime
+Rapid-B300
+Armazidime
+Soxsegen
+Tamparin
+UrgenCee
+Levetriax
+Flamex
+Flamex Forte
+Ecogesic
+Support Cee
+Casino Femme With Dual Moisturizer
+Paranerve
+Nervgen Plus
+Ultra-D
+Maridan
+Vendicom
+Royale C Plus
+Erbinol
+Hepuri
+Cefim
+Efficascent Relaxscent Oil – Calm
+Unbranded
+Clopres
+Zithrocare 500
+Iodostrike
+None
+None
+None
+None
+Duostar
+Asthromed
+Aspizen
+Aspishield
+Aspipro
+Aspimix
+Aspigen
+Aspigard
+Aspifend
+Aspicare
+Aspicard
+Tykinib 100
+Tykinib 400
+Redacid
+Montemax
+Lomoh-60
+Paderes 25
+Norcare
+Unbranded
+Rapcvit Plus
+Kenzamide
+None
+XBloc-30 MR
+None
+Monnax Plus
+Goxaparin
+None
+Efficascent Boost Pain Relief Massage Roll-on
+Triaxole
+None
+Solril-25
+Solril-100
+Sartassium-100
+None
+Clovoxclav-156.25
+Unbranded
+Unbranded
+Unbranded
+Rosustat
+Clindavest 600
+Afligec
+Nasatapp Flu
+Visplegm
+Sartassium-50
+Vintrenox
+Enoxbicare-60
+Noxprivex
+BPCure
+Garacare
+Caneschem
+Lupiros
+Lupiros
+Skinumb
+Axatob
+Cypomex Forte
+None
+Ceplenext
+Mayez
+Rani-C Effe
+Rani-C Double Effe
+None
+B-Com
+B-Com Forte
+Ciloplot
+G-Cob
+None
+Dexamak
+Makcin
+Saphlecox-400
+Simvasaph-40
+Betadine
+Combe Five
+Combe Five
+None
+None
+Xtrem C Plus Forte
+B3-C
+Prospan
+Pletzolyn
+Solvomax
+Proamlo 5
+Odasyl
+Proamlo 10
+Odasyl
+Haidone
+Tascit
+Risdin
+Rispegard
+Healthcare Children's Cold
+Gen-Cee
+Requip PD
+Requip PD
+Requip PD
+Jardiance
+Jardiance
+Nimbex
+Overt
+Flamastat
+Ldnil
+Ldnil
+Unbranded
+None
+None
+Dizoflox
+Fox Balm
+Westcarbox
+Histam
+Brimochek
+Montiget
+Temosanz-100
+Amfurox
+None
+ERCEF
+None
+None
+Vispomycin
+DYMETRAZOLE
+Monclomide
+None
+None
+Cetivaroz
+FOLIVIN
+Arilan
+Arilan
+Fast Aid
+Fast Aid
+Nicardia Retard 20
+Norizec
+Clarithro-Natrapharm
+Buticod
+Zeticof
+Corpugen Qr
+Methyden
+Caneline
+Nicarson
+Evokof
+None
+Cordixime
+Unbranded
+Trime-35
+Goflex
+Progefil
+New Ambiceph
+None
+None
+Centramin
+Zen-Cee
+Holy-C
+None
+Razytam
+Etorikem
+Amcefri
+Etorikem
+Ildecef
+Paracystin
+Mycinidin
+Latadin
+Bactalev 1.5
+Reliefrub
+Xtrarub
+Winrub
+Lupimet
+Unbranded
+Nerviflex Plus
+Unbranded
+Gloclav
+Sinuvent
+None
+Eurofen
+Diasar
+Unbranded
+N/A
+Saver Select
+Wudencin
+Predsar
+TRIAX-1
+CEPHTRIN
+TRIAFORE
+ISEF
+ISEF
+Flatro
+None
+Urzen
+Agynapin
+Onifur-500
+None
+None
+Vestflo-20
+Ginseboost
+Neoclazz MR
+Gluclazz MR
+IVETRA-100
+None
+Rosukon-20
+Adrenapin
+Citicol-1000
+Affomine
+Kefpoxime
+Betason
+None
+None
+DOXIE
+None
+None
+Sinucass
+None
+Buclimin
+Onzet
+Zenxime
+Euroxime
+None
+Fargoxin
+PV Doone
+PV Done
+None
+None
+Vaporin Aromatherapy Oil
+Aquatabs
+Aquatabs
+Actcee Plus
+Pitator
+Zulitor
+Ryaltris
+Epacor
+Ceftakon
+None
+Olan ODT
+None
+None
+Pramexol 0.25
+None
+Amvasc BE
+Amvasc BE
+Trivox
+None
+Sangobion Kids+
+Tradocet Flashtab
+Zetascent Oil
+Gerdsol
+Betet Balm
+Betet Brand Hot Medicated Oil
+Betet Parrot Brand Medicated Oil
+Lumepred
+Doxtie
+Syproxen
+Atornac K
+Poten-cee Forte
+Pravaz
+Sefpime
+Clotfre
+Durasal-CR
+Diacom
+Glubitor-Od
+Glumet-XR
+Glumet
+Glumet
+Norplus
+Pantec-DSR
+Meclitab
+Tranamic
+Norizec
+Urinorm
+Urinorm
+Piozone
+Casodex
+Doxof
+Candez
+Candez
+Aprevaz
+Tacrocin
+Uruso
+Vometa
+Unbranded
+Lifemet
+Axiclav
+Valcef
+None
+Morcet
+Tapipzo 4.5
+Gotham
+Dayzinc
+Purinase
+Levcar
+Rasitol
+Alfatam
+Duvadrine
+Ambimox
+Irbezyd 150
+Fukole
+Cefazobas
+PANTOBBAS
+Dompedone
+Fenoflex
+Aspilets EC
+Hytaz
+Afenax
+None
+Hytaz
+Unbranded
+Nurocer
+Gyne-Tocin
+Tramide
+Celoxone
+Cefax
+Exigo
+Cetzy-10
+None
+Cetrimax
+Maxivent
+Nexopraz 40
+Plemex Forte
+None
+Plemex
+Ncium-D3
+Gascovid Double Action
+Calaman-Zee Plus
+Ipodex
+Diabee Plus
+None
+Letram
+None
+None
+Vasotrate-60-OD
+Spacine
+Paclizel
+Paclizel
+None
+Adivia Met
+None
+None
+None
+None
+None
+None
+None
+None
+Febunaz
+Febunaz
+Eucardipine
+Calzyn
+None
+Citisaph
+Ceftebas
+Hyclens
+Bricor
+Cefagen
+Hyclens
+Eravit
+Vitaglo-M
+Aztrocin
+Cisplahex
+Cisbil
+None
+Ceflavin
+Pacitel-260
+Fenosol
+Fenosol
+None
+Predmore
+Ardixtor
+Neupime
+None
+Neocard
+Neocard
+Unbranded
+None
+Salmate
+Neo-Cee
+Flamicid
+Flamicid
+Boss-Z
+Dzn 400
+None
+Unbranded
+Enerisch D
+Calxate
+Eba Z
+Neozep Z+ Non Drowsy
+Neozep Z+ Forte
+Detrasmin
+Maxi-Aid Gargle
+Essenscents Oil
+C3 Plus
+Stresstabs
+None
+Vitree
+Hyclens Gargle
+Hyclens Wound Care
+Healthi-C+ Zn
+Hyclens OB
+None
+None
+Cosvit-C
+Amlodipine HD
+Citinova
+Preven-Z SR
+None
+Aguaper
+Kancugen
+None
+Novamenthol
+Aznc
+Cniz
+Ironfer
+Cixtor
+Cixtor Cap
+Cixtor SR
+Luclox
+Butalyn
+Lemzinc
+Sauden
+TRIO-KIT
+Olzadin
+Choltrol
+Sefpime
+None
+None
+Ascanex
+Cetrine 10
+Neoxane
+Cresemba
+None
+Ertasure
+Metidol
+Khrizver
+Celcix-400
+Brinolar
+Hysper
+Dextein
+Opadinex
+Quinoryl
+Perispa
+Fusiderm
+Fucon
+Ciprodex
+Surgistat
+Leveget
+Leveget
+Leveget
+None
+Rosusaph-20
+Rosusaph-40
+Zithrocin
+Mixtard 30 Flexpen
+Naprex
+Naprex
+Plemalis
+Amlosil
+Olxarin
+Olxarin
+Olxarin
+Olxarin
+Amizol
+Axillin
+Bactiox
+Trixcef
+Meditrix
+Zolid
+Medceft
+CITRUCIN
+ASCORB-C
+Ferlin
+Remoston
+Unbranded
+Levothyrogen
+Amphonex
+Quetiapro
+Dugen
+Anarom
+Bortesum
+Caxeta 500
+Gliotem 250
+Gliotem 100
+Chemodox
+Sompraz IV
+Zobone
+Fertab-50
+Gemosanz-200
+Azilide-250
+Clofenova
+Unbranded
+None
+Unbranded
+Astadix 20
+None
+Metxr 500
+Glyformet
+Sovit-Pro
+Metfn
+Zyriz Plus
+None
+Arkasol
+Zytalev
+None
+Glopar
+CalPro-D
+Unbranded
+Dimecef
+Septahex-5
+Unbranded
+None
+Clotrisaph
+Nervesaph-Duo
+Saphnerve-Sy
+Nervesaph-Forte
+Sym2
+Saphfovit-Fe
+Jasz-C
+Rhinisaph
+Saphflu
+Electral
+Ambilyte
+None
+Saphgin
+None
+Unbranded
+None
+None
+Rani-E 400
+Flumedine Max
+Unbranded
+Unbranded
+None
+Mega Men Sport
+None
+McSON Scent
+None
+Dolcelox 200
+None
+ARB PLUS-80
+Pure Kids
+Levozart
+Foster Nexthaler
+Alizol
+None
+None
+None
+None
+Senogen
+Haixone
+Salbo
+None
+None
+None
+None
+None
+MPEN 1000
+Irbe
+Irbe
+Fexogout-80
+Fexogout-40
+Multilem
+None
+None
+None
+None
+Aplixatin-100
+Aplixatin-50
+None
+Klaitrene
+Farsorbid®
+None
+None
+Naprex 250
+Quidney Vit
+Poglavit
+Glosartan 40
+Glosartan 80
+Tramcare
+Itcheket
+B-Forte
+Perzo
+Zithrobbas
+None
+None
+Biomicillin
+Ateron
+Paclib
+Fenosol
+Dixspiro
+Odeme
+Angiotrust
+Etorex-120
+None
+None
+None
+Unbranded
+Zerzime
+None
+None
+Unbranded
+None
+Unbranded
+Clopegen
+Myazi
+Oratel-H
+Azithrolev
+Montevent
+Orapen
+Telmibet-Plus
+Cardizar Plus
+Amsodol
+Ceftridec
+None
+Mopyrox
+WINLATUSS
+None
+Suprezol
+Lexzar
+Pointfixime
+Westa 625
+Unbranded
+Speedxime
+Tussis-250
+None
+Unbranded
+Unbranded
+Unbranded
+Unbranded
+Eczacort
+Atorgen
+Atorgen
+Atorgen
+Lopiden
+Lopiden
+CHBNXT
+Amlodn
+4CHB
+None
+Montil
+Telkazt
+Tiradol
+None
+Imalek 100
+Dehecta
+None
+Retapril
+Fluless
+Fenelsa
+Oxef-200
+Aspidon OS
+Rhoids
+None
+Gobrich
+Sazol
+None
+Carbazure
+Protozole
+Norkenz
+Avitor
+None
+None
+None
+Mupipro
+Trixartan
+None
+Unbranded
+Amlotech
+Amlothin
+Amlotech
+Amlothin
+Fenogen
+Fenogen
+Provalsart
+None
+None
+Zelera
+Trimedex
+Suprine
+Imuncare
+None
+Moxillin 500
+Spectra
+Rosucres-10
+Rosucres-20
+Dobumax
+Tamol
+Brubicin
+Epirun
+Torvastatin
+Torvastatin
+Torvastatin
+Torvastatin
+Unbranded
+Bellazole
+Amlus-5
+Byanto
+None
+AscorbZee
+Porcelana Astringent
+Hyosphen
+None
+None
+N/A
+None
+Fenady
+Vitali-D
+Losarcure Plus
+Cassagrel
+Tgmox
+None
+Doptrex
+Vaporin Aromatherapy Oil - Chamomile
+Rexithro
+Dizoflox
+Neocefixim
+Noreson
+None
+UTIROX
+None
+Clobesaph
+Saphcortisone
+Cetiron
+None
+Nervamol
+JABTOL
+Tramipen
+Tramir
+Dexsym
+Dexsym Forte
+None
+Keamax
+Sorbifer Durules
+Levan
+Arzi-200
+Abingem
+Anzol
+Taceedo 20
+L-Aspase
+Amlotitan
+Myrept
+None
+Reparil
+Ibra
+Bemunat 100
+Bemunat 25
+Exetas 25
+Cosmox 312.5
+None
+None
+Kalxid
+None
+Fenobac
+Scartubex
+Axe Brand Red Flower Oil
+Saltrol
+Saltrol
+Gasdone
+Cefbac
+Supramox
+Guavidone
+Bonil Solution
+Axatol-20
+Zefimed
+Zefimed
+Ultiva
+SANFIX 400
+SANFIX 200
+Rosan
+Rosan
+None
+None
+None
+None
+Ceftrina
+Cefriotam
+Carbilepp
+Bizapime
+Bizapime
+BDMERO 1000
+Airway 4
+Acycla
+Celekop
+None
+Novatocin
+Zolinov
+Co-Amoxisaph 625
+Duovir
+Benlysta
+Tenvir
+Oxaplin 50
+Oxaplin 100
+Ketco
+Cepiram
+Oxalon
+Oxalon
+Paclihope
+Goutrol
+Brevixel
+Co-Ivyzar
+None
+Vanguard
+Proflok CAV Ab
+ProFLOK AE Ab
+B-Meg Integra Trifast
+Growpet
+Victor
+Laking V-22 Vitatablets
+Avinew NeO
+Diluvac Forte
+Unisolve
+Coforta Aqua
+Transvac
+Hyperformer
+GenAmplify
+Alamycin LA
+Aefox
+Tenelizone
+Bactezole
+Norditropin Nordiflex
+Norditropin Nordiflex
+Norditropin Nordiflex
+Paxel
+Morphina
+Zepaclon
+Cecor Plus
+None
+Esolev
+Roxxin
+None
+Unbranded
+Zirabev
+Zirabev
+None
+Oratel-80
+Gortizone
+Gobutmin
+Glimcose
+Glimcose
+Philicoxib
+Gliclaform
+Auspidol
+Kefurika 500
+Haixyl
+Xotacil
+Folik
+Nasatapp No- Drowse
+Unbranded
+Unbranded
+None
+None
+Valnorm Duo 165
+Cecured
+Ivatrol
+Amlytrol
+Amlytrol
+Neostat
+None
+Duvaztor-40
+Maxtram
+Essox
+Afreeprazole
+None
+None
+PTRA
+Laxseri
+Haitam
+Domiclav
+Zukastop
+Aziken
+Dilatair
+None
+Azimit
+Foliq
+GlucoZnCal
+Blefime
+Belluroxi-750
+Septofort (Lemon)
+Septofort
+Septofort
+Prime C Forte
+Biucof
+Livercare HD
+Clodi
+Cassavent
+BD ChloraPrepTM Clear
+BD ChloraPrep TM Tint
+Vaporin Aromatherapy Oil
+Salonsip Gel-Patch Hot
+Cetirex-LD
+Rexadine
+Furonix
+Trianix
+None
+Maridan
+Aceprofen
+Hydrance Hydrating and Brightening Toner
+Hydrance Hydrating and Brightening Toner
+Cloverine
+Cloverine
+Fadztat
+Fenofadz
+Icard IV
+None
+None
+Gopen 250
+Deceftin
+Klindex
+Felostar
+None
+Fadzole
+Oxifadz
+Metaketo
+None
+None
+Oxifadz
+Efficascent Relaxscent Oil - Refresh
+Salbusaph
+Avaprel
+Avaprel
+None
+Predyl 500
+None
+Valsadex-165
+Valsadex-170
+Asmaler
+Saphxel
+Saphclazide-80
+Unbranded
+Unbranded
+None
+None
+C-Vita + Zn
+Azemax
+Omecare
+Vancin
+Isohexane 6000
+Isohexane 4000
+Noxhart 4000
+Noxhart 6000
+Merophil
+None
+None
+Unbranded
+Asthromed
+None
+Pioglizein-15
+Pioglizein-30
+Urobac
+Vitagesic
+Xolfatrim
+Flamigen
+Flamigen
+Alumag Plus
+Panamol
+None
+None
+Cysaphteine-600
+Kidimeed C Plus
+Kidimeed C Plus Drops
+Boweltea
+None
+Sauden Forte
+Symdiemx
+Symdiemx Forte
+Euron-B Forte
+Euron-B
+Visponerv
+Flemux-R
+None
+Excelta
+Oroderm Facial Solution
+Oroderm Night Cream
+Sanovince
+None
+Senorin
+Plemasin
+Cleene
+Aldizar
+Caltenor
+Bupistar
+Retisol-A
+Calvit Gold
+Calprem
+Alvedon
+Fluonco
+Pexate 500
+Nutrizinc
+Taceedo 80
+Feveraide
+Nutrizinc
+Iroplus
+Kaltiraph
+Kaltigen
+Kaltate
+Vaxman
+VAXMAN
+None
+Mefolex
+Leximin
+Unbranded
+N/A
+None
+None
+Immunforte
+Dexameds
+Zerevedil
+None
+None
+Phlegmcure
+Nasocure
+Zimmunity
+Dynaxaparin
+Dynaxaparin
+Coranox
+Coranox
+Paincure
+None
+Calzi
+Ceftazisaph
+Vasocor
+Biopred
+AZCORVIT
+Allertin
+None
+Meclormin
+Aclav-625
+None
+Glatimol
+Pizoba 4.5
+Unotation
+Hycar
+None
+None
+Montral
+Exsert
+Cefukon-DS
+Paclisun 300
+Aczebri
+Timovate
+Bactend
+Procin
+IV Flex
+CAPD/DPCA 17 Stay Safe Link
+Valdoxan
+Imfetus
+Hydriclex
+Telday H 80/25
+Olandus 10
+Rasatab 1
+Precedex Premix
+None
+Telmitar 40
+Telmitar 80
+Mentopas Cool
+Enervon Boost
+Mupirow
+None
+Pacitaxil
+HERA Iron
+Metoxate
+Vamgesic
+Algicap
+Maxfield
+Finox
+Zodox-100
+Zodox-200
+None
+Prostam
+None
+Voltaren Emulgel 12 Hours
+Osmolyte
+Terexib
+Terexib
+None
+Multivitamins
+Vazortan 50
+Stavance
+Stavance
+Rosulip-40
+Rocunova
+Novpara S 250
+Novpara 125
+None
+Olmesolv
+Olmesolv
+Olmesolv
+None
+None
+LevoGen
+Mediclox
+Lisathyone
+Lanistor
+Lanistor
+Lanistor
+Januvis
+Januvis
+Januvis
+Granon
+Granon
+Fycompa
+Fycompa
+Fusovast
+Fungicas
+Fungicas
+Fexuric
+Evaprost
+Esomestad
+Genium
+Dronate
+Doxopro
+Doxair
+Docelex
+Docelex
+Diastatin
+Diastatin
+Diafat
+Curoxim
+Cloxal
+Clox
+Clotisprin
+Betaderm
+Axillin
+Anzatax
+Altomox
+Admox
+Docran
+Ezcef
+Dicore
+Zeetexime
+Bortebin
+Vfresh Aromatheraphy Original
+Vfresh Aromatherapy Lavender
+Vfresh Aromatherapy Green Tea
+Amsumed
+Amsumed
+Eocitabine
+None
+Plaxin
+Disolvon
+None
+Mucoease
+None
+Typhechlor
+None
+Ohmepvia
+Eloxim
+Mexx
+Migpenstal-40
+Fevaxid DS 125
+Sulvac
+Genteal
+Xefatrex
+Baclisolv
+Cloxid
+Magnifi-C
+Leuprolin
+Maxidine
+Squro SR 300
+Squro 200
+None
+Syfenamic
+None
+None
+Stanxib
+Lorange
+I-Clom
+None
+Aprotan
+Salbuseth
+Cefurexel
+Zefsur
+Revacef
+Roxxin
+Co-Ax
+Saph-Mem
+None
+Syprolyd 4.5
+Latasopt
+Metroxid
+Tussilev
+Co-Hypace
+Cisbil
+Aurohex
+Gencivenz-1000
+Starcox
+Gencivenz-200
+Plaxatin
+None
+None
+Tazocare
+Saphlor-50
+Saphlor-100
+Acteinsaph-200
+Acteinsaph-600
+Kaliusaphride
+Azisaph-500
+Grozith
+Lorine
+None
+Docxan Extra
+Co-Amoxitrene
+Ezeebret
+Sighwell
+None
+Solclav
+None
+Medikinet
+Medikinet
+S-Rox IV
+Tretinoin
+Tretinoin
+Appebon
+Phenchlor
+Olzadin
+Sumapen
+Bevespi Aerosphere
+Olmesa
+Olmesa
+Mosi Eye Drops
+None
+Hydrocare-100
+Azithronova
+Salmate
+Ponser
+None
+None
+Nixedip
+Glyzeric
+None
+Flutixin 250
+None
+Saphorbide-60
+Zthrosur-500
+Protopic
+Protopic
+Clindacare
+V-Lief
+None
+Valicon
+Trovipri
+Trovipri
+Trovipri
+Trovipri
+Tazy-4.5
+Tazy-2.25
+Stresstabs Energy Men
+Siagra
+Robust S
+Rezotam
+Rezotam
+PDR-400
+Panego
+Oxa-Health 50
+D-Film
+None
+None
+None
+None
+None
+PROVILYTE
+None
+Dapa-Z
+None
+Neuroliz
+Midamicum
+Loprexo
+Aminoral
+Ibutamed
+Hypmid
+Histalor-D
+Fluzenil
+Erecta
+Epicare
+None
+Dextein
+Decolgen Forte 325
+Convuliz
+Cholimax
+Erecta
+Blincocin
+Blincocin
+None
+Windcef
+Arixtra
+Arasid-500
+Arasid-1000
+Arasid-100
+Amphizone
+Euthyrox
+Euthyrox
+Euthyrox
+None
+Dicore
+Trevia
+Trevia
+Fevorica 80
+Stabufost 80
+Mupicin
+Pentaglobin
+Avelox
+Mergotrex
+Saphclazide-60
+Pleuragex-DM
+Unbranded
+Unbranded
+Folicure
+Unbranded
+Unbranded
+Oxycare
+Globalfur
+Globalfur
+Lifetazil
+None
+Unbranded
+Vista C Supreme
+Argan
+Unbranded
+None
+Tobrason
+Oflobiz
+Oflobiz
+Hespadin
+Avelox
+Nipartan H
+Fucon
+Ancor-5
+None
+None
+None
+2rvaz
+Fimoplas
+Ampic-100
+Vent
+Cysdexpel
+None
+Trixiv
+Trixiv
+Zolopat
+Mefredzil-500
+None
+Novasorin
+Claridon
+Tai Chi Ginger
+Tergecef
+Cetrihold
+Holpril-10
+Holpril-20
+Fungystine
+Trixime
+Privent
+Ceefadin SA
+Scheepril
+Dutass
+Lansomedix
+Dailyzar
+Pipetasaph-4.5
+None
+Cefoxivit
+Rexvita-C
+Sefta
+None
+Arbloc CCB
+Risdin
+Prometasol Plus
+Nasamed
+Medusin
+Bronc-Heal
+Nassavent
+Asmaclear
+Lotemax
+None
+Lipewin
+None
+None
+Prevahist
+Nuloc-O
+Motinorm
+Regivasc
+Regivasc
+None
+Aminovit
+Noxaclane
+Noxaclane
+Vitagua
+Ivatrol
+Monteraph
+Penradol
+Cholecur
+Cholecur
+Cholecur
+Cholecur
+Rapid-B + E
+Promino 5
+Ultramino
+None
+None
+Neuropain
+Ecobroncho
+Clomep
+Zyrcef
+Cetastar
+Steri-Q
+None
+Norgesia Forte
+Velozet
+Coffit
+Bazic
+Kodilax
+Trizogen
+Dermaxidine
+None
+Calcidoc
+Cifrextab
+None
+Amaday
+Amaday
+Diphensyd
+PediaClav
+Norash
+Maxcee-Pro
+C-Vita + ZN plus D3
+Sybenyl
+Trazimera
+Tamparin
+None
+Innoxaplin
+Merit Plus
+None
+None
+Unbranded
+Unbranded
+Ursodelic
+Adapasenz
+Zetadone
+Telisan 40
+Telisan 80
+Predsan
+Ceftrix
+Unbranded
+None
+None
+Unbranded
+None
+None
+Ziprin
+Cassavent
+Fenady
+Cetrikid Drops
+Cetrikid
+Kiddicet Drops
+Kiddicet
+Pacsita 500
+None
+Cefosan
+Jucef
+Trixime
+Zyrex
+Ambicaine
+CATALOUPE
+Renograf
+Loracid
+None
+Enervon
+Enervon
+Solmux
+Solmux
+Neurolem Plus
+None
+None
+Therasil (Black Currant Flavor)
+Therasil (Honey and Lemon Flavor)
+Therasil (Orange Flavor)
+None
+Lorine 10 CT
+Lorago 10 Ct
+None
+Meditram
+Unbranded
+Unbranded
+Rhyximex
+Gliptadin
+Raytobrax
+Gisart 50
+None
+None
+None
+None
+Unbranded
+None
+Rogin-E
+Rogin-E
+Flexinerv Plus
+Femaron OB
+Ferpain
+Acemol
+Ramal
+Gliptadin
+Avaprel Plus
+None
+Cefosultam
+Jofelyn
+None
+Saphlymarin
+Poliovac
+High Cee Plus
+Phlegmcure
+Bronchocure
+Coughcure
+Coughcure
+Bronchocure
+Paracure
+Paracure
+Paracure
+None
+Duosulin N
+Ibuphen
+None
+Metanorm
+None
+None
+Golmux Plus
+Golmux 500 CT
+Salgee
+Salgee
+Glumet
+Magnum-S
+Brilliant Rejuv
+Brilliant Rejuv
+None
+Unbranded
+None
+Princicar
+Febuxosaph-40
+Nixin
+Urdecha
+Welquine
+None
+None
+None
+Nasatapp® Cough
+Salbuline
+None
+Vaxman
+Budecort Respules
+Neumoterol
+Neumoterol
+Utrogestan
+Utrogestan
+Apevit
+Lecox-200
+Sulfadex
+Jovia
+Zinkorot
+Dymista
+None
+None
+None
+None
+Convergo-24
+Dima
+Cifrextab 750
+Cassanoxiclav-AR
+Complivit
+Steri-Q Body wash
+HEALTHTechniC ZPLUS
+Beautederm Day And Night Toner
+Beautederm Night Cream 1
+Melsartan
+Septofort
+Dition
+Natcee
+Megascent Wintergreen
+None
+Deconcure
+Urlac
+Levemir FlexPen
+None
+Ammocil
+Amkoxi
+Congease
+Mefenak
+Mefenak
+Meferap
+Meferap
+Mefnak
+Docvate
+Golvate
+Nishaflurane
+Sitrizine
+Iscopan
+None
+Neonate
+Trimaxol
+Saphorbide-30
+Pyrodoxy
+Neurofron Forte
+Taxogen
+Taxogen
+None
+Cloxim
+Unbranded
+New Ambiceph
+None
+Adana
+Texim
+Enplex-B
+Cildine
+Cildine
+None
+Lisof
+Terazidine
+None
+Allernil
+Ofplemed Forte
+Telmidis-40
+None
+Flutixin 500
+Sobinate
+SK Pas
+SK Pas
+Razomed
+Peptoburg
+Novacetam
+None
+None
+Itrazole
+DocNerve
+Neurolink
+Nervebion
+Nerv-E
+Mediprazole
+Logufen
+Lactoburg
+Glumet
+Crestodix-20
+Crestodix-10
+Captobes
+Calmio
+Calmio
+Biopril
+Alzyl 500
+Trimegen
+Flazole
+E-Beryl
+Fextallert-180
+Fextallert-120
+ANFOL
+Spasmoverin
+Systocor
+Amorex
+Intalopram 10
+Intalopram 20
+None
+Convin-C
+Nasathera P
+Infasurf
+None
+Eodex
+None
+Peldacyn
+Unbranded
+Cellacyte
+Primear
+Zomob 3.5
+Lactokhriz
+Fycompa
+Whitfield's Ointment
+Loraped
+Sultam
+Perilax
+Starcef
+Tri Pedia Kit
+Zegen
+C-4 Zink
+Zim-Dine
+Vitamoon Plus
+Ezemibe
+Ambisor
+Natrasol Plus
+TG Amlodimax
+Neurogold
+Irsuc
+Vancocym 500
+None
+Fenocare
+Nefral
+Natrasol Plus
+Sevlorx
+VEXPLATIN VE-50
+VEXPLATIN VE-100
+Mama'S Love
+Casino - Unscented
+Onmarc-H
+None
+None
+Lydosolv
+Vinca
+Baamcillin-500
+Hyocin
+None
+Mucilin
+Baamcillin-250
+Ondi
+Pedia-Vita Plus
+Star-C
+Saphyra-DM
+Histasaph-5
+Histasaph-OD
+Simesaph-OD
+Dr. S Wong's Sulfur Soap (Scented with Moisturizer)
+Tuxiril
+Gentradol
+Bromhexsaph
+Domprix
+Saphtinoin
+Retisol-A
+Vitadix-C
+Ascof Forte (Menthol Flavor)
+Ascof (Ponkan Flavor)
+Ascof Syrup (Strawberry Flavor)
+Protec-Zinc
+Tarlonib 25
+Tarlonib 100
+Tarlonib 150
+Cromax-4
+Profalexin
+Turbovas-CP
+Asulbac
+None
+None
+Zexime-500
+Triazol
+Plasmabloc
+Du-Sulbac-1.5mg
+Bl-Metason
+Panvell
+Eranfu
+Du-Sulbac 375
+None
+Amlodac
+Diassium 50
+Zalain
+Maxivent
+Mentopas Air
+None
+Milflox Dm
+Xyntha
+Xyntha
+Xalaprost
+Unacilyn
+Tretinon
+Starlo
+Starlo
+Pacsita 150
+Oxaltin
+Novatasone
+None
+None
+None
+None
+None
+None
+None
+Unbranded
+Unbranded
+Lorvasc
+Lorvasc
+Kingstat 10
+Kingstat 40
+Kingstat 20
+Kingstat 10
+Ketomax
+Golvasc
+Golvasc
+Esoget
+Clindalon
+Artazide
+Tigrastat
+Cefukon-750
+Folanes
+Cefunova
+Novafime S
+Cefimed 1000
+Hemoxin
+None
+Zytee RB
+Unbranded
+Bertocil
+Skin Treasure (Bao Fu Ling)
+None
+Salmeflo
+Ricox
+Bacefime
+Complivit Plus
+Otron
+Doxoccord 50 LP
+Doxoccord 20 LP
+Nauzex
+Ossi
+Lepstop
+None
+ino de Quina/La Carmina
+Hemiron
+Scheepril
+Clavoxsur
+Citicomed
+Diclozed
+Epiao
+Globisaph
+Lexyl-OD
+Lemecit
+Prend
+Doxstar 10
+Mefejal Forte
+F-Zolidone
+None
+None
+Lidoright
+Vexdo 80
+Vexdo 20
+Gafvex
+Nutri-Aid Advance
+Hepamedica
+Ocubidex
+Nicarfion
+Actilax
+Oxasaph
+Novaplex
+None
+Elevate
+None
+Xinclav 625
+Xinclav 1000
+Ketorex
+Hygea Ethyl
+Clindasaph-600
+Atorsaph-40
+Atorsaph-80
+Reytri
+Asconvita
+Povi-Klin
+Mycartan Plus
+Mycartan Plus
+Mycartan Plus
+Azisaph-D
+Godex
+None
+Sybromex
+Gold-Z
+Sorzine
+Fensyd
+Trosisaph
+Sinusaph
+Ferrogen
+Sydenphrine
+None
+AppeGain Advance
+Coughcure
+Flavocoxid
+Flavocoxid
+Flavocoxid Plus
+Total-Cee
+Isoproxen
+Immunforte
+Nasocure
+Mupisaph
+None
+Coughcure
+Prem-C
+Pediazync
+Enerkids Plus
+Armatrax
+None
+Zopracil
+Dobupro
+Sydecon
+Maxidyne
+Isolipid
+Ranidipine
+Laxac
+Calyxin
+Lactusaph
+Relaxsaph
+Respi-Saph
+Digosaph
+Bayvast
+Timbipine
+None
+Tamsusaph-400
+Feroguard
+None
+None
+FOLICXEL
+Guaicare
+Soladin
+None
+Levestal-500
+Tiglor
+Teltas H 12.5
+Teltas H 25
+Attentrol 60
+Cefpomed
+Rofast 10
+Rofast 40
+Diclomin
+Esoric 20
+Esoric 40
+Pridel
+Mosan
+Pridel
+None
+Ivic
+None
+Skin Cure Fungisol
+None
+Duavent
+Cefortan-Z
+Cefortan-Z
+Blitidor
+Foleq
+Candigo
+Euvichol-Plus
+Etomidine
+Yesom
+Yesom
+Exmasin
+None
+Optigent
+Ranzole
+Solitor 10
+Trefoxin
+Hydrofer
+Losartfix
+Aefur
+Citrix Soda
+Tropair
+Candigo
+Vexdim 5
+None
+None
+Topoccord 1
+Spravato
+Silkron
+Presone
+Prelynca 75
+Prelynca 50
+Prelynca 150
+Pemexed 500
+Oncurexin-50
+Oncurexin-10
+None
+None
+None
+Unbranded
+Dubesone
+Heronse
+Ironse
+Neostin 5
+Methimed
+Methimed
+Razobin 4.5
+Razoin2.25
+LEXYR
+Levoxel
+Leneso
+Itcheez
+IMASAN
+Hyfer 250
+Hyfer 125
+Fonkodec
+Fonkodec
+Flosartan
+Doxonorm-50
+Doxonorm-10
+Destavell
+Comxicla
+Tricetam
+Etorinov - 120
+Etorinov - 90
+Ofplemed
+Ofplemed
+Ofplemed
+Ofplemed
+Ofplemed
+Ofplemed
+Bupinova
+Pemirex
+Ketorac
+Pemirex
+Goceft
+Canesten
+Clavmari-600
+Clavmari-1200
+Ceftrinova 1000
+None
+Novaxameth
+Imaxin
+Mitriax 1
+Telmez
+Telmez
+Celoestan 100
+Gestron
+Sitazit-M
+Tycol
+Miracholine
+Cozaar XQ
+BESTRICARE
+Cozaar XQ
+Sudif
+Mfsone
+Asmar
+Clircaf
+Anzaplus
+Voluhes
+Clircaf
+BPCure
+Clinamak
+One-Dome
+One-Lact
+Cytobin-10
+Cytobin-50
+Cefenova-1000
+Resttab
+Fahrenal
+Saphlodine 50/5
+Prometin-100
+Levosaph-750
+GoCal Plus
+Strumazol
+Strumazol
+Doximetz
+SORBATE-C
+Cixtor-Z Max
+Neramin-12
+Resistan-Cee
+Rongesic
+Nicardimeds
+Immunostan
+Hiroxib-100
+Hiroxib-200
+Hiroxib-400
+Telmigen
+Telmigen
+Avastin
+None
+Medroxin
+Sm Bonus-PV
+Sm Bonus - CDM
+None
+None
+None
+None
+Retisol-A
+Clomax
+Saphridone
+None
+None
+Cinquesaph
+Novazinc
+Efficascent Oil
+Efficascent Oil - Extra Strength
+Efficascent Oil – Extreme
+Minox 5
+Froniplex
+Mupisenz
+None
+Kudos Blooming Skin Renew Cream
+None
+None
+Triocef
+Losartreve
+KETOGUARD
+Wizlax
+None
+Swich
+Proven-C
+Gentranex
+Rosipid
+Raphibon
+Afreplatin
+Outfree 40
+Goutfree 40
+None
+Amlopex
+Tempdown
+Clopitreve
+DICGC
+None
+None
+Povibact
+Conjurin
+None
+None
+Fusirid
+None
+Citcole
+Attentrol 40
+Attentrol 25
+Attentrol 18
+Adzosin
+None
+Aurantin
+Ostenox
+Platinox
+Teroxime
+Cytrakon
+Tachyrone
+Cefpo-200
+Zymestan
+Agraplat
+Bellurak
+Pamronate
+Pitztar
+None
+Kabimidine
+Talafil
+Diakon
+None
+Khrizver
+Arpivex 15
+Sydenzole
+Flagimax
+None
+Bilecid
+Timolet OD
+Cephatic-500
+Voren
+Voren
+Voren
+Vasticure-20
+Vasticure-10
+Valotens
+Ursosan
+Trilactam
+Tamtrix
+Saphfen 200
+Pivikto
+Pivikto
+Pivikto
+Piptavid
+One-Triaxcel
+Unbranded
+Unbranded
+None
+None
+None
+Nimotop
+Mydoce
+Mefesaph C250
+Ketotop
+Ketonov
+Indrex
+Ifamso-E
+Hydramax
+Gestecure
+Fluzetrin
+Flosev
+Femmitron
+Eberubi
+Drossadin Spray 0.2%
+Clozarem
+Clozarem
+Cloxapen
+Acholine
+Cefury
+Tazisea
+Cefasaph 500
+Caspin
+Brezole
+Anucare
+Amprofem
+Adivia Met
+Salrite
+Duorite Respules
+Prebaga-75
+Azipro
+Aerotamol
+Aqua Inline
+Proanes
+UNAMAX
+Fevorica 40
+None
+Stabufost 40
+None
+Lenagen
+Lenagen
+Lenagen
+Lenagen
+Urinorm
+Novafime
+None
+Leveget
+Sevofran
+Drenisole
+Revsil
+None
+None
+None
+Dayvigo
+Dayvigo
+Fenosaph-200
+Natrixam
+Natrixam
+Evoflo
+Zytogem
+Zytogem
+IBICAR S
+Nebil
+Duodart
+Visipaque
+Lowas 10
+Prialta
+Resolor
+Resolor
+None
+Ketesse
+Proquad
+Nebicar
+Endoprost
+Endoprost
+Rovast
+Roswin
+None
+Pamorelin
+Pamorelin
+Pamorelin
+Tapdin
+Zealor
+Invega Sustenna
+Invega Sustenna
+Invega Sustenna
+Vivrone
+None
+Zornica-8
+CANEM
+Targin
+Targin
+Targin
+Lipichek
+Ecosprin Plus
+Visipaque
+MultiHance
+Azulix 1 MF
+Toricard-5
+Tebonin Forte
+Tebokan
+Montezyd 10
+Tramal
+Therasil (Honey and Lemon flavor)
+Greatafil
+Freever
+None
+Therasil (Black Currant Flavor)
+Biscore 5
+ARB Plus
+Avamab
+Avamab
+Lorizine
+None
+Eposis
+Brintellix
+Brintellix
+Brintellix
+Brintellix
+Viriaxone
+Ebicox 90
+Blineph
+Zepreimex
+Salbumex
+Lalaca
+Dualpress
+Provitazee
+Panacaf
+Nasalnova
+Bencodyl Linctus
+C-Max + Zn
+ImmunoCeeZinc
+Zeefence
+4Fever
+MXP Solution No. 3
+Sitrizine
+Zitrin Plus
+Sitag-M
+None
+None
+Otide 50
+Xeubactin
+Levephase
+Cefazosaph-1
+Eopenem
+Cisaphtin-50
+Cisaphtin-10
+Gold-Cee Plus
+None
+None
+Gemhexin
+Ripesaph-4
+Duasaph-300
+Visine
+Megascent Oil
+None
+None
+Bismosyd
+Ciferol-D
+Rapid Z
+Diatime
+Genbloc
+Hevapine
+Welltrate
+Doctor J
+Immunforte
+Trimestat
+Doxyclene
+Febuxden 40
+Febuxden 80
+SinuCare
+Clavexin
+None
+None
+Nebilong -AM
+None
+Rosuxl 20
+Capasaph
+Cledomox
+Augmeed 312.5
+Vellanin
+Razonam
+None
+Cefpo-100
+Nuropin 300
+None
+None
+None
+None
+None
+None
+Imbruvica
+Rozuor
+Rozuor
+None
+Zydusatorva 10
+Zunamyn
+Tigecid
+Tamicil
+Sultamin
+Sultagold
+Pemeta-500
+Pemcord-1000
+Levoplus
+None
+None
+None
+None
+None
+Lonoxie
+None
+None
+Monticope
+Monteclair
+Lippod 50
+Lippod 20
+Hyospan
+Hemanex
+Haldol Decanoas
+Gutzid
+Fexonov-180
+Benzomed
+Abetol
+Piprazin
+Osteomeg
+Xed
+None
+None
+Unitiaxone
+Vicks VapoDrops
+Vicks VapoDrops
+Vicks Vapo Drops
+Glopitam
+Olanz 5
+Piptazo 2.5
+Piptazo 4.5
+Diclosaph
+Blacidec 5
+Blacidec 10
+Cefusaph-750
+Saphrolac
+None
+Valabin 500
+Pregabasaph-75
+Rispesaph-2
+Meoxiclav-DS
+Gorizine
+FeROSE
+Bronkast
+Drazone
+Nervaplex
+Diazole
+Alluprex
+Armazoline
+None
+Vit-Bi
+Clarithromycin
+Diamide
+None
+Cidrenzin
+Sydenhex
+Pure-Cee'E
+None
+Feruz
+Telfocus 80
+Bronchonov
+None
+Oxasaph-2
+Clitaxsaph-100
+Dexasaph-Inj 4
+Phytomenasaph
+Oxasaph-100
+Saphclophamide
+Micosaph
+Ciprosan-3
+Chloramsaph-Opht
+Vita-D-2000
+None
+Saphrefen-Plus
+Ciferol -D
+Dompesaph
+Ziron Max
+Dialix
+Zorb8 Forte
+None
+Rapamol 120
+Kremil-S Cool Relief
+Relaxium-AB
+Cefobact
+Herpex Newgen
+Epicord 10
+None
+Irbis H 75
+Irbis H 300
+Irbis H 150
+Enzystal P
+Anfloxol
+Q-Zol
+Gefiressa
+Eorubicin
+Ezoprole Ⓡ
+Fluiject
+Naprotect
+Amtacil-WFI
+Dialiptin
+Ultracor
+Doxicon
+Otixin
+Quadrotopic
+Vendiflox
+L-Trizine
+Fonvicol
+Panaxim
+Urostar
+Lyndel
+Bacefur
+Lemmac
+Imilion C-Plus
+Deltop
+Erlocip 150
+Feruz
+Klozivex
+Neuroforte Plus
+Siagran
+None
+Sureguard
+Zinas
+Dixilose
+Batriban
+Urica
+Guaixel
+Acetafen
+Love Supplements Immune C + Zn
+Celobac 500
+Dayzinc Defense
+Celobac 250
+TG Angiocare
+None
+Dopinem
+Neorof
+Mediplast
+Mediplast
+Nodict
+Maxivent
+Vitalex-500
+None
+Novazine
+Seaclavin 1200
+Chiamin-A
+None
+None
+Zenil
+None
+Zerone-Sul
+Trilam
+Topoccord 4
+None
+Imatero 100
+Imatero 400
+None
+Myzole
+Eybelis
+Epribenz-50
+Epribenz-10
+Bdenza
+Aggrastat
+Metoclon
+Blitinib
+Doctor J
+Elmox-CV 312.5
+Wepox 4000
+Novacetrin
+Alcoplus
+Standol
+Sapharin
+Yulareb
+Yulareb
+Yulareb
+Yulareb
+Philstat
+Degut
+Kidzluv
+EXTREME-C
+Q-Cet
+None
+Kefezy
+Q-Win
+Aciflam
+B-Bact
+None
+None
+Mediplast
+Everbliss 10
+Koppel Forte
+Co-Ax
+Bronchovent
+Omeprazole
+Famoxa
+Rocum
+Zoresan®
+Zoresan®
+Zoresan®
+Zolefon
+Vancocyn
+Stugeron
+Serotia XR 50
+Serotia XR 400
+Serotia XR 200
+Rivazin
+Rivazin
+Progynova
+Opsumit
+Onetic® 4
+Nurad 800
+Nurad 600
+Nurad 400
+None
+None
+None
+None
+None
+None
+Hydrochem
+Hepwin 1
+Hepwin 0.5
+Evorane
+Dermochem
+Furonex
+Ezitin
+Vancomed
+Vancomed
+Tranexa IV
+Carexetan-16
+Carexetan-8
+Blanestra
+Tranesaph
+Imixime
+Fosular
+Furimax
+Imalek 400
+Sevlarsaph
+Rosusaph-10
+Zopian-4.5
+Zopian-2.25
+Suritricef-1000
+GoNerve
+Siagra
+Robust S
+Pacsita 150
+None
+None
+None
+None
+None
+Erecta
+Bicarbisaph
+Ricox
+None
+None
+None
+Giclopid
+Brezofree 250 Synchrobreathe SB
+Brezofree 125 Synchrobreathe SB
+Sinu-Aid
+Magnum
+None
+None
+Kamestin Plus
+Trapeel
+Ferolem OB
+Rizinc Plus
+None
+None
+Doctor J
+Love Supplements Glow-E
+ImmunProⓇ Prime
+None
+Spirodix-100
+Marphen C
+Nova-E
+Novastat 60
+Menquadfi
+Saphiron - 44
+Immuno CDZ
+Ferrinova
+Clearlax
+None
+Aminotrene
+Exnin
+Ulcepan
+Lactowyn
+Ilevro
+None
+None
+Imazole 500-V
+Vallepsy
+Anzoxim
+Pantovex-40
+Omerose
+Acnex
+Ovatin
+Arixtra
+Zefimed
+Vinobin
+Vancobiza
+Vancobiza
+Teluvis Plus
+Teluvis Plus
+Stricarb
+Sofohep
+None
+None
+None
+Predex
+Pepticure
+Oregamed
+None
+None
+None
+None
+None
+None
+Monspire 5
+Monspire-10
+Levipil
+Folinova
+Exflem
+Exflem
+Enzastik 40
+Duostar
+Asimplex
+Vivaxime 500
+Erubixine-50
+Erubixine-10
+Epibiocin-50
+Epibiocin-10
+Pirusanz-10
+Pirusanz-50
+Beautem
+Blestrozole
+None
+Leveget
+Tresiba Flextouch
+Capemed
+Canesten®
+None
+Novamet
+Zithronon 500
+Expesyl
+Fermoxil
+Primuxime
+None
+None
+Asmalin
+None
+None
+Symdex-D
+Vancojor
+Vancojor
+Tramine
+None
+Hydroper®
+Roxiem
+Saphmellose
+Riliz™
+Zeuxitin
+Co-Midis
+Actein
+Rozutor
+None
+Pantonil
+Rinecol
+None
+None
+None
+Dipiglo 5
+Telmisaph-A85
+Rozutor
+Gestacal
+Flucilo
+Leezolid
+Duasaph
+Sureguard
+Mediclean
+None
+Enerboss
+Saphciferol-5000
+Difflam H-extraTM
+None
+Maxanthin AREDS2
+Unbranded
+Evamin SN5
+Clonipress
+Orapen-S
+Epibbas
+Spasbascine
+Abixa
+Abixa
+Phytobas
+Pyromed-C
+Aminosil
+Parkimet 125
+Decamin
+Strocit 500
+Ezz-C
+Gemfon
+Sydencol
+AMPINEX PLUS
+AMPINEX PLUS
+Celtrix
+Amlobes
+Diasolv
+Kodoxy
+Lorin
+Ondavell
+Faverach
+Setrovel
+Fixuric 40
+Fixuric 80
+Blomes
+None
+Plemalis
+Carbo-Health 150
+Paxol
+Paxol
+Caltrate Plus
+Paxus 30
+Ceetrene
+Kaliusaphride- Inf
+Saphclazide 30
+Dopacent
+Punsartan
+Aciclospeed
+Allerspeed
+Clindaspeed
+Dr. Alvin® Rejuvenating Plain Advance
+Dr. Alvin® Rejuvenating Prime
+Dr. Alvin® Rejuvenating Prime
+Dr. Alvin® Rejuvenating Advance
+Dr. Alvin® Rejuvenating Advance
+Acimed
+Panacta
+Telmilop
+Sitagli-100
+Gundisaph-S600
+Gundisaph-S600
+Olmestal-A-25
+Valheart™
+Valheart™
+Dition-Plus
+Tobrasaph-Dex
+None
+Candiva
+Macrotaxel
+Novastat 120
+Clostin
+Ambiflex Plus
+Vitgen
+Goldzinc
+Picolin Z
+Saphciferol-1000
+Saphciferol-2000
+Pipetasaph-2.5
+Saphedryl-P
+Sun-D3
+Belara
+None
+Vagtizol 100
+Vagtizol 500
+DAPA-5
+DAPA-10
+Kelxime
+None
+None
+None
+Sitixime
+Prismasol BO
+Prexvid 500
+Epicord 50
+None
+Zomod-1
+Topinna 25
+Spirokind-50
+Spirokind-25
+Somacare 1000
+Silvakhriz
+Reyocin
+Reyocin
+Pentinova-300
+Oregandex
+Novakast-5
+Novakast-4
+Novakast-10
+None
+None
+None
+None
+Montela 10
+None
+Montefast
+Montecare
+Montair
+Meroz
+Merop
+Merop
+Leniol
+Herbamed
+Hepabil
+Fustadin
+Fusidasol
+Frotin
+Febumed-80
+Esonex IV
+None
+Ciprogyl
+Cefedix
+Anticlop
+Airmaxx
+Aceclo-X
+Amero 1G
+Amero 500
+B-PENEM IV
+Unazeus 750
+Unazeus 1.5
+Tazomed 2.5
+Tazomed 4.5
+Empred-40
+None
+Glyxera
+B 12 Ankermann
+Gundisaph-S300
+Gundisaph-S600
+Gundisaph-T300
+Gundisaph-T600
+Nirsaph-300
+Lovaz
+Westfimox
+Nirsaph-600
+Zip-C
+SII Pneumosil
+SII Pneumosil
+Zyphrine
+Sunipraz
+Pantozari
+Provexel NS
+Tamoxiplast-20
+None
+Aizet
+Revit-B
+Angiogen
+Dobexon
+Unbranded
+Dolovit
+Reloxa
+Dermaspeed
+Irbe Speed HCT
+Glumet
+None
+Femaplex
+Rafromide
+Illuvan
+None
+Lincogen
+None
+None
+Robitussin ME
+Norgesia
+Menopur
+Hipradog 7
+Adenipravac-ND IB
+Auskipra BK
+Avisan Multi/Co
+Hiprapox
+Hipraviar AP
+Porcilis Begonia
+Porcilis Porcoli DF
+Stomi
+Surmax 100
+Gallimune 203 ND+IB
+Unbranded
+Cevac Mass L
+Cevac IBird
+Bio-Aces
+None
+Essencap
+Tgflox
+Anin 50 Plus
+Fotaram
+None
+Top2Tail 2 In 1 Dog Shampoo & Conditioner - Delightful Citrus
+Top2Tail 2 In 1 Dog Shampoo & Conditioner - Energizing Musk
+Top2Tail 2 in 1 Dog Shampoo & Conditioner - Sweet Floral
+Top2Tail 2 In 1 Dog Shampoo & Conditioner - Sweet Floral
+Top2Tail 2 In 1 Dog Shampoo & Conditioner - Warm Vanilla
+Extreme-Z
+Mypravac SUIS
+Hiprasuis GLÄSSER
+Eryseng Parvo
+Rapid- D
+Vigosine
+Colivet
+Liposorb DS
+Cevac Transmune
+Hyobloc®
+None
+Perglim 4
+Perglim 2
+Alphanate
+Cerezyme
+Altoclav
+Clorgen
+DEXPENEM
+Mycozole
+Mycozole
+VitaC-Z Plus
+Vittle
+Gigavit Plus D3
+Bactroxime
+Androgel
+Virex
+Virex
+Cancetab
+Da Vin Cee
+Appeczin
+Unbranded
+None
+Trizole
+Lopicard
+Calpol
+Oxyt 5
+Foliret
+Mucin
+Vagclr-M
+Bravifo
+Bravifo
+Bravifo
+GUIACARE CAP
+Armacetamol
+Reston
+Candesaph-16
+Dobutasaph
+Bactofix
+Qurphen
+Ferrola
+Lorex
+Trazimera
+Trazimera
+Bioshoot
+Trenzamic
+Temtan-H 80
+None
+Betadine
+Phlegmcure
+Daritor-15
+Daritor-7.5
+None
+Kzole
+Neutrabliss
+Gribero
+Azivid-500
+Trimetreve
+Samsca
+Aplitax
+Oplase
+Ondansaph-8
+Bioflu® Pro
+Fastamol
+Oxyt 10
+Rondvit
+Saphendex
+None
+None
+Everbliss 5
+Dacihep 30
+Dacihep 30
+Dacihep 60
+Ibanox
+Ibanox
+Moxiflostad
+Avirin
+Lumemox-D
+Neurosum
+Co-Altria
+Erluntas
+Flukal
+Axa-Zole F
+Candigo
+Lodiglit
+Mcgesic 125
+Mucilin SF
+Carbosaph-C500
+None
+Caloderm
+Betet Red Balm
+Vancyn
+Vancyn
+Noriphed
+Cardine
+Vexdim 10
+None
+Acoreb
+Citrupro FCT
+None
+Omekhriz 40
+R.B. Tone
+Pemex
+Pemex
+Renvex
+Dr. Alvin® Rejuvenating Duo Prime
+Dr. Alvin® Rejuvenating Duo Advance
+Dr. Alvin® Rejuvenating Plain Prime
+Anesticaine Spinal
+Azost
+none
+Etoxia 90
+Calbic
+None
+Saphticone-OD
+Desrem
+None
+Mucin
+Safeplus
+Copide
+Safeplus
+Fixotin
+None
+Apperozine
+Desrem
+Rapid-C Plus D
+None
+None
+Calpol
+Muporig
+Cortillen
+Dexollen
+Saphtinamine-Plus
+Phenbrosaph-Plus
+Saphtinamine-1
+Saphlerine-1
+Saphendrine-1
+Remol 125
+Peel-Away (Exfoliant Solution 1)
+Peel-Away (Exfoliant Solution 2)
+Peel-Away (Exfoliant Solution 3)
+Ascortec
+RARICAP FORTE
+Neurokem
+None
+M-Card
+Ambicef-S
+Trizeric
+Neopeptine
+Pharzole
+Herbakof
+Qurled Lp
+Maxlen-Plus 5600
+Abiratred
+Moxiwar 400
+none
+Zidmax
+Isolyte
+Alzor
+Co-Altria Ped
+Co-Altria Ped
+Alzor
+Rosucol
+Ajesart
+Ajezide
+Alzor CCB
+Alzor CCB
+Arpivex 10
+Trosoothe Plus
+Trosoothe Plus
+Trosoothe Plus
+Tafnat
+Varoxa
+Varoxa
+Urgiso
+Urgiso
+Zypiron 20
+VG RAPCVIT
+Venufer
+Tygepol
+Tigycord 50
+Tadafil 20
+None
+Seafurox 1500
+Rosucol
+Quizole
+Pyrazone-S
+Prohab
+Paraxam
+Paracerol
+Paclidex
+Novac
+None
+None
+None
+Valazyd AM 5/160
+Noklot
+Montezen
+Montesolv
+Monteshield
+Monteresp
+Medpin-5
+Medpin-10
+Levonova-500
+Hepavir
+Gemcilex
+Furoxinova
+Febumax
+Esomekar
+Cefroxsur-750
+Cefroxsur
+Blatin 50
+Blatin 10
+Bentero 100
+Alduet
+Airway 2
+Acceluron
+Tigecare
+Vesnon-V100
+None
+Cefoxit
+Cartinex
+None
+Fotaran
+Nervcedil
+None
+Polivy
+Parcetol
+Novazidime
+Essium
+Nicarsaph
+Norepinsaph-1
+Respiro
+None
+Respiro
+Olmenov-40
+Vsiqq
+Accetaxime
+Amoclav
+Aubrex
+Cartrexed
+Vita-M
+Sitidime
+None
+Broncocent
+Nimenrix
+Dianeal PD-4
+Dianeal Pd-4
+Tagrisso
+Tagrisso
+Dianeal PD-4
+Mentpovone
+None
+None
+Immunforte
+Ml-Gacid
+Mepracid 40®
+Speed C Plus
+Betamed
+Super Leaf
+Contingen-Z
+Extra- V
+Flemux-R
+Cosmo Cee Advanced
+Immunotec-Z
+Redmide
+None
+Jewel-Zee Plus
+Saphen-200
+Neomerdin
+Trazimera
+Dr. S. Wong's Sulfur Soap
+None
+Azlo
+Omestop II
+Fern-E
+Zunvit 1000
+Zunvit
+Oradine
+None
+CAPD/DPCA 3 Stay Safe Link Solution for Peritoneal Dialysis
+None
+CAPD/DPCA 2 Stay Safe Link
+Saphvimin
+Remol 120
+Fusadoc
+Maturus
+Benzimir
+Benzimir
+None
+None
+None
+Ureleve
+Virdac 30
+Virdac 60
+None
+Celecophar
+None
+None
+None
+Renacord 30
+Razine
+Razine
+Vicks VapoDrops
+Vicks VapoDrops
+Vicks VapoDrops
+Montepro
+Kastel
+Gemcilex
+Fluoracilex
+Epilept
+Efozone-S
+Celevid
+Chirocaine
+None
+Budaxin 200
+Admoxel-120
+Admoxel- 80
+Admoxel- 20
+None
+None
+Succimed
+Bentero 25
+Xerin
+Hyozani
+Ezoprole
+Flumistin
+Taxitas-30
+Taxitas-260
+Neoxaparin
+Doxair
+Cristane
+Geltazine
+None
+Conzace
+None
+Rexprofen-200
+Ibuparex-T
+Flamocare
+Kamocare
+Rexoscine
+Rexprofen-400
+None
+None
+Micofred
+Clobfred
+Mmfred
+Vitcee Plus
+Tgzincmax
+Klofred
+None
+Totalgesic
+Adfer
+White Flower SR
+Decbine
+Cosentyx
+Cosentyx
+Casino Femme
+Ventolin
+Pediafortan - C Plus
+Zoti C
+None
+Nycovan 500
+Evrysdi
+Diaplus
+ALLERGOSTOP
+Omepron
+Angiostar 75
+Celestar 200
+Esomestar 40
+Avtorex
+Avtorex
+None
+Rovix
+Medzyme
+Zefur
+None
+None
+Vastilan
+Vastilan
+Klaz
+Tenglyn
+Forcad
+Alzor CCB
+Trosoothe Plus
+Dinopat
+None
+Staluta 600
+S-QMZ
+Dronis
+Drospill
+Ausfotaxime
+Tricort
+Retax
+Q-Mind ER 50
+Seabact-2000
+Seabact-1000
+None
+None
+Nephvela
+Misty
+Lintam
+Kracid
+Gemibine-2000
+Gemaccord 2000
+Gemaccord 200
+Gemaccord 1500
+Gemaccord 1000
+Fortifer-FA
+Ferrocap
+None
+None
+Aerobidol
+Aeronide
+None
+None
+Moxiforce
+None
+Normak
+STEI-16
+None
+Deculin
+Deculin
+Medwin
+None
+Medwin
+None
+TELMISAR PLUS
+Dimple
+Citimak
+Jardiance Duo
+Jardiance Duo
+Platihex
+None
+Novoptin
+Halcef
+Trajenta Duo
+Trajenta Duo
+Nootrotam
+Conchoice
+Vintrenox
+Enoxfadz 4000
+Ketsokant
+Mucofar
+Hyopan
+None
+Revitacee
+Trexasaph
+None
+First C + Z
+Duosulin 30:70
+Plemex Tablet
+Sureboost Daily
+Khrizvitcee 500
+None
+Mellotears
+None
+Rapid-C1000
+Ascorgen1000
+VERTset
+Nostero
+Dolo-Neurobion3B®
+Urosaph
+Saphtotrexate
+None
+Telmisaph-A45
+Rizinc Plus
+Morzole-40
+Morpan-40
+Dapasaph-10
+Saphxostat-80
+Gabasaph-300
+Piroxisaph-20
+Dexmed
+Venosmil
+Tenemax
+Sanceph-500 Cap
+Doluvir
+Alzor CCB
+None
+None
+Yanci-30
+Yanci 20
+Tenolam - E
+Tenolam
+Solitor 5
+None
+None
+Izbrid
+Figet
+Erythrophar
+Diabemin Xr
+Lavuzid
+None
+Moxinova CV
+SITI-D5LR
+Cymta
+Jardiance Duo
+Jardiance Duo
+Jardiance Duo
+Zinnagem
+Kemocarb
+Pregabur
+Primo C Plus Zinc
+Oplase
+None
+Dutasusaph
+Irbespeed
+Irbespeed
+Opti-CDZ
+None
+Rapichlor
+Volrea-M
+Volrea-M
+None
+Sublimaze
+Saph-D5W
+Isosaph-110
+Isosaph-212
+Oradine
+Tenepride-20
+Myomil
+Prostmax-D
+Zimafen
+None
+Irican
+Emteno
+Cetrikast
+Alzime
+Unbranded
+Syntomax
+Airtal
+Citikar
+Optinova
+Zydip
+Nasalife
+Hikacure
+None
+Aldara
+Saphril
+None
+Lendrozo
+Varicure
+Norpriexia Forte
+Norpriexia
+Dolofast
+Goxetil
+Clostelo 50
+Gentle Care
+Conzace
+Regifer
+VitasaphD3-1000
+Rextizine-D
+Rextizine
+Clotrimarex
+Bisarex
+Quickier
+Fredtor
+Fredtor
+Fredtor
+Diuretol
+Fredtor
+Dcal Vita
+Respiz
+Maxxi Nerve
+None
+K-Cab
+Seamilast
+Biosaph
+Bildobex 50
+Sapholic-OD
+None
+Bromesaph
+Imixia
+Lustatin-5
+Lipaglyn
+Dephos
+Setam
+None
+Damuxin
+Valovir-500
+Salbucof-G
+Riroxator 20
+Riroxator 15
+Riroxator 10
+Parlin
+Ohfiban
+None
+Neurocil
+None
+Depram
+Defal
+Celodix-200
+Excia
+Cefuhil
+Dyclo
+None
+Novazolin
+Myreskib
+Salbunova
+Prepexol
+Relestal
+Relestal
+None
+Combidor
+Irbenov-300
+Ibandren
+None
+Rolastym Combi
+Esmobloc
+Respiro
+Novalev
+Olandus 10
+Baczin
+Triamax-1000
+Aeknil
+Sevoflex
+Mefredzil-1500
+Copan
+Salbunov Plus
+Allerjec
+Pregabur
+Folivell
+Lustatin 10
+Lustatin-20
+Unbranded
+Ambrorex
+Ruxience
+Gluventa PR 750
+Clopel-A
+Zithrol
+Mornem
+Glycemet
+Irbeq 150
+Irbeq 300
+Saphcorbate
+Tamsaph-200
+Saphtagmin
+None
+Magnum-S Ct
+Foskina
+Mornem
+Lab-Cee
+Fusidek
+CBCORT
+Kentruf
+Candesaph-8
+None
+Metronova
+Vitammune
+Blanc By Beautederm Acne Banishing
+Montellion-L
+Amidrex OD-3
+Amidrex OD-4
+Androgel
+Paranerve Plus
+Benerva Plus
+Xylomid
+Optador
+None
+None
+None
+Edrocort
+Bomplex
+None
+Fironium
+Infiobiotic
+Nishanerv
+Cloxasaph-500
+Ascorwell
+Saphflu-Plus
+Flusaph-Plus
+Abevmy
+Abevmy
+Unomero 1000
+Gastiin CR
+Medlosar-Plus 25
+Hidroferol
+Glemont L
+Neurica-M 75
+Neurica-M 150
+Lignovell
+Sulpi-1500
+Ringel
+Praziem
+Phenylalpha
+Parical
+Parical
+None
+None
+None
+None
+None
+None
+Montefend
+Locoa
+Lenangio 5
+Lenangio 25
+Lenangio 15
+Lenangio 10
+Kanjinti
+Icunes
+Hydrodex
+Esmo-IV
+Dilatair
+Deltacef
+Defal
+Dalman
+Betacor
+Floaxa
+Allesaga Patch
+Aldrovid
+Airokast
+Arthrimed 90
+Arthrimed 120
+Arthrimed 60
+Evoxa-500
+None
+Evacarb
+Prostride
+Relsis
+Pipertaz
+Ranex
+S-Bupi Heavy
+Furonova
+Travqure
+Vigaqure
+Vascoride
+None
+Atrozole
+Cerosan
+Salmuto
+None
+Bupicord
+Unioxali 50
+Unioxali 100
+Genclav
+Genclav
+Polgyl
+Dobumak
+Telmi HCT
+Dopam
+Dobufril-50
+Dobufril-12.5
+Selaglob 800
+Gabasyn
+Onconase 10
+Onetic 8
+Max-cee
+Genclav
+Genclav
+Genclav
+Globalpime
+Tranhil
+Amlozaar -H
+Trajenta Duo
+Giocillin
+Giocillin
+Pemexbil
+Fenostat
+Fenostat
+Atenurix
+Corplet
+Ramec
+Levare
+Abiron
+Xpreza
+Pharcholine
+Diclophil
+Tecavir 1 mg
+Tecavir 0.5 mg
+Tribact
+Vancom
+None
+None
+None
+Betahisdin
+Betahisdin
+Betahisdin
+None
+None
+Azacord
+Huanopril
+Decicord
+Tidact
+Tafixyl
+Spedra
+Spedra
+Sevela
+Phospho-Soda
+Paloset
+Palnos
+Novapraz-20
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Imaviate
+Imavitae
+Nevolyf-5
+Nevolf-2.5
+Nerlynx
+Molev
+Milrin
+Mibzo
+Letroday
+Glynova
+Gliptina Plus
+Glipstar-1000
+Gefivid
+Furecid IV
+Docvasc
+Docvasc
+Cypress
+Clavoxsea 625
+Clavoxsea 457
+Clavoxsea 375
+Clavoxsea 228.5
+Cistra
+BL RL
+Bilaxten
+Bethavid
+Azacytin
+Avirenz
+Atenova-50
+Cyclohab
+Zetron
+Voxib
+Alphagan P
+None
+None
+Tadafil 2.5
+Tadafil 5
+Tadafil 10
+Mometix
+Bligef
+None
+Prazkon
+Furoximed
+Furoximed
+Lypstaplus
+Lypstaplus
+HCQS
+Piritan
+Aurotazevan
+Propess
+None
+Abo 10
+Diglip 10
+Diglip 5
+Xfebril
+Ranofer
+Vancover
+Vancover
+Pelgraz
+None
+Merosaph 500
+Merosaph 1000
+Decima
+None
+Rocemed
+Bacticare
+Bacticare
+Tripride-2
+Pemexbil
+Losakind-50
+Econazz
+None
+None
+Saphsotonic
+Brexemes
+None
+VitaImmune PluZ
+Pivido
+Sapholic-5
+Folisaph-5
+Vyclov
+Piroxisaph-10
+M-Ron B Syrup
+Prime C
+Ibumol
+Asmacaire
+Mucosolve
+Cibinqo
+Ciclodin IV
+Loratamed
+Loperamed
+Azithrospeed
+Losarx Plus
+Losarx Plus
+Rixathon
+Rixathon
+Trokendi XR
+Trokendi XR
+Trokendi XR
+Trokendi XR
+Trokendi XR
+Trokendi XR
+None
+Unbranded
+Fluaid
+NutriGold For Adults
+Zeptagen
+Natures Plus (Baby Plex)
+Rozatin- 5
+Rozatin-20
+Rozatin- 40
+Rozatin-10
+Azithrx
+Off-Colds
+None
+Symden
+None
+Reston
+Pramide
+Levocec
+Dr. Alvin® Bleaching Cream
+Fib-Col
+Rabem
+Omeprasaph
+D5-LRSAPH
+Saphcycline
+Duactam
+Irizine-10
+Amidrex OD-1
+Amidrex Od-2
+Sporasul
+Sporasul
+Patolop
+Vildaxil
+Ertapen
+Steri-Q Surgical Cleanser
+Fusiburg
+Avisaph
+Krenazol
+Clavubac
+Apcibine
+Atenurix
+Atenurix
+Vastazine
+Febrex
+Cyclolux
+None
+None
+Zykast
+Zydusatorva 80
+Vancory
+Uriflo-D
+Tonavir
+Sultabac-750
+Sultabac-375
+Rosucol
+Revolade
+Revolade
+Redditux
+Phosphomax
+Palset
+Montior
+Loprexo
+Lecarnita
+Gugutams
+Elmox-CV 457
+Diorect
+Depram
+Depakene
+Avamax
+Avamax
+Avamax
+Atormed-20
+Alzor HCT
+Alzor HCT
+Aceclomed
+Imuran
+None
+None
+Drofepen
+One-Cefoxcel
+Myrronem
+Myrronem
+Flamavid
+Flamavid
+Moxiflo
+Amlosaph-5
+Telmisartan
+Asmalin
+Ciclodin IV
+Kytron
+Dexahab
+Electab
+Electab
+Caltradin
+Ansulmed
+Nosamax 4.5
+Vancosar 1000
+OlmeGet
+Tergen
+CEFTRIOVINN
+Norizec
+Paracent
+Ovint
+Gemicef
+CARBOXEL-450
+Telstar 40
+Telstar 80
+Ziltem
+Torcand-8
+Ocumox
+Nebra
+Nepanac
+Nuloc
+Esodime IV
+Afaxor 150
+Fortipred
+Hicel
+Zolopat Forte
+Ocumox
+Dozypress-T
+PROKOLEN
+Zilzart-S
+TrimeCass
+FebuCass
+Gensyn
+ESOLEV
+Oculat
+Ipralin
+Neu-B
+Coxicare
+Muravit B500
+Comoxdin
+Zynodex
+Venocass
+Quric 80
+Carimax
+Miprogen
+Go Bactam
+Quxime
+Levomont
+Cloxin
+Nicarvin
+Doxinex
+Unbranded
+Febrolex
+Febrolex
+Nervicap Plus
+Muldezar
+Unbranded
+Gascosid
+Nicee-Vit
+Febrolex
+Zyrova
+Momefine
+Ketonix
+Levecare
+Levecare
+SEVERQO
+KESSEN
+Ginox
+Gropid
+Triceftaz
+Itorvaz
+Zylam
+Kancura
+Sitaglinex
+Sitaglinex
+Sitaglinex
+Indacin
+Efficascent Relaxscent Oil – Intense
+Salveo® ODT
+Fiasp
+Steri-Q Hand Cleanser
+Covan
+Febuxoprim 80
+Febuxoprim 40
+Kinetica
+Kinetica
+Veganib 150
+Bico-120
+Fenosaph-160
+None
+Co-Amoxisaph 375
+Fusion
+Risefol
+None
+None
+None
+Dacihep 60
+Alclav
+Linezostad
+Loxotop PAP
+Caberline
+Abiranat
+Telgio
+Telgio
+None
+Zydusatorva 20
+Zydusatorva 10
+Vinobin
+Tuvero
+Tuvero
+Ticoray
+Ticoray
+Teno-Em
+Slinda
+Sildefar
+Shinacol
+None
+One-Cefotaxcel
+Olmat- AMH
+None
+None
+None
+Neldipin
+Neldipin
+Lophos
+None
+Kastair
+Glyzeric
+Fonkomustin
+Fludaraccord
+Elmox-CV 625
+Elmox-CV 228.5
+Ceftadime
+Bisocor
+Bisocor
+Atormed-10
+Atavir 300
+Atavir 150
+Amlovac
+Aminoven
+Abirone
+Sulpi-750
+Zykids Forte
+Zykids
+B In Cee
+Expell
+Docxol
+Lorviqua
+Lorviqua
+Reximol
+Dexmed
+Linadex 10
+Sitaform
+Saphtriaxone
+Tigecid
+Cholivex
+None
+Afatin 40
+Atirroxan
+Thromboxain 5
+Thromboxain 2.5
+Drezipex
+Eurythmic
+Dosin
+Rostin 20
+Vonecip
+Linadex 15
+Saphipime
+Dabitrin 150
+Dabitrin 75
+Linadex 25
+Ancipro-500
+Rifoxib
+Salveo® ODT
+Florvit-C Plus
+Gretor 60
+Gretor 90
+None
+Metsaphtin-50/1000
+Anator
+Rexamide
+None
+BE Td
+Epipa
+Dobuheart
+Zetadone
+Eroxene
+None
+Aklief
+Appetamine OB
+Appetamine With Iron
+So-Cee Syrup
+Diagliptin
+Diagliptin
+Golcee Syrup
+Doccee Syrup
+Apcee
+Sym2
+None
+Myrevit-C FC
+Abirasun
+Folikant
+Fenorix
+Appetamine With Iron
+Unitaz
+Maxigrow
+Glomucil
+Dr. Peel® Serum
+Philcet Plus
+Eroxime
+Fixbact
+Saphyrazin-500
+Saphiodine
+Saphiodine
+Ursov 500
+LOPREL
+Steri-Q Hand Cleanser Plus
+Khriz-Sulpho
+Aerovent
+BRILIPAN-20
+Clostelo 100
+Embolis 2.5
+Epo-Ace
+Analgic
+Korzid
+Flushcid
+Analgic
+Analgic
+Analgic
+Katryx
+Beclo-C
+None
+Muravit Fe
+Muravit E
+XINATRENE
+Omeden
+Goculine
+ImmunoVit
+OlmeGet
+Furic
+Xinclav 625
+Xinclav 1000
+CLOPIFIRST
+Philtrix
+Muravit B300
+Unbranded
+Muravit Fe Forte
+Muravit B100
+AnnaGet
+Oxawind
+Oxawind
+Retasul
+B-REX
+Julitam I.V.
+Qurvane
+Qualitinib
+Reloxa
+MEGA D3 1000
+Newxime
+EzeGet
+Moxidin
+CapeGet
+VEGRON
+None
+Salmed
+Unbranded
+Furic
+AMSOCYN-600
+Unbranded
+Evacarb
+Telsitan-40
+Tergen
+CEETRENE PLUS
+Euro-Cee
+None
+Ephree
+Unbranded
+Pregmax M-75
+Pantogard
+TIRAMAS
+ZOLTRONE-8, ZOL 8, ZOLTRONATE, OSTEO 8
+ZENSTRA
+FEBUHIL
+Profocent
+OROMEP
+EPOKINE
+EPOKINE
+TG HEALTHY KIDZ
+TG Healthy Todz
+TAZOGEN
+Fixsil-200
+Kostien
+IrbeSpeed HCT
+ROXICAM
+Amlospeed 5
+Pulmodual MDI
+Parazar
+KOTELKAST
+KOTRAZID
+Esozar
+IKOXPIN
+Glitter
+Kompraz
+KOMPRAZ
+Unbranded
+Flu-Away
+Bupasaph-TF
+Tramal
+Diazitri
+Hyosin Plus
+Enhanzee
+Recosan
+Teldra
+Febufast 80
+CHARMCEE PLUS ZINC
+Fencare
+Salmed
+AMSOCYN-300
+Fentalex
+Trap
+FoliCass
+Allerkast
+Coxicare
+Unbranded
+Unbranded
+Nosamax 2.25
+K-XR
+Clindollen
+None
+Cephrad
+VALUECETAMOL
+Pipetollen
+Prevaclav 312.5
+Prevaclav 625
+Televo
+Promadol
+Piritan
+Alvogen
+One-Dex Pnss
+None
+Co-Altria
+None
+Sylergy
+Sylergy
+Ztam
+None
+Cassavert
+Docmet
+Golmet
+Prorelbine
+Mefic
+Gesictab
+Vas8
+Goxy Inj
+Rigidon
+Trokendi XR
+Trokendi XR
+Enipidracin
+SinuCare
+Genfloxin
+TG Amlomax
+Metzil
+Trezin
+Conjuvon
+Shine-C Forte
+Invictuz
+Ethneuron Forte
+Diosmed 1000
+Unbranded
+Rapid-C
+Ascorgen
+None
+Olazura
+Olazura
+Taxitas-100
+Saphceevitd3-OD
+Dexaminsaph
+Dexaminsaph
+Disys 80
+Cipromax
+Ogivri
+Ogivri
+Amko-B Plus
+Blanc by Beautederm Acne Banishing Toner
+Levotic CR
+Gribero
+Gribero
+Lamtac 100
+Ciprobay
+Synucil
+Nacsyd
+Sitagli Plus 1050
+None
+None
+Alzor CCB
+Philvan
+None
+Ellura
+Aculev
+Veganib 100
+Goofice
+Ferant
+Fexdion
+Fexdion
+Razine
+Febutor - 80
+Febutor-40
+Neostin 10
+Esomeprasaph-40
+Diclosafe
+Pentasa
+Bufacord
+Fortra
+Vasotrate-120 OD
+Seamox 500
+Osflex
+Levothix
+Fonkonat
+Diquas-S
+Cephalex
+Mycofena DR
+Vitakon-C
+Bosetan-125
+Bosetan-62.5
+Stimuno (Orange Berry Flavor)
+Levitra
+Pevesca
+Pevesca
+Pevesca
+Kepdin
+Omebloc
+None
+Imatiplex
+None
+Focale
+Hiperdext Plus
+Zidime
+Trixsur
+Pomadex 1
+Pomadex 2
+Pomadex 4
+Pomadex 3
+Bellis
+Godex DS
+Saphteride-5
+Netofen
+Exovell
+Exovell
+Imiclast
+Eozidime-1000
+NEVIBLOC
+ORVAST
+MEVAGARD
+Buclirich
+Vancosar 500
+Ecovag
+WHITENING PEEL # 14
+Betpred
+3-Gen 1000
+Amoxirife
+Actame
+ZOCEF HOSPI
+Febrolex
+Aevosha
+Intramol
+PIPZO HOSPI
+Bluecef
+Felicgen
+Citicollen
+OlmeGet
+Blicardene
+Cispollen
+ACIPRAZ
+Unbranded
+Philmet-500
+Eurosalbu
+Care-Prazole
+Philmucil
+Amsopen
+Eliquis
+Eliquis
+VOLECA
+Cardiotaz 20
+Unbranded
+BRILIPAN-40
+Ulcomez
+Trajenta
+Docsal
+Gomol
+Carbofon
+Cetrolix
+Armacarbo
+None
+None
+None
+0.9% NaCl-Sapher
+Ketocorex
+BE Td
+Vildasaph -50
+None
+Ameniofer-B
+Fesusaph-30
+United Home Glydolax
+Fusitop
+Myrevit Plus
+None
+Simvasyn
+Simvasyn
+Simvasyn
+Ketoconasaph
+None
+None
+Olazura
+Pararight
+Saphceevitd3-S
+Saphceevitd3-S
+Sevo-Anesteran
+None
+Spirotrix
+Belcytere
+Lamtac 25
+Lamtac 50
+Misartan 80
+Misartan 40
+Gabasyn
+Gabasyn
+Rahika
+Rahika
+Lorzide
+None
+None
+None
+None
+Priligy
+Priligy
+Philvan
+Kinetica
+CAPD/DPCA 18 Stay Safe Link Solution for Peritoneal Dialysis
+Equfina
+Aciflux
+Colitab
+Migratan
+Oxizinc
+Phesgo
+Phesgo
+Caldeezee
+Multizin
+Immunavit-1020
+Osteomol
+Simvoget
+None
+Razine
+Zevas
+Tafnext
+Rosalfen
+None
+Misal
+None
+Ketohab
+Atorzet 40
+Moleair
+Bromphenova
+Zilongjin
+Mediflam
+Mediflam
+Banbakt
+Aquatabs
+Aquatabs
+Enerboss
+Raphibon
+Danavir 400
+Danavir 600
+Cefavex
+Doxel
+None
+Linadex 5
+None
+Pregab
+None
+Escit
+Azartan
+Idacord 5
+Gecita-200
+Gecita
+Flomist
+Paradrin Forte
+Aminocent
+Ketomicore
+AMOXICOLLEN
+Tobrin
+Amsopen
+EFXONE
+Zure-Uric
+Nicasan
+BLISSPRAZOLE, OMEPBLISS, BLIZOLE
+Montephil-L
+Zolmed Forte
+Zerodol-P
+Zerodol-CR
+HCQS
+Westfimox
+Euroclav
+Temlex
+Flutiright
+Xovax
+FACLOR
+Unbranded
+Candego-16
+Ketroxen
+HI-CLAV
+Amlozan
+Gliclaphil
+Sitaphil
+None
+Bicardone
+Execard
+Philsitz-M
+Florvast 80
+Sustachlor
+None
+MUGREL
+Omera
+Borixisaph
+Cetaphil Baby
+Mmcort
+Ascorsaph
+Azeesaph
+Balanced B-100
+Saphflucaz
+None
+None
+None
+Monvex-L
+Taxaica-100
+Taxaica-260
+Etoricoxib
+Prolol
+Zryt-XR
+None
+Kocitaf
+Fenostat
+Dukarb
+Acriptega
+None
+Oselvir
+Vostrin
+Easylac
+Qutero 300
+Lactusol
+Abo 5
+Chronistin
+Sefepi 1000
+Hexcet
+Docebil
+Seredol Deca
+Lezol
+Godex DS
+Platixel
+Vistamox
+Caltrate Plus
+Levolife 500
+Forazole-IV
+Altoclav
+Glomicol
+None
+Dexone
+Healthcare Paracetamol
+None
+Mediclav
+Azithrodyn
+Candiva
+Ramipro
+Dopamet
+Zyvax
+Pegpaxorubicin
+Iroplus
+Biotaz
+None
+Unbranded
+Baytrine
+None
+Acetagen
+Fevcet
+In-hale
+Coxin
+Tetadeel
+Senorin
+Ampivin
+Unbranded
+Mecobalzone
+Mecobalzone
+Unbranded
+HCQS
+AMSOMAX
+Telwin 40
+Ketralax
+Coldeze Infant Drops
+Hypanto-20
+Cefacare
+Oranzar
+Ampivin
+Ampivin
+Allerpro
+Tracet PN Forte
+Nuvert 24
+Latanopta
+Doburis
+Eslopram 5
+Seiz 500
+Enhamox
+None
+Losartreve Plus
+Mpred
+Jamoxi
+Gabatreve
+None
+Yucordin
+Cillox
+Clavsin
+Altovox
+Altoclav
+Enoxden
+None
+Levoxina
+None
+Fixxx
+Educef
+Ranirex
+Mibor
+Ceftrex
+Cefupak
+Scitrozole
+Enoxden
+Pantozar
+Onetazid
+None
+Azik
+Karakleen
+Propravest
+Bettervent
+None
+Augmin-125
+Ketodol
+Rehydrex
+Maelenoxyl
+None
+Linetero 600
+Immunogard
+Strozin
+Unbranded
+Tigeron 750®
+Lolip
+Azik
+Flemaliz
+Isox
+XPA-C
+Unbranded
+Jules
+Levit IV
+Dobulex
+Norepin
+Topneuter
+None
+Zinof 200
+Hydrite
+Furoxen
+Tru - Cee
+Unbranded
+ControLD 10
+ControLD 20
+None
+Razocin
+Multinem
+Retazollin-4.5
+Sanoviz FA
+Xithramed
+Hextan Plus
+Trimesolone
+Trimesolone
+Retazollin-2.25
+Unbranded
+Lupigliptin
+None
+Dextar-S
+Mezartel-80
+Azithrobet
+Neozefrax
+Jansar 100 Plus
+Fenobet
+C2ZINC
+Unbranded
+None
+Lupigliptin
+Mezartel-20
+K Beauty
+Jiaamycin
+Ceffdo-200
+Amlus-10
+Ascophil
+Zulb
+Bronchomed
+Spaira
+Letero
+Procee Plus
+Hydrite
+Febuton
+Attentrol 40
+Attentrol 25
+None
+Pio-Source
+Unbranded
+Merit
+Quetafarm
+Tazorife
+None
+Ferix BC
+Argen
+Lesurix 40
+None
+Cefutreve
+Grani-Ace
+Elzar 40
+None
+FADZflux
+Zydactin 25
+Astedart
+Calyxin
+Lesurix 80
+Emoxin
+Acetaffein
+None
+None
+None
+Epokine
+Epokine
+Unbranded
+Milopid 75
+Cerox
+Unbranded
+Gemzole-20
+None
+None
+None
+Dutapan
+TETRAPOL
+Unbranded
+None
+Fexoxan
+Amor-Z
+Feron
+Mistacor 80
+Spasmotidine
+Gazgo
+Truxim
+Gisfen
+Gentacare
+Olmegnan
+Dumparin
+AcidNorm
+Montral
+R-Vokz
+Zerevedil 6.25
+Zylohist
+Bigsens XR 750
+Linovre
+Diacin 500
+None
+Epiruzet
+None
+CONTRACLOT
+Rosufen
+Rosufen
+Magnilek
+Ceficad 1000
+Cefroxil
+Fuzinov
+Febuxospeed
+Febuxospeed
+Qualcet
+Glee-C Plus
+None
+Zefcare
+Cefsukeer
+Kodipin
+Komperdone
+Zerevedil 12.5
+None
+Neokol
+Muravit Cee
+Paraglee-500
+Celeflam
+Maxivent
+JANSAR 50 PLUS
+None
+Bindphos
+Dretazure
+Itoride
+Vaiance
+None
+Hydrite
+Genlyte
+Fluifort-M
+Goxime
+None
+Lewicoxib
+Cefzin-S
+Levacetam
+Reflaxid
+Unbranded
+Preveket
+Amkopros
+Gastorid
+Cefgen
+Valrexpin
+Merocent
+Portemp
+Dontazo
+Genzith
+Vancocy
+None
+Ketoden
+Zefegen
+Plemstop
+Citifar
+Tripem
+Ertasure
+Zerrsox
+Clavogen
+Genstarch
+Eterox
+Gixime-500
+Fronzinc
+Laxagen
+D-Xobin 10
+Aizinc
+Levacetam
+Xora
+Nicarfree
+None
+Gicox
+Poten-cee
+Rimaclor
+None
+Flamibazid 500
+Infexin
+Rybelsus
+Sydenferol
+Sydenslim
+Torfil 20
+Erysaa
+Conpanzole
+Citapram
+Citapram
+Citapram
+Flexanerv
+Claritrol
+Fesusaph-8.8
+Fesusaph-15
+Diclomet
+Plavido
+Saphzomib
+Saphzomib
+None
+None
+None
+None
+Embol
+Vitmarie
+Pregnafol
+Equamol
+Zervit
+Respifar
+Saphdosetron
+Saranto- H
+Dipinew
+None
+None
+Novotran
+Bisotrol 5
+Bisotrol 10
+Rasator 0.5
+Neuro D 150
+Neuro D 75
+Rybelsus
+Rybelsus
+Prolol
+Solaze
+Solaze
+Solaze
+Remifen
+None
+Levomol
+Cabitas
+Bupron XL 300
+Bupron XL 150
+Bevac
+Mixeprem
+Novtrix
+Seterus
+Seterus
+Vit-3
+Oncaspar
+Platifirst
+Tamiselvir
+Lintam
+Folinc
+Extrapeel (Exfoliant Solution #1)
+Extrapeel (Exfoliant Solution #3)
+Extrapeel (Exfoliant Solution #2)
+Extrapeel (Exfoliant Solution #2)
+Extrapeel (Exfoliant Solution #3)
+Optanep
+Carbobil
+Hexplatin
+Carbobil
+Carbohex
+Simtec
+Diclotrue
+Zenith OD
+Escit
+Seroflo 250 Ciphaler
+Seroflo 100 Ciphaler
+Clonisaph-75
+Clonisaph-150
+Kepxime
+Mupirina-B
+None
+None
+Candego-8
+CEFZIN
+Lilasartan
+Medcurom
+Anastragen
+Febox-40
+Esenzpro
+Supraphil 200
+Lesirheu
+Thymexin
+Poten-cee
+Axa-Zole F
+Ciplume
+Epix
+Amoxirite-500
+Cefuprime
+Dilatair
+Skicoline
+Ceftriexcel
+Oranzar H
+Strazol
+PITAZOVIN
+PIPBAC
+Salmate Ipra
+Gxacin
+Xylodent
+Trivasc
+Nerviseth
+Norpho
+Zolev
+Bonvits
+Carboxel-150
+Flemsol
+Esoric 40
+Esoric-20
+Olmestal-A-25
+BDMERO 500
+Lisnoxl-10
+Dolsten
+Bdgef
+Extusiv
+Febustin
+Febuxtat
+Amaziptin-M 1000
+Sodulane
+Fitex Plus
+Levetrax
+Unbranded
+Sennagen Plus
+Cura-C
+Immunultra
+Q-Penem
+Kexamic
+Nicarcent
+Sitakem
+Sitakem
+MD-Nerve
+Lipid-Aid
+Bewell-C Kids
+VN2 Plus
+Oratrime
+Amlo Med-10
+Finar
+Kenzamide
+Paraglee Forte
+Gleezine
+Medtrixon
+Prevaclav 625
+Meed-Cee
+F-ZEEN
+Kalxium+
+Kalxium+ZG
+Muravit Cee Plus D
+Bettercee
+Trilacgen
+Etoxib 120
+Pitzomac
+TGXIME
+Auromitaz 1000
+Adzosin
+Ascor-Kid
+Amlitor 5
+None
+None
+Cefiqo
+Swich
+Brent-LS
+ANTILOUPE
+Imreb
+Sun D 1000
+Zyvax
+Phigliptin 50
+Propravest
+Flev
+Endemox-DX
+Synvodex
+None
+None
+None
+None
+None
+None
+Unbranded
+None
+Telsar H
+Xalanol
+None
+JAMARI 80
+None
+Hepses
+Rispermax
+Merit
+O-Gold 40
+Unbranded
+Rilaxia
+None
+Febuphil
+None
+Cetrine 10
+Attentrol 60
+Attentrol 18
+Floxwin
+Mistacor 40
+Tazorife
+Quetafarm
+Armapenem-1000
+None
+Razogen
+Pio-Source
+AzithroMax
+Nevroplex
+Elipran 10
+Outfree 80
+Emzart 40
+Febufast 40
+Armapoetin
+Epoguard
+None
+Clavmax
+Asy
+Orantrama P
+Telarb
+Elipran 5
+Levoxid
+Unbranded
+Aetricef-W
+Astaliptin
+Norecent
+Lepixa
+Eso-eve
+Emzart 80
+Zoligen
+Acantha
+Carpime
+Tritam
+Lepixa 1000
+BRTJ Formula Finest Choice C Plus
+Kurt
+Lepixa 500
+Astaliptin
+Tel-Amlo 80
+Parachem-250
+Parachem-100
+Allerwell
+Mefewell
+Multiwell
+Jamari 40
+Cetizine 10
+Metsita
+Davrocin
+Telsar 40
+Opmoxin
+Betnochem
+Clonesten
+Dermochem
+Expesyl
+Clofepen
+Parachem-125
+Hyoschem
+Daneschem
+Cetricare
+Hyprosol
+Telmez
+Philsitz-M
+Unarole
+None
+Parachem-500
+Celica
+Telmez
+Hydrochem
+Lepixa
+TEL-AMLO 40
+Tazastar-4.5
+Oppisartan-40
+Atorfast
+Citinerve
+Dizochem
+Fencare
+Multipant
+Teliwise 40
+Cardiobide
+Cardiobide
+Citinerve
+Clavco
+Unbranded
+Voxelacin
+Unbranded
+Hespadin
+Inoby
+None
+Cleazole
+Leukast
+Holivit
+Elzar 80
+Dielzith
+EFRIZINE
+Hero-C
+Levacetam
+tetAMSON
+None
+Aezar
+Rabprez
+I-Panto
+TAZASTAR-2.25
+Rexibile
+Grabalin
+Acifox
+Lecox-200
+Ylateq
+Q-Tem
+Ximetaz
+Leukast
+None
+None
+K-Guard 800
+MoxiDen
+FONKOZOMIB
+TMZ-MR
+None
+None
+Zefocent
+None
+Cardimica
+Leal Vits
+None
+None
+Lagungen
+Medzotam
+Koxol
+Alclav Neo
+Kotirzin
+Sydenhist
+Torfil 2.5
+Torfil 10
+Sapholic
+Sapheron
+Sapheron
+HP Oil
+None
+Control
+Dayzinc Fortified
+Fosmol
+Diawell
+Diawell
+Nibsutib
+Yogazam
+Yogazam
+Metrosaph
+Gascovid
+None
+None
+Myrevit-C Plus
+Unbranded
+Metrovee
+Derkazole
+VenoSolv
+Saphtivit
+Vancolife
+Nargraine
+Fluxeran
+Dcal Vita
+Idacio
+Idacio
+Raxum
+Kalomin S
+Balversa
+Balversa
+Balversa
+None
+Erexil
+Bisolab
+Stelara
+Quifol
+Melanov M OD
+Monterizine
+Mecolzine
+Levipil XR 1500
+Levipil XR 1000
+Distem
+Mepracid
+Fetusin
+Khrizvate
+Sanzepir-10
+Gozidime
+Azimed
+Celenova
+Novazith
+L-ascain
+Metromin
+Metromin
+Dovprela
+Ketovex-30
+Saphlor-50
+Saphlor-100
+Heptavir Os
+One-Mero 500
+One-Mero 1000
+Baczone
+None
+Zetrinx Plus
+Rcarbonate
+Medprazol IV
+HepBest
+Dorpen
+Damusin
+None
+None
+Kosix
+Simvacor
+Meconerv
+Meconerv
+Meconerv
+Doburx
+Bensarex
+Nucee-Z
+Beclo
+ProVitaCap
+Voleca
+Montior-L
+Hyoscimide
+Butacap
+Muravit Cee Plus
+Korbic Teens
+Muravit Cee Plus Forte
+Altovit
+Q-Pix
+Duo-gesic
+Egezet
+Caliptrol
+Aurora
+Zithrolab
+Olica
+Cetameds IV
+Qualintoin
+OptimaZee
+None
+Unbranded
+None
+None
+None
+Flavix
+None
+Giomox
+Klovir
+Rosalta
+Tanafen
+Capetero 500
+Co-Altria Ped
+Co-Altria Ped
+Triden
+Oppisartan-80
+Unbranded
+Medicazol
+Klovir
+None
+Aclav-625
+None
+Paxwind 100
+Welopenem
+Vancoson 1000
+Fexnova
+Koact 1.2
+Danajoy
+Ropimed
+TG-Zip
+Paxwind 260
+Nicarchel
+Clipax
+Tradolan
+Almefen
+Zerruvit-C
+None
+None
+Duosan
+Vitarose
+Amzart
+Imalek 100
+Roxiprime
+Cevor i.v
+Olmity-H
+Ezoprole IV
+Axcestrine
+Winpersul
+Preva
+Epirimed
+Orapen-S
+Rovasu 10
+Servalin
+Highcee
+Parapain
+Tazoprac
+Tazoprac
+Oraved-12.5
+Orabactam-2.25
+Telarb
+Taxim-O Kids
+Meropin 1000
+Tgzincmax
+Morep 1000
+Digoxare
+Rovasu 20
+Neo-S
+Zenith
+None
+Spasmazol
+Fucozole
+HighCee Plus D
+Glyformet
+Sovit-Pro
+Olmesa
+Sobicard
+Mediquine
+Armocoline
+Aloket
+Salusan
+Philvasc
+Lintaz
+Lintaz
+Fibrofin 145
+Nobacrin
+Bactend
+Losaget
+Afaxor 75
+FURO
+Cristicol
+Tussilev
+Sydenzole
+Triloupe
+Orabactam-4.5
+Gastrosil
+Glucoz
+Capnorm-500
+Vispocaf
+Angivent
+Bepsar
+None
+Mepresone 40
+Cefxitrix
+Neotic
+Tamson
+Musital
+Evacoxib
+Ketocass
+Metrocare
+Ceftnest
+Meedzinc
+Unbranded
+Urogen
+Diabutrate
+Aminosol
+Hemoramin
+Omezar
+Neurokem
+Salbulife
+THEREmax
+Diclocare
+Naturawhite
+Paraglee
+Genvacaine
+Zirofer
+Paraglee
+Alka-Cee Enhanced
+Paraglee
+Gleezine
+Gleezine
+D-Xobin 50
+None
+Muravit Znc
+Vancoson
+Risponz
+Clavwell
+Korvast
+Neurokem
+None
+Doxestad
+Pure-Cee'Z
+YCLOVIR
+Prasberex
+Korvast
+Korvast
+Belizar
+Gliptadin-100
+Nutrimed C Plus
+LetroGet
+Tribacef
+Exflem
+Ambidol-P
+ALCLAV NEO
+Droxiem
+Zerrsox
+Cyanerve
+Korvast
+Hyosky
+Fermacold
+Unbranded
+None
+Raphvit
+Keercomin
+Crevita
+Kaycel
+Asconzee
+Nicarden
+Natriban
+Zinnat
+Fortum
+Zinnat
+Zinacef
+Zinacef
+Fortum
+Fortum
+Zinnat
+Zinnat
+Amlosky
+Emlor Plus
+None
+Efuboric DS
+Zosart 125
+Zosart 62.5
+Wepox 4000
+Andrevita
+Nerviseth
+Celeb-200
+Xenteri
+Tamzor Duo
+Kenamic
+Karbonet
+Karbonet
+Parabit
+Micronida Forte
+Trisoxs
+BIOFOLIC
+Kenamic
+Kotifen
+Kotifen
+Amlospeed 10
+Koprofen+
+Atadin
+Tiramas
+Dextrophen
+Fentalex
+Fentalex
+Odrisof
+Ketocent
+Prevaclav 1g
+Allercef
+Alphadin Plus
+Phenerex
+Oxypyro
+Equisine Relief
+Oeperidone
+Hemanex
+Levosaph
+Glime-M2
+Redacid
+Rapid-B100
+Azi-200
+Tigeron 500®
+Garavee
+Amloros
+Symero
+Dicol-S
+None
+Nerv-E
+Lulidipine
+Jasz-C
+AsconvitaZin
+Clobewell
+Nervitamin
+Duomed
+Noriphen
+Triacebact
+Belizar
+Alapain
+Bravadine
+Fenok
+Fenok
+Fenok
+Amlosky
+Akeedex
+Epimeds
+Zurevee
+SONGESIC IV
+Tigec
+Fenok
+Flucofarm
+Gliptadin-50
+Angifuse
+Nuropin-100
+Unbranded
+Therasil (Orange flavor)
+UNIGESIC
+GUIAMAR
+DILFUR
+GUAIACOF
+Prazome
+None
+Meobloc 50
+I-Zn
+Immuneplus
+Vertset
+None
+Haruvita
+Taxaica-300
+Stressaide
+Finmod
+Siti-zole
+Oxalibil
+Hiroxime-250
+Ilumya
+Brukinsa
+Rondvit Plus C
+Fungarin
+Hydrex
+None
+None
+Mometarex
+Vildal
+Pak-C Plus Forte
+Afixostat 80
+Balanced B-50
+None
+Aciclonova
+Zynasalo
+Deoxysaph
+Oxamed 500
+Dormizin
+Brofen
+Oxan
+Axekon 100
+None
+Beautamin-A 0.025%
+Nicarduz
+Beutamin-A 0.05%
+Giozole
+Novaplatin
+Lonset IV
+Ironfer
+Ferrogen
+Tamina
+Tamina
+Tamina
+Ironfer
+Ferrogen
+Feruz
+None
+Hygienix
+Flupenxol
+Solifen
+Solifen
+None
+Capnock
+None
+Xefrizil
+Hiroxime-125
+Bageda
+None
+Povi-Guard
+HRZ Pedia DT
+None
+Bonspri
+Bizaclovir
+Marvit
+Ceftrihil
+Evrenzo
+Evrenzo
+Thiozz-8
+Bisodac 2.5
+Bisodac 5
+None
+B-PENEM IV
+Sydenfen
+Fenosyn
+Vometa FT
+Frudis
+Carbozinc
+Nurolin
+Tai Chi Ginger Rub
+Memry
+Aarexone
+Sefixi-SB 1500
+Floradine
+Betpred
+Carbofon
+Glucomin
+Rapid-Peel (Exfoliant Solution 1)
+Rapid-Peel (Exfoliant Solution 2)
+Rapid-Peel (Exfoliant Solution 3)
+None
+Trigalow
+Alclav Hospi
+Quadcef 500
+Cefarap
+Cefarap
+Zeftrax S
+Anemicon
+Mightee-Cee
+None
+L-CER
+Trividex
+Fexophil
+Myfetil
+Myfetil
+E Cee Plus
+Arcimet
+Feuxine
+Eporife
+Aetin
+Nystarex
+Ibupro 400
+Ciprollen
+Mintrostat CZinc
+Montezyn
+Terazidine
+Indrex
+Ceftacent
+Aetaxime
+Rightcare
+Terrakast
+Acnewin
+Eozoline
+Porfever
+Nobilis IB Primo QX
+Biosaph
+Unidocet-20
+None
+Thafil 20
+Syreduce
+Levesaph
+Microshield Hand Rub
+Miconarex
+CALVIMIN
+Afixostat 40
+Saphendrine-6.25
+Hesminsaph-500
+Hesminsaph-1000
+Khriz-Ors
+None
+Khrizgesic
+Sinutab Cold Day & Night
+Katinko (Ginger & Patchouli Oil Scent)
+Tri-Protect
+Ibles
+Bio-Guard
+Etheral
+Iso-Guard
+Povide
+Terbifred
+Fluquadri
+Micofred
+Mmfred
+Klofred
+Fusifred
+GildaGen-50
+None
+VildaSolv
+Unbranded
+Trimagen
+Miraferron
+Sitamet
+Suprafix DS
+Suprafix DS
+Nosekot
+Rapidsen
+Saphdenos
+Ceres Pharma-Galenicals
+None
+Aperusvit F
+Klotrisol
+Rapirusvit
+Foragen
+Bendipine
+Bendipine
+Conchoice
+Merit Plus
+Merit Plus
+Hyertic
+None
+None
+Clotriva-6
+Ampisaph-250
+Ampisaph-500
+Angel-100
+Saphdocaine
+Pemeta-100
+Sivab
+Nevodio
+Tigeclin
+Vidambic
+Docile
+Sivab
+NaCl-Saph
+Borte Trust 3.5
+None
+Altruline
+Lysobact Spray
+Lysobact P Spray
+Rinobact Spray
+None
+Robinsons
+Robinsons
+Robinsons
+Levixa
+None
+Tanego
+Kethram
+Tri-Senza
+Mesofer
+Ac-Lyte 600
+Novclovir
+Xultophy
+Phencet
+Lorago 5 CT
+Novahexol
+Irbefar
+Novaprazole
+Torsit M 1000
+Khrizvela
+Lepsodex ER
+None
+IRIESH
+None
+Bisodac 10
+Merit
+Valpros Pedia
+Telmi HCT
+Drenisole
+Prelica
+Prelica
+Jinarc
+Unbranded
+Kabirol
+None
+None
+Pregab
+Norbipine
+Accexone
+Imasil-100
+Ketrian
+Imasil-400
+Pantosaph-40
+Pantosaph-20
+None
+Prepexol
+Merit
+Amvasc Plus
+Nemosea-500
+Glychlor
+Robimep
+Bluemox
+Oranair
+None
+None
+None
+Jiaavast-10
+None
+BETTAM
+None
+Amara
+Innoxaplin 100
+Jiaavast-20
+Rapelex
+None
+Topneuter
+NOCLOT
+Muravit B150
+Kodapine
+Mexime
+Axonex
+Rocumed
+Telminex-40
+Telminex-80
+Gleezinc+D
+Quatam
+Regilexin
+Ceplex
+Vancocent
+Sano Cee
+None
+None
+None
+ISOXEL
+Malprazole Plus
+None
+Fixicon
+Sazol
+Aero-vent
+Afree-Vanco 1000
+Nir-5D
+NIR-RL
+NIR-DNS
+Meroqure-5
+Meroqure-10
+Donprazole
+Mupirv
+Pitazovin
+Nicoxime
+Gotazidine
+Sannovit
+None
+None
+Mistacor AM
+Sergivell Plain
+Profmax
+Vispoxetil
+Biokast
+Mezartel-40
+Qodic
+None
+Rapzar
+Medgrelide
+Tergecef
+NIR-D5RL
+X-Plended
+Velsta
+Prevaclav 1g
+Famcin
+Aezar
+Phenazol
+Etorica -90
+Etorica-60
+Etorica-120
+Adivia Met
+Aero-vent
+Splac-25
+Coxbitor 200
+Gentavin
+Quadrotopic
+Co-Aleva
+Sarbet
+Steroderm
+Terbinox
+Ocitoxin
+Filgria
+Betacare
+Orapant
+Zilzart
+Wesartan
+Blu-Tazo
+ALEREST
+Clavifront
+None
+Neovis
+None
+Apperozine
+Rosudaise 20
+Byden 500
+Cardi-S
+Zinerve Plus
+Vicardis
+Unicarb
+Lovencee
+Zefadime
+Antoreb
+Tapdin
+Tapdin
+Clavoxel-BID
+None
+None
+Caldi Plus
+Ticaalor
+None
+Cetrocord
+None
+Saranto-H
+Mobic®
+Mobic®
+Plefil
+Astezol
+Vitatin
+None
+None
+Ferolem
+Decodrin
+Calci-Zee
+Rapzifor
+Chlorgen
+Chlorklenz
+Vera - C
+Anaxol
+Ramec Forte
+Amlocared
+Bonazin Forte
+Pantomeds
+Jewel-D
+Inovit
+Mamafer Plus
+Zunvit 3500
+Corbizee + D
+Corbizee + D3500
+None
+Doctri-Cee Plus
+Doctri-Cee Max
+Mucucil
+Mucucil
+Mucucil
+Atenova-100
+None
+Nostero
+Darzalex SC
+None
+Cibinqo
+Contrave
+Histarex
+Carvesaph 6.25
+Co-Amoxisaph 457
+Diklonac
+None
+None
+None
+Amlosaph-10
+Nervigo
+Carvesaph
+Pregminsaph
+Saphtinib
+Dextrosaph-15
+Eco-Bath
+Alcoplus
+Alcoplus
+Alcoplus
+Soli-D
+Saphtamicill
+Zentek
+Actranex
+Mefemed
+Brestane
+Unipacli-100
+Shan 5
+Irnizet 100
+Irnizet 300
+Irnizet 500
+Unipacli-30
+None
+Aurozapine OD 45
+None
+Aurozapine OD 15
+None
+Atracursaph
+Hithro
+Ducressa
+Actranex
+Lysobact Complete Spray
+Lurasitor 80
+Lurasitor 40
+Yupelri
+Optabrin
+Zemimet SR
+None
+Poliovac
+Oxynorm
+Bucelon
+Optiray 320
+Optiray 350
+Optiray 300
+Tensilo
+Maalox
+None
+Glyxera
+J-Tinib
+Eoferon
+Amlotel
+Amlotel
+Amlotel
+Amlotel
+Eodine 10
+Eodine 5
+Atectura Breezhaler
+Maura Kids
+Maura Kids
+None
+Oxymarc
+Saphrivax-400
+Saphrivax -800
+Clindasaph 300
+None
+None
+Ocetax
+Ferustab
+Folmaterna
+Methimax
+ESLOPRAM 10
+None
+Savermox
+None
+None
+Nebicar
+Prialta-Met
+Prialta-Met
+Samsca
+Pletaal SR
+Phigliptin 100
+Ibufen
+Zilgam
+Ferricore
+Efuboric
+Laboxtat 40
+Ambdart
+Royceevit
+Cozith-S
+Cladryl
+Gliptins
+None
+Levecare
+Roseceevit
+None
+Unbranded
+Cupid
+Ragundi
+Dolonerv Forte
+Norisan
+SEIZ OS
+Levexime
+Regilexin
+Unbranded
+Nicmeed
+Jil Cee
+Flumist
+CEFARAP
+None
+Prozet
+InnoC + Z
+Febuwise
+Unbranded
+Ropimed
+Telwin 80
+Tel-S
+Freeron
+Xinprotec
+Fexogout-80
+Neurophrine
+Butaciram
+Trisodex
+None
+Norephimed
+None
+OMEHIL
+Regilexin
+EXIB-120
+Proactive Vitzinc
+Mezartel-H
+Reynavit-B
+None
+Ellavit-B
+Nupira
+Renaphos
+Cefromaxil
+Blinor
+Oramycin-500
+Haifotax
+Nor-Ep
+Anagic
+Fexogout-40
+Bronchoserv
+Fixhil 200
+Ceftax
+Vitarap
+Trimetaz
+Goutfree 80
+Anagic600
+QUALICLAV
+Glee-C
+Blissetron
+Valsar Plus 160 / 10
+Saltracit
+Meropin 500
+Cardinova
+Noriden
+Novaphrine
+None
+Philsitz-50
+Cyphocare
+None
+Corticare
+Olmephil 20
+Salumed
+Spirophil
+Januglip 50
+Valcimox DS
+Norifree
+Noreph
+Unbranded
+None
+Olmephil 10
+Merodex II
+Sefos
+Nicargio
+Mevo 40
+Acneclear-C
+Hemaquest
+Retazinc
+Vaczucef
+Sitaphil
+South Star Cee
+Altoxustat 40
+Gludin
+Calyxin
+Rapelex
+Kremil-S Cool Relief
+None
+Sporogut
+Floxazin
+Acantha Plus
+Hypomed
+Fixhil 400
+Xyveemox
+Sephrine
+Korbic Kids
+Klotor-S
+None
+Teldra
+MEVO 80
+Jysartan 50
+Rapelex
+Rexmecef 200
+Sodiqo
+Losartap
+CHOLINEXCEL
+None
+Sitplixin 100
+Gliptins
+2Tel 40
+Selcee Plus
+Tripem
+2Tel 80
+Elbazid
+Biopenem
+Nervitamin
+Eroxime-500
+MARIPAIN
+Ceplex
+Januglip 100
+Afreedipine
+Healizinc
+Unbranded
+Dancee
+None
+Ceplex
+Mepranex
+philsitz-100
+Uri-S
+Acantha
+None
+Alzet
+Rosudaise 10
+Furozep
+Epokor
+Rosett 20
+Josephcee
+Rexmecef 400
+Nicapro
+Neuronergy
+Simet
+Slimex Plus
+Gocetam
+Forte-B
+None
+Normeed
+B-Rite
+Plemonem 1000
+Exeprin
+Gift Cee
+None
+None
+Blicarpine
+Sitplixin 50
+Crystal C Alkaline
+Pulmodual
+Genprazole
+Telarb Plus
+Acantha Max
+Unbranded
+Paraway
+Teliwise 80c
+Angitrim
+Mycozole IV
+Saphcetam-400
+Ketonol
+Pregeb 50
+Volrea
+Exprogest
+Exprogest
+Anesticaine
+Tomolol
+Sitanova Plus 50/500
+None
+None
+NS
+Moxylor
+None
+Dianov
+Moxinova-250
+Moxinova-125
+Faranerv-B
+Vamicyn
+Neo-Penotran
+Neo-Penotran Forte
+Neo-Penotran Forte-L
+Sydenhist
+Rexvidone
+Bactrexin
+Coxyn
+Aklief
+MyBeaute
+Erysaa
+Axaline 3.0%
+Rapid-C Plus D1000
+None
+None
+Dermavit-E
+Saphcetam-800
+Saphcetam-1.2
+Carvesaph
+Nicmel 200
+Nicmel 150
+None
+Argyrex
+Lonsurf
+Lonsurf
+Slimgen
+Saphvera
+Saphvera
+none
+None
+Taflon
+Sertatop
+Cleverge
+None
+Omeprasaph
+None
+Tylin
+None
+Lumeneurol
+Bronchosal
+none
+Prozelax
+Vaxneuvance
+Xylocream
+Neuroxin
+Enerzair Breezhaler
+Braiporin
+None
+None
+Verquvo
+Verquvo
+Verquvo
+None
+DocFil
+Golafil
+Acutocin
+Mucolus
+Pyrekon
+Colitab
+Ophthagesic
+Pagnel
+JEMGAS
+None
+Gestacare OB
+Gavreto
+Unifos
+Rocaine
+Cefisan
+Actarb 40
+Actarb 80
+Colitas-2M
+Planicid
+Serocid
+Metcore
+Combizar
+Merit Plus
+Atectura Breezhaler
+None
+None
+None
+Accoquin
+Pregab
+Vancosaph-500
+Vancosaph-1000
+Zefuvee
+Renogen
+Levonova-500
+AnnaGet
+Temlex
+Belcytax
+Zyrova
+Capegen
+Omnicef
+Tirifex
+Clobimed
+None
+Rapid-C Plus
+Donnatab (for Export Only)
+Genclav
+Ketonob
+None
+Diakon
+Clozadin
+Laboxtat 80
+Cloprimide
+Finasticare
+Fluorogold
+Aero-vent
+Clozadin
+Goxitin
+Maxibustat 40
+Pantorex-D
+Kardian
+Terrakast
+Dolvitab
+Ferronfree
+None
+Fludozine
+Viraphrine
+Gentraxone
+Zitamet
+Gentrix
+Curafol
+Aeketo
+Gitor-40
+Millis
+Seafurox 750
+Aminolog
+Gofime
+Zefcure-750
+Fennotol
+Blu-Tazo
+Truquest
+Welmox
+Oxcil
+Alorex
+Strepcin
+Predixone
+Kodapine
+Omeprex
+Telvost
+Mizar
+Fermaflex
+Ocetax
+Alorex
+Omeraz
+Metricored
+Aguadexa
+Quric 40
+Acugout
+None
+Xelares
+Vanclaire
+Lintaz
+Gocifime
+X-Noseia
+Varostin
+Levocemax
+Baczartan
+Odasyl
+Acyden
+Acantha
+Montevo
+Antoreb
+Maxibustat 80
+Indirin
+Prialta
+Prialta
+Prialta
+Inofib
+Solvasc
+Nebilet
+KLOR-S
+Theomet-500
+Zyics
+Asmafree
+Tamzor 200
+Bluecozone
+Borteget
+Ketorels
+None
+Lintaz
+Montecet
+Ramipro
+Glomicid
+Malchlor
+Diapurocin
+Rifethromycin
+Gemosanz-1000
+Renzinc
+Stelav
+None
+Zithrix
+Zainox 1G
+Wesminbio
+Cardemef
+Godarise
+Blissdomine
+Raplexin
+Malros
+Bluecef V
+Fern Women
+Proxacin
+Levomef
+None
+Roxicef
+Clobphil
+Terbiphil
+Mcortphil
+Tamsycare
+None
+Timibest
+Micophil
+None
+Kentphil
+Psorovate
+Fusiphil
+MD-SONIDE
+Predixone
+Ebatan
+Febufree 40
+Omzyn IV
+Atenugen
+Mobilan
+Veltir Plus
+Tazonex
+MD-CID
+Vitzee
+Cisflex
+Vitzee
+Maxitobra
+Levopha
+Vicardis
+Varostin
+Vancomeed
+Bicardikon
+Ceplegen
+Genzar
+St. Raphael
+Indirin
+Indirin
+Kedion
+Adana
+Balsartec-160
+Balsartec -80
+Tripride-2
+NIR-NS
+None
+Solbriz
+Maxi-Aid
+One-Dex DSLR
+Nervesaph-Max
+Fexuclue
+None
+Bico-90
+United Home Glydolax
+Maselax
+Vexbos 80
+Dynadoxy
+Valtir
+None
+Saphzar
+Saphzar
+Saphzar
+Irbedrosaph
+Irbedrosaph
+Irbedrosaph
+Allerphil
+Philcef-DS 125
+Philcef-DS 250
+Rosukon-10
+Glusimet
+Malatan Plus
+Malatan Plus
+Malatan Plus
+None
+Emicox-400
+Ozempic
+Loprexo
+Loprexo
+2baconil TTS10
+2baconil TTS20
+2baconil TTS30
+Lucazine
+None
+Olmenov-20
+Abirasun
+Vorix
+Duvacaine
+Inzocillin-1
+Zeutreme
+Beludan-2
+Sylergy Neo
+Alesyd
+Rinobact P Spray
+Si2norm
+Atrasyl
+Becurium
+Isonoin 10
+Isonoin 20
+Dipiglo 10
+Hadoral
+None
+Daptica 10
+Lefno
+Fludara
+Remifemin
+Trepexed-500
+Stadavas Plus
+Sizodon 2
+Moxinova CV
+Moxinova CV
+Hofovir
+Saphtram
+Lurata 80
+Neopenmax XL
+Infusmart
+Ultraxime
+Neufar 75
+Neufar 150
+Lodipex HCTZ
+Lodipex HCTZ
+Exelzio
+CIXTOR-Z
+Cefromaxil
+Co-Altria Ped
+Amlife
+Amlife
+Amlife
+SINUDEX
+Nibexime
+Sitajack
+Pantocent
+Cozin
+Telcor 80
+Jaxime
+Racetril
+Micolan
+Ceplegen
+Ceplegen
+Poglavit
+Fitmeed
+Asetron
+Mox-S
+Unbranded
+Retacard
+Frixo
+Urxyl
+Boostervit
+Boostervit
+Retapenem
+OxaliGet
+Zitamet Plus
+Mefesus
+Retazol
+Amloseth Plus
+Mistasyl
+Raplexin
+Odasyl
+Paracure
+Ceftrone
+Fungivate
+Fusidek
+Terbifred
+BeneFIX
+BeneFIX
+BeneFIX
+Effi-C
+CGEN Plus D1000
+Menadon
+Ricam
+Omeprasaph
+Cetysl
+Lidophil
+Clindaphil
+None
+Metotrek
+Saphylline
+Saphbiotin
+Allecur D
+Diasutin-100
+Telmisaph-A50
+BeneFIX
+Axadex DNS
+Instadip 100
+Rosero
+Tafnext -Em
+Meforin
+Acce-C
+Angioflux
+Nasadrin
+Co-Altria
+Lowas 10
+Ingesta For Adults
+Prostanil MR
+Alerid
+Nicabloc
+Unbranded
+Unbranded
+None
+None
+None
+Strepcin
+Gortizone-100
+Go-Opt
+Dulcosoft
+Blildaglip 50
+Dompewell
+Fusifred
+None
+Multisaphmin
+None
+Reytanic
+Tacrocord 1
+Accebact
+XTRACEE PLUS D200
+ClotriMAX 1%
+SAPHCEEVIT3-OD
+Flungal
+Rani-D
+Flusaphclox
+Dicloxiri
+Clofezest
+Tazojor
+Trazuper
+Accebact
+Pofol
+Prebasit
+Rocuroniusaph
+Tacrocord 5
+Quetiapro
+Prolaxa
+Oracee
+None
+Acetyphil
+Tacrocord 0.5
+Asmagen
+Neuromard
+Neurobal-75
+Neurobal-150
+Vabysmo
+Finzant
+Bruxacort
+Ventacort
+Farmaxillin 50
+Cool Fresh
+Suldaxi
+Cidrenzin
+Saphcizinc
+Zenon
+Zenon
+Asthakler
+Erceflora
+Incalin
+Incalin
+Irtazep
+Irtazep
+Fresenor
+Napracid
+Napracid
+Instadip 50
+Orixa
+Etozox
+Etozox
+None
+None
+None
+None
+None
+Alunbrig
+Alunbrig
+Alunbrig
+Telmirx 40
+Fluconasaph
+Levosaph-500
+Ceftisaph-500
+Gentasaph-40
+Zonik
+Zonik
+Trantran
+None
+None
+None
+None
+Luprodex
+None
+None
+None
+None
+None
+None
+None
+Doctor J
+Doctor J
+A.N.B. D5W
+Rapamol 125
+Omepron
+Metfor PR 1000.
+None
+None
+Gefticip
+Sitiglow
+Laxico
+Gefitero
+None
+None
+Eoroxime-750
+Betrol
+None
+Dobukon
+Malsar
+Shegrel
+Malapine-10
+Goprime IV
+Carbofree
+None
+Valgancyte
+Gozolide
+Gotazo IV
+Retanix
+Triqox
+Natalgen
+Tazopro
+Tazopro
+NIBEXIME
+Grobinem
+Rexithro LQ
+Omepratel
+Carbo-Health 150
+Zalimed
+Ximebac
+JIAASIL
+Amkohist
+Aenabi
+Dexotab
+Acerblock
+None
+Hesdiomax
+Telcor 40
+Cormed 80
+Maricoxia-90
+Genvazt-20
+Sitaphil Plus
+None
+One-Dextin
+Protriaxone
+Biozef
+Fuziem-B
+Oxaliget
+Clitax
+Rocugen
+Clavugen
+Terracid
+TRUQUEST
+Pharmalogue
+Sitajack
+Mediron
+Retadilol
+Tamzor
+Duxobin
+Ardipin
+Maricoxia-120
+Sitajack-M
+Retazole
+None
+Lupigliptin Plus
+Solu-Medrol
+Moxill 250
+Kodasone
+Lipanox
+Butacod Forte
+Westamol
+Ureleve
+None
+Zincsulsaph
+Unbranded
+None
+CGEN PLUS D200
+KoztaTM Plus
+VitaCinc Forte
+Cefoxsaph
+Accemazole
+Corcee Plus
+Optihist-Pat
+Losan 50
+Mupors
+Inhalin-Neb
+BRTJ Formula Finest Choice Boosted
+None
+Fioramol
+Dimetapp
+Dimetapp DM Cold and Cough Elixir (Colour Free)
+Dimetapp DM Cold and Cough Elixir
+Saphmirate
+Robitussin DX
+Vitz-Ace
+Ryzodeg Flextouch
+Ancoline-500
+Kabitran
+None
+Telmilop
+Telmilop
+Amlog
+Amlog
+Nervica 150
+Oxestal-20
+Brevoneb
+ACF-Plus
+Glutixant
+Enerzair Breezhaler
+Episaphcin-10
+Gemcisaph-1000
+Gemcisaph-200
+Episaphcin-50
+Mucolus
+Mucolus
+Irixarri-100
+Silversaph
+Pyrazisaph-500
+Fungisaph
+Urinasaph-F20
+Barozin
+Frenvo
+Lanoxin
+Defetor 250
+Defetor 125
+Defetor 500
+Febuxostat
+Envira 0.5
+Envira 1
+Kozenis
+Blesanumb
+Lenzest 10
+Lenzest 25
+Vizlix
+Odiol 250
+Salbuxine
+Xuric 40
+Odiol 500
+Luprolex
+Luprolex
+None
+FlanaxPlus
+Luprolex
+Saphyrazin-500
+Maxi-Peel Solution No. 4
+Feblorika 80
+Cetikast
+Abiravitae
+Exflem Plus
+None
+None
+Z-Tron
+Acecef
+Carboget
+Foxi
+Fenibra
+Aemol
+Gorithro IV
+Gofenadine
+Dobufree
+Armida
+Zolexcel
+Tranexfree
+Ketosential
+Axialith
+Stelix
+CLADEX
+Tobracid-DM
+Vitceecor C
+Totalzee
+Neorun
+Efficascent Boost Pain Relief Massage Roll-On
+Omega Pain Killer Liniment Pro
+Ascortain-Z
+Medizole
+Jewel-Zee Pro
+Noston
+Regabin 75
+Prebasit
+Carpenem-1000
+None
+Carpenem-500
+Vancolite 1000
+Vancolite 500
+Fluticasal
+Robitussin EX
+Purekids Ido Lemon
+Purekids Ido Geranium
+Imun Z+
+Rapcodyl
+Dulcogen
+Venoright Forte
+Amlocared
+None
+Farafol
+Ketoxam
+Betaneosaph
+Saphenytoin
+Trexasaph-25
+Ceftisaph-1000
+Cetalore
+Sanxib
+Peritoneal Dialysis Solution with 2.3 % Dextrose
+Zefucare
+Telminorm-80
+Erlocip 100
+Allerzine
+Meoxiclav-DS 312.5
+None
+None
+None
+Antamac
+Calci-Aid
+Ketomirin
+Zam-buk
+Triosaph
+Sitaglipsaph-50
+Sitaglipsaph-100
+Enervon-C Filmcap
+Rhinimax
+Rhinimax
+Saphnisolone-S10
+Rotasiil-Liquid
+Jinarc
+Oxymarc
+Gaspixone-5
+Febuschwartz
+Marlum-C
+Strasimet
+Nebigo
+Raptrasol
+Onsiatab
+APPEXCEF
+Gotridine
+None
+Cefrimed
+Avamax
+Avamax
+Feroxyron
+Vas8
+Hexolfree 300
+None
+None
+Ceftribac
+Tazohil 2.25
+Pucinfree
+None
+Cefzin-S
+Malcetam
+Akticib
+Omerife
+Malapine-5
+Mupicent
+Cozin
+Norephilz
+Vamstat
+Sitiglow
+Drofepen
+Berazoba-4.5
+None
+Kodacin
+None
+Hilcef 200
+Urcia
+Aeoran
+Aitura-Cee
+Ampihil 1.5
+Ampihil 750
+Repicof
+None
+Ketox
+Monterich Plus
+Omeprastar-20
+Vancoblis 500
+Wesclav
+Eriexef
+Kodacin
+None
+Carcenoxar
+Unbranded
+Zerrilose
+Belcetra
+Insuljack N
+Insuljack 30:70
+Zerridone
+Philvasc
+Folironplex
+Telxibloc
+Akticib
+Zelixime
+None
+Glyperide
+Aldax
+Aerokids
+Pubergen
+Gynogen HP
+Endogen HP
+Powervit
+Ceparin
+Finarid
+Pitztar
+Rabegen
+Molev
+Evaban
+Win-Z Plus
+None
+Blodis-40
+Blodis-1000
+Revitazee
+Depo-Queen
+Victus XR
+Urostar
+None
+Apcee Plus
+Ascorgen Plus
+Apcee1000
+Mecligen
+Trimesaph-35
+Gastrifar
+Unbranded
+Unbranded
+Huntergreen
+Unbranded
+M&D
+Rapid-C Plus D200
+Guafensin
+None
+Rapid-C Plus D200 Mono
+Cgen Plus D200 Mono
+Xtracee Plus D200 Mono
+DocCinc Forte
+Biozart Duo 50/5
+Qortisol
+Maxitel
+Mycell
+Amlog Plus
+Amlog Plus
+Robust S
+None
+Philnor
+Unibet
+San Miguel
+Onagra-100
+ZinCee
+None
+Fobrecane
+None
+Co-Alcostar
+Swiss Energy by Dr. Frei
+Levobest
+Atorsam-F
+Quetesam-SR
+Vovenil
+Grelpill
+None
+Kabidarone
+Telmilop
+Irixarri-40
+Kipro-500
+None
+None
+Pregamed 150
+Pregamed-75
+Saphmethasone
+Tobrasaph
+Urixokind-80
+Nudoxa PEG
+Riltared
+Alzor CCB
+Alzor CCB
+Eotax-1000
+Masopine
+Medpara IV
+Moxisaph
+Irnizet 40
+Cefusaph-1500
+Cefotaxsaph
+Medplatin
+Etosaphside
+Asporelix
+None
+Mydopa
+Difflam Gargle
+Sitavia 50
+Sitavia 100
+Thyres 50
+Ampress
+Amiodal
+Vancomarc
+Prazad
+Novaglip
+ImmunACE Plus
+Fosap
+MucoZisteine
+Maxivent
+Pioglinova-15
+Quitide 200
+Quitide 100
+Quitide 300
+Quitide 25
+Saphnisolone-15
+Saphsolone-15
+Tacrohab
+Fulvetrant
+Sitazit 100
+Sitazit 50
+Sitazit 25
+None
+None
+None
+Rosemide
+Fentamar
+Moxatrim
+Solmux Advance
+Dobutafres
+Striaxon
+Vilget
+Labtablock
+Ecmetrix
+Ecmetrix
+Saphdronic
+Azythrex
+Genclobet
+Surinem-1000
+Riltared
+Xylocaine
+Surinem-500
+Karpilred
+Gofuroxime
+Anepro
+Romeron
+EA Fexustan
+Omeyou
+Bupisaph
+P-Pertaz
+Saphtoside
+Tapimycin
+NONE
+Eplidoc
+Tecentriq
+Ursokon
+Ursokon
+Hytrix
+Debion
+Saph-D5
+Bromhexsaph-8
+Doctri-Cee
+Lemard-20
+Febsan 40
+Febsan 80
+Febsan 120
+Guadesyn
+Hydril
+Sitamac 25
+Sitamac 50
+Sitamac 100
+Sitamac M 50/1000
+Sitamac M 50/500
+Norfion
+Riroxaban 10
+Riroxaban 20
+Riroxaban 15
+Gliforge
+Gliforge
+Cavsamir
+AlcoPlus
+Unbranded
+None
+Cristin
+Nathan
+Nathan
+Amiel
+Amiel
+Bodyguard
+Riteguard
+Ferrucan
+Prospan
+Saphmirate-T50
+Nervebest
+Rafromide
+Pregeron
+Axivir
+Inspra
+Carcenoxar
+Carcenoxar
+Trexil
+Genoxiclav
+Ventobrox®
+Unbranded
+None
+Lipanox
+Insunova-R
+Azithrocirc
+Akticib
+Hilcef 400
+Insuljack R
+Soniceph
+K-Tori
+ZERRIOXIME
+Allos
+Tussis-50
+Pyrexia 125
+Utergin
+Pyrexia 250
+Tussis-200
+Gioxone
+Goconium IV
+Paxikem
+Epirub-50
+Berazoba-2.25
+Ergitocin
+Mertazine
+Golendronic
+Progestedin
+Folimer
+Gluconex MR
+Amvic
+Rafor
+Insunova-N
+Rexone
+Sevlafixx
+Rexcitrate
+Tazohil 400
+Triaxcef
+Kozartan
+Mistacor AM
+Mistacor AM
+Wesclav
+Kenzocef
+KENZOCEF
+Hiztatin
+Retasar
+None
+Golevet IV
+Celecocirc
+Nimrof
+Nimrof
+Rafor
+Ketorick
+Ranicid
+Omeprastar-40
+SAKARIN 5000
+None
+Diavel 100
+Diavel 50
+Zincretin 100
+Flumexal
+Temtan-H 40
+Disaphverine
+None
+Sucrosaph
+Tezomin
+None
+None
+Dasamia 140
+Dasamia 80
+Dasamia 100
+Lantus
+Otide 100
+None
+Tigralor
+None
+Thiogamma Turboset
+Mycolate 500
+Prednaz
+Mizzole
+Povi-Klin
+None
+Getwel
+Alcostar
+Polifleks
+Dormizin
+CETIRGEN
+Eferin
+Ronapreve
+Orepine
+Tezomin
+Esomaz
+Chetax-20
+Meduroxic
+Telmisar AM- 80
+Unilac
+Ogivri
+Etrobax 120
+None
+Metocol
+Golmide
+Immunavit-510
+None
+None
+None
+FerroSul
+FerroSul Plus
+Docifer
+Docifer Plus
+Golfer Plus
+Rani-D
+Roywat
+Rosudex
+None
+Roywat
+Phenylac
+Roysal
+Royalenate®
+Royaledent®
+None
+None
+Novasit-M 50/500
+Unbranded
+None
+Olmax-40
+Auromox
+Erecta
+Siagra
+Oflodex
+Caroza 40
+None
+Olandus 5
+HavC
+FLORANE
+Sedacum
+None
+Zeflor
+Trixen-125
+Methyxale-125
+Citisan
+Benefit
+Epoeden
+Cetirivin
+None
+Nauvent
+Zeflor
+Terxime
+Cefporich
+Activesol
+Methyxale - 500
+Aljesik
+Mayor-40
+Telvost
+Infekor
+Reflucon
+Cataclon 150
+Setronad
+Lymont
+Kodipin HCTZ
+Kodipin HCTZ
+Eposid
+Zinfate-OD
+Pyrexia 100
+Korcef
+Epirub-10
+Montesea-10
+Ifosfaget
+Tussis-100
+Viscort
+Avastoph
+LOSTAN
+Couxol
+Clitax
+Tranexam
+Exzamixx
+Sinumine
+Prebacol
+Zitabin-200
+Mistacor AM
+Capetan
+Clopichem
+Welmox
+Cladryl
+Micargen Plus
+VITAZOL
+Ventera
+Zinfate
+Tussis-125
+Rodicit
+Zitabin-1000
+Dipronex
+Inspra
+Flexivate
+Paclihope
+Zncorce
+Immumax
+Maxivent
+Predobut
+Glimetil-1
+Glimetil-2
+Amzur
+Gabarx
+Cholergol
+Saphconazole
+Melomet
+Palvored 75
+Palvored 100
+Palvored 125
+Ursov
+None
+Merrovid
+Ofloxasaph-Ot
+Leveleptic
+Leveleptic
+Torapix 5
+Torapix 2.5
+Bmac
+None
+Bisobloc 5
+Docbeta
+Golbeta
+Torsit 25
+Torsit 50
+Torsit 100
+Melashine
+Melaquin
+Dbrite
+Pure-Dee
+Folarex-C
+Folarex-T
+Diphenpors
+Combiver
+Valvec-100
+Bonazin
+Mecligen Forte
+Biozep Plus
+Stravas 10
+Nausan
+Crovel 150
+Crovel 300
+Maxiphrine
+DYDROGEST
+None
+Maxicor® Plus Tab
+Xtracee Plus® Tab
+CGEN Plus Tab
+Ascorgen® Cap
+Rapid C® Cap
+Immucap®
+None
+None
+None
+None
+None
+Zynasalo
+Omerecid
+Dapzin -M 10 Forte
+Dapzin-M 5 Forte
+Olmax-20
+Dapzin-M 5
+None
+Micozine
+Dapzin-M 10
+Stravas
+Xilpod-200
+Sitatin 50
+Rivazest 20
+None
+Meobloc 100
+Docmet
+Golmet
+Sitatin 100
+Khrizcopan
+Aezec
+Paraxib
+Westar
+Vildalion-M 900
+Vildalion-M 1050
+Vildalion- M 550
+None
+Rivaban
+None
+Kontranex
+Melivit
+Zobone 5
+Lopemid
+Torcand-32
+Xiflox
+Fenoflex
+None
+Saphrivax
+Vinotel
+Meduroxic
+Incobal
+Bradirem
+Bradirem
+Emcisanz-1000
+Ipramide
+Nicafar
+Norizec
+Flazomel
+Bioxal
+Bleomed
+Novafime
+Urinasaph-S
+Zometanic
+Telfocus 40
+None
+Macrotaxel
+None
+Demicef
+Amiprasan
+Etrobax 90
+Etrobax 60
+Gliflomet 500 + 10
+Gliflomet 1000 + 5
+Gliflomet 1000 + 10
+Gliflomet 500 + 5
+Emcisanz-200
+Feblorika-40
+Rybrevant
+None
+None
+None
+Vitasaphd3-2000
+Vitasaphd3-5000
+Saphtifen
+Fastgenic
+Trometa
+None
+Epnone 50
+Cardin
+None
+Efficascent
+Mupinate
+Sydenhex
+Sybromex
+Huntergreen
+Urinasaph-S
+Rifampisaph
+Amprazp
+Povigen
+Raphiodine
+Betasol®
+Odanson-8
+Saphbronco
+Bactrostar
+Vilolo 2.5
+Vilolo-5
+Dialiptin-25
+Dialiptin-100
+Novarox-10
+Dialiptin-50
+None
+Hygienix
+Leon
+Leon
+Novarox-15
+Cov-x Anti-Bac
+Uni Alco Safe
+Restor-F
+Broncho-Vaxom
+Nurtec
+Saphzimet
+Losangio-HT
+None
+Fondux
+Brainolin
+Telmisaph-A90
+None
+LYRIMET
+Latuda
+None
+Ambikacin-250
+Ambikacin-100
+Glyxambi
+Glyxambi
+Tacrohab
+Latuda
+Clintop
+Teicopix
+Teicopix
+Simvasyn
+Khrizstatin 40
+Unbranded
+Chaletin
+Chaletin
+Glisenit
+Plaxomib
+Trinosaph
+Chaletin
+Chaletin
+Ambisopro
+Novarox-20
+Letrosaph
+Xarelto
+Xarelto
+Tranexsaph
+Xarelto
+Vidastat
+Silbecor (Alu Tube)
+Omnicef [for Export Only]
+None
+Esomepracor
+Sapium
+Urixokind-40
+Kabiroc
+None
+None
+None
+Zeutreme
+Musilac
+Copide
+Ambidol
+Lprost
+Parasaph-Inf
+Mucoright
+Zocort
+GMet 1000
+Dulostal-60
+Fazosaph
+Dulostal-30
+Moxiana
+Tobidina
+Vildamed - 50
+Zeptrick
+Cefumed
+Blifoxeme
+Pioglinova - 30
+Pioglinova - 45
+Metformix
+Xiprolife
+Amikacy-50
+None
+Docpirin 80
+None
+None
+HP Mint Rub
+Amikacy-250
+Amikacy-125
+Sirturo
+Flusaph-Forte
+None
+Melite
+GolCinc Forte
+Huntergreen
+Novaglim
+Hygienix
+Prednisaph-20
+Prednisaph-10
+Madrovas-20
+Vaspin
+Vaspin
+Vaspin
+Zikant
+PiroMed
+Nasathix
+Exicof
+Exicof
+Nutribone
+Sanzepir-50
+Alco-Aid
+Alco-Aid
+Bupivasaph-D
+None
+Medformin-500
+Katinko Calming
+Katinko Lavender
+Novamycin
+Lopinov
+None
+None
+None
+Rubifon
+Rubifon
+Chetax-80
+Clindanova
+Etoxia 60
+Etoxia 120
+Gabaknock
+Gentrine
+Vildatec
+One-Dex LR
+Medfocid
+Meditrexed-500
+Meditrexed 100
+Diaxid
+Levexam
+Levexam
+Irbeq 150
+Bendared
+Tamsufar
+Dolac
+Irbeq 300
+None
+None
+Etoxiv-120
+Brexel 20
+Qutero 100
+Fungorig 1%
+Eproz
+Hyclens Skin Cleanser
+Kremezin
+Perigard-4
+Duopedia Kit
+Ramide
+Oxas
+Nicoplex Ob
+None
+MAXI-AID
+Virdac 30
+Virdac 60
+Exelzio
+Dynophrine
+Fuziem
+Carbonish-450
+None
+None
+Aminoral
+Acteinsaph-100
+Cysaphteine-100
+Sorliv
+Novapentin
+Starlev
+Maribezole
+Raingra
+Novafrol
+Bezogen
+Coximed
+Opthomox DX
+Selaglob 800
+Metfn
+Losarx 50
+Losarx 100
+Etozox
+Aripraz 5
+Lapaheal
+Anasoma 1
+None
+Saphrivax - 200
+Ciklox
+Kezole
+Aradol
+Acedrine
+Kerola
+Levetramed - 500
+Levetramed - 1000
+Opthomox
+None
+Novaprost
+CoolStick
+CoolStick
+CoolStick
+Saphramol Inj-150
+Gaba-P300
+Tobrazin
+Aetaz
+Hyertic-500
+Starcox
+None
+Maxobles
+Prevasal
+Ulosar 100
+Telmisar AM
+Enervon Z+
+Lactusaph
+None
+Levosaphzine-5
+Vasten
+Nidaz
+Xyotin
+Clintop
+Povin
+Pioglitasaph-15
+Pioglitasaph-30
+Febufast 120
+Brexel 80
+Rimactazid 150/75
+Palvotron
+Katinko
+Suganon
+Baulivit-B
+None
+Fluicin
+Uro-Leaf
+Muraxal
+Glucasaph
+Parasapheine
+Bicarsaph
+Fluorasaph
+BeroccaR Immuno
+Unbranded
+Vino La Carmina
+Glytrosaph
+Alco-Aid Plus
+Trimetro IV
+Omesenz
+Povigen
+Raphiodine
+Axe Brand Universal Oil
+Erlox
+Eba-ORS Lychee
+Eba-ORS Melon
+Eba-ORS Strawberry
+Genvit
+Vicks VapoRub Xtra Strong
+Bmol 125
+Talan Haplacious Oil
+Bmol 120
+Midamicum
+Multizee
+Whim 120
+R-Nex 120
+Corpilyn
+Alco Lavender
+Alco Lavender
+Alco Lavender
+Alco Lavender
+Alco Lavender
+Alco Ice
+Alco Ice
+Alco Ice
+Alco Ice
+Alco Ice
+Alco Ice
+Alco Lavender
+Cardoxin
+Lossar XQ
+Lossar XQ
+Corpilyn
+Corpilyn
+None
+None
+Enaprimed-5
+None
+Medtaxone
+Anesta
+Sisulda
+None
+None
+None
+Syntomax
+Probiogal
+Neobetasaph
+Cefinox-DT 200
+Farexil
+Lenalid 5
+Lenalid 10
+Medicifime
+Symulox
+Biozart 50
+Biozart 100
+Glixfort
+Fenchride
+Histakon
+Histakon
+Clindasaph
+Histakon
+Zithrox
+Timosaph
+Epirubisaph-100
+Cloxispa-250
+Ceftribax
+Robust-T
+None
+None
+Rebalin 75
+Sitfar
+Sitfar
+Ambikacin-500
+Hyperest
+Hyperest
+FlanaxCool
+FlanaxHot
+Cowamox
+Pol-Moxi
+Sybrava
+Fuzotral
+Blifec
+Firazyr
+Hiteens
+Kiddigrow
+CAPD/DPCA 19 Stay Safe Link
+Blifan
+Gentamite
+Acceketosol
+Lynsta
+Lynsta
+Etoxib 120
+Deoxysaph
+None
+Gastronov-20
+Gastronov-40
+Berocca Energy
+Berocca Energy
+Alco-Aid Plus
+Mycept
+Saphfovit-fe
+Lenalid 5
+Lenalid 10
+Lenalid 15
+Lenalid 25
+Roxab
+Roxab
+Xtracee Plus Chewtab
+Xtracee Plus® Ct
+Kenz Cream
+Brelta 10
+Brelta 20
+Ambrolyte
+Bmol
+Roxab
+Busid
+Bupiron
+Varoxan
+Varoxan
+R-Nex 125
+Whim 125
+Teldipin-40
+Teldipin-80
+Lepinep
+Nortrate
+Pidogrel
+Norpine
+Piptazonob-2.25
+Piptazonob-4.5
+Nicarpure
+Ecoxii-60
+Ampicent-500
+Ampicent-1
+Romep-40
+Gaspizole
+Ampicent-250
+Cobeluxi-457
+Cassaclav-457
+Alclav Kids
+Kodipine
+Telmixed
+Telmisaph-40
+Telmisaph-80
+Saphcodyl-T5
+Fefosaph
+Saphvit-E
+Lorasaph
+Appetite w/Iron
+Arten 150
+Probal 150
+Koramide
+None
+Vitzee
+None
+Dopathyl
+Graxostat
+Neutrasaph
+Aerum
+Saphezine
+Saphtran
+Unidocet-80
+Imbruvica
+Imbruvica
+None
+None
+None
+Thafil 10
+Merobest 1000
+Metforze
+Candiforce-100
+None
+Isonoin 10
+Isonoin 20
+Biozart Plus 25
+Ibandoprim
+Clartrixel
+Momenex
+Inlex
+Metoclosaph
+None
+Modexeye
+Club
+Ristac
+Heri
+Totacef-1000
+Fluixeine
+Torcand-32
+None
+Rexta
+Immunavit
+Saphlipids
+Saphzeed3-Eff
+Rexta
+None
+None
+Feragen Plus Cap
+Ironfer Plus
+Apfolic
+Feromate Plus Tab
+Feromate Plus Cap
+None
+Panto-Plus
+Saphgometrine
+Aldopiem
+Elmox-CV 375
+Bonmab
+Bonmab
+Vestflo-10
+Katinko Peppermint Oil
+Katinko Peppermint Oil
+Katinko Peppermint
+Katinko Peppermint
+Roxavid
+Saphprofol
+Ixobran 10
+Arten 300
+Saphtracin-B
+Vitablod Iron+
+Rani-D
+Mupiriv
+Calbornate
+Calbornate
+Calbornate Plus D
+None
+Rani-D
+Liprol
+Bisophil
+Bisophil
+Bisophil
+Gabarex
+Apixanov-2.5
+Apixanov-5
+Amiget
+Allecur D
+Aplinc-ORS Orange
+Plurex
+Jewel-Zee Plus
+Valaphil
+Atrophil
+None
+Shingrix
+Metfn
+Getanosan 200
+Biozart Plus 12.5
+Dectri
+GMet 500
+Midamarc
+Clobetor
+Ulceracid
+Piptazo 2.25
+Piptazo-Max 4.5
+Optrazol
+None
+Vcoxib 60
+Vcoxib 120
+Drocort
+Citcloniz-250
+Ofiyana
+Rabezo
+Azeeya-500
+Rebalin 150
+Vizimpro
+Vizimpro
+Vizimpro
+Sitadin
+Lumedor
+Timantine
+Neladex
+Revlomer
+Fin-5FU
+Tricentisaph
+Clarisaph-500
+Guthione
+Fin-Dox 50
+Doxokon
+NACLO
+Zemide
+Rexulti
+Rexulti
+Rexulti
+Taglisyd
+Taglisyd
+Peitel
+None
+Sitadin
+Saphlite
+Maxxivit
+Saphetham-200
+Saphetham-400
+Ethambusaph-400
+Ethambusaph-200
+Calcisaphferol
+Apxia
+Apxia
+Rexulti
+None
+Saphtorphan-10
+None
+Mupizee
+Argesic
+Raph-Ors
+Eba-Ors
+Aplinc-Ors
+Neo-Cee Plus
+Rap-Ors
+Gen-Ors
+Gov-Ors
+Medetam
+Civaz
+Chlorklenz
+Claricort
+None
+None
+Fefosaph
+None
+None
+Savers Select
+RemZnc
+None
+None
+Optiquin
+Cetrothix
+Cetlix
+Saphclomide
+Myozyme
+None
+Sogoma 500
+Sogoma 200
+Rasteo
+Corbizee Plus FC
+Evergreen
+Cgen Plus ChewTab
+Cgen Plus Chewable
+Cgen Plus CT
+Rapcvit Plus Teens
+Letrosaph
+Novatasone
+None
+Multivex
+Lemard-10
+None
+Remux
+Amika
+None
+None
+Bsaph-Fe
+Biroko
+Alco 70
+None
+None
+Katinko
+Alco 70
+Vasocool
+Vetrium
+None
+Amzur
+Difluse
+Ampisaph-1000
+Taglisyd
+Orixa
+None
+Salbusaph
+Feverbles
+None
+None
+Glumet-XR
+Spamox
+None
+Instadip 25
+None
+Jardiance
+Jardiance
+Saphmicon
+Masolev
+Citisaph-1000
+Dexproken
+Medifortan-C Plus Zinc
+Clariscan
+None
+Sapflur
+Diphendrasaph
+Metokon
+Imbruvica
+LHix
+None
+AccessZinc
+Saphdecon
+Levosaphzine-Plus
+Katinko
+None
+Vildalion-50
+Vancoza-1
+Vancoza-500
+Cateph
+Moxinova CV
+None
+Cristin
+Saphprotek
+Saphprotek
+Saphprotek
+Ethyl 70
+Glifred MR
+Glifred MR
+Fullprotect
+None
+Glimphage
+none
+none
+Recormon
+Olcuf Plus
+Saphbapentin
+Acetylnova
+Arteon
+Frecetamol
+Farzolid
+none
+Gabaknock
+None
+Fegout
+Gastropem
+None
+Vytocor
+None
+Aminomix Peripheral
+Maxclav 1.2
+Anemles
+Amsulduo
+Saphzeemin
+Citisaph-500
+Citisaph-1000
+Citisaph-500
+Arvezar
+Citisaph
+Bicarbisaph
+Rasagen
+Vancomax
+Vancomax
+None
+Vamocef
+Gempower
+Quadcomb
+None
+None
+Cisplaxil
+Thiaxtan
+Comirnaty Original/Omicron B.A.4-5
+Alcoplus
+Alcoplus
+Hoxit
+Panzo-D
+Colate
+Fincoline
+Sodiko
+None
+Zypezil Od 10
+Atorimax-20
+Baamcillin-1000
+Cefitrax
+Cefinox 400
+Rafair
+Ampress
+Budenase 1
+Budenase 0.25
+Ketorex
+Pranol
+Nurica
+Duasaph-450
+One-Rosu 20
+Cortimep
+Blirelin
+None
+Adocin
+Omega Pain Killer
+Mulkasar
+Mulkasar
+Mulkasar
+Mulkasar
+Fern-C Extra Strength
+Methylin
+Lanzaph
+Selectan
+None
+SM Bonus-PJU
+None
+Calvin Plus
+Colium
+DexmidoGet
+None
+None
+Risaphxaban
+Avonza
+Lanzaph
+Tranez
+Kremil-S
+Momevex
+Muprivex
+Rapcvit Plus CT
+Vildanorm
+Sitimox
+None
+Noldicin
+Neurorite
+Apixastal-2.5
+Apixastal-5
+Pixab
+Zypezil OD 5
+Cilostan Cr
+Gem Pan 200
+Gem Pan 1000
+Clobetor
+Feximwin
+Cefivix-400
+Tartan 40
+Renoxal
+Afactone
+Tartan 80
+Vansafe-CP
+Blesofoxitin
+Fin-Cfu 750
+none
+None
+Ceftatime-SB 1.5
+Acode 200
+Acode 50
+Acode 150
+Febuliv 40
+Eonem 1000
+None
+Feximwin
+Bosecleer
+Bosecleer
+Devert-50
+Devert-100
+Febuliv 80
+Tempmed
+Flusel
+Saphanolol
+Saphanolol
+Faracit
+Rapcvit Plus Chewtab
+Ercoxib 30
+Fluczan
+Dipinew
+Dapavid
+Citistal-500
+None
+Hyper-Moist
+Combizar
+Taxaica-30
+None
+Levosaphzine-5
+Novthasone
+Tiotin
+Castra 1
+Ketorex
+None
+Noremarc 8
+Candigo
+Hemarife
+Alzor
+Alzor
+Dolcet Mini
+Armaxenic
+Comxicla
+Tracrium
+Duomine
+Crystorvas
+Crystorvas
+Cefurogen
+Zypraxime
+Renotrin
+Nimbex
+Livonibe
+Peesaph-G
+Pharzin
+Vorica
+Clotec
+Ritol
+Zoylex
+Clonisaph-Inf
+Pantozisaph
+Hemapix
+Hemapix
+Axadex D5
+None
+Amcardis
+Telmirx Plus
+Telmirx Plus
+Telmirx Plus
+Telmirx Plus
+Amcardis
+Amcardis
+Amcardis
+Fosfalex
+None
+None
+Dutawell
+Roxavid
+Lestor
+Lestor
+Lestor
+Lestor
+Pixab
+Glymax
+Glymax
+Uni Alco Safe 2
+Uni Alco Safe 2
+Uni Alco Safe 2
+Uni Alco Safe 2
+Soravar 200
+Feiba
+Feiba
+None
+Lislin-10
+Lislin-20
+Lislin-5
+Betasaph
+Lidosaph
+Triosaph
+Isosaph-B
+Atorix-20
+Ambiforge
+Toponova
+Thyres 100
+Ceftiros
+Valstat
+MoxCV 625
+None
+Uxenta
+Azamol
+Xytasaph
+Xytasaph
+Ureleve
+Timoptabim
+Bimatop
+None
+None
+Vildaxil
+Imarem
+Afrenda
+Kalemsaph-INF2
+Abradex
+Imarem
+Texakind
+Formet
+Ciprobay
+Diabemin XR
+Zincretin 50
+Vanprozal
+None
+Ceftron
+None
+Limglim
+Dialin
+Joyola
+Fluxzol
+None
+Zita 50
+Zita 100
+Vankar 500
+Cefitome
+CAPTP 500
+Herpival-500
+Vcoxib 90
+Cilosol 100
+None
+Myfep
+Rixan 20
+Gefiset 250
+Bezlid
+Duasaph-450
+Gadovision
+None
+Adobec
+Fucibet
+None
+None
+
+None
+None
+None
+None
+Clarisaph-125
+Klindaver
+None
+Emina-400
+None
+None
+None
+None
+Clarisaph-250
+Norizec
+Norizec
+Losakind-H
+None
+Zopracil
+Saphdocaine-2%
+Jardisure Duo
+Mupisoft
+Ambiforge
+Flechem
+Lymphiomib
+Pantin 40
+Curtizur
+Gadimide
+Cifambic
+Hexamet
+Zonik
+Fedgrel
+Rexolone
+Prostakon
+PZBactam
+Etoroxx
+Etoroxx
+Etoroxx
+Starcox
+Starcox
+Retisol-A
+Zach
+Ibuprowell 200
+Zonik
+Maxcort
+Dermivex
+Pomalid 4
+Pomalid 1
+Pomalid 2
+Pomalid 3
+Gentriaxone
+RAVITAM
+Fusmed
+None
+Kinzee
+Pyresaph
+Blinic
+None
+Gaba 300
+None
+Retorvast
+None
+None
+None
+Iprax-Mol
+Diacof
+Dobutamine Hydrochloride
+Veiasu
+Duostar
+Cinzitab
+Lourclav
+Xenim
+Benzally
+Pregab
+None
+Leucovorin Calcium
+Parafol
+Daneur
+Amlonav
+Grexone
+Gref
+Lipholyn
+None
+Malargo
+Maldoc
+Philsolon
+Byfavo
+Novazolin
+Monspire 4
+Co-Irda
+Cefrime 750
+Gabafast
+Optifrresh Gel
+Glycenil Mr 60
+Anxiep
+None
+Rasec
+Philclav DS
+None
+Glubitor-Od
+Avamys
+Xafariv 20
+Rasec
+None
+Zerocid
+Rispemind
+Maxzole
+P-Pertaz 2.25
+Spotclav DS 312.5
+Spotclav 625
+Glyhart
+Ursosan Forte
+Aiiracan 8
+Acellbia
+Angisartan
+Toramig 25
+Toramig 50
+Cetrotide
+Finofen
+Zytact
+Panfor Pr-500
+Fresetran
+None
+Tsartan Plus
+Tsartan Plus
+Mno-Each
+Acellbia
+Toramig 100
+Aiiracan 16
+Esmazo;
+Fluzel
+Terizole
+None
+Vesizen 5
+Budesma
+Amantin
+Sertragen
+Ciclodin IV
+VenoCare 1000
+Vipketo
+Apixa
+Apixa 5
+Sinresor
+Citcole
+None
+Anticiem
+Zentek
+Medzidime
+Saphlodine 100/10
+Saphetam-400
+Zentek
+Mecovit
+Saphcisin-100
+None
+Kairoxib
+Sartollen 100
+Sartollen 50
+Oxtolev
+None
+None
+Vildamet
+Lanoxin
+Latuda
+Accepime
+Deccetrol
+Zynasalo
+Zynasalo
+VeNoX
+CalmeDril
+Calm-Pro
+None
+Chlorsapheine
+Lynorm
+Novazol-40
+CalZc
+Irbenov-150
+Unogaba 400
+Forsanec 120
+Sugamstar
+Nervica 25
+Nervica 75
+PRIMECTIN 1%
+Medicef
+Solensia
+Hipraspray
+Hepaxivit
+Forcyl
+Zydactin 50
+Konabi
+Alkacent
+Delexofol
+Profol-S
+Orixa
+Enoxar
+Metirizine
+Esphrine
+Vexamine
+Amoclav
+Vexamine
+Qvex
+Lactucare
+Vexlin
+Roxxin-500
+Fungyst
+None
+Apretude
+Apretude
+Momeclir
+Onafix
+Zeiskon
+Zoldap
+None
+Alcoshield
+None
+Surpitam-1.5
+Surpitam-750
+Rapcenate
+Rapcenate
+Rapcenate Plus D
+Mucunxt
+Medtazime
+Allecur Plus
+Levetrex
+Levetrex
+Myeloc
+Contrahex
+Contrahex
+Candigo
+Brufungin 50
+Tsartan Plus
+None
+Olmesar-Am 5/20
+Olmesar-Am 5/40
+Armadart
+Meronash 1000
+Lagundex Forte
+None
+None
+Co-Amoxisaph 375
+Dexofen
+Formigen 500
+Formigen 1000
+Formigen 850
+Ziaton
+Etromin 500
+Etromin 850
+Etromin 1000
+Efficascent Oil – Extra Strength
+Efficascent Oil
+Efficascent Relaxscent Oil
+Akrifine
+Chlorgen
+Rapichlor
+Sapheron
+Porfever
+Glycoc
+Ziaton
+None
+Hirafen
+Thyrofix
+Azilin
+Tazofour
+Pantomacid
+Novazol-20
+Jadelle
+Porbact-1.5
+Porbact-750
+Methdosaph
+Ibracor
+Forzinorm
+Accenicol
+Aripraz 10
+Gaba 100
+Monterex-L
+Unbranded
+Amlonav Plus
+Gisart Plus
+None
+Angioflo Plus
+None
+Euliv
+EULIV
+Nefryl
+Ketonav
+Ketopsiv
+Diamopsiv
+Giclaz
+Mupicare
+SITICEF
+SITIAXONE
+Baxolyn
+Fixcef
+Fixcef
+SITI-voux
+SITI-OMEP
+SITI-ZIDE
+Effezolin
+Effezolin
+Flugard 500
+None
+Medirea
+None
+Akrizine
+Yorabic-C
+Laxavis
+Gastrodol-H
+Ascortain Plus
+None
+None
+None
+None
+Pureform 70 % Ethyl Alcohol
+Pureform
+Carblax Advanz
+Golafil
+Triagin
+Penatone
+None
+None
+Bisobloc 10
+Docbeta
+Golbeta
+Zilden
+Pararex-500
+None
+Saphtazone-1500
+Saphtazone-1500
+Furimax-1500 Plus
+Furimax-1500
+Ceftazimed-1
+Ceftazimed-1 Plus
+NoFlu Plus
+None
+Cetaphen Plus
+Protus
+None
+Accediazine
+TMZ-MR
+None
+None
+None
+None
+None
+ValSolv
+Profemme
+Maxitel
+Migratan
+Hapedrol
+Rosva 10
+Rosva 20
+Rotarix
+Sitag-M 1000
+Angimed
+Montelev
+Doxofyr
+Celdol 200
+None
+Rosva 40
+Sitaplus
+Sitaplus
+Telsartin 40
+Tacrosin 0.03
+Tacrosin 0.1
+Telmipin
+Telsartin 80
+Telmipin
+Breztri Aerosphere
+Qerd
+QLIN
+Rabeloc IV
+OP-Reduclot
+Colistat
+None
+None
+Zolevi
+Jazfix
+C-Fixon
+Arten Plus
+Zolevi
+None
+None
+Clintam
+Kodastyn
+Lixiana
+Lixiana
+Lixiana
+Hyosaph
+Gin-Z
+Mucopro
+Hyoswell
+Allerchem
+Mefechem
+Multichem
+Mpred
+None
+Dusorac
+Malene
+Victus XR
+Calciubone Vita 3
+None
+Sulfakrem
+None
+Khriztacid
+Casino - Femme With Dual Moisturizer
+Calnovit
+Glevate
+Vigen-E
+Zefriti 750
+Hivar
+D-Rize
+None
+None
+Diltimax
+Rizine
+Hemorfen
+Kycitrate
+Irzid
+Vita-E Plus
+Lyra E Plus
+Aminica
+Fosfostal
+Vortestar 3.5
+Stabigran 75
+Stabigran 110
+Stabigran 150
+Amikate
+Ertaject
+Ampistar 500
+None
+Parastar IV
+C-Bactum
+None
+Propolyf
+None
+Aminoket
+Golamin
+Docket
+None
+None
+Profoly
+Kingson
+Trapeel
+Bronchodox
+Cisaphtin
+Xtracee Plus D1000
+Caspin
+None
+Progyl Ds
+None
+None
+Zydrix
+Ferrogen Plus
+Feruz Plus
+Folimate Plus Cap
+Folimate Plus Tab
+Allecur D
+None
+Maxcee Plus
+Methylpredsaph
+Methylpredsaph
+Hero-C+
+Rocklatan
+True-Cee Premium
+Klin-C
+ewel-Zee Plus
+Macfibrate 145
+Irzid
+Amopenil
+Cefthix
+None
+Conzace
+Eovite Cdz
+Obramicin
+Inflamgen Tab
+Mefetab
+Infamix®R Tab
+Iopamedix
+Iopamedix
+None
+Cardiol 100
+Docaten
+Golol
+None
+Telmizart
+Bezir
+None
+Iopamedix
+None
+Iopamedix
+TeliDril 80 Pro
+None
+TeliGen-80 Pro.
+TeliSolv Pro
+Omapone Peri
+Omapone Central
+None
+TeliDril 40 Pro
+TeliGen-40 Pro
+Besylon Plus
+TeliSolv Pro
+Porsrose
+Ketoropors
+Tecum 0.03%
+Tecum 0.1%
+Ledihep
+Mucostop
+Bylo CZ
+Fegout
+Chlorsaph
+Azeesaph
+Forti-D 1000
+Alcoplus
+Bepsar-100
+Cpac
+Cefsenz
+Bactricef
+Philcort-4
+Philcort-16
+Cefazomax-1
+Essenscents
+Blifetaz
+Unbranded
+Geloxib-200
+Flusaph
+Flusaph
+Curel
+Startrex 500
+Morpizol
+Saphelormine
+Saphelormine
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Zeleflam 200
+Klarithro
+Klarithro
+Cloxamed 500
+Tamdome
+Ventact
+Gemlife-200
+Epidrex
+Xagulant 5
+Xagulant 2.5
+None
+None
+None
+Khrizvix
+Clintam
+Bayopet Herbal Hair (Aloe Vera with Balsam Scent)
+Sykloget
+Qprofol
+Vaxiprin
+Sykloget
+Sitagard-M
+Sitagard-M
+None
+Rosunis
+Unbranded
+Trimelife
+Retazidine
+Triascef
+Immuni-3
+Hypharin
+Meropdica
+Loswind
+Tazodec
+Loravent
+Renowind
+Ascorbic Acid + Zinc
+Peter Cee
+Zenroniq
+Leptam
+Coamoximed
+Coamoxivet
+Etoricass-120
+Broncovent Plus
+Broncort
+Uket
+Uket
+None
+Hydrodav
+None
+MY C
+ESSENCEE
+Cefaden
+Mitoban-30
+Folitrex 50
+Folitrex 1
+Montrizin
+Doburifem
+Ronzillin 1g
+Vactrimed 750
+Vactrimed 1.5g
+Tgmox
+Goperamide
+Riscare ODT
+Amflukonz
+Cefriwind
+Tricexone
+Sitaform 1/50
+Finpros
+Emtaq 300
+Chlonbitech
+Clodroxine
+Canexil
+Ursostar 250
+Zocef Kids
+Trialoc
+Amplify 80/10
+Telmal
+Amplify 40/10
+Telmal
+Amplify 40/5
+Telmal
+Goperide
+None
+None
+Mupin
+Flaximed
+Telmefixx Plus
+Sitastar-100
+Sitastar-50
+Omexac-40
+None
+Ursoden
+Ursoden
+Hydrocent
+Sitajack-M
+Coxido 120
+None
+Coxido 90
+None
+Tamsukem
+None
+Alerix
+Gicefix
+Unbranded
+Ursostar 300
+None
+None
+SugamaGet 200
+SugamaGet 500
+None
+Bactestop
+Xozid
+Tricexone
+Nikkoxone
+Cefont
+Protriaxone
+Fored
+None
+Omepsol
+Metocirc
+TGMOX
+Xelares
+Amoxstan
+None
+Redvit-C
+Nikem
+TG-Dypenmax
+Cefolic
+Enerkids
+None
+CLOTIN
+BPbest
+Neoclopid
+Salbucam
+Cobiokids
+Obax-20
+Cefuwest
+Corticare 250
+None
+Ziltem IM
+None
+None
+Axebac
+None
+Linmervast-20
+Maedix TF
+Koditorz
+Lergic
+LERIF
+Ceftriacirc
+Ceforan-200
+None
+Unbranded
+Bendexime
+Omee
+Superoxime
+Senzol
+Jumep
+Nicozole
+Ziben
+Dibex
+Dibex
+Ziben
+None
+Neurosev Plus
+Nostigmine
+Gostigmine
+Neosev
+Neosev
+Neurovitalix
+NEURO-V
+Ceflin
+Emdipraz
+Vancophar
+Ceftriace
+TGCEF
+CEFUQUEST 250
+Dynacurium
+Kalevfer
+Gogesic
+Pro-B 1000
+Predfirst
+Trixen-100
+Trixen-250
+Trixen-125
+Spalax
+Sqfen
+Optipar
+Eastidine
+Cefatex
+Salbustan
+DoxoHealth 10
+None
+Lifetan
+Vermazepine
+Cleargut
+Clopicard
+Maxituss
+Rifelac
+None
+Q Taxone
+Sevomed
+Amoxden
+None
+Unihepa
+Humin
+Retavent
+Retazar Plus
+Hyzef
+Ciproted
+Xokem
+Azithrocass
+Retaprez
+Levixam
+None
+Retavent
+Levixam
+RocuGet
+Retavent Plus
+Carbacent
+Rifexostat
+Emero 500
+Switles
+Triasop
+Cefiden
+Telarb CCB
+Telarb CCB
+Telmix 45
+None
+Bleonov
+None
+Premio
+Unbranded
+None
+Glypride
+Glypride
+None
+Koolex patch
+None
+Taxwell-RTU
+Searosu
+Glypostad
+Glypostad
+Folivit
+Ambroppex
+Euroferron Forte
+Squastatin
+None
+Lifevitz
+Cefopsiv
+Metromet
+Goxetrol
+Tobrago
+Altoxime
+Goztan-50
+Seaclox
+Clopitor
+Reticoline
+Mucostan
+DSINFEX
+Lifedex
+Meronem
+Meronem
+Febuxorin
+Evenity
+Laennec
+Telmirx-HCTZ
+Telmirx-HCTZ
+Dopetron
+Telmirx-HCTZ
+Casino - Active
+None
+Mupiwell
+None
+Saicorvic
+Ultraxime
+Uetamol-IV
+Rabesky-20
+Odomzo
+Claxon
+Axalav
+Pelisafe
+Cloxane
+Mikso
+Katinko Sports
+Mupiderm
+Mikosa
+Mupican
+Nystor
+None
+Dimere
+Febuxeb 40
+Febuxeb 80
+Ibertan
+Airlevo
+Bezir
+Furmid
+Phusilan
+Sapaspan
+None
+None
+Mabiclav
+MaxGrow
+None
+Trexed
+Usonav
+None
+Fluzep
+Kinhexol
+None
+Vitamoon-B
+Reliefas
+Exalac
+Corbate-Z
+Zithrolab
+None
+Atorvex-20
+Cefiden
+Telarb CCB
+Telarb CCB
+None
+Nervagest Plus
+Emtaq 100
+Vistromycin
+Articure 50
+None
+Zocef
+Cefubest
+Rosuppex
+Trexed
+Kinmeprazole
+Broncho Rub-Citrus
+Uni Alco Safe
+Uni Alco Safe
+Uni Alco Safe
+San Miguel
+Biogenic
+Biogenic
+Biogenic
+Elevit® Pregnancy
+None
+None
+Golzidine
+Doczidine
+Vildaxil-Plus
+Zudicort
+Nexatine
+Cladex
+Gundisaph-S600
+Gundisaph-S600
+Gundisaph-S600
+Trench
+Gundisaph-S600
+Salonpas Jet Spray
+D'Fense
+D'Fense
+Meterol
+Canephron Uno
+Feragen Plus Tab
+Apospagin-10000
+Apospagin-5000
+Glucor MR 60
+Venoright
+Parfein
+Clorsium
+Citrine
+Trepexed-100
+None
+None
+Rosunav
+None
+None
+OP-Telmis
+OP-Regenerv
+Xiglip M
+OP-Sita Duo
+OP-Ator
+Fosfamer
+Rinosever
+Verlaserv
+Sevelaget
+Ondenget
+Mexime
+Cedix
+Z-Fix 400
+Cephacef
+Unofix-400
+Cefdomed
+Cefucirc
+Epibloc
+Alcoplus
+Novacetyl-600
+Artiblemose
+Tempra Blizz
+San Miguel
+Neucoline
+None
+Moxxil
+Armal
+Prevatac 90
+REI
+Pneumops 23
+Pneumocon 13
+Pneumocon-13
+Usanfex 500
+Paxiban
+Paxiban
+Nebiphil-5
+Nebiphil-2.5
+Aztrem
+Captivo 25
+Perfect Defense
+Vancosky
+Painex Extra
+Painex Plus
+Axiban
+Ticlot
+None
+Glythix MR
+None
+Glythix MR
+Virofred
+Hydralex
+Apixar
+Bacrelba
+Bacrelba
+Madovin
+Ranigerd
+None
+None
+Tranexsaph
+Susaphtam-400
+Ibrance
+Ibrance
+Ibrance
+Akrizol
+Venotion
+None
+Terboxor
+None
+Histafen
+Histafen
+Axasoar 5
+Axasoar 2.5
+Rivazest 10
+Saphtriaxone-SB
+Ermoloc
+Misarven 80
+None
+None
+Saphprotek
+Anthra-50
+Nasehaler
+None
+Ureazy
+Girsofalk
+Kelcitra
+Gitrate
+Kcef
+None
+None
+Pantokem
+Spirenze
+Aldax
+Spirenze
+Tramacirc
+Akidol
+Ubile 250
+Ursover 250
+Ubile 500
+Ursover 500
+Mybloc-5
+Zelpred-K
+None
+Etorigen
+Dipsotrex B
+Cefuromax
+TGCef IV
+TGXone
+Trimaxone
+Zeftrimax
+Enbrel
+Enbrel
+Pamlodipine
+Kodisar
+Leesartan
+Lizod
+Rexsonide
+Beuden
+Levohab
+Firialta
+Firialta
+UNIPIM
+Clozac-125
+Coptamed
+Teracyn
+Retasidic
+Gokast-10
+Gokast-4
+Temsta
+Surphen
+Prevena
+Dynamic D3
+Caliberi
+Caliberi
+Morfenexx 1000
+Merprofez 1000
+Bronast
+Cresemba
+Centrapime
+Bactisul
+Celenav
+Glucusuria
+Cefucore
+Gostin-20
+Metoden
+Atorvex-10
+Retalac
+Emero 1000
+Fixigen
+None
+Predisyr
+Telmal
+Raniden
+Goclav-250
+Ciproden
+Q-Cetyl
+Cefexil
+Valipta
+Temsta
+Temsta
+Temsta
+Hydroden
+Levostrat
+Czure
+Tamsunav
+Herblock
+Anodyne
+Xetocin
+Eurozyllin 1000
+Eurozyllin 500
+Artrice 100
+Artrice 50
+Hemoden
+None
+Clonisea
+None
+Unbranded
+Telchor
+Unbranded
+Aziqo
+Rezef
+CEFTRIKIDS
+Laxipate
+Natricef
+Sefhix
+Zeronem
+Kenzoplegm
+Canexil
+Zeronem 500
+PredCare
+Cefumac
+Consilose
+Lactera
+None
+Ureitaz
+None
+Olavex 10
+Syguadex
+Oxycore
+Cardiolek-320
+Hyovin
+Hyosur
+Losastal-A 110
+Losastal-A 105
+Fungigen
+Biogenic
+Solmux Throat
+Swifteze
+Symptoblo
+Biogenic
+Keprofyn
+Orphemol
+Cirozit
+Abizol Easytab
+Rozlytrek
+Rozlytrek
+none
+Onconib
+Ketolex
+Cefiglob-400
+Mupistar
+Pacliget
+Zologet
+Merobest 500
+Eprotex
+Clozac-250
+Eczigone
+Retaxone
+Vilantra
+Vancokin
+Kodizide
+Cloduz
+Eurotrix
+None
+None
+Gentakast 10
+Gentakast-4
+Telmiget Duo
+Roflexyn
+Glucosur
+Goclav-625
+Clavutec
+Leukast Plus
+None
+Nitroxel
+Dexamet
+Gostin-10
+None
+None
+Carbowind 450
+Pillarlife
+Coxibral
+Dobucy
+Zelpis-100
+Q Xef
+None
+Emdirix
+Atenugen
+Ketorolem
+Amplify 80/5
+Zuri-250
+Analou
+Goclav-125
+Ciprovue
+Telmiget Duo
+Telmiget Duo
+None
+Noriter
+Hydroclear
+Goglitazone-15
+Azentin
+Sitakem-M
+None
+Kemtinib
+Moxflakem
+Goglitazone 30
+None
+None
+Cardea
+Aguamox
+Moxidex
+Lanzaar 50
+Leustar
+None
+Vildus
+None
+Tamulsin Plus
+Unbranded
+Lenoflox
+FerroFolate Plus
+None
+Hydralin
+Provana
+Curecee Plus
+Hydralin
+None
+Clavstan
+None
+None
+Accurecin
+TodexCare
+None
+Salbucass
+None
+Zertrabyn
+None
+Guiasol Plus
+Reliefas
+Unbranded
+Tamzor
+Maxifer
+Danaset
+None
+Prazlax
+Xyphix
+Cefixsave
+Clarisave
+DompeSave
+None
+None
+Zukastop
+Bonicent
+Xefu
+Neo-Fron
+None
+Ecoxia-90
+Urdoxy
+None
+Hyavane
+Voleca
+Gastriv
+None
+Triflexa
+Telbip 40
+Sitaguard 50
+Propocy
+Telmart Duo
+Folibon
+CEFDIME
+Oxytocy
+QRACET
+Retazet
+Clinamet
+Medzyme
+Zymocort
+Veropres
+Carbowind 150
+Orem-P
+Easylooz
+Kalista
+Kalista OD
+PHYTOVUE
+Liviton-G
+Budenic
+Retazet
+Cistovent
+None
+Calazolv
+MD-Uretic
+Tevilyst 80
+Invaflozin 5
+Narcofol with MCT -LCT
+Aristor 10
+Aristor 15
+Aristor 30
+None
+Imjudo
+Imjudo
+Diakon MR
+Nervas
+Nervas
+Norfine
+Folidaze
+Minerals
+Blueprazole
+Fevergo
+MD-Zetamol
+Marzyn 600
+Klindarone
+Zeptriavee
+Lourceft
+Bluecorecef
+Ronzillin 500
+Lourxime
+Vomistop
+Vertrol 24
+Nicardivin
+Bronchonide
+Broncort
+PrazoCare
+Gemzole Plus
+Macproto
+Acifre
+Retapraz
+Goline IV
+Hemocare
+Fluimucil
+Telatraz
+Telatraz
+Tempra Blizz
+Clasyner
+Aeromycin - 500
+Foliget
+Aristor 5
+AmoClav®
+Levocof
+Maxilac
+Irbekon
+Glycinorm-MR 60
+Azor-500
+Gentix Eye
+Domic
+Axenate
+Diclobet
+Angel'S Flo
+Irose
+None
+Almoranz
+Klenhex
+Conagen
+Olmespec 40
+Olmespec 20
+Pro-Defense
+None
+Aguasod
+Eyesod
+Hylasod
+Exicof (Raspberry Flavor)
+Mupros
+Mirovit
+Clobon DS
+Ocrevus
+Ocrevus
+Remsima
+Incillin Plus 1500
+Khrizdipine 10
+None
+Excarb 200
+Excarb 400
+Excarb 600
+Excarb 800
+Diclegis
+Ronibon
+Adapine S.R.F.C.
+Enaprimed-10
+None
+Berrinerve
+Siquapine XR
+Acuzolid
+Moreso-40
+Alzhemed 20
+Azimentia
+Azimentia
+Invaflozin 10
+H & H Therament
+Nervas
+LONID 75
+Pemtrex
+Meurox
+None
+None
+Si2norm
+Feroxim
+Trexin
+Decita
+Shamcef-1500
+Shamcef-750
+None
+Orawell
+Cabxel
+Saphnoxin
+Fin-Cedo 80
+Fin-Cef 1
+Rozusan-10
+Rozusan-20
+Kirsty
+Kirsty
+S-1 20
+Porazole
+Cloxamed 1000
+None
+Haizure
+S-1 25
+None
+Rimstar 4
+Ferosea
+Sydenhex
+Rezyd
+Oritaxim-F
+Neozep Forte 325
+Optimus-Pro
+Grazine
+Gemcifar
+Sybromex
+Gemcifar
+Zncxide
+Oxznc
+Rapznc
+Platixon
+MinV-Rich
+Platixon
+Hav C Plus
+Saphcee
+Diagluzide Mr
+Fosfomed
+Vorigen
+None
+Spagem
+Prexia
+Rixan 15
+Spagem
+Diurmed
+BD Alcohol Swab
+Polyject-B
+AlaxanR Xtra (for BNC)
+Rategen
+None
+Zefcefox
+Zefcefox
+Berocca Energy
+Berocca Energy
+Berocca Energy
+Fulvetop
+Venotion
+Clavixo
+Neuronov
+Pro-Defense
+Cool Fresh
+Prexvid 100
+Betasol
+Power B12
+Apcevit®
+Rinoease
+Romycin
+Ferusgen
+Nasaph-Cl
+Bicarbolen
+Nasaph-Cl
+Biosaph-Plus
+Kleenlac
+Optanate
+Nebstyle 5
+Thixanase
+Renalog Ds
+Arabitro
+Lignosaph-Plus
+Clazine
+Vigliptic-50
+Reagila
+Raxami
+Reagila
+Reagila
+Reagila
+Pure-Cee' ZD
+Feona FZ
+Goab 5
+Bezartan
+Botitox Up
+Doneprizil
+Xaroban
+None
+Vesizen 10
+Superscent Relaxing Oil Classic Menthol
+None
+Alcoshield Ethyl Alcohol 70% Solution (Armour Boost)
+Rovastatin 40
+Acce-Mycin
+Iromax
+Cholevit
+Ibusoft
+Histar-Dx
+Cilostal-100
+Saphceetrate
+Azeesaph
+Appesaph-Plus
+Dabicet
+Dabicet
+D-Rize
+Roschlotin
+Dypisul 750
+Dypisul 1.5
+None
+Mirtazapine
+Solifina
+Solifina
+Klinzur
+Goab 10
+Doc E Plus
+Gemlife
+Azostal
+Nacetyl 600 Strawberry
+Ampistar
+Nacetyl 600 Choco
+Norizec Plus
+Ketoxol
+Ampistar S
+Arexvy
+Hemaway
+Ceezinc
+Comfora
+Metadem
+Combimist
+Eurosalbu Plus
+Omegerd
+Erycar
+Reducel
+Mtrex
+COSMO CEE FORTE
+Anagrapem
+Butexol
+Vancoblis 1000
+Maxkid
+Comoxbet
+Comoxbet
+Comoxbet
+Gentameed
+Progestedin
+Colav-457
+Nitroxel
+Pulmodual
+Antica
+VisioCare
+Gocox 200
+Aceformin
+Zelpis OD
+Sepalon
+Bristat 40
+Ampibet
+Ampibet
+Sitaguard 100
+None
+Hydrocortef
+Sitakem-M
+Aeprazole
+None
+Unbranded
+Eurozyllin 250
+Colav-250
+Belvadox
+Moxiflam
+Gotyl 200
+None
+Feruvin
+Bliron
+Foxilev
+Comoxbet
+Combidar
+None
+Tobdex Free
+Aguadexa
+Clindex-600
+None
+Amgathran-150
+Amgathran-75
+Dabbtrann-75
+Citrapos XR
+Zetavue
+Fernyx Plus
+Tropican
+Akticib
+None
+Azithrosave
+Provizar Plus
+Zomithel
+Akticib
+Clarisave
+Nystcare
+None
+Sudomas
+Forherdin
+Zolevi
+Zoliqo
+Redox-C
+Tuceedcap
+Nephrotor
+Kidipan-200
+Lorakalm Kids
+Kidipan OD
+Amixlo
+Kinhexol
+None
+Kidipan-100
+Rosubet-40
+Kidiron 125
+Kidiron 100
+Kidiron 250
+None
+Telmart Duo
+Fasrel
+Aperus F
+Rapirus
+Biosaphen
+Cilestine
+Hemoflaz
+Strobon
+Sevosaphrane
+Klozivex
+Ipramed
+Vitgen Plus
+Zetriz
+Acuhes 130
+Biosaphen-Z
+None
+Mycoglob
+Metosky
+None
+Iconagel
+Ampistar 250
+Lanspro-10
+None
+Ceftravin
+None
+Azentrate
+Dhafag-Ten
+Omeptam
+Broncovent Plus
+Atracare-Star
+Ventam
+Isufer
+None
+Appixvan
+None
+Dabbtrann-150
+Dabbtrann-110
+Amgathran-110
+Fhosmyxx
+Aztrate XR Plus
+Aemol-1g
+Paraflow
+Appebiron
+None
+Levexime-500
+Ventosolv
+Gominasol
+Akticib
+Carbozaritine
+None
+Timol-P
+Cefurex 125
+Protek-GFR
+S-Ket
+Moxeth-D
+Ecoxia-120
+Neosporex
+Inserdin
+Newsartan
+Broncovent
+Ambroxed-30
+Alogil
+Ketophil
+Ambroxed-15
+Ambroxed-D
+Carbocyl-250
+Cetired
+Acetamol-125
+Acetamol-D
+Acetamol-250
+Carbocyl-100
+CETIRED-5MG
+None
+IMUNCARE
+Vanclaz-1000
+Hertumab
+Angisan MR
+Apocartin-450
+Apocartin-150
+Norphrine 2
+Norphrine 1
+Opadinex
+None
+None
+None
+Hema-K
+Garda
+Garda
+Robust-T
+None
+DocFil
+None
+None
+Lactamox
+None
+Nacsol
+Peesaph-G
+Coughsaph-1
+Nutiplete
+Difflam Lemon
+Pyromed
+Pyromed
+Sydend3 Pluz
+Amlopril
+Amlopril
+Moxidrop
+Amlopril
+Dexago
+Ebavit
+Ebaminvit
+Relzin
+None
+Rolfutor 500
+Ondero
+Rovastin
+None
+Novazol
+None
+None
+None
+Pinarox
+Pinarox
+Pinarox
+Pinarox
+Acucip
+Xinalat
+Chlorbact 1gm
+Hantox
+None
+Enhertu
+Twinact
+Aefur
+Allerway
+Betalex
+MST CONTINUS
+Tamduet
+Xavi
+None
+Erlonov
+Hyopan Plus
+Katinko (Ginger & Patchouli Scent)
+4Fever Plus
+Tempmed Plus
+Bicarnate
+Bicarnate
+Saphlozin
+Paraflex
+Himeral
+FuciskinTM
+Efervit
+Orezinc
+Glutarite
+Levosaphzine
+None
+Eba-Z
+Thyrofix
+Thyrofix
+Voricoz
+None
+Ibuglob-400
+ARB
+None
+Atenurix
+Atenurix
+Jaczole
+Rifeclav
+None
+None
+None
+ClopidoMed
+Tomexia
+Tri-O-Vit
+Puriecaine
+Alco 70
+Alco 70
+Alco 70
+Myglip Plus 2.5/500
+Myglip Plus 2.5/850
+Myglip Plus 2.5/1000
+Vitamace
+Rosuu
+Rosuu
+Rosuu
+Cartrexed
+Nycovan
+Gastrosaph
+Acumet
+Zolemed
+Zolemed-WFI
+Trastumed
+Herthix
+Desrem
+Herthix
+Cefitome
+None
+None
+Ibuwell
+Ketofred
+Ketazflox
+Ketma
+Pluscare
+Butaprev
+none
+0.9% Sodchlorsaph
+Rasator 1
+Clotranex
+Doxatin
+Dalinc
+Trastumed
+Diltimax
+Diltimax
+Isolyte
+None
+Visoline
+Centranor
+None
+Neypac
+Porsprazole
+Fern-C Plus
+Dimetapp Colour Free Elixir
+Calquence
+DILFUR
+Tazomeed
+Pipercent
+Bacracil
+Piptazonav 2.25
+Piptazonav 4.5
+Bactoclav
+Augmin-625
+Omepranav
+Gentavest
+Bactidol Heavy Phlegm Relief
+Megapime Hospi
+Combizine
+Irbezyd 300
+Yulareb
+Unbranded
+Evercare
+Selvenorm
+Bersevel
+Contylan Advance
+Easekin
+Bilwin 20
+Xomet
+None
+Sevollen
+Ofloxasaph-INF
+Glenraz 5
+Glenraz 10
+Glenraz 40
+Nexito 10
+Nexito 20
+Nasathix
+Eurominvit
+Iztaid
+Iztaid
+Optiwell
+Synucil
+Lipidbloc
+Fulveskal
+Omega Pain Killer
+Med+Guard
+Accetodex
+None
+Katinko Alco
+Angel'S Flo
+Angel'S Flo
+Levtrazem
+Ketafree
+Skin Reborn
+Skin Reborn
+Med+Guard
+Vzonale
+Ripesaph-4
+Duasaph-300
+Fin- Oxali 50
+Merpenem
+Merpenem
+Clintop
+None
+Sulbrim
+None
+Cosvit-C Plus
+Hospin
+Cintroban
+None
+None
+Sedafol
+Sitibast-40
+Sitibast-80
+Avant Guard
+Jeev
+Diovex
+None
+Calzur Chews
+None
+Sinutab Cold Plus
+Sinutab Cold
+Aquatabs Flo
+Neoform 500
+Merprofez 500
+Morfenexx 500
+Rozuor
+Acyden
+Gosteine
+Acyden
+Guico-C
+CEFTAZIDEN
+Goxone
+Gosteine
+Clindacure
+Godacyn C
+Furoden
+Efcortin
+Merotech
+Merocy
+Norepiden
+PARACY
+GOCET
+Paracoxcy
+Cefzime
+Cefutech 500
+Heprabica-5000
+Hepamedica
+Unbranded
+Hepravasc-5000
+Epolitt
+Ematep
+Eprohab
+Eprosenz
+Epotine
+Aepotin
+None
+Bronchofen
+Hydenex
+Stivarga
+Arizt
+Trimedial
+Trimevita
+Nuparin
+Cabcef
+Young-C OD
+Biodol Plus
+Lupigliptin Plus
+None
+Gomisart-40
+Speczime
+Suprazon
+None
+None
+Asmacaire
+Kenavactam
+Cefutam
+Zolechem
+Gencetam IV
+Tamixone
+None
+Predzone
+None
+Appcystein
+K-Citriz
+Merit
+Sabigrel
+Milogrel
+Amixlo
+Traxulev
+Kodabact
+Iso-floe
+Capebin
+Lorakalm
+Leptoxy
+Gentakast 5
+None
+None
+Ofla-Drops
+Oflaz
+Gopres 10
+Parabam
+Acetatree
+Folenda
+Bamvit-C
+Ascorbtree
+Santecef
+Eruna
+Ascorbtree +
+Trexiglob
+Kligflow
+None
+Duodair
+None
+Oxzaritine
+Sitaguard-M
+Asyclav
+Rosutech
+Rosutech
+Gorovast-10
+Oxytech
+Biolytic
+Montelog-L
+None
+Poklor
+Febutor-80
+Furinil
+Avamax
+Benzaclir
+Benzaclir
+Aceplor 50
+Palnostar
+None
+None
+Amity 80/10
+Syntam 80/10
+Telmimore
+Amity 40/10
+Syntam 40/10
+Syntam 80/5
+Amity 80/5
+Amity 40/5
+Telmimore
+Syntam 40/5
+Fast Relax
+Adivia Met
+Altodiab
+Cetizine
+Lidotech
+Bisacod
+A-Znc
+Femzol
+Ebaz
+Vagi-Hex
+Orancla
+Orancla
+Orancla 625
+Myoprost
+Mysod
+Ostaz-50
+Catania
+Catania
+Azper
+None
+Nacsyd
+Monteglob-4
+Treviamet
+Treviamet
+Bavencio
+Ollepril-10
+Ollepril-20
+Brintellix
+Onesin-40
+Paxlovid
+Monteglob-5
+Diatech
+Diatech Ultra
+Anastratech
+None
+Normitech
+Paincare
+Aetropsal
+Goxycholic 250
+Ketoxil
+Bagabrit
+Tazofir
+Reloxa Dos
+Parsave
+Glipgludin
+Glipgludin
+Choliva
+D-Supreme
+None
+Imatech
+Bleoace
+Medimycin
+Oranair Plus
+Lapinitab
+Moxfoz DM
+Moxfloz
+Sitagen
+Tiglipza
+Sitagen
+Tiglipza
+Bevert
+Bevert
+Bevert
+Lacsomitol
+Rosgen
+Besartan
+Xensal
+Valixyr 2.5
+Goclaz 30
+Bisacoden
+Abanvex 5
+Profixamed
+Profixamed
+Abanvex 2.5
+Xabitor 5
+Triocef
+Gotorvast 40
+Gotorvast 20
+Gotorvast 10
+Mucoaire
+Prevaclav 457
+Xabitor 2.5
+Axonex
+Colymyx
+Enzalutech
+Clindaseph
+Unbranded
+Salbpress
+None
+None
+None
+None
+Nerveplex - AE
+Nebi-flow
+Calziderm
+Gozinat
+Ritegesic
+None
+Laritin
+Wesidic
+Multirals
+Rapid-Z
+Axiomace
+Desicol 500
+Forticrep
+Biogenic
+Alizor
+Alizor
+Elevit Pre-conception
+Prostarex
+Med + Guard By KKM
+Med + Guard by KKM
+Med + Guard by KKM
+D-1000
+None
+Amixol
+Raph-D1000
+D-2000
+Raph-D2000
+Rapid-Z
+Bortewell
+Omedaz
+Saphnelo
+Xafloquin
+Victus XR
+Analem
+Goformin
+Xenal
+Furazone
+B-Protenerv
+Folee
+Xantor
+Megafol
+Krytolac
+Zobexelle
+None
+Unbranded
+Retafil
+Cinazith-DS
+PIPETECH
+Ometech
+Gomezole
+Irixtar
+Cistovent
+Xensal Plus
+None
+Lincoxin
+Lincoxin
+Terlisartan
+Goxiclav
+Klarex
+Rixo
+Fenok
+Fenogen
+Penegen
+Zinerve Forte
+Zeftrianav
+Prozin
+Cipromar
+None
+Technozole
+Fenosol
+Rixo
+Luxime
+Sufixime
+Zologet
+Esoziem
+Primetram
+Vercure
+Duoxiclav
+Educef-250
+Cefuphil
+Curatel
+Olanzgrand 5
+Zilano 5 ODT
+Cefiryl
+CEPRIME
+Tropsiv
+LUXIME
+Unbranded
+None
+None
+Pantobloc
+Jazeft
+Centramed
+Gastromec
+Pantostan
+Kiddymox
+Oflaz-DM
+Ulcerate
+Nervcureplus
+Akniblaz
+Amphoter IV
+Nystasave
+OlaKip
+None
+None
+Vento-Aid Plus
+Merodime
+Clozakip
+Cefuxal
+Ketonep
+Vigogen
+Forhypo
+Theomet-500
+Aeknel
+Azi-500
+Valtor
+Dexa-NP
+Eroxime +
+Congloxime-750
+Qmeprazole
+Micargen
+Zentara
+Docegard 20
+COXATECH 625
+Gocyn
+Cefutech IV
+Paclimed-30
+GOMILLIN 500
+GOMILLIN 1
+Zefuped
+Beauty-E
+Unbranded
+Jisartan
+Citiquest
+Cardiplat
+Curecee Plus
+Aeknel
+Prohexon 350
+Telimac 80
+Telimac 40
+Medisartan
+Tempra Boost-C
+Hextar
+Gotrax
+Histaquest
+Unbranded
+Cefupen -5 00
+Telzyd H 80/12.5
+Curecee Plus
+None
+Emeraz
+Proglitab MR 60
+Fluniz
+Nervesaph-B
+Muprixine
+None
+Furosam
+Philamol
+Penvir 750
+Docetaze
+Docetaze
+Rituxell
+Bevalast
+Saphfylline
+Wegovy
+Wegovy
+Wegovy
+Wegovy
+Wegovy
+Coxwel
+Saphfylline
+Rainazole
+Ramerate
+Zitriol
+Cyfrox
+Defrijet 500
+Infuirino
+Defrijet 250
+Hemosdin
+Phudicin
+Levollen
+Silvederma
+Zylfacare
+Ennazole
+Fleximol
+Biodol IV
+Parazar IV
+Rextamol
+Retaproban
+Restorix-60
+Restorix-90
+Diphmax
+Retacef-750
+CEFUSAVE-750
+Phytomen
+Dynaphyto
+Phytolin
+Menavit-K
+Bampi-1
+Gocillin
+Keftam
+None
+Telman
+Tazem
+Masocaine Heavy
+Saphrinox
+Eoroxime-250
+Saphlor 50
+Saphlor 100
+Floproxa
+B-cane Heavy
+Fin-Otecan
+Spentocaine Heavy
+Alsuni
+Alsuni
+Miorad
+Bucain Spinal Heavy
+Spinlok
+Porsvacaine
+Prasu
+Melnna
+Melnna
+Hepaclex
+Emapen
+Levocarnil
+None
+VagaCyte
+None
+None
+Katinko Calming
+None
+Cetrostal
+Ambimox
+None
+Rivaxored
+Rivaxored
+Rivaxored
+None
+Tumiwel
+Lymogin
+Lymogin
+Lymogin
+Poviline 10
+Poviline 7.5
+Ultrasept
+Sevotroy 250
+Inzocillin-5
+Sacuron 4
+Unbranded
+Ticanase
+Bupidex
+Recaine
+Coldmedic Night
+None
+Teiconova-400
+Ricoxin
+Xanoca Performs
+Adenox
+Tracid
+Toponova
+Perfect Defense
+Doxetacent
+Cirok
+Rytam
+Hemolate
+Zenuine
+Valvex 80
+Casino – Active
+Lansoquest
+None
+Winpersul
+None
+Vancomef 1000
+Rontaz 4.5g
+Zevlar
+Congrel
+Clotimax
+Gentalyf
+Santezon
+Etorigo-120
+Etorigo-90
+Viprazole
+Alkasure
+Kidiron-120
+None
+Kinmeprazole
+Gopres-5
+Kidiron-100
+Azfloz
+Venirex
+Bacticox 625
+Team Duo
+None
+Unomet
+Unomet
+None
+None
+None
+Goprax
+Lopedium
+Clavomex
+None
+Urlyx 500
+None
+Febutor-40
+Furinil
+Gapenak 400
+Gapenak 300
+Luocitabin
+Insvex
+Adisart
+Adisart
+Cardivest Plus
+Febulas 40
+SRA-ORS Lychee
+SRA-ORS Melon
+SRA-ORS Strawberry
+Verxaban
+Lipidbloc
+Febulas 80
+Tazomin
+Nefrinor
+Exelfos
+none
+Asco-C
+Omepace
+Briandazole
+Aecor-100
+None
+Glimegen
+Retaglim
+Ketosolv
+Glurexa
+Goproxacin
+Alqoket
+Ketolove
+Arteva Plus
+Powercap
+None
+Curasit
+Co-Zincretin 50/ 500
+Co-Zincretin XR 100/1000
+Forglip
+Cefudime
+Tricid-S
+None
+None
+Team Duo
+Xorugen
+Zartob
+Levetigrand 500
+Levetigrand 250
+Fixal
+None
+Levitam 1000
+Levitam 500
+Goprofol
+Gopicin
+Gopicin
+Arteva 100
+Technozar
+Technozar
+Tazidime
+Apiklot
+Technomet
+None
+None
+None
+Amcetyl-600
+Carepixban
+None
+Orapen S
+Analou
+Thyroxil
+None
+Diamet
+Capeget
+Enzagen
+Dalasave
+Ironsave
+Dutam
+Bactoclav
+Calta
+Urania
+None
+Karisa
+Karisa
+Karisa
+Claritone
+Sertrakip
+Quetigrand 200
+Quetigrand 100
+Epinorine 1
+ICARE
+Parazamil
+Amzellin-500
+Asvent Plus
+Zeofol
+Gostat 10
+Amzellin-250
+Iroferron
+Reverse
+Normbeat 5
+Atorschwartz 10
+None
+Limoxil
+Plogrel
+Orapen Inj
+Altozith
+Phartobac
+Conzend
+Cefupen 750
+Zerehaler
+Rexulac
+Fenogen
+Fenoceed
+Tripibra
+Fenoceed
+Piperwell
+Rabazio 20
+Ceftrash-1000
+Nicardilex
+Levoplant
+Droxisur 100
+Tobrin
+Lefixime 400
+Cidimus XR
+Lefixime 200
+Triplessin
+Omega Pain Killer
+None
+None
+None
+Aemero 500
+Aemero 1000
+Levsezur
+None
+Verxaban
+Verxaban
+Tobramet
+Spevigo
+Mupisur
+H-Klor
+Pecof Dry
+Levopres
+Rapifort
+Peritus
+Ofloxasaph-INF
+Norepin 16
+Trexglo
+Panzel
+Abdopen
+KoztaTM Plus
+Saphcorticin
+HES-200
+HES-130
+HES-130
+Valcare AH 160/5/12.5
+Valcare AH 160/5/25
+Valcare AH 160/10/12.5
+Valcare AH 160/10/25
+Valcare AH 320/10/25
+Damadol
+Rapamol T
+Nutriflex Omega Special
+Cefuroxx
+Cefixstan
+Gompsul 750
+Wellmox 625
+Qvex
+Olanzgrand
+Azendole
+Estan 40
+None
+Erapin
+Erapin
+Depanto
+Pantoxac
+Prazole IV
+Unbranded
+Ketway
+Protek-GFR
+Piptabac 4.5
+Duoxiclav
+Hydrozen
+Aecor-250
+Unbranded
+Telmispec
+Atorpel
+Philgesic Forte
+Cluvmox
+Jandhar Plus
+Multamin
+Forhypo
+Forhypo
+Algabin 75
+Tobralyf
+Omacare
+Lanspro-20
+Lupilan
+Lupilan
+Docegard 80
+Paclimed-100
+Trigil
+Calvicee Plus
+Calvicee
+Zyvosal
+Appetech
+Pulsara
+Lactuden
+Ronivent
+Betaquest
+Qmeprazole
+None
+Maxsunide
+Cefulev 500
+None
+None
+Unbranded
+Unbranded
+None
+Goplat
+Hyoden
+Cetricare-H
+Karved
+Avitam 4.5
+Tazasave-4.5
+Mufresin
+None
+Mucocystein
+Claxel
+None
+Glynoprex MR
+Sitazit-M
+None
+Topirol 25
+Topirol 50
+Klean & Kare
+DIPP-4 Plus
+Fibros
+None
+Fibros
+Cis Spal-L 50
+Hexavir
+Dexatobrin
+None
+Tigemac 90
+Captivo 25
+Zestril
+Zestril
+Olmesar-AM 10/40
+None
+None
+Zestril
+Topirol 100
+Champix
+Champix
+Metsaphtin - 50/500
+Metsaphtin - 50/850
+Rabefaz
+Demoxif
+Cloxarex
+Nepromin
+Renalpro
+TachoSil
+Scilin M30
+Sevotroy 250
+Unbranded
+None
+Alixone
+Cefugine
+Cefugine
+Zoditam
+Rifethromycin
+Clogrix
+Clotstop
+Osteozol
+Epiloz
+Ketolit
+Medicoxib
+Omepravin
+Merit
+Atussin
+Regixime
+Ocreon 50
+Kidiron-250
+None
+Catania
+Dhaploff
+Goglitazone 15
+Coglitazone 30
+Duokaz
+None
+Gopra
+Merotam
+Merotam
+Eramel
+None
+Kemazol
+Vasator 10
+Melostar
+Levmont-Z
+Sev C
+Oramont Plus
+Gozibact
+Zenyd
+Medibiotic
+Ercarbo
+Taxeldix
+Feravin
+Corvita 80/5
+Erapin Plus
+Erapin Plus
+Zeconcef
+None
+Alketo
+Thyroxil
+None
+BPCheck 5
+Javamet
+Piptavast
+Xinatrene
+Rexiphrine
+Dobutine
+Cefreexime
+Gorocin
+Mupiroskin
+Ikshamox
+None
+Leptam Tab
+Janogen
+Janogen
+Cephamed
+Arteva 50
+Gobapen
+Ceftriaking
+Fixulate
+Fixulate
+Axonefree
+None
+Sherizine
+None
+None
+Dikshamin
+None
+Rozenta
+Urixa
+None
+Nimrof
+Rafor
+Cofzol CS
+Acrolim 0.1
+Biofusid
+Salbfixx
+Acitrate Plus
+Desicox
+Haiclav
+Iksharti
+Urania
+None
+Quetigrand 25
+Hematran
+Clostelo 100
+Epinorine 2
+Isoflurizz
+Senadryl
+Phenylppex
+Piptaz
+None
+Goldfrox
+Gorox
+Qvast
+Ceftripen 1000
+Muzzadex
+Cotripel
+Destone
+Pulmodual MDI
+Fenomel
+Taxim-O
+TGXIME
+Felizen
+Tamzor
+Novazith
+Titacef DS
+Pediacef
+Ztab 500
+Zithrotech
+None
+Brofoxin
+Amlocare Plus
+Citicure
+Gifixon
+Shefix
+Clavxytin
+Trinmoxil
+Clovoxclav-457
+Clavzivac
+Atorpel
+Atorpel
+Carvast
+Gifixon
+Multiden
+None
+None
+Risperkip
+Levothyrogen
+Mediroxime
+Protexime 200
+Protexime 400
+Kalista
+Poneda
+None
+Tobracor
+IKSHATOB
+Bactrodix
+KERAZINE
+Noremin
+Selbronx
+Goroztin-10
+None
+Hexolin 350
+Prohexon 300
+Hexolin 300
+Budehil
+Sevorizz
+Sevosha
+Ecozime
+Ragundi Forte
+Unbranded
+Unbranded
+None
+None
+None
+Rosuvin 20
+Norepors
+Prenaxon
+Prenaxon
+Gluventa PR 1000
+Gluventa PR 500
+Milronex
+Clavoxsea 1000
+Usidin 2%
+none
+Retamxcin
+Azicass
+Gozithro
+Omesave
+Retaclav
+Clavsave-457
+Tazasave- 2.25
+Avitam 2.25
+None
+Ketomin
+Ketosan
+Ketorich
+Ketomix
+None
+Medoline
+Retacloz
+PTZ 4.5
+Phytazin
+Linesave
+Retaback-750
+Sulpisave-750
+None
+Bactamed
+Vigosul
+Hepadur
+Quiflox
+Unbranded
+Pravaz
+Vecox
+Zitrom IV
+Epifed
+None
+Xzamide
+Goxcefuro
+Tranquilyte
+Gotrione
+Ceclofam
+Loranix
+Flavos
+Medibrex
+Gozirox
+Zebazith
+Urzokolix
+Fixuric 40
+Xytam
+Corvita 80/10
+Corvita 40/10
+Corvita 40/5
+Pregmecom
+Ledrocid
+Bupibaric
+Ketodix
+Ocreon 100
+Eramel
+Syntria
+Colixtan
+Prebamin 75
+IKSHADEX
+Meroparvin
+Amoltex
+Prebamin 150
+Sezuvin
+Pulmocare 200
+Zomicor
+Vilaptin
+Azcore
+Gastrozen
+Thormin
+Acrolim 0.03
+Clostelo 50
+Urofix
+Balmax
+IKHSOD
+Aenor
+Permetrizz
+Viamox
+Allerheal
+Zetranex
+Corbamax
+Fenomel
+Fenomel
+Fenolizen
+Rifoxyn
+Fenomel
+Mucobroze
+BORTEGET
+Janclav 457
+Ciploxac
+Lexzin
+Maxheal
+Limoclav
+Trinerva-B
+Corbamax Z
+Paramonde
+Oxalidex
+Gosmin 500
+Ethezib 60
+ETHEZIB-90
+None
+Momesone
+Lotadim
+Tadamate 20
+Zentrumax Advance
+Tadamate 5
+Excel C Plus
+Valprex
+Levotusive
+None
+Bioclavid
+Diasit 100
+Diasit 50
+Ivacore
+Ivacore
+Lovacet
+Diasit 25
+Cinacred 60
+Cinacred 90
+Cortidose 250
+Cortidose 100
+Forair 500 DPI
+Augimox
+Phytazin
+PTZ 2.25
+None
+Retabacx-1500
+Bactamed
+Sensorsave
+Gopara 125
+Gopara 250
+Arunem
+Throzitech
+Solucent
+Taguro-20
+Goxair
+Amtaz
+Citigen
+Gobutamol
+Gentimin
+FIGC
+None
+Olzitec
+Citibrain
+Cinacred 30
+Cevit
+Vercemol
+Consumer Protect
+Gomol
+Natrasol 50
+Natrasol 100
+Pause 500
+Neoplin-450
+Neoplin-150
+Divalfred
+TheraPREP
+Hyapin
+Breathac
+Hemucil
+Eybelis-S
+CytaGet
+CytaGet
+Bisovell
+Sefoxim-SB 1500
+Nioclean-AD
+None
+None
+None
+None
+Euricstat
+Fentare
+Fentare
+None
+Evafact
+Bosenpah 125
+Trimecard MR 35
+Stopirax
+Quiflox
+Bezartan
+None
+Molpraxx
+Newpamol
+Arunem
+Zartapel
+Retazith
+None
+None
+Zuri-125
+Golyptin
+Linoac
+Linoac
+Eyedex
+None
+None
+Flucysteine 600 Choco
+Aenor
+Kodex
+Gliped
+Pizotaz
+Cefitrene 100
+Fenomel
+None
+Unbranded
+Ompraz
+AMPIDEN
+Nidolid
+Regizine
+Dorlaz T
+Florex
+Acetor
+Prazotam
+Ceftrisave
+Gocardi
+None
+Trimbow
+Natesto
+None
+Aquipta
+Aquipta
+None
+Fenrus
+Luozidime
+Desfluzole 200
+Kephazon-S q
+None
+Febtout 80
+Aploxin
+Televo
+Mofixem
+Triacef
+Prestan
+Brocriptex
+Lainema
+Parol
+Crysta FD
+AZCORVIT
+Euthyrox
+Metacartin
+Trixophin-W
+Ursoliv 500
+Fungitame 70
+Sinbact 750
+Dutaprost
+Klaviran DS
+Klaviran
+None
+Fenorix
+Abrin
+Amlotin
+Amlotin
+Amlotin
+Saptaz
+Ziomedrab
+Bexsero
+Gobapizin
+Vasconov
+Anazdex
+None
+None
+Fixuric 80
+Alasth
+Ketoace
+Medic-Z
+Gobeiz
+None
+Bleophil
+Zypant
+Trigobion
+Domperaz
+Sugatam
+Gosec
+None
+Tamsukem-D
+Ertax
+LosaSpeed 50
+Tozam 100/10
+Quinor 8
+Quinor 4
+Omephil 40
+Flovomed
+Gostat 40
+Colorebene
+Mediair-chews
+Strozin
+None
+None
+None
+Lupibile
+Betnolyf
+Prosta-One
+Pizotaz
+Gizol
+Zentrocin
+Gliped
+Felizen OB
+Telzel
+Clinmed
+PPZ 40
+Rabegast
+Clyntigex
+Fropen-S
+Regizine
+Energo
+Unbranded
+Raypondex
+Kalista OD
+Rinefen
+Pteribene
+Priadix
+Tieradix
+Diufed
+AMPIDEN
+Anna-E
+Retazart
+Madexcard
+Ramgesic
+Pen-F
+Bacefur 500
+Cerin
+Gomep IV
+Gofime
+Gocef IV
+Retazet-R
+Hepadur
+Forfloz
+Orapen-G
+AELOX
+Tolpraz
+Quric
+None
+Diaglez-80
+Diaclaz
+Amdozar
+Nebulent
+None
+BPCheck 10
+Nifromin
+None
+Flumodex 600
+Nepriqo 8
+Godamycin IV
+Govir
+Aminocare
+Decaphen
+Cloplat
+None
+Pain B-Gan
+Fenolizen
+Ceftratech
+Flutilon
+Albendix
+None
+Rostar
+Risperi
+Promezol
+Ventera
+Haitam
+Pamidol 300
+Brizamide
+Axonedu
+Urisol
+Apiban 5
+Trimet PR-80
+Rabb-20
+Enaprinova-5
+Enaprinova-10
+None
+Medglor 90
+Geoxone
+Khrizemic
+Blesupican
+Dulox 60
+Bacefaz
+Dulox 30
+Zeftinox
+Wegovy
+Wegovy
+Wegovy
+Wegovy
+Wegovy
+None
+Platclo
+Remol 500
+Brelta 15
+Katinko Duo Relief
+Cefigen
+Panglo DSR
+None
+Vaxcicin
+Vaxcicin
+Luoriaxon
+Luotriaxone
+Sanpara
+None
+Lynase
+Nortemp
+HexiMed
+Imodium Complete Relief
+None
+Brezole
+Giclav
+Cassaclav
+Retaxostat
+Gencitav
+Genplatin
+Ebicox
+Etoricass-90
+Ebicox
+Roxigen-90
+Volugen
+Genbac CV
+Bacticox 250
+Aelac
+Rivida
+Genvasc-10
+Clariset-125
+Gofurox
+Jaxime 1.5
+Cefatex
+Cefulev 1.5
+Kozta
+None
+Cefonov
+Aralev
+None
+IroGo
+Oncodac
+Mycozole
+Oselow 75
+Maxtaxel-20
+Maxtaxel-80
+Benadryl One
+Benadryl One
+Lutaprost
+Lidonem
+Moxinova CV
+Gliclyde
+Tramanov-50
+None
+Altrazide
+Unogaba 400
+Khrizfloxin
+Diura
+Azmyn IV
+Mofecon-S 360
+Saphbenzillin-5M
+Curan
+Zelec
+Dalisoon
+Novasit-M 50/1000
+None
+Vexsilva
+Amidozil
+Emcap 500
+Alco 70
+Welnano
+Taxinano
+Paclinano
+None
+None
+Metfor XR
+Zithoret
+Danikid Plus
+Zydhar 10
+Doxagen 20
+Doxagen-80
+Lizod
+Loxenil IV
+Zondrax
+Co-Zincretin 50/500
+Zamplify 40/10
+Telmicass Plus
+Torfil 5
+Telarb Plus
+Telarb Plus
+Telarb Plus
+Zeptadone
+Pro-Defense
+Access Cee
+Parmol
+Tenoliv
+None
+Dasocort
+Esomax-WFI
+None
+Taxelido
+Taxelido
+Brofol
+Rosin 40
+Clovate
+Olletaxel-10
+Olletaxel-40
+Pravastal
+Sterilmed 5
+Sterilmed 10
+Clovate
+Berzide 25
+Levetroy
+Rovalpin
+Rovalpin
+Land and Harper
+Katinko
+None
+Fungazone
+Adamson
+Adamson
+Tranova
+Furosel-DIU
+Hormisone
+Diglucothix
+Diglucothix
+Tai Chi Cool Stick
+Tai Chi Cool Stick
+Bacticox 125
+Clavugen-375
+Bacticox 375
+Retagliptin
+Telman
+Zefamax
+Rylin
+Vasconov 5
+Xentravasc 5
+Genvasc-5
+Nuclot
+Iovidone
+SALIZOIC
+Delexomib
+Roflexin
+IZTAM-4.5
+Appetite W/ Iron Syrup
+Sunvilda
+Esoriv-40
+Tragliptin
+Rovecol
+APLINC-ORS
+APLINC-ORS
+None
+Fefolife
+Lophenil
+Saphenamine.
+Biosaphen
+Barudon
+Zentan AM Forte
+Besymed
+Healthgard
+Cevit
+Seren 10
+Neogenta
+Froniquiest
+Alkacit
+Nausiabene
+Febusan
+Xentravasc 10
+Primofol
+None
+Clamoxmed 625
+Si2norm Plus
+Atropos
+S-Clav
+None
+Telarb
+Telarb
+Diucard
+Bactriplex
+Aezitam 4.5
+Aezitam 2.25
+Pentariv 40.
+Hemomeds
+Furenex
+Tazin
+Vaporin Aromatheraphy Oil-Supreme
+Medcarv 6.25
+Medcarv 12.5
+Apilone
+Accetran
+Cefthix
+Exzomel
+Pretension Plus
+Pretension Plus
+Zelan
+Carnosin
+None
+None
+Adamson
+Duocard
+Duocard
+Amiksan 50
+Amiksan 250
+Amiksan 125
+Esomax-IV
+Vanoxo-500
+Vanoxo-1000
+None
+Dioslife-500
+Dioslife-1000
+Fefolife
+Gospiridin
+Novabrex 200
+Maxithro
+Metter
+Curexime
+Bioxime
+Zamplify 40/5
+Giprazole
+Cerin-250
+Gliclasy 80
+Glizen 80
+Coxilife
+Clavulife 250
+Histagic
+Retazar
+Celehil
+Gablin
+Eploxin 50
+Aforvir
+Gablin
+Medirica
+Zurso
+DYDROTONE
+Flusoothin
+Joytor-30
+Acidem
+Camusten
+Gopicin
+Lozend 100
+Lozend 50
+Verticare 24
+Mediqax 5
+Valixyr 5
+Zeftral
+Muconov 200
+Vastalife-40
+Apixmase 5
+Solbina
+Vastalife-20
+Vastalife-10
+Eploxin 100
+Ustavix
+Dexsugam
+Zaeclop
+Co-Air
+Zefillin
+Doxetacent
+Doxebest-RTU
+Dutasdrom
+Losa Speed 100
+Nebi-Flow
+Soligen
+Arpip
+Tozam 100/5
+Nicardize
+Nepriqo 4
+Carboget
+Docoset
+Taxelbene
+Taxelbene
+Colorebene
+Plomorazine
+Predhil
+J-Mox
+Carbabene
+Platibene
+Zypro
+Zenkast
+Klarex
+Hydropel
+Terxime
+FEMABENE
+Clindasan
+Fixidrops
+Froncef
+Amtram-S
+Pracimed
+Urabene
+Celnep-7
+Cristibene
+Centrabez
+Kodazol
+Doxetacent
+Hydrofed-250
+Minacid
+Gastrhotek
+Scopol
+Bactan
+Polymix-D
+Appeczin Plus
+Sopalol 10
+Pteribene
+FOLINAV
+Gozithran
+Unbranded
+Dosena-5
+Unbranded
+Cetalife
+Venacare
+Glik-S
+Dylac
+Calcilife
+Curevein
+Multilife
+Sa-Cee
+New Improved Life C Plus
+None
+None
+Norephstar
+Gokacin-100
+Amikacent-100
+Gokacin-250
+Amikacent-250
+Gokacin-500
+Amikacent-500
+Adline
+Cortiright 500
+None
+AMPITEK-1
+Bistapro
+Bistapro
+Rostad
+Rostad
+Hemolate
+Cepham
+Omnicass
+Retasolyn
+Glifixy
+Zydap 10
+Astiget
+Retaclav-R
+Retaclav-R
+Retaclav-R
+Retaclav-R
+Ketosolv
+Physicxone
+Co-Life-457
+Novalife 5
+Rentos
+Clavulife 625
+Montralvo
+Dobumed
+Tazidine
+Clavustan
+None
+Argixone-ODT
+Lozarmel
+Anagrebene
+Qualitron
+Presuvas
+Zamplify 80/10
+Zamplify 80/5
+Actranex
+Novalife 10
+Jiaastat-80
+Jiaastat-40
+K-Mino
+Kodasetron
+Lozend Plus
+Retabaline
+Tazipro
+Su-Low
+Aecoline
+Joytor-60
+Kepdin
+Moxidin
+Aguatob
+Retactrim
+Mayrosu
+Clavulife 125
+Mediqax 2.5
+Colife
+Toravas
+Retaclav-R
+Elpidex
+Hydrobloc
+Pletaz
+Retacox2
+Prevadopa
+Muconov 600
+Retacyl 600
+Solif
+Carboget
+Succicort
+Xtravit
+Thione 600
+Vansafe-CP
+Lifegesic OD
+Lifegesic
+Lifegesic-250
+Vanconov 1000
+NovoSeven RT
+Irbesaph-300
+Irbesaph-150
+ROZTIN-20
+EMINA-200
+Ferobles
+Allutamide
+Julitam
+None
+None
+Glizen 60
+Mucocystein
+Audiwax
+Taxelbene
+Broxygen
+Retatrime
+Life-Zol
+None
+Mepel
+Gliped
+Monlastik
+Eracop
+None
+None
+Zaecys
+Broxygen
+Glizen 30
+Amlomel
+CefiPro
+Promizole
+Pantoxac
+Neopel
+None
+Paxiclav
+Prednizole
+Elpitaz
+Triclir
+Tobiclear
+Telmicass
+Omeprob
+Unbranded
+None
+JIAAZAR
+PND-Care
+None
+Flamlife
+Neuronav Forte
+Apetab
+Erilife
+Laxipate
+Metalife
+Brevalife
+None
+None
+Ferronav
+Mayrosu
+None
+Hylazine
+None
+Fukolac
+Hyosaph
+Hydrovil
+Otowell
+Moxed
+Zebeclav
+Zebesar
+Modexa
+Docarb Plus
+None
+Gvsoft
+Valen
+Sadia
+Vitalux Plus
+Viptriaxone
+Jon-C
+Altosulin
+Xigazin
+RedClav 625
+She-Clav
+Sureboost C Plus
+Zenomep
+Ferocepin
+None
+Physicxime
+Vocemont
+Nebivol
+Retamide
+None
+Xytozen
+Finora
+None
+Sodicarb
+Actib
+Retamep
+Clinamet
+Duosalbium
+Kelogue
+Cardigen
+Methyxale-1000
+Kettmol-IV
+Dypodoxime
+Cefonav
+Retavent Plus
+Verzen 8
+Retacyl 200
+Apixmase 2.5
+Toravas
+Doxebest-RTU
+Doxetacent
+Co-Tamdu
+Tamdutor
+Co-Duttam
+Neogout
+Pulmocass 600
+Gotyl-600
+VitaPlus
+Chocoflem
+Fosfamer
+Abitrone
+Cenoron
+Hydroxyjac
+Dolowin Plus
+Goclav 228
+Nadrexol
+Nervcee
+Alertmax
+Flucon
+Memaray
+Omepracent 40
+Erazin
+Maedicoxib
+Zermisar
+Zermisar
+Coxatech 625
+None
+Cefufer
+Racedril
+Hydromel
+None
+Mistel
+Amlomel
+Ketoanalogues + Essential Amino Acids
+Omifer
+Omenix
+Pantoxac
+None
+Prezelone
+Levflox
+None
+Rocutam
+Retaflow
+Jiaaprazole
+Amrid
+Lenoxa
+Opiodex
+Clohab
+Ciloheme 100
+Ciloheme 50
+Caprel
+Klarithro
+Member's Value
+Lifeciferol
+Adolpan
+Cytamax 100
+None
+Tsartan 40
+Tsartan 80
+Clindavest 600
+Telmez CCB
+Dermafina
+Clindacare 600
+Bellaskin
+Alvovilda Met
+Alvovilda Met
+Thymaz
+none
+Avazart
+Avazart
+Krijenta
+Sitixamic
+Cepiram
+None
+Moxiquin
+Metrizine
+Daphix
+Oxaliget
+None
+Axaring-RL
+Hemovee
+Florqin
+Atorimax-80
+Avazart
+Iroxari
+Alvofenib
+Amiodasaph
+Revicon
+Vitablod
+None
+Amair
+Fasrel
+Pangmaton
+Dilakant
+Alvida-M
+Sprasone
+TLC Vita-OB
+Xano Fizz 650
+F-Para
+Cefuvil
+FOLICEL
+Moxibac
+Pulsalife 10
+Lifetor 20
+Venis
+Ketmel-IV
+Fevint
+Zartob DM
+Montezel
+Gonazol
+Epson 4000IU
+Novoxin
+Anebloc
+ZolHealth 4
+Meducil-A
+Buclikids
+Noric 40
+Neumodrop
+Goflox 500
+Montledual
+Retair
+Vildasure
+Ipsa-Duo
+Verzen 16
+Verzen 24
+Furovint
+Febdiaff-80
+Kemofem
+Gliclasy 60
+None
+Hikari Drip
+Allycef
+Curevein
+Zetlow-10
+Ciklox
+Panlec
+Pantokhriz 40
+Aminowiz
+Korsel
+Hartpace
+None
+Antan
+None
+Gemget
+Glycemed 500
+Glycemed 1000
+Glycemed 750
+Colcifar
+Aizene
+Zolinova IV
+Sefozin
+Proglitab MR 30
+Sunvilda-M 50/500
+Sunvilda-M 50/850
+Sunvilda-M 50/1000
+Zolin-IV
+Vildariv-M
+Accetob
+Saphridarone
+Maxgalin 300
+Maxgalin 75
+Maxgalin 50
+Panfred D
+Tenohope
+Ticagresaph
+Dapastal-10
+Adaron
+Vancophar
+Vancosan
+Xiglip M
+Xiglip
+Syfaclor
+Trajenta Duo
+Zolpas
+Miraden
+Atectura Breezhaler
+Scitropin A
+Cetriset
+ZEFAROX
+Curanerve
+None
+Unbranded
+Ambivit K
+Remicade
+Coxiclav
+Terozin
+Robitussin Sinus Relief
+Unbranded
+Bisonid
+United Home Supracid Extra Strength
+Nasoride
+Eurogesic
+Cemetol
+Anserm
+None
+RUTHENA
+Morlesfat
+E-Vita
+Unbranded
+Lexivit-E
+Philvacaine Heavy
+Hevacaine
+Trizamed-20
+None
+Sovitrin
+None
+Norfuran
+Allujen
+Hiza
+Prazcon
+Aspen
+Centrum Advance
+Medifer
+Oetiapine
+Prostezine
+Vicephrin
+Folistar
+Epiline 2
+Fluless
+Delivit-C
+Memandin
+Betavasc
+Gotrim
+Almefen
+Laxose
+Unbranded
+Chirocaine
+Momeflo
+Vitazee Plus
+Sevoheal
+Ceecor-Z
+Gluconex OD
+Joy-Cee
+Klopi
+Drexicof
+Clinsea-600
+Glice
+None
+Cozeal
+Temolon 20
+Nuberol
+Omnicef
+Victus
+Alka-cee
+Rapid-B5000
+Fluless
+None
+None
+Ascorgen
+Corbimax
+Anabit
+None
+Lanac
+Lanac-485
+Neozep
+None
+Lorago
+Golfen 200
+Golfen 400
+Levifen 200
+Levifen 400
+None
+Tai Chi Ginger Medicated Plaster
+Carbo Plus
+None
+Preven-C
+Spitone-25
+Ascorb ZD3
+Immucare Advance
+Sigmacip
+Proxilev
+Sulver
+Moxydril
+Quetiapro
+Psycopin
+None
+None
+None
+Megascent Herbascent Oil
+None
+Coughlogen
+Raphiodine
+Sydentuss
+Flexfol
+Ceascol
+Gold-ZS
+Exfolwhite 1
+Exfolwhite 2
+Exfolwhite 3
+None
+Carezee Plus
+Citrupro
+None
+None
+Micardis
+Micardis
+Midine
+None
+None
+Zincovit-C
+HIGENE
+Dolfizz
+Saphcisin-125
+Saphcisin-200
+Micardis Plus
+Micardis Plus
+Micardis Plus
+Preven-Z Cal
+Win-Z Plus
+Preven-Z
+None
+Zinceevit
+Healthcare Dermsol
+Litaine
+Havznc
+Syden-C Forte
+Citru-Plus
+Inno-Z
+Numecef
+Safebo
+Vagi-Hex
+N/A
+Azifast-500
+CareZyn
+Sevrose-800
+Corvelam
+VitaCal
+None
+Bagogen
+Turbovas -5
+Ventuss Plus
+Trimozol
+Lumemox
+Gxacin
+PAKZNC
+Betady
+Lavudine
+Adapine S.R.F.C
+Rostan
+Gastome
+None
+None
+None
+Zdonate
+Pitanic
+Olan ODT
+Synoxon
+Calcidoc Plus
+None
+None
+None
+Lifemmune
+None
+None
+None
+None
+None
+None
+GoCal
+None
+None
+Axqin
+Fucicort Lipid
+Loraget
+Medtadine
+Allerphen
+Allerblock CT
+Carbomux 500 CT
+None
+Carbomux Plus
+Tarlonib 25
+Tarlonib 100
+Tarlonib 150
+None
+None
+Docarb 500 CT
+Safebo
+Neurolem
+Venokern
+None
+NutriGold
+Apcee For Kids
+None
+None
+None
+None
+Gold-Z
+Scheelevit S.A
+Ceegy
+United Home Ceetab + Z
+Nutri Immunoboost
+Immunogard
+Healthcare Pain Relief
+Vestar
+Z-Cium
+Febuton
+Xylotin
+VG Xtrem C Plus
+VG Rapcvit Plus
+VG Rapid-C Plus
+N/A
+None
+None
+None
+Silbecor
+Oxehab
+C-Cure Max Gold
+C-Cure Max
+None
+Nicapedz
+Nicapedz
+N/A
+None
+Rapcvit Plus Forte
+VG Per C Plus
+Citrupro Cap
+Apcee For Teens
+Rapid-C Plus Forte
+Apcalvit Plus
+Iodon
+Iodon
+Diumax
+AlMa Plus
+AlMa-S CT
+AlMa
+Veragel-DMS
+Centrum Immune+
+None
+Robivit
+None
+None
+None
+Bulcolax
+None
+None
+Flexipas
+Mentoplast
+None
+None
+None
+Kancutea
+Ceft
+Furoxen
+Atosar-10
+Atosar-20
+Golvate Pronatal
+Aspen
+VG Cgen Plus
+Canespro
+Golxan Extra
+Pregasafe
+Paradrin
+Calquence
+Valazyd AM 10/160
+Valazyd AM 5/80
+Luvestra
+Carbohope 150
+Alvopress
+Romriva
+Romriva
+Makcuro
+AcceCef
+Accexone
+Novestrol
+None
+Maxivent
+Maxivent
+Vaxman
+Topiclo
+D'Fense
+Taxwell-RTU
+Zilden
+D'Fense
+Clonisur
+Destrimole
+Fusinox
+Clobon
+Citiright
+None
+Gopamine
+Nacsyd
+Biosure
+Clocona Cream
+Dilzep 90
+Ambinasal
+Diodox
+Diodox
+None
+Docaten
+Golol
+None
+Doctopril
+Golcap
+Adadoc
+Adabur
+Ezydox
+None
+Spotclav Forte
+Gvsoft
+Bronzine
+Moxilee
+Meroz
+Telisolv
+None
+None
+Telisolv
+Telisolv
+TeliGen-80
+TeliGen-40
+TeliGen-20
+Telidril 80
+TeliDril 40
+TeliDril 20
+None
+None
+None
+None
+Emixon
+Gigagas
+Alprosant
+None
+None
+Clariglob
+Herticad
+Herticad
+None
+None
+None
+None
+Decolgen
+Levothyrogen
+Clovate
+Land and Harper
+Ashxytin
+Enoxar
+Bicanoxen 40
+Unbranded
+Noxever
+Embolis 5
+Retavacyl 125
+Retavacyl 250
+Retavacyl 625
+Goflem 600
+Healclav
+Voxiclav
+Medavox 457
+Clavxicure
+Aml-5
+Retavasc-10
+Aml-10
+Retavasc-5
+Ampitek-250
+Celixa-400
+Exib-90
+Mytor-90
+Xiocare-625
+Korticare
+Ardilol
+Clavogen-625
+Blevo
+None
+Omega
+Lamsul
+Orcomox-S
+Floxamed
+Levobright
+Pulsalife 5
+Zipropol
+Dapafoz
+Verahit
+Congloxime-750
+Mixcemont
+Maximet
+Lopelife
+Lifetor 10
+Retaglimet
+Neuboost
+Surixtat
+Trimetech
+Zeldiron
+Diabelife
+Mupifer-C
+Episartan
+Clofer
+Nervolife
+Centrapime-500
+Sethair Duo
+Sensomox
+None
+ModexCare
+Orcomox-S
+None
+Peptobloc
+Ketotech
+Sucrufer
+Pantotrek
+Febuxipro
+Amfebb-80
+Febdiaff-40
+Amfebb-40
+Fusifer-B
+Elixaban
+Elixaban
+Captophil
+Juliavit
+Nupira
+Elpara
+Kemotrexate
+Lipiruvin
+Cholsuvin
+Hytrin®
+Raniclav-DS
+Amlovart 160/5
+Mintrovit OB
+Atorseth 40
+Appefer-S
+Melia
+Eftrix
+Retamycin
+Piptazoden
+Flukid
+Ducid Chews
+None
+TREV IRON FAB
+Ziludex
+Amlodipex
+None
+Maedicoxib
+Bexime
+Rcad-S
+Micargen
+None
+Cefegold
+Juliadipine 10
+Klarifer-250
+RenaClone-E
+Omebel
+Blicid
+Omcid
+Amizide-V
+Dapazin
+Pemtero 500
+Pemtero 100
+Oxalis 50
+Oxalis 100
+Paratram
+Baczillin
+None
+Baczillin
+None
+Canrolfin
+Betno-B
+Veeta
+Xantor
+Xantor
+Xantor
+Xantor
+Viosan
+Cefazoget
+CefoxiGet
+None
+Neothix
+Febuzen 40
+Febuzen 80
+Amzol
+Cefakor
+Cefakor
+Platexan
+Paxus
+Macrotaxel
+Maxgalin 150
+Levores
+Losarx 50
+Losarx 100
+Saphmustin
+Blizeth 500 T
+Trenaxin
+Clovirasi
+Throinfec DS
+Sunvas 10
+Sunvas 20
+Sunvas 40
+Sunvas 80
+Zirocino
+Lignovell
+Kalmeco
+Inocaine
+Glucovance
+Aartmin 850
+Tazmuz 5
+Tad-2500
+Rojusna
+Rojusna
+Tazmuz 1
+Enoxbicare-40
+Milflox Dm
+Amkoket
+Ketorels
+CLAVOPPEX
+Pyribine
+Ventcare
+Irebene
+Zobrixol®
+Altacar
+ROXXIN-250
+HyaCare
+Technolife
+Avastoph
+Tobrasafe
+Xy-Floe
+CIPROJAZ
+Hesperid
+None
+BP-UP
+Forstan
+None
+Mytor-120
+Lidoprin-DC
+Atracure
+Retazart Plus
+None
+Plavihex
+Tritace
+Comxicare 625
+Zolentra
+Orcomox-S
+Vancomeed
+Zyrluxe
+Jivastatin
+Amkomep
+Flunasin
+Trimezen
+Trimestat
+Amlomel Plus
+Asfrenon-BR
+Ketourea
+Neprotect
+Projexib
+Seiletam
+Spartan 50
+None
+Comxicare-S
+Mistralix
+Duro-Tuss LV
+Atenugen
+Stabel-10
+Firbactam-1.5
+None
+Olzantic
+Hyphen
+Family
+Family
+Family
+Family
+Ceaser 1000
+Exppra 500
+Triodex
+Ampothin-Lip 50
+Xuric 40
+Betaroid
+Triamax
+Protaxim 500.
+Protaxim
+Rixan 10
+Glucophage XR
+Veloxin
+Kalbrain
+Klinfar
+Klinfar
+Linevex
+Luotaxime
+Ivylin
+Venomirin
+Oraflox
+Lotrin
+Bactosun
+Ketoprime
+Glucovance
+Neonco
+Katikrim
+Nervsol
+Zudonas
+Zolpem
+Silvirin
+Rivanex 10
+Rivanex 15
+Rivanex 20
+Family
+Rocuzen
+Cognizet
+Novastatin
+Histanov
+Nuraxon Plus
+Stercar
+Terasin
+Novexib
+Gopracid
+Cefuker
+Visolact
+Ursodyx
+Yorvas-40
+Ceftrash-500
+PreLoc 150
+Sunpreg 150
+Neuralin 150
+Vasacad 320
+Vasacad 160
+Destacure
+Antrimet
+None
+Multisaph
+None
+S-Clobe
+Amlovart 160/ 10
+Guiafem
+Retastat
+Nazaclir Advance
+Retaguard 40
+Propicillin
+Convulyf
+Riki
+Nicopro
+Juliadipine 5
+Unbranded
+None
+None
+Retapidecx
+Retobracyn
+Mycinidin
+Philrazo
+Kozta
+None
+None
+None
+None
+Acce D Forte.
+Lansoprec
+Lansoprec
+Acutin 20
+Dexkorolac
+Luotreonam
+Orfagen
+Orfagen
+Orskegic
+Orskegic
+None
+None
+Vanconov 500
+Lamictal
+Adfil 20
+Palotron
+Docetero 20
+Khrizcort
+Tarnax
+Iracin
+Philcox
+Pros-med
+Sunpreg 75
+Cymor 60
+Ameval
+Ameval
+Ampi-500
+Neuralin 75
+Noldicin
+Adobal 75
+PreLoc 75
+Ameval
+Ursodynova 300
+Ursodynova 250
+Monoguard
+Pneumonex
+Ceftriabbas
+Lumbaron
+Guadexal
+Lorpican
+ScorbZee
+Moxif Eye
+Meromax
+Meromax
+LC-Dopa
+Maxnate
+Sulbaxen
+Sulbaxen
+Biogesic IV
+None
+Saphsolone-20
+Pantazil
+Tazacin
+Thione-Cee
+Fepimed-1
+Saphdacar
+Yorvas-10
+Yorvas-20
+Knowful
+Isaphzid
+Mirem
+Mirem
+Zolvar
+Novacort
+Solfinova 5
+Solfinova 10
+None
+Xerenova
+Golanatek
+Macnaz
+None
+Docetero 160
+None
+None
+Trolip
+None
+None
+Praxolin-150
+Epikhriz
+Naceft
+Diflonax
+Nimedine
+Pantafen 40
+Azartan
+Ampholyn
+SRS-ORS Orange.
+Flusoft Day
+None
+Faranery Tab
+Blineks
+Zenalif
+Fosfo
+Metvidal
+Metvidal
+Prevenar 20
+Dolmenov
+Coxbutol
+Sucrostar
+Myzomib
+Unocillin T
+DIPP-4 Plus
+Pranolol
+Gastrolex
+Pulmocetyl
+None
+Tazovee
+None
+Dorza-T
+Dhoparal
+Soval Elixir
+Gotein
+Aropotin
+Eporife
+Nue-Tat
+None
+Zahir
+Haelan-10
+Haelan-50
+Martriaxone
+Xelafos
+Primevix
+Keltiqo
+None
+None
+Duopro
+Febutech
+Melzin
+Ceflin
+None
+Febulitt
+Preva M
+Dioxel
+Ysartan
+Pentolac
+Cardialta
+Cardialta
+Amlomel Plus
+Nephzor
+None
+Brestin
+Unofix
+Gotaxone
+Zelosart-100
+L-Zerprime
+Parazel
+Avarix 20
+Verapix
+Verapix
+None
+Durotam
+Ciprotam
+None
+Unifos
+Retabustat
+Ovalia
+Metamox
+Zanika
+Retamicron
+Dermabetasol
+Axapara
+None
+Rotoket
+Retafil
+Dypita 2.25
+Retadesartz
+Retadesartz
+Retagral
+None
+None
+Fuzfa
+None
+CetiCure
+Etorigen
+Dobuzef
+Pardaz
+Klarifer
+Actyl
+Telmiget
+Vastamel
+Vastamel
+Vastamel
+Unbranded
+None
+Selgaezinc
+Fibranex
+None
+None
+Quadrovic
+Aefol
+Oxypro
+None
+Reseda
+Marfuroxime
+PaxHealth 100
+Kozta
+Xelafos
+Extrapeel (Exfoliant Solution 1)
+Cefuvil
+Retasar
+Vastros-20
+Hypercef
+Unixime
+None
+Forfloz
+Lupizin
+Retavastatin
+Moxibam
+Vertam
+Clopierra
+Techtrate
+Keltasy
+Cefoxy
+Retapentin
+Retafloxel
+Zinafer
+Lelucazine
+Provexel NS
+Retanelol 50
+Retanelol 100
+Acecef
+Tribest
+Sevecarbo
+Acetylnium
+None
+Venecort 100
+Retatel Plus 80/10
+Retatel Plus 40/10
+Retatel Plus 40/5
+Gadex-Star
+Retaformin Plus
+Retavacyl 375
+Bactofer-O
+Lomatubsal
+Zenovia
+Zenovia
+None
+Retaglip
+Udcapro
+Telsicare
+Retaglitz
+Parafer
+Ursobest
+Zefur IV
+BriMaed
+Aluma
+Salbubam
+Grexole
+Techmecef
+Zelosart-50
+None
+Potazar
+Leesartan 100
+None
+Maedix S
+Binefaros
+Trizon
+Ovupic
+Ziludex-200
+Blazen
+Tamduet
+Protonel
+None
+Glumelife
+Anezal
+Wanda
+Arpipo
+None
+Mupivaroz
+Trimevasc
+Bacticox
+Cefiden
+Pectocard
+Retanapril
+Retavacyl 228
+I-Bactam-1.5
+Duox
+Catania
+Diaglez-60
+Dapafast
+Kintax
+Kintax
+Reduspasm
+Amtacil
+Ariprazol
+Ariprazol
+Furimax-750
+Nervilor 150
+Nervilor 75
+Linesta
+Pipzo
+Ibra Met
+Ibra Met
+Indax
+T-Clot
+Cineutec
+Empazox 25
+Funguard 100
+Khrizsix 20
+Atorpina-40
+Nuron-E
+Atorpina-20
+Betazak-16
+Epiduo Forte
+Dermvast
+Zemimet SR
+None
+Pixamed 2.5
+Porsesomep
+Sefos
+CapeGet
+LetroGet
+TemoGet
+Doseget-20
+Bendaget
+Doseget-80
+Afreenem
+Medgesic
+Lebreta
+Strator
+None
+Comaclav 457
+Zutatrix
+Domidon
+None
+Lotuflo-D
+Adrycin
+Coplex
+Jentin
+Jentin
+Tracsiban
+Azitritec
+Alisakit Plaster
+Nitroshot
+Asenza Plus
+Asenza Plus
+Telminow 80
+Osper 1000
+Osper 500
+Lifecorzin D3
+Onzepil 5
+Abrysvo
+Lineptin
+Philsamide-100
+Betazar
+Cefathix
+None
+Profiem
+Ameval Plus
+Abrysvo
+Oprasenz
+Etoricon
+Prorelbine
+Meroparm
+Xrmin ER 500
+Xrmin ER 1000.
+Glycemin
+Bufencon
+Betazar
+Betazar
+Sukrivent 500
+Sukrivent 1000
+Rivoxa
+Rivoxa
+Rivoxa
+Neurosenz
+Candifen
+Dorexcef
+Pyribine
+Clavmox
+Tamulsin
+Medgyl IV
+Cetrexzine
+Procitab 500
+Venecort-250
+Helem-50
+Hypercef
+Kefsyn
+Ilosone®200
+Retasone
+Omari
+Avazol
+None
+Montti-S
+Heliproz
+Telxibloc Plus
+Kercip 400
+Vertilex
+Omari Tab
+Rilaxia
+Flosazin
+Stadin
+Cardiogly
+None
+SciGliFlo
+Gozenyst
+Raptrasol
+Stadin
+Retanyst
+Plavicar
+Stadin
+Losartap
+Srilux Expectorant
+Ategra
+Neoform® 500
+None
+Helem-100
+Neostilex
+Gavrila
+None
+Cefulab
+Chymcel
+Hypervit
+None
+Ceftrenium
+Noren
+None
+Oxari
+Cefipro 200
+Retamicron
+Vancolife
+Gostat 20
+Rocaldin
+Retastat
+Clinica DTX
+Bodyrite
+Roxurix
+iPLEDGE SKIN ADVANCE REJUV
+Luzinc
+Budmed
+Alcogen
+X-Cee Plus
+Vesilac
+Novaderm
+Glipinova
+Medivazt-20
+Kodizide
+GliXa
+Gliget MR
+Lecarpone
+Kotrazith
+Axiban
+Noston
+Sitampex
+Mediquet 50
+Mediquet 200
+Rispernov 2
+Mesadian 1000
+Vicks VapoDrops Xtra Strong
+Vicks VapoDrops Xtra Strong
+Tridep
+Vicks VapoDrops Xtra Strong
+Immunec
+Vopenem
+Amlog Plus
+Amlog Plus
+None
+Beisartan
+Exone-R
+Exone-R
+Exone-R
+Exone-R
+Leviflex
+Tobrazin Plus
+Tobidina
+Losanov Plus
+Ketonova
+Ftor
+Ftor
+Ftor
+Ftor
+Invega Hafyera
+Invega Hafyera
+Fepimed-1 Plus
+Aepramide
+Praxolin-75
+OXAL SPAL-L 100
+Colox
+Axbin
+None
+Zaxid
+Gourix
+Vilglad
+Alvovilda
+Gliptus 50
+None
+DIPP-4 Plus
+Vildaberry 50
+Zoledsaph
+Olinbaf-10
+None
+Faratop
+Transtero
+Aploxol
+Ivipime
+Enzaphil-40
+Bantopraz
+Sunpant 40
+Maclitax
+Beludan-4
+None
+None
+Betazak-8
+None
+None
+Ketovenasol
+Ticafred
+Angel's Flo
+None
+Monagio-L
+Rosuvin 10
+Esosky-40
+Esosky-40
+Nasofast
+Full Defenz
+Dynast
+Telatraz Plus
+Telatraz Plus
+Telatraz Plus
+Svoz
+Beisartan
+Lecarpone
+Lecarpone
+Ampisulmax
+Ansulmax
+PipzoMax
+Pipzotam 2.25
+PipzoMax 4.5
+Pipzotam 4.5
+Oxamax 500
+Elbacet
+Glucomed
+Medivasc
+Gostin-20
+Atorvex-20
+Scilin R
+Scilin R
+Febxuscare
+Fedstatin
+Fedstatin
+LOSTAN
+Sevomond
+Amixlo
+Vancotor
+Merostan
+Dobusan
+Maedgliptin
+Co-Enzoclav
+AMOICLAV
+Radiostar-300
+Radiostar-350
+Gavrila
+Irbevex 300
+Irbevex 150
+Predyl 1000
+Predyl 40
+Histyn
+Asconvitazin
+Prozrich
+KCP Cream
+None
+Bhecxime
+Cezclin
+Mupirocare
+Zeltine-MR
+Hemamed Plus
+Eryzin
+Rapzar
+Vexiron FA
+Dafcare
+Bactiv
+Dafcare Plus
+Macrodal 300
+Blazine
+Fyrazine
+Diclojack Gel
+None
+Cefifer-100
+Ketovex
+None
+None
+Maedglitazon
+None
+VASTATOR
+None
+Acilev
+AllerErase
+Fermatuss
+Linzen
+Licegone
+PioMed-30
+Metprez 16
+Glypsa 20
+Gemzib
+Mistel
+Fenocron
+Vilora
+Predmed 20
+Predmed 10
+LC-Dopa
+Vilomet 500
+Vilomet
+Vilomet 850
+Beclofast
+Metglipt
+Metglipt Forte
+Ferium
+Ferium
+Dutarid
+Metglipt Plus
+Myesur
+Telmez CCB
+Telmez CCB
+Telmez CCB
+Ondenox
+Cineutec
+Salbutec
+Citicolex
+None
+Axemef
+Dinosed
+Fundaz-50
+Triasaph
+Amlothix
+None
+Amlothix
+None
+Rophagen
+Tractoban
+Pantop 40
+Eperton
+Avistra
+Metho SPAL-L 50
+Convuliz
+Misal
+Dapaquis
+AdocLact
+Maclitax
+Glubitor-OD
+Etorifar
+Asmasar
+Faracox
+I-Berize 12.5
+Berzide 12.5
+Constilax
+Sunglip 50
+Sunglip 100
+Faracox
+Woncare-C
+Fluconasaph
+Zydip-C
+Sultralin
+Betahiz 24
+Betahiz
+None
+Aprunol
+Mitriax S 1.5.
+Vortinex 15
+Vortinex 10
+Cemoxi
+Bdfoie 4
+Bdfoie 10
+Blicalm O
+Glaumed
+Janumet
+Apicog-2.5
+Apicog-5
+Xpecia
+Janumet
+Bobbie Essentials
+Superscent Relaxing Oil
+Valprodin
+Abstral
+Abstral
+Abstral
+Abstral
+Tamglob
+Glymed-1.9
+Alventil Plus
+Alventil
+Cilzec A
+Cilzec-A
+Cilzec-A
+Cilzec-A
+Numazid
+Doxfen 200
+Doxfen 400
+Double Prawn Brand Rumagon
+Cainedent
+Cainedent
+Ondaget
+Caglor
+Advent C
+Dermivex B
+Melophil
+Melophil
+FeROSE
+Kris Haplas
+Kris Mega Haplas
+Dermivex G
+Betavex G
+Philxole
+Philxole XT
+Philxole Plus
+Appetamine with Iron
+None
+Vergimine
+Zartas-50
+Zartas-100
+Mefidin
+Mefidin
+Lifezar
+Zopralix
+Amosartan Q
+Amosartan Q
+Amosartan Q 5/100/20Mg
+Amosartan Q
+Htsone
+Amloget 5
+Amloget 10
+Mofutas
+Gentambcin
+Empera
+Empera
+Carnet-S
+Zitrin
+Derm-Cee
+Jewel-Cee
+Fulverhys
+CZSAN
+Coxsan
+Coxsan
+Protek-GFR
+Ranesan
+Venlaglob-150
+Dipeen
+None
+Adreprez
+Adreprez
+Exesit-M
+Naproq-550
+Venlaglob-75
+Porsclinda
+Risperic
+None
+Novazart
+Altuxerin
+Altuxerin
+Altuxerin
+None
+None
+None
+Mucocet
+Stenac
+Fluliber
+Borzomib
+Bocetin
+Acyteine 600
+Samvon
+Zaluta
+Etirox
+Pyromed
+Pyromed Kids
+Fucil
+Relidomide 5
+Relidomide 7.5
+Relidomide 10.
+Relidomide 15
+Relidomide 20
+Relidomide 25
+Tumiwel
+Ursobile
+Irbovel
+Irbovel
+V-Olet
+VancoGet 500
+VancoGet 1000
+Resgas P
+Simecogen P
+Simegas P
+Prostoflow
+Linalix 5
+Linalix 10
+Linalix 15
+Parabie
+Pantovex
+Sanovee
+Czure
+Articure 100
+Cefazovin
+Vidime
+Pharmacort
+Diulix
+Tozul
+Aclitel
+Centrane
+Gablin
+Halodem
+Zithrorich
+Coxirich
+Somaset
+Axitro
+Ronicyn 200
+Azfed
+Zithroquest
+Febupro
+Feburex
+Fexustan 40
+Nephrolive
+Ketocure
+Mitoban-260
+Taxcel
+Apiklot
+Uricgo
+None
+Loxotop Tape
+Flupdec
+Clobila
+Pneumosolv
+Gastalix
+Mupicimed
+Retaproban-R
+Retatel Plus 80/5
+Atorvex-10
+Clamoxmed 125
+Atorsky-20
+Trimesky
+Clopisky
+Clavomoxyl 125
+Clavomoxyl 228
+Clavomoxyl 625
+Clavomoxyl 250
+Lipinov 20
+Gostin-10
+Celesky
+Elidel
+K-Dent
+Varostin
+Naprolex
+Tobradepors
+Stagmet
+K-Dent (For Export Only)
+Risperic
+Xelavir
+Young's
+Young's
+Young's
+Young's
+Alcoshield
+Bonpime
+Ibrunex
+Bronchomide
+Catania Max
+Philcox Duo
+None
+Meronash-500
+Linocaine
+Vira
+Novazithro
+Cilozia
+Gc Flu
+Toriva 7.5
+Toriva 5
+Blimuca 600
+Gluclazide SR
+None
+Eostatin 80
+Zeepovit
+None
+Amoxsur 500
+Acyclant
+Lamosyn 50
+Lamosyn 100
+Bildorz T
+Verticease-16.
+Cefitome
+None
+Rosumibe
+Meropegen
+Meropegen
+Bapicrem
+Eplephil-25
+Eplephil-50
+Mupirtect
+Cosimetz
+Bacticin
+Simegas
+Sennanov
+Racetol
+Talmicillin
+Talmicillin
+Siti-Furose
+Kabiroc
+Sugamex
+Apixero 5
+Apixero 2.5
+Cadiglip 50
+Pol-Vanco
+Pol-Vanco
+Emicox-400
+Emicox
+Agyzide
+Bicalut-50
+Troysetron
+Champs C
+Luthione
+Veristine 24
+Episert
+Plemex for Kids
+Citiroque
+Hemlob
+Hemlob
+Sitanova Plus 50/1000
+Nobilis RT + IB + MULTI + G + ND
+Ppt
+Isolan 5%
+Vitality Gentle & Natural Dog Shampoo & Conditioner
+Procaine Benzylpenicillin + Dihydrostreptomycin (As Sulfate) (Vet.)
+Cyclosol La
+Laking V-22 Siglakas
+T.L.S. 20%
+Ivomec
+Taktic
+None
+Baytril 5%
+Unbranded
+None
+None
+DSP
+Advocin
+Phylumox
+None
+Baytril
+Gentamox
+MULTIBIO
+B-Dexin
+Calcionet
+Bayopet
+TMP-S 24%
+Immiticide
+Frontline Spray
+Cenoxytet L.A.
+Penvet
+Duphalyte
+Tripulac Pig Doser
+Bexan SP
+Robicomject
+Oxytokel
+Vitadecen AD3E
+Unbranded
+None
+Unbranded
+P.G. 600
+None
+Robi LA
+Micronized Aluminum (Vet.)
+Cortamethasone
+None
+Cyclo Spray
+Unbranded
+Pyreflex
+Marbocyl 10%
+Ivercen-10
+Ancomoxin 150 La
+Marbocyl 2%
+Steclin LA 20%
+Robigenxyn P
+Nuflor
+Ancomec 10
+None
+Marbocyl
+Complexor 3000
+LAKING V-22 BONE BUILDER
+Biocatalin
+Fatrocortin
+Aurizon
+TOLFEDINE
+Bexan XP
+Finadyne
+Oxytocin (Vet.)
+Alfamec
+Respilief
+None
+Dufa-Penstrep
+Dextraprime 100
+Unbranded
+Roxacin
+Unbranded
+3-S
+Jectran Premium with Zinc
+Mycipen-MD
+SMP-500
+ILUALCIN
+VIGOPLEX
+LAKING V-22 KASADO
+BELADE
+Virbac Citius
+PPT
+HEXAMIDE CREAM
+HUS CREAM
+Trisullak
+Tulaven
+ECOLMIN
+Planate
+Calactron
+None
+None
+Septicide
+Ancomycin 200 L.A.
+Proheart SR-12
+Iverjec
+Chemshot
+Baycox
+Unbranded
+Baytril Pigdoser
+Kiltix Collar Large
+Synchrovet
+Retardoxi-20 L.A.
+Frontline Plus For Cats
+FRONTLINE PLUS FOR SMALL DOGS UP TO 10KG
+Coforta
+Sebacil
+Calmivet
+Excede
+Baytril Max 10%
+Advantix 25kg
+Advantix (For Dogs 10 kg to less than 25 kg)
+Advantix (for dogs 4kg to less than 10kg)
+None
+Invemox
+VibraVet Paste for Cats and Dogs
+Revolution (for dogs 2.6kg - 5kg)
+Revolution (for dogs 5.1kg - 10kg)
+Revolution (for dogs 10.1kg - 20kg)
+Revolution (for dogs 20.1kg - 40kg)
+Advocate For Dogs Over 25 Kg
+Advocate for Dogs 4-10 kg
+Advocate (For Cats Over 4 Kg)
+CANIVERM
+Robipenstrep-P
+Advantix
+Amtyl 500
+RESPICHEM
+Canex
+Wormvet
+Dexaveto-0.2
+Iron D
+Advocate for Large Dogs 10 kg & 25 kg
+Advocate for Small Dogs 4 kg or less
+Advocate For Cats 4 Kg Or Less
+Tyloveto - 20
+Zoletil 50
+PETWORMER
+T2S 500
+PULMOQUIN
+Heartgard Plus (For Dogs 12Kg To 22 Kg)
+Heartgard Plus (For Dogs Up To 11 Kg)
+Heartgard Plus (For Dogs 23Kg To 45Kg)
+MITE FREE
+Iron D Supra
+Gentaveto-5
+Pneumovet
+L-Spec 5/10
+B50/2 FORTEN
+Vermigo
+Enroprime
+Mycocide
+Enroprime 10%
+Endogard
+Lumiscen
+Tape Terminator
+Nova-Oxycin
+Vmd Vitaveto Solution For Injection
+Sulvet Oblet
+None
+Cobactan 2.5%
+Bayopet Tick and Flea Soap
+Proxigen
+Nova-Fe + B Complex
+BIOPIROX
+Viminolak
+Pyristat
+Valbazen
+Thiabex Xs
+Convenia
+Worm-Out
+Gafervit
+Amikin
+Parid
+Nova B Complex
+None
+Ruminec
+None
+Diacoxin
+Eficur
+None
+PYRISTAT
+Romoxtyl
+Ilium Pyraquantal
+None
+Selectan
+Belamyl
+Fortius L.A.
+Maxflor LA
+Animycin
+Decomoton
+Pigbiotic
+Suacron
+Imizol
+DOXYLAK FORTE
+Veteglan
+Benalvet 15%
+Annzole 12.5%
+VERMEX FORTE
+VERMIBAN
+Marbovitryl 250
+Ceptifi Suspen
+Amoxyveto - 15
+Dogbiotic
+Regumate Porcine
+Duplocillin
+Cortavance
+Annzole 12.5%
+Tyla-Cure
+Vimespiro FSP
+Valbazen
+G.A.
+Microzole
+Wormavet
+Thymol
+Caniverm Puppy
+REDBIK TYLO
+Vicox-Toltra
+PRAZIQUIN PLUS
+None
+Tape-Out
+ISOLAN 20%
+Avicass
+Amprol 12% Solution
+ISOLAN 5%
+Strongard
+Gestavet Prost
+Clavamox
+Hemoplex
+Enefur
+Vetrimoxin L.A.
+Folivet
+DTC
+Enroveto 20 Oral Solution (Vet.)
+Metacam
+Pakyaw
+Belamyl
+None
+Easotic
+Ancoprofen 10%
+Oxcin 10
+TENALINE L.A.
+BC Xylased
+Microzole
+Microzole
+Ancopen 20/20
+Vigorol Oral Emulsion
+Recharge
+ZOLETIL 100
+Microzole
+Alfaglandin P
+Effipro Spray
+None
+Sergon PG 400+200
+Wormectin
+Rovistress
+Macrotyl
+Drontal Puppy
+LINCOVET PLUS
+Vitadex-200
+Amoxtyl
+Triple Distilled Water
+Neurovet
+Petgard
+Petgard Original
+Colmoc
+Porcibex
+BIOCURE
+Calveex Reformulated
+Breed Tonic
+Trisullak 3A
+Pigeon Bloom
+Pigeonstat
+REDBIK IRON
+Enzaprost T
+HEPAXIVIT
+Vitrio
+Respicure
+STELLITE
+Unbranded
+Vermitraz
+Laktrazine
+TYLOJET
+PETGARD
+WASH OUT INTENSE
+Honey Aid
+Previcox
+Bayopet Dog Shampoo
+Shieldgard
+Shieldgard 3-in-1
+Shieldgard Flea and Tick
+Zuprevo
+Bayopet Dog Shampoo
+Albendrench
+COCKSURE
+Albendrench Forte
+PS-230
+SUPER B12
+Neo-Meditril-I
+Nov-A-Vit 500
+Super Vitamina B12 5500
+MICONATE
+None
+Scalibor Protectorband (For Large Dogs)
+Altresyn
+Vanguard
+F.T.D.
+Woundex
+Cobactan LA 7.5%
+Tolfine
+PHENOXYMETHYL PENICILLIN POTASSIUM + SULFAMETHAZINE + SULFADIAZINE + SULFAMERAZINE (VET.)
+Dosto Emulsion
+Zactran
+None
+Mulivit
+Dufa-Iron 20%
+Flunivet
+None
+At Max
+Canisep
+IMMUNOVET
+Nefrotec
+Liv-52
+Immunol (Vet.)
+Dufavit
+Virbagest
+Biocatalin
+Biocatalin
+Pet-C
+Cevazuril
+Dufamox LA
+Bc Ketachamp
+Methozine
+Dufaflor
+Nova-Mectin
+Seftiovet 5%
+Laking V-22 Vitatablets
+Nexgard For Dogs 4-10 Kg
+Nexgard For Dogs 25-50 Kg
+Nexgard for Dogs 2-4 Kg
+Nexgard for Dogs 10-25 Kg
+Ampidexalone
+Unbranded
+Boflox
+Optimmune
+Unbranded
+Unbranded
+Bravecto for Very Small Dogs (2 Kg - 4.5 Kg)
+Bravecto for Small Dogs (>4.5 Kg - 10 Kg)
+Bravecto for Medium sized Dogs (>10 Kg - 20 Kg)
+Bravecto for Large Dogs (>20 Kg - 40 Kg)
+Fluralaner (Vet.)
+Supremo B-Max
+Amoxi 15% LA
+Voltplex KQ
+None
+Anthelock 50
+Anthelock 50
+Milbemax (for large dogs)
+Milbemax (For Small Dogs And Puppies)
+Alcomed ADE
+C.T. Williams
+Septaplex
+Bio-Rantel
+Marbovitryl 100
+Cofacalcium
+Remacycline La
+Pet Society
+Beejet
+Broadline For Cats <2.5 Kg
+Broadline for Cats 2.5 Kg - 7.5 Kg
+Oculin
+Vetradox
+Cankervet
+Bio-Derma
+Pet Society
+Bio-Ade + B-Complex
+Pendistrep L.A.
+Opticare
+Gentalak- 50
+Annzole 15%
+None
+Zitibrom
+Caninsulin
+Iodostrike
+Ceftiomax
+Unbranded
+Unbranded
+Optaflox
+Spray Dog
+Rockdove Smasher
+Promotor 43
+Pyripole (Vet.)
+Astig
+Prac-tic for small dogs
+None
+Vasotop P (For 20 kg & 40 kg Dogs)
+Vasotop P (For 5 kg - 10 kg Dogs & Cats)
+Ivermectin (Vet)
+Vasotop P (For 10 kg - 30 kg Dogs)
+Vasotop P (For 2.5 - 5 kg Dogs & Cats)
+Porceptal
+Fipron for large dogs 20-40 kg
+Apex Ear Drops
+Albendazole (Vet)
+Ciprofloxacin + Tylosin (Vet.)
+None
+-
+Fenbendrench
+Pigeonbiotic
+Quickheal
+Vermex-4
+FUMASH
+Fercobsang NF
+Dermovet
+Caniverm
+Effinol Plus (for dogs 20 to 40 kg)
+Effinol Plus (for dogs 40 to 60 kg)
+Effinol Plus (for dogs 10 to 20 kg)
+Effinol Plus (for dogs less than 10 kg)
+Forcyl
+Mycocin
+Arthrox
+Prazivet Forte
+Fipron for medium dogs 10-20kg
+Fipron for small dogs 2-10kg
+Forza Animale Ds For Gamefowls
+Forza Animale Agb Syrup
+None
+Petprotect 10
+Seresto
+Seresto for Cats and Dogs
+Vet-Doxy
+Drontal Plus Tasty
+Digest Pills
+Chickbiotic
+NF-One
+Cyanocobalamin (Vit. B12) + Folic Acid
+Immunoglukan
+None
+None
+Prazilex
+Nexgard Spectra for Dogs >30-60 Kg
+Nexgard Spectra for Dogs >15-30 Kg
+Nexgard Spectra for Dogs >7.5-15 Kg
+Nexgard Spectra for Dogs >3.5-7.5 Kg
+Nexgard Spectra for Dogs 2-3.5 Kg
+Porceptal
+V-50
+Otidex
+Albendavet
+Slasher
+Dufa-Penstrep La
+Ornipural
+Draxxin
+None
+Bel-Met
+Vetracin Gold
+Feather Shine
+Cazitel
+Lutalyse Injection
+Hepaxivit Plus
+Freximol
+Dufafur
+Dufafloxacin
+Bel-Met
+Petcure
+Pigicox
+Simparica
+Simparica
+Simparica
+Simparica
+Marbocen
+None
+Zero Mite
+Bastonero Plus
+Frontline Plus For Dogs 10-20 Kg
+Frontline Plus For Dogs 20-40 Kg
+Excenel RTU EZ
+Wash & Shine
+Calci - X
+Cancare
+Ornistat
+Effinol
+Uniferon
+Multivitamins + Minerals (Vet)
+Toco Selenio
+Zuritol 50
+Oxytetra 200 L.A.
+Oridermyl
+Veterelin
+Fortekor
+Fortekor
+Forza Animale DS for Companion Animals
+Doxiplus
+Doggies' Choice Herbal Cream
+MARBOCYL P
+MARBOCYL P
+Gleptosil
+Pneumosure
+Vitachem
+Gentachem
+Amoxichem
+Pyranex
+Spectromax-L
+Rockdove Voltplex
+Arthropet
+Busterid
+Onsior
+Onsior
+Onsior
+Onsior
+FAST HEAL
+Prazimax
+LAKDOCYN
+NUTRA HEAL
+EAZY HEAL
+Red Gel Forte Plus
+Betavet
+Betavet
+Bravecto Spot-On for Small Dogs (>4.5-10 Kg)
+Bravecto Spot-On for Medium-Sized Dogs (>10-20 Kg)
+Bravecto Spot-On for Large Dogs (>20-40 Kg)
+Bravecto Spot-On for Very Small Dogs (2-4.5 Kg)
+Bravecto Spot-On for Small Cats (1.2-2.8 Kg)
+Rid-A-Worm
+Unbranded
+Amoxacin-500
+Fenicol 10%
+Fenicol 20%
+Tylomix-100 Premix
+Deltacal
+LC-VIT OB
+Dufafosfan
+Dufamox-G
+Dufamox LA
+Unbranded
+ILUALCIN
+Cerenia
+Myogaster-E
+Flor-Cure 250
+Flor-Cure 250
+Tetramax - 20
+Marbogard
+Amoxygen
+Spasmovet
+Vasotran
+HERIDEX
+LAKAPULCO
+Tulathromax
+Cefvet
+Porcifen - S
+Amoxicol
+Agromoxin
+Enroguard
+Dynazide
+Gentaguard
+Lincospecvet
+Marboguard
+Marboguard
+Dexaguard
+Danoguard
+Paralgin-50
+Ambiflor
+Agrotilin - 20
+Ceftiogard
+Vitaliverex
+Ivercare
+Vitade - Forte
+Marbovet
+Macrotul-100
+Tiofur-50
+Fervit-20
+Lorfen-30
+Teracline-20
+Marbox
+Trimoxine-48
+Sulfaflor
+Gentacillin
+Prac-Tic Spot-On for Very Small Dogs (2kg-4.5kg)
+Prac-Tic Spot-On for Large Dogs
+Paramec-10
+Ceftioflox
+Spelinex
+Multibex
+Colimox
+Baycox®
+Combinex
+Tilmigard-30
+Diacid
+Tetra-Tab
+Prilmal-Tab
+Mucovet
+Ascorvet
+Cenflox
+Enterovet
+Melogesic For Dog
+Arthromed
+Derm-Care
+Amoxiject - 15
+Anthelmix
+Kombitrim 240
+Bexan Xp
+Calcitone
+Macrofol
+Doggies' Choice Tick & Flea Shampoo with Conditioner
+Doggies' Choice Tick & Flea Soap
+Carbaryl (Vet.)
+Melogesic For Cats
+Cepharon
+Bromotil
+Mectinvet
+None
+Frontprime for Dogs (10kgs-20 kg)
+Bravecto Plus For Cats (1.2 Kg-2.8 Kg)
+Bravecto Plus For Cats (2.8 kg-6.25 kg)
+Ectomec for Cats (>7.5Kg)
+Cotripet
+Multipet
+None
+None
+Cyclovet
+Doggies' Choice Pet House Cleanser
+None
+Cepravin DC
+Floxilak
+Mastiplan LC
+Bromhexipet
+Lincomix
+None
+Apoquel
+Apoquel
+Apoquel
+Nobivac Diluent
+Bayovac Dhppi+L
+Baycox 2.5
+Baytril 10%
+Parapleuro Shield P
+Avinew NeO
+Pluset
+Florfenikel 300
+PR-Vac Plus
+Canicef
+Respisure
+Bel-PYRINE
+Growpet
+Diluvac Forte
+Coforta Aqua
+Gumbohatch
+Eryseng Pavo/Leptos
+Eryseng Parvo
+Eryseng Parvo/Lepto
+Micohex Plus
+Tilvalocef
+Micohex Advance
+Sterile Dye
+Type-B Red
+None
+Evant
+Evalon
+Multivets
+Enerpro
+Enroflexin
+Mareks Diluent
+Type A - Blue
+Nobilis RT Inac
+Enradin 80
+Enradin 40
+WORM-X
+None
+None
+Unistrain Prrs
+Nobilis RT+IB MULTI+ND+EDS
+None
+Slazbolak
+None
+Vanguard-Plus-5L4
+Vepured
+Suiseng
+Vectormune HVT NDV
+Parvoseng
+Tylvalomox
+Tylmox
+Nobilis Diluent FD
+Nobilis Diluent CA
+None
+PondDtox
+Bayovac R
+Nobilis ND C2
+CEVAC ND-IB-EDS K
+Vectormune HVT LT
+Nobilis MG Inac
+Nobilis Cav P4
+Nobilis Corvac-4
+Nobilis Corvac
+Nobilis RISMAVAC
+Nobilis MS Live
+None
+LT-IV AX
+Pestiffa
+Quantum Dog DAPPvL+Cv
+Nobilis REO+IB+G+ND
+ProteAQ Stomi
+Poulvac Magniflex
+None
+Hipraviar ND BROILERS
+Hipraviar TRT4
+Nobilis SG 9R
+Porcilis PARVO
+Nobilis SALENVAC T
+Toxipra Plus
+Doxicure
+Aviboost Poultry Tonic
+Aviboost Aqua-Blok
+None
+None
+Zygonox Poultry
+Coripravac
+Hipraviar BPL2
+Deocare Aqua
+Hiprasuis GLÄSSER
+Nobilis Gumboro 228E
+Nobilis ND Clone 30
+Hipraviar TRT
+Nobilis RT + IB MULTI + G + ND
+Neumosuin
+Recombitek C4/CV
+Recombitek C6
+Recombitek C6/CV
+Vectormune HVT NDV & Rispens
+Mypravac SUIS
+Hipraviar CLON
+Poulvac Bursa F
+Calphomin
+Solvens Oculo/Nasal
+Fostera Gold PCV-MH
+Poulvac Procerta HVT-ND
+Nobilis IB Multi + ND + EDS
+Poulvac EC
+ARN Protector Plus
+None
+Fluvac Innovator EHV 4/1
+Baymin
+ARN Antistress Plus
+None
+None
+Exzolt
+Effyheat
+Deccox
+Top B+
+Denagard
+Paylean 20
+Denagard
+Zipyran Plus Flavor
+Promin
+pH Guard
+Vetrimoxin 50 Matrix
+Gripork
+Hipragumboro BPL 2
+Tickamit 12.5
+Hipraviar SHS
+Pecutrin XP
+Hipratifus AV2
+Coripravac AH
+Hipragumboro GM97
+None
+None
+Bronipra ND/IBD
+Hipraviar B1
+Ingelvac MycoFLEX
+Primodog
+Suigen PCV2
+Nobilis EDS
+Nobilis ND Broiler
+Pecutrin
+PneumoSTAR SIV COMPLETE
+Auskipra GN
+Hipraviar S/H120
+Suigen HC
+Nobivac L4
+Exzolt
+AVA-POX-CE
+Nobivac KC
+Toxipra Plus
+Suigen APP+PM
+Vaxxitek HVT + IBD + ILT
+Suigen PRDC
+Nobivac DHPPi
+Neocolipor
+Miclozan R200
+Papi MVP
+Papi OB
+Suiseng
+Rhiniseng
+Enterisol Ileitis
+Ingelvac Circoflex
+Nobilis REO 1133
+Nobilis REO Inac
+Hipraviar B1/H120
+IBH 4/8
+Papi Bion Plus
+Papi Livwell
+Renacure
+Parvoseng
+Recombitek C8
+PM-ONEVAX-C
+Bronipra 1
+Nutri-Plus Gel
+Prevexxion RN
+Nobilis COR4+IB+ND+EDS
+Nobilis AE+POX
+Innovax-ILT
+Hipradog DP
+Hipradog DHLP
+Enterovax
+Quantum Dog DA2PPVL
+M+PAC
+AviPro Precise
+Monteban 100 Premix
+Porcilis M Hyo ID Once
+Parvo Shield L5E
+None
+Bronipra ND
+Suipravac PRRS
+Hipradog 7
+Hipraviar AP
+Nobivac DHPPi
+Renal Care
+Cani-Vit
+Surmax 100
+Porcilis Begonia
+Porcilis Porcoli DF
+Adenipravac-ND IB
+Gallimune 203 ND+IB
+Stomi
+Auskipra BK
+Avisan Multi/Co
+Eryseng Parvo
+Hiprasuis GLÄSSER
+Mypravac SUIS
+SuiShot APM-7
+Ingelvac PRRS MLV
+Nobilis Gumboro Inac
+Nobilis IB Multi + G + ND
+Nobilis IB + G + ND
+Nobilis SE Live
+AviPro MG F
+AviPro 431 ND-IB-BD3-REO
+Newhatch-C2-M
+Innovax-ND-IBD
+Gallimune 503 Nd+Ib+Eds+Ic2
+Nuflor
+Innovax-ND-ILT
+Univax Plus
+Fortegra
+Poulvac Ndw
+Porcilis Begonia I.D.A.L.
+Poulvac TRT
+Pneumodog
+Nacalvit C
+Vermifuge
+Papi Doxy
+Papi Scour
+Nacalvit Zc
+Chick N-K
+Tri-Reo
+Poxine
+None
+None
+Tickamit 12.5
+Felocell-4
+Farrow Sure Gold B
+Suvaxyn Respifend Hps
+Correlink Abs1704
+Bronchicine Cae
+None
+Correlink Abs1999
+Correlink Abs1781
+Correlink Abs747
+Nobilis Gumboro D78
+Hipragumboro CH80
+Enradin
+SuiShot AllRes
+Bioral H120 Neo
+Prime Pac PRRS
+Defensor-3
+Nobilis MG 6/85
+Nobilis MA5+Clone 30
+Nuflor
+Aquaflor
+Stronghart
+Stronghart
+Dufaprofen
+F Vax-MG
+Enterisol PED MLV
+Poulvac Bursaplex
+Univax-BD
+Dufamec
+AviPro ND-IB-Sohol
+Ingelvac H
+Newxxitek HVT + ND
+AviPro ND-IB-Polybanco
+Hipraviar Clon/H120
+Rhiniseng
+Porcilis PCV ID
+Porcilis CSF Live
+Rispens CVI 988
+Rispens CVI 988
+LaSota BLEN
+LaSota MASS BLEN
+Volvac ND Concentrate KV
+Bigopest
+IBD BLEN
+Prazinate
+Haemovax
+Purevax Felv
+Gallimune 403 Nd+ Ib + Ibd + Reo
+Purevax Rcp
+Gallimune ND
+Rabisin
+Rabisin
+Diftosec
+Gallivac IB88 NeO
+Gallimune 201 IBD + REO
+Gallimune SE + ST
+Bur 706
+Chemexine Plus
+Vaxxitek HVT + IBD
+BDA Blen
+Ivomec
+Zygonox Poultry
+Papi Doxy
+Vermifuge
+HB1 Mass Blen
+Laking V-22 Pulmotect
+Xylazin
+Volatex
+AviPro 104 Mg Bacterin
+Volvac AC Plus Emulsified Bacterin
+Volvac AC Plus + ND + IB + EDS KV
+Volvac Ac Plus Bacterin
+AviPro Salmonella Vac E
+FluSure
+Vaxxitek HVT + IBD + ND
+Hipraviar S
+AviPro 108. FC3 Platinum
+Correlink ABS1541 :
+None
+Baymix Grobig BS
+Prevexxion RN & HVT
+Prevexxion RN & Vaxxitek HVT + IBD
+Gallivac IBD S706 Neo
+Simparica
+Purevax Rabies
+Avipro Salmonella Duo
+Para Shield
+Avipro Thymovac
+None
+Simparica
+Simparica
+Entericolix
+Porcilis Ery + Parvo + Lepto
+Unisolve
+Diluvac Forte
+Gallimune 302 ND + IB + EDS
+Nobilis Coryza
+Baymix Latibon Plus Me
+Nobivac Puppy DP Plus
+Troy Nutripet
+Recombitek C4
+Volvac ND IB EDS KV.
+Ingelvac Aujeszky MLV
+Ultimin 10%
+Feligen RCP
+Canigen DH (A2) PPIL
+Biocan R
+Anigane
+Simparica
+Ingelvac HP-1
+Porcine Pili Shield + C
+CEVAC ND IB IBD K
+VSI Aminovit
+Canvac R
+Gallimune 407 ND +IB + EDS + ART
+Porcilis Coliclos
+None
+None
+Cytopoint
+Porcilis PCV M Hyo
+Tulissin 25
+Ingelvac CircoFLEX-MycoFLEX
+ProVac 4
+LitterGuard LT-C
+3Flex
+RespiSure1 One
+Poulvac iN LaSota
+V.A. ChickVac
+AE- Poxine
+Tulissin 100
+Porcilis PRRS
+Porcilis Lawsonia
+Emunade
+Nobilis ND C2
+Nobilis ND Clone 30
+Nobilis IB 4-91
+Nobilis IB Ma5
+Porcilis Glasser
+APM777
+AP125RX
+MPS
+Raksharab
+Oxy-La
+Thump-Out
+Nobilis Ma5 + Clone 30
+Diluvac Forte
+Coryza Gel-3
+Porcilis AR-T DF
+Vetmedin S
+Vetmedin S
+Poulvac Bursine-2
+Poulvac Ovoline CVI + HVT
+Innovax ND
+BC Mycochamp
+Suivac PRRS-IN
+Suivac APP
+Pestisen C
+CFLEX
+Vaxsafe MG
+Vaxsafe MS
+Powerarmor
+Fostera PRRS
+Enropet
+Nexgard Combo (Cats > 2.5 kg)
+Poulvac i Mix 6
+Prosystem® RCE
+Nexgard Combo (Cats 2.5-7.5 kg)
+None
+Promotor L 47.0
+Inmunair 17.5
+Poulvac Bursine 3
+Leptoferm-5
+Baxidil
+Neostab
+Flopig Gold 4%
+Flopig Gold 4%
+AviPro IBD Xtreme
+Cytopoint
+Nobivac Tricat Trio
+Porcilis App
+Vanguard Plus 5/L
+Cytopoint
+Cytopoint
+Pest-Vac
+Floshot Sol
+Citifac 15%
+Citifac 20%
+Citifac 25%
+Viva-Tia
+Viva-Tia
+None
+Roxacoli
+Pet-Tabs
+Vaxxon Coccivet R
+Hepavigor
+Ivoral 2%
+Pulmotil AC
+Pulmotil 200
+Avatec 20%
+Cygro 1 %
+Wormec
+Porcilis Lawsonia ID
+Hipralona Enro-S
+Povinol
+Neomix AG
+Aradicator
+Improvac
+Fostera PCV Metastim
+Equilibrium
+None
+Purevax Feline 4
+None
+Vanguard Plus 5 CvL
+Oxyverm
+Zamax
+Rovax
+Nemovac
+Zuritol
+Caliermutin
+Roxacin OS
+Flubenzim 5%
+Megavac-6
+Coccivac™-D2
+Neocoxin Sol
+Correlink ABS 2018
+Handong Tiasol
+Nobilis Newcavac
+Biofel PCH
+Biofel PCHR
+Vetoflor
+Nobilis® Rismavac + CA126
+Porcilis PCV
+NeoWay 32.5%
+Iverbase 0.6%
+Bursa-Vac
+Biocan DHPPiLR
+Biocan Novel PI/L4
+Canvac DHPPiL + R
+Canvac 8 DHPPiL
+Parvosin-OL
+Enrodex
+Protexin Aquatech
+Albenson 15%
+Circumvent PCV
+Rhiniffa T
+Nobilis IB+ND+EDS
+Biocan Puppy
+Biocan M
+Tylan 250 Premix
+APN Vitamino 10
+APN Vitaminoacidos Liq.
+Hepavit
+Selevit Dex Liquid
+Selevit Dex
+Canicee
+Canglob P
+Canglob D Forte
+Albenson
+T Grow
+Supramulin 80
+Supramulin 20
+APN Formula 100
+APN Doxi 10
+Porcilis® Ileitis
+Porcine Epidemic Diarrhea Vaccine, RNA Particle Platform
+Nobivac Lepto
+PRV Marker Gold
+Bursa-Vac 3
+Panacur AquaSol
+Nobilis Reo 2177
+Nobilis IB + ND
+Bayovac MH-PRIT-5-One
+Nobivac Puppy DP
+Laking V-22 Purgaling
+Nobivac Rabies
+Cenamoxyl L.A.
+Nobivac R.L
+Uticare
+Vet Care
+Linco-Pectin
+Linco-Pectin
+Linco-Pectin
+CMP-S
+Animycin Plus
+Amilyte-C
+Milkpro
+Conciplex
+B-Meg Integra Worm-X Maxx
+None
+Amilyte-C
+Biocan Novel DHPPI
+Suvaxyn Respifend MH/HPS
+Nutrichunks MULTI-V YUM
+Nobilis IB Primo QX
+Recombitek Oral Bordetella
+Rhinisin DNT
+Check-O-Tox Bio Plus
+Avipro 101 Coryza Gold
+Powerguard
+Hiprahatch Solvent
+Biocan Novel DHPPi L4R
+Dectomax (Phenol-Free)
+LC-Dox
+Hydralyte
+None
+Calcipet
+X-Solve 12
+Nobivac Intra-Trac Oral Bb
+Clamoxon SP
+Nutrivit Plus
+Mhyosphere PCV ID
+Pondplus
+Nobivac HCP+FeLV
+Farmaxillin 50
+Canker Out
+MB-1
+Stronghart (For 23-45 kg dogs)
+None
+None
+Neptra
+Vac-Safe
+Renavet
+Fluvit
+Furgard
+Vermicide
+Rumizole
+None
+Penikel 300
+Ancomoxin 150 LA
+ReproCyc ParvoFLEX
+Virbamec L.A.
+Inflacam
+Coliprotec F4/F18
+Chemject
+Cyanodex
+Prevacent PRRS
+PT Blen
+Cyclase
+Polypleurisin APX Plus IM
+Parid Pour-On
+Livocin
+Evicto
+Evicto
+AviPro ND C131
+Envemox
+Enterovet
+None
+Iron-Aid
+Tullavis 100
+None
+Nectiv Forte
+Monodox
+Labistress
+Ferroject
+Novesel
+Rheumocam
+Vasopril
+Nutrich
+Start Vac
+StartVac
+Chemflox
+None
+MD-Vac Check
+Tabic IB var
+Pramectin
+Nova-Enrocin 10%
+None
+Pneumovet-20
+Nervet
+QuicFIP Plus
+Ivemax
+Salmin Plus
+Vitacept
+Vitacept
+Curadex
+None
+Selectan
+Tulinovet
+Izovac Fowl Pox
+Pet C Forte
+Kick Tape-Dog Tablet
+Librela
+Librela
+Librela
+Librela
+Librela
+Floxiren
+Promax Small (For Dogs <10 kg)
+Promax Medium (For Dogs 10-25 kg)
+Promax Large (For Dogs >25 kg)
+Evanovo
+V.H.+H-120
+Red Solvent
+Labidrosol B
+Liver Gard
+Rheumocam 1.0 mg
+Solensia
+Colizine
+Radicate Spon-On
+Boltron-C
+LT Blen
+Speclin
+Coatex
+Nilablend
+Dufamec
+Poulvac IB QX
+Linco-Res
+Apoquel
+Apoquel
+Apoquel
+WoundGard
+Primun Gumboro W2512
+None
+Primun Gumboro
+Sebazole
+Vetroade
+Primun Salmonella E
+Primun Newcastle C30
+Bearing Formula 1 Tick & Flea Dog Shampoo For All Dogs
+Bearing Formula 2 Tick & Flea Dog Shampoo For Short Hair
+Bearing Formula 3 Tick & Flea Dog Shampoo For Long Hair
+Bearing Formula 5 Tick & Flea Dog Shampoo For Smelly Hair
+Bearing Formula 6 Tick & Flea Dog Shampoo For White Hair
+Bearing Formula 7 Tick & Flea Dog Shampoo For Small Breeds
+Innovax-Ilt-Ibd
+Bearing Formula Tick & Flea Dog Powder
+Thunderbird Derby Ready
+Tabic M.B
+Cevac Megamune ND IB EDS SHS K
+None
+Daxton
+None
+Rheumocan
+KerolyTIC Shampoo
+SebOUT Shampoo
+Tilavac Volta
+Biocan Novel DHPPI/L4
+Tilavac S3
+Spectromax-L +
+Univerm Total
+Ancopen 20/20
+Strike-off Shampoo
+QuicFIP Plus
+QuicFIP Plus
+Nobilis Diluent CA Plus
+Eryseng
+None
+None
+Tabic VH
+Nixor
+None
+QuicFIP Spray
+Ceftivet 5%
+Ceftivet 10%
+Vaxxon MD Diluent
+DS Circo Pigvac
+Kolisin Neo
+Evicto for 5-10 Kg Dogs
+Cevac IBH Multi K
+Masodine RTU
+Tabic IB Var206
+Cyclavance
+None
+Timustax
+None
+Qivitan
+None
+None
+None
+None
+Eficur
+Eryseng
+None
+Ivershield
+Exzolt
+Bravecto 365
+Nobilis Multriva RT+Ibm+ND+Gm+REOm+EDS
+None
+Yevax PCV2
+Promectin
+Valosin
+Mometamax Ultra
+Credelio Plus (For Dogs >2.8 5.5 kg)
+Valosin 425
+Credelio Plus (For Dogs 1.4 2.8 kg)
+Credelio Plus (For Dogs 5.5 11 kg)
+Credelio Plus (For Dogs 11 22 kg)
+Credelio Pl (For Dogs 22 - 45 kg)
+Pyrsvac-183
+None
+Recombitek Canine Parvo
+CL-Ear Cleanser
+CarniKO
+Suigen Coli F4
+None
+Strong-5000
+Petpals
+Laveex
+Nutribex
+Ultifend IBD ND
+Zactran
+Daily Boost
+None
+Vet Expert Cardio Vet
+Vet Expert RenalVet
+Vet Expert Hepatiale Forte Small Breed and Cats
+Vet Expert Hepatiale Forte
+Vet Expert VetoSkin
+Ainil
+Nobilis Multriva RT+IBm+ND+EDS
+Terramycin La
+BELMET
+KOPELAX
+C.B.G.
+Vetcombex
+D.C.M.
+Denagard
+Proflok CAV Ab
+ProFLOK AE Ab
+Proflok Ms Ab
+GenAmplify
+ProFLOK IBD AB
+FluDETECT Avian
+ProFLOK NDV AB
+ProFLOK AIV AB
+Vetlab Rapid CCV/CPV/GIA Ag Combined Test Kit
+VetLab Rapid CHW/Ehr/Lyme/Anaplasma Combined Test Kit
+Vetlab Rapid FIV Ab/FelV Ag Combined Test Kit
+ProFLOK LT AB
+ProFLOK MG AB
+ProFLOK IBV AB
+Vetlab
+Vetlab Rapid Leptospira IgM Ab Test Kit
+Vetlab Rapid Giardia Ab Test Kit
+Vetlab Rapid CDV/CAV Ag Test Kit
+IDEXX M.Hyo Ab Test
+IDEXX IBV Ab Test
+IDEXX Influenza A Ab Test
+IDEXX CSFV Ab Test
+IDEXX CAV Ab Test
+Civtest AVI NDV
+ProFLOK IBD PLUS Ab
+ProFLOK REO Ab
+IDEXX PR/ADV GI Test
+IDEXX CSFV Ag Test
+IDEXX APP Ab Test
+IDEXX IBD Ab Test
+IDEXX AE Ab Test
+IDEXX REO Ab Test
+IDEXX NDV Ab Test
+IDEXX MS Ab Test :
+Idexx Herdcheck Pseudorabies Virus Gb Test
+IDEXX PRRS X3 Ab Test
+IDEXX PRRS of (Oral Fluid) Ab Test
+CIVTEST Avi IBV
+CIVTEST Avi IBD
+IDEXX RealPCR ASFV DNA Mix
+IDEXX MG Ab Test
+CIVTEST Avi TRT
+CIVTEST AVI EDS
+Vetlab
+Vetlab
+Vetlab
+Vetlab Rapid CDV Ag Test Kit :
+Vetlab Rapid CPV Ag Test Kit
+Vetlab Rapid FCOV Ag Test Kit
+VMRD Bluetongue
+VMRD Small Ruminant
+VMRD Equine
+VDRG CCV/CPV Ag
+VDRG CPV Ag Rapid Kit
+VDRG E.canis Ab Rapid Kit
+VDRG CDV Ag Rapid Kit
+VDRG CHW Ag Rapid Kit
+VDRG FeLV Ag/FIV Ab
+Pencheck
+Virotype Asfv 2.0 PCR Kit
+RIDXTM AIV Ag Test Kit
+Bio-T Kit ASFV Universal
+Anitia Canine IgE I
+Hipradermic
+Hipraject
+Automatic Self-Filling Syringe (Vet.) [HSW Eco-Matic Twin]
+Automatic Self-Filling Syringe (Vet.) [HSW Eco-Matic]
+Ehrlichia canis Premix Polymerase Chain Reaction (PCR) Detection Kit (Vet.) [Pockit Central Ehrlichia canis Premix]
+Pockit Central Leptospirosis (lipL32) Premix
+Pockit™ Central Cartridge Set B
+Pockit™ Central Cdv Premix
+Pockit™ Central Canine Babesiosis Premix
+Needle Free Intradermal Vaccination Device (Vet.) [Idal 3G+ Mono]
+Idal 3G+ Twin
+Maedi-Visna Virus (MVV) + Caprine Arthritis. Encephalitis Virus (CAEV) Antibody Test Kit (Vet.)
+Anigen Rapid
+African Swine Fever (ASF) Virus Polymerase Chain Swine Reaction (PCR) Detection Kit (Vet.) [Adialyo ASFV Test Kit]
+Pneumatic Vaccinator Device and Spare Parts (Vet.) [Pneumatic Vaccinator Zootec Double and Spare Parts]
+Progesterone Detection Kit (Vet.)
+Vmrd Map
+Avian Influenza A Virus H5 Antibody Test Kit (Vet.)
+Avian Infectious Laryngotracheitis (ILT) Virus Antibody Test Kit (Vet.)
+African Swine Fever Virus (ASFV) Antibody Test Kit (Vet.)
+Avian Infectious Laryngotracheitis (ILT) Virus Antibody Test Kit (Vet.)
+Influenza A Virus Antibody Test Kit (Vet.)
+Canine Distemper Virus (CDV) Antigen Test Kit (Vet.) [SensPERT CDV Ag Test Kit]
+Anigen Rapid AIV Ag Test Kit
+Bionote CSFV Ab ELISA
+Rapigen Canine Distemper Ag Test
+Newcastle Disease Virus (NDV) Antibody Test Kit (Vet.)
+Dirofilaria immitis + Anaplasma phagocytophilum Anaplasma platys + Borrelia burgdorferi + Ehrlichia canis + Ehrlichia ewingii ELISA Kit (Vet.) [Snap 4Dx Plus Test Kit]
+Brucella abortus B. melitensis B. suis Antibody Test Kit (Vet.)
+Kylt IBV-Variant QX
+Kylt FAdV
+Anigen Rapid NDV Ag Test Kit
+Bionote PRRS Ab ELISA 4.0
+Pneumatic Vaccinator Zootec Single and Spare Parts
+Pneu-Cabin Sprayer Manual Mono Elite
+Nobilis REB 15
+Pneu-Cabin Sprayer Manual Dual Elite
+Nobivac
+E-Trolley Spray Wagon
+Nobilis Double Breast Vaccinator
+Vectorfog ULV C150+
+Innoject Pro
+Innoject Pro
+None
+None
+None
+Kylt APP
+Priocheck FMDV NS Ab Strip
+None
+Kylt H5/H7/H9
+Vetmax African Swine Fever Virus Detection Kit
+Rapigen Canine Parvovirus Ag Test
+Rapigen Canine Heartworm Ag Test
+Kylt ASF
+Kylt PCV-2 Typing
+Kylt Salmonella spp 2.0
+Kylt MGS Triplex
+Adialyo CSFV
+SBC ASFV CPCR Kit
+None
+Vetdiagnostix
+Progesterone Detection Kit (Vet.) [Vet Chroma Progesterone]
+Canine Parvo Virus (CPV) + Canine Coronavirus (CCV)+ Giardia Antigen Detection Kit (Vet.) [Vet Chroma Canine 3D]
+Vet Chroma™ Fpl
+Canine Pancreatic Lipase Detection Kit (Vet.) [Vet Chroma cPL]
+Canine N-Terminal Pro-B Type Natriuretic Peptide (NP) Detection Kit (Vet.) [Vet Chroma CNT-proBNP]
+None
+Porcine Reproductive and Respiratory Syndrome (PRRS) Virus RNA Polymerase Chain Reaction (PCR) Detection hain R Kit (Vet.)
+None
+Bayopet Clean n' Shine Soap (Jojoba Oil with Apple Scent)
+Bayopet Conditioning Shampoo (Jojoba Oil with Apple Scent)
+Bayopet Moisturizing And Antiseptic Shampoo (Coconut Milk with Cucumber Scent)
+Bayopet Herbal Hair Grower Shampoo (Aloe Vera with Balsam Scent)
+Bayopet Herbal Hair (Aloe Vera with Balsam Scent)
+Bayopet Conditioning Shampoo (Jojoba Oil with Apple Scent)
+Bayopet Moisturizing and Antiseptic Shampoo (Coconut Milk with Tea Tree Oil)
+Bayopet Coconut herbal soap ( Coconut Milk with Cucumber Scent)
+Doggies' Choice Kawati Naturale Merry Strawberry Shampoo (Strawberry Scent)
+Doggies' Choice Kawati Naturale Volumizing Shampoo (Vanilla Scent)
+Doggies' Choice Kawati Naturale Gentle Puppy Shampoo (Baby Powder Scent)
+Doggies' Choice Kawati Naturale Cool Peppermint Shampoo (Peppermint Scent)
+Doggies' Choice Kawati Naturale Oatmeal and Tawas Deodorizing Shampoo (Tropical Scent)
+Reliq Natural Mineral Spa
+Vet Essences Dogs and Cats Light Coat Shampoo Conditioner (Floral Scent)
+Vet Essences Dogs And Cats Soothing Shampoo-Conditioner (Citrus Scent)
+Vet Essences Dogs and Cats Dark Coat Shampoo Conditioner (Floral and Fruity Scent)
+Vet Essences Dogs and Cats Grooming Shampoo Conditioner (Green Apple Scent)
+Bayopet Aloe Vera Soap Aloe Vera with Balsam Scent (Vet.)
+Petgard (Lemon Scent)
+Top2Tail Dog Bath Soap - Refreshing Olives
+Top2Tail Dog Bath Soap - Energizing Musk
+Top2Tail 2 in 1 Dog Shampoo & Conditioner - Refreshing Olives
+Top2Tail 2 In 1 Dog Shampoo & Conditioner - Warm Vanilla
+Sergeant's Fur So Fresh Gentle Guard Shampoo For All Puppies Baby Fresh Scent
+Sergeant's Fur So Fresh Hi-White Dog Shampoo Vanilla Berry
+Sergeant'S Fur So Fresh All Purpose For All Dogs Ocean Breeze
+Bio-Jolie
+Vet Naturals AP (Grooming Soap for Dogs) (Citronella Scent) (Vet.)
+Vet Naturals Af (Grooming Soap for Dogs) (Vet.)
+Vet Naturals WM (Grooming Soap for Dogs) (Eucalyptus Scent) (Vet.
+Paws & Fur - Sea Breeze
+Paws & Fur - Fresh Powder
+Saint Roche Premium Dog Coat Conditioner (Sweet Embrace Scent) (Vet.)
+Saint Roche Premium Dog Coat Conditioner (Heaven Scent) (Vet.)
+Saint Roche Premium Dog Coat Conditioner (Mother Nature Scent) (Vet.)
+Saint Roche Premium Dog Coat Conditioner (Happiness Scent) (Vet.)
+Saint Roche Premium Dog Shampoo (Sweet Embrace Scent) (Vet.)
+Saint Roche Premium Dog Shampoo (Happiness) (Vet.)
+Paws & Fur - Lavender Bloom Scent (Vet.)
+Purlite - Litter Conditioner (Pine and Eucalyptus Scent) :
+Vet's Friend Forever (Fruity Scent)
+Happypet (Nourishing skin care gel) (Vet.)
+Happypet Odour Out Shampoo
+Cuddly Pet Cologne (Athletic Scent)
+Cuddly Pet Cologne (Tommy Girl Scent)
+Cuddly Pet Cologne (Armani Scent)
+Saint Roche Premium Dog Shampoo (Mother Nature Scent)
+Bow Wow Aromatic Dog Shampoo (Grapefruit Scent)
+Bow Wow Aromatic Dog Shampoo (Chamomile Scent)
+Bow Wow Aromatic Dog Shampoo (Eucalyptus)
+Saint Roche Premium Dog Shampoo (Heaven Scent)
+Happy Pet 2-in-1 Shampoo with Conditioner (Powder Fresh Scent) (Vet.)
+Happy Pet Shampoo (Tea-tree Scent) (Vet.)
+Happy Pet Bright White Shampoo (Lavender Scent) (Vet.)
+Cuddly Pet Cologne [Cool Mint Scent] (Vet.) :
+Pet Smart
+Happy Pet Deodorizing Dry Shampoo (Vet.)
+Bench Fur Baby Pet Powder (Fur-Ever Free Scent) (Vet.)
+Bench Fur Baby Grooming Dog Shampoo (Fur Ever Free Scent) (Vet.)
+Frenzy Shampoo [Strawberry Scent] (Vet.)
+Furmagic Dog Soap (Violet - Night Line Scent) (Vet.)
+Furmagic Dog Soap (Blue - Butter Fresh Scent) (Vet.)
+Furmagic Dog Soap (Pink - A1 Fresh Scent) (Vet.)
+Saint Roche Premium Dog Soap (Sweet Embrace Scent) (Vet.)
+Saint Roche Premium Dog Soap (Mother Nature Scent) (Vet.)
+Saint Roche Premium Dog Soap (Heaven Scent)
+Saint Roche Premium Dog Soap (Happiness Scent) (Vet.)
+Furmagic Dog Shampoo (Violet - Night Line Scent) (Vet.)
+Furmagic Dog Shampoo (Pink-Al Fresh Scent) ) (Vet.)
+Furmagic Dog Shampoo (Blue Butter Fresh Scent). (Vet.)
+Saint Roche Basic Dog Shampoo (Lovely Lavender)
+Saint Roche Basic Dog Shampoo (Pink Blossom)
+Saint Roche Basic Dog Shampoo (Cherub)
+Saint Roche Basic Dog Shampoo (Sweet Love)
+Veronica's Premium
+Athletic Scent
+Top2Tail Pet Grooming Wipes-Powder Fresh
+Frenzy
+Pretty Tail
+Pretty Tail
+Shampoo (Strawberry Scent)
+Shampoo (Athletic Scent) (Vet.)
+Pet Pals
+Bench/Fur Baby Pet Cologne (Vet.)
+Vitality Gentle & Natural Dog Shampoo & Conditioner
+Clean Canine Pet Shampoo (Citrus Lemon Scent)
+Petgard Grooming Shampoo (Vanilla & Honey Grooming Shampoo For Dogs)
+Clean Canine Pet Shampoo (Citrus Lemon Scent)
+Hyfur Mouth Freshener (Mint Flavor)
+Hyfur Cologne Acqua
+Hyfur Cologne Amour
+N/A
+N/A
+Vet Essences Dogs and Cats Blackberry Pet Cologne [Fresh and Fruity Scent] (Vet.)
+Hyfur Shampoo & Conditioner Aqua
+Hyfur Shampoo & Conditioner Amour
+Baby Fresh Pet Cologne (Vet.)
+Tropical Fruit Pet Cologne (Vet.)
+Clean Canine Pet Shampoo-Passion Conditioner (Vet.)
+Clean Canine Pet Shampoo - Passion Red With Conditioner (Vet.)
+Clean Canine Pet Shampoo -Passion Red With Conditioner (Vet.)
+Boarbetter
+Draxxin
+AMOCILVET 15%
+Aptamoxcin
+Jickferron-100
+Tape Terminator
+Mucobrom
+Broncoprime
+DEXAVET-500
+Dexameth-500
+VETMECTIN-10
+Primectin 1%
+Jickferron-200
+Dextraprime 200
+Tiacilvet
+Primulin-100
+Enerviplex
+Primeplex
+Vibeflex
+ENROVET
+Chemexine
+JPI Gentacin
+Flavicel
+Cetaprime-B2
+Fluvit
+E-Tylogen
+Nova-ADE Vita
+Nova D.O.T
+Avitron
+Nova-Tetra LA
+Macrocal
+Wormguard
+Vet-Oxy-20
+Gertrol
+Trimethoprim + Sulfamethoxypyridazine
+Tylovet-200
+Tyloprime-200
+Nova-Gentylo
+None
+Lc-Cal
+Bio-Florsone
+Codexine
+Bio-Genta Tylo
+Tetra 200 LA
+Oxyprime LA
+Bio-Anflox 100
+Bio-Para 100
+Bio-Selevit-E
+Bio-Enro 100
+Bio D.O.C
+None
+Bio-B Complex
+Bivermectin
+Bio-Septryl
+ENSOQUINE
+Nova-COC 5%
+Lincovet
+Calciovet-250
+Calcioprime
+B-Complex C
+Novasal Complex
+Thunderbird Full Power
+Bio-Tylo 200
+Bio-Dtc-Fort
+Enraxcin 100
+Floxane
+Fenisin-D
+Ever-Dtf
+Florvet-200
+Bioxide
+Bio-Genta 10%
+Nova-Flor 40 La
+Dexxflor 40% LA
+Bio-Gentadrop
+Petcee
+Nova-Pink
+Enroflox-200
+Jickferron 200 + B12
+Dextraprime 200 + B12
+Oxytetracycline (Vet.)
+None
+Ferrimon
+JPI Metasal
+Toltrazuril (Vet.)
+Primecox 5%
+Norxacin-100
+None
+Lincospec-B
+Spectiline-BH
+Ever-SLB
+Jicktamox
+Genmox
+Jicktamox
+OTC 20% LA
+Sustalin LA
+None
+None
+Genvet Oxyn
+Ener-B
+Cephabac
+Medicef
+Ferro Destrano
+Iron-Vet
+Ticotin
+B.Complex Ade
+Vimetryl 100
+Vimectin
+Genvet Ivermec
+Vimenro
+Bacterid
+Maxivet
+None
+Aerofar
+Gold Medallion
+Bully Boy
+Paravet 100
+Genvet Paracet
+None
+Genvet Sync
+Fortified B.Complex
+None
+None
+Shimectin
+Vitavet-ADE
+Hepavita
+Tylostrep
+Doxymax
+LC-DOX
+METHIOVET
+None
+BIOCAL
+PROXANTEL
+Vimefloro FDP
+Nova-Cefur
+Aptiofur
+DOGGY - DOGGY
+Xtramino-B Forte
+Sorvit
+Vime-Blue
+Vimekat
+Ceptifi 4P
+Vime-ATP
+Clamox
+Vitaject
+Ivicide
+Purge Pro
+None
+Unbranded
+None
+Gembifer
+Ferrovita
+Doxy 20%
+None
+Ketovet
+Terra-Blue Spray
+Vimetol
+Ferosate
+Vermzipet
+None
+LC-Vit
+Ascorvet
+None
+Petanyl
+Mucovet
+Scourpet
+Canixetin
+Saphlodex-T
+Saphalgin
+Nova-Amox LA
+Cevac FP L
+Marbovac
+Bexan XP B-Caps
+Amoxiject-15
+Reomune 3
+Broilermune
+Broncopet
+Bromivet
+Cevac Mg F
+Immucox 5
+Cevac Corymune 4 K
+Cevac Corymune 7 K
+Colimox
+Cevac MD HVT + RISPENS
+Cevac Coryza 3 Gel
+Cevac ND IBD K
+Cevac NB L
+Cevac Vitabron L
+Circomune
+None
+Vectormune FP-LT
+Cevac MD Rispens
+Vacci - Aid Powder
+Liposorb
+None
+Parvoject
+None
+Vectormune FP MG
+None
+None
+Calphomin
+Calciupet
+Multibex
+Macrotul-100
+Paramec-10
+Quadrexsaph
+Ambicosin
+Butamin - 12
+Teracline-20
+Fervit-20
+Immucox 3
+Bio-Milk
+Quickheal
+None
+Petsure
+Fronil Extra For Dogs Up To 2Kg - 10Kg
+Fronil Extra For Dogs Up To 10Kg - 20Kg
+Cevac Meta L
+Poximune AE
+Coglapest
+Cevac EDS K
+Cevac Mass L
+Cevac IBird
+Vigosine
+Hyobloc®
+Liposorb DS
+Colivet
+Progressis
+Cevac Transmune
+Vectormune ND
+Parvoject
+Cevac Coryza Combo 6
+Coglapix
+Nextmune
+Cevac Vitapest L
+Cevac Broiler ND K
+Cevac ND-IB K
+Novamune
+Hyogen
+V-Power
+Circovac
+Circovac
+Pro-Vac Circomaster
+Gentacillin
+Auphyl Plus
+Cevac New L
+Cevac Gumbo L
+Cevac IBD L
+Cevac New K
+Cevac ND IB IBD EDS K
+Tiamvet 100
+Pracetam 20%
+Vetrimoxin ® 50%
+Dexopet
+Nutrical
+Cevamune
+Progressis
+None
+Ambifen
+Chemshot
+Nematocide
+Proxantel Chewable
+Marbovitryl 100
+Cevac Uni L
+Ceva Valora
+Zambac MD 100
+Zamstat 120
+Zamstat 120
+Vital Hepato
+Vitalamino Forte
+Vitalsel
+Vital B Com Plus
+Virbagen Omega
+Farm axillin 50
+Promotin TRT
+Farm aflor 30
+Farm aflor 30
+Farmaflor
+Spectomix
+Farmaflox PS
+Farmaflor
+Enrabase
+Farm aflox 70
+Hibac
+Lincofarm TR
+Coxifarm Plus
+Lorfen-30
+FB Doxi
+Tirmeclor
+Zambac MD Soluble
+Zamidine 100
+Zamidol 250
+Zamivet 40
+Zambac ZN 150
+Zamipro SL
+Zambac MD 100
+Zamipro LSL
+Zamuril 5
+Zamiquin 60
+Res-Vac
+Zambac ZN 150
+Zamivet 80
+HC-Vac
+Pro-Vac Circomaster One Shot
+Marbocept
+Growth Advance
+Vital Hydrant
+Iodophore 20%
+Happypet Vit+Amino
+Naturevet Pet Vita
+Conflox
+Sulcoprim
+Colimoxyn
+Strongard
+Ceproflox
+Tiagen-20
+Ascorsaph-1000
+LC-Vit Plus
+Enrovet
+Ferrolicare
+Spectomix
+Neolin
+Pyranvet
+Forgrow-forte
+Appemed
+Quinogard
+Neurosaph Max-INJ
+Saphsodex
+Pulmogard
+Fostera Gold PCV
+Zamivet 40
+Zamivet 80
+Appeboost
+Doxanyl
+Parvoject
+Marbopill
+Vetrozole
+None
+Miconazole (Vet.)
+Vescovit
+Leucofeligen FeLV/RCP
+Centruvet
+Nova-Green
+Vescomax
+Pyrimed
+Tiamusaph
+Tiamusaph
+Milpro
+Milpro
+Milpro
+Adevits
+Izovac ND-IBD
+LIV-VITA
+Milpro
+Canitone Jr.
+Canitone
+Izovac H120 Clone
+Izovac Gumboro 3
+Izovac FC
+Izovac Coryza 3
+Izovac Clone
+Primecide
+IZOVAC Gumboro 2
+IZOVAC CHB
+IZOVAC H120-La Sota
+Izovac ND IB EDS
+Izovac La Sota
+Izovac Mg
+Duoko
+Fortevit
+Melogesic for Dogs
+Conmectin
+Germ Guard
+Blisstavita
+Provit-A
+Livertel
+Mulvisine
+Assurity Plus Spot on ≤4 Kg Dogs
+Crystaline B12
+Vimefer Plus
+Ferrum Oral
+Assurity Plus Spot-on for Cats (<4-8 Kg)
+Hemo-B Plus
+Myoderm
+Top2Tail Dog Bath Soap - Warm Vanilla
 `;

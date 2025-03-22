@@ -10,10 +10,24 @@ import Spinner from "../../../../assets/common/spinner"; // Import Spinner
 const PrescriptionResultsScreen = () => {
   const router = useRouter();
   const { matchedMedicines } = useLocalSearchParams();
+  const [medicines, setMedicines] = useState([]);
   const [pharmacies, setPharmacies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [expandedMap, setExpandedMap] = useState(null);
+
+  useEffect(() => {
+    try {
+      if (matchedMedicines) {
+        const parsedMedicines = JSON.parse(matchedMedicines);
+        setMedicines(Array.isArray(parsedMedicines) ? parsedMedicines : []);
+      }
+    } catch (error) {
+      console.error("❌ Error parsing matchedMedicines:", error);
+      setMedicines([]); // Ensure it's always an array
+    }
+  }, [matchedMedicines]);
+  
 
   useEffect(() => {
     const fetchPharmacies = async () => {
@@ -21,16 +35,20 @@ const PrescriptionResultsScreen = () => {
 
       try {
         setLoading(true);
-        const formattedMedicines = JSON.parse(matchedMedicines).map(med => med.trim().toLowerCase());
 
-        console.log("Fetching pharmacies with medicines:", formattedMedicines);
+        const formattedMedicines = JSON.parse(matchedMedicines)
+        .map(med => med?.genericName ? med.genericName.trim().toLowerCase() : null)
+        .filter(Boolean); // Remove null/undefined values      
+
+        console.log("🔍 Matched Medicines:", formattedMedicines);
 
         const response = await axios.post(`${baseURL}medicine/with-medicines`, { medicineNames: formattedMedicines });
-        console.log("API Response:", response.data);
+
+        console.log("✅ API Response:", response.data);
 
         setPharmacies(response.data.data || []);
       } catch (err) {
-        console.error("API Error:", err);
+        console.error("❌ API Error:", err.response ? err.response.data : err.message);
         setError("Error fetching pharmacy data. Please try again.");
       } finally {
         setLoading(false);
@@ -42,6 +60,7 @@ const PrescriptionResultsScreen = () => {
 
   return (
     <View style={styles.container}>
+      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -49,178 +68,156 @@ const PrescriptionResultsScreen = () => {
         <Text style={styles.headerTitle}>Pharmacy Results</Text>
       </View>
 
+      {/* Content */}
       {loading ? (
         <Spinner />
       ) : (
         <ScrollView contentContainerStyle={styles.content}>
-        {pharmacies.length > 0 ? (
-          pharmacies.map((item, index) => {
-            const isExpanded = expandedMap === index;
-      
-            // Summing stock of the same generic name while preserving the original case
-            const medicineStockMap = new Map();
-      
-            item.medicines.forEach((med) => {
-              const name = med.genericName.trim(); // Keep original case
-              if (medicineStockMap.has(name)) {
-                medicineStockMap.set(name, medicineStockMap.get(name) + (med.stock || 0));
-              } else {
-                medicineStockMap.set(name, med.stock || 0);
-              }
-            });
-      
-            // Convert back to an array of unique medicines with total stock
-            const uniqueMedicines = Array.from(medicineStockMap, ([genericName, totalStock]) => ({
-              genericName,
-              totalStock,
-            }));
-      
-            // Check if all medicines are out of stock
-            const allOutOfStock = uniqueMedicines.every(med => med.totalStock === 0);
-      
-            return (
-              <View key={item.pharmacy._id || index} style={[styles.pharmacyCard, isExpanded && styles.expandedCard]}>
-                <View style={styles.pharmacyInfo}>
-                  <Text style={styles.pharmacyName}>{item.pharmacy.userInfo.name}</Text>
-                  <Text style={styles.pharmacyDetails}>
-                    {item.pharmacy.userInfo.street}, {item.pharmacy.userInfo.barangay}, {item.pharmacy.userInfo.city}
-                  </Text>
-                  <Text style={styles.pharmacyDetails}>📞 {item.pharmacy.userInfo.contactNumber}</Text>
-                  <Text style={styles.pharmacyDetails}>
-                    🕒 {item.pharmacy.businessDays} ({item.pharmacy.openingHour} - {item.pharmacy.closingHour})
-                  </Text>
-                  <Text style={styles.medicineTitle}>Available Medicines:</Text>
-      
-                  {uniqueMedicines.map((med, medIndex) => (
-                    <Text key={`${item.pharmacy._id}-${medIndex}`} style={styles.medicineText}>
-                      {med.genericName}: {med.totalStock} in stock
-                    </Text>
-                  ))}
-      
-                  {/* View Pharmacy Button */}
-                  <TouchableOpacity
-                    style={[
-                      styles.viewPharmacyButton,
-                      allOutOfStock ? styles.disabledButton : styles.enabledButton, // Apply different styles
-                    ]}
-                    onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${item.pharmacy._id}`)}
-                    disabled={allOutOfStock} // Disable button if all stock is 0
-                  >
-                    <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
-                  </TouchableOpacity>
-                </View>
-      
-                <View style={isExpanded ? styles.fullScreenMapContainer : styles.mapContainer}>
-                  <MapView
-                    style={isExpanded ? styles.fullScreenMap : styles.map}
-                    initialRegion={{
-                      latitude: parseFloat(item.pharmacy.location.latitude),
-                      longitude: parseFloat(item.pharmacy.location.longitude),
-                      latitudeDelta: 0.01,
-                      longitudeDelta: 0.01,
-                    }}
-                  >
-                    <Marker
-                      coordinate={{
-                        latitude: parseFloat(item.pharmacy.location.latitude),
-                        longitude: parseFloat(item.pharmacy.location.longitude),
-                      }}
-                      title={item.pharmacy.userInfo.name}
-                      description={`${item.pharmacy.userInfo.street}, ${item.pharmacy.userInfo.barangay}`}
-                    />
-                  </MapView>
-      
-                  <TouchableOpacity
-                    style={styles.zoomButton}
-                    onPress={() => setExpandedMap(isExpanded ? null : index)}
-                  >
-                    <Ionicons name={isExpanded ? "remove-circle-outline" : "add-circle-outline"} size={16} color="#007BFF" />
-                  </TouchableOpacity>
-                </View>
-              </View>
-            );
-          })
-        ) : (
-          <Text style={styles.noResults}>No pharmacies found with the requested medications.</Text>
-        )}
-      </ScrollView>
-      
+          {pharmacies.length > 0 ? (
+            pharmacies.map((item, index) => {
+              const isExpanded = expandedMap === index;
 
+              // Combine same medicine names & sum their stock
+              const medicineStockMap = new Map();
+           // Extract medicines from `byGeneric` and flatten them into an array
+           const allMedicines = Object.values(item.medicines.byGeneric || {}).flat();
+           allMedicines.forEach(med => {
+             const name = med?.genericName?.trim?.(); // Ensure med and genericName exist
+             if (name) {
+               medicineStockMap.set(name, (medicineStockMap.get(name) || 0) + (med.stock || 0));
+             }
+           });
+
+              const uniqueMedicines = Array.from(medicineStockMap, ([genericName, totalStock]) => ({
+                genericName,
+                totalStock,
+              }));
+
+              const allOutOfStock = uniqueMedicines.every(med => med.totalStock === 0);
+
+              return (
+                <View key={item.pharmacy._id || index} style={[styles.pharmacyCard, isExpanded && styles.expandedCard]}>
+                  
+                  {/* Pharmacy Info & Medicines */}
+                  <View style={styles.pharmacyInfo}>
+                    <Text style={styles.pharmacyName}>{item.pharmacy.name}</Text>
+                    <Text style={styles.pharmacyDetails}>
+                      {item.pharmacy.address.street}, {item.pharmacy.address.barangay}, {item.pharmacy.address.city}
+                    </Text>
+                    <Text style={styles.pharmacyDetails}>📞 {item.pharmacy.contactNumber}</Text>
+                    <Text style={styles.pharmacyDetails}>
+                      🕒 {item.pharmacy.businessDays !== "Not Available" ? item.pharmacy.businessDays : "Business hours not available"}
+                    </Text>
+                    <Text style={styles.pharmacyDetails}>
+                      ⏰ {item.pharmacy.openingHour !== "Not Available" && item.pharmacy.closingHour !== "Not Available"
+                        ? `${item.pharmacy.openingHour} - ${item.pharmacy.closingHour}`
+                        : "Hours not available"}
+                    </Text>
+                    <Text style={styles.medicineTitle}>Available Medicines:</Text>
+               {/* Display Unique Medicines Without Redundancy */}
+            {Object.entries(item.medicines.byGeneric).map(([genericName, brands]) => {
+              const isGenericScanned = medicines.some(med => med.genericName?.toLowerCase() === genericName.toLowerCase());
+              const scannedBrandNames = medicines.map(med => med.brandName?.toLowerCase()).filter(Boolean);
+
+              if (isGenericScanned) {
+                return (
+                  <View key={genericName} style={styles.medicineCategory}>
+                    <Text style={styles.medicineGeneric}><Text style={styles.boldText}>{genericName}</Text></Text>
+                    {brands.map((med, index) => (
+                      <Text key={index} style={styles.medicineBrand}>
+                        {med.brandName} - <Text style={styles.stockText}>{med.stock} in stock</Text>
+                      </Text>
+                    ))}
+                  </View>
+                );
+              }
+
+              // If a brand is scanned, only show that brand under its generic name
+              const matchingBrands = brands.filter(med => scannedBrandNames.includes(med.brandName?.toLowerCase()));
+
+              if (matchingBrands.length > 0) {
+                return (
+                  <View key={genericName} style={styles.medicineCategory}>
+                    {matchingBrands.map((med, index) => (
+                      <View key={index}>
+                        <Text style={styles.medicineGeneric}><Text style={styles.boldText}>{genericName}</Text></Text>
+                        <Text style={styles.medicineBrand}>
+                          {med.brandName} - <Text style={styles.stockText}>{med.stock} in stock</Text>
+                        </Text>
+                      </View>
+                    ))}
+                  </View>
+                );
+              }
+            })}
+                  </View>
+                  {/* Map Section */}
+                  <View style={isExpanded ? styles.fullScreenMapContainer : styles.collapsedMapContainer}>
+                    <MapView
+                      style={isExpanded ? styles.fullScreenMap : styles.collapsedMap}
+                      initialRegion={{
+                        latitude: parseFloat(item.pharmacy.latitude),
+                        longitude: parseFloat(item.pharmacy.longitude),
+                        latitudeDelta: 0.01,
+                        longitudeDelta: 0.01,
+                      }}
+                    >
+                      <Marker
+                        coordinate={{
+                          latitude: parseFloat(item.pharmacy.latitude),
+                          longitude: parseFloat(item.pharmacy.longitude),
+                        }}
+                        description={`${item.pharmacy.street}, ${item.pharmacy.barangay}`}
+                      />
+                    </MapView>
+
+                    <TouchableOpacity
+                      style={styles.zoomButton}
+                      onPress={() => setExpandedMap(isExpanded ? null : index)}
+                    >
+                      <Ionicons name={isExpanded ? "remove-circle-outline" : "add-circle-outline"} size={16} color="#007BFF" />
+                    </TouchableOpacity>
+                  </View>
+                  
+                    {/* View Pharmacy Button */}
+                    <TouchableOpacity
+                      style={[styles.viewPharmacyButton, allOutOfStock ? styles.disabledButton : styles.enabledButton]}
+                      onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${item.pharmacy._id}`)}
+                      disabled={allOutOfStock}
+                    >
+                      <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
+                    </TouchableOpacity>
+                </View>
+              );
+            })
+          ) : (
+            <Text style={styles.noResults}>No pharmacies found with the requested medications.</Text>
+          )}
+        </ScrollView>
       )}
     </View>
   );
-
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff'
-  },
-  content: {
-    flexGrow: 1,
-    padding: 16
-  },
+  container: { flex: 1, backgroundColor: '#ffffff' },
+  content: { flexGrow: 1, padding: 16 },
   header: { flexDirection: 'row', alignItems: 'center', padding: 16, backgroundColor: '#005b7f' },
   backButton: { marginRight: 10 },
   headerTitle: { fontSize: 18, color: 'white', fontWeight: 'bold' },
-  loadingText: { marginTop: 10, fontSize: 16, color: '#005b7f' },
-  pharmacyCard: {
-    flexDirection: 'row',
-    backgroundColor: '#f5f5f5',
-    borderRadius: 10,
-    padding: 16,
-    marginBottom: 15,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 5,
-    elevation: 3,
-  },
-  expandedCard: {
-    flexDirection: 'column',
-  },
-  pharmacyInfo: {
-    flex: 1,
-    paddingRight: 10,
-  },
+  pharmacyCard: { backgroundColor: '#f5f5f5', borderRadius: 10, padding: 16, marginBottom: 15, shadowColor: '#000', shadowOpacity: 0.1, shadowOffset: { width: 0, height: 2 }, shadowRadius: 5, elevation: 3 },
+  expandedCard: { flexDirection: 'column' },
+  pharmacyInfo: { flex: 1, paddingRight: 10 },
   pharmacyName: { fontSize: 16, fontWeight: 'bold', color: '#333' },
   pharmacyDetails: { fontSize: 14, color: '#555', marginVertical: 2 },
   medicineTitle: { fontSize: 14, fontWeight: 'bold', marginTop: 8, color: '#333' },
   medicineText: { fontSize: 14, color: '#333', marginLeft: 10 },
-  mapContainer: {
-    flex: 1,
-    height: 150,
-    borderRadius: 8,
-    overflow: 'hidden',
-    position: 'relative',
-  },
-  map: {
-    flex: 1,
-    height: 150,
-  },
-  fullScreenMapContainer: {
-    flex: 1,
-    height: 400,
-    width: '100%',
-    marginTop: 10,
-    borderRadius: 10,
-    overflow: 'hidden',
-    position: 'relative',
-  },
-  fullScreenMap: {
-    flex: 1,
-    height: '100%',
-  },
-  zoomButton: {
-    position: 'absolute',
-    bottom: 10,
-    right: 10,
-    backgroundColor: 'white',
-    borderRadius: 50,
-    padding: 5,
-    elevation: 5,
-  },
+  stockText: { fontWeight: 'bold', color: '#007BFF' },
+  collapsedMapContainer: { height: 100, marginTop: 10, borderRadius: 10, overflow: 'hidden' },
+  collapsedMap: { flex: 1, height: '100%' },
+  fullScreenMapContainer: { height: 400, width: '100%', marginTop: 10, borderRadius: 10 },
+  fullScreenMap: { flex: 1 },
+  zoomButton: { position: 'absolute', bottom: 10, right: 10, backgroundColor: 'white', borderRadius: 50, padding: 5, elevation: 5 },
   noResults: { textAlign: 'center', marginTop: 20, fontSize: 16, color: '#888' },
   viewPharmacyButton: {
     marginTop: 10,
@@ -235,13 +232,13 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
   },
-  enabledButton: {
-    backgroundColor: "#007BFF",
-  },
-  disabledButton: {
-    backgroundColor: "#ccc",
-    opacity: 0.6,
-  },
+  // available medicines
+  medicineCategory: { marginTop: 10 },
+  medicineGeneric: { fontSize: 14, color: '#333' },
+  boldText: { fontWeight: 'bold' },
+  medicineBrand: { fontSize: 14, color: '#333', marginLeft: 10 },
+  stockText: { fontWeight: 'bold', color: '#007BFF' },
+
 });
 
 export default PrescriptionResultsScreen;
