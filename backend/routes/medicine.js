@@ -428,8 +428,11 @@ router.post('/with-medicines', async (req, res) => {
 
         // More flexible query for matching medicines
         const medicines = await Medicine.find({
-            genericName: { $in: formattedMedicineNames.map(name => new RegExp(`^${name}$`, 'i')) }
-        });
+            $or: [
+                { genericName: { $in: formattedMedicineNames.map(name => new RegExp(name, 'i')) } },
+                { brandName: { $in: formattedMedicineNames.map(name => new RegExp(name, 'i')) } }
+            ]
+        });        
 
         console.log("✅ Medicines found in DB:", medicines.map(med => med.genericName));
 

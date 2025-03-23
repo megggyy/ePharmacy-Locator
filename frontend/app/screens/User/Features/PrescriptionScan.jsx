@@ -101,19 +101,29 @@ const PrescriptionScreen = () => {
     // **Improved Matching Logic**
     const matched = medicinesList
     .map((medicine) => {
-      const genericName = medicine.genericName.toLowerCase();  
-      const brandName = medicine.brandName.toLowerCase();  
+      const genericName = medicine.genericName.toLowerCase();
+      const brandName = medicine.brandName.toLowerCase();
   
-      const hasExactMatch = correctedWords.some(word => 
-        genericName.split(/\W+/).includes(word) || 
-        brandName.split(/\W+/).includes(word)
-      );
+      let matchedFrom = null;
+  
+      const hasExactMatch = correctedWords.some(word => {
+        if (genericName.split(/\W+/).includes(word)) {
+          matchedFrom = "genericName";
+          return true;
+        }
+        if (brandName.split(/\W+/).includes(word)) {
+          matchedFrom = "brandName";
+          return true;
+        }
+        return false;
+      });
   
       if (hasExactMatch) {
         return { 
           genericName: medicine.genericName, 
           brandName: medicine.brandName,
-          score: 1.0 
+          matchedFrom,
+          score: 1.0
         };
       }
   
@@ -122,13 +132,19 @@ const PrescriptionScreen = () => {
   
       const finalScore = Math.max(highestGenericScore, highestBrandScore); 
   
-      return { 
-        genericName: medicine.genericName, 
-        brandName: medicine.brandName,
-        score: finalScore 
-      };
+      if (finalScore >= 0.85) {
+        matchedFrom = highestGenericScore > highestBrandScore ? "genericName" : "brandName";
+        return { 
+          genericName: medicine.genericName, 
+          brandName: medicine.brandName,
+          matchedFrom,
+          score: finalScore
+        };
+      }
+  
+      return null;
     })
-    .filter(m => m.score >= 0.85) 
+    .filter(m => m !== null)
     .sort((a, b) => b.score - a.score)
     .reduce((acc, curr) => {
       const key = `${curr.genericName.toLowerCase()}|${curr.brandName.toLowerCase()}`;
@@ -138,11 +154,13 @@ const PrescriptionScreen = () => {
       return acc;
     }, new Map());
   
-  // ✅ Convert Map to Array properly
+  // ✅ Convert Map to Array
   const uniqueMatched = Array.from(matched.entries()).map(([_, value]) => value);
-  
   console.log('Matched Medicines:', uniqueMatched);
-  setMatchedMedicines(uniqueMatched);  
+  setMatchedMedicines(uniqueMatched);
+  
+  
+  //setMatchedMedicines(uniqueMatched);  
   setIsLoading(false);  
     }, [ocrText, spell, medicinesList]);
     
@@ -183,11 +201,12 @@ const PrescriptionScreen = () => {
   
     try {
       const validMedicines = matchedMedicines
-        .filter(m => m?.genericName)
-        .map(m => ({
-          genericName: m.genericName,
-          brandName: m.brandName
-        }));
+      .filter(m => m?.genericName)
+      .map(m => ({
+        genericName: m.genericName,
+        brandName: m.brandName,
+        matchedFrom: m.matchedFrom,
+      }));
   
       const response = await axios.post(`${baseURL}customers/upload-prescription`, {
         customerId,
@@ -230,20 +249,30 @@ const PrescriptionScreen = () => {
   //     const allMedicines = medicinesResponse.data;
   
   //     // Find all medicines matching the detected brand names or generic names
-  //     const expandedMatchedMedicines = allMedicines.filter(medicine => 
+  //     const expandedMatchedMedicines = allMedicines.filter(medicine =>
   //       detectedGenericNames.has(medicine.genericName.toLowerCase()) ||
   //       detectedBrandNames.has(medicine.brandName.toLowerCase())
+  //     );
+  
+  //     // Extract all generic names and brand names from the expanded medicines
+  //     const finalGenericNames = new Set(expandedMatchedMedicines.map(m => m.genericName.toLowerCase()));
+  //     const finalBrandNames = new Set(expandedMatchedMedicines.map(m => m.brandName.toLowerCase()));
+  
+  //     // Collect all medicines that belong to these generic or brand names
+  //     const finalMatchedMedicines = allMedicines.filter(medicine =>
+  //       finalGenericNames.has(medicine.genericName.toLowerCase()) ||
+  //       finalBrandNames.has(medicine.brandName.toLowerCase())
   //     ).map(medicine => ({
   //       genericName: medicine.genericName,
   //       brandName: medicine.brandName
   //     }));
   
-  //     console.log("Expanded Matched Medicines:", expandedMatchedMedicines);
+  //     console.log("Final Matched Medicinewmws:", finalMatchedMedicines);
   
   //     // Proceed to find pharmacies regardless of consent
   //     router.push({
   //       pathname: "/screens/User/Features/PrescriptionResults",
-  //       params: { matchedMedicines: JSON.stringify(expandedMatchedMedicines) }
+  //       params: { matchedMedicines: JSON.stringify(finalMatchedMedicines) }
   //     });
   
   //   } catch (error) {
@@ -254,51 +283,42 @@ const PrescriptionScreen = () => {
   
   const handleFindPharmacies = async () => {
     try {
-      // Fetch customer's consent status
       const response = await axios.get(`${baseURL}customers/customers/${customerId}`);
       const { consentGiven } = response.data;
   
-      console.log("Customer Consent:", consentGiven);
-  
       if (consentGiven) {
-        await uploadPrescription(); // Only upload if consent is given
+        await uploadPrescription();
       } else {
         console.warn("Customer has not given consent. Prescription will not be uploaded.");
       }
   
-      // Extract detected generic and brand names
-      const detectedGenericNames = new Set(matchedMedicines.map(m => m.genericName.toLowerCase()));
-      const detectedBrandNames = new Set(matchedMedicines.map(m => m.brandName.toLowerCase()));
+      // Extract detected generic names, brand names, and matchedFrom
+      const detectedMedicines = new Map();
+      matchedMedicines.forEach(m => {
+        const key = `${m.genericName.toLowerCase()}|${m.brandName.toLowerCase()}`;
+        detectedMedicines.set(key, {
+          genericName: m.genericName,
+          brandName: m.brandName,
+          matchedFrom: m.matchedFrom, // Include matchedFrom
+        });
+      });
   
-      // Fetch all medicines from the backend
       const medicinesResponse = await axios.get(`${baseURL}medicine`);
       const allMedicines = medicinesResponse.data;
   
-      // Find all medicines matching the detected brand names or generic names
       const expandedMatchedMedicines = allMedicines.filter(medicine =>
-        detectedGenericNames.has(medicine.genericName.toLowerCase()) ||
-        detectedBrandNames.has(medicine.brandName.toLowerCase())
-      );
-  
-      // Extract all generic names and brand names from the expanded medicines
-      const finalGenericNames = new Set(expandedMatchedMedicines.map(m => m.genericName.toLowerCase()));
-      const finalBrandNames = new Set(expandedMatchedMedicines.map(m => m.brandName.toLowerCase()));
-  
-      // Collect all medicines that belong to these generic or brand names
-      const finalMatchedMedicines = allMedicines.filter(medicine =>
-        finalGenericNames.has(medicine.genericName.toLowerCase()) ||
-        finalBrandNames.has(medicine.brandName.toLowerCase())
+        detectedMedicines.has(`${medicine.genericName.toLowerCase()}|${medicine.brandName.toLowerCase()}`)
       ).map(medicine => ({
         genericName: medicine.genericName,
-        brandName: medicine.brandName
+        brandName: medicine.brandName,
+        matchedFrom: detectedMedicines.get(`${medicine.genericName.toLowerCase()}|${medicine.brandName.toLowerCase()}`).matchedFrom
       }));
   
-      console.log("Final Matched Medicines:", finalMatchedMedicines);
+      console.log("Final Matched Medicines:", expandedMatchedMedicines);
   
-      // Proceed to find pharmacies regardless of consent
       router.push({
         pathname: "/screens/User/Features/PrescriptionResults",
-        params: { matchedMedicines: JSON.stringify(finalMatchedMedicines) }
+        params: { matchedMedicines: JSON.stringify(expandedMatchedMedicines) }
       });
   
     } catch (error) {
@@ -326,16 +346,18 @@ const PrescriptionScreen = () => {
 
         <Text style={styles.sectionTitle}>Matched Medicines</Text>
         <View style={styles.medicineContainer}>
-          {isLoading ? (
-            <ActivityIndicator size="large" color="#007acc" />
-          ) : matchedMedicines.length > 0 ? (
-            matchedMedicines.map((med, index) => (
-              <Text key={index} style={styles.medicineText}>{med.genericName}</Text>
-            ))
-          ) : (
-            <Text style={styles.noMedicineText}>No detected medicines</Text>
-          )}
-        </View>
+        {isLoading ? (
+          <ActivityIndicator size="large" color="#007acc" />
+        ) : matchedMedicines.length > 0 ? (
+          [...new Set(matchedMedicines.map(med => 
+            med.matchedFrom === "brandName" ? med.brandName : med.genericName
+          ))].map((name, index) => (
+            <Text key={index} style={styles.medicineText}>{name}</Text>
+          ))
+        ) : (
+          <Text style={styles.noMedicineText}>No detected medicines</Text>
+        )}
+      </View>
         {matchedMedicines.length > 0 && (
           <TouchableOpacity style={styles.findButton} onPress={handleFindPharmacies} disabled={isLoading}>
             <Text style={styles.findButtonText}>{isLoading ? 'Processing...' : 'Find Pharmacies'}</Text>

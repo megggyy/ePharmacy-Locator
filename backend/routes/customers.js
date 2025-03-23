@@ -164,7 +164,6 @@ router.post("/upload-prescription", async (req, res) => {
   }
 });
 
-
 router.get("/:customerId/prescriptions", async (req, res) => {
   try {
     const { customerId } = req.params;

@@ -20,11 +20,45 @@ const PrescriptionResultsScreen = () => {
     try {
       if (matchedMedicines) {
         const parsedMedicines = JSON.parse(matchedMedicines);
-        setMedicines(Array.isArray(parsedMedicines) ? parsedMedicines : []);
+
+        // Group medicines to merge duplicates
+        const groupedMedicines = parsedMedicines.reduce((acc, medicine) => {
+          if (medicine.matchedFrom === "brandName") {
+            // Group by brand name, merge generic names
+            if (!acc[medicine.brandName]) {
+              acc[medicine.brandName] = {
+                brandName: medicine.brandName,
+                genericNames: new Set(),
+                matchedFrom: "brandName",
+              };
+            }
+            acc[medicine.brandName].genericNames.add(medicine.genericName);
+          } else {
+            // Group by generic name, merge brand names
+            if (!acc[medicine.genericName]) {
+              acc[medicine.genericName] = {
+                genericName: medicine.genericName,
+                brandNames: new Set(),
+                matchedFrom: "genericName",
+              };
+            }
+            acc[medicine.genericName].brandNames.add(medicine.brandName);
+          }
+          return acc;
+        }, {});
+
+        // Convert Set to array and store in state
+        const optimizedMedicines = Object.values(groupedMedicines).map(med => ({
+          ...med,
+          genericNames: med.genericNames ? Array.from(med.genericNames) : [],
+          brandNames: med.brandNames ? Array.from(med.brandNames) : [],
+        }));
+
+        setMedicines(optimizedMedicines);
       }
     } catch (error) {
       console.error("❌ Error parsing matchedMedicines:", error);
-      setMedicines([]); // Ensure it's always an array
+      setMedicines([]);
     }
   }, [matchedMedicines]);
   
@@ -115,41 +149,41 @@ const PrescriptionResultsScreen = () => {
                     </Text>
                     <Text style={styles.medicineTitle}>Available Medicines:</Text>
                {/* Display Unique Medicines Without Redundancy */}
-            {Object.entries(item.medicines.byGeneric).map(([genericName, brands]) => {
-              const isGenericScanned = medicines.some(med => med.genericName?.toLowerCase() === genericName.toLowerCase());
-              const scannedBrandNames = medicines.map(med => med.brandName?.toLowerCase()).filter(Boolean);
-
-              if (isGenericScanned) {
-                return (
-                  <View key={genericName} style={styles.medicineCategory}>
-                    <Text style={styles.medicineGeneric}><Text style={styles.boldText}>{genericName}</Text></Text>
-                    {brands.map((med, index) => (
-                      <Text key={index} style={styles.medicineBrand}>
-                        {med.brandName} - <Text style={styles.stockText}>{med.stock} in stock</Text>
-                      </Text>
-                    ))}
-                  </View>
+               {Object.entries(item.medicines.byGeneric).map(([genericName, brands]) => {
+                const scannedMedicine = medicines.find(med => 
+                  med.genericName?.toLowerCase() === genericName.toLowerCase() || 
+                  brands.some(b => med.brandName?.toLowerCase() === b.brandName?.toLowerCase())
                 );
-              }
 
-              // If a brand is scanned, only show that brand under its generic name
-              const matchingBrands = brands.filter(med => scannedBrandNames.includes(med.brandName?.toLowerCase()));
+                if (scannedMedicine) {
+                  return (
+                    <View key={genericName} style={styles.medicineCategory}>
+                      {scannedMedicine.matchedFrom === "brandName" ? (
+                        // Display brand name with merged generic names
+                        <>
+                          <Text style={[styles.medicineName, styles.boldText]}>{scannedMedicine.brandName}</Text>
+                          <Text style={styles.medicineDetails}>
+                            💊 Generic(s): {scannedMedicine.genericNames?.length > 0 ? scannedMedicine.genericNames.join(", ") : "N/A"}
+                          </Text>
+                        </>
+                      ) : (
+                        // Display generic name with merged brand names
+                        <>
+                          <Text style={[styles.medicineName, styles.boldText]}>{scannedMedicine.genericName}</Text>
+                          <Text style={styles.medicineDetails}>
+                            🏷 Brand(s): {scannedMedicine.brandNames?.length > 0 ? scannedMedicine.brandNames.join(", ") : "N/A"}
+                          </Text>
+                        </>
+                      )}
 
-              if (matchingBrands.length > 0) {
-                return (
-                  <View key={genericName} style={styles.medicineCategory}>
-                    {matchingBrands.map((med, index) => (
-                      <View key={index}>
-                        <Text style={styles.medicineGeneric}><Text style={styles.boldText}>{genericName}</Text></Text>
-                        <Text style={styles.medicineBrand}>
-                          {med.brandName} - <Text style={styles.stockText}>{med.stock} in stock</Text>
-                        </Text>
-                      </View>
-                    ))}
-                  </View>
-                );
-              }
-            })}
+                      {brands.map((med, index) => (
+                        <Text key={index} style={styles.stockText}>{med.stock} in stock</Text>
+                      ))}
+                    </View>
+                  );
+                }
+              })}
+
                   </View>
                   {/* Map Section */}
                   <View style={isExpanded ? styles.fullScreenMapContainer : styles.collapsedMapContainer}>
