@@ -130,10 +130,10 @@ export default function RootLayout() {
 
             {/* CHARTS */}
             <Stack.Screen name="screens/Admin/Charts/PharmaciesPerBarangay" options={{ headerShown: false }} />
-            <Stack.Screen name="screens/Admin/Charts/MostScannedMedication" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/Admin/Charts/PharmacyFeedbackChart" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/Charts/MonthlyPharmacyRegistration" options={{ headerShown: false }} />
             <Stack.Screen name="screens/Admin/Charts/MedicinesPerCategory" options={{ headerShown: false }} />
-
+            <Stack.Screen name="screens/Admin/Reports/reports" options={{ headerShown: false }} />
 
             {/* DRAWER */}
             <Stack.Screen name="drawer/UserDrawer/index" options={{ headerShown: false }} />

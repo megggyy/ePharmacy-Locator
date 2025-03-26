@@ -114,7 +114,10 @@ export default function Sidebar() {
           <FontAwesome5 name="tags" size={25} color="#5A5A5A" />
           <Text style={styles.menuText}>Medication Categories</Text>
         </TouchableOpacity>
-
+      <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Reports/reports')}>
+        <FontAwesome5 name="file-alt" size={25} color="#5A5A5A" />
+        <Text style={styles.menuText}>Reports</Text>
+      </TouchableOpacity>
         {/* View Charts Dropdown */}
         <TouchableOpacity style={styles.menuItem} onPress={toggleDropdown}>
           <FontAwesome5 name="chart-bar" size={25} color="#5A5A5A" />
@@ -139,16 +142,11 @@ export default function Sidebar() {
             <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/MonthlyPharmacyRegistration')}>
               <Text style={styles.dropdownText}>Monthly Pharmacy Registration</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/MostScannedMedication')}>
-              <Text style={styles.dropdownText}>Most Scanned Medication</Text>
+            <TouchableOpacity style={styles.dropdownItem} onPress={() => router.push('/screens/Admin/Charts/PharmacyFeedbackChart')}>
+              <Text style={styles.dropdownText}>Pharmacy Feedback Distribution</Text>
             </TouchableOpacity>
           </View>
         )}
-
-        {/* <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/screens/Admin/Settings')}>
-          <FontAwesome5 name="cog" size={25} color="#5A5A5A" />
-          <Text style={styles.menuText}>Admin Settings</Text>
-        </TouchableOpacity> */}
 
         <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>
           <FontAwesome5 name="sign-out-alt" size={25} color="#5A5A5A" />

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useContext } from 'react';
-import { StatusBar, View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
+import { StatusBar, View, Text, Modal, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect} from "@react-navigation/native"
 import { BarChart, LineChart } from 'react-native-chart-kit';
@@ -15,6 +15,7 @@ const screenWidth = Dimensions.get('window').width;
 const AdminDashboard = () => {
   const router = useRouter();
   const [userProfile, setUserProfile] = useState({});
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const { state, dispatch } = useContext(AuthGlobal);
   const [customersData, setCustomersData] = useState({ labels: [], data: [] });
   const [counts, setCounts] = useState({
@@ -103,6 +104,11 @@ const AdminDashboard = () => {
     fetchScannedMedicines();
   }, []);
   
+  const topMedicines = scannedMedicinesData.labels
+  .map((label, index) => ({ name: label, count: scannedMedicinesData.data[index] }))
+  .sort((a, b) => b.count - a.count) // Sort descending
+  .slice(0, 5); // Get top 5
+  
   useFocusEffect(
     useCallback(() => {
         if (state.isAuthenticated === false || state.isAuthenticated === null) {
@@ -128,6 +134,10 @@ const AdminDashboard = () => {
         };
     }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
 );
+
+const formatLabel = (label) => {
+  return label.length > 10 ? label.substring(0, 10) + "..." : label;
+};
 
   return (
     <ScrollView style={styles.safeArea}>
@@ -195,24 +205,69 @@ const AdminDashboard = () => {
             }}
             style={styles.chart}
           />
-          <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
-          <BarChart
-            data={{
-              labels: scannedMedicinesData.labels,
-              datasets: [{ data: scannedMedicinesData.data.map(item => isNaN(item) ? 0 : item) }],
+        <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
+        <ScrollView>
+     <TouchableOpacity onPress={() => setIsModalVisible(true)}>
+        <BarChart
+          data={{
+            labels: scannedMedicinesData.labels.map(label =>
+              label.length > 10 ? label.substring(0, 10) + "..." : label
+            ),
+            datasets: [{ data: scannedMedicinesData.data.map(item => (isNaN(item) ? 0 : item)) }],
+          }}
+          width={screenWidth - 30}
+          height={350}
+          chartConfig={{
+            backgroundColor: '#26872a',
+            backgroundGradientFrom: '#43a047',
+            backgroundGradientTo: '#66bb6a',
+            decimalPlaces: 0,
+            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          }}
+          style={styles.chart}
+        />
+      </TouchableOpacity>
+
+      {/* Modal for Top 5 Medicines */}
+      <Modal visible={isModalVisible} transparent animationType="slide">
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(0,0,0,0.5)',
+          }}
+          onPress={() => setIsModalVisible(false)}
+        >
+          <View
+            style={{
+              backgroundColor: 'white',
+              padding: 20,
+              borderRadius: 10,
+              width: screenWidth * 0.8,
             }}
-            width={screenWidth - 30}
-            height={220}
-            chartConfig={{
-              backgroundColor: '#26872a',
-              backgroundGradientFrom: '#43a047',
-              backgroundGradientTo: '#66bb6a',
-              decimalPlaces: 0,
-              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-              labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-            }}
-            style={styles.chart}
-          />
+          >
+            <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10 }}>
+              Top 5 Scanned Medicines
+            </Text>
+
+            {topMedicines.map((med, index) => (
+              <Text key={index} style={{ fontSize: 16 }}>
+                {index + 1}. {med.name} ({med.count} times)
+              </Text>
+            ))}
+
+            <Text style={{ color: 'gray', marginTop: 10, textAlign: 'center' }}>
+              Tap anywhere to close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </Modal>
+
+</ScrollView>
+
+
         </>
       )}
     </ScrollView>
@@ -228,7 +283,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 50,
+    paddingVertical: 10,
     backgroundColor: '#005b7f',
   },
   menuIcon: {
