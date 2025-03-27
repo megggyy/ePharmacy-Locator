@@ -19,6 +19,13 @@ const PrescriptionScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
   const hasProcessed = useRef(false); 
 
+  const getThresholdByLength = (word) => {
+    const length = word.length;
+    if (length <= 5) return 0.75; 
+    if (length <= 8) return 0.6;  
+    return 0.55;                   
+};
+
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
@@ -75,18 +82,19 @@ const PrescriptionScreen = () => {
     const correctOCRWords = (ocrWords, dictionaryWords) => {
       return ocrWords.map((word) => {
         let correctedWord = word.toLowerCase(); // Normalize case
-    
+        let threshold = getThresholdByLength(word);  // Get dynamic threshold
+
         if (!spell.correct(correctedWord)) {
-          let bestMatch = dictionaryWords.reduce((best, dictWord) => {
-            let similarity = getAdvancedSimilarity(correctedWord, dictWord); 
-            return similarity > best.similarity ? { name: dictWord, similarity } : best;
-          }, { name: '', similarity: 0 });
-    
-          if (bestMatch.similarity >= 0.56) { // Adjust threshold for accuracy
-            console.log(`Checking correction for: ${word}`);
-            console.log(`Best match found: ${bestMatch.name} (Similarity: ${bestMatch.similarity})`);
-            correctedWord = bestMatch.name;
-          }
+            let bestMatch = dictionaryWords.reduce((best, dictWord) => {
+                let similarity = getAdvancedSimilarity(correctedWord, dictWord);
+                return similarity > best.similarity ? { name: dictWord, similarity } : best;
+            }, { name: '', similarity: 0 });
+
+            if (bestMatch.similarity >= threshold) {  // Use dynamic threshold
+                console.log(`Checking correction for: ${word}`);
+                console.log(`Best match found: ${bestMatch.name} (Similarity: ${bestMatch.similarity})`);
+                correctedWord = bestMatch.name;
+            }
         }
         return correctedWord;
       });
@@ -170,7 +178,7 @@ const PrescriptionScreen = () => {
     const levenshteinScore = 1 - (levenshtein.get(word1, word2) / Math.max(word1.length, word2.length));
     const jaroWinklerScore = stringSimilarity.compareTwoStrings(word1, word2);
   
-    return (lcsScore * 0.4) + (commonLetters * 0.3) + (levenshteinScore * 0.2) + (jaroWinklerScore * 0.1);
+    return (lcsScore * 0.45) + (commonLetters * 0.25) + (levenshteinScore * 0.2) + (jaroWinklerScore * 0.1);
   };  
 
   // LCS-based similarity
@@ -225,61 +233,6 @@ const PrescriptionScreen = () => {
       console.error("Error uploading prescription:", error.response?.data || error.message);
     }
   };
-  
-  // const handleFindPharmacies = async () => {
-  //   try {
-  //     // Fetch customer's consent status
-  //     const response = await axios.get(`${baseURL}customers/customers/${customerId}`);
-  //     const { consentGiven } = response.data;
-  
-  //     console.log("Customer Consent:", consentGiven);
-  
-  //     if (consentGiven) {
-  //       await uploadPrescription(); // Only upload if consent is given
-  //     } else {
-  //       console.warn("Customer has not given consent. Prescription will not be uploaded.");
-  //     }
-  
-  //     // Extract detected generic and brand names
-  //     const detectedGenericNames = new Set(matchedMedicines.map(m => m.genericName.toLowerCase()));
-  //     const detectedBrandNames = new Set(matchedMedicines.map(m => m.brandName.toLowerCase()));
-  
-  //     // Fetch all medicines from the backend
-  //     const medicinesResponse = await axios.get(`${baseURL}medicine`);
-  //     const allMedicines = medicinesResponse.data;
-  
-  //     // Find all medicines matching the detected brand names or generic names
-  //     const expandedMatchedMedicines = allMedicines.filter(medicine =>
-  //       detectedGenericNames.has(medicine.genericName.toLowerCase()) ||
-  //       detectedBrandNames.has(medicine.brandName.toLowerCase())
-  //     );
-  
-  //     // Extract all generic names and brand names from the expanded medicines
-  //     const finalGenericNames = new Set(expandedMatchedMedicines.map(m => m.genericName.toLowerCase()));
-  //     const finalBrandNames = new Set(expandedMatchedMedicines.map(m => m.brandName.toLowerCase()));
-  
-  //     // Collect all medicines that belong to these generic or brand names
-  //     const finalMatchedMedicines = allMedicines.filter(medicine =>
-  //       finalGenericNames.has(medicine.genericName.toLowerCase()) ||
-  //       finalBrandNames.has(medicine.brandName.toLowerCase())
-  //     ).map(medicine => ({
-  //       genericName: medicine.genericName,
-  //       brandName: medicine.brandName
-  //     }));
-  
-  //     console.log("Final Matched Medicinewmws:", finalMatchedMedicines);
-  
-  //     // Proceed to find pharmacies regardless of consent
-  //     router.push({
-  //       pathname: "/screens/User/Features/PrescriptionResults",
-  //       params: { matchedMedicines: JSON.stringify(finalMatchedMedicines) }
-  //     });
-  
-  //   } catch (error) {
-  //     console.error("Error handling pharmacy search:", error);
-  //     Alert.alert("Error", "Failed to fetch customer consent or find pharmacies. Please try again.");
-  //   }
-  // };
   
   const handleFindPharmacies = async () => {
     try {
