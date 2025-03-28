@@ -40,7 +40,8 @@ export default function AdminReportsScreen() {
         barangays: 0,
         expiringPharmacies: 0,
         medicines: 0,
-        categories: 0
+        categories: 0,
+        scannedPrescriptions: 0 
     });
 
     // charts
@@ -194,7 +195,8 @@ export default function AdminReportsScreen() {
                     barangaysRes, 
                     medicinesRes, 
                     categoriesRes, 
-                    pharmaciesWithExpiryRes
+                    pharmaciesWithExpiryRes,
+                    prescriptionsRes
                 ] = await Promise.all([
                     axios.get(`${baseURL}users`),
                     axios.get(`${baseURL}pharmacies`),
@@ -202,13 +204,15 @@ export default function AdminReportsScreen() {
                     axios.get(`${baseURL}barangays`),
                     axios.get(`${baseURL}medicine`),
                     axios.get(`${baseURL}medication-category`),
-                    axios.get(`${baseURL}pharmacies/json`)
+                    axios.get(`${baseURL}pharmacies/json`),
+                    axios.get(`${baseURL}prescriptions`) 
                 ]);
         
                 const pharmacies = pharmaciesRes.data;
                 const expiryPharmacies = pharmaciesWithExpiryRes.data;
                 const customers = usersRes.data.filter(user => user.role === "Customer");
-        
+                const scannedPrescriptions = prescriptionsRes.data.length;
+
                 // Default date range: Next 30 days
                 const currentDate = moment();
                 const defaultEndDate = moment().add(30, "days");
@@ -250,6 +254,7 @@ export default function AdminReportsScreen() {
                     expiringPharmacies: expiringPharmacies.length,
                     medicines: medicinesRes.data.length,
                     categories: categoriesRes.data.length,
+                    scannedPrescriptions
                 });
         
             } catch (error) {
@@ -706,7 +711,7 @@ export default function AdminReportsScreen() {
         <View style={styles.container}>
             <LinearGradient colors={['#005b7f', '#14967f']} style={styles.header}>
                 <Text style={styles.headerText}>Admin Reports</Text>
-                <Button mode="contained" onPress={exportReportsAsPDF} style={{ margin: 10 }}>
+                    <Button mode="contained" onPress={exportReportsAsPDF} style={{ margin: 10 }}>
                 Export as PDF
             </Button>
             </LinearGradient>

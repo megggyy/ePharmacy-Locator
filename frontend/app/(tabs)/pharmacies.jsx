@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Image,
   SafeAreaView,
+  FlatList
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -107,7 +108,7 @@ export default function PharmacyScreen() {
         />
       </View>
 
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         {/* Pharmacies Section */}
         <View style={styles.sectionHeader}>
           <Ionicons name="business-outline" style={styles.iconStyle} />
@@ -143,37 +144,41 @@ export default function PharmacyScreen() {
     </View>
   )}
 </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.pharmaciesContainer}>
-          {filteredPharmacies.map((pharmacy) => (
-            <TouchableOpacity
-              key={pharmacy._id}
-              style={styles.pharmacyCard}
-              onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)}
-            >
-              {/* Pharmacy Image */}
-              <Image
-                style={styles.pharmacyImage}
-                source={
-                  pharmacy?.images?.[0]
-                    ? { uri: pharmacy.images[0] }
-                    : require('@/assets/images/sample.jpg')
-                }
-              />
-              {/* Pharmacy Info */}
-              <View style={styles.pharmacyInfo}>
-                <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
-                <Text style={styles.pharmacyLocation}>
-                  {`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}
-                </Text>
-                <Text style={styles.pharmacyContact}>{pharmacy.userInfo.contactNumber}</Text>
-                <Text style={styles.pharmacyHours}>
-                  {`${pharmacy.businessDays} (${pharmacy?.openingHour || 'N/A'} - ${pharmacy?.closingHour || 'N/A'})`}
-                </Text>
-              </View>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      </ScrollView>
+<FlatList
+  data={filteredPharmacies}
+  keyExtractor={(item) => item._id}
+  renderItem={({ item: pharmacy }) => (
+    <TouchableOpacity
+      style={styles.pharmacyCard}
+      onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)}
+    >
+      {/* Pharmacy Image */}
+      <Image
+        style={styles.pharmacyImage}
+        source={
+          pharmacy?.images?.[0]
+            ? { uri: pharmacy.images[0] }
+            : require('@/assets/images/sample.jpg')
+        }
+      />
+      {/* Pharmacy Info */}
+      <View style={styles.pharmacyInfo}>
+        <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
+        <Text style={styles.pharmacyLocation}>
+          {`${pharmacy.userInfo.street}, ${pharmacy.userInfo.barangay}, ${pharmacy.userInfo.city}`}
+        </Text>
+        <Text style={styles.pharmacyContact}>{pharmacy.userInfo.contactNumber}</Text>
+        <Text style={styles.pharmacyHours}>
+          {`${pharmacy.businessDays} (${pharmacy?.openingHour || 'N/A'} - ${pharmacy?.closingHour || 'N/A'})`}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  )}
+  contentContainerStyle={styles.pharmaciesContainer}
+  showsVerticalScrollIndicator={false}
+/>
+
+      </View>
     </SafeAreaView>
   );
 }
@@ -223,24 +228,26 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   pharmaciesContainer: {
-    marginBottom: 15,
     paddingVertical: 10,
   },
+  
   pharmacyCard: {
-    width: 250,
+    width: '97%',
     backgroundColor: '#ffffff',
     borderRadius: 10,
-    marginHorizontal: 10,
+    marginBottom: 15,
     padding: 15,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 3,
+    shadowOffset: { width: 2, height: 4 }, // Improved shadow direction
+    shadowOpacity: 0.4, // Increased for better visibility
+    shadowRadius: 6,
+    elevation: 6, // Higher elevation for better depth
+    marginHorizontal: 5, // Space on both sides
   },
+  
   pharmacyImage: {
     width: '100%',
-    height: 120,
+    height: 220,
     borderRadius: 8,
     marginBottom: 10,
     backgroundColor: '#f8f8f8',
@@ -269,29 +276,44 @@ const styles = StyleSheet.create({
     color: '#999',
   },
   // dropdown
-  dropdownWrapper: { flex: 1, marginRight: 10 },
+  dropdownWrapper: {
+    position: 'relative',
+    zIndex: 10, // Ensures it's above FlatList
+  },  
   filterButton: {
-  flexDirection: 'row',
-  backgroundColor: '#dadce0',
-  paddingVertical: 8,
-  paddingHorizontal: 20,
-  borderRadius: 20,
-  elevation: 3,
-  justifyContent: 'space-between',
-  alignItems: 'center',
-},
+    flexDirection: 'row',
+    backgroundColor: '#dadce0',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 20,
+    elevation: 3,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 filterText: { color: '#333' },
+
 dropdownMenu: {
+  position: 'absolute',
+  top: 40, // Places it below the button
+  left: 0,
+  right: 0,
   backgroundColor: '#fff',
-  paddingVertical: 5,
-  paddingHorizontal: 20,
   borderRadius: 10,
-  marginTop: 5,
-  elevation: 3,
-},
-dropdownItem: {
   paddingVertical: 5,
+  elevation: 5, // Stronger shadow for visibility
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.3,
+  shadowRadius: 4,
+  zIndex: 20, // Ensures it stays on top
+},
+
+dropdownItem: {
+  paddingVertical: 10,
+  paddingHorizontal: 15,
   color: '#333',
+  borderBottomWidth: 0.5,
+  borderBottomColor: '#ccc',
 },
 
 });
