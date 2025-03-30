@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Alert, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useLocalSearchParams } from 'expo-router';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "../../../../assets/common/spinner";
+
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function ReadMedicationScreen() {
   const router = useRouter();
@@ -44,13 +49,13 @@ export default function ReadMedicationScreen() {
   if (!medicationData) {
     return (
       <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
+        <Spinner />
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
@@ -58,68 +63,66 @@ export default function ReadMedicationScreen() {
         </TouchableOpacity>
         <Text style={styles.title}>{medicationData.medicine.brandName}</Text>
       </View>
+      <ScrollView>
+        {/* Medication Details */}
+        <View style={styles.detailsContainer}>
+          <Text style={styles.label}>Generic Name:</Text>
+          <Text style={styles.value}>{medicationData.medicine.genericName}</Text>
+          <Text style={styles.label}>Dosage Strength:</Text>
+          <Text style={styles.value}>{medicationData.medicine.dosageStrength}</Text>
+          <Text style={styles.label}>Dosage Form:</Text>
+          <Text style={styles.value}>{medicationData.medicine.dosageForm}</Text>
+          <Text style={styles.label}>Classification:</Text>
+          <Text style={styles.value}>{medicationData.medicine.classification}</Text>
+          <Text style={styles.label}>Category:</Text>
+          <Text style={styles.value} onPress={handleCategoryClick}>
+            {isCategory
+              ? category || "No Category"
+              : medicationData?.medicine?.description || "No Description"}
+          </Text>
 
-      {/* Medication Details */}
-      <View style={styles.detailsContainer}>
-        <Text style={styles.label}>Generic Name:</Text>
-        <Text style={styles.value}>{medicationData.medicine.genericName}</Text>
-        <Text style={styles.label}>Dosage Strength:</Text>
-        <Text style={styles.value}>{medicationData.medicine.dosageStrength}</Text>
-        <Text style={styles.label}>Dosage Form:</Text>
-        <Text style={styles.value}>{medicationData.medicine.dosageForm}</Text>
-        <Text style={styles.label}>Classification:</Text>
-        <Text style={styles.value}>{medicationData.medicine.classification}</Text>
-        <Text style={styles.label}>Category:</Text>
-        <Text style={styles.value} onPress={handleCategoryClick}>
-          {isCategory
-            ? category || "No Category"
-            : medicationData?.medicine?.description || "No Description"}
-        </Text>
-
-
-
-
-        <View style={styles.expirationStock}>
-          <View style={styles.expirationDate}>
-            <Text style={styles.label}>Expiration Date:</Text>
+          <View style={styles.expirationStock}>
+            <View style={styles.expirationDate}>
+              <Text style={styles.label}>Expiration Date:</Text>
+            </View>
+            <View style={styles.stock}>
+              <Text style={styles.label}>Stock:</Text>
+            </View>
           </View>
-          <View style={styles.stock}>
-            <Text style={styles.label}>Stock:</Text>
-          </View>
+
+          {medicationData.expirationPerStock?.length > 0 ? (
+            medicationData.expirationPerStock.map((exp, index) => {
+
+
+
+              return (
+                <View key={index} style={styles.expirationStock}>
+                  <View style={styles.expirationDate}>
+                    <Text style={styles.value}>
+                      {exp?.expirationDate
+                        ? new Date(exp.expirationDate).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                        : "No Expiration Date"}
+                    </Text>
+                  </View>
+
+                  <View style={styles.stock}>
+                    <Text style={styles.value}>{exp.stock}</Text>
+                  </View>
+                </View>
+              );
+            })
+          ) : (
+            <Text style={styles.value}>No Expiration Data</Text>
+          )}
+
+
         </View>
-
-        {medicationData.expirationPerStock?.length > 0 ? (
-          medicationData.expirationPerStock.map((exp, index) => {
-
-
-
-            return (
-              <View key={index} style={styles.expirationStock}>
-                <View style={styles.expirationDate}>
-                  <Text style={styles.value}>
-                    {exp?.expirationDate
-                      ? new Date(exp.expirationDate).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })
-                      : "No Expiration Date"}
-                  </Text>
-                </View>
-
-                <View style={styles.stock}>
-                  <Text style={styles.value}>{exp.stock}</Text>
-                </View>
-              </View>
-            );
-          })
-        ) : (
-          <Text style={styles.value}>No Expiration Data</Text>
-        )}
-
-
-      </View>
-    </View>
+      </ScrollView>
+    </KeyboardAwareScrollView>
   );
 }
 

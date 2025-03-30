@@ -725,6 +725,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     color: '#333',
+    marginLeft: 5
   },
   link: {
     color: '#007BFF',
