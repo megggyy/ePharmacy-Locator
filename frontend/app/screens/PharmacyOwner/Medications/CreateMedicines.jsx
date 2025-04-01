@@ -26,10 +26,6 @@ const CreateMedicines = () => {
     const [searchGeneric, setSearchGeneric] = useState('');
     const [genericModalVisible, setGenericModalVisible] = useState(false);
     const [selectedGeneric, setSelectedGeneric] = useState('');
-
-    const [categories, setCategories] = useState([])
-    const [category, setCategory] = useState('')
-
     const [medicines, setMedicines] = useState([]);
     const [filteredMedicines, setFilteredMedicines] = useState([]);
     const [searchMedicine, setSearchMedicine] = useState('');
@@ -329,15 +325,6 @@ const CreateMedicines = () => {
         }
     };
     
-    
-    
-
-
-
-
-
-
-
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -489,10 +476,6 @@ const CreateMedicines = () => {
                                 </TouchableOpacity>
                             </View>
                         )}
-
-
-
-
 
                         <TouchableOpacity style={styles.submit} onPress={() => handleSubmit(index)}>
                             <Text style={styles.submitText}>ADD</Text>

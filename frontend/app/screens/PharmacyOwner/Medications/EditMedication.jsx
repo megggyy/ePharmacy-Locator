@@ -6,6 +6,9 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 import axios from 'axios';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import baseURL from '@/assets/common/baseurl';
+import { ScrollView } from 'react-native-gesture-handler';
+import Spinner from "../../../../assets/common/spinner";
+
 
 export default function EditMedicationScreen() {
   const router = useRouter();
@@ -16,7 +19,7 @@ export default function EditMedicationScreen() {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [category, setCategory] = useState("");
-  const [isCategory, setIsCategory] = useState(true); // Toggle state
+  const [isCategory, setIsCategory] = useState(true);
 
   useEffect(() => {
     const fetchMedication = async () => {
@@ -137,76 +140,78 @@ export default function EditMedicationScreen() {
         </TouchableOpacity>
         <Text style={styles.headerText}>Edit {medicationData?.medicine?.brandName || ''}</Text>
       </View>
+      <ScrollView>
+        {medicationData ? (
+          <View style={styles.detailsContainer}>
+            <Text style={styles.label}>Generic Name:</Text>
+            <Text style={styles.value}>{medicationData.medicine?.genericName || ''}</Text>
+            <Text style={styles.label}>Dosage Strength:</Text>
+            <Text style={styles.value}>{medicationData.medicine?.dosageStrength || ''}</Text>
+            <Text style={styles.label}>Dosage Form:</Text>
+            <Text style={styles.value}>{medicationData.medicine?.dosageForm || ''}</Text>
+            <Text style={styles.label}>Classification:</Text>
+            <Text style={styles.value}>{medicationData.medicine?.classification || ''}</Text>
+            <Text style={styles.label}>Category:</Text>
+            <Text style={styles.value} onPress={handleCategoryClick}>
+              {isCategory
+                ? category || "No Category"
+                : medicationData?.medicine?.description || "No Description"}
+            </Text>
+            <View style={styles.expirationItems}>
 
-      {medicationData ? (
-        <View style={styles.detailsContainer}>
-          <Text style={styles.label}>Generic Name:</Text>
-          <Text style={styles.value}>{medicationData.medicine?.genericName || ''}</Text>
-          <Text style={styles.label}>Dosage Strength:</Text>
-          <Text style={styles.value}>{medicationData.medicine?.dosageStrength || ''}</Text>
-          <Text style={styles.label}>Dosage Form:</Text>
-          <Text style={styles.value}>{medicationData.medicine?.dosageForm || ''}</Text>
-          <Text style={styles.label}>Classification:</Text>
-          <Text style={styles.value}>{medicationData.medicine?.classification || ''}</Text>
-          <Text style={styles.label}>Category:</Text>
-          <Text style={styles.value} onPress={handleCategoryClick}>
-            {isCategory
-              ? category || "No Category"
-              : medicationData?.medicine?.description || "No Description"}
-          </Text>
-          <View style={styles.expirationItems}>
-
-            <View style={styles.expirationStock}>
-              <View style={styles.expirationDate}>
-                <Text style={styles.label}>Expiration Date:</Text>
-              </View>
-              <View style={styles.stock}>
-                <Text style={styles.label}>Stock:</Text>
-              </View>
-            </View>
-            {Object.keys(stocks).length > 0 ? (
-              Object.keys(stocks).map((index) => (
-                <View key={index} style={styles.expirationStock}>
-                  {/* Expiration Date Picker */}
-                  <TouchableOpacity onPress={() => showDatePicker(index)} style={styles.expiInput}>
-                    <Text>{expirationDates[index] || 'Select Date'}</Text>
-                  </TouchableOpacity>
-
-                  {/* Stock Input */}
-                  <TextInput
-                    style={styles.stockInput}
-                    value={stocks[index]}
-                    keyboardType="numeric"
-                    onChangeText={(text) => setStocks((prev) => ({ ...prev, [index]: text }))}
-                  />
-
-                  {/* ❌ Remove Button */}
-                  <TouchableOpacity onPress={() => removeItem(index)} style={styles.removeButton}>
-                    <Ionicons name="trash" size={24} color="red" />
-                  </TouchableOpacity>
+              <View style={styles.expirationStock}>
+                <View style={styles.expirationDate}>
+                  <Text style={styles.label}>Expiration Date:</Text>
                 </View>
-              ))
-            ) : (
-              <Text style={styles.value}>No Expiration Data</Text>
-            )}
+                <View style={styles.stock}>
+                  <Text style={styles.label}>Stock:</Text>
+                </View>
+              </View>
+              {Object.keys(stocks).length > 0 ? (
+                Object.keys(stocks).map((index) => (
+                  <View key={index} style={styles.expirationStock}>
+                    {/* Expiration Date Picker */}
+                    <TouchableOpacity onPress={() => showDatePicker(index)} style={styles.expiInput}>
+                      <Text>{expirationDates[index] || 'Select Date'}</Text>
+                    </TouchableOpacity>
 
-            {/* ➕ Add Button */}
-            <TouchableOpacity style={styles.addButton} onPress={addNewItem}>
-              <Text style={styles.addButtonText}>+</Text>
+                    {/* Stock Input */}
+                    <TextInput
+                      style={styles.stockInput}
+                      value={stocks[index]}
+                      keyboardType="numeric"
+                      onChangeText={(text) => setStocks((prev) => ({ ...prev, [index]: text }))}
+                    />
+
+                    {/* ❌ Remove Button */}
+                    <TouchableOpacity onPress={() => removeItem(index)} style={styles.removeButton}>
+                      <Ionicons name="trash" size={24} color="red" />
+                    </TouchableOpacity>
+                  </View>
+                ))
+              ) : (
+                <Text style={styles.value}>No Expiration Data</Text>
+              )}
+
+              {/* ➕ Add Button */}
+              <TouchableOpacity style={styles.addButton} onPress={addNewItem}>
+                <Text style={styles.addButtonText}>+</Text>
+              </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity style={styles.submit} onPress={handleConfirm}>
+              <Text style={styles.submitText}>UPDATE</Text>
             </TouchableOpacity>
           </View>
+        ) : (
+          <View style={styles.loadingContainer}>
+            <Spinner />
+          </View>
+        )}
 
-          <TouchableOpacity style={styles.submit} onPress={handleConfirm}>
-            <Text style={styles.submitText}>UPDATE</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <View style={styles.loadingContainer}>
-          <Text>Loading...</Text>
-        </View>
-      )}
 
-      {/* Date Picker Modal */}
+        {/* Date Picker Modal */}
+      </ScrollView>
       <DateTimePickerModal
         isVisible={isDatePickerVisible}
         mode="date"
