@@ -21,8 +21,6 @@
     "@react-native-picker/picker": "^2.9.0",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/stack": "^6.4.1",
-    "@tensorflow/tfjs": "^4.22.0",
-    "@tensorflow/tfjs-react-native": "^1.0.0",
     "axios": "^1.7.7",
     "core-js": "^3.38.1",
     "expo": "^52.0.6",

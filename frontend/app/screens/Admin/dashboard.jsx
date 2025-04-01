@@ -67,11 +67,11 @@ const AdminDashboard = () => {
     const fetchCustomersData = async () => {
       try {
         const response = await axios.get(`${baseURL}users/customersPerMonth`);
-        const result = response.data;
+        const result = response?.data;
 
-        if (result.success) {
-          const labels = result.getUsersPerMonth.map((item) => item.month);
-          const data = result.getUsersPerMonth.map((item) => item.total);
+        if (result?.success) {
+          const labels = result?.getUsersPerMonth?.map((item) => item?.month) || [];
+          const data = result?.getUsersPerMonth?.map((item) => item?.total) || [];
 
           setCustomersData({ labels, data });
           setLoading(false);  // Set loading to false once data is fetched
@@ -84,15 +84,16 @@ const AdminDashboard = () => {
     fetchCustomersData();
   }, []);
 
+
   useEffect(() => {
     const fetchScannedMedicines = async () => {
       try {
         const response = await axios.get(`${baseURL}customers/mostScannedMedicines`);
-        const result = response.data;
+        const result = response?.data;
   
-        if (result.success) {
-          const labels = result.mostScannedMedicines.map((item) => item._id);
-          const data = result.mostScannedMedicines.map((item) => item.count);
+        if (result?.success) {
+          const labels = result?.mostScannedMedicines?.map((item) => item?._id) || [];
+          const data = result?.mostScannedMedicines?.map((item) => item?.count) || [];
   
           setScannedMedicinesData({ labels, data });
         }
@@ -104,174 +105,174 @@ const AdminDashboard = () => {
     fetchScannedMedicines();
   }, []);
   
-  const topMedicines = scannedMedicinesData.labels
-  .map((label, index) => ({ name: label, count: scannedMedicinesData.data[index] }))
+  const topMedicines = scannedMedicinesData?.labels
+  .map((label, index) => ({ name: label, count: scannedMedicinesData?.data?.[index] }))
   .sort((a, b) => b.count - a.count) // Sort descending
   .slice(0, 5); // Get top 5
   
   useFocusEffect(
     useCallback(() => {
-        if (state.isAuthenticated === false || state.isAuthenticated === null) {
+        if (state?.isAuthenticated === false || state?.isAuthenticated === null) {
             router.push('../screens/Auth/LoginScreen');
         }
 
         AsyncStorage.getItem("jwt")
-            .then((res) => {
-                axios
-                    .get(`${baseURL}users/${state.user.userId}`, {
-                        headers: { Authorization: `Bearer ${res}` },
-                    })
-                    .then((user) => {
-                        setUserProfile(user.data);  // Set user data state here
-                        console.log(user.data);      // Now the data will be logged after the state is updated
-                    })
-                    .catch((error) => console.log(error));
+        .then((res) => {
+          if (!state?.user?.userId) return;
+          axios
+            .get(`${baseURL}users/${state?.user?.userId}`, {
+              headers: { Authorization: `Bearer ${res}` },
             })
+            .then((user) => setUserProfile(user?.data || {}))
             .catch((error) => console.log(error));
+        })
+        .catch((error) => console.log(error));
+      
+
 
         return () => {
-            setUserProfile(); // Reset user profile on cleanup
+            setUserProfile({}); // Reset user profile on cleanup
         };
-    }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
+    }, [state?.isAuthenticated, state?.user?.userId, router])  // Add `state.user.userId` and `router` to dependencies
 );
 
 const formatLabel = (label) => {
-  return label.length > 10 ? label.substring(0, 10) + "..." : label;
+  return label?.length > 10 ? label?.substring(0, 10) + "..." : label;
 };
 
-  return (
-    <ScrollView style={styles.safeArea}>
-        <StatusBar backgroundColor="#005b7f" barStyle="light-content" />  
-      {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity
-          style={styles.menuIcon}
-          onPress={() => router.push('/drawer/AdminDrawer')}
-        >
-          <Ionicons name="menu" size={30} color="white" />
-        </TouchableOpacity>
-        <View style={styles.userInfo}>
-          <Text style={styles.userName}>{userProfile?.name}</Text>
-          <Text style={styles.userRole}>Admin</Text>
-        </View>
+return (
+  <ScrollView style={styles.safeArea}>
+      <StatusBar backgroundColor="#005b7f" barStyle="light-content" />  
+    {/* Header */}
+    <View style={styles.header}>
+      <TouchableOpacity
+        style={styles.menuIcon}
+        onPress={() => router.push('/drawer/AdminDrawer')}
+      >
+        <Ionicons name="menu" size={30} color="white" />
+      </TouchableOpacity>
+      <View style={styles.userInfo}>
+        <Text style={styles.userName}>{userProfile?.name || 'Loading...'}</Text>
+        <Text style={styles.userRole}>Admin</Text>
       </View>
+    </View>
 
-      {/* Dashboard Cards */}
-      <View style={styles.dashboardCards}>
-        <View style={styles.card} >
-          <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Pharmacies/ListPharmacies')}>Pharmacies</Text>
-          <Text style={styles.cardNumber}>{counts.pharmacies}</Text>
-        </View>
-        <View style={styles.card}>
-          <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Users/ListUsers')}>Users</Text>
-          <Text style={styles.cardNumber}>{counts.users}</Text>
-        </View>
-        <View style={styles.card}>
-          <Text style={styles.cardTitle} >Categories</Text>
-          <Text style={styles.cardNumber}>{counts.categories}</Text>
-        </View>
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>Medicines</Text>
-          <Text style={styles.cardNumber}>{counts.medicines}</Text>
-        </View>
+    {/* Dashboard Cards */}
+    <View style={styles.dashboardCards}>
+      <View style={styles.card} >
+        <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Pharmacies/ListPharmacies')}>Pharmacies</Text>
+        <Text style={styles.cardNumber}>{counts?.pharmacies || 0}</Text>
       </View>
+      <View style={styles.card}>
+        <Text style={styles.cardTitle} onPress={() => router.push('/screens/Admin/Users/ListUsers')}>Users</Text>
+        <Text style={styles.cardNumber}>{counts?.users || 0}</Text>
+      </View>
+      <View style={styles.card}>
+        <Text style={styles.cardTitle} >Categories</Text>
+        <Text style={styles.cardNumber}>{counts?.categories || 0}</Text>
+      </View>
+      <View style={styles.card}>
+        <Text style={styles.cardTitle}>Medicines</Text>
+        <Text style={styles.cardNumber}>{counts?.medicines || 0}</Text>
+      </View>
+    </View>
 
-      {/* Show a spinner while loading */}
-      {loading ? (
-        <View style={styles.spinnerContainer}>
-          <ActivityIndicator size="large" color="#005b7f" />
-        </View>
-      ) : (
-        <>
-          <Text style={styles.chartTitle}>Monthly New Customers</Text>
-          <LineChart
-            data={{
-              labels: customersData.labels,
-              datasets: [
-                {
-                  data: customersData.data.map(item => (isNaN(item) || item === Infinity ? 0 : item)), // Sanitize data
-                },
-              ],
-            }}
-            width={screenWidth - 30}
-            height={220}
-            chartConfig={{
-              backgroundColor: '#e26a00',
-              backgroundGradientFrom: '#fb8c00',
-              backgroundGradientTo: '#ffa726',
-              decimalPlaces: 0,
-              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-              labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-            }}
-            style={styles.chart}
-          />
-        <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
-        <ScrollView>
-     <TouchableOpacity onPress={() => setIsModalVisible(true)}>
-        <BarChart
+    {/* Show a spinner while loading */}
+    {loading ? (
+      <View style={styles.spinnerContainer}>
+        <ActivityIndicator size="large" color="#005b7f" />
+      </View>
+    ) : (
+      <>
+        <Text style={styles.chartTitle}>Monthly New Customers</Text>
+        <LineChart
           data={{
-            labels: scannedMedicinesData.labels.map(label =>
-              label.length > 10 ? label.substring(0, 10) + "..." : label
-            ),
-            datasets: [{ data: scannedMedicinesData.data.map(item => (isNaN(item) ? 0 : item)) }],
+            labels: customersData?.labels || [],
+            datasets: [
+              {
+                data: customersData?.data?.map(item => (isNaN(item) || item === Infinity ? 0 : item)) || [],
+              },
+            ],
           }}
           width={screenWidth - 30}
-          height={350}
+          height={220}
           chartConfig={{
-            backgroundColor: '#26872a',
-            backgroundGradientFrom: '#43a047',
-            backgroundGradientTo: '#66bb6a',
+            backgroundColor: '#e26a00',
+            backgroundGradientFrom: '#fb8c00',
+            backgroundGradientTo: '#ffa726',
             decimalPlaces: 0,
             color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
           }}
           style={styles.chart}
         />
-      </TouchableOpacity>
+      <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
+      <ScrollView>
+   <TouchableOpacity onPress={() => setIsModalVisible(true)}>
+      <BarChart
+        data={{
+          labels: scannedMedicinesData?.labels?.map(label =>
+            label?.length > 10 ? label?.substring(0, 10) + "..." : label
+          ) || [],
+          datasets: [{ data: scannedMedicinesData?.data?.map(item => (isNaN(item) ? 0 : item)) || [] }],
+        }}
+        width={screenWidth - 30}
+        height={350}
+        chartConfig={{
+          backgroundColor: '#26872a',
+          backgroundGradientFrom: '#43a047',
+          backgroundGradientTo: '#66bb6a',
+          decimalPlaces: 0,
+          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+        }}
+        style={styles.chart}
+      />
+    </TouchableOpacity>
 
-      {/* Modal for Top 5 Medicines */}
-      <Modal visible={isModalVisible} transparent animationType="slide">
-        <TouchableOpacity
+    {/* Modal for Top 5 Medicines */}
+    <Modal visible={isModalVisible} transparent animationType="slide">
+      <TouchableOpacity
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'rgba(0,0,0,0.5)',
+        }}
+        onPress={() => setIsModalVisible(false)}
+      >
+        <View
           style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'rgba(0,0,0,0.5)',
+            backgroundColor: 'white',
+            padding: 20,
+            borderRadius: 10,
+            width: screenWidth * 0.8,
           }}
-          onPress={() => setIsModalVisible(false)}
         >
-          <View
-            style={{
-              backgroundColor: 'white',
-              padding: 20,
-              borderRadius: 10,
-              width: screenWidth * 0.8,
-            }}
-          >
-            <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10 }}>
-              Top 5 Scanned Medicines
-            </Text>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10 }}>
+            Top 5 Scanned Medicines
+          </Text>
 
-            {topMedicines.map((med, index) => (
-              <Text key={index} style={{ fontSize: 16 }}>
-                {index + 1}. {med.name} ({med.count} times)
-              </Text>
-            ))}
-
-            <Text style={{ color: 'gray', marginTop: 10, textAlign: 'center' }}>
-              Tap anywhere to close
+          {topMedicines?.map((med, index) => (
+            <Text key={index} style={{ fontSize: 16 }}>
+              {index + 1}. {med.name} ({med.count} times)
             </Text>
-          </View>
-        </TouchableOpacity>
-      </Modal>
+          ))}
+
+          <Text style={{ color: 'gray', marginTop: 10, textAlign: 'center' }}>
+            Tap anywhere to close
+          </Text>
+        </View>
+      </TouchableOpacity>
+    </Modal>
 
 </ScrollView>
 
 
-        </>
-      )}
-    </ScrollView>
-  );
+      </>
+    )}
+  </ScrollView>
+);
 };
 
 const styles = StyleSheet.create({

@@ -26,6 +26,8 @@ const ListReviewsScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
+      if (state.user?.role !== "PharmacyOwner") return; // Ensure only PharmacyOwner runs this
+  
       const fetchFeedbacks = async () => {
         try {
           const response = await axios.get(`${baseURL}feedbacks/pharmacy/${state.user.userId}`);
@@ -38,17 +40,18 @@ const ListReviewsScreen = () => {
           setLoading(false);
         }
       };
-
+  
       fetchFeedbacks();
       const interval = setInterval(fetchFeedbacks, 5000);
-
+  
       return () => {
         clearInterval(interval);
         fetchFeedbacks();
         setLoading(true);
       };
-    }, [state.user.userId])
+    }, [state.user.userId, state.user.role]) // Depend on user role too
   );
+  
 
   // Calculate average rating
   const calculateAverageRating = (reviews) => {

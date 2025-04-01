@@ -60,15 +60,23 @@ export default function AdminReportsScreen() {
     const chart5Ref = useRef(null);
     const chart6Ref = useRef(null);
 
+    
     useEffect(() => {
         const fetchChartData = async () => {
+            setLoading(true);  // Set loading to true before the request
             try {
                 const response = await axios.get(`${baseURL}feedbacks/pharmacy-rating-distribution`);
-                const data = response.data;
-    
+                const data = response?.data;
+        
+                if (!data) {
+                    console.error("No data received from the API.");
+                    setLoading(false);  // Stop loading if no data
+                    return;
+                }
+        
                 const labels = ["0-1", "1.01-2", "2.01-3", "3.01-4", "4.01-5"];
                 const values = labels.map((label) => data[label] || 0);
-    
+        
                 setChartData({
                     labels,
                     datasets: [
@@ -79,115 +87,118 @@ export default function AdminReportsScreen() {
                         },
                     ],
                 });
-    
             } catch (error) {
                 console.error("Error fetching pharmacy rating distribution:", error);
+            } finally {
+                setLoading(false);  // Set loading to false after the request completes
             }
         };
-    
+        
+
         const fetchCustomersData = async () => {
             try {
-              const response = await axios.get(`${baseURL}users/customersPerMonth`);
-              const result = response.data;
-      
-              if (result.success) {
-                const labels = result.getUsersPerMonth.map((item) => item.month);
-                const data = result.getUsersPerMonth.map((item) => item.total);
-      
-                setCustomersData({ labels, data });
-                setLoading(false);  // Set loading to false once data is fetched
-              }
+                const response = await axios.get(`${baseURL}users/customersPerMonth`);
+                const result = response?.data || {};  // Ensure result is not null
+
+                if (result.success) {
+                    const labels = result.getUsersPerMonth?.map((item) => item.month) || [];
+                    const data = result.getUsersPerMonth?.map((item) => item.total) || [];
+
+                    setCustomersData({ labels, data });
+                    setLoading(false);  // Set loading to false once data is fetched
+                }
             } catch (error) {
-              console.error('Error fetching customers per month data:', error);
+                console.error('Error fetching customers per month data:', error);
             }
-          };
+        };
 
         const fetchScannedMedicines = async () => {
             try {
-              const response = await axios.get(`${baseURL}customers/mostScannedMedicines`);
-              const result = response.data;
-        
-              if (result.success) {
-                const labels = result.mostScannedMedicines.map((item) => item._id);
-                const data = result.mostScannedMedicines.map((item) => item.count);
-        
-                setScannedMedicinesData({ labels, data });
-              }
-            } catch (error) {
-              console.error("Error fetching most scanned medicines:", error);
-            }
-          };
+                const response = await axios.get(`${baseURL}customers/mostScannedMedicines`);
+                const result = response?.data || {};  // Ensure result is not null
 
-          const fetchData2 = async () => {
-            try {
-              const response = await axios.get(`${baseURL}users/pharmaciesPerMonth`); // Replace with your backend URL
-              const { getUsersPerMonth } = response.data;
-      
-              // Map the response to chart data format
-              const labels = getUsersPerMonth.map((item) => `${item.month} ${item.year}`);
-              const data = getUsersPerMonth.map((item) => item.total);
-      
-              setChartData2({
-                labels,
-                datasets: [
-                  {
-                    data,
-                    color: (opacity = 1) => `rgba(0, 139, 139, ${opacity})`,
-                    strokeWidth: 3,
-                  },
-                ],
-              });
-      
-              setLoading(false);
-            } catch (error) {
-              console.error('Error fetching users per month:', error);
-              setLoading(false);
-            }
-          };
-          const fetchPharmaciesData = async () => {
-            try {
-              const response = await axios.get(`${baseURL}pharmacies/pharmaciesPerBarangay`);
-              const result = response.data;
-      
-              if (result.success) {
-                const formattedData = result.data.map((item, index) => ({
-                  name: item.barangay || 'Unknown',
-                  population: item.count,
-                  color: getRandomColor(index),
-                  legendFontColor: '#333',
-                  legendFontSize: 10,
-                }));
-      
-                setChartData3(formattedData);
-              }
-            } catch (error) {
-              console.error('Error fetching pharmacies per barangay data:', error);
-            }
-          };
+                if (result.success) {
+                    const labels = result.mostScannedMedicines?.map((item) => item._id) || [];
+                    const data = result.mostScannedMedicines?.map((item) => item.count) || [];
 
-          const fetchMedicinesData = async () => {
-            try {
-              const response = await axios.get(`${baseURL}medicine/medicinesPerCategory`);
-              const result = response.data;
-      
-              if (result.success) {
-                const formattedData = result.data.map((item, index) => ({
-                  name: item.name || 'Unknown',
-                  population: item.count,
-                  color: getRandomColor(index),
-                  legendFontColor: '#333',
-                  legendFontSize: 12,
-                }));
-      
-                setChartData4(formattedData);
-              }
+                    setScannedMedicinesData({ labels, data });
+                }
             } catch (error) {
-              console.error('Error fetching medicines per category data:', error);
+                console.error("Error fetching most scanned medicines:", error);
             }
-          };
+        };
 
-          const fetchData = async () => {
+        const fetchData2 = async () => {
             try {
+                const response = await axios.get(`${baseURL}users/pharmaciesPerMonth`); 
+                const result = response?.data || {};  // Ensure result is not null
+
+                const labels = result.getUsersPerMonth?.map((item) => `${item.month} ${item.year}`) || [];
+                const data = result.getUsersPerMonth?.map((item) => item.total) || [];
+
+                setChartData2({
+                    labels,
+                    datasets: [
+                        {
+                            data,
+                            color: (opacity = 1) => `rgba(0, 139, 139, ${opacity})`,
+                            strokeWidth: 3,
+                        },
+                    ],
+                });
+
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching users per month:', error);
+                setLoading(false);
+            }
+        };
+
+        const fetchPharmaciesData = async () => {
+            try {
+                const response = await axios.get(`${baseURL}pharmacies/pharmaciesPerBarangay`);
+                const result = response?.data || {};  // Ensure result is not null
+
+                if (result.success) {
+                    const formattedData = result.data?.map((item, index) => ({
+                        name: item.barangay || 'Unknown',
+                        population: item.count,
+                        color: getRandomColor(index),
+                        legendFontColor: '#333',
+                        legendFontSize: 10,
+                    })) || [];
+
+                    setChartData3(formattedData);
+                }
+            } catch (error) {
+                console.error('Error fetching pharmacies per barangay data:', error);
+            }
+        };
+
+        const fetchMedicinesData = async () => {
+            try {
+                const response = await axios.get(`${baseURL}medicine/medicinesPerCategory`);
+                const result = response?.data || {};  // Ensure result is not null
+
+                if (result.success) {
+                    const formattedData = result.data?.map((item, index) => ({
+                        name: item.name || 'Unknown',
+                        population: item.count,
+                        color: getRandomColor(index),
+                        legendFontColor: '#333',
+                        legendFontSize: 12,
+                    })) || [];
+
+                    setChartData4(formattedData);
+                }
+            } catch (error) {
+                console.error('Error fetching medicines per category data:', error);
+            }
+        };
+
+        const fetchData = async () => {
+            try {
+                setLoading(true); // Start loading
                 const [
                     usersRes, 
                     pharmaciesRes, 
@@ -207,29 +218,35 @@ export default function AdminReportsScreen() {
                     axios.get(`${baseURL}pharmacies/json`),
                     axios.get(`${baseURL}prescriptions`) 
                 ]);
-        
+    
+                // Check for null or undefined responses
+                if (!usersRes?.data || !pharmaciesRes?.data) {
+                    console.error("Data fetching error: Missing response data.");
+                    setLoading(false);
+                    return;
+                }
+    
                 const pharmacies = pharmaciesRes.data;
                 const expiryPharmacies = pharmaciesWithExpiryRes.data;
                 const customers = usersRes.data.filter(user => user.role === "Customer");
-                const scannedPrescriptions = prescriptionsRes.data.length;
+                const scannedPrescriptions = prescriptionsRes.data?.totalPrescriptions || 0;
 
                 // Default date range: Next 30 days
                 const currentDate = moment();
                 const defaultEndDate = moment().add(30, "days");
-        
+    
                 const mergedPharmacies = pharmacies.map(pharmacy => {
                     const matchingExpiryPharmacy = expiryPharmacies.find(
                         expiryPharmacy => expiryPharmacy.pharmacyName.toLowerCase() === pharmacy.userInfo.name.toLowerCase()
                     );
-        
+    
                     return {
                         ...pharmacy,
                         pharmacyName: pharmacy.userInfo.name,
                         expiryDate: matchingExpiryPharmacy ? matchingExpiryPharmacy.expiryDate : null
                     };
                 });
-        
-                // If no custom date range is selected, apply default 30-day filter
+    
                 const expiringPharmacies = mergedPharmacies.filter(pharmacy => {
                     try {
                         if (!pharmacy.userInfo || !pharmacy.expiryDate) return false;
@@ -242,10 +259,10 @@ export default function AdminReportsScreen() {
                         return false;
                     }
                 });
-        
+    
                 setPharmacies(mergedPharmacies); // Store all pharmacies without filters
                 setFilteredPharmacies(expiringPharmacies); // Default display: 30-day expiring pharmacies
-        
+    
                 setCounts({
                     customers: customers.length,
                     pharmacies: pharmacies.length,
@@ -256,20 +273,21 @@ export default function AdminReportsScreen() {
                     categories: categoriesRes.data.length,
                     scannedPrescriptions
                 });
-        
+    
+                setLoading(false); // Stop loading
             } catch (error) {
                 console.error('Error fetching data:', error);
+                setLoading(false); // Stop loading even in case of error
             }
         };
-        
-    
+
         const loadData = async () => {
             await Promise.all([fetchChartData(), fetchData(), fetchData2(), fetchPharmaciesData(), fetchMedicinesData(), fetchCustomersData(), fetchScannedMedicines()]);
-            setLoading(false);  // ✅ Set loading to false after all data is fetched
+            setLoading(false);
         };
-    
+
         loadData();
-    }, []);
+    }, []); 
     
   
     const getRandomColor = (index) => {
@@ -279,46 +297,43 @@ export default function AdminReportsScreen() {
         return colors[index % colors.length];
       };
 
-    const topMedicines = scannedMedicinesData.labels
-    .map((label, index) => ({ name: label, count: scannedMedicinesData.data[index] }))
-    .sort((a, b) => b.count - a.count) // Sort descending
-    .slice(0, 5); // Get top 5
-
-    const handleSearch = (query) => {
-        setSearchQuery(query);
-        setFilteredPharmacies(pharmacies.filter(pharmacy => 
-            pharmacy.pharmacyName.toLowerCase().includes(query.toLowerCase())
-        ));
-    };
+      const topMedicines = scannedMedicinesData?.labels
+      .map((label, index) => ({ name: label, count: scannedMedicinesData?.data[index] }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+  
+      const handleSearch = (query) => {
+          setSearchQuery(query);
+          setFilteredPharmacies(pharmacies.filter(pharmacy => 
+              pharmacy.pharmacyName?.toLowerCase().includes(query?.toLowerCase())
+          ));
+      };
 
      // 🔹 Filter pharmacies based on search and date range
-     const applyFilters = () => { 
-        let filtered = pharmacies.filter(pharmacy => 
-            pharmacy.pharmacyName.toLowerCase().includes(searchQuery.toLowerCase())
+     const applyFilters = () => {
+        let filtered = pharmacies?.filter(pharmacy => 
+            pharmacy.pharmacyName?.toLowerCase().includes(searchQuery?.toLowerCase())
         );
-    
+
         if (startDate && endDate) {
-            // Apply custom date range if selected
             filtered = filtered.filter(pharmacy => {
                 if (!pharmacy.expiryDate) return false;
                 const expiryMoment = moment(pharmacy.expiryDate, "MMMM D, YYYY", true);
                 return expiryMoment.isValid() && expiryMoment.isBetween(startDate, endDate, null, '[]');
             });
         } else {
-            // Default: Next 30 days filter
             const currentDate = moment();
             const defaultEndDate = moment().add(30, "days");
-    
+
             filtered = filtered.filter(pharmacy => {
                 if (!pharmacy.expiryDate) return false;
                 const expiryMoment = moment(pharmacy.expiryDate, "MMMM D, YYYY", true);
                 return expiryMoment.isValid() && expiryMoment.isAfter(currentDate) && expiryMoment.isBefore(defaultEndDate);
             });
         }
-    
+
         setFilteredPharmacies(filtered);
     };
-    
 
     useEffect(() => {
         applyFilters();
@@ -333,8 +348,8 @@ export default function AdminReportsScreen() {
     };
 
     const formatLabel = (label) => {
-        return label.length > 10 ? label.substring(0, 10) + "..." : label;
-      };
+        return label?.length > 10 ? label.substring(0, 10) + "..." : label;
+    };
 
     // export as pdf
     const exportReportsAsPDF = async () => {

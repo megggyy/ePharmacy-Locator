@@ -105,8 +105,8 @@ export default function PharmacyDetailsScreen() {
 
     // expiring meds
     useEffect(() => {
-        if (!state.user?.userId) return;
-
+        if (!state.user?.userId || state.user.role !== "PharmacyOwner") return;
+    
         axios
             .get(`${baseURL}medicine/${state.user.userId}`)
             .then((res) => {
@@ -115,7 +115,7 @@ export default function PharmacyDetailsScreen() {
                 setLoading(false);
             })
             .catch(() => setLoading(false));
-    }, [state.user.userId]);
+    }, [state.user.userId, state.user.role]);    
 
     // Function to filter medicines based on search
     const searchMedications = (text) => {
@@ -177,9 +177,10 @@ export default function PharmacyDetailsScreen() {
   // charts
         useEffect(() => {
             if (state.isAuthenticated) {
+                if (state.user.role !== "PharmacyOwner") return;
                 axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
                     .then((res) => {
-                        if (res.data) {
+                        if (res.data && typeof res.data === "object" && res.data.id) {
                             const pharmacyId = res.data.id;
                             setPharmacyId(pharmacyId);
                             fetchReviewStats(pharmacyId);
@@ -196,7 +197,7 @@ export default function PharmacyDetailsScreen() {
             } else {
                 router.push('/login');
             }
-        }, [state.isAuthenticated, state.user.userId]);
+        }, [state.isAuthenticated, state.user.userId, state.user.role]);
 
         const fetchReviewStats = async (pharmacyId) => {
             try {
@@ -244,6 +245,7 @@ export default function PharmacyDetailsScreen() {
     // overview
     useEffect(() => {
         if (state.isAuthenticated) {
+            if (state.user.role !== "PharmacyOwner") return;
             // Fetch user profile data
             axios
             .get(`${baseURL}users/${state.user.userId}`)
@@ -262,7 +264,7 @@ export default function PharmacyDetailsScreen() {
               // Process this data to set medication categories if needed
             })
             .catch((err) => {
-              console.error("Error fetching medications:", err);
+            console.error("Error fetching medications:", err);
             });
              
           // Fetch the pharmacy associated with this user
@@ -297,7 +299,7 @@ export default function PharmacyDetailsScreen() {
         } else {
           router.push('/login');
         }
-      }, [state.isAuthenticated, state.user.userId]);
+    }, [state.isAuthenticated, state.user.userId, state.user.role]);
 
 
     const handleTabChange = async (newIndex) => {
@@ -305,21 +307,13 @@ export default function PharmacyDetailsScreen() {
         await AsyncStorage.setItem('tabIndex', newIndex.toString());
     };
 
-    if (loading) {
+    if (!pharmacy || !chartData1 || !chartData2 || medicationsList.length === 0) {
         return (
             <View style={styles.loadingContainer}>
                 <ActivityIndicator size="large" color="#0B607E" />
             </View>
         );
-    }
-
-    if (!pharmacy) {
-        return (
-            <View style={styles.loadingContainer}>
-                <PulseSpinner /> 
-            </View>
-        );
-    }
+    }    
 
     const exportReportAsPDF = async () => {
         if (medicationsFilter.length === 0) {

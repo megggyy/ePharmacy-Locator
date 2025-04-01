@@ -26,40 +26,53 @@ export default function PharmacyOwnerDashboard() {
   ];
   
   useEffect(() => {
-    if (state.isAuthenticated) {
-        axios.get(`${baseURL}users/${state.user.userId}`)
+    if (!state.isAuthenticated) {
+        router.push('/login');
+        return;
+    }
+
+    axios.get(`${baseURL}users/${state.user.userId}`)
         .then((res) => setUserProfile(res.data))
         .catch((err) => console.error("Error fetching user profile:", err));
 
+    // Only fetch pharmacy data if the user is a pharmacy owner
+    if (state.user.role === "PharmacyOwner") {
         axios.get(`${baseURL}medicine/${state.user.userId}`)
-        .then((res) => setTotalMedications(res.data.length))
-        .catch((err) => console.error("Error fetching medications:", err));
+            .then((res) => setTotalMedications(res.data.length))
+            .catch((err) => console.error("Error fetching medications:", err));
 
-      axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
-        .then((res) => {
-          if (res.data) {
-            const pharmacyId = res.data.id;
-            axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
-              .then((medRes) => {
-                const categories = Object.keys(medRes.data);
-                const counts = Object.values(medRes.data);
-                const pieData = categories.map((category, index) => ({
-                  name: category,
-                  population: counts[index],
-                  color: colorPalette[index % colorPalette.length], // Cycle through colors
-                  legendFontColor: "#333",
-                  legendFontSize: 11
-                }));
-                setMedicationData(pieData);
-              })
-              .catch((err) => console.error("Error fetching medication categories:", err));
-          }
-        })
-        .catch((err) => console.error("Error fetching pharmacy details:", err));
-    } else {
-      router.push('/login');
+        axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
+            .then((res) => {
+                if (res.data && typeof res.data === "object" && res.data.id) {
+                    const pharmacyId = res.data.id;
+                  
+                    axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
+                        .then((medRes) => {
+                            if (medRes.data && Object.keys(medRes.data).length > 0) {
+                                const categories = Object.keys(medRes.data);
+                                const counts = Object.values(medRes.data);
+                                const pieData = categories.map((category, index) => ({
+                                    name: category,
+                                    population: counts[index],
+                                    color: colorPalette[index % colorPalette.length], // Cycle through colors
+                                    legendFontColor: "#333",
+                                    legendFontSize: 11
+                                }));
+                                setMedicationData(pieData);
+                            } else {
+                                console.warn("No medication data found, setting empty array.");
+                                setMedicationData([]); // Ensure it never becomes null
+                            }
+                        })
+                        .catch((err) => {
+                            console.error("Error fetching medication categories:", err);
+                            setMedicationData([]); // Set empty array on error
+                        });
+                }
+            })
+            .catch((err) => console.error("Error fetching pharmacy details:", err));
     }
-  }, [state.isAuthenticated, state.user.userId]);
+}, [state.isAuthenticated, state.user.userId, state.user.role]);
 
   const exportToPDF = async () => {
     const htmlContent = `

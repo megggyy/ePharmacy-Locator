@@ -18,35 +18,38 @@ export default function Sidebar() {
 
   useFocusEffect(
     useCallback(() => {
-      if (state.isAuthenticated === false || state.isAuthenticated === null) {
+      if (!state.isAuthenticated) {
         router.push('../screens/Auth/LoginScreen');
+        return; // Stop execution if not authenticated
       }
-
-      AsyncStorage.getItem("jwt")
-        .then((res) => {
-          axios
-            .get(`${baseURL}users/${state.user.userId}`, {
-              headers: { Authorization: `Bearer ${res}` },
-            })
-            .then((user) => {
-              setUserProfile(user.data);  // Set user data state here
-              console.log(user.data);      // Now the data will be logged after the state is updated
-              console.log("Profile image URL:", user.data.customerDetails?.images?.[0]);
-
-             
-            })
-            .catch((error) => console.log("Error fetching user data:", error));
-        })
-        .catch((error) => console.log(error));
-
-      return () => {
-        setUserProfile(); // Reset user profile on cleanup
-     
+  
+      const fetchUserData = async () => {
+        try {
+          const token = await AsyncStorage.getItem("jwt");
+          if (!token) throw new Error("No token found"); // Handle missing token case
+  
+          if (!state.user?.userId) throw new Error("User ID is missing"); // Ensure userId is valid
+  
+          const userResponse = await axios.get(`${baseURL}users/${state.user.userId}`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+  
+          setUserProfile(userResponse.data);
+          console.log(userResponse.data);
+          console.log("Profile image URL:", userResponse.data.customerDetails?.images?.[0]);
+  
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        }
       };
-    }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
-  );
-
-
+  
+      fetchUserData();
+  
+      return () => {
+        setUserProfile(null); // Reset user profile to null on cleanup
+      };
+    }, [state.isAuthenticated, state.user?.userId, router]) // Use optional chaining for safety
+  );  
 
   const handleLogout = async () => {
     try {

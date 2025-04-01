@@ -17,7 +17,7 @@ const ViewAllMedications = () => {
         setMedications(response.data); // Set the fetched data to state
       })
       .catch((error) => {
-        console.error('Error fetching medications:', error);
+       console.error('Error fetching medications:', error);
       });
   }, []);
 

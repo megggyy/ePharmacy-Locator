@@ -23,34 +23,37 @@ export default function Sidebar() {
     
   useFocusEffect(
     useCallback(() => {
-        if (state.isAuthenticated === false || state.isAuthenticated === null) {
+        if (!state.isAuthenticated || !state.user?.userId) { 
             router.push('../screens/Auth/LoginScreen');
+            return;
         }
 
         AsyncStorage.getItem("jwt")
             .then((res) => {
+                if (!res) {
+                    console.log("No JWT found");
+                    return;
+                }
+
                 axios
                     .get(`${baseURL}users/${state.user.userId}`, {
                         headers: { Authorization: `Bearer ${res}` },
                     })
                     .then((user) => {
-                        
-                        setUserProfile(user.data); // Update the user profile state
-                        console.log("User data fetched:", user.data); // Log the fetched user data
+                        setUserProfile(user.data); // ✅ Update profile state
+                        console.log("User data fetched:", user.data);
                         console.log("Profile image URL:", user.data.pharmacyDetails?.images?.[0]);
-
-                        
                     })
                     .catch((error) => console.log("Error fetching user data:", error));
             })
             .catch((error) => console.log("Error getting JWT:", error));
 
         return () => {
-            setUserProfile(); // Reset user profile on cleanup
-          
+            setUserProfile(null); // ✅ Reset user profile properly
         };
-    }, [state.isAuthenticated, state.user.userId, router]) // Correct dependencies
+    }, [state.isAuthenticated, state.user?.userId, router]) // ✅ Prevents unnecessary calls
 );
+
 
 
   const handleLogout = async () => {
