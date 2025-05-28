@@ -14,7 +14,10 @@ const pharmacyStockSchema = mongoose.Schema({
             },
             expirationDate: {
                 type: Date,
+                default: null,
+                required: false,
             },
+
         }
     ],
     timeStamps: {
