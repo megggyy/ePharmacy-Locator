@@ -15,6 +15,8 @@ import AuthGlobal from '@/context/AuthGlobal';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 import baseURL from "../../../../assets/common/baseurl";
+import Spinner from "../../../../assets/common/spinner";
+
 import axios from "axios";
 import Toast from 'react-native-toast-message';
 
@@ -29,6 +31,7 @@ const CreateMedicines = () => {
     const [medicines, setMedicines] = useState([]);
     const [filteredMedicines, setFilteredMedicines] = useState([]);
     const [searchMedicine, setSearchMedicine] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const [items, setItems] = useState([]);
 
@@ -53,10 +56,11 @@ const CreateMedicines = () => {
             response.data.forEach(item => {
                 const normalizedKey = item.genericName.replace(/\s+/g, '').toLowerCase();
                 if (!uniqueCompositionsMap.has(normalizedKey)) {
-                    uniqueCompositionsMap.set(normalizedKey, item.genericName); 
+                    uniqueCompositionsMap.set(normalizedKey, item.genericName);
                 }
             });
 
+            setLoading(false)
             setGenerics(Array.from(uniqueCompositionsMap.values()));
         } catch (error) {
             console.error("Error fetching generic names: ", error);
@@ -84,15 +88,15 @@ const CreateMedicines = () => {
         console.log('generic: ', generic)
         try {
             const response = await axios.get(`${baseURL}medicine/json`);
-    
+
             // Normalize the selected generic name
             const normalizedGeneric = generic.trim().toLowerCase();
-    
+
             // Filter medicines by generic name (ignoring spaces and case)
             const filteredMedicines = response.data.filter(item =>
                 item.genericName?.trim().toLowerCase() === normalizedGeneric
             );
-    
+
             // Extract relevant details
             const filteredMedicinesDetails = filteredMedicines.map(item => ({
                 brandName: item.brandName?.trim() || '',
@@ -102,41 +106,41 @@ const CreateMedicines = () => {
                 category: item.category || '',
                 description: item.description || '',
             })).filter(item => item.brandName); // Ensure no empty brand names
-    
+
             // Fetch existing medicines and filter out those already in stock
             fetchExistingMedicines(generic, filteredMedicinesDetails);
-    
+
         } catch (error) {
             console.error("Error fetching generic select:", error);
         }
     };
-    
+
     // Fetch existing medicines from the pharmacy stock
     const fetchExistingMedicines = async (generic, genericMedicines) => {
         setSearchGeneric('');
-    
+
         try {
             const response = await axios.get(`${baseURL}medicine/existing/${state.user.userId}/${generic}`);
-    
+
             if (response.data) {
                 const existingMedicines = response.data.map(item => item.medicine); // Extract medicines from stock
-                
-                const nonExistingMedicines = genericMedicines.filter(med => 
-                    !existingMedicines.some(existing => 
+
+                const nonExistingMedicines = genericMedicines.filter(med =>
+                    !existingMedicines.some(existing =>
                         existing.brandName === med.brandName &&
                         existing.dosageStrength === med.dosageStrength &&
                         existing.dosageForm === med.dosageForm &&
                         existing.classification === med.classification
                     )
                 );
-                
-    
+
+
                 setMedicines(nonExistingMedicines); // Update state with non-existing medicines
             }
         } catch (error) {
         }
     };
-    
+
 
     const filterMedicines = (text) => {
         setSearchMedicine(text);
@@ -198,80 +202,83 @@ const CreateMedicines = () => {
         });
     };
 
-    const handleExpirationChange = (index, event, selectedDate) => {
+    const handleExpirationChange = (key, event, selectedDate) => {
         setDatePickerVisible((prev) => ({
             ...prev,
-            [index]: false, // Hide picker after selection
+            [key]: false, // Always hide the picker
         }));
 
         if (selectedDate) {
-            let isoDate = selectedDate.toISOString().split("T")[0]; // Format for saving (YYYY-MM-DD)
-
-            let formattedDate = new Intl.DateTimeFormat("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "2-digit",
-            }).format(selectedDate); // Display as "February 21, 2025"
-
+            const isoDate = selectedDate.toISOString().split('T')[0];
             setExpirationDates((prev) => ({
                 ...prev,
-                [index]: formattedDate, // Updates selected index
+                [key]: isoDate,
+            }));
+        } else {
+            setExpirationDates((prev) => ({
+                ...prev,
+                [key]: null,
             }));
         }
+
     };
 
     const handleSubmit = async (index) => {
-    
+
         if (!medicines || medicines.length === 0) {
             console.error("Medicines array is empty or undefined.");
             return;
         }
-    
+
         const selectedMedicine = medicines[index];
-    
+
         if (!selectedMedicine) {
             console.error(`No medicine found at index: ${index}`);
             return;
         }
-    
-    
+
+
         // Gather all stock and expiration date entries for the selected medicine
         const stockEntries = [];
         const expirationEntries = [];
-    
+
         if (items[index] && items[index].length > 0) {
             items[index].forEach((subIndex) => {
                 const stockKey = `${index}-${subIndex}`;
                 const expirationKey = `${index}-${subIndex}`;
-    
+
                 const stockValue = parseInt(stockInputs[stockKey], 10) || 0;
                 let rawDate = expirationDates[expirationKey] || '';
-    
+
                 // Convert displayed date back to ISO format
                 let parsedDate = new Date(rawDate);
-                let isoDate = !isNaN(parsedDate) ? parsedDate.toISOString().split('T')[0] : rawDate;
-    
-                if (stockValue && isoDate) {
+                let isoDate = rawDate.trim() === '' ? null : parsedDate.toISOString().split('T')[0];
+
+
+                if (stockValue) {
                     stockEntries.push({ stock: stockValue, expirationDate: isoDate });
                 }
+
+
             });
         }
-    
+
+        console.log('TESTER: ', stockEntries)
+
         if (stockEntries.length === 0) {
             Toast.show({
                 type: 'error',
                 position: 'top',
                 text1: 'Missing Data',
-                text2: 'Please enter stock and expiration date.',
+                text2: 'Please enter stock.',
                 visibilityTime: 4000,
                 autoHide: true,
             });
             return;
         }
-    
-    
+
         try {
-            const response = await axios.post(`${baseURL}medicine/create`, {
+            await axios.post(`${baseURL}medicine/create`, {
                 genericName: selectedGeneric,
                 brandName: selectedMedicine.brandName,
                 dosageStrength: selectedMedicine.dosageStrength,
@@ -279,30 +286,30 @@ const CreateMedicines = () => {
                 classification: selectedMedicine.classification,
                 category: selectedMedicine.category,
                 description: selectedMedicine.description,
-                expirationPerStock: stockEntries, // Use the collected stock & expiration data
+                expirationPerStock: stockEntries, 
                 pharmacy: state.user.userId,
             });
-    
-    
+
+
             // Remove the added medicine from the list
             setMedicines((prevMedicines) => prevMedicines.filter((_, i) => i !== index));
-    
+
             // Clear stock input and expiration date for this index
             setStockInputs((prevStockInput) => {
                 const newStockInput = { ...prevStockInput };
                 items[index]?.forEach((subIndex) => delete newStockInput[`${index}-${subIndex}`]);
                 return newStockInput;
             });
-    
+
             setExpirationDates((prevExpirationDates) => {
                 const newExpirationDates = { ...prevExpirationDates };
                 items[index]?.forEach((subIndex) => delete newExpirationDates[`${index}-${subIndex}`]);
                 return newExpirationDates;
             });
-    
-            setSelectedMedicineIndex(null);  
+
+            setSelectedMedicineIndex(null);
             setSearchMedicine('')
-        
+
             // Show success message
             Toast.show({
                 type: 'success',
@@ -312,7 +319,7 @@ const CreateMedicines = () => {
                 visibilityTime: 4000,
                 autoHide: true,
             });
-    
+
         } catch (error) {
             Toast.show({
                 type: 'error',
@@ -324,166 +331,178 @@ const CreateMedicines = () => {
             });
         }
     };
-    
+
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-                <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/Medications/ListMedications')} style={styles.backButton}>
-                    <Ionicons name="arrow-back" size={24} color="white" />
-                </TouchableOpacity>
-                <Text style={styles.headerText}>Add Medicine</Text>
-            </View>
-
-            <TouchableOpacity
-                style={styles.dropdownButton}
-                onPress={() => setGenericModalVisible(true)}
-            >
-                <Text style={styles.dropdownButtonText}>
-                    {selectedGeneric || 'Select Generic Name'}
-                </Text>
-            </TouchableOpacity>
-
-            <Modal
-                transparent
-                visible={genericModalVisible}
-                animationType="slide"
-                onRequestClose={() => setGenericModalVisible(false)}
-            >
-                <View style={styles.modalContainer}>
-                    <View style={styles.modalContent}>
-                        <TextInput
-                            style={styles.searchInput}
-                            placeholder="Search"
-                            value={searchGeneric}
-                            onChangeText={(text) => filterGeneric(text)}
-                        />
-                        <View style={styles.listContainer}>
-                            <FlatList
-                                data={generics.filter((generic) =>
-                                    generic.toLowerCase().includes(searchGeneric.toLowerCase())
-                                )}
-                                keyExtractor={(item) => item}
-                                renderItem={({ item }) => (
-                                    <TouchableOpacity
-                                        onPress={() => handleGenericSelect(item)}
-                                        style={styles.categoryItem}
-                                    >
-                                        <Text>{item}</Text>
-                                    </TouchableOpacity>
-                                )}
-                            />
-                        </View>
-                        <Button title="Close" onPress={() => setGenericModalVisible(false)} />
-                    </View>
-                </View>
-            </Modal>
-
-
-            {/* Search for medicines */}
-            <TextInput
-                style={styles.searchInput}
-                placeholder="Search"
-                placeholderTextColor="#AAB4C1"
-                value={searchMedicine}
-                onChangeText={filterMedicines}
-            />
-
-            <FlatList
-                data={filteredMedicines}
-                keyExtractor={(item, index) => index.toString()}
-                ListEmptyComponent={
-                    filteredMedicines.length === 0 ? (
-                        <Text style={styles.emptyMessage}>No medicines available for the selected generic name.</Text>
-                    ) : null
-                }
-                renderItem={({ item, index }) => (
-                    <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Brand Name</Text>
-                        <Text style={styles.input}>{item.brandName}</Text>
-                        <Text style={styles.label}>Dosage Strength</Text>
-                        <Text style={styles.input}>{item.dosageStrength}</Text>
-                        <Text style={styles.label}>Dosage Form</Text>
-                        <Text style={styles.input}>{item.dosageForm}</Text>
-                        <Text style={styles.label}>Classification</Text>
-                        <Text style={styles.input}>{item.classification}</Text>
-                        <Text style={styles.label}>Category</Text>
-                        <Text style={styles.input}>{item.description}</Text>
-
-                        <TouchableOpacity onPress={() => handleMedicineSelect(index)} style={styles.addExpi}>
-                            <Text style={styles.submitAdd}>ADD STOCK</Text>
+            {loading ? (
+                <Spinner /> // Show the custom spinner component when loading
+            ) : (
+                <>
+                    <View style={styles.header}>
+                        <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/Medications/ListMedications')} style={styles.backButton}>
+                            <Ionicons name="arrow-back" size={24} color="white" />
                         </TouchableOpacity>
-                        {selectedMedicineIndex === index && ( // Only show options for selected medicine
-                            <View style={styles.expirationAdd}>
-                                {(items[index] || []).map((subIndex) => (
-                                    <View key={`${index}-${subIndex}`} style={styles.expirationDate}>
-                                        <View style={styles.column}>
-                                            <Text style={styles.label}>Expiration Date</Text>
+                        <Text style={styles.headerText}>Add Medicine</Text>
+                    </View>
+
+                    <TouchableOpacity
+                        style={styles.dropdownButton}
+                        onPress={() => setGenericModalVisible(true)}
+                    >
+                        <Text style={styles.dropdownButtonText}>
+                            {selectedGeneric || 'Select Generic Name'}
+                        </Text>
+                    </TouchableOpacity>
+
+                    <Modal
+                        transparent
+                        visible={genericModalVisible}
+                        animationType="slide"
+                        onRequestClose={() => setGenericModalVisible(false)}
+                    >
+                        <View style={styles.modalContainer}>
+                            <View style={styles.modalContent}>
+                                <TextInput
+                                    style={styles.searchInput}
+                                    placeholder="Search"
+                                    value={searchGeneric}
+                                    onChangeText={(text) => filterGeneric(text)}
+                                />
+                                <View style={styles.listContainer}>
+                                    <FlatList
+                                        data={generics.filter((generic) =>
+                                            generic.toLowerCase().includes(searchGeneric.toLowerCase())
+                                        )}
+                                        keyExtractor={(item) => item}
+                                        renderItem={({ item }) => (
                                             <TouchableOpacity
-                                                style={styles.dateInputContainer}
-                                                onPress={() =>
-                                                    setDatePickerVisible((prev) => ({
-                                                        ...prev,
-                                                        [`${index}-${subIndex}`]: true,
-                                                    }))
-                                                }
+                                                onPress={() => handleGenericSelect(item)}
+                                                style={styles.categoryItem}
                                             >
-                                                <Text style={styles.dateText}>
-                                                    {expirationDates[`${index}-${subIndex}`] || "Select Date"}
-                                                </Text>
+                                                <Text>{item}</Text>
                                             </TouchableOpacity>
+                                        )}
+                                    />
+                                </View>
+                                <Button title="Close" onPress={() => setGenericModalVisible(false)} />
+                            </View>
+                        </View>
+                    </Modal>
 
-                                            {/* Modal Date Picker */}
-                                            <DateTimePickerModal
-                                                isVisible={datePickerVisible[`${index}-${subIndex}`]}
-                                                mode="date"
-                                                onConfirm={(date) =>
-                                                    handleExpirationChange(`${index}-${subIndex}`, null, date)
-                                                }
-                                                onCancel={() =>
-                                                    setDatePickerVisible((prev) => ({
-                                                        ...prev,
-                                                        [`${index}-${subIndex}`]: false,
-                                                    }))
-                                                }
-                                            />
-                                        </View>
 
-                                        <View style={styles.columnS}>
-                                            <Text style={styles.label}>Stock</Text>
+                    {/* Search for medicines */}
+                    <TextInput
+                        style={styles.searchInput}
+                        placeholder="Search"
+                        placeholderTextColor="#AAB4C1"
+                        value={searchMedicine}
+                        onChangeText={filterMedicines}
+                    />
 
-                                            <TextInput
-                                                style={styles.Sinput}
-                                                keyboardType="numeric"
-                                                placeholder="Enter stock to add"
-                                                value={stockInputs[`${index}-${subIndex}`] || ""}
-                                                onChangeText={(text) =>
-                                                    handleStockChange(`${index}-${subIndex}`, text)
-                                                }
-                                            />
-                                        </View>
+                    <FlatList
+                        data={filteredMedicines}
+                        keyExtractor={(item, index) => index.toString()}
+                        ListEmptyComponent={
+                            filteredMedicines.length === 0 ? (
+                                <Text style={styles.emptyMessage}>No medicines available for the selected generic name.</Text>
+                            ) : null
+                        }
+                        renderItem={({ item, index }) => (
+                            <View style={styles.inputContainer}>
+                                <Text style={styles.label}>Brand Name</Text>
+                                <Text style={styles.input}>{item.brandName}</Text>
+                                <Text style={styles.label}>Dosage Strength</Text>
+                                <Text style={styles.input}>{item.dosageStrength}</Text>
+                                <Text style={styles.label}>Dosage Form</Text>
+                                <Text style={styles.input}>{item.dosageForm}</Text>
+                                <Text style={styles.label}>Classification</Text>
+                                <Text style={styles.input}>{item.classification}</Text>
+                                <Text style={styles.label}>Category</Text>
+                                <Text style={styles.input}>{item.description}</Text>
 
-                                        <TouchableOpacity
-                                            style={styles.removeButton}
-                                            onPress={() => removeItem(index, subIndex)}
-                                        >
-                                            <Ionicons name="trash" size={24} color="red" />
+                                <TouchableOpacity onPress={() => handleMedicineSelect(index)} style={styles.addExpi}>
+                                    <Text style={styles.submitAdd}>ADD STOCK</Text>
+                                </TouchableOpacity>
+                                {selectedMedicineIndex === index && ( // Only show options for selected medicine
+                                    <View style={styles.expirationAdd}>
+                                        {(items[index] || []).map((subIndex) => (
+                                            <View key={`${index}-${subIndex}`} style={styles.expirationDate}>
+                                                <View style={styles.column}>
+                                                    <Text style={styles.label}>Expiration Date</Text>
+                                                    <TouchableOpacity
+                                                        style={styles.dateInputContainer}
+                                                        onPress={() =>
+                                                            setDatePickerVisible((prev) => ({
+                                                                ...prev,
+                                                                [`${index}-${subIndex}`]: true,
+                                                            }))
+                                                        }
+                                                    >
+                                                        <Text style={styles.dateText}>
+                                                            {expirationDates[`${index}-${subIndex}`]
+                                                                ? new Date(expirationDates[`${index}-${subIndex}`]).toLocaleDateString('en-US', {
+                                                                    year: 'numeric',
+                                                                    month: 'long',
+                                                                    day: '2-digit',
+                                                                })
+                                                                : 'Select Date'}
+                                                        </Text>
+
+                                                    </TouchableOpacity>
+
+                                                    {/* Modal Date Picker */}
+                                                    <DateTimePickerModal
+                                                        isVisible={datePickerVisible[`${index}-${subIndex}`]}
+                                                        mode="date"
+                                                        onConfirm={(date) =>
+                                                            handleExpirationChange(`${index}-${subIndex}`, null, date)
+                                                        }
+                                                        onCancel={() =>
+                                                            setDatePickerVisible((prev) => ({
+                                                                ...prev,
+                                                                [`${index}-${subIndex}`]: false,
+                                                            }))
+                                                        }
+                                                    />
+                                                </View>
+
+                                                <View style={styles.columnS}>
+                                                    <Text style={styles.label}>Stock</Text>
+
+                                                    <TextInput
+                                                        style={styles.Sinput}
+                                                        keyboardType="numeric"
+                                                        placeholder="Enter stock to add"
+                                                        value={stockInputs[`${index}-${subIndex}`] || ""}
+                                                        onChangeText={(text) =>
+                                                            handleStockChange(`${index}-${subIndex}`, text)
+                                                        }
+                                                    />
+                                                </View>
+
+                                                <TouchableOpacity
+                                                    style={styles.removeButton}
+                                                    onPress={() => removeItem(index, subIndex)}
+                                                >
+                                                    <Ionicons name="trash" size={24} color="red" />
+                                                </TouchableOpacity>
+                                            </View>
+                                        ))}
+
+                                        <TouchableOpacity style={styles.addButton} onPress={addNewItem}>
+                                            <Text style={styles.addButtonText}>+</Text>
                                         </TouchableOpacity>
                                     </View>
-                                ))}
+                                )}
 
-                                <TouchableOpacity style={styles.addButton} onPress={addNewItem}>
-                                    <Text style={styles.addButtonText}>+</Text>
+                                <TouchableOpacity style={styles.submit} onPress={() => handleSubmit(index)}>
+                                    <Text style={styles.submitText}>ADD</Text>
                                 </TouchableOpacity>
                             </View>
                         )}
-
-                        <TouchableOpacity style={styles.submit} onPress={() => handleSubmit(index)}>
-                            <Text style={styles.submitText}>ADD</Text>
-                        </TouchableOpacity>
-                    </View>
-                )}
-            />
-
+                    />
+                </>
+            )}
         </View>
     );
 };

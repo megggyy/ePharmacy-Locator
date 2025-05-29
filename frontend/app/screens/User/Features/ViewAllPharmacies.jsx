@@ -4,10 +4,12 @@ import { Ionicons } from '@expo/vector-icons'; // For icons
 import { useRouter } from 'expo-router';
 import axios from 'axios'; // For making API requests
 import baseURL from '@/assets/common/baseurl'; // Import the base URL
+import Spinner from "@/assets/common/spinner";
 
 const ViewAllPharmacies = () => {
   const [pharmacies, setPharmacies] = useState([]); // State to hold pharmacies data
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPharmacies = () => {
@@ -16,68 +18,76 @@ const ViewAllPharmacies = () => {
         .get(`${baseURL}pharmacies`) // Replace with the correct endpoint for pharmacies
         .then((response) => {
           const pharmaciesData = response.data;
-  
+
           // Filter pharmacies to include only approved ones
           const approvedPharmacies = pharmaciesData.filter(pharmacy => pharmacy.approved);
-  
+
           // Update state with approved pharmacies
           setPharmacies(approvedPharmacies);
+          setLoading(false)
+
         })
         .catch((error) => {
           console.error('Error fetching pharmacies:', error);
         });
     };
-  
+
     // Fetch pharmacies initially
     fetchPharmacies();
-  
+
     // Set up the interval for periodic fetching every 5 seconds
     const intervalId = setInterval(fetchPharmacies, 1000); // 5-second interval
-  
+
     // Cleanup function to clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
   }, []); // Empty dependency array to ensure it runs only once when the component mounts
-  
-  
+
+
 
   return (
     <View style={styles.topContainer}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>Available Pharmacies</Text>
-      </View>
-      <ScrollView style={styles.container}>
-        {/* Pharmacies Grid */}
-        <View style={styles.pharmaciesGrid}>
-          {pharmacies.map((pharmacy, index) => (
-            <TouchableOpacity
-              key={index}
-              style={styles.pharmacyCard}
-              onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)} // Pass the pharmacy ID
-            >
-               <Image
-                style={styles.pharmacyImage}
-                source={
-                  pharmacy?.images?.[0]
-                    ? { uri: pharmacy.images[0] }
-                    : require('@/assets/images/sample.jpg')
-                }
-              />
-              <View>
-                <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
-                <Text style={styles.pharmacyAddress}>{`${pharmacy.userInfo.street || ''}, ${pharmacy.userInfo.barangay || ''}, ${pharmacy.userInfo.city || ''}`.replace(/(, )+/g, ', ').trim()}</Text>
-                <Text style={styles.barangayText}>{pharmacy.userInfo.contactNumber}</Text>
-                <Text style={styles.pharmacyHours}>
-                  {`${pharmacy.businessDays} (${pharmacy?.openingHour || 'N/A'} - ${pharmacy?.closingHour || 'N/A'})`}
-                </Text>
-                {/* <Text style={styles.storeHoursText}>{pharmacy.storeHours}</Text> */}
-              </View>
+      {loading ? (
+        <Spinner /> // Show the custom spinner component when loading
+      ) : (
+        <>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
-          ))}
-        </View>
-      </ScrollView>
+            <Text style={styles.headerText}>Available Pharmacies</Text>
+          </View>
+          <ScrollView style={styles.container}>
+            {/* Pharmacies Grid */}
+            <View style={styles.pharmaciesGrid}>
+              {pharmacies.map((pharmacy, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.pharmacyCard}
+                  onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${pharmacy._id}`)} // Pass the pharmacy ID
+                >
+                  <Image
+                    style={styles.pharmacyImage}
+                    source={
+                      pharmacy?.images?.[0]
+                        ? { uri: pharmacy.images[0] }
+                        : require('@/assets/images/sample.jpg')
+                    }
+                  />
+                  <View>
+                    <Text style={styles.pharmacyName}>{pharmacy.userInfo.name}</Text>
+                    <Text style={styles.pharmacyAddress}>{`${pharmacy.userInfo.street || ''}, ${pharmacy.userInfo.barangay || ''}, ${pharmacy.userInfo.city || ''}`.replace(/(, )+/g, ', ').trim()}</Text>
+                    <Text style={styles.barangayText}>{pharmacy.userInfo.contactNumber}</Text>
+                    <Text style={styles.pharmacyHours}>
+                      {`${pharmacy.businessDays} (${pharmacy?.openingHour || 'N/A'} - ${pharmacy?.closingHour || 'N/A'})`}
+                    </Text>
+                    {/* <Text style={styles.storeHoursText}>{pharmacy.storeHours}</Text> */}
+                  </View>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </ScrollView>
+        </>
+      )}
     </View>
   );
 };

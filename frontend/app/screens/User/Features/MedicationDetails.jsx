@@ -13,6 +13,7 @@ import MapView, { Marker } from 'react-native-maps';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "@/assets/common/spinner";
 
 const MedicationDetails = () => {
   const router = useRouter();
@@ -57,7 +58,7 @@ const MedicationDetails = () => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0B607E" />
+        <Spinner />
       </View>
     );
   }
@@ -74,6 +75,7 @@ const MedicationDetails = () => {
 
   return (
     <View style={styles.safeArea}>
+
       {/* Header Section */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
@@ -171,6 +173,7 @@ const MedicationDetails = () => {
 
         <View style={styles.bottomSpace}></View>
       </ScrollView>
+
     </View>
   );
 };

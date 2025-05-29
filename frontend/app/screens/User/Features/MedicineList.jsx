@@ -6,11 +6,13 @@ import MapView, { Marker } from 'react-native-maps';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "@/assets/common/spinner";
+
 
 const MedicineList = () => {
   const router = useRouter();
   const { pharmacyId, genericName } = useLocalSearchParams();
-  const decodedGenericName = genericName ? decodeURIComponent(genericName) : "";  
+  const decodedGenericName = genericName ? decodeURIComponent(genericName) : "";
   const [medicine, setMedicine] = useState([]);
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState('');
@@ -56,7 +58,7 @@ const MedicineList = () => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0B607E" />
+        <Spinner />
       </View>
     );
   }

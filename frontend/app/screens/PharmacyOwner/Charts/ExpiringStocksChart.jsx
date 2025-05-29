@@ -11,6 +11,7 @@ import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 import * as XLSX from 'xlsx';
 import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
+import Spinner from "../../../../assets/common/spinner";
 
 export default function ExpiringStockScreen() {
   const router = useRouter();
@@ -138,7 +139,7 @@ export default function ExpiringStockScreen() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0B607E" />
+        <Spinner />
       </View>
     );
   }
@@ -174,12 +175,12 @@ export default function ExpiringStockScreen() {
       <TouchableOpacity style={styles.exportButton} onPress={generatePDF}>
         <Text style={styles.exportButtonText}>Export to PDF</Text>
       </TouchableOpacity>
-     
-        <TouchableOpacity style={styles.exportButton} onPress={() => router.push('/screens/PharmacyOwner/Medications/ExpiringMedications')}>
-          <Text style={styles.exportButtonText}>See Detailed Report</Text>
-        </TouchableOpacity>
- 
-      </ScrollView>
+
+      <TouchableOpacity style={styles.exportButton} onPress={() => router.push('/screens/PharmacyOwner/Medications/ExpiringMedications')}>
+        <Text style={styles.exportButtonText}>See Detailed Report</Text>
+      </TouchableOpacity>
+
+    </ScrollView>
   );
 }
 
@@ -195,6 +196,10 @@ const chartConfig = {
 
 const styles = StyleSheet.create({
   scrollContainer: { paddingBottom: 20 },
+  loadingContainer: {
+    flex: 1,
+    backgroundColor: '#F5F5F5',
+  },
   container: { flex: 1, backgroundColor: '#F5F5F5' },
   header: { backgroundColor: '#005b7f', paddingTop: 10, paddingBottom: 20, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' },
   backButton: { position: 'absolute', left: 10, top: 15 },

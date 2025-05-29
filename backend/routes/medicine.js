@@ -139,10 +139,10 @@ router.post('/create', async (req, res) => {
         for (let categoryName of categoryNames) {
             categoryName = categoryName.replace(/[.*+?^${}|[\]\\]/g, '\\$&');
 
-             let categoryExists = await MedicationCategory.findOne({
+            let categoryExists = await MedicationCategory.findOne({
                 name: { $regex: new RegExp(`^${categoryName}$`, 'i') }
             });
-            
+
             if (!categoryExists) {
                 const newCategory = new MedicationCategory({ name: categoryName });
                 await newCategory.save();
@@ -200,6 +200,8 @@ router.post('/create', async (req, res) => {
         });
 
         await pharmacyStock.save();
+
+        console.log('STOCK:,', pharmacyStock)
         res.status(201).send(pharmacyStock);
 
     } catch (error) {
@@ -231,10 +233,15 @@ router.get('/:id', async (req, res) => {
 
         for (let item of stock) {
             let updatedExpirationPerStock = item.expirationPerStock.map(exp => {
-                // Convert expirationDate from "MMMM, dd, yyyy" (e.g., "March, 03, 2025") to Date
-                let expDate = new Date(exp.expirationDate); 
+                if (!exp.expirationDate) {
+                    // If expirationDate is null or undefined, do not update the stock
+                    return exp;
+                }
 
-                // Check if conversion was successful
+                // Convert expirationDate from "MMMM, dd, yyyy" to Date
+                let expDate = new Date(exp.expirationDate);
+
+                // Fallback parsing if initial conversion fails
                 if (isNaN(expDate)) {
                     const parts = exp.expirationDate.split(', ').map(p => p.trim());
                     if (parts.length === 3) {
@@ -246,14 +253,16 @@ router.get('/:id', async (req, res) => {
                 if (!isNaN(expDate) && expDate < today) {
                     return { ...exp, stock: 0 };
                 }
+
                 return exp;
             });
+
 
             // Update timestamp as a string (formatted "YYYY-MM-DD HH:mm:ss")
             const updatedTimeStamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
 
             // Update the document
-            await PharmacyStock.findByIdAndUpdate(item._id, { 
+            await PharmacyStock.findByIdAndUpdate(item._id, {
                 expirationPerStock: updatedExpirationPerStock,
                 timeStamps: updatedTimeStamp
             });
@@ -306,9 +315,9 @@ router.get('/category/:id', async (req, res) => {
         }
 
         const medicine = await Medicine.find({ category: req.params.id })
-        .populate('category')
-        .lean();
-    
+            .populate('category')
+            .lean();
+
         res.status(200).json(medicine);
     } catch (error) {
         console.error("Error fetching medicine:", error);
@@ -361,6 +370,7 @@ router.get('/read/:id', async (req, res) => {
             .populate('pharmacy')
             .lean();
 
+        console.log(stock)
         // Send the fetched medicines
         res.status(200).send(stock);
     } catch (error) {
@@ -436,7 +446,7 @@ router.post('/with-medicines', async (req, res) => {
                 { genericName: { $in: formattedMedicineNames.map(name => new RegExp(name, 'i')) } },
                 { brandName: { $in: formattedMedicineNames.map(name => new RegExp(name, 'i')) } }
             ]
-        });        
+        });
 
         console.log("✅ Medicines found in DB:", medicines.map(med => med.genericName));
 
@@ -467,71 +477,71 @@ router.post('/with-medicines', async (req, res) => {
 
         // Group by pharmacy
         const pharmaciesMap = new Map();
-// Segregate medicines by generic name & brand name
-const segregatedMedicines = {};
+        // Segregate medicines by generic name & brand name
+        const segregatedMedicines = {};
 
-// Loop through pharmacy stocks
-pharmacyStocks.forEach((stock) => {
-    if (stock.pharmacy) {
-        const pharmacyId = stock.pharmacy._id.toString();
+        // Loop through pharmacy stocks
+        pharmacyStocks.forEach((stock) => {
+            if (stock.pharmacy) {
+                const pharmacyId = stock.pharmacy._id.toString();
 
-        if (!pharmaciesMap.has(pharmacyId)) {
-            pharmaciesMap.set(pharmacyId, {
-                pharmacy: {
-                    _id: stock.pharmacy._id,
-                    name: stock.pharmacy.userInfo?.name || "Unknown Pharmacy",
-                    address: {
-                        street: stock.pharmacy.userInfo?.street || "",
-                        barangay: stock.pharmacy.userInfo?.barangay || "",
-                        city: stock.pharmacy.userInfo?.city || ""
-                    },
-                    contactNumber: stock.pharmacy.userInfo?.contactNumber || "",
-                    latitude: stock.pharmacy.location?.latitude || 0,
-                    longitude: stock.pharmacy.location?.longitude || 0,
-                    businessDays: stock.pharmacy.businessDays || "Not Available",
-                    openingHour: stock.pharmacy.openingHour || "Not Available",
-                    closingHour: stock.pharmacy.closingHour || "Not Available"
-                },
-                medicines: {
-                    byGeneric: {},
-                    byBrand: {}
+                if (!pharmaciesMap.has(pharmacyId)) {
+                    pharmaciesMap.set(pharmacyId, {
+                        pharmacy: {
+                            _id: stock.pharmacy._id,
+                            name: stock.pharmacy.userInfo?.name || "Unknown Pharmacy",
+                            address: {
+                                street: stock.pharmacy.userInfo?.street || "",
+                                barangay: stock.pharmacy.userInfo?.barangay || "",
+                                city: stock.pharmacy.userInfo?.city || ""
+                            },
+                            contactNumber: stock.pharmacy.userInfo?.contactNumber || "",
+                            latitude: stock.pharmacy.location?.latitude || 0,
+                            longitude: stock.pharmacy.location?.longitude || 0,
+                            businessDays: stock.pharmacy.businessDays || "Not Available",
+                            openingHour: stock.pharmacy.openingHour || "Not Available",
+                            closingHour: stock.pharmacy.closingHour || "Not Available"
+                        },
+                        medicines: {
+                            byGeneric: {},
+                            byBrand: {}
+                        }
+                    });
                 }
-            });
-        }
 
-        // Store by generic name
-        if (!pharmaciesMap.get(pharmacyId).medicines.byGeneric[stock.medicine.genericName]) {
-            pharmaciesMap.get(pharmacyId).medicines.byGeneric[stock.medicine.genericName] = [];
-        }
-        pharmaciesMap.get(pharmacyId).medicines.byGeneric[stock.medicine.genericName].push({
-            brandName: stock.medicine.brandName,
-            dosageStrength: stock.medicine.dosageStrength,
-            dosageForm: stock.medicine.dosageForm,
-            classification: stock.medicine.classification,
-            stock: stock.expirationPerStock.reduce((total, entry) => total + entry.stock, 0),
-            expirationPerStock: stock.expirationPerStock.map(exp => ({
-                expirationDate: exp.expirationDate,
-                stock: exp.stock
-            }))
-        });
+                // Store by generic name
+                if (!pharmaciesMap.get(pharmacyId).medicines.byGeneric[stock.medicine.genericName]) {
+                    pharmaciesMap.get(pharmacyId).medicines.byGeneric[stock.medicine.genericName] = [];
+                }
+                pharmaciesMap.get(pharmacyId).medicines.byGeneric[stock.medicine.genericName].push({
+                    brandName: stock.medicine.brandName,
+                    dosageStrength: stock.medicine.dosageStrength,
+                    dosageForm: stock.medicine.dosageForm,
+                    classification: stock.medicine.classification,
+                    stock: stock.expirationPerStock.reduce((total, entry) => total + entry.stock, 0),
+                    expirationPerStock: stock.expirationPerStock.map(exp => ({
+                        expirationDate: exp.expirationDate,
+                        stock: exp.stock
+                    }))
+                });
 
-        // Store by brand name
-        if (!pharmaciesMap.get(pharmacyId).medicines.byBrand[stock.medicine.brandName]) {
-            pharmaciesMap.get(pharmacyId).medicines.byBrand[stock.medicine.brandName] = [];
-        }
-        pharmaciesMap.get(pharmacyId).medicines.byBrand[stock.medicine.brandName].push({
-            genericName: stock.medicine.genericName,
-            dosageStrength: stock.medicine.dosageStrength,
-            dosageForm: stock.medicine.dosageForm,
-            classification: stock.medicine.classification,
-            stock: stock.expirationPerStock.reduce((total, entry) => total + entry.stock, 0),
-            expirationPerStock: stock.expirationPerStock.map(exp => ({
-                expirationDate: exp.expirationDate,
-                stock: exp.stock
-            }))
+                // Store by brand name
+                if (!pharmaciesMap.get(pharmacyId).medicines.byBrand[stock.medicine.brandName]) {
+                    pharmaciesMap.get(pharmacyId).medicines.byBrand[stock.medicine.brandName] = [];
+                }
+                pharmaciesMap.get(pharmacyId).medicines.byBrand[stock.medicine.brandName].push({
+                    genericName: stock.medicine.genericName,
+                    dosageStrength: stock.medicine.dosageStrength,
+                    dosageForm: stock.medicine.dosageForm,
+                    classification: stock.medicine.classification,
+                    stock: stock.expirationPerStock.reduce((total, entry) => total + entry.stock, 0),
+                    expirationPerStock: stock.expirationPerStock.map(exp => ({
+                        expirationDate: exp.expirationDate,
+                        stock: exp.stock
+                    }))
+                });
+            }
         });
-    }
-});
 
         const responseData = Array.from(pharmaciesMap.values());
         console.log("📤 Sending response:", JSON.stringify(responseData, null, 2));
@@ -546,23 +556,23 @@ pharmacyStocks.forEach((stock) => {
 
 router.post("/find-related-medicines", async (req, res) => {
     try {
-      const { brandNames, genericNames } = req.body;
-  
-      // Find all medicines matching the brand names or generic names
-      const relatedMedicines = await Medicine.find({
-        $or: [
-          { brandName: { $in: brandNames } },
-          { genericName: { $in: genericNames } }
-        ]
-      });
-  
-      res.json(relatedMedicines);
+        const { brandNames, genericNames } = req.body;
+
+        // Find all medicines matching the brand names or generic names
+        const relatedMedicines = await Medicine.find({
+            $or: [
+                { brandName: { $in: brandNames } },
+                { genericName: { $in: genericNames } }
+            ]
+        });
+
+        res.json(relatedMedicines);
     } catch (error) {
-      console.error("Error fetching related medicines:", error);
-      res.status(500).json({ error: "Server error" });
+        console.error("Error fetching related medicines:", error);
+        res.status(500).json({ error: "Server error" });
     }
-  });
-  
+});
+
 
 //Get Available Pharmacy Medicine
 router.get('/available/:name', async (req, res) => {
@@ -572,7 +582,7 @@ router.get('/available/:name', async (req, res) => {
 
         // Find all medicines that match the generic name (case-insensitive)
         const medicines = await Medicine.find({
-            genericName: name 
+            genericName: name
         });
 
         if (medicines.length === 0) {
@@ -645,11 +655,11 @@ router.get('/available/:name', async (req, res) => {
             pharmacyData.expirationPerStock.push(...stock.expirationPerStock);
         });
 
-        res.status(200).json({ 
-            success: true, 
-            totalStock, 
-            latestTimestamp, 
-            data: Array.from(uniquePharmacies.values()) 
+        res.status(200).json({
+            success: true,
+            totalStock,
+            latestTimestamp,
+            data: Array.from(uniquePharmacies.values())
         });
 
     } catch (error) {

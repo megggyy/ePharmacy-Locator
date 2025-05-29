@@ -10,6 +10,7 @@ import * as Print from 'expo-print';
 import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 import * as XLSX from 'xlsx';
+import Spinner from "../../../../assets/common/spinner";
 
 export default function PharmacyReviewChart() {
     const router = useRouter();
@@ -139,7 +140,7 @@ export default function PharmacyReviewChart() {
     if (loading) {
         return (
             <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#0B607E" />
+                <Spinner />
             </View>
         );
     }
@@ -188,6 +189,10 @@ const chartConfig = {
 
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#F5F5F5' },
+    loadingContainer: {
+        flex: 1,
+        backgroundColor: '#F5F5F5',
+    },
     header: { backgroundColor: '#005b7f', paddingTop: 10, paddingBottom: 20, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' },
     backButton: { position: 'absolute', left: 10, top: 15 },
     title: { color: 'white', fontSize: 24, fontWeight: 'bold' },

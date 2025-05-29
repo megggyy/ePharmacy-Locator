@@ -28,17 +28,17 @@ const HomeScreen = () => {
       axios.get(`${baseURL}pharmacies`)
         .then(response => setPharmacies(response.data))
         .catch(error => console.error('Error fetching pharmacies:', error));
-        
+
       // Fetch medications
       axios.get(`${baseURL}medicine`)
-      .then(response => {
-        const updatedMedicines = response.data.map((medicine) => ({
-          ...medicine,
-          categoryNames: medicine.category.map(cat => cat.name).join(' / '),
-        }));
-        setMedications(updatedMedicines);
-      })
-      .catch(error => console.error('Error fetching medications:', error));
+        .then(response => {
+          const updatedMedicines = response.data.map((medicine) => ({
+            ...medicine,
+            categoryNames: medicine.category.map(cat => cat.name).join(' / '),
+          }));
+          setMedications(updatedMedicines);
+        })
+        .catch(error => console.error('Error fetching medications:', error));
 
     }, []) // Empty dependency array to ensure it runs once when the component mounts or refocuses
   );
@@ -87,7 +87,7 @@ const HomeScreen = () => {
   //       return acc;
   //     }, [])
   // );
-  
+
   const handleCategoryPress = (categoryId, categoryName) => {
     setSelectedCategory(categoryId);
     router.push(`/screens/User/Features/CategoryFilterMedications?id=${categoryId}&name=${categoryName}`);
@@ -120,34 +120,29 @@ const HomeScreen = () => {
       <ScrollView style={styles.container}>
 
 
-{/* Categories Section */}
-<View style={styles.sectionHeader}>
-  <Ionicons name="apps-outline" style={styles.iconStyle} />
-  <Text style={styles.sectionTitle}>Categories</Text>
-</View>
+        {/* Categories Section */}
+        <View style={styles.sectionHeader}>
+          <Ionicons name="apps-outline" style={styles.iconStyle} />
+          <Text style={styles.sectionTitle}>Categories</Text>
+        </View>
 
-<ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryContainer}>
-  {filteredCategories.map((category, index) => {
-    const medicalIcons = [
-      "medkit-outline", "bandage-outline", "thermometer-outline",
-      "flask-outline", "pulse-outline", "eyedrop-outline",
-      "heart-outline", "shield-checkmark-outline"
-    ];
-    const randomIcon = medicalIcons[index % medicalIcons.length];
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoryContainer}>
+          {filteredCategories.map((category, index) => {
+            const medicalIcons = [
+              "medkit-outline", "bandage-outline", "thermometer-outline",
+              "flask-outline", "pulse-outline", "eyedrop-outline",
+              "heart-outline", "shield-checkmark-outline"
+            ];
+            const randomIcon = medicalIcons[index % medicalIcons.length];
 
-    return (
-      <TouchableOpacity key={category._id} style={styles.categoryCard} onPress={() => handleCategoryPress(category._id, category.name)}>
-        <Ionicons name={randomIcon} size={30} color="#005b7f" style={styles.categoryIcon} />
-        <Text style={styles.categoryText}>{category.name}</Text>
-      </TouchableOpacity>
-    );
-  })}
-</ScrollView>
-
-
-
-
-
+            return (
+              <TouchableOpacity key={category._id} style={styles.categoryCard} onPress={() => handleCategoryPress(category._id, category.name)}>
+                <Ionicons name={randomIcon} size={30} color="#005b7f" style={styles.categoryIcon} />
+                <Text style={styles.categoryText}>{category.name}</Text>
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
 
         {/* Pharmacies Section */}
         <View style={styles.sectionHeader}>
@@ -185,29 +180,29 @@ const HomeScreen = () => {
           ))}
         </ScrollView>
 
-      {/* Medications Section */}
-      <View style={styles.sectionHeader}>
-        <Ionicons name="medkit-outline" style={styles.iconStyle} />
-        <Text style={styles.sectionTitle}>Medications</Text>
-      </View>
+        {/* Medications Section */}
+        <View style={styles.sectionHeader}>
+          <Ionicons name="medkit-outline" style={styles.iconStyle} />
+          <Text style={styles.sectionTitle}>Medications</Text>
+        </View>
 
-      <View style={styles.medicationsContainer}>
-        {medications.map((medication) => (
-          <MedicationCard
-            key={medication._id}
-            brandName={medication.brandName}
-            genericName={medication.genericName}
-            dosageForm={medication.dosageForm}
-            dosageStrength={medication.dosageStrength}
-            classification={medication.classification}
-            categoryNames={medication.category.map(cat => cat.name).join(' / ')}
-            onPress={() => {
-              const encodedName = encodeURIComponent(medication.genericName);
-              router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
-            }}
-          />
-        ))}
-      </View>
+        <View style={styles.medicationsContainer}>
+          {medications.map((medication) => (
+            <MedicationCard
+              key={medication._id}
+              brandName={medication.brandName}
+              genericName={medication.genericName}
+              dosageForm={medication.dosageForm}
+              dosageStrength={medication.dosageStrength}
+              classification={medication.classification}
+              categoryNames={medication.category.map(cat => cat.name).join(' / ')}
+              onPress={() => {
+                const encodedName = encodeURIComponent(medication.genericName);
+                router.push(`/screens/User/Features/MedicationDetails?name=${encodedName}`);
+              }}
+            />
+          ))}
+        </View>
 
       </ScrollView>
     </SafeAreaView>
@@ -225,7 +220,7 @@ const MedicationCard = ({ brandName, genericName, dosageForm, dosageStrength, cl
         <Text style={styles.detailText}>💊 Dosage: {dosageStrength || 'N/A'}</Text>
         <Text style={styles.detailText}>📌 Form: {dosageForm || 'N/A'}</Text>
         <Text style={styles.detailText}>📂 Classification: {classification || 'N/A'}</Text>
-        <Text style={styles.detailText}>📋 Category: {categoryNames || 'No Category'}</Text> 
+        <Text style={styles.detailText}>📋 Category: {categoryNames || 'No Category'}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -304,8 +299,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
-  
-  
+
+
   categoryIcon: {
     marginBottom: 5,
   },
@@ -315,12 +310,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#333",
   },
-  
+
   horizontalScroll: {
     flexDirection: 'row',
     paddingVertical: 10,
   },
-  
+
   categoryRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

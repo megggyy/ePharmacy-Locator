@@ -61,7 +61,7 @@ const PrescriptionResultsScreen = () => {
       setMedicines([]);
     }
   }, [matchedMedicines]);
-  
+
 
   useEffect(() => {
     const fetchPharmacies = async () => {
@@ -71,8 +71,8 @@ const PrescriptionResultsScreen = () => {
         setLoading(true);
 
         const formattedMedicines = JSON.parse(matchedMedicines)
-        .map(med => med?.genericName ? med.genericName.trim().toLowerCase() : null)
-        .filter(Boolean); // Remove null/undefined values      
+          .map(med => med?.genericName ? med.genericName.trim().toLowerCase() : null)
+          .filter(Boolean); // Remove null/undefined values      
 
         console.log("🔍 Matched Medicines:", formattedMedicines);
 
@@ -91,6 +91,7 @@ const PrescriptionResultsScreen = () => {
 
     fetchPharmacies();
   }, [matchedMedicines]);
+
 
   return (
     <View style={styles.container}>
@@ -111,27 +112,36 @@ const PrescriptionResultsScreen = () => {
             pharmacies.map((item, index) => {
               const isExpanded = expandedMap === index;
 
+              console.log('stock: ', pharmacies)
+
               // Combine same medicine names & sum their stock
               const medicineStockMap = new Map();
-           // Extract medicines from `byGeneric` and flatten them into an array
-           const allMedicines = Object.values(item.medicines.byGeneric || {}).flat();
-           allMedicines.forEach(med => {
-             const name = med?.genericName?.trim?.(); // Ensure med and genericName exist
-             if (name) {
-               medicineStockMap.set(name, (medicineStockMap.get(name) || 0) + (med.stock || 0));
-             }
-           });
+              // Extract medicines from `byGeneric` and flatten them into an array
+              const allMedicines = Object.values(item.medicines.byGeneric || {}).flat();
+              allMedicines.forEach(med => {
+                const name = med?.genericName?.trim?.(); // Ensure med and genericName exist
+                if (name) {
+                  medicineStockMap.set(name, (medicineStockMap.get(name) || 0) + (med.stock || 0));
+                }
+              });
 
               const uniqueMedicines = Array.from(medicineStockMap, ([genericName, totalStock]) => ({
                 genericName,
                 totalStock,
               }));
 
-              const allOutOfStock = uniqueMedicines.every(med => med.totalStock === 0);
+
+
+              const totalStockAcrossBrands = Object.values(item.medicines.byGeneric || {})
+                .flat()
+                .reduce((sum, med) => sum + (med?.stock || 0), 0);
+
+              const allOutOfStock = totalStockAcrossBrands === 0;
+
 
               return (
                 <View key={item.pharmacy._id || index} style={[styles.pharmacyCard, isExpanded && styles.expandedCard]}>
-                  
+
                   {/* Pharmacy Info & Medicines */}
                   <View style={styles.pharmacyInfo}>
                     <Text style={styles.pharmacyName}>{item.pharmacy.name}</Text>
@@ -148,41 +158,41 @@ const PrescriptionResultsScreen = () => {
                         : "Hours not available"}
                     </Text>
                     <Text style={styles.medicineTitle}>Available Medicines:</Text>
-               {/* Display Unique Medicines Without Redundancy */}
-               {Object.entries(item.medicines.byGeneric).map(([genericName, brands]) => {
-                const scannedMedicine = medicines.find(med => 
-                  med.genericName?.toLowerCase() === genericName.toLowerCase() || 
-                  brands.some(b => med.brandName?.toLowerCase() === b.brandName?.toLowerCase())
-                );
+                    {/* Display Unique Medicines Without Redundancy */}
+                    {Object.entries(item.medicines.byGeneric).map(([genericName, brands]) => {
+                      const scannedMedicine = medicines.find(med =>
+                        med.genericName?.toLowerCase() === genericName.toLowerCase() ||
+                        brands.some(b => med.brandName?.toLowerCase() === b.brandName?.toLowerCase())
+                      );
 
-                if (scannedMedicine) {
-                  return (
-                    <View key={genericName} style={styles.medicineCategory}>
-                      {scannedMedicine.matchedFrom === "brandName" ? (
-                        // Display brand name with merged generic names
-                        <>
-                          <Text style={[styles.medicineName, styles.boldText]}>{scannedMedicine.brandName}</Text>
-                          <Text style={styles.medicineDetails}>
-                            💊 Generic(s): {scannedMedicine.genericNames?.length > 0 ? scannedMedicine.genericNames.join(", ") : "N/A"}
-                          </Text>
-                        </>
-                      ) : (
-                        // Display generic name with merged brand names
-                        <>
-                          <Text style={[styles.medicineName, styles.boldText]}>{scannedMedicine.genericName}</Text>
-                          <Text style={styles.medicineDetails}>
-                            🏷 Brand(s): {scannedMedicine.brandNames?.length > 0 ? scannedMedicine.brandNames.join(", ") : "N/A"}
-                          </Text>
-                        </>
-                      )}
+                      if (scannedMedicine) {
+                        return (
+                          <View key={genericName} style={styles.medicineCategory}>
+                            {scannedMedicine.matchedFrom === "brandName" ? (
+                              // Display brand name with merged generic names
+                              <>
+                                <Text style={[styles.medicineName, styles.boldText]}>{scannedMedicine.brandName}</Text>
+                                <Text style={styles.medicineDetails}>
+                                  💊 Generic(s): {scannedMedicine.genericNames?.length > 0 ? scannedMedicine.genericNames.join(", ") : "N/A"}
+                                </Text>
+                              </>
+                            ) : (
+                              // Display generic name with merged brand names
+                              <>
+                                <Text style={[styles.medicineName, styles.boldText]}>{scannedMedicine.genericName}</Text>
+                                <Text style={styles.medicineDetails}>
+                                  🏷 Brand(s): {scannedMedicine.brandNames?.length > 0 ? scannedMedicine.brandNames.join(", ") : "N/A"}
+                                </Text>
+                              </>
+                            )}
 
-                      {brands.map((med, index) => (
-                        <Text key={index} style={styles.stockText}>{med.stock} in stock</Text>
-                      ))}
-                    </View>
-                  );
-                }
-              })}
+                            {brands.map((med, index) => (
+                              <Text key={index} style={styles.stockText}>{med.stock} in stock</Text>
+                            ))}
+                          </View>
+                        );
+                      }
+                    })}
 
                   </View>
                   {/* Map Section */}
@@ -212,15 +222,15 @@ const PrescriptionResultsScreen = () => {
                       <Ionicons name={isExpanded ? "remove-circle-outline" : "add-circle-outline"} size={16} color="#007BFF" />
                     </TouchableOpacity>
                   </View>
-                  
-                    {/* View Pharmacy Button */}
-                    <TouchableOpacity
-                      style={[styles.viewPharmacyButton, allOutOfStock ? styles.disabledButton : styles.enabledButton]}
-                      onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${item.pharmacy._id}`)}
-                      disabled={allOutOfStock}
-                    >
-                      <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
-                    </TouchableOpacity>
+
+                  {/* View Pharmacy Button */}
+                  <TouchableOpacity
+                    style={[styles.viewPharmacyButton, allOutOfStock ? styles.disabledButton : styles.enabledButton]}
+                    onPress={() => router.push(`/screens/User/Features/PharmacyDetails?id=${item.pharmacy._id}`)}
+                    disabled={allOutOfStock}
+                  >
+                    <Text style={styles.viewPharmacyButtonText}>View Pharmacy</Text>
+                  </TouchableOpacity>
                 </View>
               );
             })
@@ -272,7 +282,13 @@ const styles = StyleSheet.create({
   boldText: { fontWeight: 'bold' },
   medicineBrand: { fontSize: 14, color: '#333', marginLeft: 10 },
   stockText: { fontWeight: 'bold', color: '#007BFF' },
-
+  enabledButton: {
+    backgroundColor: "#007BFF",
+  },
+  disabledButton: {
+    backgroundColor: "#ccc",
+    opacity: 0.6,
+  },
 });
 
 export default PrescriptionResultsScreen;

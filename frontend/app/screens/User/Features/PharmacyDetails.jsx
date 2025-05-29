@@ -97,7 +97,7 @@ const PharmacyDetails = () => {
       }
     };
 
-  
+
     const fetchData = () => {
       Promise.all([
         fetchPharmacyDetails(),
@@ -427,7 +427,7 @@ const PharmacyDetails = () => {
               </View>
             ))
           ) : (
-            <Text></Text>
+            <Text style={styles.noReview}>No Reviews Found</Text>
           )}
         </View>
 
@@ -868,6 +868,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 5,
     marginTop: 20
+  },
+  noReview: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#005b7f',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 'auto'
   },
 });
 
