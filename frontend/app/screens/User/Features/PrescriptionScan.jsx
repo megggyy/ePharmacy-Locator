@@ -60,9 +60,15 @@ const PrescriptionScreen = () => {
     const ocrWords = ocrText
     .split(/\s+|\n+/)  // Split by spaces or new lines
     .map(word => word.toLowerCase().trim())  
+    // .filter(word => 
+    //   word.length > 4 &&         
+    //   /^[a-z]+$/i.test(word) &&  
+    //   !/\d/.test(word)           
+    // );
+    // allow hyphen
     .filter(word => 
       word.length > 4 &&         
-      /^[a-z]+$/i.test(word) &&  
+      /^[a-z-]+$/i.test(word) &&  // ✅ allows lowercase letters and hyphens
       !/\d/.test(word)           
     );
 
@@ -329,7 +335,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 16,
+    paddingVertical: 40,
     paddingHorizontal: 20,
     backgroundColor: '#005b7f',
   },

@@ -18,6 +18,7 @@ export default function PharmacyOwnerDashboard() {
   const [totalMedications, setTotalMedications] = useState(0);
   const [medicationData, setMedicationData] = useState([]);
   const [userProfile, setUserProfile] = useState({});
+  const [loading, setLoading] = useState(true); 
   const { state } = useContext(AuthGlobal);
   const router = useRouter();
   const colorPalette = [
@@ -46,6 +47,7 @@ export default function PharmacyOwnerDashboard() {
                 if (res.data && typeof res.data === "object" && res.data.id) {
                     const pharmacyId = res.data.id;
                   
+
                     axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
                         .then((medRes) => {
                             if (medRes.data && Object.keys(medRes.data).length > 0) {
@@ -71,8 +73,12 @@ export default function PharmacyOwnerDashboard() {
                 }
             })
             .catch((err) => console.error("Error fetching pharmacy details:", err));
+
     }
-}, [state.isAuthenticated, state.user.userId, state.user.role]);
+
+    setLoading(false); // Set loading to false after data fetch is complete
+  }, [state.isAuthenticated, state.user.userId, state.user.role]);
+
 
   const exportToPDF = async () => {
     const htmlContent = `
@@ -168,7 +174,7 @@ export default function PharmacyOwnerDashboard() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F4F4F4' },
-  header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingVertical: 10, backgroundColor: '#005b7f' },
+  header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 40, paddingBottom:10, backgroundColor: '#005b7f' },
   menuIcon: { marginRight: 10 },
   userInfo: { alignItems: 'flex-start', marginLeft: 10 },
   userName: { color: 'white', fontSize: 16, fontWeight: 'bold' },

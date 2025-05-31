@@ -60,7 +60,7 @@ export default function Sidebar() {
     try {
       await AsyncStorage.removeItem('jwt');
       dispatch({ type: 'LOGOUT_USER' });
-      router.push('/(tabs)'); 
+      router.replace('/(tabs)');
       Toast.show({
         topOffset: 60,
         type: "success",

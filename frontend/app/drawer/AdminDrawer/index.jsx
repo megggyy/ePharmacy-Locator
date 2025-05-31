@@ -46,20 +46,20 @@ export default function Sidebar() {
         }, [state.isAuthenticated, state.user.userId, router])  // Add `state.user.userId` and `router` to dependencies
     );
 
-    const handleLogout = async () => {
-      try {
-        await AsyncStorage.removeItem('jwt');
-        dispatch({ type: 'LOGOUT_USER' });
-        router.replace('/(tabs)'); 
-        Toast.show({
-          topOffset: 60,
-          type: "success",
-          text1: "LOGOUT SUCCESSFUL",
-        })
-      } catch (error) {
-        console.error('Error during logout:', error);
-      }
-    };
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem('jwt');
+      dispatch({ type: 'LOGOUT_USER' });
+      router.replace('/(tabs)');
+      Toast.show({
+        topOffset: 60,
+        type: "success",
+        text1: "LOGOUT SUCCESSFUL",
+      })
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  };
   return (
     <View style={styles.container}>
       {/* Back Button */}

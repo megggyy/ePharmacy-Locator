@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, Dimensions, StyleSheet, ActivityIndicator, Image, Alert, TouchableOpacity, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -11,7 +12,7 @@ import AuthGlobal from '@/context/AuthGlobal';
 import { TabView, TabBar } from 'react-native-tab-view';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { jwtDecode } from "jwt-decode";
+import { jwtDecode }    from "jwt-decode";
 import baseURL from '@/assets/common/baseurl';
 import PulseSpinner from '@/assets/common/spinner';
 import { Ionicons } from '@expo/vector-icons';
@@ -174,30 +175,30 @@ export default function PharmacyDetailsScreen() {
     };
 
 
-    // charts
-    useEffect(() => {
-        if (state.isAuthenticated) {
-            if (state.user.role !== "PharmacyOwner") return;
-            axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
-                .then((res) => {
-                    if (res.data && typeof res.data === "object" && res.data.id) {
-                        const pharmacyId = res.data.id;
-                        setPharmacyId(pharmacyId);
-                        fetchReviewStats(pharmacyId);
-                        fetchExpiringStock(pharmacyId);
-                    } else {
-                        console.error("No pharmacy found for this user.");
+  // charts
+        useEffect(() => {
+            if (state.isAuthenticated) {
+                if (state.user.role !== "PharmacyOwner") return;
+                axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
+                    .then((res) => {
+                        if (res.data && typeof res.data === "object" && res.data.id) {
+                            const pharmacyId = res.data.id;
+                            setPharmacyId(pharmacyId);
+                            fetchReviewStats(pharmacyId);
+                            fetchExpiringStock(pharmacyId);
+                        } else {
+                            console.error("No pharmacy found for this user.");
+                            setLoading(false);
+                        }
+                    })
+                    .catch((err) => {
+                        console.error("Error fetching pharmacy details:", err);
                         setLoading(false);
-                    }
-                })
-                .catch((err) => {
-                    console.error("Error fetching pharmacy details:", err);
-                    setLoading(false);
-                });
-        } else {
-            router.push('/login');
-        }
-    }, [state.isAuthenticated, state.user.userId, state.user.role]);
+                    });
+            } else {
+                router.push('/login');
+            }
+        }, [state.isAuthenticated, state.user.userId, state.user.role]);
 
     const fetchReviewStats = async (pharmacyId) => {
         try {
@@ -245,7 +246,6 @@ export default function PharmacyDetailsScreen() {
     // overview
     useEffect(() => {
         if (state.isAuthenticated) {
-            if (state.user.role !== "PharmacyOwner") return;
             // Fetch user profile data
             axios
                 .get(`${baseURL}users/${state.user.userId}`)
@@ -299,7 +299,7 @@ export default function PharmacyDetailsScreen() {
         } else {
             router.push('/login');
         }
-    }, [state.isAuthenticated, state.user.userId, state.user.role]);
+      }, [state.isAuthenticated, state.user.userId]);
 
 
     const handleTabChange = async (newIndex) => {
@@ -307,10 +307,18 @@ export default function PharmacyDetailsScreen() {
         await AsyncStorage.setItem('tabIndex', newIndex.toString());
     };
 
-    if (!pharmacy || !chartData1 || !chartData2 || medicationsList.length === 0) {
+    if (loading) {
         return (
             <View style={styles.loadingContainer}>
                 <Spinner />
+            </View>
+        );
+    }
+
+    if (!pharmacy) {
+        return (
+            <View style={styles.loadingContainer}>
+                <PulseSpinner /> 
             </View>
         );
     }
