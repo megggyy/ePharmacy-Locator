@@ -174,7 +174,7 @@ export default function PharmacyOwnerDashboard() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F4F4F4' },
-  header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 40, paddingBottom:10, backgroundColor: '#005b7f' },
+  header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 15, paddingBottom:10, backgroundColor: '#005b7f' },
   menuIcon: { marginRight: 10 },
   userInfo: { alignItems: 'flex-start', marginLeft: 10 },
   userName: { color: 'white', fontSize: 16, fontWeight: 'bold' },

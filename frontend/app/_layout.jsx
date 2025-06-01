@@ -35,7 +35,7 @@ export default function RootLayout() {
       <SafeAreaProvider>
 
         <AuthProvider>
-
+        <NavigationContainer>
             <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
               <Stack>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -151,6 +151,7 @@ export default function RootLayout() {
             </ThemeProvider>
             <Toast />
  
+        </NavigationContainer>
         </AuthProvider>
       </SafeAreaProvider>
 
