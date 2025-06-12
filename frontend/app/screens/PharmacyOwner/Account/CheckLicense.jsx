@@ -4,18 +4,34 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'reac
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import Toast from 'react-native-toast-message';
+import { Modal, FlatList } from 'react-native';
+
 import baseURL from "../../../../assets/common/baseurl";
 
 const CheckLicense = () => {
   const [inputDetail, setInputDetail] = useState('');
   const [identifier, setIden] = useState('');
+  const [matchedPharmacies, setMatchedPharmacies] = useState([]);
+  const [addressModalVisible, setAddressModalVisible] = useState(false);
 
   const router = useRouter();
 
   const normalizeString = (str) => {
     return str.toLowerCase().replace(/[\s-]/g, ''); // Remove spaces & dashes, make lowercase
   };
-  
+
+  function convertToISO(dateStr) {
+    const [day, monStr, yearSuffix] = dateStr.split("-");
+    const months = {
+      Jan: "01", Feb: "02", Mar: "03", Apr: "04",
+      May: "05", Jun: "06", Jul: "07", Aug: "08",
+      Sep: "09", Oct: "10", Nov: "11", Dec: "12",
+    };
+    const year = "20" + yearSuffix; // assumes year is 20xx
+    const month = months[monStr];
+    return `${year}-${month}-${day.padStart(2, '0')}`;
+  }
+
   const handleSubmit = async () => {
     try {
       if (!inputDetail) {
@@ -27,39 +43,61 @@ const CheckLicense = () => {
         });
         return;
       }
-  
-      // Normalize input
-      const normalizedIdentifier = normalizeString(inputDetail);
-  
+
       // Fetch pharmacies data
       const res = await axios.get(`${baseURL}pharmacies/json`);
       const pharmacies = res.data;
-  
-      console.log("Fetched Response:", pharmacies); // Debugging
-  
-      // Find matching pharmacy
-      const matchedPharmacy = pharmacies.find((pharmacy) => 
-        normalizeString(pharmacy.licenseNumber) === normalizedIdentifier ||
+
+      // console.log("Fetched Response:", pharmacies); // Debugging
+
+      const normalizedIdentifier = normalizeString(inputDetail);
+      const matched = pharmacies.filter((pharmacy) =>
+        normalizeString(pharmacy.licenseNumber) === normalizeString(inputDetail) ||
         normalizeString(pharmacy.pharmacyName) === normalizedIdentifier
       );
-  
-      if (matchedPharmacy) {
-        const pharmacyName = matchedPharmacy.pharmacyName; // Always pass pharmacyName
-  
-        console.log('pharmacy', pharmacyName)
+
+      if (matched.length === 1) {
+        const pharmacy = matched[0];
+        const rawExpiry = pharmacy.expiryDate; // e.g. "22-May-25"
+        const isoDateStr = convertToISO(rawExpiry);
+        const expiryDate = new Date(isoDateStr);
+        const today = new Date();
+
+        expiryDate.setHours(0, 0, 0, 0);
+        today.setHours(0, 0, 0, 0);
+
+        console.log("Converted Expiry Date:", expiryDate.toISOString());
+        console.log("Today's Date:", today.toISOString());
+
+        if (expiryDate < today) {
+          Toast.show({
+            topOffset: 60,
+            type: "error",
+            text1: "LICENSE EXPIRED",
+            text2: "Your license has expired. Please renew your license.",
+          });
+          return;
+        }
+
+
+        const pharmacyName = pharmacy.pharmacyName;
         Toast.show({
           topOffset: 60,
           type: "success",
           text1: "PHARMACY FOUND",
           text2: "Redirecting to Registration.",
         });
-  
+
         setTimeout(() => {
           router.push({
             pathname: '/screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen',
-            params: { pharmacyName }, // Pass pharmacyName instead of identifier
+            params: { pharmacyName },
           });
         }, 500);
+      }
+      else if (matched.length > 1) {
+        setMatchedPharmacies(matched);
+        setAddressModalVisible(true);
       } else {
         Toast.show({
           topOffset: 60,
@@ -68,6 +106,7 @@ const CheckLicense = () => {
           text2: "Try inputting license number instead.",
         });
       }
+
     } catch (error) {
       console.error("Error Occurred:", error.response?.data || error.message);
       Toast.show({
@@ -78,8 +117,8 @@ const CheckLicense = () => {
       });
     }
   };
-  
-  
+
+
 
 
 
@@ -111,6 +150,54 @@ const CheckLicense = () => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      {addressModalVisible && (
+        <Modal transparent visible={addressModalVisible} animationType="slide">
+          <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#000000aa' }}>
+            <View style={{ backgroundColor: '#005b7f', margin: 20, padding: 20, borderRadius: 10 }}>
+              <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>Select Branch</Text>
+              {matchedPharmacies.map((pharmacy, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={{ paddingVertical: 10 }}
+                  onPress={() => {
+                    const rawExpiry = pharmacy.expiryDate;
+                    const isoDateStr = convertToISO(rawExpiry);
+                    const expiryDate = new Date(isoDateStr);
+                    const today = new Date();
+
+                    expiryDate.setHours(0, 0, 0, 0);
+                    today.setHours(0, 0, 0, 0);
+
+                    if (expiryDate < today) {
+                      Toast.show({
+                        topOffset: 60,
+                        type: "error",
+                        text1: "LICENSE EXPIRED",
+                        text2: `The license for this branch has expired. Please renew the license.`,
+                      });
+                      return;
+                    }
+
+                    setAddressModalVisible(false);
+                    router.push({
+                      pathname: '/screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen',
+                      params: { pharmacyName: pharmacy.pharmacyName },
+                    });
+                  }}
+
+                >
+                  <Text style={styles.branches}>{pharmacy.address}</Text>
+                </TouchableOpacity>
+              ))}
+              <TouchableOpacity onPress={() => setAddressModalVisible(false)}>
+                <Text style={{ color: 'white', textAlign: 'center', marginTop: 20 }}>Cancel</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+      )}
+
     </KeyboardAwareScrollView>
   );
 };
@@ -124,7 +211,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0A6A83',
+    backgroundColor: '#005b7f',
   },
   icon: {
     width: 100,
@@ -162,8 +249,17 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     fontSize: 16,
   },
+  branches: {
+    borderWidth: 1,
+    borderColor: '#B0B0B0',
+    padding: 10,
+    borderRadius: 8,
+    marginVertical: 0,
+    fontSize: 16,
+    color: 'white'
+  },
   submitButton: {
-    backgroundColor: '#4A8691',
+    backgroundColor: '#005b7f',
     paddingVertical: 12,
     borderRadius: 8,
     marginVertical: 20,

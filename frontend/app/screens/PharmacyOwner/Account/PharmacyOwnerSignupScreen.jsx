@@ -673,7 +673,7 @@ export default PharmacyOwnerSignupScreen;
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#0F6580',
+    backgroundColor: '#005b7f',
     padding: 20,
     justifyContent: 'center',
   },

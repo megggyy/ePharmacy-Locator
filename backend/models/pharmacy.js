@@ -7,6 +7,18 @@ const pharmacySchema = new mongoose.Schema({
     permits: [{
         type: String
     }],
+    licenseNumber: {
+        type: String,
+        // required: true,
+    },
+    expiryDate: {
+        type: Date,
+        // required: true,
+    },
+    flag: {
+        type: String,
+        default: '0',
+    },
     userInfo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
