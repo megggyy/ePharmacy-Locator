@@ -9,7 +9,7 @@ const multer = require('multer');
 const nodemailer = require('nodemailer');
 
 const { uploadOptions } = require('../utils/cloudinary');
- // Import Cloudinary upload options
+// Import Cloudinary upload options
 
 const FILE_TYPE_MAP = {
     'image/png': 'png',
@@ -85,29 +85,29 @@ router.put('/admins/updateRole/:id', async (req, res) => {
 
         // If there is only one Admin and this Admin is being changed, prevent the update
         if (adminCount === 1 && user.role === 'Admin') {
-            return res.status(400).json({ 
-                success: false, 
-                message: 'MIN' 
+            return res.status(400).json({
+                success: false,
+                message: 'MIN'
             });
         }
 
         // Toggle role between 'Admin' and 'Customer'
         user.role = user.role === 'Admin' ? 'Customer' : 'Admin';
-        
+
         await user.save();
 
-        return res.status(200).json({ 
-            success: true, 
-            message: `User role updated to ${user.role}`, 
-            user 
+        return res.status(200).json({
+            success: true,
+            message: `User role updated to ${user.role}`,
+            user
         });
 
     } catch (error) {
         console.error('Error updating user role:', error);
-        return res.status(500).json({ 
-            success: false, 
-            message: 'Error updating user role', 
-            error: error.message 
+        return res.status(500).json({
+            success: false,
+            message: 'Error updating user role',
+            error: error.message
         });
     }
 });
@@ -119,164 +119,183 @@ router.put('/admins/updateRole/:id', async (req, res) => {
 router.get('/pharmaciesPerMonth', async (req, res) => {
     try {
         const getUsersPerMonth = await User.aggregate([
-          {
-            $match: {
-              role: "PharmacyOwner", 
-            },
-          },
-          {
-            $group: {
-              _id: {
-                year: { $year: "$createdAt" },
-                month: { $month: "$createdAt" },
-              },
-              total: { $sum: 1 }, // Count the number of pharmacies
-            },
-          },
-          {
-            $addFields: {
-              month: {
-                $let: {
-                  vars: {
-                    monthsInString: [
-                      null,
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sept",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  in: {
-                    $arrayElemAt: ["$$monthsInString", "$_id.month"],
-                  },
+            {
+                $match: {
+                    role: "PharmacyOwner",
                 },
-              },
             },
-          },
-          { 
-            $sort: { "_id.year": 1, "_id.month": 1 } // Sort by year first, then by month 
-          },
-          {
-            $project: {
-              _id: 0,
-              year: "$_id.year",
-              month: 1,
-              total: 1,
+            {
+                $group: {
+                    _id: {
+                        year: { $year: "$createdAt" },
+                        month: { $month: "$createdAt" },
+                    },
+                    total: { $sum: 1 }, // Count the number of pharmacies
+                },
             },
-          },
+            {
+                $addFields: {
+                    month: {
+                        $let: {
+                            vars: {
+                                monthsInString: [
+                                    null,
+                                    "Jan",
+                                    "Feb",
+                                    "Mar",
+                                    "Apr",
+                                    "May",
+                                    "Jun",
+                                    "Jul",
+                                    "Aug",
+                                    "Sept",
+                                    "Oct",
+                                    "Nov",
+                                    "Dec",
+                                ],
+                            },
+                            in: {
+                                $arrayElemAt: ["$$monthsInString", "$_id.month"],
+                            },
+                        },
+                    },
+                },
+            },
+            {
+                $sort: { "_id.year": 1, "_id.month": 1 } // Sort by year first, then by month 
+            },
+            {
+                $project: {
+                    _id: 0,
+                    year: "$_id.year",
+                    month: 1,
+                    total: 1,
+                },
+            },
         ]);
-    
+
         console.log(getUsersPerMonth);
-    
+
         if (!getUsersPerMonth || getUsersPerMonth.length === 0) {
-          return res.status(404).json({
-            message: "No pharmacy registrations found for the requested period.",
-          });
+            return res.status(404).json({
+                message: "No pharmacy registrations found for the requested period.",
+            });
         }
-    
+
         res.status(200).json({
-          success: true,
-          getUsersPerMonth,
+            success: true,
+            getUsersPerMonth,
         });
-      } catch (error) {
+    } catch (error) {
         console.error("Error fetching pharmacy registrations per month:", error);
         res.status(500).json({
-          message: "An error occurred while fetching data.",
+            message: "An error occurred while fetching data.",
         });
-      }
+    }
 });
 
 // customers per month na chart
 router.get('/customersPerMonth', async (req, res) => {
     try {
-      const getUsersPerMonth = await User.aggregate([
-        {
-          $match: {
-            role: "Customer",
-          },
-        },
-        {
-          $group: {
-            _id: {
-              year: { $year: "$createdAt" },
-              month: { $month: "$createdAt" },
-            },
-            total: { $sum: 1 },
-          },
-        },
-        {
-          $addFields: {
-            month: {
-              $let: {
-                vars: {
-                  monthsInString: [
-                    null,
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sept",
-                    "Oct",
-                    "Nov",
-                    "Dec",
-                  ],
+        const getUsersPerMonth = await User.aggregate([
+            {
+                $match: {
+                    role: "Customer",
                 },
-                in: {
-                  $arrayElemAt: ["$$monthsInString", "$_id.month"],
-                },
-              },
             },
-          },
-        },
-        {
-          $sort: {
-            "_id.year": 1,  // Sort by year first
-            "_id.month": 1, // Then sort by month
-          },
-        },
-        {
-          $project: {
-            _id: 0,
-            year: "$_id.year", // Include year in the response
-            month: 1,
-            total: 1,
-          },
-        },
-      ]);
-  
-      if (!getUsersPerMonth || getUsersPerMonth.length === 0) {
-        return res.status(404).json({
-          message: "No customer registrations found for the requested period.",
+            {
+                $group: {
+                    _id: {
+                        year: { $year: "$createdAt" },
+                        month: { $month: "$createdAt" },
+                    },
+                    total: { $sum: 1 },
+                },
+            },
+            {
+                $addFields: {
+                    month: {
+                        $let: {
+                            vars: {
+                                monthsInString: [
+                                    null,
+                                    "Jan",
+                                    "Feb",
+                                    "Mar",
+                                    "Apr",
+                                    "May",
+                                    "Jun",
+                                    "Jul",
+                                    "Aug",
+                                    "Sept",
+                                    "Oct",
+                                    "Nov",
+                                    "Dec",
+                                ],
+                            },
+                            in: {
+                                $arrayElemAt: ["$$monthsInString", "$_id.month"],
+                            },
+                        },
+                    },
+                },
+            },
+            {
+                $sort: {
+                    "_id.year": 1,  // Sort by year first
+                    "_id.month": 1, // Then sort by month
+                },
+            },
+            {
+                $project: {
+                    _id: 0,
+                    year: "$_id.year", // Include year in the response
+                    month: 1,
+                    total: 1,
+                },
+            },
+        ]);
+
+        if (!getUsersPerMonth || getUsersPerMonth.length === 0) {
+            return res.status(404).json({
+                message: "No customer registrations found for the requested period.",
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            getUsersPerMonth,
         });
-      }
-  
-      res.status(200).json({
-        success: true,
-        getUsersPerMonth,
-      });
     } catch (error) {
-      console.error("Error fetching customer registrations per month:", error);
-      res.status(500).json({
-        message: "An error occurred while fetching data.",
-      });
+        console.error("Error fetching customer registrations per month:", error);
+        res.status(500).json({
+            message: "An error occurred while fetching data.",
+        });
     }
-  });
-  
+});
+
+router.get('/checkLicenseDuplicated', async (req, res) => {
+  try {
+    const { licenseNumber } = req.query;
+    console.log('Checking license duplication for:', licenseNumber);
+
+    const licenseExists = await Pharmacy.findOne({ licenseNumber: licenseNumber });
+
+    if (licenseExists) {
+      return res.status(400).json({ success: false, message: 'NOT_UNIQUE_LICENSE_NUMBER' });
+    }
+
+    return res.status(200).json({ success: true, message: 'LICENSE_AVAILABLE' });
+  } catch (error) {
+    console.error('Error checking license duplication:', error);
+    res.status(500).json({ success: false, message: 'SERVER_ERROR' });
+  }
+});
 
 
-  router.post(
+
+
+router.post(
     '/register',
     (req, res, next) => {
         req.folder = 'users'; // Set the folder name for Cloudinary uploads
@@ -285,21 +304,21 @@ router.get('/customersPerMonth', async (req, res) => {
     uploadOptions.fields([
         { name: 'images', maxCount: 10 },
         { name: 'permits', maxCount: 10 },
-      ]),
-    
+    ]),
+
     async (req, res) => {
         console.log(req.body)
         try {
             // Validate email uniqueness
             const emailExists = await User.findOne({ email: req.body.email });
             if (emailExists) {
-                return res.status(400).json({  success: false, message: 'NOT_UNIQUE_EMAIL' });
+                return res.status(400).json({ success: false, message: 'NOT_UNIQUE_EMAIL' });
             }
 
             // Validate contactNumber uniqueness and max length
             const contactExists = await User.findOne({ contactNumber: req.body.contactNumber });
             if (contactExists) {
-                return res.status(400).json({  success: false, message: 'NOT_UNIQUE_CONTACT_NUMBER' });
+                return res.status(400).json({ success: false, message: 'NOT_UNIQUE_CONTACT_NUMBER' });
             }
 
             // Create and save user object
@@ -335,24 +354,24 @@ router.get('/customersPerMonth', async (req, res) => {
                 // Handle Customer-specific logic for files
                 const files = req.files?.images || []; // Ensure files is an array
                 if (!files || files.length === 0) {
-                  return res.status(400).send('No images in the request');
+                    return res.status(400).send('No images in the request');
                 }
-                
+
                 const imagesPaths = files.map((file) => file.path);
-                
+
 
                 try {
-                    
-                        const customer = new Customer({
-                            images: imagesPaths,
-                            userInfo: user.id,
-                            location: {
-                                latitude: req.body.latitude,
-                                longitude: req.body.longitude,
-                            },
-                        });
 
-                        await customer.save();
+                    const customer = new Customer({
+                        images: imagesPaths,
+                        userInfo: user.id,
+                        location: {
+                            latitude: req.body.latitude,
+                            longitude: req.body.longitude,
+                        },
+                    });
+
+                    await customer.save();
 
                     return res.status(201).json({ message: 'Customer created successfully', userId: user.id, });
 
@@ -361,7 +380,7 @@ router.get('/customersPerMonth', async (req, res) => {
                     return res.status(500).json({ message: 'Error creating customer' });
                 }
 
-            } else  if (user.role === 'PharmacyOwner') {
+            } else if (user.role === 'PharmacyOwner') {
                 const files = req.files;
                 if (!files || !files.images || files.images.length === 0 || !files.permits || files.permits.length === 0) {
                     return res.status(400).send('No images or permits in the request');
@@ -398,6 +417,9 @@ router.get('/customersPerMonth', async (req, res) => {
                     businessDays,
                     openingHour,
                     closingHour,
+                    licenseNumber: req.body.licenseNumber,
+                    expiryDate: req.body.expiryDate,
+                    flag: 1
                 });
 
                 await newPharmacy.save();
@@ -419,7 +441,7 @@ router.get('/customersPerMonth', async (req, res) => {
 );
 
 
-let otpStore = {}; 
+let otpStore = {};
 
 const sendOTPVerificationEmail = async ({ _id, email }) => {
     try {
@@ -433,7 +455,7 @@ const sendOTPVerificationEmail = async ({ _id, email }) => {
                    <p>This code <b>expires in 1 hour</b>.</p>`,
         };
 
-        const hashedOTP = await bcrypt.hash(otp, 10); 
+        const hashedOTP = await bcrypt.hash(otp, 10);
 
         otpStore[_id] = {
             otp: hashedOTP,
@@ -458,7 +480,7 @@ const sendOTPVerificationEmail = async ({ _id, email }) => {
 
 // verify otp email
 router.post('/verifyOTP', async (req, res) => {
-    const { userId, otp } = req.body; 
+    const { userId, otp } = req.body;
     console.log("Received OTP:", otp);
     console.log("userId:", userId);
     try {
@@ -475,7 +497,7 @@ router.post('/verifyOTP', async (req, res) => {
         // Check if the OTP has expired
         if (Date.now() > otpRecord.expiresAt) {
             // OTP expired, so we remove it from the store
-            delete otpStore[userId]; 
+            delete otpStore[userId];
             return res.status(400).json({ message: 'OTP has expired' });
         }
 
@@ -487,7 +509,7 @@ router.post('/verifyOTP', async (req, res) => {
         if (isValidOTP) {
             delete otpStore[userId];  // Remove OTP after successful verification
             await User.updateOne({ _id: userId }, { verified: true });
-            
+
             // Send success response
             return res.json({
                 status: "VERIFIED",
@@ -542,7 +564,7 @@ router.post('/resendOTPVerificationCode', async (req, res) => {
         } else {
             //delete existing records and resend
             await UserOTPVerification.deleteMany({ userId });
-            sendOTPVerificationEmail({ _id: userId, email}, res);
+            sendOTPVerificationEmail({ _id: userId, email }, res);
         }
     } catch (error) {
         res.json({
@@ -611,7 +633,7 @@ router.get('/:id', async (req, res) => {
         let userDetails = { ...user._doc }; // Clone the user document
 
         // Fetch additional details based on the user's role
-        if (user.role === 'Customer') { 
+        if (user.role === 'Customer') {
             const customer = await Customer.findOne({ userInfo: userId });
             if (customer) {
                 userDetails.customerDetails = customer;
@@ -715,7 +737,7 @@ const sendOTPResetEmail = async ({ _id, email }) => {
                    <p>This code <b>expires in 1 hour</b>.</p>`,
         };
 
-        const hashedOTP = await bcrypt.hash(otp, 10); 
+        const hashedOTP = await bcrypt.hash(otp, 10);
 
         otpStore[_id] = {
             otp: hashedOTP,
@@ -740,7 +762,7 @@ const sendOTPResetEmail = async ({ _id, email }) => {
 };
 
 router.post('/resetOTP', async (req, res) => {
-    const { userId, otp } = req.body; 
+    const { userId, otp } = req.body;
     console.log("Received OTP:", otp);
 
     try {
@@ -757,7 +779,7 @@ router.post('/resetOTP', async (req, res) => {
         // Check if the OTP has expired
         if (Date.now() > otpRecord.expiresAt) {
             // OTP expired, so we remove it from the store
-            delete otpStore[userId]; 
+            delete otpStore[userId];
             return res.status(400).json({ message: 'OTP has expired' });
         }
 
@@ -874,11 +896,11 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
                     return res.status(400).send('Invalid format for existing images');
                 }
             }
-            
-             // **Update business hours and days**
-             pharmacy.businessDays = businessDays || pharmacy.businessDays;
-             pharmacy.openingHour = openingHour || pharmacy.openingHour;
-             pharmacy.closingHour = closingHour || pharmacy.closingHour;
+
+            // **Update business hours and days**
+            pharmacy.businessDays = businessDays || pharmacy.businessDays;
+            pharmacy.openingHour = openingHour || pharmacy.openingHour;
+            pharmacy.closingHour = closingHour || pharmacy.closingHour;
 
             await pharmacy.save();
             return res.status(200).json({ message: 'Pharmacy updated successfully', pharmacy });
@@ -918,6 +940,6 @@ router.put('/:id', uploadOptions.array('images'), async (req, res) => {
 
 
 
-  
+
 
 module.exports = router;

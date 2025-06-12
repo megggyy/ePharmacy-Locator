@@ -32,6 +32,24 @@ const CheckLicense = () => {
     return `${year}-${month}-${day.padStart(2, '0')}`;
   }
 
+const checkLicenseDuplicated = async (licenseNumber) => {
+  try {
+    const res = await axios.get(`${baseURL}users/checkLicenseDuplicated`, {
+      params: { licenseNumber },
+    });
+
+    // License is available
+    return false;
+  } catch (error) {
+    if (error.response?.data?.message === 'NOT_UNIQUE_LICENSE_NUMBER') {
+      return true; // Duplicate license found
+    }
+    console.error('Unexpected error during license check:', error);
+    throw error; // Re-throw unexpected errors
+  }
+};
+
+
   const handleSubmit = async () => {
     try {
       if (!inputDetail) {
@@ -81,6 +99,18 @@ const CheckLicense = () => {
 
 
         const pharmacyName = pharmacy.pharmacyName;
+
+        const isDuplicate = await checkLicenseDuplicated(pharmacy.licenseNumber);
+        if (isDuplicate) {
+          Toast.show({
+            topOffset: 60,
+            type: 'error',
+            text1: 'DUPLICATE LICENSE',
+            text2: 'This license number has already been used.',
+          });
+          return;
+        }
+
         Toast.show({
           topOffset: 60,
           type: "success",
@@ -88,12 +118,15 @@ const CheckLicense = () => {
           text2: "Redirecting to Registration.",
         });
 
-        setTimeout(() => {
-          router.push({
-            pathname: '/screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen',
-            params: { pharmacyName },
-          });
-        }, 500);
+        router.push({
+          pathname: '/screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen',
+          params: {
+            pharmacyName: pharmacy.pharmacyName,
+            licenseNumber: pharmacy.licenseNumber,
+            expiryDate: pharmacy.expiryDate,
+          },
+        });
+
       }
       else if (matched.length > 1) {
         setMatchedPharmacies(matched);
@@ -160,7 +193,7 @@ const CheckLicense = () => {
                 <TouchableOpacity
                   key={index}
                   style={{ paddingVertical: 10 }}
-                  onPress={() => {
+                  onPress={async () => {
                     const rawExpiry = pharmacy.expiryDate;
                     const isoDateStr = convertToISO(rawExpiry);
                     const expiryDate = new Date(isoDateStr);
@@ -179,10 +212,34 @@ const CheckLicense = () => {
                       return;
                     }
 
+
+                    const isDuplicate = await checkLicenseDuplicated(pharmacy.licenseNumber);
+                    if (isDuplicate) {
+                      Toast.show({
+                        topOffset: 60,
+                        type: 'error',
+                        text1: 'DUPLICATE LICENSE',
+                        text2: 'This license number has already been used.',
+                      });
+                      return;
+                    }
+
+                    Toast.show({
+                      topOffset: 60,
+                      type: "success",
+                      text1: "PHARMACY FOUND",
+                      text2: "Redirecting to Registration.",
+                    });
+
                     setAddressModalVisible(false);
                     router.push({
                       pathname: '/screens/PharmacyOwner/Account/PharmacyOwnerSignupScreen',
-                      params: { pharmacyName: pharmacy.pharmacyName },
+                      params: {
+                        pharmacyName: pharmacy.pharmacyName,
+                        licenseNumber: pharmacy.licenseNumber,
+                        expiryDate: pharmacy.expiryDate,
+                      },
+
                     });
                   }}
 

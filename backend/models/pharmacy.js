@@ -16,8 +16,8 @@ const pharmacySchema = new mongoose.Schema({
         // required: true,
     },
     flag: {
-        type: String,
-        default: '0',
+        type: Number,
+        default: 0,
     },
     userInfo: {
         type: mongoose.Schema.Types.ObjectId,

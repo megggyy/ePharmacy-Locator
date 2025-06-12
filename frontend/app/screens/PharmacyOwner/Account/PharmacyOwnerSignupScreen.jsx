@@ -31,7 +31,7 @@ const PharmacyOwnerSignupScreen = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
-  const { pharmacyName } = useLocalSearchParams();
+  const { pharmacyName, licenseNumber, expiryDate } = useLocalSearchParams();
   const [name, setName] = useState(pharmacyName || "");
   const [contactNumber, setContactNumber] = useState("");
   const [password, setPassword] = useState("");
@@ -217,6 +217,19 @@ const PharmacyOwnerSignupScreen = () => {
     if (!agreedToTerms) errorMessages.terms = 'YOU MUST AGREE TO THE TERMS AND CONDITIONS';
     return errorMessages;
   };
+
+  function convertToISO(dateStr) {
+    const [day, monStr, yearSuffix] = dateStr.split("-");
+    const months = {
+      Jan: "01", Feb: "02", Mar: "03", Apr: "04",
+      May: "05", Jun: "06", Jul: "07", Aug: "08",
+      Sep: "09", Oct: "10", Nov: "11", Dec: "12",
+    };
+    const year = "20" + yearSuffix; // assume it's 20xx
+    const month = months[monStr];
+    return `${year}-${month}-${day.padStart(2, '0')}T00:00:00.000Z`;
+  }
+
   const register = () => {
 
     const validationErrors = validate();
@@ -244,6 +257,8 @@ const PharmacyOwnerSignupScreen = () => {
     console.log(openingHour.toISOString());
     console.log(closingHour.toISOString());
 
+    formData.append("expiryDate", convertToISO(expiryDate));
+    formData.append("licenseNumber", licenseNumber);
 
     images.forEach((image, index) => {
       formData.append(`images`, {

@@ -124,6 +124,7 @@ router.put('/approved/:id', async (req, res) => {
       req.params.id,
       {
         approved: true,
+        flag: 0
       },
       { new: true }
     );
