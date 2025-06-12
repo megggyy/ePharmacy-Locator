@@ -32,7 +32,7 @@ const PharmacyOwnerSignupScreen = () => {
 
   const [email, setEmail] = useState("");
   const { pharmacyName } = useLocalSearchParams();
-  const [name, setName] =  useState(pharmacyName || "");
+  const [name, setName] = useState(pharmacyName || "");
   const [contactNumber, setContactNumber] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false); // New state for password visibility

@@ -23,134 +23,135 @@ import Toast from 'react-native-toast-message';
 const CreateMedicines = () => {
     const router = useRouter();
 
-    const [filteredGeneric, setFilteredGeneric] = useState([]);
     const [generics, setGenerics] = useState([]);
+    const [filteredGeneric, setFilteredGeneric] = useState([]);
     const [searchGeneric, setSearchGeneric] = useState('');
-    const [genericModalVisible, setGenericModalVisible] = useState(false);
     const [selectedGeneric, setSelectedGeneric] = useState('');
+
     const [medicines, setMedicines] = useState([]);
     const [filteredMedicines, setFilteredMedicines] = useState([]);
     const [searchMedicine, setSearchMedicine] = useState('');
+
+    const [genericModalVisible, setGenericModalVisible] = useState(false);
+    const [selectedMedicineIndex, setSelectedMedicineIndex] = useState(null);
+
+    const [items, setItems] = useState({});
+    const [stockInputs, setStockInputs] = useState({});
+    const [expirationDates, setExpirationDates] = useState({});
+    const [datePickerVisible, setDatePickerVisible] = useState({});
+
+    const { state } = useContext(AuthGlobal);
     const [loading, setLoading] = useState(true);
 
-    const [items, setItems] = useState([]);
-
-    const [selectedMedicineIndex, setSelectedMedicineIndex] = useState(null);
-    const [datePickerVisible, setDatePickerVisible] = useState({});
-    const [expirationDates, setExpirationDates] = useState({});
-    const [stockInputs, setStockInputs] = useState({});
-    const { state } = useContext(AuthGlobal);
-
     useEffect(() => {
-        fetchGenericNames()
-        setFilteredMedicines(medicines);
-        setFilteredGeneric(generics);
-    }, [medicines], [generics]);
+        fetchGenericNames();
+    }, []);
 
     const fetchGenericNames = async () => {
         try {
             const response = await axios.get(`${baseURL}medicine/json`);
-
-            const uniqueCompositionsMap = new Map();
+            const map = new Map();
 
             response.data.forEach(item => {
-                const normalizedKey = item.genericName.replace(/\s+/g, '').toLowerCase();
-                if (!uniqueCompositionsMap.has(normalizedKey)) {
-                    uniqueCompositionsMap.set(normalizedKey, item.genericName);
-                }
+                const key = item.genericName.trim().toLowerCase().replace(/\s+/g, '');
+                if (!map.has(key)) map.set(key, item.genericName.trim());
             });
 
-            setLoading(false)
-            setGenerics(Array.from(uniqueCompositionsMap.values()));
-        } catch (error) {
-            console.error("Error fetching generic names: ", error);
+            const uniqueGenerics = Array.from(map.values());
+            setGenerics(uniqueGenerics);
+            setFilteredGeneric(uniqueGenerics);
+            setLoading(false);
+        } catch (err) {
+            console.error(err);
+            setLoading(false);
         }
     };
 
-
-
     const filterGeneric = (text) => {
         setSearchGeneric(text);
-        if (text === '') {
+        if (!text.trim()) {
             setFilteredGeneric(generics);
         } else {
-            const filtered = generics.filter((generic) =>
-                generic.toLowerCase().includes(text.toLowerCase())
+            const lower = text.toLowerCase();
+            setFilteredGeneric(
+                generics.filter(g => g.toLowerCase().includes(lower))
             );
-            setFilteredGeneric(filtered);
         }
     };
 
     const handleGenericSelect = async (generic) => {
         setSelectedGeneric(generic);
         setGenericModalVisible(false);
+        setSearchGeneric('');
+        setSearchMedicine('');
+        setMedicines([]);
+        setFilteredMedicines([]);
 
-        console.log('generic: ', generic)
         try {
-            const response = await axios.get(`${baseURL}medicine/json`);
+            const res = await axios.get(`${baseURL}medicine/json`);
+            const normalized = generic.trim().toLowerCase();
 
-            // Normalize the selected generic name
-            const normalizedGeneric = generic.trim().toLowerCase();
-
-            // Filter medicines by generic name (ignoring spaces and case)
-            const filteredMedicines = response.data.filter(item =>
-                item.genericName?.trim().toLowerCase() === normalizedGeneric
+            const matched = res.data.filter(item =>
+                item.genericName?.trim().toLowerCase() === normalized
             );
 
-            // Extract relevant details
-            const filteredMedicinesDetails = filteredMedicines.map(item => ({
-                brandName: item.brandName?.trim() || '',
-                dosageStrength: item.dosageStrength || '',
-                dosageForm: item.dosageForm || '',
-                classification: item.classification || '',
-                category: item.category || '',
-                description: item.description || '',
-            })).filter(item => item.brandName); // Ensure no empty brand names
+            const map = new Map();
+            matched.forEach(item => {
+                const brand = item.brandName?.trim() || '';
+                const key = [
+                    brand.toLowerCase(),
+                    (item.dosageStrength || '').toLowerCase(),
+                    (item.dosageForm || '').toLowerCase(),
+                    (item.classification || '').toLowerCase(),
+                    (item.category || '').toLowerCase(),
+                    (item.description || '').toLowerCase()
+                ].join('|');
 
-            // Fetch existing medicines and filter out those already in stock
-            fetchExistingMedicines(generic, filteredMedicinesDetails);
+                if (brand && !map.has(key)) {
+                    map.set(key, {
+                        brandName: brand,
+                        dosageStrength: item.dosageStrength || '',
+                        dosageForm: item.dosageForm || '',
+                        classification: item.classification || '',
+                        category: item.category || '',
+                        description: item.description || '',
+                    });
+                }
+            });
 
-        } catch (error) {
-            console.error("Error fetching generic select:", error);
+            const uniqueDetails = Array.from(map.values());
+
+            // Filter out already existing
+            const existRes = await axios.get(
+                `${baseURL}medicine/existing/${state.user.userId}/${generic}`
+            );
+            const existing = existRes.data.map(i => i.medicine);
+
+            const nonExisting = uniqueDetails.filter(med =>
+                !existing.some(ex =>
+                    ex.brandName === med.brandName &&
+                    ex.dosageStrength === med.dosageStrength &&
+                    ex.dosageForm === med.dosageForm &&
+                    ex.classification === med.classification
+                )
+            );
+
+            setMedicines(nonExisting);
+            setFilteredMedicines(nonExisting);
+        } catch (err) {
+            console.error(err);
         }
     };
-
-    // Fetch existing medicines from the pharmacy stock
-    const fetchExistingMedicines = async (generic, genericMedicines) => {
-        setSearchGeneric('');
-
-        try {
-            const response = await axios.get(`${baseURL}medicine/existing/${state.user.userId}/${generic}`);
-
-            if (response.data) {
-                const existingMedicines = response.data.map(item => item.medicine); // Extract medicines from stock
-
-                const nonExistingMedicines = genericMedicines.filter(med =>
-                    !existingMedicines.some(existing =>
-                        existing.brandName === med.brandName &&
-                        existing.dosageStrength === med.dosageStrength &&
-                        existing.dosageForm === med.dosageForm &&
-                        existing.classification === med.classification
-                    )
-                );
-
-
-                setMedicines(nonExistingMedicines); // Update state with non-existing medicines
-            }
-        } catch (error) {
-        }
-    };
-
 
     const filterMedicines = (text) => {
         setSearchMedicine(text);
-        if (text === '') {
+        if (!text.trim()) {
             setFilteredMedicines(medicines);
         } else {
-            const filtered = medicines.filter((medicine) =>
-                medicine.brandName.toLowerCase().includes(text.toLowerCase())
+            const lower = text.toLowerCase();
+            setFilteredMedicines(
+                medicines.filter(m => m.brandName.toLowerCase().includes(lower))
             );
-            setFilteredMedicines(filtered);
         }
     };
 
@@ -230,7 +231,7 @@ const CreateMedicines = () => {
             return;
         }
 
-        const selectedMedicine = medicines[index];
+        const selectedMedicine = filteredMedicines[index];
 
         if (!selectedMedicine) {
             console.error(`No medicine found at index: ${index}`);
@@ -286,13 +287,25 @@ const CreateMedicines = () => {
                 classification: selectedMedicine.classification,
                 category: selectedMedicine.category,
                 description: selectedMedicine.description,
-                expirationPerStock: stockEntries, 
+                expirationPerStock: stockEntries,
                 pharmacy: state.user.userId,
             });
 
 
             // Remove the added medicine from the list
-            setMedicines((prevMedicines) => prevMedicines.filter((_, i) => i !== index));
+            setFilteredMedicines(prev => prev.filter((_, i) => i !== index));
+
+            const medicineToRemove = filteredMedicines[index];
+
+            setMedicines(prev => prev.filter(med =>
+                !(
+                    med.brandName === medicineToRemove.brandName &&
+                    med.dosageStrength === medicineToRemove.dosageStrength &&
+                    med.dosageForm === medicineToRemove.dosageForm &&
+                    med.classification === medicineToRemove.classification
+                )
+            ));
+
 
             // Clear stock input and expiration date for this index
             setStockInputs((prevStockInput) => {
@@ -345,17 +358,12 @@ const CreateMedicines = () => {
                         <Text style={styles.headerText}>Add Medicine</Text>
                     </View>
 
-                    <TouchableOpacity
-                        style={styles.dropdownButton}
-                        onPress={() => setGenericModalVisible(true)}
-                    >
-                        <Text style={styles.dropdownButtonText}>
-                            {selectedGeneric || 'Select Generic Name'}
-                        </Text>
+                    <TouchableOpacity style={styles.dropdownButton}
+                        onPress={() => setGenericModalVisible(true)}>
+                        <Text style={styles.dropdownButtonText}>{selectedGeneric || 'Select Generic Name'}</Text>
                     </TouchableOpacity>
 
-                    <Modal
-                        transparent
+                    <Modal transparent
                         visible={genericModalVisible}
                         animationType="slide"
                         onRequestClose={() => setGenericModalVisible(false)}
@@ -364,21 +372,17 @@ const CreateMedicines = () => {
                             <View style={styles.modalContent}>
                                 <TextInput
                                     style={styles.searchInput}
-                                    placeholder="Search"
+                                    placeholder="Search generic"
                                     value={searchGeneric}
-                                    onChangeText={(text) => filterGeneric(text)}
+                                    onChangeText={filterGeneric}
                                 />
                                 <View style={styles.listContainer}>
                                     <FlatList
-                                        data={generics.filter((generic) =>
-                                            generic.toLowerCase().includes(searchGeneric.toLowerCase())
-                                        )}
-                                        keyExtractor={(item) => item}
+                                        data={filteredGeneric}
+                                        keyExtractor={item => item}
                                         renderItem={({ item }) => (
-                                            <TouchableOpacity
-                                                onPress={() => handleGenericSelect(item)}
-                                                style={styles.categoryItem}
-                                            >
+                                            <TouchableOpacity style={styles.categoryItem}
+                                                onPress={() => handleGenericSelect(item)}>
                                                 <Text>{item}</Text>
                                             </TouchableOpacity>
                                         )}
@@ -389,22 +393,19 @@ const CreateMedicines = () => {
                         </View>
                     </Modal>
 
-
-                    {/* Search for medicines */}
+                    {/* MEDICINE SEARCH & LIST */}
                     <TextInput
-                        style={styles.searchInput}
-                        placeholder="Search"
-                        placeholderTextColor="#AAB4C1"
+                        placeholder="Search medicine"
                         value={searchMedicine}
                         onChangeText={filterMedicines}
+                        style={styles.searchInput}
                     />
-
                     <FlatList
                         data={filteredMedicines}
-                        keyExtractor={(item, index) => index.toString()}
-                        ListEmptyComponent={
+                        keyExtractor={(item, i) => i.toString()}
+                        ListEmptyComponent={() =>
                             filteredMedicines.length === 0 ? (
-                                <Text style={styles.emptyMessage}>No medicines available for the selected generic name.</Text>
+                                <Text style={styles.emptyMessage}>No medicines available for selected generic</Text>
                             ) : null
                         }
                         renderItem={({ item, index }) => (

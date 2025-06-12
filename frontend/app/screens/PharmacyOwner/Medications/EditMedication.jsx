@@ -32,15 +32,24 @@ export default function EditMedicationScreen() {
         response.data.expirationPerStock.forEach((exp, index) => {
           initialStocks[index] = exp.stock.toString();
 
-          let parsedDate = new Date(exp.expirationDate);
-          initialExpirations[index] = !isNaN(parsedDate)
-            ? parsedDate.toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: '2-digit',
-            })
-            : exp.expirationDate;
+          // Only parse and format if expirationDate is a valid non-null value
+          if (exp.expirationDate) {
+            let parsedDate = new Date(exp.expirationDate);
+
+            if (!isNaN(parsedDate)) {
+              initialExpirations[index] = parsedDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: '2-digit',
+              });
+            } else {
+              initialExpirations[index] = exp.expirationDate; // Keep original if parsing fails
+            }
+          } else {
+            initialExpirations[index] = null; // Explicitly store null
+          }
         });
+
 
         setStocks(initialStocks);
         setExpirationDates(initialExpirations);
@@ -67,27 +76,33 @@ export default function EditMedicationScreen() {
     setIsCategory((prev) => !prev); // Toggle between true/false
   };
 
-  const handleConfirm = async () => {
-    const updatedData = Object.keys(stocks).map((index) => {
-      let rawDate = expirationDates[index];
+const handleConfirm = async () => {
+  const updatedData = Object.keys(stocks).map((index) => {
+    const rawDate = expirationDates[index];
 
-      let parsedDate = new Date(rawDate);
-      let isoDate = !isNaN(parsedDate) ? parsedDate.toISOString().split('T')[0] : rawDate;
-
-      let stockValue = parseInt(stocks[index], 10) || 0;
-
-      return { expirationDate: isoDate, stock: stockValue };
-    });
-
-    try {
-      await axios.put(`${baseURL}medicine/update/${id}`, { expirationPerStock: updatedData });
-      Alert.alert('Success', 'Medication updated successfully');
-      router.push('/screens/PharmacyOwner/Medications/ListMedications');
-    } catch (error) {
-      console.error('Error updating medication:', error);
-      Alert.alert('Error', 'Failed to update medication');
+    // Preserve null values — only parse and convert if rawDate exists
+    let isoDate = null;
+    if (rawDate) {
+      const parsedDate = new Date(rawDate);
+      isoDate = !isNaN(parsedDate) ? parsedDate.toISOString().split('T')[0] : rawDate;
     }
-  };
+
+    const stockValue = parseInt(stocks[index], 10) || 0;
+
+    return { expirationDate: isoDate, stock: stockValue };
+  });
+
+  console.log("update:", updatedData)
+  try {
+    await axios.put(`${baseURL}medicine/update/${id}`, { expirationPerStock: updatedData });
+    Alert.alert('Success', 'Medication updated successfully');
+    router.push('/screens/PharmacyOwner/Medications/ListMedications');
+  } catch (error) {
+    console.error('Error updating medication:', error);
+    Alert.alert('Error', 'Failed to update medication');
+  }
+};
+
 
   const showDatePicker = (index) => {
     setSelectedIndex(index);
@@ -178,7 +193,10 @@ export default function EditMedicationScreen() {
                   Object.keys(stocks).map((index) => (
                     <View key={index} style={styles.expirationStock}>
                       <TouchableOpacity onPress={() => showDatePicker(index)} style={styles.expiInput}>
-                        <Text>{expirationDates[index] || 'Select Date'}</Text>
+                        <Text>
+                          {expirationDates[index] !== null ? expirationDates[index] : 'Select Date'}
+                        </Text>
+
                       </TouchableOpacity>
 
                       <TextInput

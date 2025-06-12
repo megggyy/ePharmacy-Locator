@@ -404,6 +404,8 @@ router.put('/update/:id', async (req, res) => {
         }
 
         res.json({ success: true, data: updatedStock });
+
+        console.log(updatedStock)
     } catch (err) {
         console.error('Error updating stock:', err.message);
         res.status(500).json({ success: false, message: "Failed to update stock", error: err.message });

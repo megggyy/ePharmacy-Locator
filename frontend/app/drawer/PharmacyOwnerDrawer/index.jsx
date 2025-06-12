@@ -74,7 +74,7 @@ export default function Sidebar() {
   const profileImage =
   userProfile?.pharmacyDetails?.images?.[0] && typeof userProfile.pharmacyDetails.images[0] === 'string'
     ? { uri: userProfile.pharmacyDetails.images[0] }
-    : require('@/assets/images/sample.jpg');
+    : null;
   return (
     <View style={styles.container}>
 

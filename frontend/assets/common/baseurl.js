@@ -11,9 +11,9 @@ if (Platform.OS === 'ios' || Platform.OS === 'android') {
 }
 
 // if (Platform.OS === 'ios' || Platform.OS === 'android') {
-//     baseURL = 'http://192.168.137.1:4000/api/v1/';
+//     baseURL = 'http://192.168.68.111:4000/api/v1/';
 // } else {
-//     baseURL = 'http://192.168.137.200:4000/api/v1/';
+//     baseURL = 'http://192.168.68.200:4000/api/v1/';
 // }
 
 export default baseURL;
