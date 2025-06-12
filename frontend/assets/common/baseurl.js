@@ -11,9 +11,9 @@ let baseURL = '';
 // }
 
 if (Platform.OS === 'ios' || Platform.OS === 'android') {
-    baseURL = 'http://192.168.68.111:4000/api/v1/';
+    baseURL = 'https://epharmacylocator-backend.onrender.com/api/v1/';
 } else {
-    baseURL = 'http://192.168.68.200:4000/api/v1/';
+    baseURL = 'https://epharmacylocator-backend.onrender.com/api/v1/';
 }
 
 export default baseURL;
