@@ -5,6 +5,10 @@ const barangaySchema = mongoose.Schema({
         type: String,
         required: true
     },
+      deleted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 barangaySchema.virtual('id').get(function () {

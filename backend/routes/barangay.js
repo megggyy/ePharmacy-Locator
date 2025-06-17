@@ -24,13 +24,18 @@ router.post(
 
 // READ all Barangays
 router.get("/", async (req, res) => {
-    try {
-        const barangays = await Barangay.find();
-        res.status(200).json(barangays);
-    } catch (error) {
-        res.status(500).json({ success: false, message: error.message });
-    }
+  try {
+    const includeDeleted = req.query.includeDeleted === "true";
+
+    const query = includeDeleted ? {} : { deleted: { $ne: true } };
+
+    const barangays = await Barangay.find(query);
+    res.status(200).json(barangays);
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
 });
+
 
 // READ a specific Barangay by ID
 router.get("/:id", async (req, res) => {
@@ -69,20 +74,40 @@ router.put(
 );
 
 // DELETE a Barangay
+// SOFT DELETE a Barangay
 router.delete("/delete/:id", async (req, res) => {
-    try {
-        const barangay = await Barangay.findByIdAndRemove(req.params.id);
-        if (!barangay)
-            return res
-                .status(404)
-                .json({ message: "Barangay not found" });
+  try {
+    const barangay = await Barangay.findByIdAndUpdate(
+      req.params.id,
+      { deleted: true },
+      { new: true }
+    );
 
-        res
-            .status(200)
-            .json({ success: true, message: "Barangay deleted successfully" });
-    } catch (error) {
-        res.status(500).json({ success: false, message: error.message });
-    }
+    if (!barangay)
+      return res.status(404).json({ message: "Barangay not found" });
+
+    res.status(200).json({ success: true, message: "Barangay soft deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+// RESTORE soft-deleted barangay
+router.put("/restore/:id", async (req, res) => {
+  try {
+    const barangay = await Barangay.findByIdAndUpdate(
+      req.params.id,
+      { deleted: false },
+      { new: true }
+    );
+
+    if (!barangay)
+      return res.status(404).json({ message: "Barangay not found" });
+
+    res.status(200).json({ success: true, message: "Barangay restored successfully" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
 });
 
 module.exports = router;
