@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#005b7f',
-    paddingTop: 80,
+    paddingTop: 20,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   headerText: {

@@ -46,7 +46,7 @@ export default function EditBarangay() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <TouchableOpacity onPress={() => router.push('/screens/Admin/Barangay/ListBarangay')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.headerText}>Edit Barangay</Text>
@@ -76,14 +76,14 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#005b7f',
-    paddingTop: 80,
+    paddingTop: 20,
     paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   headerText: {

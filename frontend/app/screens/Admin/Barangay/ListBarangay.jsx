@@ -42,27 +42,27 @@ const ListBarangayScreen = () => {
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     setTimeout(() => {
-        axios
-        .get(`${baseURL}barangays`)
-            .then((res) => {
-                // console.log(res.data)
-                setBarangayList(res.data);
-                setBarangayFilter(res.data);
-                setLoading(false);
-            })
-        setRefreshing(false);
-    }, 2000);
-}, []);
-
-  useFocusEffect(
-    useCallback(() => {
-      // Fetch barangay
       axios
         .get(`${baseURL}barangays`)
         .then((res) => {
-          setBarangayList(res.data);
-          setBarangayFilter(res.data);
-          console.log(res.data)
+          const reversed = res.data.reverse(); // Reverse here too
+          setBarangayList(reversed);
+          setBarangayFilter(reversed);
+          setLoading(false);
+        });
+      setRefreshing(false);
+    }, 2000);
+  }, []);
+
+
+  useFocusEffect(
+    useCallback(() => {
+      axios
+        .get(`${baseURL}barangays`)
+        .then((res) => {
+          const reversed = res.data.reverse(); 
+          setBarangayList(reversed);
+          setBarangayFilter(reversed);
           setLoading(false);
         })
         .catch((err) => console.error(err));
@@ -74,6 +74,7 @@ const ListBarangayScreen = () => {
       };
     }, [])
   );
+
 
   const handleDelete = async (barangayId) => {
     try {
@@ -95,7 +96,7 @@ const ListBarangayScreen = () => {
       ) : (
         <>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity onPress={() => router.push('/drawer/AdminDrawer')} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
             <Image
@@ -115,7 +116,7 @@ const ListBarangayScreen = () => {
               onPress={() => router.push('/screens/Admin/Barangay/CreateBarangay')}
               style={styles.createButton}
             >
-               <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
+              <Ionicons name="add-circle-outline" size={20} color="white" style={styles.icon} />
               <Text style={styles.createButtonText}>Create</Text>
             </TouchableOpacity>
           </View>
@@ -172,13 +173,13 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#0B607E',
-    paddingTop: 60,
+    paddingTop: 20,
     paddingBottom: 20,
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   logo: {

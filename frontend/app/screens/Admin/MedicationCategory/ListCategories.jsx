@@ -50,8 +50,9 @@ const MedicationCategoriesScreen = () => {
       axios
         .get(`${baseURL}medication-category`)
         .then((res) => {
-          setCategoriesList(res.data);
-          setCategoriesFilter(res.data);
+          const reversed = res.data.reverse();
+          setCategoriesList(reversed);
+          setCategoriesFilter(reversed);
           setLoading(false);
         })
       setRefreshing(false);
@@ -64,19 +65,20 @@ const MedicationCategoriesScreen = () => {
         axios
           .get(`${baseURL}medication-category`)
           .then((res) => {
-            setCategoriesList(res.data);
-            setCategoriesFilter(res.data);
+            const reversed = res.data.reverse(); 
+            setCategoriesList(reversed);
+            setCategoriesFilter(reversed);
             setLoading(false);
           })
           .catch((err) => console.error(err));
       };
-  
+
       fetchData();
-  
+
       const intervalId = setInterval(() => {
         fetchData();
-      }, 5000); 
-  
+      }, 5000);
+
       return () => {
         clearInterval(intervalId);
         setCategoriesList([]);
@@ -85,7 +87,7 @@ const MedicationCategoriesScreen = () => {
       };
     }, [])
   );
-  
+
 
   const handleDelete = async (categoryId) => {
     try {
@@ -211,13 +213,13 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#0B607E',
-    paddingTop: 60,
+    paddingTop: 20,
     paddingBottom: 20,
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   logo: {

@@ -41,7 +41,7 @@ const MedicationScreen = () => {
       );
     }
   };
-  
+
 
   useFocusEffect(
     React.useCallback(() => {
@@ -49,24 +49,25 @@ const MedicationScreen = () => {
         axios
           .get(`${baseURL}medicine`)
           .then((res) => {
-            setMedicationsList(res.data);
-            setMedicationsFilter(res.data);
-            console.log(res.data);
+            const reversed = res.data.reverse();
+            setMedicationsList(reversed);
+            setMedicationsFilter(reversed);
+            // console.log(res.data);
             setLoading(false);
           })
           .catch((err) => {
             setLoading(false);
           });
       };
-  
+
       // Fetch data initially
       fetchData();
-  
+
       // Set interval to fetch data every 30 seconds
       const interval = setInterval(fetchData, 5000);
-  
+
       return () => {
-        clearInterval(interval); // Clear interval when screen loses focus
+        clearInterval(interval); 
         setMedicationsList([]);
         setMedicationsFilter([]);
         setLoading(true);

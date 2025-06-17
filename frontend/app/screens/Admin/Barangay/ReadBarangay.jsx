@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
+import Spinner from "../../../../assets/common/spinner";
+
 
 export default function ReadBarangayScreen() {
   const router = useRouter();
@@ -26,7 +28,7 @@ export default function ReadBarangayScreen() {
   if (!barangayData) {
     return (
       <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
+          <Spinner />
       </View>
     );
   }
@@ -35,7 +37,7 @@ export default function ReadBarangayScreen() {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <TouchableOpacity onPress={() => router.push('/screens/Admin/Barangay/ListBarangay')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.title}>Barangay Details</Text>
@@ -57,13 +59,13 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#005b7f',
-    paddingTop: 60,
+    paddingTop: 20,
     paddingBottom: 20,
     alignItems: 'center',
   },
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 20,
     left: 20,
   },
   title: {
