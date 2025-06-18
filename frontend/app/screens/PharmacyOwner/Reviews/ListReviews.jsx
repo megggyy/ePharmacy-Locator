@@ -597,7 +597,7 @@ const styles = StyleSheet.create({
     color: '#444',
     lineHeight: 20,
     textAlign: 'right',
-  },
+  }
 });
 
 export default ListReviewsScreen;
