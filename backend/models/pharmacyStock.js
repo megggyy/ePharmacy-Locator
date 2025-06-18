@@ -28,8 +28,12 @@ const pharmacyStockSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',
         required: true,
+    },
+    deleted: {
+        type: Boolean,
+        default: false,
     }
-});
+}, { timestamps: true });
 
 pharmacyStockSchema.virtual('id').get(function () {
     return this._id.toHexString();

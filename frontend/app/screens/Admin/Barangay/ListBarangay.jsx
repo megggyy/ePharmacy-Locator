@@ -80,7 +80,7 @@ const ListBarangayScreen = () => {
     try {
       await axios.delete(`${baseURL}barangays/delete/${barangayId}`);
       setBarangayList(barangayList.filter(barangay => barangay._id !== barangayId));
-      Alert.alert('Success', 'Category deleted successfully');
+      Alert.alert('Success', 'Barangay deleted successfully');
 
       onRefresh()
     } catch (error) {

@@ -29,8 +29,12 @@ const medicineSchema = mongoose.Schema({
     description: [{
         type: String,
         required: true,
-    }]
-});
+    }],
+    deleted: {
+            type: Boolean,
+            default: false,
+        }
+    }, { timestamps: true });
 
 medicineSchema.virtual('id').get(function () {
     return this._id.toHexString();

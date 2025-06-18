@@ -213,71 +213,69 @@ router.post('/create', async (req, res) => {
 
 // Get All Pharmacy's Medicine
 router.get('/:id', async (req, res) => {
-    try {
-        const pharmacy = await Pharmacy.findOne({ userInfo: req.params.id });
+  try {
+    const pharmacy = await Pharmacy.findOne({ userInfo: req.params.id });
 
-        if (!pharmacy) {
-            return res.status(400).send("Pharmacy not found");
-        }
-
-        const stock = await PharmacyStock.find({ pharmacy: pharmacy._id })
-            .populate({
-                path: 'medicine',
-                populate: { path: 'category' },
-            })
-            .populate('pharmacy')
-            .lean();
-
-        const today = new Date();
-        let updatedStocks = [];
-
-        for (let item of stock) {
-            let updatedExpirationPerStock = item.expirationPerStock.map(exp => {
-                if (!exp.expirationDate) {
-                    // If expirationDate is null or undefined, do not update the stock
-                    return exp;
-                }
-
-                // Convert expirationDate from "MMMM, dd, yyyy" to Date
-                let expDate = new Date(exp.expirationDate);
-
-                // Fallback parsing if initial conversion fails
-                if (isNaN(expDate)) {
-                    const parts = exp.expirationDate.split(', ').map(p => p.trim());
-                    if (parts.length === 3) {
-                        expDate = new Date(`${parts[0]} ${parts[1]}, ${parts[2]}`);
-                    }
-                }
-
-                // Set stock to 0 if expired
-                if (!isNaN(expDate) && expDate < today) {
-                    return { ...exp, stock: 0 };
-                }
-
-                return exp;
-            });
-
-
-            // Update timestamp as a string (formatted "YYYY-MM-DD HH:mm:ss")
-            const updatedTimeStamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
-
-            // Update the document
-            await PharmacyStock.findByIdAndUpdate(item._id, {
-                expirationPerStock: updatedExpirationPerStock,
-                timeStamps: updatedTimeStamp
-            });
-
-            // Update response data
-            item.expirationPerStock = updatedExpirationPerStock;
-            item.timeStamps = updatedTimeStamp;
-            updatedStocks.push(item);
-        }
-
-        res.status(200).send(updatedStocks);
-    } catch (error) {
-        res.status(500).json({ success: false, message: error.message });
+    if (!pharmacy) {
+      return res.status(400).send("Pharmacy not found");
     }
+
+    const includeDeleted = req.query.includeDeleted === 'true';
+
+    const stock = await PharmacyStock.find({
+    pharmacy: pharmacy._id,
+    ...(includeDeleted ? {} : { $or: [{ deleted: false }, { deleted: { $exists: false } }] })
+    })
+
+      .populate({
+        path: 'medicine',
+        populate: { path: 'category' }
+      })
+      .populate('pharmacy')
+      .lean();
+
+    const today = new Date();
+    let updatedStocks = [];
+
+    for (let item of stock) {
+      let updatedExpirationPerStock = item.expirationPerStock.map(exp => {
+        if (!exp.expirationDate) return exp;
+
+        let expDate = new Date(exp.expirationDate);
+
+        if (isNaN(expDate)) {
+          const parts = exp.expirationDate.split(', ').map(p => p.trim());
+          if (parts.length === 3) {
+            expDate = new Date(`${parts[0]} ${parts[1]}, ${parts[2]}`);
+          }
+        }
+
+        if (!isNaN(expDate) && expDate < today) {
+          return { ...exp, stock: 0 };
+        }
+
+        return exp;
+      });
+
+      const updatedTimeStamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
+
+      await PharmacyStock.findByIdAndUpdate(item._id, {
+        expirationPerStock: updatedExpirationPerStock,
+        timeStamps: updatedTimeStamp
+      });
+
+      item.expirationPerStock = updatedExpirationPerStock;
+      item.timeStamps = updatedTimeStamp;
+      updatedStocks.push(item);
+    }
+
+    res.status(200).send(updatedStocks);
+  } catch (error) {
+    console.error("Error fetching medicines:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
 });
+
 
 
 router.get('/features/:id', async (req, res) => {
@@ -422,6 +420,42 @@ router.delete('/delete/:id', async (req, res) => {
     } catch (err) {
         res.status(500).json({ success: false, error: err });
     }
+});
+
+// ✅ Soft Delete Route
+router.put('/soft-delete/:id', async (req, res) => {
+  try {
+    const stock = await PharmacyStock.findByIdAndUpdate(
+      req.params.id,
+      { deleted: true },
+      { new: true }
+    );
+
+    if (!stock) return res.status(404).json({ message: 'Stock not found' });
+
+    res.status(200).json({ success: true, message: 'Stock soft-deleted successfully' });
+  } catch (err) {
+    console.error("Soft delete error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// ✅ Restore Route
+router.put('/restore/:id', async (req, res) => {
+  try {
+    const stock = await PharmacyStock.findByIdAndUpdate(
+      req.params.id,
+      { deleted: false },
+      { new: true }
+    );
+
+    if (!stock) return res.status(404).json({ message: 'Stock not found' });
+
+    res.status(200).json({ success: true, message: 'Stock restored successfully' });
+  } catch (err) {
+    console.error("Restore error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
 });
 
 // Get pharmacies that stock specific medicines
