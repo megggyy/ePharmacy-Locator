@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Tesseract = require("tesseract.js");
 const Jimp = require("jimp").default;
-// const tf = require("@tensorflow/tfjs-node");
+const tf = require("@tensorflow/tfjs-node");
 const fs = require("fs").promises;
 const axios = require("axios");
 const { uploadOptions } = require('../utils/cloudinary');
@@ -38,89 +38,89 @@ router.patch('/:id/update-location', async (req, res) => {
     }
 });
 
-// router.post(
-//   "/scan-prescription",
-//   (req, res, next) => {
-//     req.folder = "prescriptions";
-//     next();
-//   },
-//   uploadOptions.single("prescriptions"),
-//   async (req, res) => {
-//     try {
-//       const imageUrl = req.file.path; // Cloudinary URL of original image
-//       console.log("Processing image:", imageUrl);
+router.post(
+  "/scan-prescription",
+  (req, res, next) => {
+    req.folder = "prescriptions";
+    next();
+  },
+  uploadOptions.single("prescriptions"),
+  async (req, res) => {
+    try {
+      const imageUrl = req.file.path; // Cloudinary URL of original image
+      console.log("Processing image:", imageUrl);
 
-//       // **STEP 1: DOWNLOAD IMAGE FROM CLOUDINARY**
-//       const response = await axios.get(imageUrl, { responseType: "arraybuffer" });
-//       const imageBuffer = Buffer.from(response.data);
+      // **STEP 1: DOWNLOAD IMAGE FROM CLOUDINARY**
+      const response = await axios.get(imageUrl, { responseType: "arraybuffer" });
+      const imageBuffer = Buffer.from(response.data);
 
-//       // **STEP 2: CONVERT IMAGE TO TENSOR**
-//       let imageTensor = tf.node.decodeImage(imageBuffer, 3);
+      // **STEP 2: CONVERT IMAGE TO TENSOR**
+      let imageTensor = tf.node.decodeImage(imageBuffer, 3);
 
-//       // **STEP 3: CONVERT TO GRAYSCALE**
-//       imageTensor = imageTensor.mean(2).expandDims(-1);
+      // **STEP 3: CONVERT TO GRAYSCALE**
+      imageTensor = imageTensor.mean(2).expandDims(-1);
 
-//       // **STEP 4: NORMALIZE PIXEL VALUES (0 TO 1)**
-//       imageTensor = imageTensor.div(255.0);
+      // **STEP 4: NORMALIZE PIXEL VALUES (0 TO 1)**
+      imageTensor = imageTensor.div(255.0);
 
-//       // **STEP 5: APPLY THRESHOLDING**
-//       const threshold = 0.4;
-//       let binarizedTensor = imageTensor.greater(tf.scalar(threshold)).toFloat();
+      // **STEP 5: APPLY THRESHOLDING**
+      const threshold = 0.4;
+      let binarizedTensor = imageTensor.greater(tf.scalar(threshold)).toFloat();
 
-//      // **STEP 6: INVERT COLORS (Make text white, background black)**
-//       binarizedTensor = tf.sub(1, binarizedTensor);
+     // **STEP 6: INVERT COLORS (Make text white, background black)**
+      binarizedTensor = tf.sub(1, binarizedTensor);
 
-//       // **STEP 7: DILATE TEXT STROKES (Thicken text)**
-//       const kernelSize = 3; // Adjust size for thickness
-//       const kernel = tf.ones([kernelSize, kernelSize, 1, 1]);
+      // **STEP 7: DILATE TEXT STROKES (Thicken text)**
+      const kernelSize = 3; // Adjust size for thickness
+      const kernel = tf.ones([kernelSize, kernelSize, 1, 1]);
 
-//       binarizedTensor = tf.conv2d(
-//         binarizedTensor.expandDims(0), 
-//         kernel, 
-//         1, 
-//         "same"
-//       ).squeeze(0);
+      binarizedTensor = tf.conv2d(
+        binarizedTensor.expandDims(0), 
+        kernel, 
+        1, 
+        "same"
+      ).squeeze(0);
 
-//       // **STEP 8: INVERT COLORS BACK (Restore original text color)**
-//       binarizedTensor = tf.sub(1, binarizedTensor);
+      // **STEP 8: INVERT COLORS BACK (Restore original text color)**
+      binarizedTensor = tf.sub(1, binarizedTensor);
 
-//       // **STEP 9: RESTORE PIXEL VALUES (0-255 RANGE)**
-//       binarizedTensor = binarizedTensor.mul(255).cast("int32");
+      // **STEP 9: RESTORE PIXEL VALUES (0-255 RANGE)**
+      binarizedTensor = binarizedTensor.mul(255).cast("int32");
 
 
-//       // **STEP 10: CONVERT BACK TO IMAGE FORMAT**
-//       const processedBuffer = await tf.node.encodeJpeg(binarizedTensor);
+      // **STEP 10: CONVERT BACK TO IMAGE FORMAT**
+      const processedBuffer = await tf.node.encodeJpeg(binarizedTensor);
 
-//       // **STEP 11: UPLOAD PROCESSED IMAGE TO CLOUDINARY**
-//       const uploadedResponse = await cloudinary.uploader.upload_stream(
-//         { folder: "processed_prescriptions" },
-//         async (error, result) => {
-//           if (error) {
-//             console.error("Error uploading processed image:", error);
-//             return res.status(500).json({ error: "Failed to upload processed image" });
-//           }
+      // **STEP 11: UPLOAD PROCESSED IMAGE TO CLOUDINARY**
+      const uploadedResponse = await cloudinary.uploader.upload_stream(
+        { folder: "processed_prescriptions" },
+        async (error, result) => {
+          if (error) {
+            console.error("Error uploading processed image:", error);
+            return res.status(500).json({ error: "Failed to upload processed image" });
+          }
 
-//           // **STEP 10: OCR USING TESSERACT**
-//           const { data: { text } } = await Tesseract.recognize(processedBuffer, "epharmacy_finetunedver2", { psm: 6 });
-//           console.log("Extracted OCR Text:", text);
+          // **STEP 10: OCR USING TESSERACT**
+          const { data: { text } } = await Tesseract.recognize(processedBuffer, "epharmacy_finetunedver2", { psm: 6 });
+          console.log("Extracted OCR Text:", text);
 
-//           res.json({
-//             message: "Image uploaded, processed, and saved successfully",
-//             originalImageUrl: imageUrl,
-//             processedImageUrl: result.secure_url,
-//             ocrText: text.trim() || "No text detected",
-//           });
-//         }
-//       );
+          res.json({
+            message: "Image uploaded, processed, and saved successfully",
+            originalImageUrl: imageUrl,
+            processedImageUrl: result.secure_url,
+            ocrText: text.trim() || "No text detected",
+          });
+        }
+      );
 
-//       // Write processedBuffer to Cloudinary stream
-//       uploadedResponse.end(processedBuffer);
-//     } catch (error) {
-//       console.error("Error during image preprocessing or OCR:", error);
-//       res.status(500).json({ error: "Failed to process image" });
-//     }
-//   }
-// );
+      // Write processedBuffer to Cloudinary stream
+      uploadedResponse.end(processedBuffer);
+    } catch (error) {
+      console.error("Error during image preprocessing or OCR:", error);
+      res.status(500).json({ error: "Failed to process image" });
+    }
+  }
+);
 
 router.post("/upload-prescription", async (req, res) => {
   try {
