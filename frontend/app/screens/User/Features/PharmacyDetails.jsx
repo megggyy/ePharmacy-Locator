@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Switch, View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ActivityIndicator, TextInput } from 'react-native';
+import { Switch, View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ActivityIndicator, TextInput, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -25,7 +25,7 @@ const PharmacyDetails = () => {
   const [comment, setComment] = useState('');
   const [name, setName] = useState('false');
   const [editingReview, setEditingReview] = useState(null);
-  const [showReviewForm, setShowReviewForm] = useState(true);
+  const [showReviewForm, setShowReviewForm] = useState(false);
   const [shareCustomerInfo, setShareCustomerInfo] = useState(true);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('shop');
@@ -33,17 +33,21 @@ const PharmacyDetails = () => {
   const [medicines, setMedicines] = useState([]);
   const [filteredMedicines, setFilteredMedicines] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [replies, setReplies] = useState({});
 
   const [error, setError] = useState('');
   const { state } = useContext(AuthGlobal);
 
-  console.log(state)
+  // console.log(state)
   useEffect(() => {
-    console.log("Fetching pharmacy with ID:", id);
+    // console.log("Fetching pharmacy with ID:", id);
     const fetchPharmacyDetails = async () => {
       try {
         const response = await axios.get(`${baseURL}pharmacies/${id}`);
         setPharmacy(response.data);
+        if (state.user?.userId) {
+          fetchCustomerFeedbacks(pharmacy._id);
+        }
       } catch (error) {
         // console.error("Error fetching pharmacy details:", error);
       }
@@ -81,8 +85,8 @@ const PharmacyDetails = () => {
         }));
 
         setCategories(categoryList);
-        console.log("Stock data:", stockData);
-        console.log("Extracted categories:", categoryList);
+        // console.log("Stock data:", stockData);
+        // console.log("Extracted categories:", categoryList);
       } catch (error) {
         console.error('Error fetching medicine categories:', error);
       }
@@ -91,9 +95,23 @@ const PharmacyDetails = () => {
     const fetchFeedbacks = async () => {
       try {
         const response = await axios.get(`${baseURL}feedbacks/${id}`);
-        setFeedbacks(response.data);
+        const data = response.data;
+
+        setFeedbacks(data);
       } catch (error) {
-        // console.error("Error fetching pharmacy details:", error);
+        // Optional: handle/log error
+        console.error("Error fetching feedbacks:", error?.response?.data || error.message);
+      }
+    };
+
+    const fetchReplies = async () => {
+      try {
+        const response = await axios.get(`${baseURL}feedbacks/fetchReplies`);
+        if (response.data.exists && response.data.replies) {
+          setReplies(response.data.replies);
+        }
+      } catch (error) {
+        console.error("Error fetching pharmacy replies:", error?.response?.data || error.message);
       }
     };
 
@@ -104,6 +122,7 @@ const PharmacyDetails = () => {
         fetchMedicineStocks(),
         fetchCategoriesWithMedicines(),
         fetchFeedbacks(),
+        fetchReplies()
 
       ]).finally(() => setLoading(false));
     };
@@ -127,28 +146,18 @@ const PharmacyDetails = () => {
     }
   }, [medicationData]);
 
-  useEffect(() => {
-    const fetchCustomerFeedbacks = async () => {
-      if (!state.user?.userId) {
-        setShowReviewForm(false); // Hide the review form
-        return;
-      }
 
-      try {
-        const response = await axios.get(`${baseURL}feedbacks/customer/${state.user.userId}`);
-
-        if (response.data?.exists) {
-          setShowReviewForm(false);
-        } else {
-          setShowReviewForm(true);
-        }
-      } catch (error) {
-        console.error("Error fetching customer feedback:", error?.response?.data || error.message);
-      }
-    };
-    fetchCustomerFeedbacks()
-
-  }, []);
+  const fetchCustomerFeedbacks = async (id) => {
+    console.log(id)
+    try {
+      const response = await axios.get(
+        `${baseURL}feedbacks/customer/${state.user.userId}?pharmacyId=${id}`
+      );
+      setShowReviewForm(!response.data?.exists ?? true);
+    } catch (error) {
+      console.error("Error fetching customer feedback:", error?.response?.data || error.message);
+    }
+  };
 
   const handleCategoryClick = (category) => {
     if (!id) {
@@ -162,7 +171,7 @@ const PharmacyDetails = () => {
     }
 
     const route = `/screens/User/Features/FilterMedicinesByCategoryPerPharmacy?category=${encodeURIComponent(category.name)}&pharmacyId=${id}`;
-    console.log("Navigating to:", route);
+    // console.log("Navigating to:", route);
     router.push(route);
   };
 
@@ -247,18 +256,35 @@ const PharmacyDetails = () => {
   };
 
 
-  const deleteReview = async (reviewId) => {
-    try {
-      const response = await axios.delete(`${baseURL}feedbacks/delete/${reviewId}`);
-      if (response.status === 200) {
-        Toast.show({ type: "success", text1: "REVIEW DELETED" });
-        setShowReviewForm(false);
-      }
-    } catch (error) {
-      console.error("Delete error:", error);
-      Toast.show({ type: "error", text1: "ERROR!", text2: "FAILED TO DELETE REVIEW" });
-    }
-  };
+const deleteReview = (reviewId) => {
+  Alert.alert(
+    'Confirm Delete',
+    'Are you sure you want to delete this review?',
+    [
+      {
+        text: 'Cancel',
+        style: 'cancel',
+      },
+      {
+        text: 'Yes, Delete',
+        style: 'destructive',
+        onPress: async () => {
+          try {
+            const response = await axios.delete(`${baseURL}feedbacks/delete/${reviewId}`);
+            if (response.status === 200) {
+              Toast.show({ type: "success", text1: "REVIEW DELETED" });
+              setShowReviewForm(false);
+            }
+          } catch (error) {
+            console.error("Delete error:", error);
+            Toast.show({ type: "error", text1: "ERROR!", text2: "FAILED TO DELETE REVIEW" });
+          }
+        },
+      },
+    ],
+    { cancelable: true }
+  );
+};
 
   const updateReview = async () => {
 
@@ -413,6 +439,17 @@ const PharmacyDetails = () => {
                 {/* Show comment only if it's not empty */}
                 {feedback.comment && <Text style={styles.value}>{feedback.comment}</Text>}
 
+                <Text style={styles.replyTimestamp}>
+                  {new Date(feedback.timestamp).toLocaleString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true,
+                  })}
+                </Text>
+
                 {/* Show Edit & Delete buttons if the logged-in user is the feedback owner */}
                 {feedback.customer?._id === state.user?.userId && (
                   <View style={styles.updateContainer}>
@@ -424,6 +461,29 @@ const PharmacyDetails = () => {
                     </TouchableOpacity>
                   </View>
                 )}
+
+                {replies[feedback._id] && replies[feedback._id].length > 0 && (
+                  <View style={styles.replyContainer}>
+                    <Text style={styles.replyLabel}>Pharmacy Reply:</Text>
+                    {replies[feedback._id].map((reply, i) => (
+                      <View key={i} style={{ marginTop: 5 }}>
+                        <Text style={styles.replyText}>{reply.comment}</Text>
+                        <Text style={styles.replyTimestamp}>
+                          {new Date(reply.timestamp).toLocaleString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            hour12: true,
+                          })}
+                        </Text>
+                      </View>
+                    ))}
+                  </View>
+                )}
+
+
               </View>
             ))
           ) : (
@@ -777,106 +837,127 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 15
   },
+  reviewContainer: {
+    padding: 15,
+    backgroundColor: '#f9f9f9',
+  },
   reviewCard: {
-    backgroundColor: "#f9f9f9",
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 8,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
+    backgroundColor: '#fff',
+    padding: 15,
+    borderRadius: 12,
+    marginBottom: 15,
+    shadowColor: '#000',
     shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 5,
+    elevation: 3,
   },
   userInfo: {
-    flexDirection: "row", // Aligns items in a row
-    alignItems: "center", // Aligns vertically
-    justifyContent: "space-between", // Spaces name and rating evenly
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 6,
   },
   userName: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#333",
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#333',
   },
   starsContainer: {
-    flexDirection: "row",
-    marginLeft: 10, // Space between name and rating
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: "bold",
-    marginTop: 5,
+    flexDirection: 'row',
   },
   value: {
     fontSize: 15,
-    color: "#555",
-    marginTop: 5,
-    fontStyle: "italic",
+    color: '#444',
+    marginBottom: 6,
   },
-  reviewContainer: {
-    padding: 20
+  replyContainer: {
+    marginTop: 10,
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
+  },
+  replyLabel: {
+    fontWeight: '600',
+    color: '#4A8691',
+    marginBottom: 4,
+    fontSize: 14,
+  },
+  replyText: {
+    fontSize: 14,
+    color: '#333',
+    marginBottom: 2,
+  },
+  replyTimestamp: {
+    fontSize: 12,
+    color: '#999',
+    fontStyle: 'italic',
+    marginBottom: 4,
+    textAlign: 'left'
+  },
+  updateContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    gap: 15,
+    marginTop: 10,
+  },
+  noReview: {
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 16,
+    color: '#999',
+  },
+  headerText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    marginVertical: 15,
+    textAlign: 'center',
   },
   addReview: {
-    padding: 20,
-    backgroundColor: '#4A8691',
-    borderRadius: 10
-  },
-  reviewSection: {
-    marginBottom: 20,
+    backgroundColor: '#0B607E',
+    padding: 15,
+    borderRadius: 12,
+    marginTop: 10,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 3,
+    elevation: 2,
   },
   ratingContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: 15
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
   },
   ratingLabel: {
+    fontWeight: '600',
     marginRight: 10,
-    fontSize: 16,
+    fontSize: 14,
+    color: 'white',
+    marginBottom: 10
   },
   input: {
     borderWidth: 1,
-    borderColor: 'black',
-    padding: 12,
+    borderColor: '#ccc',
     borderRadius: 10,
-    marginVertical: 10,
-    fontSize: 16,
+    padding: 10,
+    fontSize: 14,
+    marginBottom: 10,
+    color: '#333',
+    backgroundColor: '#fff',
   },
   switchContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginVertical: 10,
-  },
-  switchLabel: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "#333",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
   },
   confirmButton: {
     backgroundColor: 'black',
-    paddingVertical: 12,
-    paddingHorizontal: 100,
-    borderRadius: 8,
-    marginVertical: 10,
-    marginBottom: 5,
-
-    alignItems: 'center',
-  },
-  updateContainer: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    gap: 5,
-    marginTop: 20
-  },
-  noReview: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#005b7f',
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: 'auto'
+    padding: 12,
+    borderRadius: 10,
+    marginTop: 10,
   },
 });
 

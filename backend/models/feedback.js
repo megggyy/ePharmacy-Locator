@@ -20,7 +20,12 @@ const feedbackSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',
         required: true,
+    },
+    timestamp: {
+        type: Date,
+        default: Date.now
     }
+
 });
 
 feedbackSchema.virtual('id').get(function () {

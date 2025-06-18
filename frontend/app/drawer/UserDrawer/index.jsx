@@ -69,7 +69,7 @@ export default function Sidebar() {
   const profileImage =
     userProfile?.customerDetails?.images?.[0] && typeof userProfile.customerDetails.images[0] === 'string'
       ? { uri: userProfile.customerDetails.images[0] }
-      : require('@/assets/images/sample.jpg');
+      : null;
 
   return (
     <View style={styles.container}>
