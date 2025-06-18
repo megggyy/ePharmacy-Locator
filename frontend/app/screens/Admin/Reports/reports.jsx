@@ -21,12 +21,12 @@ export default function AdminReportsScreen() {
     const screenWidth = Dimensions.get("window").width;
     const chartWidth = screenWidth * 0.9;
     const { state } = useContext(AuthGlobal);
-    const [index, setIndex] = useState(0); 
+    const [index, setIndex] = useState(0);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [pharmacies, setPharmacies] = useState([]);
     const [filteredPharmacies, setFilteredPharmacies] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
     // 🔹 Date range state
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
@@ -41,7 +41,7 @@ export default function AdminReportsScreen() {
         expiringPharmacies: 0,
         medicines: 0,
         categories: 0,
-        scannedPrescriptions: 0 
+        scannedPrescriptions: 0
     });
 
     // charts
@@ -51,7 +51,7 @@ export default function AdminReportsScreen() {
     const [chartData4, setChartData4] = useState([]);
     const [scannedMedicinesData, setScannedMedicinesData] = useState({ labels: [], data: [] });
     const [customersData, setCustomersData] = useState({ labels: [], data: [] });
-   
+
     // export as pdf
     const chart1Ref = useRef(null);
     const chart2Ref = useRef(null);
@@ -60,23 +60,23 @@ export default function AdminReportsScreen() {
     const chart5Ref = useRef(null);
     const chart6Ref = useRef(null);
 
-    
+
     useEffect(() => {
         const fetchChartData = async () => {
             setLoading(true);  // Set loading to true before the request
             try {
                 const response = await axios.get(`${baseURL}feedbacks/pharmacy-rating-distribution`);
                 const data = response?.data;
-        
+
                 if (!data) {
                     console.error("No data received from the API.");
                     setLoading(false);  // Stop loading if no data
                     return;
                 }
-        
+
                 const labels = ["0-1", "1.01-2", "2.01-3", "3.01-4", "4.01-5"];
                 const values = labels.map((label) => data[label] || 0);
-        
+
                 setChartData({
                     labels,
                     datasets: [
@@ -93,7 +93,7 @@ export default function AdminReportsScreen() {
                 setLoading(false);  // Set loading to false after the request completes
             }
         };
-        
+
 
         const fetchCustomersData = async () => {
             try {
@@ -130,7 +130,7 @@ export default function AdminReportsScreen() {
 
         const fetchData2 = async () => {
             try {
-                const response = await axios.get(`${baseURL}users/pharmaciesPerMonth`); 
+                const response = await axios.get(`${baseURL}users/pharmaciesPerMonth`);
                 const result = response?.data || {};  // Ensure result is not null
 
                 const labels = result.getUsersPerMonth?.map((item) => `${item.month} ${item.year}`) || [];
@@ -200,12 +200,12 @@ export default function AdminReportsScreen() {
             try {
                 setLoading(true); // Start loading
                 const [
-                    usersRes, 
-                    pharmaciesRes, 
-                    adminsRes, 
-                    barangaysRes, 
-                    medicinesRes, 
-                    categoriesRes, 
+                    usersRes,
+                    pharmaciesRes,
+                    adminsRes,
+                    barangaysRes,
+                    medicinesRes,
+                    categoriesRes,
                     pharmaciesWithExpiryRes,
                     prescriptionsRes
                 ] = await Promise.all([
@@ -216,16 +216,16 @@ export default function AdminReportsScreen() {
                     axios.get(`${baseURL}medicine`),
                     axios.get(`${baseURL}medication-category`),
                     axios.get(`${baseURL}pharmacies/json`),
-                    axios.get(`${baseURL}prescriptions`) 
+                    axios.get(`${baseURL}prescriptions`)
                 ]);
-    
+
                 // Check for null or undefined responses
                 if (!usersRes?.data || !pharmaciesRes?.data) {
                     console.error("Data fetching error: Missing response data.");
                     setLoading(false);
                     return;
                 }
-    
+
                 const pharmacies = pharmaciesRes.data;
                 const expiryPharmacies = pharmaciesWithExpiryRes.data;
                 const customers = usersRes.data.filter(user => user.role === "Customer");
@@ -234,19 +234,19 @@ export default function AdminReportsScreen() {
                 // Default date range: Next 30 days
                 const currentDate = moment();
                 const defaultEndDate = moment().add(30, "days");
-    
+
                 const mergedPharmacies = pharmacies.map(pharmacy => {
                     const matchingExpiryPharmacy = expiryPharmacies.find(
                         expiryPharmacy => expiryPharmacy.pharmacyName.toLowerCase() === pharmacy.userInfo.name.toLowerCase()
                     );
-    
+
                     return {
                         ...pharmacy,
                         pharmacyName: pharmacy.userInfo.name,
                         expiryDate: matchingExpiryPharmacy ? matchingExpiryPharmacy.expiryDate : null
                     };
                 });
-    
+
                 const expiringPharmacies = mergedPharmacies.filter(pharmacy => {
                     try {
                         if (!pharmacy.userInfo || !pharmacy.expiryDate) return false;
@@ -259,10 +259,10 @@ export default function AdminReportsScreen() {
                         return false;
                     }
                 });
-    
+
                 setPharmacies(mergedPharmacies); // Store all pharmacies without filters
                 setFilteredPharmacies(expiringPharmacies); // Default display: 30-day expiring pharmacies
-    
+
                 setCounts({
                     customers: customers.length,
                     pharmacies: pharmacies.length,
@@ -273,7 +273,7 @@ export default function AdminReportsScreen() {
                     categories: categoriesRes.data.length,
                     scannedPrescriptions
                 });
-    
+
                 setLoading(false); // Stop loading
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -287,31 +287,31 @@ export default function AdminReportsScreen() {
         };
 
         loadData();
-    }, []); 
-    
-  
+    }, []);
+
+
     const getRandomColor = (index) => {
         const colors = [
-          '#0B607E', '#A0C4FF', '#4D7EA8', '#357ABD', '#78C6A3', '#F5F595', '#F28B82', '#FFD700',
+            '#0B607E', '#A0C4FF', '#4D7EA8', '#357ABD', '#78C6A3', '#F5F595', '#F28B82', '#FFD700',
         ];
         return colors[index % colors.length];
-      };
+    };
 
-      const topMedicines = scannedMedicinesData?.labels
-      .map((label, index) => ({ name: label, count: scannedMedicinesData?.data[index] }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 5);
-  
-      const handleSearch = (query) => {
-          setSearchQuery(query);
-          setFilteredPharmacies(pharmacies.filter(pharmacy => 
-              pharmacy.pharmacyName?.toLowerCase().includes(query?.toLowerCase())
-          ));
-      };
+    const topMedicines = scannedMedicinesData?.labels
+        .map((label, index) => ({ name: label, count: scannedMedicinesData?.data[index] }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 5);
 
-     // 🔹 Filter pharmacies based on search and date range
-     const applyFilters = () => {
-        let filtered = pharmacies?.filter(pharmacy => 
+    const handleSearch = (query) => {
+        setSearchQuery(query);
+        setFilteredPharmacies(pharmacies.filter(pharmacy =>
+            pharmacy.pharmacyName?.toLowerCase().includes(query?.toLowerCase())
+        ));
+    };
+
+    // 🔹 Filter pharmacies based on search and date range
+    const applyFilters = () => {
+        let filtered = pharmacies?.filter(pharmacy =>
             pharmacy.pharmacyName?.toLowerCase().includes(searchQuery?.toLowerCase())
         );
 
@@ -355,7 +355,7 @@ export default function AdminReportsScreen() {
     const exportReportsAsPDF = async () => {
         try {
             const chartImages = await captureCharts(); // Capturing charts as base64 images
-    
+
             const chartDataTables = [
                 {
                     title: "Pharmacy Feedback Rating Distribution",
@@ -388,101 +388,107 @@ export default function AdminReportsScreen() {
                     values: scannedMedicinesData?.data || []
                 }
             ];
-    
+
+            // 🕒 Generate timestamp string
+            const now = new Date();
+            const timestamp = now.toLocaleString('en-PH', {
+                dateStyle: 'full',
+                timeStyle: 'short',
+                hour12: true,
+            });
+
             let htmlContent = `
-            <html>
-            <head>
-                <style>
-                    body { font-family: Arial, sans-serif; padding: 20px; }
-                    h2 { text-align: center; }
-                    table { width: 100%; border-collapse: collapse; margin-top: 10px; page-break-inside: avoid; }
-                    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-                    th { background-color: #f2f2f2; }
-                    .chart-container { page-break-before: always; text-align: center; margin-top: 20px; }
-                    img { width: 100%; max-width: 500px; height: auto; }
-                </style>
-            </head>
-            <body>
-                <h2>Admin Reports</h2>
-    
-                <h3>Overview</h3>
-                <table>
-                    <tr><th>Metric</th><th>Count</th></tr>
-                    ${Object.entries(counts).map(([key, value]) => 
-                        `<tr><td>${key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</td><td>${value}</td></tr>`).join("")
-                    }
-                </table>
-    
-                <h3>Expiring Pharmacies</h3>
-                <table>
-                    <tr><th>Name</th><th>Expiry Date</th></tr>
-                    ${filteredPharmacies.map(p => 
-                        `<tr><td>${p.pharmacyName}</td><td>${p.expiryDate || 'N/A'}</td></tr>`).join("")
-                    }
-                </table>
-    
-                ${chartImages.map((img, index) => {
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            h2 { text-align: center; margin-bottom: 0; }
+            .timestamp { text-align: center; font-size: 12px; color: gray; margin-bottom: 20px; }
+            table { width: 100%; border-collapse: collapse; margin-top: 10px; page-break-inside: avoid; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+            th { background-color: #f2f2f2; }
+            .chart-container { page-break-before: always; text-align: center; margin-top: 20px; }
+            img { width: 100%; max-width: 500px; height: auto; }
+        </style>
+    </head>
+    <body>
+        <h2>Admin Reports</h2>
+        <div class="timestamp">Generated on: ${timestamp}</div>
+
+        <h3>Overview</h3>
+        <table>
+            <tr><th>Metric</th><th>Count</th></tr>
+            ${Object.entries(counts).map(([key, value]) =>
+                `<tr><td>${key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</td><td>${value}</td></tr>`).join("")
+                }
+        </table>
+
+        <h3>Expiring Pharmacies</h3>
+        <table>
+            <tr><th>Name</th><th>Expiry Date</th></tr>
+            ${filteredPharmacies.map(p =>
+                    `<tr><td>${p.pharmacyName}</td><td>${p.expiryDate || 'N/A'}</td></tr>`).join("")
+                }
+        </table>
+
+        ${chartImages.map((img, index) => {
                     if (chartDataTables[index].title === "Number of Medicines per Category") {
-                        // Special case: Two-column table for "Number of Medicines per Category"
                         const categoryLabels = chartDataTables[index].labels;
                         const categoryValues = chartDataTables[index].values;
-                
                         let twoColumnTable = "<table><tr><th>Category</th><th>Count</th><th>Category</th><th>Count</th></tr>";
-                
                         for (let i = 0; i < categoryLabels.length; i += 2) {
                             twoColumnTable += `
-                                <tr>
-                                    <td>${categoryLabels[i] || ""}</td>
-                                    <td>${categoryValues[i] || ""}</td>
-                                    <td>${categoryLabels[i + 1] || ""}</td>
-                                    <td>${categoryValues[i + 1] || ""}</td>
-                                </tr>
-                            `;
+                        <tr>
+                            <td>${categoryLabels[i] || ""}</td>
+                            <td>${categoryValues[i] || ""}</td>
+                            <td>${categoryLabels[i + 1] || ""}</td>
+                            <td>${categoryValues[i + 1] || ""}</td>
+                        </tr>
+                    `;
                         }
                         twoColumnTable += "</table>";
-                
                         return `
-                            <div class="chart-container">
-                                <h4>${chartDataTables[index].title}</h4>
-                                <img src="${img}" />
-                                ${twoColumnTable}
-                            </div>
-                        `;
+                    <div class="chart-container">
+                        <h4>${chartDataTables[index].title}</h4>
+                        <img src="${img}" />
+                        ${twoColumnTable}
+                    </div>
+                `;
                     } else {
-                        // Regular chart tables
                         return `
-                            <div class="chart-container">
-                                <h4>${chartDataTables[index].title}</h4>
-                                <img src="${img}" />
-                                <table>
-                                    <tr><th>Label</th><th>Value</th></tr>
-                                    ${chartDataTables[index].labels.map((label, i) => `
-                                        <tr>
-                                            <td>${label}</td>
-                                            <td>${chartDataTables[index].values[i]}</td>
-                                        </tr>
-                                    `).join("")}
-                                </table>
-                            </div>
-                        `;
+                    <div class="chart-container">
+                        <h4>${chartDataTables[index].title}</h4>
+                        <img src="${img}" />
+                        <table>
+                            <tr><th>Label</th><th>Value</th></tr>
+                            ${chartDataTables[index].labels.map((label, i) => `
+                                <tr>
+                                    <td>${label}</td>
+                                    <td>${chartDataTables[index].values[i]}</td>
+                                </tr>
+                            `).join("")}
+                        </table>
+                    </div>
+                `;
                     }
-                }).join("")}                
-            </body>
-            </html>
-            `;
-    
+                }).join("")}
+    </body>
+    </html>
+    `;
+
             const { uri } = await Print.printToFileAsync({ html: htmlContent });
             await Sharing.shareAsync(uri, { mimeType: "application/pdf", UTI: "com.adobe.pdf" });
         } catch (error) {
             console.error("Error exporting reports:", error);
         }
     };
-    
-    
+
+
+
     const captureCharts = async () => {
         const chartRefs = [chart1Ref, chart2Ref, chart3Ref, chart4Ref, chart5Ref, chart6Ref];
         const imageBase64Array = [];
-    
+
         for (let ref of chartRefs) {
             if (ref.current) {
                 try {
@@ -496,7 +502,7 @@ export default function AdminReportsScreen() {
         }
         return imageBase64Array;
     };
-    
+
 
     const routes = [
         { key: 'overview', title: 'Overview' },
@@ -524,198 +530,198 @@ export default function AdminReportsScreen() {
             case 'pharmacies':
                 return (
                     <View style={styles.pharmaciesContainer}>
-                    <Searchbar
-                        placeholder="Search Pharmacy"
-                        onChangeText={setSearchQuery}
-                        value={searchQuery}
-                        style={styles.searchBar}
-                    />
-                    <View style={styles.dateFilterContainer}>
-                        <Button mode="outlined" onPress={() => openDatePicker("start")}>
-                            {startDate ? startDate.format("MMMM D, YYYY") : "Select Start Date"}
-                        </Button>
-                        <Button mode="outlined" onPress={() => openDatePicker("end")}>
-                            {endDate ? endDate.format("MMMM D, YYYY") : "Select End Date"}
-                        </Button>
+                        <Searchbar
+                            placeholder="Search Pharmacy"
+                            onChangeText={setSearchQuery}
+                            value={searchQuery}
+                            style={styles.searchBar}
+                        />
+                        <View style={styles.dateFilterContainer}>
+                            <Button mode="outlined" onPress={() => openDatePicker("start")}>
+                                {startDate ? startDate.format("MMMM D, YYYY") : "Select Start Date"}
+                            </Button>
+                            <Button mode="outlined" onPress={() => openDatePicker("end")}>
+                                {endDate ? endDate.format("MMMM D, YYYY") : "Select End Date"}
+                            </Button>
+                        </View>
+
+                        <ScrollView>
+                            <DataTable>
+                                <DataTable.Header>
+                                    <DataTable.Title>Name</DataTable.Title>
+                                    <DataTable.Title>Expiry Date</DataTable.Title>
+                                </DataTable.Header>
+                                {filteredPharmacies.map((pharmacy, index) => (
+                                    <DataTable.Row key={index}>
+                                        <DataTable.Cell>{pharmacy.pharmacyName}</DataTable.Cell>
+                                        <DataTable.Cell>{pharmacy.expiryDate}</DataTable.Cell>
+                                    </DataTable.Row>
+                                ))}
+                            </DataTable>
+                        </ScrollView>
+
+                        <DateTimePickerModal
+                            isVisible={!!datePickerMode}
+                            mode="date"
+                            onConfirm={handleDateConfirm}
+                            onCancel={() => setDatePickerMode(null)}
+                        />
                     </View>
-        
-                    <ScrollView>
-                        <DataTable>
-                            <DataTable.Header>
-                                <DataTable.Title>Name</DataTable.Title>
-                                <DataTable.Title>Expiry Date</DataTable.Title>
-                            </DataTable.Header>
-                            {filteredPharmacies.map((pharmacy, index) => (
-                                <DataTable.Row key={index}>
-                                    <DataTable.Cell>{pharmacy.pharmacyName}</DataTable.Cell>
-                                    <DataTable.Cell>{pharmacy.expiryDate}</DataTable.Cell>
-                                </DataTable.Row>
-                            ))}
-                        </DataTable>
-                    </ScrollView>
-        
-                    <DateTimePickerModal
-                        isVisible={!!datePickerMode}
-                        mode="date"
-                        onConfirm={handleDateConfirm}
-                        onCancel={() => setDatePickerMode(null)}
-                    />
-                </View>
                 );
             case 'charts':
                 return (
                     <ScrollView style={styles.container}>
-                    {/* Chart 1: Pharmacy Feedback Rating Distribution */}
-                    <ViewShot ref={chart1Ref} options={{ format: "png", quality: 0.9 }}>
-                        <View style={styles.chartContainer}>
-                            <Text style={styles.chartTitle}>Pharmacy Feedback Rating Distribution</Text>
-                            {chartData ? (
-                                <BarChart
-                                    data={chartData}
-                                    width={chartWidth}
-                                    height={300}
-                                    chartConfig={chartConfig}
-                                    showValuesOnTopOfBars
-                                    fromZero
-                                    style={styles.chartStyle}
-                                />
-                            ) : (
-                                <ActivityIndicator size="large" color="#005b7f" />
-                            )}
-                        </View>
-                    </ViewShot>
-        
-                    {/* Chart 2: Monthly Registrations of Pharmacies */}
-                    <ViewShot ref={chart2Ref} options={{ format: "png", quality: 0.9 }}>
-                        <View style={styles.chartContainer}>
-                            <Text style={styles.chartTitle}>Monthly Registrations of Pharmacies</Text>
-                            {chartData2 ? (
-                                <LineChart
-                                    data={chartData2}
-                                    width={chartWidth}
-                                    height={300}
-                                    chartConfig={chartConfig}
-                                    bezier
-                                    style={styles.chartStyle}
-                                />
-                            ) : (
-                                <ActivityIndicator size="large" color="#005b7f" />
-                            )}
-                        </View>
-                    </ViewShot>
-        
-                    {/* Chart 3: Number of pharmacies per barangay */}
-                    <ViewShot ref={chart3Ref} options={{ format: "png", quality: 0.9 }}>
-                        <View style={styles.chartContainer}>
-                            <Text style={styles.chartTitle}>Number of pharmacies per barangay</Text>
-                            {chartData3 ? (
-                                <PieChart
-                                    data={chartData3}
-                                    width={screenWidth}
-                                    height={220}
-                                    chartConfig={chartConfig}
-                                    accessor="population"
-                                    backgroundColor="transparent"
-                                    paddingLeft="15"
-                                    center={[10, 0]}
-                                    absolute
-                                    style={styles.chartStyle}
-                                />
-                            ) : (
-                                <ActivityIndicator size="large" color="#005b7f" />
-                            )}
-                        </View>
-                    </ViewShot>
-        
-                    {/* Chart 4: Number of medicines per category */}
-                    <ViewShot ref={chart4Ref} options={{ format: "png", quality: 0.9 }}>
-                        <View style={styles.chartContainer}>
-                            <Text style={styles.chartTitle}>Number of medicines per category</Text>
-                            {chartData4 ? (
-                                <PieChart
-                                    data={chartData4}
-                                    width={screenWidth * 0.9}
-                                    height={220}
-                                    chartConfig={chartConfig}
-                                    accessor="population"
-                                    backgroundColor="transparent"
-                                    paddingLeft="15"
-                                    center={[10, 0]}
-                                    absolute
-                                    style={styles.chartStyle}
-                                />
-                            ) : (
-                                <ActivityIndicator size="large" color="#005b7f" />
-                            )}
-                        </View>
-                    </ViewShot>
-        
-                    {/* Chart 5: Monthly New Customers */}
-                    {customersData.labels.length > 0 && (
-                        <ViewShot ref={chart5Ref} options={{ format: "png", quality: 0.9 }}>
-                            <Text style={styles.chartTitle}>Monthly New Customers</Text>
+                        {/* Chart 1: Pharmacy Feedback Rating Distribution */}
+                        <ViewShot ref={chart1Ref} options={{ format: "png", quality: 0.9 }}>
                             <View style={styles.chartContainer}>
-                                <LineChart
-                                    data={{
-                                        labels: customersData.labels,
-                                        datasets: [
-                                            {
-                                                data: customersData.data.map(item =>
-                                                    isNaN(item) || item === Infinity ? 0 : item
-                                                ),
-                                            },
-                                        ],
-                                    }}
-                                    width={chartWidth}
-                                    height={220}
-                                    chartConfig={{
-                                        backgroundColor: '#e26a00',
-                                        backgroundGradientFrom: '#fb8c00',
-                                        backgroundGradientTo: '#ffa726',
-                                        decimalPlaces: 0,
-                                        color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-                                        labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-                                    }}
-                                    style={styles.chart}
-                                />
+                                <Text style={styles.chartTitle}>Pharmacy Feedback Rating Distribution</Text>
+                                {chartData ? (
+                                    <BarChart
+                                        data={chartData}
+                                        width={chartWidth}
+                                        height={300}
+                                        chartConfig={chartConfig}
+                                        showValuesOnTopOfBars
+                                        fromZero
+                                        style={styles.chartStyle}
+                                    />
+                                ) : (
+                                    <ActivityIndicator size="large" color="#005b7f" />
+                                )}
                             </View>
                         </ViewShot>
-                    )}
-        
-                    {/* Chart 6: Most Scanned Medicines */}
-                    {scannedMedicinesData.labels.length > 0 && (
-                        <ViewShot ref={chart6Ref} options={{ format: "png", quality: 0.9 }}>
-                            <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
+
+                        {/* Chart 2: Monthly Registrations of Pharmacies */}
+                        <ViewShot ref={chart2Ref} options={{ format: "png", quality: 0.9 }}>
                             <View style={styles.chartContainer}>
-                                <TouchableOpacity onPress={() => setIsModalVisible(true)}>
-                                    <BarChart
+                                <Text style={styles.chartTitle}>Monthly Registrations of Pharmacies</Text>
+                                {chartData2 ? (
+                                    <LineChart
+                                        data={chartData2}
+                                        width={chartWidth}
+                                        height={300}
+                                        chartConfig={chartConfig}
+                                        bezier
+                                        style={styles.chartStyle}
+                                    />
+                                ) : (
+                                    <ActivityIndicator size="large" color="#005b7f" />
+                                )}
+                            </View>
+                        </ViewShot>
+
+                        {/* Chart 3: Number of pharmacies per barangay */}
+                        <ViewShot ref={chart3Ref} options={{ format: "png", quality: 0.9 }}>
+                            <View style={styles.chartContainer}>
+                                <Text style={styles.chartTitle}>Number of pharmacies per barangay</Text>
+                                {chartData3 ? (
+                                    <PieChart
+                                        data={chartData3}
+                                        width={screenWidth}
+                                        height={220}
+                                        chartConfig={chartConfig}
+                                        accessor="population"
+                                        backgroundColor="transparent"
+                                        paddingLeft="15"
+                                        center={[10, 0]}
+                                        absolute
+                                        style={styles.chartStyle}
+                                    />
+                                ) : (
+                                    <ActivityIndicator size="large" color="#005b7f" />
+                                )}
+                            </View>
+                        </ViewShot>
+
+                        {/* Chart 4: Number of medicines per category */}
+                        <ViewShot ref={chart4Ref} options={{ format: "png", quality: 0.9 }}>
+                            <View style={styles.chartContainer}>
+                                <Text style={styles.chartTitle}>Number of medicines per category</Text>
+                                {chartData4 ? (
+                                    <PieChart
+                                        data={chartData4}
+                                        width={screenWidth * 0.9}
+                                        height={220}
+                                        chartConfig={chartConfig}
+                                        accessor="population"
+                                        backgroundColor="transparent"
+                                        paddingLeft="15"
+                                        center={[10, 0]}
+                                        absolute
+                                        style={styles.chartStyle}
+                                    />
+                                ) : (
+                                    <ActivityIndicator size="large" color="#005b7f" />
+                                )}
+                            </View>
+                        </ViewShot>
+
+                        {/* Chart 5: Monthly New Customers */}
+                        {customersData.labels.length > 0 && (
+                            <ViewShot ref={chart5Ref} options={{ format: "png", quality: 0.9 }}>
+                                <Text style={styles.chartTitle}>Monthly New Customers</Text>
+                                <View style={styles.chartContainer}>
+                                    <LineChart
                                         data={{
-                                            labels: scannedMedicinesData.labels.map(label =>
-                                                label.length > 10 ? label.substring(0, 10) + "..." : label
-                                            ),
-                                            datasets: [{
-                                                data: scannedMedicinesData.data.map(item =>
-                                                    isNaN(item) ? 0 : item
-                                                )
-                                            }],
+                                            labels: customersData.labels,
+                                            datasets: [
+                                                {
+                                                    data: customersData.data.map(item =>
+                                                        isNaN(item) || item === Infinity ? 0 : item
+                                                    ),
+                                                },
+                                            ],
                                         }}
                                         width={chartWidth}
-                                        height={350}
+                                        height={220}
                                         chartConfig={{
-                                            backgroundColor: '#26872a',
-                                            backgroundGradientFrom: '#43a047',
-                                            backgroundGradientTo: '#66bb6a',
+                                            backgroundColor: '#e26a00',
+                                            backgroundGradientFrom: '#fb8c00',
+                                            backgroundGradientTo: '#ffa726',
                                             decimalPlaces: 0,
                                             color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                                             labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                                         }}
                                         style={styles.chart}
                                     />
-                                </TouchableOpacity>
-                            </View>
-                        </ViewShot>
-                    )}
-                </ScrollView>   
+                                </View>
+                            </ViewShot>
+                        )}
+
+                        {/* Chart 6: Most Scanned Medicines */}
+                        {scannedMedicinesData.labels.length > 0 && (
+                            <ViewShot ref={chart6Ref} options={{ format: "png", quality: 0.9 }}>
+                                <Text style={styles.chartTitle}>Most Scanned Medicines</Text>
+                                <View style={styles.chartContainer}>
+                                    <TouchableOpacity onPress={() => setIsModalVisible(true)}>
+                                        <BarChart
+                                            data={{
+                                                labels: scannedMedicinesData.labels.map(label =>
+                                                    label.length > 10 ? label.substring(0, 10) + "..." : label
+                                                ),
+                                                datasets: [{
+                                                    data: scannedMedicinesData.data.map(item =>
+                                                        isNaN(item) ? 0 : item
+                                                    )
+                                                }],
+                                            }}
+                                            width={chartWidth}
+                                            height={350}
+                                            chartConfig={{
+                                                backgroundColor: '#26872a',
+                                                backgroundGradientFrom: '#43a047',
+                                                backgroundGradientTo: '#66bb6a',
+                                                decimalPlaces: 0,
+                                                color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+                                                labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+                                            }}
+                                            style={styles.chart}
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+                            </ViewShot>
+                        )}
+                    </ScrollView>
                 );
             default:
                 return null;
@@ -726,23 +732,23 @@ export default function AdminReportsScreen() {
         <View style={styles.container}>
             <LinearGradient colors={['#005b7f', '#14967f']} style={styles.header}>
                 <Text style={styles.headerText}>Admin Reports</Text>
-                    <Button mode="contained" onPress={exportReportsAsPDF} style={{ margin: 10 }}>
-                Export as PDF
-            </Button>
+                <Button mode="contained" onPress={exportReportsAsPDF} style={{ margin: 10 }}>
+                    Export as PDF
+                </Button>
             </LinearGradient>
 
             <TabView
                 navigationState={{ index, routes }}
                 renderScene={renderScene}
                 onIndexChange={setIndex}
-                 initialLayout={{ width: Dimensions.get('window').width }}
+                initialLayout={{ width: Dimensions.get('window').width }}
                 renderTabBar={props => (
-                       <TabBar
-                            {...props}
-                            indicatorStyle={{ backgroundColor: '#005b7f' }}
-                            style={{ backgroundColor: '#005b7f' }}
-                            labelStyle={{ color: 'white', fontWeight: 'bold' }}
-                        />
+                    <TabBar
+                        {...props}
+                        indicatorStyle={{ backgroundColor: '#005b7f' }}
+                        style={{ backgroundColor: '#005b7f' }}
+                        labelStyle={{ color: 'white', fontWeight: 'bold' }}
+                    />
                 )}
             />
         </View>
@@ -768,7 +774,7 @@ const styles = StyleSheet.create({
     summaryCard: { width: '45%', padding: 20, backgroundColor: '#f5f5f5', marginBottom: 10, borderRadius: 10, alignItems: 'center' },
     summaryTitle: { fontSize: 16, fontWeight: 'bold', textAlign: 'center' },
     summaryCount: { fontSize: 22, fontWeight: 'bold', color: '#005b7f', textAlign: 'center' },
-    
+
     // expiring medicines
     pharmaciesContainer: {
         flex: 1,
@@ -778,7 +784,7 @@ const styles = StyleSheet.create({
     },
     searchBar: { marginBottom: 10 },
     dateFilterContainer: { flexDirection: "row", justifyContent: "space-between", marginBottom: 10 },
-    
+
     // charts
     chartContainer: {
         width: '98%', // Ensure all charts have equal width
@@ -798,9 +804,9 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         borderRadius: 10,
         marginLeft: 10,
-      },
+    },
     chartStyle: {
         borderRadius: 10,
         alignSelf: 'center', // Centers within its parent
-    },     
+    },
 });

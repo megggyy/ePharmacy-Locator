@@ -43,7 +43,7 @@ const ListBarangayScreen = () => {
     setRefreshing(true);
     setTimeout(() => {
       axios
-        .get(`${baseURL}barangays`)
+        .get(`${baseURL}barangays?includeDeleted=true`)
         .then((res) => {
           const reversed = res.data.reverse(); // Reverse here too
           setBarangayList(reversed);
@@ -58,9 +58,9 @@ const ListBarangayScreen = () => {
   useFocusEffect(
     useCallback(() => {
       axios
-        .get(`${baseURL}barangays`)
+        .get(`${baseURL}barangays?includeDeleted=true`)
         .then((res) => {
-          const reversed = res.data.reverse(); 
+          const reversed = res.data.reverse();
           setBarangayList(reversed);
           setBarangayFilter(reversed);
           setLoading(false);
@@ -76,18 +76,62 @@ const ListBarangayScreen = () => {
   );
 
 
-  const handleDelete = async (barangayId) => {
-    try {
-      await axios.delete(`${baseURL}barangays/delete/${barangayId}`);
-      setBarangayList(barangayList.filter(barangay => barangay._id !== barangayId));
-      Alert.alert('Success', 'Barangay deleted successfully');
-
-      onRefresh()
-    } catch (error) {
-      console.error('Error deleting barangay:', error);
-      Alert.alert('Error', 'Failed to delete barangay');
-    }
+  const handleDelete = (barangayId) => {
+    Alert.alert(
+      'Confirm Delete',
+      'Are you sure you want to delete this barangay?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Yes, Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await axios.delete(`${baseURL}barangays/delete/${barangayId}`);
+              setBarangayList(barangayList.filter(barangay => barangay._id !== barangayId));
+              Alert.alert('Success', 'Barangay soft deleted successfully');
+              onRefresh();
+            } catch (error) {
+              console.error('Error deleting barangay:', error);
+              Alert.alert('Error', 'Failed to delete barangay');
+            }
+          },
+        },
+      ],
+      { cancelable: true }
+    );
   };
+
+  const handleRestore = (barangayId) => {
+    Alert.alert(
+      'Confirm Restore',
+      'Are you sure you want to restore this barangay?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Restore',
+          onPress: async () => {
+            try {
+              await axios.put(`${baseURL}barangays/restore/${barangayId}`);
+              Alert.alert('Success', 'Barangay restored successfully');
+              onRefresh();
+            } catch (error) {
+              console.error("Error restoring barangay:", error);
+              Alert.alert('Error', 'Failed to restore barangay');
+            }
+          },
+        },
+      ],
+      { cancelable: true }
+    );
+  };
+
 
   return (
     <View style={styles.container}>
@@ -126,6 +170,7 @@ const ListBarangayScreen = () => {
             <DataTable>
               <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STATUS</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ACTIONS</Text></DataTable.Title>
               </DataTable.Header>
 
@@ -138,24 +183,58 @@ const ListBarangayScreen = () => {
                   }}
                 >
                   <DataTable.Row style={styles.rowCell}>
-
+                    {/* Name Cell */}
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>{item.name}</Text>
                     </DataTable.Cell>
+
+                    {/* Status Cell */}
+                    <DataTable.Cell style={styles.textCell}>
+                      <Text
+                        style={[
+                          styles.cellText,
+                          { color: item.deleted ? 'red' : 'green', fontWeight: 'bold' },
+                        ]}
+                      >
+                        {item.deleted ? 'Deleted' : 'Active'}
+                      </Text>
+                    </DataTable.Cell>
+
+                    {/* Action Cell */}
                     <DataTable.Cell style={styles.textCell}>
                       <View style={styles.actionCell}>
-                        <TouchableOpacity
-                          onPress={() => router.push(`/screens/Admin/Barangay/EditBarangay?id=${item._id}`)}
-                          style={styles.actionButton}
-                        >
-                          <Ionicons name="create-outline" size={24} color="black" />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.actionButton}>
-                          <Ionicons name="trash-outline" size={24} color="red" />
-                        </TouchableOpacity>
+                        {/* Edit button – only show if not deleted */}
+                        {!item.deleted && (
+                          <TouchableOpacity
+                            onPress={() =>
+                              router.push(`/screens/Admin/Barangay/EditBarangay?id=${item._id}`)
+                            }
+                            style={styles.actionButton}
+                          >
+                            <Ionicons name="create-outline" size={24} color="black" />
+                          </TouchableOpacity>
+                        )}
+
+                        {/* Delete or Restore button */}
+                        {!item.deleted ? (
+                          <TouchableOpacity
+                            onPress={() => handleDelete(item._id)}
+                            style={styles.actionButton}
+                          >
+                            <Ionicons name="trash-outline" size={24} color="red" />
+                          </TouchableOpacity>
+                        ) : (
+                          <TouchableOpacity
+                            onPress={() => handleRestore(item._id)}
+                            style={styles.actionButton}
+                          >
+                            <Ionicons name="refresh-outline" size={24} color="green" />
+                          </TouchableOpacity>
+                        )}
                       </View>
                     </DataTable.Cell>
                   </DataTable.Row>
+
                 </TouchableOpacity>
               ))}
             </DataTable>

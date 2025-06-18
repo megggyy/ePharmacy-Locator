@@ -48,7 +48,7 @@ const MedicationCategoriesScreen = () => {
     setRefreshing(true);
     setTimeout(() => {
       axios
-        .get(`${baseURL}medication-category`)
+        .get(`${baseURL}medication-category?includeDeleted=true`)
         .then((res) => {
           const reversed = res.data.reverse();
           setCategoriesList(reversed);
@@ -63,9 +63,9 @@ const MedicationCategoriesScreen = () => {
     useCallback(() => {
       const fetchData = () => {
         axios
-          .get(`${baseURL}medication-category`)
+          .get(`${baseURL}medication-category?includeDeleted=true`)
           .then((res) => {
-            const reversed = res.data.reverse(); 
+            const reversed = res.data.reverse();
             setCategoriesList(reversed);
             setCategoriesFilter(reversed);
             setLoading(false);
@@ -89,16 +89,43 @@ const MedicationCategoriesScreen = () => {
   );
 
 
-  const handleDelete = async (categoryId) => {
-    try {
-      await axios.delete(`${baseURL}medication-category/delete/${categoryId}`);
-      setCategoriesList(categoriesList.filter(category => category._id !== categoryId));
-      Alert.alert('Success', 'Category deleted successfully');
-      onRefresh();
-    } catch (error) {
-      // console.error('Error deleting category:', error);
-      Alert.alert('Error', 'Failed to delete category');
-    }
+  const handleToggleDelete = (category) => {
+    const isDeleted = category.deleted;
+    const action = isDeleted ? 'restore' : 'soft-delete';
+    const confirmMsg = isDeleted
+      ? 'Are you sure you want to restore this category?'
+      : 'Are you sure you want to delete this category?';
+
+    Alert.alert(
+      isDeleted ? 'Confirm Restore' : 'Confirm Delete',
+      confirmMsg,
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: isDeleted ? 'Yes, Restore' : 'Yes, Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await axios.put(`${baseURL}medication-category/${action}/${category._id}`);
+              setCategoriesList((prev) =>
+                prev.map((item) =>
+                  item._id === category._id ? { ...item, deleted: !isDeleted } : item
+                )
+              );
+              Alert.alert('Success', `Category ${isDeleted ? 'restored' : 'deleted'} successfully`);
+              onRefresh();
+            } catch (error) {
+              console.error('Error updating category:', error);
+              Alert.alert('Error', 'Failed to update category');
+            }
+          },
+        },
+      ],
+      { cancelable: true }
+    );
   };
 
   const paginatedData = categoriesFilter.slice(
@@ -146,6 +173,9 @@ const MedicationCategoriesScreen = () => {
                   <Text style={styles.headerText}>NAME</Text>
                 </DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>STATUS</Text>
+                </DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
                   <Text style={styles.headerText}>ACTIONS</Text>
                 </DataTable.Title>
               </DataTable.Header>
@@ -162,20 +192,51 @@ const MedicationCategoriesScreen = () => {
                     <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>{item.name}</Text>
                     </DataTable.Cell>
+
+                    <DataTable.Cell style={styles.textCell}>
+                      <View
+                        style={[
+                          styles.statusBadge,
+                          item.deleted ? styles.deletedBadge : styles.activeBadge,
+                        ]}
+                      >
+                        <Text
+                          style={[
+                            styles.cellText,
+                            { color: item.deleted ? 'red' : 'green', fontWeight: 'bold' },
+                          ]}
+                        >
+                          {item.deleted ? 'Deleted' : 'Active'}
+                        </Text>
+                      </View>
+                    </DataTable.Cell>
+
                     <DataTable.Cell style={styles.textCell}>
                       <View style={styles.actionCell}>
                         <TouchableOpacity
-                          onPress={() => router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)}
+                          onPress={() =>
+                            router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)
+                          }
+                          style={[styles.actionButton, item.deleted && styles.disabledButton]}
+                          disabled={item.deleted}
+                        >
+                          <Ionicons name="create-outline" size={24} color={item.deleted ? 'gray' : 'blue'} />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                          onPress={() => handleToggleDelete(item)}
                           style={styles.actionButton}
                         >
-                          <Ionicons name="create-outline" size={24} color="black" />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.actionButton}>
-                          <Ionicons name="trash-outline" size={24} color="red" />
+                          <Ionicons
+                            name={item.deleted ? 'refresh-outline' : 'trash-outline'}
+                            size={24}
+                            color={item.deleted ? 'green' : 'red'}
+                          />
                         </TouchableOpacity>
                       </View>
                     </DataTable.Cell>
                   </DataTable.Row>
+
                 </TouchableOpacity>
               ))}
 
