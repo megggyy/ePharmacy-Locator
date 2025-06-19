@@ -102,21 +102,31 @@ export default function ReadMedicationScreen() {
         </View>
 
         {pharmacy ? (
-
-
           <View style={styles.infoContainer}>
             <View style={styles.detailsContainer}>
               <Text style={styles.label}>Name:</Text>
               <Text style={styles.value}>{pharmacy.userInfo?.name || 'N/A'}</Text>
 
               <Text style={styles.label}>Location:</Text>
-              <Text style={styles.value}>{`${pharmacy.userInfo?.street}, ${pharmacy.userInfo?.barangay}, ${pharmacy.userInfo?.city}`}</Text>
+              <Text style={styles.value}>
+                {`${pharmacy.userInfo?.street}, ${pharmacy.userInfo?.barangay}, ${pharmacy.userInfo?.city}`}
+              </Text>
 
               <Text style={styles.label}>Contact:</Text>
               <Text style={styles.value}>{pharmacy.userInfo?.contactNumber || 'N/A'}</Text>
 
               <Text style={styles.label}>Availability:</Text>
-              <Text style={styles.value}>{pharmacy.businessDays || 'N/A'} from {pharmacy.openingHour || 'N/A'} - {pharmacy.closingHour || 'N/A'}</Text>
+              <Text style={styles.value}>
+                {pharmacy.businessDays || 'N/A'} from {pharmacy.openingHour || 'N/A'} - {pharmacy.closingHour || 'N/A'}
+              </Text>
+
+              {/* ✅ Price Section */}
+              <Text style={styles.label}>Price:</Text>
+              <Text style={styles.value}>
+                {medication.price != null && medication.price !== ''
+                  ? `₱${parseFloat(medication.price).toFixed(2)}`
+                  : 'Price not indicated'}
+              </Text>
 
               {/* Expiration & Stock Details */}
               <View style={styles.expirationStock}>
@@ -153,10 +163,10 @@ export default function ReadMedicationScreen() {
               )}
             </View>
           </View>
-
         ) : (
           <Text style={styles.value}>No Pharmacy Data</Text>
         )}
+
 
       </ScrollView>
     </View>

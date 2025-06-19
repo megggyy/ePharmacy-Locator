@@ -20,6 +20,7 @@ export default function EditMedicationScreen() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [category, setCategory] = useState("");
   const [isCategory, setIsCategory] = useState(true);
+  const [price, setPrice] = useState('');
 
   useEffect(() => {
     const fetchMedication = async () => {
@@ -50,8 +51,9 @@ export default function EditMedicationScreen() {
           }
         });
 
-
-        setStocks(initialStocks);
+        setPrice(response.data.price !== undefined && response.data.price !== null
+          ? response.data.price.toString()
+          : ''); setStocks(initialStocks);
         setExpirationDates(initialExpirations);
       } catch (error) {
         console.error('Error fetching medication:', error.response?.data || error.message);
@@ -76,32 +78,36 @@ export default function EditMedicationScreen() {
     setIsCategory((prev) => !prev); // Toggle between true/false
   };
 
-const handleConfirm = async () => {
-  const updatedData = Object.keys(stocks).map((index) => {
-    const rawDate = expirationDates[index];
+  const handleConfirm = async () => {
+    const updatedData = Object.keys(stocks).map((index) => {
+      const rawDate = expirationDates[index];
 
-    // Preserve null values — only parse and convert if rawDate exists
-    let isoDate = null;
-    if (rawDate) {
-      const parsedDate = new Date(rawDate);
-      isoDate = !isNaN(parsedDate) ? parsedDate.toISOString().split('T')[0] : rawDate;
+      // Preserve null values — only parse and convert if rawDate exists
+      let isoDate = null;
+      if (rawDate) {
+        const parsedDate = new Date(rawDate);
+        isoDate = !isNaN(parsedDate) ? parsedDate.toISOString().split('T')[0] : rawDate;
+      }
+
+      const stockValue = parseInt(stocks[index], 10) || 0;
+
+      return {
+        expirationDate: isoDate, stock: stockValue
+      };
+    });
+
+    console.log("update:", updatedData)
+    try {
+      await axios.put(`${baseURL}medicine/update/${id}`, {
+        expirationPerStock: updatedData, price: price.trim() === '' ? null : parseFloat(price),
+      });
+      Alert.alert('Success', 'Medication updated successfully');
+      router.push('/screens/PharmacyOwner/Medications/ListMedications');
+    } catch (error) {
+      console.error('Error updating medication:', error);
+      Alert.alert('Error', 'Failed to update medication');
     }
-
-    const stockValue = parseInt(stocks[index], 10) || 0;
-
-    return { expirationDate: isoDate, stock: stockValue };
-  });
-
-  console.log("update:", updatedData)
-  try {
-    await axios.put(`${baseURL}medicine/update/${id}`, { expirationPerStock: updatedData });
-    Alert.alert('Success', 'Medication updated successfully');
-    router.push('/screens/PharmacyOwner/Medications/ListMedications');
-  } catch (error) {
-    console.error('Error updating medication:', error);
-    Alert.alert('Error', 'Failed to update medication');
-  }
-};
+  };
 
 
   const showDatePicker = (index) => {
@@ -179,6 +185,15 @@ const handleConfirm = async () => {
                   : medicationData?.medicine?.description || "No Description"}
               </Text>
 
+              <Text style={styles.label}>Price</Text>
+              <TextInput
+                style={styles.pvalue}
+                keyboardType="numeric"
+                value={price}
+                onChangeText={setPrice}
+                placeholder="Enter price"
+              />
+
               <View style={styles.expirationItems}>
                 <View style={styles.expirationStock}>
                   <View style={styles.expirationDate}>
@@ -251,6 +266,7 @@ const styles = StyleSheet.create({
   detailsContainer: { backgroundColor: 'white', borderRadius: 10, padding: 20, margin: 20 },
   label: { fontWeight: 'bold', fontSize: 18, marginBottom: 5 },
   value: { backgroundColor: 'lightgrey', borderRadius: 5, padding: 10, marginBottom: 15 },
+  pvalue: { backgroundColor: '#F4F4F4', borderRadius: 5, padding: 10, marginBottom: 15 },
   expiInput: { backgroundColor: '#F4F4F4', borderRadius: 5, padding: 10, textAlign: 'center', width: '60%' },
   stockInput: { backgroundColor: '#F4F4F4', borderRadius: 5, padding: 10, marginHorizontal: 10, textAlign: 'center', width: '20%' },
   removeButton: { padding: 10, textAlign: 'center', width: '15%' },

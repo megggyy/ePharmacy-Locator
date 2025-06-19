@@ -24,6 +24,9 @@ const pharmacyStockSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    price: {
+        type: Number,
+    },
     pharmacy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Pharmacy',

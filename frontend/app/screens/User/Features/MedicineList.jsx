@@ -167,6 +167,13 @@ const MedicineList = () => {
                 <Text style={styles.label}>Classification:</Text>
                 <Text style={styles.value}>{medDetails.classification}</Text>
 
+                <Text style={styles.label}>Price:</Text>
+                <Text style={styles.value}>
+                  {medDetails.price != null && medDetails.price !== ''
+                    ? `₱${parseFloat(medDetails.price).toFixed(2)}`
+                    : 'Price not indicated'}
+                </Text>
+
                 <Text style={styles.label}>Category:</Text>
                 <Text style={styles.value} onPress={() => handleCategoryClick(index)}>
                   {isCategory[index] ? medDetails.description || "No Description" : categoryNames || "No Category"}

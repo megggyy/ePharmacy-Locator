@@ -42,23 +42,25 @@ const MedicationScreen = () => {
       );
     }
   };
-  
+
 
 
   useFocusEffect(
     React.useCallback(() => {
       const fetchMedications = () => {
         axios
-          .get(`${baseURL}medicine/${state.user.userId}`)
+          .get(`${baseURL}medicine/${state.user.userId}?includeDeleted=true`)
           .then((res) => {
             const medications = res.data;
-            setMedicationsList(medications);
-            setMedicationsFilter(medications);
+            const reversed = medications.reverse();
+
+            setMedicationsList(reversed);
+            setMedicationsFilter(reversed);
             setLoading(false);
 
             // Check for expiring medications (within 30 days)
             // const today = new Date();
-    
+
             // const expiringSoon = medications
             //   .map(med => ({
             //     name: med.medicine.brandName,
@@ -84,16 +86,16 @@ const MedicationScreen = () => {
             //   const message = expiringSoon
             //     .map(med => `${med.name} - Exp: ${med.expiringStocks.join(', ')}`) // Fix: Use `med.name`
             //     .join('\n');
-            
+
             //   console.log('expired:', expiringSoon);
-            
+
             //   Alert.alert(
             //     "Expiring Medications",
             //     `The following medicines are expiring soon:\n\n${message}`,
             //     [{ text: "OK", onPress: () => console.log("Alert acknowledged") }]
             //   );
             // }
-            
+
           })
           .catch((err) => {
             setLoading(false);
@@ -103,9 +105,9 @@ const MedicationScreen = () => {
       fetchMedications();
 
       const interval = setInterval(fetchMedications, 5000);
-  
+
       return () => {
-        clearInterval(interval); 
+        clearInterval(interval);
         fetchMedications()
         setLoading(true);
       };
@@ -116,10 +118,12 @@ const MedicationScreen = () => {
     setRefreshing(true);
     setTimeout(() => {
       axios
-        .get(`${baseURL}medicine/${state.user.userId}`)
+        .get(`${baseURL}medicine/${state.user.userId}?includeDeleted=true`)
         .then((res) => {
-          setMedicationsList(res.data);
-          setMedicationsFilter(res.data);
+          const reversed = res.data.reverse();
+          setMedicationsList(reversed);
+          setMedicationsFilter(reversed);
+
           setLoading(false);
         })
         .catch((err) => {
@@ -131,18 +135,44 @@ const MedicationScreen = () => {
     }, 2000);
   }, []);
 
-  const handleDelete = async (medicationId) => {
-    try {
-      await axios.delete(`${baseURL}medicine/delete/${medicationId}`);
-      setMedicationsList(medicationsList.filter(medication => medication._id !== medicationId));
-      Alert.alert('Success', 'Medicine Stock deleted successfully');
+  const handleToggleDelete = (medication) => {
+    const isDeleted = medication.deleted;
+    const action = isDeleted ? 'restore' : 'soft-delete';
+    const confirmMsg = isDeleted
+      ? 'Are you sure you want to restore this medicine?'
+      : 'Are you sure you want to delete this medicine?';
 
-      onRefresh()
-    } catch (error) {
-      console.error('Error deleting medication:', error);
-      Alert.alert('Error', 'Failed to delete medication');
-    }
+    Alert.alert(
+      isDeleted ? 'Confirm Restore' : 'Confirm Delete',
+      confirmMsg,
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: isDeleted ? 'Yes, Restore' : 'Yes, Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await axios.put(`${baseURL}medicine/${action}/${medication._id}`);
+              setMedicationsList((prev) =>
+                prev.map((item) =>
+                  item._id === medication._id ? { ...item, deleted: !isDeleted } : item
+                )
+              );
+              Alert.alert('Success', `Medicine ${isDeleted ? 'restored' : 'deleted'} successfully`);
+            } catch (error) {
+              console.error('Error updating medicine:', error);
+              Alert.alert('Error', 'Failed to update medicine');
+            }
+          },
+        },
+      ],
+      { cancelable: true }
+    );
   };
+
 
   return (
     <View style={styles.container}>
@@ -183,7 +213,9 @@ const MedicationScreen = () => {
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>GENERIC</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>BRAND</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>CATEGORY</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>PRICE</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STOCK</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STATUS</Text></DataTable.Title>
                 <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ACTIONS</Text></DataTable.Title>
               </DataTable.Header>
 
@@ -212,21 +244,50 @@ const MedicationScreen = () => {
                     </DataTable.Cell>
 
                     <DataTable.Cell style={styles.textCell}>
+                      <Text style={styles.cellText}>{item.price}</Text>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.textCell}>
                       <Text style={styles.cellText}>
                         {item.expirationPerStock.reduce((sum, exp) => sum + exp.stock, 0)} units
                       </Text>
                     </DataTable.Cell>
 
                     <DataTable.Cell style={styles.textCell}>
-                      <View style={styles.actionCell}>
-                        <TouchableOpacity
-                          onPress={() => router.push(`/screens/PharmacyOwner/Medications/EditMedication?id=${item._id}`)}
-                          style={styles.actionButton}
+                      <View
+                        style={[
+                          styles.statusBadge,
+                          item.deleted ? styles.deletedBadge : styles.activeBadge,
+                        ]}
+                      >
+                        <Text
+                          style={[
+                            styles.cellText,
+                            { color: item.deleted ? 'red' : 'green', fontWeight: 'bold' },
+                          ]}
                         >
-                          <Ionicons name="create-outline" size={24} color="black" />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => handleDelete(item._id)} style={styles.actionButton}>
-                          <Ionicons name="trash-outline" size={24} color="red" />
+                          {item.deleted ? 'Deleted' : 'Active'}
+                        </Text>
+                      </View>
+                    </DataTable.Cell>
+
+                    <DataTable.Cell style={styles.textCell}>
+                      <View style={styles.actionCell}>
+
+                        {!item.deleted &&
+                          <TouchableOpacity
+                            onPress={() => router.push(`/screens/PharmacyOwner/Medications/EditMedication?id=${item._id}`)}
+                            style={[styles.actionButton, item.deleted && styles.disabledButton]}
+                            disabled={item.deleted}
+                          >
+                            <Ionicons name="create-outline" size={24} color="black" />
+                          </TouchableOpacity>
+                        }
+                        <TouchableOpacity onPress={() => handleToggleDelete(item)} style={styles.actionButton}>
+                          <Ionicons
+                            name={item.deleted ? 'refresh-outline' : 'trash-outline'}
+                            size={24}
+                            color={item.deleted ? 'green' : 'red'}
+                          />
                         </TouchableOpacity>
                       </View>
                     </DataTable.Cell>

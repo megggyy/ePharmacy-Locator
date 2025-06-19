@@ -213,15 +213,17 @@ const MedicationCategoriesScreen = () => {
 
                     <DataTable.Cell style={styles.textCell}>
                       <View style={styles.actionCell}>
-                        <TouchableOpacity
-                          onPress={() =>
-                            router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)
-                          }
-                          style={[styles.actionButton, item.deleted && styles.disabledButton]}
-                          disabled={item.deleted}
-                        >
-                          <Ionicons name="create-outline" size={24} color={item.deleted ? 'gray' : 'blue'} />
-                        </TouchableOpacity>
+                        {!item.deleted && (
+                            <TouchableOpacity
+                              onPress={() =>
+                                router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)
+                              }
+                              style={styles.actionButton}
+                            >
+                              <Ionicons name="create-outline" size={24} color="blue" />
+                            </TouchableOpacity>
+                        )}
+
 
                         <TouchableOpacity
                           onPress={() => handleToggleDelete(item)}

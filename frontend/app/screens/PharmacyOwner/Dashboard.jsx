@@ -18,61 +18,61 @@ export default function PharmacyOwnerDashboard() {
   const [totalMedications, setTotalMedications] = useState(0);
   const [medicationData, setMedicationData] = useState([]);
   const [userProfile, setUserProfile] = useState({});
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const { state } = useContext(AuthGlobal);
   const router = useRouter();
   const colorPalette = [
-    "#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", 
+    "#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF",
     "#FF9F40", "#8A2BE2", "#32CD32", "#DC143C", "#FFD700"
   ];
-  
+
   useEffect(() => {
     if (!state.isAuthenticated) {
-        router.push('/login');
-        return;
+      router.push('/login');
+      return;
     }
 
     axios.get(`${baseURL}users/${state.user.userId}`)
-        .then((res) => setUserProfile(res.data))
-        .catch((err) => console.error("Error fetching user profile:", err));
+      .then((res) => setUserProfile(res.data))
+      .catch((err) => console.error("Error fetching user profile:", err));
 
     // Only fetch pharmacy data if the user is a pharmacy owner
     if (state.user.role === "PharmacyOwner") {
-        axios.get(`${baseURL}medicine/${state.user.userId}`)
-            .then((res) => setTotalMedications(res.data.length))
-            .catch((err) => console.error("Error fetching medications:", err));
+      axios.get(`${baseURL}medicine/${state.user.userId}`)
+        .then((res) => setTotalMedications(res.data.length))
+        .catch((err) => console.error("Error fetching medications:", err));
 
-        axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
-            .then((res) => {
-                if (res.data && typeof res.data === "object" && res.data.id) {
-                    const pharmacyId = res.data.id;
-                  
+      axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
+        .then((res) => {
+          if (res.data && typeof res.data === "object" && res.data.id) {
+            const pharmacyId = res.data.id;
 
-                    axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
-                        .then((medRes) => {
-                            if (medRes.data && Object.keys(medRes.data).length > 0) {
-                                const categories = Object.keys(medRes.data);
-                                const counts = Object.values(medRes.data);
-                                const pieData = categories.map((category, index) => ({
-                                    name: category,
-                                    population: counts[index],
-                                    color: colorPalette[index % colorPalette.length], // Cycle through colors
-                                    legendFontColor: "#333",
-                                    legendFontSize: 11
-                                }));
-                                setMedicationData(pieData);
-                            } else {
-                                console.warn("No medication data found, setting empty array.");
-                                setMedicationData([]); // Ensure it never becomes null
-                            }
-                        })
-                        .catch((err) => {
-                            console.error("Error fetching medication categories:", err);
-                            setMedicationData([]); // Set empty array on error
-                        });
+
+            axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
+              .then((medRes) => {
+                if (medRes.data && Object.keys(medRes.data).length > 0) {
+                  const categories = Object.keys(medRes.data);
+                  const counts = Object.values(medRes.data);
+                  const pieData = categories.map((category, index) => ({
+                    name: category,
+                    population: counts[index],
+                    color: colorPalette[index % colorPalette.length], // Cycle through colors
+                    legendFontColor: "#333",
+                    legendFontSize: 11
+                  }));
+                  setMedicationData(pieData);
+                } else {
+                  console.warn("No medication data found, setting empty array.");
+                  setMedicationData([]); // Ensure it never becomes null
                 }
-            })
-            .catch((err) => console.error("Error fetching pharmacy details:", err));
+              })
+              .catch((err) => {
+                console.error("Error fetching medication categories:", err);
+                setMedicationData([]); // Set empty array on error
+              });
+          }
+        })
+        .catch((err) => console.error("Error fetching pharmacy details:", err));
 
     }
 
@@ -94,6 +94,8 @@ export default function PharmacyOwnerDashboard() {
         </head>
         <body>
           <h2>Medication Summary Report</h2>
+                      <p><strong>Report Generated:</strong> ${new Date().toLocaleString()}</p>
+
           <table>
             <tr><th>Category</th><th>Count</th></tr>
             ${medicationData.map(item => `<tr><td>${item.name}</td><td>${item.population}</td></tr>`).join('')}
@@ -106,18 +108,32 @@ export default function PharmacyOwnerDashboard() {
   };
 
   const exportToExcel = async () => {
-    const ws = XLSX.utils.json_to_sheet(medicationData.map(item => ({ Category: item.name, Count: item.population })));
+    const now = new Date();
+    const timestamp = now.toLocaleString(); // e.g. "6/19/2025, 3:42:10 PM"
+
+    // Format the data
+    const data = [
+      { Category: `Report Generated: ${timestamp}`, Count: "" }, // Timestamp row
+      {}, // Blank row
+      ...medicationData.map(item => ({ Category: item.name, Count: item.population }))
+    ];
+
+    // Create sheet and workbook
+    const ws = XLSX.utils.json_to_sheet(data, { skipHeader: false });
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Medications");
+
+    // Write as base64 and share
     const base64 = XLSX.write(wb, { type: "base64" });
     const filePath = `${FileSystem.cacheDirectory}Medications.xlsx`;
     await FileSystem.writeAsStringAsync(filePath, base64, { encoding: FileSystem.EncodingType.Base64 });
     await Sharing.shareAsync(filePath);
   };
 
+
   return (
     <ScrollView style={styles.container}>
-      <StatusBar backgroundColor="#005b7f" barStyle="light-content" />  
+      <StatusBar backgroundColor="#005b7f" barStyle="light-content" />
       <View style={styles.header}>
         <TouchableOpacity style={styles.menuIcon} onPress={() => router.push('/drawer/PharmacyOwnerDrawer')}>
           <Ionicons name="menu" size={30} color="white" />
@@ -154,7 +170,7 @@ export default function PharmacyOwnerDashboard() {
         <Text style={styles.noDataText}>No Data Available</Text>
       )}
 
-     
+
 
       <TouchableOpacity style={styles.exportButton} onPress={exportToPDF}>
         <Text style={styles.exportButtonText}>Export to PDF</Text>
@@ -174,7 +190,7 @@ export default function PharmacyOwnerDashboard() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F4F4F4' },
-  header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 15, paddingBottom:10, backgroundColor: '#005b7f' },
+  header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 15, paddingBottom: 10, backgroundColor: '#005b7f' },
   menuIcon: { marginRight: 10 },
   userInfo: { alignItems: 'flex-start', marginLeft: 10 },
   userName: { color: 'white', fontSize: 16, fontWeight: 'bold' },

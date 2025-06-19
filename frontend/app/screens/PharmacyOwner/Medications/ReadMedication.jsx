@@ -80,6 +80,10 @@ export default function ReadMedicationScreen() {
               ? category || "No Category"
               : medicationData?.medicine?.description || "No Description"}
           </Text>
+          <Text style={styles.label}>Price:</Text>
+          <Text style={styles.value}>
+            {medicationData.price ? `₱ ${medicationData.price}` : 'Price not indicated'}
+          </Text>
 
           <View style={styles.expirationStock}>
             <View style={styles.expirationDate}>

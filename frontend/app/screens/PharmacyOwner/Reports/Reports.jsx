@@ -12,7 +12,7 @@ import AuthGlobal from '@/context/AuthGlobal';
 import { TabView, TabBar } from 'react-native-tab-view';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { jwtDecode }    from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import baseURL from '@/assets/common/baseurl';
 import PulseSpinner from '@/assets/common/spinner';
 import { Ionicons } from '@expo/vector-icons';
@@ -175,30 +175,30 @@ export default function PharmacyDetailsScreen() {
     };
 
 
-  // charts
-        useEffect(() => {
-            if (state.isAuthenticated) {
-                if (state.user.role !== "PharmacyOwner") return;
-                axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
-                    .then((res) => {
-                        if (res.data && typeof res.data === "object" && res.data.id) {
-                            const pharmacyId = res.data.id;
-                            setPharmacyId(pharmacyId);
-                            fetchReviewStats(pharmacyId);
-                            fetchExpiringStock(pharmacyId);
-                        } else {
-                            console.error("No pharmacy found for this user.");
-                            setLoading(false);
-                        }
-                    })
-                    .catch((err) => {
-                        console.error("Error fetching pharmacy details:", err);
+    // charts
+    useEffect(() => {
+        if (state.isAuthenticated) {
+            if (state.user.role !== "PharmacyOwner") return;
+            axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
+                .then((res) => {
+                    if (res.data && typeof res.data === "object" && res.data.id) {
+                        const pharmacyId = res.data.id;
+                        setPharmacyId(pharmacyId);
+                        fetchReviewStats(pharmacyId);
+                        fetchExpiringStock(pharmacyId);
+                    } else {
+                        console.error("No pharmacy found for this user.");
                         setLoading(false);
-                    });
-            } else {
-                router.push('/login');
-            }
-        }, [state.isAuthenticated, state.user.userId, state.user.role]);
+                    }
+                })
+                .catch((err) => {
+                    console.error("Error fetching pharmacy details:", err);
+                    setLoading(false);
+                });
+        } else {
+            router.push('/login');
+        }
+    }, [state.isAuthenticated, state.user.userId, state.user.role]);
 
     const fetchReviewStats = async (pharmacyId) => {
         try {
@@ -299,7 +299,7 @@ export default function PharmacyDetailsScreen() {
         } else {
             router.push('/login');
         }
-      }, [state.isAuthenticated, state.user.userId]);
+    }, [state.isAuthenticated, state.user.userId]);
 
 
     const handleTabChange = async (newIndex) => {
@@ -318,7 +318,7 @@ export default function PharmacyDetailsScreen() {
     if (!pharmacy) {
         return (
             <View style={styles.loadingContainer}>
-                <PulseSpinner /> 
+                <PulseSpinner />
             </View>
         );
     }
@@ -386,6 +386,8 @@ export default function PharmacyDetailsScreen() {
         </head>
         <body>
             <h1>${pharmacy.name || 'Pharmacy Report'}</h1>
+            <p><strong>Report Generated:</strong> ${new Date().toLocaleString()}</p>
+
             <div class="pharmacy-details">
                 <h2>Pharmacy Details</h2>
                 <p><strong>Address:</strong> ${pharmacy.street || ''}, ${pharmacy.barangay || ''}, ${pharmacy.city || 'N/A'}</p>

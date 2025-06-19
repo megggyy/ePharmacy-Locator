@@ -135,6 +135,16 @@ const MedicationDetails = () => {
                 </View>
 
                 <View style={styles.infoRow}>
+                  <Ionicons name="pricetag-outline" size={18} color="#555" />
+                  <Text style={styles.infoText}>
+                    {medication.price != null && medication.price !== ''
+                      ? `₱${parseFloat(medication.price).toFixed(2)}`
+                      : 'Price not Indicated'}
+                  </Text>
+                </View>
+
+
+                <View style={styles.infoRow}>
                   <Ionicons name="cube-outline" size={18} color="#555" />
                   <Text style={styles.stockText}>
                     {pharmacyStock > 0 ? `${pharmacyStock} in stock` : "Out of Stock"}

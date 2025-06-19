@@ -4,6 +4,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import axios from 'axios';
 import baseURL from '@/assets/common/baseurl';
 import { Ionicons } from '@expo/vector-icons';
+import Spinner from "@/assets/common/spinner";
+
 
 const FilterMedicinesByCategoryPerPharmacy = () => {
   const router = useRouter();
@@ -19,11 +21,11 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
 
         // ✅ Fetch pharmacy stock
         const response = await axios.get(`${baseURL}medicine/features/${pharmacyId}`);
-        console.log('API Response:', response.data); 
+        console.log('API Response:', response.data);
 
         // ✅ Filter medicines by category (handling category as an array)
-        const filtered = response.data.filter(med => 
-          med.medicine?.category?.some(cat => cat.name === category) 
+        const filtered = response.data.filter(med =>
+          med.medicine?.category?.some(cat => cat.name === category)
         );
 
         console.log('Filtered Medicines:', filtered);
@@ -33,7 +35,7 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
       } finally {
         setLoading(false);
       }
-    };      
+    };
 
     fetchMedicinesByCategory();
   }, [category, pharmacyId]);
@@ -49,7 +51,7 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0B607E" />
+        <Spinner />
       </View>
     );
   }
@@ -62,8 +64,8 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
         </TouchableOpacity>
         <Text style={styles.headerText}>{category} Medicines</Text>
       </View>
-  {/* 🔍 Search Bar */}
-  <View style={styles.searchContainer}>
+      {/* 🔍 Search Bar */}
+      <View style={styles.searchContainer}>
         <Ionicons name="search-outline" size={20} color="#666" style={styles.searchIcon} />
         <TextInput
           style={styles.searchInput}
@@ -86,8 +88,8 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
                 style={styles.medicineCard}
                 onPress={() => {
                   console.log('Navigating with:', {
-                    medicineId: medDetails._id,  // Logging medicine ID
-                    stockId: item._id,           // Logging stock ID
+                    medicineId: medDetails._id,
+                    stockId: item._id,
                     pharmacyId: pharmacyId
                   });
 
@@ -100,6 +102,14 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
                 <Text style={styles.medicineStock}>Form: {medDetails.dosageForm || 'N/A'}</Text>
                 <Text style={styles.medicineStock}>Classification: {medDetails.classification || 'N/A'}</Text>
                 <Text style={styles.medicineStock}>Category: {categoryNames}</Text>
+
+                {/* ✅ Price Display */}
+                <Text style={styles.medicineStock}>
+                  Price: {item.price != null && item.price !== ''
+                    ? `₱${parseFloat(item.price).toFixed(2)}`
+                    : 'Price not indicated'}
+                </Text>
+
                 <Text style={styles.medicineStock}>
                   Stock: {totalStock > 0 ? `${totalStock} in stock` : 'Out of Stock'}
                 </Text>
@@ -107,6 +117,7 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
                   (Last updated on {item.timeStamps ? new Date(item.timeStamps).toLocaleString() : 'No Date Available'})
                 </Text>
               </TouchableOpacity>
+
             );
           })
         ) : (
@@ -119,7 +130,7 @@ const FilterMedicinesByCategoryPerPharmacy = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F4F4F4' },
-  
+
   // 🔍 Search Bar Styles
   searchContainer: {
     flexDirection: 'row',

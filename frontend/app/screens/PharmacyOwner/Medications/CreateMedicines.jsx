@@ -36,6 +36,7 @@ const CreateMedicines = () => {
     const [selectedMedicineIndex, setSelectedMedicineIndex] = useState(null);
 
     const [items, setItems] = useState({});
+    const [prices, setPrices] = useState({});
     const [stockInputs, setStockInputs] = useState({});
     const [expirationDates, setExpirationDates] = useState({});
     const [datePickerVisible, setDatePickerVisible] = useState({});
@@ -224,6 +225,10 @@ const CreateMedicines = () => {
 
     };
 
+    const handlePriceChange = (index, value) => {
+        setPrices((prev) => ({ ...prev, [index]: value }));
+    };
+
     const handleSubmit = async (index) => {
 
         if (!medicines || medicines.length === 0) {
@@ -288,6 +293,7 @@ const CreateMedicines = () => {
                 category: selectedMedicine.category,
                 description: selectedMedicine.description,
                 expirationPerStock: stockEntries,
+                price: prices[index]?.trim() === '' ? null : parseFloat(prices[index]),
                 pharmacy: state.user.userId,
             });
 
@@ -420,6 +426,14 @@ const CreateMedicines = () => {
                                 <Text style={styles.input}>{item.classification}</Text>
                                 <Text style={styles.label}>Category</Text>
                                 <Text style={styles.input}>{item.description}</Text>
+                                <Text style={styles.label}>Price</Text>
+                                <TextInput
+                                    style={styles.input}
+                                    keyboardType="decimal-pad"
+                                    placeholder="Enter price"
+                                    value={prices[index] || ""}
+                                    onChangeText={(value) => handlePriceChange(index, value)}
+                                />
 
                                 <TouchableOpacity onPress={() => handleMedicineSelect(index)} style={styles.addExpi}>
                                     <Text style={styles.submitAdd}>ADD STOCK</Text>

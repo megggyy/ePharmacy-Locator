@@ -256,35 +256,35 @@ const PharmacyDetails = () => {
   };
 
 
-const deleteReview = (reviewId) => {
-  Alert.alert(
-    'Confirm Delete',
-    'Are you sure you want to delete this review?',
-    [
-      {
-        text: 'Cancel',
-        style: 'cancel',
-      },
-      {
-        text: 'Yes, Delete',
-        style: 'destructive',
-        onPress: async () => {
-          try {
-            const response = await axios.delete(`${baseURL}feedbacks/delete/${reviewId}`);
-            if (response.status === 200) {
-              Toast.show({ type: "success", text1: "REVIEW DELETED" });
-              setShowReviewForm(false);
-            }
-          } catch (error) {
-            console.error("Delete error:", error);
-            Toast.show({ type: "error", text1: "ERROR!", text2: "FAILED TO DELETE REVIEW" });
-          }
+  const deleteReview = (reviewId) => {
+    Alert.alert(
+      'Confirm Delete',
+      'Are you sure you want to delete this review?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
         },
-      },
-    ],
-    { cancelable: true }
-  );
-};
+        {
+          text: 'Yes, Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              const response = await axios.delete(`${baseURL}feedbacks/delete/${reviewId}`);
+              if (response.status === 200) {
+                Toast.show({ type: "success", text1: "REVIEW DELETED" });
+                setShowReviewForm(false);
+              }
+            } catch (error) {
+              console.error("Delete error:", error);
+              Toast.show({ type: "error", text1: "ERROR!", text2: "FAILED TO DELETE REVIEW" });
+            }
+          },
+        },
+      ],
+      { cancelable: true }
+    );
+  };
 
   const updateReview = async () => {
 
@@ -377,6 +377,11 @@ const deleteReview = (reviewId) => {
                 <Text style={styles.detailText}>📌 Form: {medDetails.dosageForm || 'N/A'}</Text>
                 <Text style={styles.detailText}>📂 Classification: {medDetails.classification || 'N/A'}</Text>
                 <Text style={styles.detailText}>📋 Category: {categoryNames}</Text>
+                <Text style={styles.detailText}>
+                  💰 Price: {medDetails.price != null && medDetails.price !== ''
+                    ? `₱${parseFloat(medDetails.price).toFixed(2)}`
+                    : 'Price not indicated'}
+                </Text>
               </View>
 
               {/* Last Updated */}

@@ -67,7 +67,7 @@ const MedicationScreen = () => {
       const interval = setInterval(fetchData, 5000);
 
       return () => {
-        clearInterval(interval); 
+        clearInterval(interval);
         setMedicationsList([]);
         setMedicationsFilter([]);
         setLoading(true);
@@ -81,8 +81,9 @@ const MedicationScreen = () => {
       axios
         .get(`${baseURL}medicine`)
         .then((res) => {
-          setMedicationsList(res.data);
-          setMedicationsFilter(res.data);
+          const reversed = res.data.reverse();
+          setMedicationsList(reversed);
+          setMedicationsFilter(reversed);
           setLoading(false);
         })
         .catch((err) => {

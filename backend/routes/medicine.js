@@ -121,7 +121,7 @@ router.delete('/admin/delete/:id', async (req, res) => {
 router.post('/create', async (req, res) => {
     try {
         const { brandName, genericName, dosageStrength, dosageForm,
-            classification, expirationPerStock, pharmacy, category, description } = req.body;
+            classification, expirationPerStock, pharmacy, category, description, price } = req.body;
 
         console.log("Incoming Data:", req.body);
 
@@ -188,15 +188,13 @@ router.post('/create', async (req, res) => {
             };
         });
 
-
-
-
         // Create stock entry
         let pharmacyStock = new PharmacyStock({
             medicine: medicineExists._id,
             expirationPerStock: formattedExpirationPerStock,
             pharmacy: pharmacyExists._id,
             timeStamps: new Date(),
+            price
         });
 
         await pharmacyStock.save();
@@ -379,7 +377,7 @@ router.get('/read/:id', async (req, res) => {
 
 // Update Medicine Stock
 router.put('/update/:id', async (req, res) => {
-    const { expirationPerStock } = req.body; // Extracting the full array
+    const { expirationPerStock, price } = req.body; // Extracting the full array
 
     // Validate input
     if (!Array.isArray(expirationPerStock) || expirationPerStock.length === 0) {
@@ -393,6 +391,7 @@ router.put('/update/:id', async (req, res) => {
             {
                 $set: { expirationPerStock },  // Update entire array
                 updatedAt: new Date(),  // Ensure timestamps update
+                price
             },
             { new: true, runValidators: true } // Return updated document & validate input
         );

@@ -84,6 +84,8 @@ export default function PharmacyReviewChart() {
                 </head>
                 <body>
                     <h2>Pharmacy Review Report</h2>
+                                <p><strong>Report Generated:</strong> ${new Date().toLocaleString()}</p>
+
                     <table>
                         <tr><th>Rating</th><th>Number of Reviews</th></tr>
                         ${chartData.labels.map((label, idx) => `<tr><td>${label}</td><td>${chartData.datasets[0].data[idx]}</td></tr>`).join('')}
@@ -117,7 +119,12 @@ export default function PharmacyReviewChart() {
             return;
         }
 
+        const now = new Date();
+        const timestamp = `Generated on: ${now.toLocaleString()}`;
+
         const data = [
+            [timestamp], // Timestamp row
+            [], // Blank row
             ['Rating', 'Number of Reviews'],
             ['1★', chartData.datasets[0].data[0]],
             ['2★', chartData.datasets[0].data[1]],
