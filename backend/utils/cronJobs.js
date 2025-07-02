@@ -14,11 +14,21 @@ let transporter = nodemailer.createTransport({
 
 const checkExpiringStocks = async () => {
   try {
+    const now = new Date();
     const oneMonthFromNow = new Date();
     oneMonthFromNow.setMonth(oneMonthFromNow.getMonth() + 1);
 
     const expiringStocks = await PharmacyStock.find({
-      "expirationPerStock.expirationDate": { $lte: oneMonthFromNow },
+      expirationPerStock: {
+        $elemMatch: {
+          expirationDate: {
+            $ne: null,
+            $gt: now,
+            $lte: oneMonthFromNow,
+          },
+        },
+      },
+      deleted: false,
     })
       .populate("pharmacy")
       .populate("medicine");
@@ -27,7 +37,6 @@ const checkExpiringStocks = async () => {
 
     for (const stock of expiringStocks) {
       const pharmacy = await Pharmacy.findById(stock.pharmacy).populate("userInfo");
-
       if (!pharmacy || !pharmacy.userInfo?.email) continue;
 
       const pharmacyId = pharmacy._id.toString();
@@ -48,7 +57,13 @@ const checkExpiringStocks = async () => {
         : "Unknown Medicine";
 
       stock.expirationPerStock
-        .filter((item) => new Date(item.expirationDate) <= oneMonthFromNow)
+        .filter(
+          (item) =>
+            item.expirationDate instanceof Date &&
+            !isNaN(item.expirationDate) &&
+            item.expirationDate > now &&
+            item.expirationDate <= oneMonthFromNow
+        )
         .forEach((item) => {
           pharmacyExpiringStocks[pharmacyId].medicines.push({
             name: medicineName,
@@ -60,17 +75,16 @@ const checkExpiringStocks = async () => {
 
     for (const pharmacyId in pharmacyExpiringStocks) {
       const { email, name, medicines } = pharmacyExpiringStocks[pharmacyId];
-
       if (medicines.length === 0) continue;
 
       const medicineTableRows = medicines
         .map(
           (med) => `
-          <tr>
-            <td style="border: 1px solid #0a5d7e; padding: 8px;">${med.name}</td>
-            <td style="border: 1px solid #0a5d7e; padding: 8px; text-align: center;">${med.stock}</td>
-            <td style="border: 1px solid #0a5d7e; padding: 8px; text-align: center;">${med.expiryDate}</td>
-          </tr>`
+            <tr>
+              <td style="border: 1px solid #0a5d7e; padding: 8px;">${med.name}</td>
+              <td style="border: 1px solid #0a5d7e; padding: 8px; text-align: center;">${med.stock}</td>
+              <td style="border: 1px solid #0a5d7e; padding: 8px; text-align: center;">${med.expiryDate}</td>
+            </tr>`
         )
         .join("");
 
@@ -101,15 +115,16 @@ const checkExpiringStocks = async () => {
       };
 
       await transporter.sendMail(mailOptions);
-      console.log(`Expiry notification sent to ${email}`);
+      console.log(`✅ Expiry notification sent to ${email}`);
     }
   } catch (error) {
-    console.error("Error checking expiring stocks:", error);
+    console.error("❌ Error checking expiring stocks:", error);
   }
 };
 
-// Schedule the job to run daily at 9am
-cron.schedule("0 9 * * *", checkExpiringStocks);
+// Schedule the job to run daily at 9am Asia/Manila time
+cron.schedule("0 9 * * *", checkExpiringStocks, {
+  timezone: "Asia/Manila",
+});
 
 module.exports = { checkExpiringStocks };
-
