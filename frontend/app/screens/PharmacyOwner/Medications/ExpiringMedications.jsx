@@ -8,6 +8,7 @@ import {
   Alert
 } from "react-native";
 import { DataTable, Searchbar, IconButton } from "react-native-paper";
+import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import axios from "axios";
@@ -139,7 +140,17 @@ const MedicationScreen = () => {
                 <td>${item.medicine.genericName}</td>
                 <td>${item.medicine.brandName}</td>
                 <td>${item.medicine.category.map((cat) => cat.name).join(", ")}</td>
-                <td>${item.expirationPerStock.map((exp) => new Date(exp.expirationDate).toLocaleDateString()).join(", ")}</td>
+                <td>
+                  ${item.expirationPerStock && item.expirationPerStock.length > 0
+              ? item.expirationPerStock
+                .filter(exp => exp.expirationDate) // filter out null/undefined/empty
+                .map(exp =>
+                  new Date(exp.expirationDate).toLocaleDateString()
+                )
+                .join(", ")
+              : "No Expiration"
+            }
+                </td>
               </tr>
             `
         )
@@ -223,7 +234,9 @@ const MedicationScreen = () => {
         <>
           {/* Header Section */}
           <View style={styles.header}>
-            <IconButton icon="arrow-left" onPress={() => router.back()} color="white" />
+            <TouchableOpacity onPress={() => router.push('/drawer/PharmacyOwnerDrawer')} style={styles.backButton}>
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
             <Text style={styles.headerTitle}>Check Expiring Medicines</Text>
           </View>
           {/* Search Bar */}
@@ -369,8 +382,16 @@ const MedicationScreen = () => {
                     <DataTable.Cell>{item.medicine.brandName}</DataTable.Cell>
                     <DataTable.Cell>{item.medicine.category.map(cat => cat.name).join(", ")}</DataTable.Cell>
                     <DataTable.Cell>
-                      {item.expirationPerStock.map(exp => new Date(exp.expirationDate).toLocaleDateString()).join(", ")}
+                      {item.expirationPerStock && item.expirationPerStock.length > 0
+                        ? item.expirationPerStock
+                          .filter(exp => exp.expirationDate) // remove empty/null dates
+                          .map(exp =>
+                            new Date(exp.expirationDate).toLocaleDateString()
+                          )
+                          .join(", ")
+                        : ""}
                     </DataTable.Cell>
+
                   </DataTable.Row>
                 </TouchableOpacity>
               ))}
@@ -396,8 +417,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F5F5F5",
   },
-  header: { flexDirection: "row", alignItems: "center", padding: 10, backgroundColor: "#005b7f" },
-  headerTitle: { fontSize: 20, fontWeight: "bold", color: "white" },
+  header: { flexDirection: "row", alignItems: "center", padding: 20, backgroundColor: "#005b7f" },
+  headerTitle: { fontSize: 20, fontWeight: "bold", color: "white", marginLeft: 10 },
   searchContainer: { padding: 10 },
   searchBar: { backgroundColor: "white" },
   buttonContainer: {

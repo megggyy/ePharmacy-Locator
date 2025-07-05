@@ -11,6 +11,8 @@ import * as Print from 'expo-print';
 import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 import * as XLSX from 'xlsx';
+import PulseSpinner from '@/assets/common/spinner';
+
 
 const screenWidth = Dimensions.get("window").width;
 
@@ -32,51 +34,52 @@ export default function PharmacyOwnerDashboard() {
       return;
     }
 
-    axios.get(`${baseURL}users/${state.user.userId}`)
-      .then((res) => setUserProfile(res.data))
-      .catch((err) => console.error("Error fetching user profile:", err));
+    const fetchData = async () => {
+      try {
+        // Get user profile
+        const userRes = await axios.get(`${baseURL}users/${state.user.userId}`);
+        setUserProfile(userRes.data);
 
-    // Only fetch pharmacy data if the user is a pharmacy owner
-    if (state.user.role === "PharmacyOwner") {
-      axios.get(`${baseURL}medicine/${state.user.userId}`)
-        .then((res) => setTotalMedications(res.data.length))
-        .catch((err) => console.error("Error fetching medications:", err));
+        if (state.user.role === "PharmacyOwner") {
+          // Get medications count
+          const medsRes = await axios.get(`${baseURL}medicine/${state.user.userId}`);
+          setTotalMedications(medsRes.data.length);
 
-      axios.get(`${baseURL}pharmacies/user/${state.user.userId}`)
-        .then((res) => {
-          if (res.data && typeof res.data === "object" && res.data.id) {
-            const pharmacyId = res.data.id;
+          // Get pharmacy ID
+          const pharmacyRes = await axios.get(`${baseURL}pharmacies/user/${state.user.userId}`);
+          if (pharmacyRes.data?.id) {
+            const pharmacyId = pharmacyRes.data.id;
 
+            // Get medications per category
+            const medPerCatRes = await axios.get(
+              `${baseURL}pharmacies/medications-per-category/${pharmacyId}`
+            );
 
-            axios.get(`${baseURL}pharmacies/medications-per-category/${pharmacyId}`)
-              .then((medRes) => {
-                if (medRes.data && Object.keys(medRes.data).length > 0) {
-                  const categories = Object.keys(medRes.data);
-                  const counts = Object.values(medRes.data);
-                  const pieData = categories.map((category, index) => ({
-                    name: category,
-                    population: counts[index],
-                    color: colorPalette[index % colorPalette.length], // Cycle through colors
-                    legendFontColor: "#333",
-                    legendFontSize: 11
-                  }));
-                  setMedicationData(pieData);
-                } else {
-                  console.warn("No medication data found, setting empty array.");
-                  setMedicationData([]); // Ensure it never becomes null
-                }
-              })
-              .catch((err) => {
-                console.error("Error fetching medication categories:", err);
-                setMedicationData([]); // Set empty array on error
-              });
+            if (medPerCatRes.data && Object.keys(medPerCatRes.data).length > 0) {
+              const categories = Object.keys(medPerCatRes.data);
+              const counts = Object.values(medPerCatRes.data);
+              const pieData = categories.map((category, index) => ({
+                name: category,
+                population: counts[index],
+                color: colorPalette[index % colorPalette.length],
+                legendFontColor: "#333",
+                legendFontSize: 11,
+              }));
+              setMedicationData(pieData);
+            } else {
+              setMedicationData([]);
+            }
           }
-        })
-        .catch((err) => console.error("Error fetching pharmacy details:", err));
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setMedicationData([]);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    }
-
-    setLoading(false); // Set loading to false after data fetch is complete
+    fetchData();
   }, [state.isAuthenticated, state.user.userId, state.user.role]);
 
 
@@ -130,6 +133,13 @@ export default function PharmacyOwnerDashboard() {
     await Sharing.shareAsync(filePath);
   };
 
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <PulseSpinner />
+      </View>
+    );
+  }
 
   return (
     <ScrollView style={styles.container}>
@@ -144,6 +154,7 @@ export default function PharmacyOwnerDashboard() {
         </View>
       </View>
 
+
       <View style={styles.summaryCard}>
         <Text style={styles.summaryTitle}>Total Medications</Text>
         <Text style={styles.summaryCount}>{totalMedications}</Text>
@@ -151,21 +162,72 @@ export default function PharmacyOwnerDashboard() {
 
       <Text style={styles.chartTitle}>Medications per Category</Text>
       {medicationData.length > 0 ? (
-        <PieChart
-          data={medicationData}
-          width={screenWidth - 40}
-          height={220}
-          chartConfig={{
-            backgroundColor: "#0B607E",
-            backgroundGradientFrom: "#0B607E",
-            backgroundGradientTo: "#0B607E",
-            color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          }}
-          accessor="population"
-          backgroundColor="transparent"
-          paddingLeft="15"
-          absolute
-        />
+        <View
+          style={{
+            marginBottom: 20,
+          }}>
+          <View style={{ position: "relative" }}>
+            <PieChart
+              data={medicationData}
+              width={screenWidth - 40}
+              height={300}
+              chartConfig={{
+                backgroundColor: "#0B607E",
+                backgroundGradientFrom: "#0B607E",
+                backgroundGradientTo: "#0B607E",
+                color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+              }} accessor="population"
+              backgroundColor="#F5F5F5"
+              paddingLeft="110"
+            />
+
+            <View
+              style={{
+                position: "absolute",
+                top: 0,
+                right: 20,
+                width: 70,
+                height: 400,
+                backgroundColor: "#F5F5F5",
+              }}
+            />
+          </View>
+
+          <View
+            style={{
+              marginTop: 10,
+              paddingHorizontal: 20,
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
+            {medicationData.map((item, index) => (
+              <View
+                key={index}
+                style={{
+                  flexBasis: "30%",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  marginBottom: 10,
+                }}
+              >
+                <View
+                  style={{
+                    width: 12,
+                    height: 12,
+                    backgroundColor: item.color,
+                    marginRight: 8,
+                    borderRadius: 2,
+                  }}
+                />
+                <Text style={{ color: "black", fontSize: 10 }}>
+                  [{item.population}] {item.name}
+                </Text>
+              </View>
+            ))}
+          </View>
+        </View>
       ) : (
         <Text style={styles.noDataText}>No Data Available</Text>
       )}
@@ -189,6 +251,12 @@ export default function PharmacyOwnerDashboard() {
 }
 
 const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5F5F5",
+  },
   container: { flex: 1, backgroundColor: '#F4F4F4' },
   header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 15, paddingBottom: 10, backgroundColor: '#005b7f' },
   menuIcon: { marginRight: 10 },
@@ -220,6 +288,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 20,
     marginTop: 30,
+    marginBottom: 30
   },
   manageButtonText: {
     color: 'white',

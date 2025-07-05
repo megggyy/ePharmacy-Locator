@@ -21,6 +21,7 @@ const PharmacyDetails = () => {
   const [isCategory, setIsCategory] = useState({});
   const [feedbacks, setFeedbacks] = useState([]);
   const [updateFeedback, setUpdateFeedback] = useState([]);
+  const [isUpdating, setIsUpdating] = useState(false);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
   const [name, setName] = useState('false');
@@ -45,13 +46,15 @@ const PharmacyDetails = () => {
       try {
         const response = await axios.get(`${baseURL}pharmacies/${id}`);
         setPharmacy(response.data);
+
         if (state.user?.userId) {
-          fetchCustomerFeedbacks(pharmacy._id);
+          fetchCustomerFeedbacks(response.data._id);
         }
+
       } catch (error) {
-        // console.error("Error fetching pharmacy details:", error);
       }
     };
+
 
     const fetchMedicineStocks = async () => {
       try {
@@ -128,7 +131,11 @@ const PharmacyDetails = () => {
     };
     fetchData();
 
-    const interval = setInterval(fetchData, 5000);
+    const interval = setInterval(() => {
+      if (!isUpdating) {
+        fetchData();
+      }
+    }, 5000);
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [id]);
@@ -244,6 +251,7 @@ const PharmacyDetails = () => {
   const updateReviewForm = async (feedbackId) => {
     try {
       const response = await axios.get(`${baseURL}feedbacks/updateFetch/${feedbackId}`);
+      setIsUpdating(true);
       setUpdateFeedback(response.data); // Update state
       setRating(response.data.rating); // Ensure rating is set
       setComment(response.data.comment);
@@ -302,6 +310,7 @@ const PharmacyDetails = () => {
       setEditingReview(null);
       setRating(0);
       setComment("");
+      setIsUpdating(false);
 
     } catch (error) {
       console.error("Error updating review:", error);

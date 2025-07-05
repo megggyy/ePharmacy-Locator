@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0A6A83',
+    backgroundColor: '#005b7f',
   },
   icon: {
     width: 100,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   submitButton: {
-    backgroundColor: '#4A8691',
+    backgroundColor: '#005b7f',
     paddingVertical: 12,
     borderRadius: 8,
     marginVertical: 20,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   },
   backToLogin: {
     fontSize: 14,
-    color: '#357B8E',
+    color: '#005b7f',
     fontWeight: '600',
     textAlign: 'center',
     marginVertical: 10,

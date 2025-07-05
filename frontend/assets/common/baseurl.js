@@ -5,9 +5,9 @@ let baseURL = '';
 
 
 if (Platform.OS === 'ios' || Platform.OS === 'android') {
-    baseURL = 'http://172.16.70.94:4000/api/v1/';
+    baseURL = 'http://192.168.68.114:4000/api/v1/';
 } else {
-    baseURL = 'http://172.16.70.94:4000/api/v1/';
+    baseURL = 'http://192.168.68.114:4000/api/v1/';
 }
 
 // if (Platform.OS === 'ios' || Platform.OS === 'android') {

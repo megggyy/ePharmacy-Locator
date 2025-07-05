@@ -88,9 +88,9 @@ const ListReviewsScreen = () => {
   const openModal = async (review) => {
     setSelectedReview(review);
     setModalVisible(true);
-    setComment('');
-    setReplyExists(false);
-    setExistingReply(null);
+    // setComment('');
+    // setReplyExists(false);
+    // setExistingReply(null);
 
     try {
       const response = await axios.get(`${baseURL}feedbacks/checkReply/${review._id}`);

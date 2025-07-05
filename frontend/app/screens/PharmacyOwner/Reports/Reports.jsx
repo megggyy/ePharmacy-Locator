@@ -488,21 +488,71 @@ export default function PharmacyDetailsScreen() {
                         {/* Medications per Category Chart */}
                         <Text style={styles.chartTitle}>Medications per Category</Text>
                         {medicationData.length > 0 ? (
-                            <PieChart
-                                data={medicationData}
-                                width={screenWidth - 40}
-                                height={220}
-                                chartConfig={{
-                                    backgroundColor: "#0B607E",
-                                    backgroundGradientFrom: "#0B607E",
-                                    backgroundGradientTo: "#0B607E",
-                                    color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                                }}
-                                accessor="population"
-                                backgroundColor="transparent"
-                                paddingLeft="15"
-                                absolute
-                            />
+
+                            <View
+                                style={{
+                                    marginBottom: 20,
+                                }}>
+                                <View style={{ position: "relative" }}>
+                                    <PieChart
+                                        data={medicationData}
+                                        width={screenWidth - 40}
+                                        height={300}
+                                        chartConfig={chartConfig}
+                                        accessor="population"
+                                        backgroundColor="#F5F5F5"
+                                        paddingLeft="125"
+                                    />
+
+                                    <View
+                                        style={{
+                                            position: "absolute",
+                                            top: 0,
+                                            right: 20,
+                                            width: 65,
+                                            height: 400,
+                                            backgroundColor: "#F5F5F5",
+                                        }}
+                                    />
+                                </View>
+
+                                <View
+                                    style={{
+                                        marginTop: 10,
+                                        paddingHorizontal: 20,
+                                        flexDirection: "row",
+                                        flexWrap: "wrap",
+                                        justifyContent: "space-between",
+                                    }}
+                                >
+                                    {medicationData.map((item, index) => (
+                                        <View
+                                            key={index}
+                                            style={{
+                                                flexBasis: "30%",
+                                                flexDirection: "row",
+                                                alignItems: "center",
+                                                marginBottom: 10,
+                                            }}
+                                        >
+                                            <View
+                                                style={{
+                                                    width: 12,
+                                                    height: 12,
+                                                    backgroundColor: item.color,
+                                                    marginRight: 8,
+                                                    borderRadius: 2,
+                                                }}
+                                            />
+                                            <Text style={{ color: "black", fontSize: 10 }}>
+                                                [{item.population}] {item.name}
+                                            </Text>
+                                        </View>
+                                    ))}
+                                </View>
+                            </View>
+
+
                         ) : (
                             <Text style={styles.noDataText}>No Data Available</Text>
                         )}
@@ -716,6 +766,12 @@ export default function PharmacyDetailsScreen() {
 
     return (
         <View style={styles.container}>
+            <View style={styles.header}>
+                <TouchableOpacity onPress={() => router.push('/drawer/PharmacyOwnerDrawer')} style={styles.backButton}>
+                    <Ionicons name="arrow-back" size={24} color="white" />
+                </TouchableOpacity>
+            </View>
+
             {/* Pharmacy Details with Gradient Background */}
             <LinearGradient colors={['#005b7f', '#14967f']} style={styles.pharmacyDetails}>
                 <View style={styles.pharmacyContent}>
@@ -782,6 +838,18 @@ const styles = StyleSheet.create({
     loadingContainer: {
         flex: 1,
         backgroundColor: '#F5F5F5',
+    },
+    header: {
+        backgroundColor: '#005b7f', // Blue header background, full width
+        padding: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    headerText: {
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginLeft: 20
     },
     pharmacyDetails: {
         height: Dimensions.get('window').height * 0.21,

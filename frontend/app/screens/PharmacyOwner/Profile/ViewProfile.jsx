@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -54,14 +54,14 @@ export default function ViewProfile() {
 
   return (
     <View style={styles.container}>
-    {loading ? (
-      <View style={styles.spinnerContainer}>
-        <Spinner />
-      </View>
-    ) : (
-      <KeyboardAwareScrollView contentContainerStyle={styles.scrollViewContent}>
+      {loading ? (
+        <View style={styles.spinnerContainer}>
+          <Spinner />
+        </View>
+      ) : (
+        <KeyboardAwareScrollView contentContainerStyle={styles.scrollViewContent}>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity onPress={() => router.push('/drawer/PharmacyOwnerDrawer')} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
             <Text style={styles.headerText}>View Profile</Text>
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,  // Ensures the content takes the full height
   },
   spinnerContainer: {
-    flex: 1, 
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },

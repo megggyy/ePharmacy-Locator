@@ -79,7 +79,7 @@ export default function Sidebar() {
     <View style={styles.container}>
 
      {/* Back Button */}
-          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+          <TouchableOpacity onPress={() => router.push('/screens/PharmacyOwner/Dashboard')} style={styles.backButton}>
             <Ionicons name="arrow-back" size={24} color="white" />
           </TouchableOpacity>
     
