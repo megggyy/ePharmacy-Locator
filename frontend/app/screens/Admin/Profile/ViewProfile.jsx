@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } fro
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {jwtDecode} from "jwt-decode"; // Corrected import for jwtDecode
+import { jwtDecode } from "jwt-decode"; // Corrected import for jwtDecode
 import axios from 'axios'; // Import axios
 import baseURL from '@/assets/common/baseurl';
 import Spinner from "../../../../assets/common/spinner";
@@ -45,14 +45,19 @@ export default function ViewProfile() {
 
   const address = `${userData.street || ''}, ${userData.barangay || ''}, ${userData.city || ''}`.replace(/(, )+/g, ', ').trim();
 
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Spinner />
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
-       {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
-      ) : (
-        <>
+
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <TouchableOpacity onPress={() => router.push('/drawer/AdminDrawer')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.headerText}>View Profile</Text>
@@ -60,7 +65,7 @@ export default function ViewProfile() {
 
       <View style={styles.profileImageSection}>
         <Image
-           source={require('@/assets/images/adminepharmacy.png')}
+          source={require('@/assets/images/adminepharmacy.png')}
           style={styles.profileImage}
         />
       </View>
@@ -85,8 +90,6 @@ export default function ViewProfile() {
         <TextInput style={styles.input} value={address || 'N/A'} editable={false} />
 
       </View>
-      </>
-      )}
     </View>
   );
 }
@@ -95,6 +98,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F4F4F4',
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5F5F5",
   },
   header: {
     backgroundColor: '#005b7f', // Blue header background, full width

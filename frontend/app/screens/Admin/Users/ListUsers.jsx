@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react";
 import {
   View,
   Text,
-  ActivityIndicator,
   StyleSheet,
   Dimensions,
   Image,
@@ -10,11 +9,9 @@ import {
   ScrollView,
 } from "react-native";
 import { DataTable, Searchbar } from "react-native-paper";
-import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import baseURL from "../../../../assets/common/baseurl";
 import Spinner from "../../../../assets/common/spinner";
@@ -26,8 +23,43 @@ const UserTableScreen = () => {
   const [userList, setUserList] = useState([]);
   const [userFilter, setUserFilter] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchText, setSearchText] = useState("");
+
+  const fetchUsers = useCallback(() => {
+    axios
+      .get(`${baseURL}users`)
+      .then((res) => {
+        const customers = res.data.filter(user => user.role === "Customer");
+        setUserList(customers);
+        setUserFilter(customers);
+      })
+      .catch((err) => {
+        console.error('Error fetching users:', err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      let interval;
+
+      fetchUsers();
+
+      if (searchText.trim() === "") {
+        interval = setInterval(fetchUsers, 5000);
+      }
+
+      return () => {
+        clearInterval(interval);
+      };
+    }, [searchText, fetchUsers])
+  );
 
   const searchUser = (text) => {
+    setSearchText(text);
+
     if (text === "") {
       setUserFilter(userList);
     } else {
@@ -39,47 +71,14 @@ const UserTableScreen = () => {
     }
   };
 
-  useFocusEffect(
-    useCallback(() => {
-      const fetchUsers = () => {
-        axios
-          .get(`${baseURL}users`)
-          .then((res) => {
-            // Filter only "Customer" role users
-            const customers = res.data.filter(user => user.role === "Customer");
-            setUserList(customers);
-            setUserFilter(customers);
-            setLoading(false);
-          })
-          .catch((err) => {
-            console.error('Error fetching users:', err.message);
-            setLoading(false);
-          });
-      };
-  
-      // Fetch users initially
-      fetchUsers();
-  
-      // Set interval to refresh every 30 seconds
-      const interval = setInterval(fetchUsers, 5000);
-  
-      return () => {
-        clearInterval(interval); // Clear interval when screen loses focus
-        setUserList([]);
-        setUserFilter([]);
-        setLoading(true);
-      };
-    }, [])
-  );
-  
   return (
     <View style={styles.container}>
       {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
+        <Spinner />
       ) : (
         <>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity onPress={() => router.push('/drawer/AdminDrawer')} style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
             <Image
@@ -92,7 +91,8 @@ const UserTableScreen = () => {
           <View style={styles.buttonContainer}>
             <Searchbar
               placeholder="SEARCH NAME"
-              onChangeText={(text) => searchUser(text)}
+              value={searchText}
+              onChangeText={searchUser}
               style={{ flex: 1 }}
             />
           </View>
@@ -101,9 +101,9 @@ const UserTableScreen = () => {
             <Text style={styles.tableTitle}>USERS</Text>
             <DataTable>
               <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>IMAGE</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ADDRESS</Text></DataTable.Title>
+                <DataTable.Title style={styles.centeredTitle}><Text style={styles.headerText}>IMAGE</Text></DataTable.Title>
+                <DataTable.Title style={styles.centeredTitle}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
+                <DataTable.Title style={styles.centeredTitle}><Text style={styles.headerText}>ADDRESS</Text></DataTable.Title>
               </DataTable.Header>
 
               {userFilter.map((item, index) => (
@@ -120,7 +120,7 @@ const UserTableScreen = () => {
                         source={{
                           uri: item.customerDetails?.images?.[0]
                             ? item.customerDetails.images[0]
-                            : 'https://via.placeholder.com/150', // Replace with your placeholder image URL
+                            : 'https://via.placeholder.com/150',
                         }}
                         style={styles.image}
                         resizeMode="cover"
@@ -190,6 +190,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
+  centeredTitle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   rowCell: {
     paddingTop: 10,
     paddingBottom: 13
@@ -211,14 +215,6 @@ const styles = StyleSheet.create({
   cellText: {
     textAlign: 'center',
     flexWrap: 'wrap',
-  },
-  iconCell: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 40,
-    height: 40,
-    backgroundColor: 'black',
-    borderRadius: 20,
   },
 });
 

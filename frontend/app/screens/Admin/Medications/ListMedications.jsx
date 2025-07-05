@@ -63,15 +63,6 @@ const MedicationScreen = () => {
       // Fetch data initially
       fetchData();
 
-      // Set interval to fetch data every 30 seconds
-      const interval = setInterval(fetchData, 5000);
-
-      return () => {
-        clearInterval(interval);
-        setMedicationsList([]);
-        setMedicationsFilter([]);
-        setLoading(true);
-      };
     }, [])
   );
 

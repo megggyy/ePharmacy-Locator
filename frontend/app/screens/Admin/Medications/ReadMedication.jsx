@@ -8,16 +8,16 @@ import Spinner from "../../../../assets/common/spinner";
 
 export default function ReadMedicationScreen() {
   const router = useRouter();
-  const { id } = useLocalSearchParams(); // Get the medication ID from route params
+  const { id } = useLocalSearchParams();
   const [medicationData, setMedicationData] = useState(null);
   const [category, setCategory] = useState("");
-  const [isCategory, setIsCategory] = useState(true); // Toggle state
+  const [isCategory, setIsCategory] = useState(true);
 
   useEffect(() => {
     const fetchMedication = async () => {
       try {
         const response = await axios.get(`${baseURL}medicine/admin/read/${id}`);
-        console.log('Fetched medicationData:', response.data); // Debugging log
+        console.log('Fetched medicationData:', response.data);
         setMedicationData(response.data);
       } catch (error) {
         console.error('Error fetching medication:', error.response?.data || error.message);
@@ -36,13 +36,12 @@ export default function ReadMedicationScreen() {
 
       setCategory(newCategory);
     }
-  }, [medicationData]); // Runs when medicationData updates
+  }, [medicationData]);
 
   const handleCategoryClick = () => {
-    setIsCategory((prev) => !prev); // Toggle between true/false
+    setIsCategory((prev) => !prev);
   };
 
-  // Handle loading state
   if (!medicationData) {
     return (
       <View style={styles.loadingContainer}>
@@ -51,10 +50,9 @@ export default function ReadMedicationScreen() {
     );
   }
 
-  // Extract medicine and pharmacy data
+  // Always get medicine info from the first record
   const medication = Array.isArray(medicationData) ? medicationData[0] : medicationData;
   const medicine = medication?.medicine;
-  const pharmacy = medication?.pharmacy;
 
   if (!medicine) {
     return (
@@ -68,11 +66,15 @@ export default function ReadMedicationScreen() {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.push('/screens/Admin/Medications/ListMedications')} style={styles.backButton}>
+        <TouchableOpacity
+          onPress={() => router.push('/screens/Admin/Medications/ListMedications')}
+          style={styles.backButton}
+        >
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.title}>{medicine.brandName}</Text>
       </View>
+
       <ScrollView>
         {/* Medication Details */}
         <View style={styles.detailsContainer}>
@@ -96,78 +98,86 @@ export default function ReadMedicationScreen() {
           </Text>
         </View>
 
-        {/* Pharmacy Information */}
+        {/* Pharmacies Title */}
         <View style={styles.pharmacyContainer}>
           <Text style={styles.pharmacyTitle}>LIST OF PHARMACIES</Text>
         </View>
 
-        {pharmacy ? (
-          <View style={styles.infoContainer}>
-            <View style={styles.detailsContainer}>
-              <Text style={styles.label}>Name:</Text>
-              <Text style={styles.value}>{pharmacy.userInfo?.name || 'N/A'}</Text>
+        {/* Render ALL pharmacies */}
+        {Array.isArray(medicationData) && medicationData.length > 0 ? (
+          medicationData.map((medication, index) => {
+            const pharmacy = medication.pharmacy;
+            return (
+              <View key={index} style={styles.infoContainer}>
+                <View style={styles.detailsContainer}>
+                  <Text style={styles.label}>Name:</Text>
+                  <Text style={styles.value}>
+                    {pharmacy?.userInfo?.name || 'N/A'}
+                  </Text>
 
-              <Text style={styles.label}>Location:</Text>
-              <Text style={styles.value}>
-                {`${pharmacy.userInfo?.street}, ${pharmacy.userInfo?.barangay}, ${pharmacy.userInfo?.city}`}
-              </Text>
+                  <Text style={styles.label}>Location:</Text>
+                  <Text style={styles.value}>
+                    {`${pharmacy?.userInfo?.street || ''}, ${pharmacy?.userInfo?.barangay || ''}, ${pharmacy?.userInfo?.city || ''}`}
+                  </Text>
 
-              <Text style={styles.label}>Contact:</Text>
-              <Text style={styles.value}>{pharmacy.userInfo?.contactNumber || 'N/A'}</Text>
+                  <Text style={styles.label}>Contact:</Text>
+                  <Text style={styles.value}>
+                    {pharmacy?.userInfo?.contactNumber || 'N/A'}
+                  </Text>
 
-              <Text style={styles.label}>Availability:</Text>
-              <Text style={styles.value}>
-                {pharmacy.businessDays || 'N/A'} from {pharmacy.openingHour || 'N/A'} - {pharmacy.closingHour || 'N/A'}
-              </Text>
+                  <Text style={styles.label}>Availability:</Text>
+                  <Text style={styles.value}>
+                    {pharmacy?.businessDays || 'N/A'} from {pharmacy?.openingHour || 'N/A'} - {pharmacy?.closingHour || 'N/A'}
+                  </Text>
 
-              {/* ✅ Price Section */}
-              <Text style={styles.label}>Price:</Text>
-              <Text style={styles.value}>
-                {medication.price != null && medication.price !== ''
-                  ? `₱${parseFloat(medication.price).toFixed(2)}`
-                  : 'Price not indicated'}
-              </Text>
+                  <Text style={styles.label}>Price:</Text>
+                  <Text style={styles.value}>
+                    {medication.price != null && medication.price !== ''
+                      ? `₱${parseFloat(medication.price).toFixed(2)}`
+                      : 'Price not indicated'}
+                  </Text>
 
-              {/* Expiration & Stock Details */}
-              <View style={styles.expirationStock}>
-                <View style={styles.expirationDate}>
-                  <Text style={styles.label}>Expiration Date:</Text>
-                </View>
-                <View style={styles.stock}>
-                  <Text style={styles.label}>Stock:</Text>
-                </View>
-              </View>
-
-              {medication.expirationPerStock?.length > 0 ? (
-                medication.expirationPerStock.map((exp, index) => (
-                  <View key={index} style={styles.expirationStock}>
+                  {/* Expiration & Stock Details */}
+                  <View style={styles.expirationStock}>
                     <View style={styles.expirationDate}>
-                      <Text style={styles.value}>
-                        {exp?.expirationDate
-                          ? new Date(exp.expirationDate).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })
-                          : "No Expiration Date"}
-                      </Text>
+                      <Text style={styles.label}>Expiration Date:</Text>
                     </View>
-
                     <View style={styles.stock}>
-                      <Text style={styles.value}>{exp.stock}</Text>
+                      <Text style={styles.label}>Stock:</Text>
                     </View>
                   </View>
-                ))
-              ) : (
-                <Text style={styles.value}>No Expiration Data</Text>
-              )}
-            </View>
-          </View>
+
+                  {medication.expirationPerStock?.length > 0 ? (
+                    medication.expirationPerStock.map((exp, idx) => (
+                      <View key={idx} style={styles.expirationStock}>
+                        <View style={styles.expirationDate}>
+                          <Text style={styles.value}>
+                            {exp?.expirationDate
+                              ? new Date(exp.expirationDate).toLocaleDateString("en-US", {
+                                  year: "numeric",
+                                  month: "long",
+                                  day: "numeric",
+                                })
+                              : "No Expiration Date"}
+                          </Text>
+                        </View>
+                        <View style={styles.stock}>
+                          <Text style={styles.value}>
+                            {exp.stock}
+                          </Text>
+                        </View>
+                      </View>
+                    ))
+                  ) : (
+                    <Text style={styles.value}>No Expiration Data</Text>
+                  )}
+                </View>
+              </View>
+            );
+          })
         ) : (
           <Text style={styles.value}>No Pharmacy Data</Text>
         )}
-
-
       </ScrollView>
     </View>
   );

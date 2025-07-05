@@ -2,20 +2,17 @@ import React, { useState, useCallback } from "react";
 import {
   View,
   Text,
-  ActivityIndicator,
   StyleSheet,
   Dimensions,
   Image,
   TouchableOpacity,
   ScrollView,
-  Modal
+  Modal,
 } from "react-native";
 import { DataTable, Searchbar } from "react-native-paper";
-import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import Toast from "react-native-toast-message";
 import baseURL from "../../../../assets/common/baseurl";
@@ -30,10 +27,49 @@ const ListAdminScreen = () => {
   const [loading, setLoading] = useState(true);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedAdmin, setSelectedAdmin] = useState(null);
+  const [searchText, setSearchText] = useState("");
 
+  // Fetch admins list
+  const fetchAdmins = useCallback(() => {
+    axios
+      .get(`${baseURL}users/admins`)
+      .then((res) => {
+        setAdminList(res.data);
+        setAdminFilter(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching admins:", err.message);
+        Toast.show({
+          type: "error",
+          text1: "Error",
+          text2: "Failed to load admins.",
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
+  // Run polling only if search box is empty
+  useFocusEffect(
+    useCallback(() => {
+      let interval;
+
+      fetchAdmins();
+
+      if (searchText.trim() === "") {
+        interval = setInterval(fetchAdmins, 5000);
+      }
+
+      return () => {
+        clearInterval(interval);
+      };
+    }, [searchText, fetchAdmins])
+  );
 
   const searchAdmin = (text) => {
+    setSearchText(text);
+
     if (text === "") {
       setAdminFilter(adminList);
     } else {
@@ -45,71 +81,58 @@ const ListAdminScreen = () => {
     }
   };
 
-  useFocusEffect(
-    useCallback(() => {
-      const fetchAdmins = () => {
-        axios
-          .get(`${baseURL}users/admins`)
-          .then((res) => {
-            setAdminList(res.data);
-            setAdminFilter(res.data);
-            setLoading(false);
-          })
-          .catch((err) => {
-            console.error('Error fetching pharmacies:', err.message);
-            setLoading(false);
-          });
-      };
-
-      // Fetch pharmacies initially
-      fetchAdmins();
-
-      const interval = setInterval(fetchAdmins, 5000);
-
-      return () => {
-        clearInterval(interval); // Clear interval when screen loses focus
-        setAdminList([]);
-        setAdminFilter([]);
-        setLoading(true);
-      };
-    }, [])
-  );
-
   const updateRole = async (id) => {
     setLoading(true);
-  
+
     try {
-      const res = await axios.put(`${baseURL}users/admins/updateRole/${id}`);
-  
-      console.log('Role updated successfully:', res.data); // Debugging log
+      const res = await axios.put(
+        `${baseURL}users/admins/updateRole/${id}`
+      );
+
+      console.log("Role updated successfully:", res.data);
       setModalVisible(false);
-      Toast.show({ type: "success", text1: "Success", text2: "User role updated!" });
-  
+      Toast.show({
+        type: "success",
+        text1: "Success",
+        text2: "User role updated!",
+      });
+
+      fetchAdmins();
     } catch (err) {
-  
-      // Show a specific error if it's about the last admin
-      if (err.response?.status === 400 && err.response?.data?.message.includes("MIN")) {
+      if (
+        err.response?.status === 400 &&
+        err.response?.data?.message.includes("MIN")
+      ) {
         setModalVisible(false);
-        Toast.show({ type: "error", text1: "ERROR UPDATING ROLE", text2: "THERE MUST BE ATLEAST ONE ADMIN REMAINING!" });
+        Toast.show({
+          type: "error",
+          text1: "ERROR UPDATING ROLE",
+          text2: "THERE MUST BE AT LEAST ONE ADMIN REMAINING!",
+        });
       } else {
         setModalVisible(false);
-        Toast.show({ type: "error", text1: "Error", text2: "Failed to update user role" });
+        Toast.show({
+          type: "error",
+          text1: "Error",
+          text2: "Failed to update user role",
+        });
       }
-  
     } finally {
       setLoading(false);
     }
   };
-  
 
   return (
     <View style={styles.container}>
       {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
+        <Spinner />
       ) : (
         <>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity
+              onPress={() => router.push('/drawer/AdminDrawer')}
+              style={styles.backButton}
+            >
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
             <Image
@@ -119,32 +142,37 @@ const ListAdminScreen = () => {
             <Text style={styles.title}>ePharmacy</Text>
           </View>
 
-          <View style={styles.buttonContainer}>
-            <Searchbar
-              placeholder="SEARCH NAME"
-              onChangeText={(text) => searchAdmin(text)}
-              style={{ flex: 1 }}
-            />
-          </View>
+          <Searchbar
+            placeholder="SEARCH NAME"
+            value={searchText}
+            onChangeText={searchAdmin}
+            style={{ margin: 10 }}
+          />
 
           <ScrollView>
             <Text style={styles.tableTitle}>ADMINS</Text>
             <DataTable>
-              <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>CONTACT NUMBER</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>EMAIL</Text></DataTable.Title>
+              <DataTable.Header style={{ backgroundColor: "#0B607E" }}>
+                <DataTable.Title style={styles.centeredTitle}>
+                  <Text style={styles.headerText}>NAME</Text>
+                </DataTable.Title>
+                <DataTable.Title style={styles.centeredTitle}>
+                  <Text style={styles.headerText}>CONTACT NUMBER</Text>
+                </DataTable.Title>
+                <DataTable.Title style={styles.centeredTitle}>
+                  <Text style={styles.headerText}>EMAIL</Text>
+                </DataTable.Title>
               </DataTable.Header>
 
               {adminFilter.map((item, index) => (
-
                 <DataTable.Row
                   key={index}
                   style={styles.rowCell}
                   onPress={() => {
                     setSelectedAdmin(item);
                     setModalVisible(true);
-                  }}>
+                  }}
+                >
                   <DataTable.Cell style={styles.textCell}>
                     <Text style={styles.cellText}>{item.name}</Text>
                   </DataTable.Cell>
@@ -158,8 +186,6 @@ const ListAdminScreen = () => {
               ))}
             </DataTable>
           </ScrollView>
-
-
         </>
       )}
 
@@ -178,7 +204,9 @@ const ListAdminScreen = () => {
                 <Text style={styles.value}>{selectedAdmin.name}</Text>
 
                 <Text style={styles.label}>Contact Number:</Text>
-                <Text style={styles.value}>{selectedAdmin.contactNumber}</Text>
+                <Text style={styles.value}>
+                  {selectedAdmin.contactNumber}
+                </Text>
 
                 <Text style={styles.label}>Email:</Text>
                 <Text style={styles.value}>{selectedAdmin.email}</Text>
@@ -187,7 +215,9 @@ const ListAdminScreen = () => {
                   style={styles.confirmButton}
                   onPress={() => updateRole(selectedAdmin._id)}
                 >
-                  <Text style={{ color: "white" }}>REMOVE AS AN ADMIN</Text>
+                  <Text style={{ color: "white" }}>
+                    REMOVE AS AN ADMIN
+                  </Text>
                 </TouchableOpacity>
               </View>
             )}
@@ -201,24 +231,22 @@ const ListAdminScreen = () => {
         </View>
       </Modal>
     </View>
-
-
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: "#F5F5F5",
   },
   header: {
-    backgroundColor: '#005b7f',
+    backgroundColor: "#005b7f",
     paddingTop: 60,
     paddingBottom: 20,
-    alignItems: 'center',
+    alignItems: "center",
   },
   backButton: {
-    position: 'absolute',
+    position: "absolute",
     top: 50,
     left: 20,
   },
@@ -227,62 +255,52 @@ const styles = StyleSheet.create({
     height: 60,
   },
   title: {
-    color: 'white',
+    color: "white",
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 10,
   },
   tableTitle: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginVertical: 15,
-    marginTop: 5,
     paddingVertical: 10,
-    color: 'white',
-    backgroundColor: '#0B607E',
+    color: "white",
+    backgroundColor: "#0B607E",
   },
-  buttonContainer: {
-    margin: 10,
-    alignSelf: 'center',
-    flexDirection: 'row',
+  centeredTitle: {
+    justifyContent: "center",
+    alignItems: "center",
   },
   headerText: {
-    color: 'white',
-    fontWeight: 'bold',
+    color: "white",
+    fontWeight: "bold",
   },
   rowCell: {
     paddingTop: 10,
-    paddingBottom: 13
+    paddingBottom: 13,
   },
   textCell: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   cellText: {
-    textAlign: 'center',
-    flexWrap: 'wrap',
-  },
-  iconCell: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 40,
-    height: 40,
-    backgroundColor: 'black',
-    borderRadius: 20,
+    textAlign: "center",
+    flexWrap: "wrap",
   },
   label: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 18,
     marginBottom: 5,
   },
   value: {
-    backgroundColor: '#F4F4F4',
+    backgroundColor: "#F4F4F4",
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 10,
     marginBottom: 15,
-    textAlign: 'justify'
+    textAlign: "justify",
   },
   modalContainer: {
     flex: 1,
@@ -298,20 +316,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   detailsContainer: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 10,
     padding: 10,
-    margin: 10
+    margin: 10,
   },
-  modalTitle: { fontSize: 20, fontWeight: "bold", margin: 10 },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    margin: 10,
+  },
   confirmButton: {
     padding: 10,
     paddingHorizontal: 20,
     backgroundColor: "#005b7f",
     borderRadius: 5,
-    alignItems: 'center'
+    alignItems: "center",
   },
-  
   closeButton: {
     marginTop: 20,
     padding: 10,

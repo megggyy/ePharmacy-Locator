@@ -2,19 +2,17 @@ import React, { useState, useCallback } from "react";
 import {
   View,
   Text,
-  ActivityIndicator,
   StyleSheet,
   Dimensions,
   Image,
   TouchableOpacity,
   ScrollView,
+  Alert,
 } from "react-native";
 import { DataTable, Searchbar } from "react-native-paper";
-import Icon from "react-native-vector-icons/FontAwesome";
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from "react-native-toast-message";
 import { useRouter } from 'expo-router';
 import baseURL from "../../../../assets/common/baseurl";
@@ -27,18 +25,34 @@ const PharmacyTableScreen = () => {
   const [pharmaciesList, setPharmaciesList] = useState([]);
   const [pharmaciesFilter, setPharmaciesFilter] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [runningCheck, setRunningCheck] = useState(false); 
+  const [runningCheck, setRunningCheck] = useState(false);
+  const [selectedStatus, setSelectedStatus] = useState("All");
+  const [searchText, setSearchText] = useState("");
+
+  const filterData = (text, status) => {
+    const filtered = pharmaciesList.filter((i) => {
+      const nameMatch = i.userInfo.name
+        .toLowerCase()
+        .includes(text.toLowerCase());
+
+      let statusMatch = true;
+      if (status === "Approved") statusMatch = i.approved === true;
+      else if (status === "Pending") statusMatch = i.approved === false;
+
+      return nameMatch && statusMatch;
+    });
+
+    setPharmaciesFilter(filtered);
+  };
 
   const searchPharmacies = (text) => {
-    if (text === "") {
-      setPharmaciesFilter(pharmaciesList);
-    } else {
-      setPharmaciesFilter(
-        pharmaciesList.filter((i) =>
-          i.userInfo.name.toLowerCase().includes(text.toLowerCase())
-        )
-      );
-    }
+    setSearchText(text);
+    filterData(text, selectedStatus);
+  };
+
+  const filterByStatus = (status) => {
+    setSelectedStatus(status);
+    filterData(searchText, status);
   };
 
   useFocusEffect(
@@ -56,31 +70,23 @@ const PharmacyTableScreen = () => {
             setLoading(false);
           });
       };
-  
-      // Fetch pharmacies initially
+
+      // Always fetch once initially
       fetchPharmacies();
-  
-      const interval = setInterval(fetchPharmacies, 5000);
-  
-      return () => {
-        clearInterval(interval); // Clear interval when screen loses focus
-        setPharmaciesList([]);
-        setPharmaciesFilter([]);
-        setLoading(true);
-      };
     }, [])
   );
+
 
   const handleRunExpiryCheck = async () => {
     setRunningCheck(true);
     try {
       const response = await axios.post(`${baseURL}pharmacies/run-expiry-check`);
-        Toast.show({
-                topOffset: 60,
-                type: "success",
-                text1: "Expiry Notifications Sent",
-                text2: "Emails are sent to pharmacies.",
-        });
+      Toast.show({
+        topOffset: 60,
+        type: "success",
+        text1: "Expiry Notifications Sent",
+        text2: "Emails are sent to pharmacies.",
+      });
     } catch (error) {
       Alert.alert("Error", "Failed to send notifications.");
       console.error("Error running expiry check:", error);
@@ -92,7 +98,7 @@ const PharmacyTableScreen = () => {
   return (
     <View style={styles.container}>
       {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
+        <Spinner />
       ) : (
         <>
           <View style={styles.header}>
@@ -109,7 +115,8 @@ const PharmacyTableScreen = () => {
           <View style={styles.buttonContainer}>
             <Searchbar
               placeholder="SEARCH NAME"
-              onChangeText={(text) => searchPharmacies(text)}
+              onChangeText={searchPharmacies}
+              value={searchText}
               style={{ flex: 1 }}
             />
             <TouchableOpacity
@@ -123,14 +130,44 @@ const PharmacyTableScreen = () => {
             </TouchableOpacity>
           </View>
 
+          <View style={styles.statusFilterContainer}>
+            {["All", "Approved", "Pending"].map((status) => (
+              <TouchableOpacity
+                key={status}
+                style={[
+                  styles.statusButton,
+                  selectedStatus === status && styles.activeStatusButton,
+                ]}
+                onPress={() => filterByStatus(status)}
+              >
+                <Text
+                  style={[
+                    styles.statusButtonText,
+                    selectedStatus === status && styles.activeStatusText,
+                  ]}
+                >
+                  {status}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+
           <ScrollView>
-          <Text style={styles.tableTitle}>PHARMACIES</Text>
+            <Text style={styles.tableTitle}>PHARMACIES</Text>
             <DataTable>
               <DataTable.Header style={{ backgroundColor: '#0B607E' }}>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>PERMITS</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>NAME</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>ADDRESS</Text></DataTable.Title>
-                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}><Text style={styles.headerText}>STATUS</Text></DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>PERMITS</Text>
+                </DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>NAME</Text>
+                </DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>ADDRESS</Text>
+                </DataTable.Title>
+                <DataTable.Title style={{ justifyContent: 'center', alignItems: 'center' }}>
+                  <Text style={styles.headerText}>STATUS</Text>
+                </DataTable.Title>
               </DataTable.Header>
 
               {pharmaciesFilter.map((item, index) => (
@@ -158,7 +195,12 @@ const PharmacyTableScreen = () => {
                       </Text>
                     </DataTable.Cell>
                     <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>
+                      <Text
+                        style={[
+                          styles.cellText,
+                          { color: item.approved ? 'green' : 'orange', fontWeight: 'bold' },
+                        ]}
+                      >
                         {item.approved ? 'APPROVED' : 'PENDING'}
                       </Text>
                     </DataTable.Cell>
@@ -180,7 +222,7 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#005b7f',
-    paddingTop: 60,
+    paddingTop: 20,
     paddingBottom: 20,
     alignItems: 'center',
   },
@@ -220,7 +262,7 @@ const styles = StyleSheet.create({
   },
   rowCell: {
     paddingTop: 10,
-    paddingBottom: 13
+    paddingBottom: 13,
   },
   image: {
     width: 40,
@@ -240,15 +282,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     flexWrap: 'wrap',
   },
-  iconCell: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 40,
-    height: 40,
-    backgroundColor: 'black',
-    borderRadius: 20,
-  },
-  // expiry
   expiryCheckButton: {
     backgroundColor: "#0a5d7e",
     paddingVertical: 10,
@@ -257,6 +290,34 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     justifyContent: "center",
     alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
+  },
+  statusFilterContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 10,
+    marginBottom: 10,
+    flexWrap: "wrap",
+    gap: 10,
+  },
+  statusButton: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    backgroundColor: "#ccc",
+    borderRadius: 20,
+  },
+  activeStatusButton: {
+    backgroundColor: "#0B607E",
+  },
+  statusButtonText: {
+    color: "#333",
+    fontWeight: "bold",
+  },
+  activeStatusText: {
+    color: "white",
   },
 });
 

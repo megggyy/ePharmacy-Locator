@@ -102,14 +102,19 @@ export default function EditProfile() {
     }
   };
 
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Spinner />
+      </View>
+    );
+  }
+
   return (
     <KeyboardAwareScrollView style={styles.container}>
-        {loading ? (
-        <Spinner /> // Show the custom spinner component when loading
-      ) : (
-        <>
+
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <TouchableOpacity onPress={() => router.push('/drawer/AdminDrawer')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.headerText}>Edit Profile</Text>
@@ -117,7 +122,7 @@ export default function EditProfile() {
 
       <View style={styles.profileImageSection}>
         <Image
-           source={require('@/assets/images/adminepharmacy.png')}
+          source={require('@/assets/images/adminepharmacy.png')}
           style={styles.profileImage}
         />
       </View>
@@ -175,18 +180,17 @@ export default function EditProfile() {
         />
       </View>
       <TouchableOpacity
-            style={styles.changePasswordContainer}
-            onPress={() => router.push({ pathname: '/screens/Auth/ChangePassword/ChangePassword', params: { userId } })}
-          >
-            <Text style={styles.changePasswordText}>Change Password</Text>
-            <Ionicons name="chevron-forward" size={24} color="black" />
-          </TouchableOpacity>
+        style={styles.changePasswordContainer}
+        onPress={() => router.push({ pathname: '/screens/Auth/ChangePassword/ChangePassword', params: { userId } })}
+      >
+        <Text style={styles.changePasswordText}>Change Password</Text>
+        <Ionicons name="chevron-forward" size={24} color="black" />
+      </TouchableOpacity>
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirmButtonText}>CONFIRM</Text>
       </TouchableOpacity>
-      </>
-      )}
-    </KeyboardAwareScrollView>
+
+    </KeyboardAwareScrollView >
   );
 }
 
@@ -221,8 +225,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: '#F4F4F4',
   },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5F5F5",
+  },
   header: {
-    backgroundColor: '#005b7f', 
+    backgroundColor: '#005b7f',
     paddingTop: 20,
     paddingBottom: 20,
     justifyContent: 'center',

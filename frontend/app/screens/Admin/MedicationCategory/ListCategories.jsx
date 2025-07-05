@@ -74,17 +74,6 @@ const MedicationCategoriesScreen = () => {
       };
 
       fetchData();
-
-      const intervalId = setInterval(() => {
-        fetchData();
-      }, 5000);
-
-      return () => {
-        clearInterval(intervalId);
-        setCategoriesList([]);
-        setCategoriesFilter([]);
-        setLoading(true);
-      };
     }, [])
   );
 
@@ -181,65 +170,58 @@ const MedicationCategoriesScreen = () => {
               </DataTable.Header>
 
               {paginatedData.map((item, index) => (
-                <TouchableOpacity
-                  key={index}
-                  onPress={() => router.push(`/screens/Admin/MedicationCategory/ReadCategory?id=${item._id}`)}
-                  style={{
-                    backgroundColor: index % 2 === 0 ? 'lightgray' : 'gainsboro',
-                  }}
-                >
-                  <DataTable.Row style={styles.rowCell}>
-                    <DataTable.Cell style={styles.textCell}>
-                      <Text style={styles.cellText}>{item.name}</Text>
-                    </DataTable.Cell>
 
-                    <DataTable.Cell style={styles.textCell}>
-                      <View
+                <DataTable.Row style={styles.rowCell}>
+                  <DataTable.Cell style={styles.textCell}>
+                    <Text style={styles.cellText}>{item.name}</Text>
+                  </DataTable.Cell>
+
+                  <DataTable.Cell style={styles.textCell}>
+                    <View
+                      style={[
+                        styles.statusBadge,
+                        item.deleted ? styles.deletedBadge : styles.activeBadge,
+                      ]}
+                    >
+                      <Text
                         style={[
-                          styles.statusBadge,
-                          item.deleted ? styles.deletedBadge : styles.activeBadge,
+                          styles.cellText,
+                          { color: item.deleted ? 'red' : 'green', fontWeight: 'bold' },
                         ]}
                       >
-                        <Text
-                          style={[
-                            styles.cellText,
-                            { color: item.deleted ? 'red' : 'green', fontWeight: 'bold' },
-                          ]}
-                        >
-                          {item.deleted ? 'Deleted' : 'Active'}
-                        </Text>
-                      </View>
-                    </DataTable.Cell>
+                        {item.deleted ? 'Deleted' : 'Active'}
+                      </Text>
+                    </View>
+                  </DataTable.Cell>
 
-                    <DataTable.Cell style={styles.textCell}>
-                      <View style={styles.actionCell}>
-                        {!item.deleted && (
-                            <TouchableOpacity
-                              onPress={() =>
-                                router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)
-                              }
-                              style={styles.actionButton}
-                            >
-                              <Ionicons name="create-outline" size={24} color="blue" />
-                            </TouchableOpacity>
-                        )}
-
-
+                  <DataTable.Cell style={styles.textCell}>
+                    <View style={styles.actionCell}>
+                      {!item.deleted && (
                         <TouchableOpacity
-                          onPress={() => handleToggleDelete(item)}
+                          onPress={() =>
+                            router.push(`/screens/Admin/MedicationCategory/EditCategory?id=${item._id}`)
+                          }
                           style={styles.actionButton}
                         >
-                          <Ionicons
-                            name={item.deleted ? 'refresh-outline' : 'trash-outline'}
-                            size={24}
-                            color={item.deleted ? 'green' : 'red'}
-                          />
+                          <Ionicons name="create-outline" size={24} color="blue" />
                         </TouchableOpacity>
-                      </View>
-                    </DataTable.Cell>
-                  </DataTable.Row>
+                      )}
 
-                </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={() => handleToggleDelete(item)}
+                        style={styles.actionButton}
+                      >
+                        <Ionicons
+                          name={item.deleted ? 'refresh-outline' : 'trash-outline'}
+                          size={24}
+                          color={item.deleted ? 'green' : 'red'}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </DataTable.Cell>
+                </DataTable.Row>
+
               ))}
 
               <DataTable.Pagination
