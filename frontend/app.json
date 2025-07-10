@@ -43,11 +43,7 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "9ad75c2a-dfff-431a-8b11-20a057b68cc5"
       }
-    },
-    "owner": "remdeleiron"
+    }
   }
 }

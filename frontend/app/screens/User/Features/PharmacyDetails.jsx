@@ -240,8 +240,6 @@ const PharmacyDetails = () => {
         setRating(0);
         setComment('');
         setShowReviewForm(false);
-        setEditingReview(null);
-
       })
       .catch((error) => {
         Toast.show({
@@ -286,8 +284,6 @@ const PharmacyDetails = () => {
               if (response.status === 200) {
                 Toast.show({ type: "success", text1: "REVIEW DELETED" });
                 setShowReviewForm(false);
-                setEditingReview(null);
-
               }
             } catch (error) {
               console.error("Delete error:", error);
@@ -544,7 +540,7 @@ const PharmacyDetails = () => {
               </View>
 
               <TouchableOpacity
-                onPress={addReview(pharmacy._id)}
+                onPress={() =>addReview(pharmacy._id)}
                 style={styles.confirmButton}
               >
                 <Text style={{ color: "white", textAlign: "center", fontSize: 20 }}>
