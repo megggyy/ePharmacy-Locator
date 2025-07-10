@@ -116,52 +116,52 @@ const ListReviewsScreen = () => {
   };
 
 
-const handleCreate = async () => {
-  if (!comment.trim()) {
-    Alert.alert('Validation', 'Please enter a reply before submitting.');
-    return;
-  }
+  const handleCreate = async () => {
+    if (!comment.trim()) {
+      Alert.alert('Validation', 'Please enter a reply before submitting.');
+      return;
+    }
 
-  const reviewData = {
-    comment: comment,
-  };
+    const reviewData = {
+      comment: comment,
+    };
 
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      }
+    };
+
+    try {
+      let response;
+
+      if (replyExists) {
+        // Update existing reply
+        response = await axios.put(
+          `${baseURL}feedbacks/reply/${selectedReview._id}`,
+          reviewData,
+          config
+        );
+      } else {
+        // Create new reply
+        response = await axios.post(
+          `${baseURL}feedbacks/reply/${selectedReview._id}`,
+          reviewData,
+          config
+        );
+      }
+
+      if (response.status === 200 || response.status === 201) {
+        Alert.alert('Success', replyExists ? 'Updated successfully' : 'Replied successfully');
+        closeModal();
+        setIsEditing(false);
+      }
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || error.message || 'Failed to reply';
+      console.error('Error replying:', errorMessage);
+      Alert.alert('Error', errorMessage);
     }
   };
-
-  try {
-    let response;
-
-    if (replyExists) {
-      // Update existing reply
-      response = await axios.put(
-        `${baseURL}feedbacks/reply/${selectedReview._id}`,
-        reviewData,
-        config
-      );
-    } else {
-      // Create new reply
-      response = await axios.post(
-        `${baseURL}feedbacks/reply/${selectedReview._id}`,
-        reviewData,
-        config
-      );
-    }
-
-    if (response.status === 200 || response.status === 201) {
-      Alert.alert('Success', replyExists ? 'Updated successfully' : 'Replied successfully');
-      closeModal();
-      setIsEditing(false);
-    }
-  } catch (error) {
-    const errorMessage = error.response?.data?.message || error.message || 'Failed to reply';
-    console.error('Error replying:', errorMessage);
-    Alert.alert('Error', errorMessage);
-  }
-};
 
 
 
@@ -245,7 +245,7 @@ const handleCreate = async () => {
                   >
                     <View style={styles.userInfo}>
                       <Text style={styles.userName}>
-                        {feedback.customer?.name || "Anonymous"}
+                        {feedback.name ? feedback.customer.name : "Anonymous"}
                       </Text>
                       <View style={styles.starsContainer}>
                         {renderStars(feedback.rating)}
@@ -281,7 +281,7 @@ const handleCreate = async () => {
               <View style={styles.modalContent}>
                 {selectedReview && (
                   <>
-                    <Text style={styles.modalTitle}>{selectedReview.customer?.name || "Anonymous"}</Text>
+                    <Text style={styles.modalTitle}>{selectedReview.name ? selectedReview.customer.name : "Anonymous"}</Text>
                     <View style={styles.starsContainer}>
                       {renderStars(selectedReview.rating)}
                     </View>
@@ -518,7 +518,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
 
-   buttonText: {
+  buttonText: {
     fontSize: 18,
     fontWeight: "bold",
     color: "white",

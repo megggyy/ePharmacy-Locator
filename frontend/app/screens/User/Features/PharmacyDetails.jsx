@@ -11,6 +11,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import StarRating from "@/assets/common/starRating";
 import Spinner from "@/assets/common/spinner";
 import Toast from 'react-native-toast-message';
+import { Modal } from 'react-native';
+
 
 const PharmacyDetails = () => {
   const router = useRouter();
@@ -50,7 +52,6 @@ const PharmacyDetails = () => {
         if (state.user?.userId) {
           fetchCustomerFeedbacks(response.data._id);
         }
-
       } catch (error) {
       }
     };
@@ -132,11 +133,12 @@ const PharmacyDetails = () => {
     fetchData();
 
     const interval = setInterval(() => {
-      if (!isUpdating) {
-        fetchData();
-      }
+      fetchData();
     }, 5000);
 
+    if (isUpdating == true) {
+      setLoading(false);
+    }
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [id]);
 
@@ -235,9 +237,11 @@ const PharmacyDetails = () => {
           autoHide: true,
         });
 
-        setRating(0);      // Reset rating
-        setComment('');    // Reset comment
-        setShowReviewForm(false); // Hide the review form
+        setRating(0);
+        setComment('');
+        setShowReviewForm(false);
+        setEditingReview(null);
+
       })
       .catch((error) => {
         Toast.show({
@@ -252,12 +256,12 @@ const PharmacyDetails = () => {
     try {
       const response = await axios.get(`${baseURL}feedbacks/updateFetch/${feedbackId}`);
       setIsUpdating(true);
-      setUpdateFeedback(response.data); // Update state
-      setRating(response.data.rating); // Ensure rating is set
+      setUpdateFeedback(response.data);
+      setRating(response.data.rating);
       setComment(response.data.comment);
       setShareCustomerInfo(response.data.name);
-      setEditingReview(true);// Set toggle based on name visibility
-      setShowReviewForm(true);
+      setEditingReview(true);
+      setShowReviewForm(false);
     } catch (error) {
       console.error("Error fetching review for update:", error);
     }
@@ -282,6 +286,8 @@ const PharmacyDetails = () => {
               if (response.status === 200) {
                 Toast.show({ type: "success", text1: "REVIEW DELETED" });
                 setShowReviewForm(false);
+                setEditingReview(null);
+
               }
             } catch (error) {
               console.error("Delete error:", error);
@@ -508,7 +514,7 @@ const PharmacyDetails = () => {
         {showReviewForm && (
           <>
             <Text style={styles.headerText}>
-              {editingReview ? "EDIT YOUR REVIEW" : "RATE THIS PHARMACY"}
+              RATE THIS PHARMACY
             </Text>
             <View style={styles.addReview}>
               <View style={styles.ratingContainer}>
@@ -527,7 +533,6 @@ const PharmacyDetails = () => {
                 style={styles.input}
               />
 
-              {/* ✅ Add back the toggle switch */}
               <View style={styles.switchContainer}>
                 <Text style={styles.ratingLabel}>SHARE MY INFO</Text>
                 <Switch
@@ -539,16 +544,85 @@ const PharmacyDetails = () => {
               </View>
 
               <TouchableOpacity
-                onPress={editingReview ? updateReview : () => addReview(pharmacy._id)}
+                onPress={addReview(pharmacy._id)}
                 style={styles.confirmButton}
               >
                 <Text style={{ color: "white", textAlign: "center", fontSize: 20 }}>
-                  {editingReview ? "UPDATE" : "ADD"}
+                  ADD
                 </Text>
               </TouchableOpacity>
             </View>
           </>
         )}
+
+        <Modal
+          visible={editingReview}
+          animationType="slide"
+          transparent={true}
+          onRequestClose={() => {
+            setEditingReview(null);
+            setIsUpdating(false);
+          }}
+        >
+          <View style={styles.modalOverlay}>
+            <View style={styles.modalContent}>
+              <ScrollView keyboardShouldPersistTaps="handled">
+
+                <View style={styles.addReview}>
+                  <Text style={styles.editPharmacy}>EDIT YOUR REVIEW</Text>
+
+                  <View style={styles.ratingContainer}>
+                    <Text style={styles.ratingLabel}>RATING:</Text>
+                    <StarRating
+                      maxStars={5}
+                      rating={parseInt(rating) || 0}
+                      onChangeRating={(newRating) => setRating(newRating.toString())}
+                    />
+                  </View>
+
+                  <Text style={styles.ratingLabel}>COMMENT:</Text>
+                  <TextInput
+                    value={comment}
+                    onChangeText={(text) => setComment(text)}
+                    style={styles.input}
+                  />
+
+                  <View style={styles.switchContainer}>
+                    <Text style={styles.ratingLabel}>SHARE MY INFO</Text>
+                    <Switch
+                      value={shareCustomerInfo}
+                      onValueChange={setShareCustomerInfo}
+                      trackColor={{ false: "#ccc", true: "#000" }}
+                      thumbColor={shareCustomerInfo ? "#fff" : "#888"}
+                    />
+                  </View>
+
+                  <TouchableOpacity
+                    onPress={updateReview}
+                    style={styles.confirmButton}
+                  >
+                    <Text style={{ color: "white", textAlign: "center", fontSize: 20 }}>
+                      UPDATE
+                    </Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    onPress={() => {
+                      setEditingReview(null);
+                      setIsUpdating(false);
+                    }}
+                    style={styles.cancelButton}
+                  >
+                    <Text style={{ color: "black", textAlign: "center", fontSize: 16 }}>
+                      CANCEL
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              </ScrollView>
+            </View>
+          </View>
+        </Modal>
+
 
       </View>
 
@@ -921,11 +995,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#999',
   },
-  headerText: {
+  editPharmacy: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333',
-    marginVertical: 15,
+    color: 'black',
+    marginVertical: 20,
     textAlign: 'center',
   },
   addReview: {
@@ -973,6 +1047,24 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
   },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContent: {
+    width: '90%',
+    borderRadius: 10,
+    padding: 20,
+  },
+  cancelButton: {
+    marginTop: 10,
+    backgroundColor: '#ddd',
+    padding: 10,
+    borderRadius: 5,
+  },
+
 });
 
 export default PharmacyDetails;
