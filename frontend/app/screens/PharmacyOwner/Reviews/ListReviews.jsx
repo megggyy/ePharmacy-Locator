@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useContext, useEffect } from "react";
+import React, { useState, useCallback, useContext, useEffect } from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,13 @@ import {
   Modal,
   TextInput,
   Alert
-} from "react-native";
+} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useFocusEffect } from "@react-navigation/native";
-import axios from "axios";
+import { useFocusEffect } from '@react-navigation/native';
+import axios from 'axios';
 import { useRouter } from 'expo-router';
-import baseURL from "../../../../assets/common/baseurl";
-import Spinner from "../../../../assets/common/spinner";
+import baseURL from '../../../../assets/common/baseurl';
+import Spinner from '../../../../assets/common/spinner';
 import AuthGlobal from '@/context/AuthGlobal';
 
 const ListReviewsScreen = () => {
@@ -88,23 +88,34 @@ const ListReviewsScreen = () => {
   const openModal = async (review) => {
     setSelectedReview(review);
     setModalVisible(true);
-    // setComment('');
-    // setReplyExists(false);
-    // setExistingReply(null);
+    setComment('');
+    setReplyExists(false);
+    setExistingReply(null);
 
     try {
-      const response = await axios.get(`${baseURL}feedbacks/checkReply/${review._id}`);
+      const response = await axios.get(`${baseURL}feedbacks/checkReply/${review._id}`, {
+        validateStatus: (status) => true, 
+      });
+
+      if (response.status === 304 || !response.data) {
+        setReplyExists(false);
+        setExistingReply(null);
+        return;
+      }
+
       if (response.data.exists) {
         setReplyExists(true);
         setExistingReply(response.data.feedbacks[0]);
       } else {
         setReplyExists(false);
+        setExistingReply(null);
       }
     } catch (error) {
       console.error("Error checking for existing reply:", error);
       Alert.alert('Error', 'Failed to check for existing reply');
     }
   };
+
 
   const closeModal = () => {
     setModalVisible(false);
@@ -116,7 +127,7 @@ const ListReviewsScreen = () => {
   };
 
 
-  const handleCreate = async () => {
+  const handleCreate = async () => {0
     if (!comment.trim()) {
       Alert.alert('Validation', 'Please enter a reply before submitting.');
       return;
